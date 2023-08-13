@@ -18,7 +18,7 @@ hostname = *.aliyundrive.com, *.alipan.com
 
 
 var body = $response.body;
-var chxm1023 = JSON.parse(body);
+var sooyaaabo = JSON.parse(body);
 const url = $request.url;
 const tubiao = '/users/me';
 const chatiao = '/users/tools';
@@ -38,8 +38,8 @@ if (url.indexOf(tubiao) != -1){
 
 //去除-我的-插条
 if (url.indexOf(chatiao) != -1){
-  delete chxm1023.result.guideInfo;
-  body = JSON.stringify(chxm1023);
+  delete sooyaaabo.result.guideInfo;
+  body = JSON.stringify(sooyaaabo);
 }
 
 //购买页面的SVIP
@@ -49,7 +49,7 @@ if (url.indexOf(vipa) != -1){
 
 //我的页面SVIP
 if (url.indexOf(vipb) != -1){
- body = body.replace(/\{.+\}/g, '\{  "description" : "有效期至2099-12-31",  "titleNotice" : "恩秀",  "activityAction" : "smartdrive://webview?url=https%3A%2F%2Fpages.aliyundrive.com%2Fmobile-page%2Fweb%2Fmembership.html%3FdisableNav%3DYES%26renew%3DYES",  "rightButtonText" : "SVIP",  "activityText" : "解锁部分功能，不完全解锁",  "identity" : "svip",  "backgroundImage" : "https://gw.alicdn.com/imgextra/i4/O1CN01cwAW0u1GPG2oa6WW7_!!6000000000614-2-tps-654-212.png",  "titleImage" : "https://gw.alicdn.com/imgextra/i2/O1CN01snE6rA1pVg95HyRBl_!!6000000005366-2-tps-214-49.png",  "backgroudImage" : null  }');
+ body = body.replace(/\{.+\}/g, '\{  "description" : "有效期至2099-09-09",  "titleNotice" : "恩秀",  "activityAction" : "smartdrive://webview?url=https%3A%2F%2Fpages.aliyundrive.com%2Fmobile-page%2Fweb%2Fmembership.html%3FdisableNav%3DYES%26renew%3DYES",  "rightButtonText" : "SVIP",  "activityText" : "解锁部分功能，不完全解锁",  "identity" : "svip",  "backgroundImage" : "https://gw.alicdn.com/imgextra/i4/O1CN01cwAW0u1GPG2oa6WW7_!!6000000000614-2-tps-654-212.png",  "titleImage" : "https://gw.alicdn.com/imgextra/i2/O1CN01snE6rA1pVg95HyRBl_!!6000000005366-2-tps-214-49.png",  "backgroudImage" : null  }');
 }
 
 if (url.indexOf(get) != -1){
@@ -62,29 +62,29 @@ if (url.indexOf(bofang) != -1){
 }
 
 if (url.indexOf(adrive) != -1){
-  chxm1023.capacity_level_info = {
+  sooyaaabo.capacity_level_info = {
     "capacity_type" : "normal"
   };
-  chxm1023.user_capacity_limit_details = {
+  sooyaaabo.user_capacity_limit_details = {
     "limit_download" : false,
     "limit_consume" : false
   };
-  body = JSON.stringify(chxm1023);
+  body = JSON.stringify(sooyaaabo);
 }
 
 //净化项目
 if ($request.url.indexOf(hengtiao) != -1){
-  delete chxm1023.result;  //横条信息
-  body = JSON.stringify(chxm1023);
+  delete sooyaaabo.result;  //横条信息
+  body = JSON.stringify(sooyaaabo);
 }
 
 if ($request.url.indexOf(guolv) != -1){
-  chxm1023.coreFeatures.items = chxm1023.coreFeatures.items.filter(item => item.code !== "AI_ASSISTANT");  //图搜
-  delete chxm1023.signIn;  //登录
-  delete chxm1023.banners; //横幅
-  delete chxm1023.minorBackup;  //设备列表
-  delete chxm1023.mainBackup;  //备份还原
-  body = JSON.stringify(chxm1023);
+  sooyaaabo.coreFeatures.items = sooyaaabo.coreFeatures.items.filter(item => item.code !== "AI_ASSISTANT");  //图搜
+  delete sooyaaabo.signIn;  //登录
+  delete sooyaaabo.banners; //横幅
+  delete sooyaaabo.minorBackup;  //设备列表
+  delete sooyaaabo.mainBackup;  //备份还原
+  body = JSON.stringify(sooyaaabo);
 }
 
 $done({ body });
