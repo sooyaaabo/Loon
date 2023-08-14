@@ -85,23 +85,6 @@
       "tag": "dns-out"
     },
     {
-      "tag": "twitter",
-      "type": "selector",
-      "outbounds": [
-        "🇸🇬SG-1直连|1x",
-        "🇸🇬SG-2直连|1x",
-        "🇸🇬SG-3直连|1x",
-        "🇸🇬SG-4直连|1x",
-        "🇸🇬SG-5直连|1x",
-        "🇸🇬SG-6直连|1x",
-        "🇸🇬SG-7直连|1x",
-        "🇯🇵JP-1|直连|1x",
-        "🇯🇵JP-2|直连|1x",
-        "🇯🇵JP-3|直连|1x",
-        "🇯🇵JP-4|直连|1x"
-      ]
-    },
-    {
       "tag": "telegram",
       "type": "selector",
       "outbounds": [
@@ -116,20 +99,6 @@
         "🇯🇵JP-2|直连|1x",
         "🇯🇵JP-3|直连|1x",
         "🇯🇵JP-4|直连|1x"
-      ]
-    },
-    {
-      "tag": "youtube",
-      "type": "selector",
-      "outbounds": [
-        "🇺🇸US-1|直连|0.5x",
-        "🇺🇸US-2|直连|0.5x",
-        "🇺🇸US-3|直连|0.5x",
-        "🇺🇸US-4|直连|0.5x",
-        "🇺🇸US-5|直连|0.5x",
-        "🇺🇸US-6|直连|0.5x",
-        "🇺🇸US-7|直连|0.5x",
-        "🇺🇸US-8|直连|0.5x"
       ]
     },
     {
@@ -186,20 +155,12 @@
         "outbound": "direct"
       },
       {
-        "clash_mode": "global",
-        "outbound": "select"
-      },
-      {
         "geosite": "twitter",
         "outbound": "twitter"
       },
       {
         "geosite": "telegram",
         "outbound": "telegram"
-      },
-      {
-        "geosite": "youtube",
-        "outbound": "youtube"
       },
       {
         "geosite": "netflix",
