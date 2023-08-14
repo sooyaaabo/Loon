@@ -1,0 +1,199 @@
+{
+  "log": {},
+  "dns": {
+    "servers": [
+      {
+        "tag": "remote",
+        "address": "https://1.1.1.1/dns-query",
+        "detour": "select"
+      },
+      {
+        "tag": "local",
+        "address": "https://223.5.5.5/dns-query",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "clash_mode": "global",
+        "ip_version": 4,
+        "server": "remote"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "local"
+      },
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "local"
+      },
+      {
+        "geosite": "cn",
+        "server": "local"
+      }
+    ],
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/16",
+      "inet6_range": "fc00::/18"
+    },
+    "strategy": "prefer_ipv4"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "inet4_address": "172.19.0.1/30",
+      "sniff": true,
+      "sniff_override_destination": true,
+      "strict_route": true,
+      "mtu": 9000,
+      "endpoint_independent_nat": true,
+      "auto_route": true
+    },
+    {
+      "type": "socks",
+      "tag": "socks-in",
+      "listen": "127.0.0.1",
+      "sniff": true,
+      "sniff_override_destination": true,
+      "listen_port": 2333,
+      "users": []
+    },
+    {
+      "type": "mixed",
+      "tag": "mixed-in",
+      "sniff": true,
+      "sniff_override_destination": true,
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
+      "users": []
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "direct",
+      "tag": "direct"
+    },
+    {
+      "type": "block",
+      "tag": "block"
+    },
+    {
+      "type": "dns",
+      "tag": "dns-out"
+    },
+    {
+      "tag": "telegram",
+      "type": "selector",
+      "outbounds": [
+        "🇸🇬SG-1直连|1x",
+        "🇸🇬SG-2直连|1x",
+        "🇸🇬SG-3直连|1x",
+        "🇸🇬SG-4直连|1x",
+        "🇸🇬SG-5直连|1x",
+        "🇸🇬SG-6直连|1x",
+        "🇸🇬SG-7直连|1x",
+        "🇯🇵JP-1|直连|1x",
+        "🇯🇵JP-2|直连|1x",
+        "🇯🇵JP-3|直连|1x",
+        "🇯🇵JP-4|直连|1x"
+      ]
+    },
+    {
+      "tag": "netflix",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸US-1|直连|0.5x",
+        "🇺🇸US-2|直连|0.5x",
+        "🇺🇸US-3|直连|0.5x",
+        "🇺🇸US-4|直连|0.5x",
+        "🇺🇸US-5|直连|0.5x",
+        "🇺🇸US-6|直连|0.5x",
+        "🇺🇸US-7|直连|0.5x",
+        "🇺🇸US-8|直连|0.5x"
+      ]
+    },
+    {
+      "tag": "disney",
+      "type": "selector",
+      "outbounds": [
+        "🇺🇸US-1|直连|0.5x",
+        "🇺🇸US-2|直连|0.5x",
+        "🇺🇸US-3|直连|0.5x",
+        "🇺🇸US-4|直连|0.5x",
+        "🇺🇸US-5|直连|0.5x",
+        "🇺🇸US-6|直连|0.5x",
+        "🇺🇸US-7|直连|0.5x",
+        "🇺🇸US-8|直连|0.5x"
+      ]
+    }
+  ],
+  "route": {
+    "geoip": {
+      "path": "geoip.db",
+      "download_url": "https://github.com/lyc8503/sing-box-rules/releases/latest/download/geoip.db",
+      "download_detour": "direct"
+    },
+    "geosite": {
+      "path": "geosite.db",
+      "download_url": "https://github.com/lyc8503/sing-box-rules/releases/latest/download/geosite.db",
+      "download_detour": "direct"
+    },
+    "rules": [
+      {
+        "geosite": "category-ads-all",
+        "outbound": "block"
+      },
+      {
+        "protocol": "dns",
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "geosite": "twitter",
+        "outbound": "twitter"
+      },
+      {
+        "geosite": "telegram",
+        "outbound": "telegram"
+      },
+      {
+        "geosite": "netflix",
+        "outbound": "netflix"
+      },
+      {
+        "geosite": "disney",
+        "outbound": "disney"
+      },
+      {
+        "geoip": [
+          "cn",
+          "private"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "outbound": "select"
+      },
+      {
+        "geosite": "cn",
+        "outbound": "direct"
+      }
+    ],
+    "auto_detect_interface": true,
+    "final": "select"
+  },
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "store_selected": true,
+      "secret": ""
+    }
+  }
+}
