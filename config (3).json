@@ -1,0 +1,281 @@
+{
+  "dns": {
+    "servers": [
+      {
+        "tag": "google",
+        "address": "tls://8.8.4.4",
+        "address_strategy": "prefer_ipv4",
+        "detour": "proxy"
+      },
+      {
+        "tag": "tx",
+        "address": "https://120.53.53.53/dns-query",
+        "address_strategy": "prefer_ipv4",
+        "detour": "direct"
+      }
+    ],
+    "rules": [
+      {
+        "outbound": "any",
+        "server": "tx",
+        "disable_cache": true
+      },
+      {
+        "clash_mode": "direct",
+        "server": "tx"
+      },
+      {
+        "clash_mode": "global",
+        "server": "google"
+      },
+      {
+        "geosite": "cn",
+        "server": "tx"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "server": "google"
+      }
+    ],
+    "final": "tx"
+  },
+  "route": {
+    "rules": [
+      {
+        "port": 53,
+        "outbound": "dns-out"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "GLOBAL"
+      },
+      {
+        "geoip": "google",
+        "geosite": "google",
+        "outbound": "google"
+      },
+      {
+        "geoip": "apple",
+        "geosite": "apple",
+        "outbound": "apple"
+      },
+      {
+        "geoip": "telegram",
+        "geosite": "telegram",
+        "outbound": "telegram"
+      },
+      {
+        "geoip": "bilibili",
+        "geosite": "bilibili",
+        "outbound": "bilibili"
+      },
+      {
+        "geoip": "netflix",
+        "geosite": "netflix",
+        "outbound": "netflix"
+      },
+      {
+        "geosite": "cn",
+        "outbound": "cn"
+      },
+      {
+        "geosite": "geolocation-!cn",
+        "outbound": "proxy"
+      },
+      {
+        "geoip": "cn",
+        "outbound": "cn"
+      }
+    ],
+    "final": "final",
+    "auto_detect_interface": true,
+    "geoip": {
+      "download_url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geoip-lite.db",
+      "download_detour": "proxy"
+    },
+    "geosite": {
+      "download_url": "https://github.com/MetaCubeX/meta-rules-dat/releases/download/latest/geosite.db",
+      "download_detour": "proxy"
+    }
+  },
+  "outbounds": [
+    {
+      "tag": "proxy",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "auto"
+    },
+    {
+      "tag": "google",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "proxy"
+    },
+    {
+      "tag": "apple",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "direct"
+    },
+    {
+      "tag": "telegram",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "proxy"
+    },
+    {
+      "tag": "bilibili",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "direct"
+    },
+    {
+      "tag": "netflix",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "proxy"
+    },
+    {
+      "tag": "cn",
+      "type": "selector",
+      "outbounds": [
+        "direct",
+        "auto",
+        "proxies",
+        "proxy"
+      ],
+      "default": "direct"
+    },
+    {
+      "tag": "final",
+      "type": "selector",
+      "outbounds": [
+        "proxy",
+        "auto",
+        "proxies",
+        "direct"
+      ],
+      "default": "proxy"
+    },
+    {
+      "tag": "dns",
+      "type": "selector",
+      "outbounds": [
+        "auto",
+        "direct"
+      ],
+      "default": "auto"
+    },
+    {
+      "tag": "GLOBAL",
+      "type": "selector",
+      "outbounds": [
+        "proxies",
+        "auto",
+        "direct"
+      ],
+      "default": "direct"
+    },
+    {
+      "tag": "auto",
+      "type": "urltest",
+      "outbounds": [
+        "proxies"
+      ],
+      "url": "https://www.gstatic.com/generate_204",
+      "interval": "1m",
+      "tolerance": 50
+    },
+    {
+      "tag": "proxies",
+      "type": "direct"
+    },
+    {
+      "tag": "direct",
+      "type": "direct"
+    },
+    {
+      "tag": "dns-out",
+      "type": "dns"
+    }
+  ],
+  "inbounds": [
+    {
+      "tag": "tun",
+      "type": "tun",
+      "inet4_address": "172.19.0.1/30",
+      "inet6_address": "fdfe:dcba:9876::1/126",
+      "mtu": 9000,
+      "stack": "gvisor",
+      "auto_route": true,
+      "strict_route": true,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "prefer_ipv4",
+      "platform": {
+        "http_proxy": {
+          "enabled": true,
+          "server": "127.0.0.1",
+          "server_port": 7890
+        }
+      }
+    },
+    {
+      "tag": "mixed",
+      "type": "mixed",
+      "listen": "127.0.0.1",
+      "listen_port": 7890,
+      "sniff": true,
+      "sniff_override_destination": true,
+      "domain_strategy": "prefer_ipv4"
+    }
+  ],
+  "experimental": {
+    "clash_api": {
+      "external_controller": "127.0.0.1:9090",
+      "external_ui_download_detour": "proxy",
+      "external_ui": "ui",
+      "secret": "",
+      "store_selected": true,
+      "store_fakeip": true
+    }
+  },
+  "log": {
+    "disabled": false,
+    "level": "info",
+    "timestamp": false
+  }
+}
