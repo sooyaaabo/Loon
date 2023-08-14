@@ -89,7 +89,7 @@
       "tag": "proxy",
       "server": "8.210.250.120", // 服务端的域名或 IP；域名需确保是包含在服务端的证书中，且已正确指向了服务端的 IP
       "server_port": 2096,
-      "uuid": "chika",
+      "uuid": "e87c3bf6-1657-4351-8935-bbda818c91fe",
       "flow": "xtls-rprx-vision",
       "tls": {
         "enabled": true,
