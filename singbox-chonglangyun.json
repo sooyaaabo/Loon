@@ -155,10 +155,6 @@
         "outbound": "direct"
       },
       {
-        "geosite": "twitter",
-        "outbound": "twitter"
-      },
-      {
         "geosite": "telegram",
         "outbound": "telegram"
       },
