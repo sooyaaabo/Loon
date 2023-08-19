@@ -1,3 +1,13 @@
+/*************************************
+
+项目名称：阿里云盘 净化/解锁SVIP
+下载地址：https://t.cn/A6GqTACm
+脚本作者：chxm1023
+使用声明：⚠️仅供参考，🈲转载与售卖！
+使用说明：非一次性解锁，每次解锁需打开脚本
+
+**************************************
+
 [rewrite_local]
 ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) url script-response-body https://raw.githubusercontent.com/sooyaaabo/config/main/alidrive.js
 
@@ -39,7 +49,7 @@ if (url.indexOf(vipa) != -1){
 
 //我的页面SVIP
 if (url.indexOf(vipb) != -1){
- body = body.replace(/\{.+\}/g, '\{  "description" : "有效期至2099-12-31",  "activityAction" : "smartdrive://webview?url=https%3A%2F%2Fpages.aliyundrive.com%2Fmobile-page%2Fweb%2Fmembership.html%3FdisableNav%3DYES%26renew%3DYES",  "rightButtonText" : "SVIP",  "activityText" : "尊享8TB、优享极速等20余项权益",  "identity" : "svip",  "backgroundImage" : "https://gw.alicdn.com/imgextra/i4/O1CN01cwAW0u1GPG2oa6WW7_!!6000000000614-2-tps-654-212.png",  "titleImage" : "https://gw.alicdn.com/imgextra/i2/O1CN01snE6rA1pVg95HyRBl_!!6000000005366-2-tps-214-49.png",  "backgroudImage" : null  }');
+ body = body.replace(/\{.+\}/g, '\{  "description" : "有效期至2099-09-09",  "activityAction" : "smartdrive://webview?url=https%3A%2F%2Fpages.aliyundrive.com%2Fmobile-page%2Fweb%2Fmembership.html%3FdisableNav%3DYES%26renew%3DYES",  "rightButtonText" : "会员中心",  "activityText" : "尊享8TB、优享极速等20余项权益",  "identity" : "svip",  "backgroundImage" : "https://gw.alicdn.com/imgextra/i4/O1CN01cwAW0u1GPG2oa6WW7_!!6000000000614-2-tps-654-212.png",  "titleImage" : "https://gw.alicdn.com/imgextra/i2/O1CN01snE6rA1pVg95HyRBl_!!6000000005366-2-tps-214-49.png",  "backgroudImage" : null  }');
 }
 
 if (url.indexOf(get) != -1){
