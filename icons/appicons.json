@@ -1,1 +1,14 @@
-
+{
+    "name": "appicons",
+    "icons": [
+        {
+            "name": "LEMO FM.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/LEMO%20FM.png"
+        },
+        {
+            "name": "1.1.1.1.jpg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/1.1.1.1.jpg"
+        }
+    ],
+    "description": "enxiu"
+}
