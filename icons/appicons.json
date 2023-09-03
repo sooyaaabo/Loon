@@ -8,6 +8,10 @@
         {
             "name": "1.1.1.1.jpg",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/1.1.1.1.jpg"
+        },
+        {
+            "name": "amap.jpg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/amap.jpg"
         }
     ],
     "description": "enxiu"
