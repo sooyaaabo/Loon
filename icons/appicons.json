@@ -12,6 +12,10 @@
         {
             "name": "amap.jpg",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/amap.jpg"
+        },
+        {
+            "name": "iqiyi.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/iqiyi.png"
         }
     ],
     "description": "蘭枝春野"
