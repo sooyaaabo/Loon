@@ -2,6 +2,14 @@
     "name": "App Icons",
     "icons": [
         {
+            "name": "headshot_1.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/headshot_1.png"
+        },
+        {
+            "name": "headshot_2.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/headshot_2.png"
+        },
+        {
             "name": "LEMO FM.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/LEMO%20FM.png"
         },
