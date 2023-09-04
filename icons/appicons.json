@@ -6,6 +6,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/LEMO%20FM.png"
         },
         {
+            "name": "iqiyi.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/iqiyi.png"
+        },
+        {
             "name": "1.1.1.1.jpg",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/1.1.1.1.jpg"
         },
@@ -14,8 +18,8 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/amap.jpg"
         },
         {
-            "name": "iqiyi.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/iqiyi.png"
+            "name": "weibo.jpg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/weibo.jpg"
         }
     ],
     "description": "蘭枝春野"
