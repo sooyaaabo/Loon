@@ -32,6 +32,34 @@
         {
             "name": "weibo.jpg",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/weibo.jpg"
+        },
+        {
+            "name": "egern.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/egern.png"
+        },
+        {
+            "name": "loon.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/loon.png"
+        },
+        {
+            "name": "quantumult x.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/quantumult%20x.png"
+        },
+        {
+            "name": "shadowrocket.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/shadowrocket.png"
+        },
+        {
+            "name": "sing-box.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/sing-box.png"
+        },
+        {
+            "name": "stash.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/stash.png"
+        },
+        {
+            "name": "surge.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/surge.png"
         }
     ],
     "description": "蘭枝春野"
