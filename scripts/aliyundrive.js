@@ -9,8 +9,7 @@
 **************************************
 
 [rewrite_local]
-^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) url script-response-body https://raw.githubusercontent.com/sooyaaabo/config/main/aliyundrive.js
-
+^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) url script-response-body https://raw.githubusercontent.com/sooyaaabo/config/main/scripts/aliyundrive.js
 [mitm]
 hostname = *.aliyundrive.com, *.alipan.com
 
