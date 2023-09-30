@@ -1,0 +1,5 @@
+#!name = 节点检测工具
+#!date = 2023-09-30 11:17:20
+
+[Script]
+generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/main/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
