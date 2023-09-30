@@ -2,6 +2,18 @@
     "name": "App Icons",
     "icons": [
         {
+            "name": "corgi.jpg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/corgi.jpg"
+        },
+        {
+            "name": "wolf.jpg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/wolf.jpg"
+        },
+        {
+            "name": "rabbit.jpg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/rabbit.jpg"
+        },
+        {
             "name": "headshot_1.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/headshot_1.png"
         },
