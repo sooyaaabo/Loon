@@ -1,25 +1,15 @@
-#!name = 阿里云盘净化/解锁
-#!desc = 净化无用页面信息，解锁SVIP会员功能
-#!author = @恩秀
-#!date = 2023-09-30 11:17:20
-
 /*************************************
-
 项目名称：阿里云盘 净化/解锁SVIP
 下载地址：https://t.cn/A6GqTACm
 脚本作者：chxm1023
 使用声明：⚠️仅供参考，🈲转载与售卖！
 使用说明：非一次性解锁，每次解锁需打开脚本
-
 **************************************
-
 [rewrite_local]
 ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) url script-response-body https://raw.githubusercontent.com/sooyaaabo/config/main/scripts/aliyundrive.js
 [mitm]
 hostname = *.aliyundrive.com, *.alipan.com
-
 *************************************/
-
 
 var body = $response.body;
 var sooyaaabo = JSON.parse(body);
