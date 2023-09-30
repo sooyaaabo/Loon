@@ -1,17 +1,3 @@
-/*
-作者：@wuhu_zzz @xream @keywos @整点猫咪 技术指导：整点薯条 
-整点花里胡哨
-各种花里胡哨参数，通过argument传入，用=连接key及相应value，用&链接各种key，可以任意选择想填入的参数
-title：标题
-iconfast、iconmid、iconslow 分别对应测速快中慢时的图标
-colorlow、colormid、colorhigh 分别对应延迟低中高时的图标颜色
-mb参数：每次测试消耗的流量，默认1MB，经测试最大可4MB参数：&mb=4
-配置实例：title=花里胡哨才是生产力&iconfast=bird&iconmid=hare&iconslow=tortoise&colorlow=#06D6A0&colormid=#FFD166&colorhigh=#EF476F
-
-⚠️不想变化多端？？
-可直接使用最基本的panel参数，title、icon、icon-color
-配置实例：titile=不想花里胡哨了&icon=hare&icon-color=#CDCDCD
-*/
 const $ = new Env('network-speed')
 let arg
 if (typeof $argument != 'undefined') {
