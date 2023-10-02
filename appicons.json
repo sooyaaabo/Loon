@@ -22,8 +22,20 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/warp.png"
         },
         {
+            "name": "warp1.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/warp1.png"
+        },
+        {
             "name": "warpplus.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/warpplus.png"
+        },
+        {
+            "name": "warpplus1.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/warpplus1.png"
+        },
+        {
+            "name": "zerotrust.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/zerotrust.png"
         },
         {
             "name": "cloudflareworkers.jpg",
