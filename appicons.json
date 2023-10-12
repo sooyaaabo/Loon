@@ -96,6 +96,86 @@
         {
             "name": "surge.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/surge.png"
+        },
+        {
+            "name": "China.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/China.png"
+        },
+        {
+            "name": "HongKong.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/HongKong.png"
+        },
+        {
+            "name": "Macao.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Macao.png"
+        },
+        {
+            "name": "Taiwan.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Taiwan.png"
+        },
+        {
+            "name": "Japan.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Japan.png"
+        },
+        {
+            "name": "SouthKorea.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/SouthKorea.png"
+        },
+        {
+            "name": "Singapore.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Singapore.png"
+        },
+        {
+            "name": "UnitedStates.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/UnitedStates.png"
+        },
+        {
+            "name": "Canada.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Canada.png"
+        },
+        {
+            "name": "Russia.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Russia.png"
+        },
+        {
+            "name": "UnitedKingdom.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/UnitedKingdom.png"
+        },
+        {
+            "name": "Germany.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Germany.png"
+        },
+        {
+            "name": "Netherlands.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Netherlands.png"
+        },
+        {
+            "name": "India.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/India.png"
+        },
+        {
+            "name": "Argentina.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Argentina.png"
+        },
+        {
+            "name": "Turkey.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Turkey.png"
+        },
+        {
+            "name": "Australia.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/Australia.png"
+        },
+        {
+            "name": "SouthAfrica.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/SouthAfrica.png"
+        },
+        {
+            "name": "EuropeanUnion.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/EuropeanUnion.png"
+        },
+        {
+            "name": "UnitedNations.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/UnitedNations.png"
         }
     ],
     "description": "恩秀"
