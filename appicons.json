@@ -176,6 +176,78 @@
         {
             "name": "UnitedNations.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/UnitedNations.png"
+        },
+        {
+            "name": "CN.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/CN.png"
+        },
+        {
+            "name": "HK.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/HK.png"
+        },
+        {
+            "name": "MO.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/MO.png"
+        },
+        {
+            "name": "TW.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/TW.png"
+        },
+        {
+            "name": "JP.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/JP.png"
+        },
+        {
+            "name": "KR.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/KR.png"
+        },
+        {
+            "name": "SG.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/SG.png"
+        },
+        {
+            "name": "US.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/US.png"
+        },
+        {
+            "name": "CA.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/CA.png"
+        },
+        {
+            "name": "RU.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/RU.png"
+        },
+        {
+            "name": "UK.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/UK.png"
+        },
+        {
+            "name": "DE.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/DE.png"
+        },
+        {
+            "name": "NL.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/NL.png"
+        },
+        {
+            "name": "IN.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/IN.png"
+        },
+        {
+            "name": "AR.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/AR.png"
+        },
+        {
+            "name": "TR.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/TR.png"
+        },
+        {
+            "name": "AU.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/AU.png"
+        },
+        {
+            "name": "ZA.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/config/main/icons/ZA.png"
         }
     ],
     "description": "恩秀"
