@@ -182,6 +182,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/SouthAfrica.png"
         },
         {
+            "name": "Antarctica.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Antarctica.png"
+        },
+        {
             "name": "EuropeanUnion.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/EuropeanUnion.png"
         },
@@ -340,6 +344,10 @@
         {
             "name": "ZAF.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/ZAF.png"
+        },
+        {
+            "name": "ATA.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/ATA.png"
         },
         {
             "name": "EU.png",
