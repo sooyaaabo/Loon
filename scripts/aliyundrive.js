@@ -6,7 +6,7 @@
 使用说明：非一次性解锁，每次解锁需打开脚本
 **************************************
 [rewrite_local]
-^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) url script-response-body https://raw.githubusercontent.com/sooyaaabo/config/main/scripts/aliyundrive.js
+^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) url script-response-body https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/aliyundrive.js
 [mitm]
 hostname = *.aliyundrive.com, *.alipan.com
 *************************************/
