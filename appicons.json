@@ -356,6 +356,10 @@
         {
             "name": "UN.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/UN.png"
+        },
+        {
+            "name": "WorldMap.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/WorldMap.png"
         }
     ],
     "description": "恩秀"
