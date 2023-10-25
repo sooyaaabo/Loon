@@ -3,12 +3,12 @@ const digits = 2; // 保留几位有效数字
 
 const $ = API("exchange");
 const currencyNames = {
-    人民币: ["CNY", "🇨🇳"],
-    美元: ["USD", "🇺🇸"],
-    港元: ["HKD", "🇭🇰"],
-    JPY: ["日元", "🇯🇵"],
-    KRW: ["韩元", "🇰🇷"],
-    TRY: ["里拉", "🇹🇷"],
+    CNY: ["CNY", "🇨🇳"],
+    USD: ["USD", "🇺🇸"],
+    USD: ["USD", "🇭🇰"],
+    JPY: ["JPY", "🇯🇵"],
+    KRW: ["KRW", "🇰🇷"],
+    TRY: ["TRY", "🇹🇷"],
 };
 //.toString().padEnd(8, " ")
 $.http.get({
