@@ -3,9 +3,9 @@ const digits = 2; // 保留几位有效数字
 
 const $ = API("exchange");
 const currencyNames = {
-    CNY: ["人民币", "🇨🇳"],
-    USD: ["美元", "🇺🇸"],
-    HKD: ["港元", "🇭🇰"],
+    人民币: ["CNY", "🇨🇳"],
+    美元: ["USD", "🇺🇸"],
+    港元: ["HKD", "🇭🇰"],
     JPY: ["日元", "🇯🇵"],
     KRW: ["韩元", "🇰🇷"],
     TRY: ["里拉", "🇹🇷"],
