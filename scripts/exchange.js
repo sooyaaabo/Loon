@@ -31,9 +31,9 @@ $.http.get({
                 const rate = parseFloat(data.rates[key]);
                 const target = currencyNames[key];
                 if (rate > 1) {
-                    line = `${target[1]} 1${source[0]}\t=${target[0]}: ${roundNumber(rate, digits)}\n`;
+                    line = `${target[1]} 1${source[0]}=${roundNumber(rate, digits)}${target[0]}\n`;
                 } else {
-                    line = `${target[1]} 1${target[0]}   \t=人民币: ${roundNumber(1 / rate, digits)}\n`;
+                    line = `${target[1]} 1${target[0]}   =${roundNumber(1 / rate, digits)}人民币\n`;
                 }
             }
             return accumulator + line;
