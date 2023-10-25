@@ -1,14 +1,21 @@
+/****************************************
+ * 监控汇率变化
+ * https://raw.githubusercontent.com/chxm1023/Task/main/hljk.js
+ * https://raw.githubusercontent.com/Keywos/rule/main/JS/cnyusd.js
+cron "0 7 * * *" script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/exchange.js, timeout=10, tag=汇率
+****************************************/
+
 const base = "CNY"; // 基准货币，可以改成其他币种
-const digits = 2; // 保留几位有效数字
+const digits = 3; // 保留几位有效数字
 
 const $ = API("exchange");
 const currencyNames = {
-    CNY: ["CNY", "🇨🇳"],
-    USD: ["USD", "🇺🇸"],
-    USD: ["USD", "🇭🇰"],
-    JPY: ["JPY", "🇯🇵"],
-    KRW: ["KRW", "🇰🇷"],
-    TRY: ["TRY", "🇹🇷"],
+    CNY: ["人民币", "🇨🇳"],
+    USD: ["美元", "🇺🇸"],
+    HKD: ["港元", "🇭🇰"],
+    JPY: ["日元", "🇯🇵"],
+    KRW: ["韩元", "🇰🇷"],
+    TRY: ["里拉", "🇹🇷"],
 };
 //.toString().padEnd(8, " ")
 $.http.get({
