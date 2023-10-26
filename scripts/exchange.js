@@ -19,7 +19,7 @@ const currencyNames = {
 };
 //.toString().padEnd(8, " ")
 $.http.get({
-    url: "https://v6.exchangerate-api.com/v6/b6c73eb3f144ef45b3e006ff/latest/CNY"
+    url: "https://api.exchangerate-api.com/v4/latest/CNY"
 })
     .then((response) => {
         const data = JSON.parse(response.body);
