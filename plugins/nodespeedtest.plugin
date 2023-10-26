@@ -2,6 +2,6 @@
 #!desc = 请在所有节点页面选择一个节点长按，点击节点网速查询进行测试。
 #!author = @恩秀
 #!date = 2023-09-30 11:17:20
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/urlspeed.png
+
 [Script]
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/config/main/scripts/nodespeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
+generic script-path = https://raw.githubusercontent.com/sooyaaabo/config/main/scripts/nodespeedtest.js, timeout = 10, tag = 节点网速测试, img-url = icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/urlspeed.png
