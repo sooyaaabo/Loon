@@ -6,7 +6,7 @@ cron "0 7 * * *" script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/ma
 ****************************************/
 
 const base = "CNY"; // 基准货币，可以改成其他币种
-const digits = 3; // 保留几位有效数字
+const digits = 4; // 保留几位有效数字
 
 const $ = API("exchange");
 const currencyNames = {
