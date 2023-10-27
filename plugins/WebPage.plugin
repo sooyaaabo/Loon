@@ -1,0 +1,28 @@
+#!name = WebPage
+#!desc = 网页去广告
+#!openUrl = 
+#!author = 恩秀
+#!icon = https://raw.githubusercontent.com/erdongchanyo/icon/main/Policy-Filter/AdBlock.png
+#!date = 2023-10-27 15:15:15
+
+[Rewrite]
+^https?:\/\/www\.google\.cn 302 https://www.google.com
+^https?:\/\/translate\.google\.cn 302 https://translate.google.com
+^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads.* reject-dict
+^https?:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* reject
+^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js reject
+^https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} reject
+
+[Script]
+http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, requires-body = true, tag = 百度防跳转
+http-response ^https:\/\/(www|m)\.baidu\.com(\/$|\/\?(tn=&)?from=\w{8,9})?$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = 百度首页
+http-response ^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js, requires-body = true, tag = 百度知道
+http-response ^https?:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = PornHub
+http-response ^https?:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = 禁漫天堂
+http-response ^https?:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/javbusQX.js, requires-body = true, tag = JavBus
+http-response ^https?:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/avpleQX.js, requires-body = true, tag = Avple
+http-response ^https?:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = Jable
+http-response ^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = missav
+
+[Mitm]
+hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, *.avple.tv, jable.tv, missav.com
