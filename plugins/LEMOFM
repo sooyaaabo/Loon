@@ -1,0 +1,12 @@
+#!name = 阿里云盘会员
+#!desc = 阿里云盘会员去广告
+#!openUrl = 
+#!author = 恩秀
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!date = 2023-10-27 19:35:51
+
+[Script]
+http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/aliyundrive.js, requires-body = true, tag = 阿里云盘会员去广告
+
+[Mitm]
+hostname = *.aliyundrive.com, *.alipan.com
