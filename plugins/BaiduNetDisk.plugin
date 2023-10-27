@@ -1,0 +1,13 @@
+#!name = 百度网盘去广告
+#!desc = 过滤百度网盘广告
+#!openUrl = 
+#!author = 恩秀(原作者:RuCu6)
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://gitlab.com/lodepuly/iconlibrary/-/raw/master/App_icon/120px/BaiduNetDisk.png
+#!date = 2023-09-08 13:48:55
+
+[Rewrite]
+^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
+
+[Mitm]
+hostname = pan.baidu.com
