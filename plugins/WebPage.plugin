@@ -4,7 +4,7 @@
 #!author = 恩秀
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png
-#!date = 2023-09-13
+#!date = 2023-09-13 22:55
 
 [Rewrite]
 ^https?:\/\/www\.google\.cn 302 https://www.google.com
