@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀(原作者RuCu6 Keywos)
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-09-24
+#!date = 2023-09-24 16:50
 
 [Rule]
 DOMAIN, gdt.qq.com, REJECT
