@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀(原作者RuCu6)
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-10-29 13:03:50
+#!date = 2023-10-29
 
 [Rewrite]
 ^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject
