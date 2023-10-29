@@ -1,0 +1,16 @@
+#!name = YouTube
+#!desc = 移除广告
+#!openUrl = 
+#!author = 恩秀(原作者RuCu6)
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!date = 2023-07-05
+
+[Rewrite]
+^https:\/\/[\w-]+\.googlevideo\.com\/initplayback\?.+&oad reject-dict
+
+[Script]
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-request.js, requires-body = true, tag = 请求体
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-response.js, requires-body = true, tag = 响应体
+
+[Mitm]
+hostname = rr*.googlevideo.com, youtubei.googleapis.com
