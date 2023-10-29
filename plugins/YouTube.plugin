@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀(原作者RuCu6)
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-07-05
+#!date = 2023-07-05 21:50
 
 [Rewrite]
 # 使用reject-200方法以减少开销
