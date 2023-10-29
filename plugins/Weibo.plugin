@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀(原作者RuCu6)
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-10-29 13:03:50
+#!date = 2023-10-23
 
 [Rewrite]
 ^https:\/\/api\.weibo\.cn\/2\/(ug\/checkin\/list|push\/daily)\? reject-dict
