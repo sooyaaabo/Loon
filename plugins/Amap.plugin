@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀(原作者RuCu6)
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-10-29 11:20:57
+#!date = 2023-10-29
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
