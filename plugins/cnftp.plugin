@@ -1,5 +1,5 @@
 #!name = 中国影视平台
-#!desc = 腾讯视频 爱奇艺 优酷 芒果TV
+#!desc = 腾讯视频 爱奇艺 优酷视频 芒果TV
 #!openUrl = 
 #!author = 恩秀(原作者RuCu6)
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
@@ -30,6 +30,24 @@ URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.
 DOMAIN-SUFFIX, cupid.iqiyi.com, DIRECT
 DOMAIN, api.iqiyi.com, REJECT
 
+# 优酷视频
+DOMAIN, push.m.youku.com, DIRECT
+DOMAIN, un-acs.youku.com, DIRECT
+DOMAIN, dorangesource.alicdn.com, DIRECT
+DOMAIN, adsmind.ugdtimg.com, REJECT
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, apiv4-iyes.youku.com, REJECT
+DOMAIN, httpdns.alicdn.com, REJECT
+DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, huichuan.sm.cn, REJECT
+DOMAIN, iyes.youku.com, REJECT
+DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+DOMAIN, mc.atm.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
+
 # 芒果TV
 DOMAIN, credits.bz.mgtv.com, REJECT
 DOMAIN, credits2.bz.mgtv.com, REJECT
@@ -48,24 +66,6 @@ URL-REGEX, ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes, REJECT
 URL-REGEX, ^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\?, REJECT-DICT
 URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DICT
 
-# 优酷
-DOMAIN, push.m.youku.com, DIRECT
-DOMAIN, un-acs.youku.com, DIRECT
-DOMAIN, dorangesource.alicdn.com, DIRECT
-DOMAIN, adsmind.ugdtimg.com, REJECT
-DOMAIN, amdc.m.youku.com, REJECT
-DOMAIN, apiv4-iyes.youku.com, REJECT
-DOMAIN, httpdns.alicdn.com, REJECT
-DOMAIN, huichuan-mc.sm.cn, REJECT
-DOMAIN, huichuan.sm.cn, REJECT
-DOMAIN, iyes.youku.com, REJECT
-DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
-DOMAIN, mc.atm.youku.com, REJECT
-DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
-DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
-DOMAIN, yk-ssp.ad.youku.com, REJECT
-DOMAIN, ykad-data.youku.com, REJECT
-
 [Rewrite]
 # 腾讯视频
 ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
@@ -83,6 +83,10 @@ DOMAIN, ykad-data.youku.com, REJECT
 # 青少年弹窗
 ^https:\/\/iface2\.iqiyi\.com\/views_pop\/3\.0\/pop_control\? reject-dict
 
+# 优酷视频
+# 播放页弹窗动图
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
+
 # 芒果TV
 # 无用请求
 ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes reject
@@ -96,10 +100,6 @@ DOMAIN, ykad-data.youku.com, REJECT
 ^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? reject-dict
 # 搜索框填充词
 ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? reject-dict
-
-# 优酷
-# 播放页弹窗动图
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
 
 [Script]
 # 腾讯视频
@@ -130,6 +130,20 @@ http-response ^https:\/\/search\.video\.iqiyi\.com\/q\? script-path = https://ra
 # 开屏和播放广告
 http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 爱奇艺-开屏和播放广告
 
+# 优酷视频
+# 播放详情页、首页信息流、顶部标签页、我的页面、评论区
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-首页
+# 底栏
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-底栏
+# 青少年模式弹窗
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-青少年模式弹窗
+# 搜索列表
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-搜索列表
+# 热剧弹窗
+^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-热剧弹窗
+# 开屏广告
+^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-开屏广告
+
 # 芒果TV
 # 我的页面
 http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-我的页面
@@ -143,20 +157,6 @@ http-response ^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path 
 http-response ^https:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-播放详情页
 # 搜索框填充词
 http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-搜索框填充词
-
-# 优酷
-# 播放详情页、首页信息流、顶部标签页、我的页面、评论区
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-首页
-# 底栏
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-底栏
-# 青少年模式弹窗
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-青少年模式弹窗
-# 搜索列表
-^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-搜索列表
-# 热剧弹窗
-^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-热剧弹窗
-# 开屏广告
-^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-开屏广告
 
 [Mitm]
 hostname = -i.vip.iqiyi.com, *.iqiyi.com, *.mgtv.com, vv.video.qq.com, acs.youku.com, push.m.youku.com, un-acs.youku.com
