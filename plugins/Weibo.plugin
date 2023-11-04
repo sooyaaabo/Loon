@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-10-23 12:55
+#!date = 2023-11-04 12:20
 
 [Rule]
 # 请求放行
@@ -33,7 +33,7 @@ DOMAIN, sdkmonitor.biz.weibo.com, REJECT
 ^https:\/\/api\.weibo\.cn\/2\/video\/redpacket\? reject-dict
 ^https:\/\/api\.weibo\.cn\/!\/sug\/list\/finderchange\? reject-dict
 # 开屏广告
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v3\/ad\/realtime reject-dict
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime reject-dict
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(get-lbs-cell-info\.php|sdkconfig\.php) reject
 # 微博长文章推广
 ^https:\/\/card\.weibo\.com\/article\/m\/aj\/(reward|uvead)\? reject-dict
