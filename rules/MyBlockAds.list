@@ -1,4 +1,4 @@
-# 2023-11-03 15:30
+# 2023-11-06 07:10
 
 # ======= A ======= #
 # 阿里巴巴
@@ -42,15 +42,13 @@ DOMAIN-SUFFIX, u3.ucweb.com, REJECT
 
 # ======= B ======= #
 # 百度
+DOMAIN, mobads.baidu.com, REJECT
 DOMAIN-SUFFIX, pos.baidu.com, REJECT
 # 百度地图
 DOMAIN, afd.baidu.com, REJECT
 DOMAIN, afdconf.baidu.com, REJECT
 DOMAIN, httpdns.baidubce.com, REJECT
 DOMAIN, lc.map.baidu.com, REJECT
-# 百度网盘
-DOMAIN, mobads.baidu.com, REJECT
-DOMAIN, sf3-fe-tos.pglstatp-toutiao.com, REJECT
 # 百度贴吧
 IP-CIDR, 180.76.76.200/32, REJECT
 # 哔哩哔哩
@@ -97,6 +95,7 @@ DOMAIN-SUFFIX, pangolin-sdk-toutiao-b.com, REJECT
 DOMAIN-SUFFIX, pangolin-sdk-toutiao.com, REJECT
 DOMAIN-SUFFIX, pangolin-sdk-toutiao1.com, REJECT
 DOMAIN-SUFFIX, pangolin.snssdk.com, REJECT
+DOMAIN-SUFFIX, pglstatp-toutiao.com, REJECT
 
 # ======= H ======= #
 # 海尔智家
@@ -207,6 +206,9 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 ;DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 ;DOMAIN, hub5emu.v6.shub.sandai.net, REJECT
 ;DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
+# XVideos
+DOMAIN, a.orbsrv.com, REJECT
+DOMAIN, s.orbsrv.com, REJECT
 
 # ======= Y ======= #
 # 优酷 & 菜鸟
@@ -250,8 +252,6 @@ IP-CIDR, 118.89.204.198/32, REJECT
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 # 字节跳动
 DOMAIN, ad.zijieapi.com, REJECT
-DOMAIN, dig.zjurl.cn, REJECT
-DOMAIN, dig.bdurl.net, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
