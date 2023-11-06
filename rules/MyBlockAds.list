@@ -1,4 +1,4 @@
-# 2023-11-06 07:10
+# 2023-11-06 20:15
 
 # ======= A ======= #
 # 阿里巴巴
@@ -180,7 +180,6 @@ DOMAIN-SUFFIX, trace.qq.com, REJECT
 IP-CIDR, 47.110.187.87/32, REJECT
 # 腾讯QQ
 DOMAIN, ipv4.gdt.qq.com, REJECT
-DOMAIN, qqadapt.qpic.cn, REJECT
 
 # ======= W ======= #
 # 网易云音乐
