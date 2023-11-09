@@ -2,11 +2,10 @@
 
 # ======= A ======= #
 # 阿里巴巴
-DOMAIN, adashx.m.taobao.com, REJECT
 DOMAIN, ossgw.alicdn.com, REJECT
 DOMAIN, ems.youku.com, REJECT
 DOMAIN, hudong.alicdn.com, REJECT
-DOMAIN, h-adashx.ut.taobao.com, REJECT
+DOMAIN-SUFFIX, ut.taobao.com, REJECT
 # 阿里云盘
 IP-CIDR, 203.107.1.1/24, REJECT
 # 爱奇艺
@@ -22,23 +21,14 @@ DOMAIN, iadctest.qwapi.com, REJECT
 DOMAIN, iadmoo.apple.com, REJECT
 DOMAIN, iadworkbench.apple.com, REJECT
 DOMAIN, launch.apple.com, REJECT
-DOMAIN, metrics.apple.com, REJECT
 DOMAIN, qwapi.apple.com, REJECT
-DOMAIN, securemetrics.apple.com, REJECT
-DOMAIN, webproxy-advp.iad-apple.com, REJECT
-DOMAIN, webproxy-advp.iad-apple.com.akadns.net, REJECT
 DOMAIN-SUFFIX, advp.apple.com, REJECT
 DOMAIN-SUFFIX, iadsdk.apple.com, REJECT
+DOMAIN-KEYWORD, .iad-apple.com, REJECT
 # 安全浏览限制解除
 DOMAIN, lookup.api.bsb.baidu.com, REJECT
-DOMAIN, proxy.safebrowsing.apple, REJECT
-DOMAIN, safebrowsing.g.applimg.com, REJECT
-DOMAIN, safebrowsing.googleapis.com, REJECT
-DOMAIN, safebrowsing.urlsec.qq.com, REJECT
-DOMAIN, token.safebrowsing.apple, REJECT
-DOMAIN, vs6.bj2ct.u3.ucweb.com, REJECT
-DOMAIN-SUFFIX, safebrowsing.apple, REJECT
 DOMAIN-SUFFIX, u3.ucweb.com, REJECT
+DOMAIN-KEYWORD, safebrowsing., REJECT
 
 # ======= B ======= #
 # 百度
@@ -72,13 +62,11 @@ DOMAIN, md-i-s.apptimize.com, REJECT
 
 # ======= F ======= #
 # Foreca & Google
-DOMAIN, adservice.google.com, REJECT
-DOMAIN, googleads.g.doubleclick-cn.net, REJECT
-DOMAIN, googleads.g.doubleclick.net, REJECT
 DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, pubads.g.doubleclick.net, REJECT
 DOMAIN, www.googleadservices.com, REJECT
-DOMAIN-KEYWORD, adservice.google.com., REJECT
+DOMAIN-SUFFIX, adservice.google.com, REJECT
+DOMAIN-KEYWORD, googleads.g.doubleclick, REJECT
 
 # ======= G ======= #
 # 高德地图
@@ -92,11 +80,9 @@ DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
 DOMAIN, mi.gdt.qq.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
-DOMAIN-SUFFIX, pangolin-sdk-toutiao-b.com, REJECT
-DOMAIN-SUFFIX, pangolin-sdk-toutiao.com, REJECT
-DOMAIN-SUFFIX, pangolin-sdk-toutiao1.com, REJECT
-DOMAIN-SUFFIX, pangolin.snssdk.com, REJECT
-DOMAIN-SUFFIX, pglstatp-toutiao.com, REJECT
+DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
+DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
+DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
 
 # ======= H ======= #
 # 海尔智家
@@ -207,8 +193,7 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 ;DOMAIN, hub5emu.v6.shub.sandai.net, REJECT
 ;DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
 # XVideos
-DOMAIN, a.orbsrv.com, REJECT
-DOMAIN, s.orbsrv.com, REJECT
+DOMAIN-SUFFIX, orbsrv.com, REJECT
 
 # ======= Y ======= #
 # 优酷 & 菜鸟
@@ -252,8 +237,5 @@ IP-CIDR, 118.89.204.198/32, REJECT
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 # 字节跳动
 DOMAIN, ad.zijieapi.com, REJECT
-DOMAIN, asiad.byteactivity.com, REJECT
-DOMAIN, asiad.byteactivity12.com, REJECT
-DOMAIN, p3-ad-sign.byteimg.com, REJECT
-DOMAIN, p6-ad-sign.byteimg.com, REJECT
-DOMAIN, p9-ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD, asiad.byteactivity, REJECT
+DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
