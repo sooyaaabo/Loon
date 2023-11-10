@@ -76,12 +76,10 @@ DOMAIN, free-aos-cdn-image.amap.com, REJECT
 # 工商银行 开屏广告
 DOMAIN, pageviewp.icbc.com.cn, REJECT
 # 广告联盟
-DOMAIN, i.snssdk.com, REJECT
-DOMAIN, is.snssdk.com, REJECT
 DOMAIN, mi.gdt.qq.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
+DOMAIN-SUFFIX, snssdk.com, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
-DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
 DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
 
 # ======= H ======= #
