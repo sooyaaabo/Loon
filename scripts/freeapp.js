@@ -46,7 +46,7 @@ function handleResponse(body, requestHeaders) {
   for (let i = 0; i < freeAppList.length && i < appCount; i++) {
     const app = freeAppList[i];
     const description = truncateDescription(app.description, 30);
-    notificationContent += `App:${app.name}|¥${app.originalPrice}\n`;
+    notificationContent += `FreeApp:${app.name}|¥${app.originalPrice}\n`;
   }
 
   if (typeof $notify !== 'undefined') {
