@@ -1,4 +1,4 @@
-# 2023-11-07 22:10
+# 2023-11-11 22:40
 
 # ======= A ======= #
 # 阿里巴巴
@@ -80,9 +80,11 @@ DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
 DOMAIN, mi.gdt.qq.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
+DOMAIN-SUFFIX, miaozhen.com, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
 DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
+DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 
 # ======= H ======= #
 # 海尔智家
