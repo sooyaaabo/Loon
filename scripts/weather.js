@@ -19,7 +19,7 @@ $httpClient.get(apiUrl, (error, response, data) => {
 
   const cityInfo = weatherData.cityInfo;
   const currentWeather = weatherData.data.forecast[0];
-    const message = `城市：${cityInfo.city} | 更新时间：${cityInfo.updateTime}\n天气：${currentWeather.type} | 当前温度：${weatherData.data.wendu}°C\n温度：${currentWeather.low}~${currentWeather.high} | 湿度：${weatherData.data.shidu}\n空气质量：${weatherData.data.quality} | 风向：${currentWeather.fx} | 风力：${currentWeather.fl}`;
+    const message = `城市：${cityInfo.city}  |  更新时间：${cityInfo.updateTime}\n天气：${currentWeather.type}  |  当前温度：${weatherData.data.wendu}°C\n温度：${currentWeather.low}~${currentWeather.high}  |  湿度：${weatherData.data.shidu}\n空气质量：${weatherData.data.quality}  |  风向：${currentWeather.fx}  |  风力：${currentWeather.fl}`;
 
 
   $notification.post('天气通知', '', message);
