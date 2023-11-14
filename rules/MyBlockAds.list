@@ -194,8 +194,6 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 ;DOMAIN, hub5btmain.v6.shub.sandai.net, REJECT
 ;DOMAIN, hub5emu.v6.shub.sandai.net, REJECT
 ;DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
-# XVideos
-DOMAIN-SUFFIX, orbsrv.com, REJECT
 
 # ======= Y ======= #
 # 优酷 & 菜鸟
