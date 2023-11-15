@@ -1,4 +1,4 @@
-# 2023-11-14 13:45
+# 2023-11-15 09:10
 
 # ======= A ======= #
 # 阿里巴巴
@@ -23,8 +23,8 @@ DOMAIN, iadworkbench.apple.com, REJECT
 DOMAIN, launch.apple.com, REJECT
 DOMAIN, qwapi.apple.com, REJECT
 DOMAIN-SUFFIX, advp.apple.com, REJECT
+DOMAIN-SUFFIX, iad-apple.com, REJECT
 DOMAIN-SUFFIX, iadsdk.apple.com, REJECT
-DOMAIN-KEYWORD, .iad-apple.com, REJECT
 # 安全浏览限制解除
 DOMAIN, lookup.api.bsb.baidu.com, REJECT
 DOMAIN-SUFFIX, u3.ucweb.com, REJECT
@@ -63,10 +63,9 @@ DOMAIN, md-i-s.apptimize.com, REJECT
 # ======= F ======= #
 # Foreca & Google
 DOMAIN, pagead2.googlesyndication.com, REJECT
-DOMAIN, pubads.g.doubleclick.net, REJECT
 DOMAIN, www.googleadservices.com, REJECT
 DOMAIN-SUFFIX, adservice.google.com, REJECT
-DOMAIN-KEYWORD, googleads.g.doubleclick, REJECT
+DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 
 # ======= G ======= #
 # 高德地图
@@ -181,11 +180,7 @@ DOMAIN, iadmusicmat.music.126.net, REJECT
 DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
 # 微博 开屏广告
-DOMAIN, adstrategy.biz.weibo.com, REJECT
-DOMAIN, kadmimage.biz.weibo.com, REJECT
-DOMAIN, sdkaction.biz.weibo.com, REJECT
-DOMAIN, sdkclick.biz.weibo.com, REJECT
-DOMAIN, sdkmonitor.biz.weibo.com, REJECT
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 # ======= X ======= #
 # 小米
