@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = 恩秀
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-10-29 12:35
+#!date = 2023-11-15 14:45
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
@@ -35,6 +35,7 @@ http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/routePlan\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
