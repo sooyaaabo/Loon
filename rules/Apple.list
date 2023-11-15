@@ -1,16 +1,20 @@
 # Apple
-DOMAIN-SUFFIX,aaplimg.com,Apple
-DOMAIN-SUFFIX,apple.co,Apple
-DOMAIN-SUFFIX,apple.com,Apple
-DOMAIN-SUFFIX,apple.com.cn,Apple
-DOMAIN-SUFFIX,apple-cloudkit.com,Apple
-DOMAIN-SUFFIX,apple-livephotoskit.com,Apple
-DOMAIN-SUFFIX,apple-mapkit.com,Apple
-DOMAIN-SUFFIX,cdn-apple.com,Apple
-DOMAIN-KEYWORD,apple.com.akadns.net,Apple
-DOMAIN-KEYWORD,apple.com.edgekey.net,Apple
-DOMAIN-KEYWORD,apple-support.akadns.net,Apple
-DOMAIN-KEYWORD,icloud.com.akadns.net,Apple
+DOMAIN-SUFFIX, aaplimg.com
+DOMAIN-SUFFIX, apple-cloudkit.com
+DOMAIN-SUFFIX, apple-livephotoskit.com
+DOMAIN-SUFFIX, apple-mapkit.com
+DOMAIN-SUFFIX, apple-support.akadns.net
+DOMAIN-SUFFIX, apple.co
+DOMAIN-SUFFIX, apple.com
+DOMAIN-SUFFIX, apple.com.cn
+DOMAIN-SUFFIX, apple.com.akadns.net
+DOMAIN-SUFFIX, apple.com.edgekey.net
+DOMAIN-SUFFIX, cdn-apple.com
+DOMAIN-SUFFIX, smoot.apple.cn
+DOMAIN-KEYWORD,apple.com.akadns.net
+DOMAIN-KEYWORD,apple.com.edgekey.net
+DOMAIN-KEYWORD,apple-support.akadns.net
+DOMAIN-KEYWORD,icloud.com.akadns.net
 
 # Apple ID
 DOMAIN, appleid.apple.com
@@ -19,12 +23,13 @@ DOMAIN, gsa.apple.com
 DOMAIN, idmsa.apple.com
 
 # App Store、Apple Music
+DOMAIN, ppq.apple.com
 DOMAIN-SUFFIX, applemusic.com
 DOMAIN-SUFFIX, apps.apple.com
 DOMAIN-SUFFIX, appstore.com
+DOMAIN-SUFFIX, itunes.com
 DOMAIN-SUFFIX, itunes.apple.com
 DOMAIN-SUFFIX, mzstatic.com
-DOMAIN, ppq.apple.com
 
 # TestFlight
 DOMAIN, beta.apple.com
@@ -36,6 +41,7 @@ DOMAIN-SUFFIX, apzones.com
 DOMAIN-SUFFIX, icloud.com
 DOMAIN-SUFFIX, icloud.com.cn
 DOMAIN-SUFFIX, icloud-content.com
+DOMAIN-SUFFIX, icloud.com.akadns.net
 DOMAIN-SUFFIX, me.com
 
 # Apple 推送通知
