@@ -1,9 +1,10 @@
 #!name = TestFlight
-#!desc = TestFlight多区合并，自动加入TF等功能
+#!desc = TestFlight多账户合并，自动加入TF等
 #!openUrl = 
 #!author = 恩秀
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!date = 2023-11-20 22:37:18
+#!icon= https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/icon/testflight.png
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
