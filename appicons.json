@@ -2,12 +2,64 @@
     "name": "App Icons",
     "icons": [
         {
-            "name": "headshot_1.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/headshot_1.png"
+            "name": "loon.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loon.png"
         },
         {
-            "name": "headshot_2.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/headshot_2.png"
+            "name": "loonlite.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loonlite.png"
+        },
+        {
+            "name": "quantumult x.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/quantumult%20x.png"
+        },
+        {
+            "name": "sing-box.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/sing-box.png"
+        },
+        {
+            "name": "stash.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/stash.png"
+        },
+        {
+            "name": "surge.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surge.png"
+        },
+        {
+            "name": "shadowrocket.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/shadowrocket.png"
+        },
+        {
+            "name": "egern1.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/egern1.png"
+        },
+        {
+            "name": "egern2.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/egern2.png"
+        },
+        {
+            "name": "v2rayN-blue.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/v2rayN-blue.png"
+        },
+        {
+            "name": "v2rayN-red.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/v2rayN-red.png"
+        },
+        {
+            "name": "v2rayN-purple.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/v2rayN-purple.png"
+        },
+        {
+            "name": "clash.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/clash.png"
+        },
+        {
+            "name": "surfboardnobackgroud.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surfboardnobackgroud.png"
+        },
+        {
+            "name": "surfboard.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surfboard.png"
         },
         {
             "name": "1.1.1.1.jpg",
@@ -18,44 +70,20 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/1.1.1.1-a.png"
         },
         {
-            "name": "1.1.1.1-b.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/1.1.1.1-b.png"
-        },
-        {
             "name": "1.1.1.1-c.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/1.1.1.1-c.png"
-        },
-        {
-            "name": "1.1.1.1.webp",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/1.1.1.1.webp"
-        },
-        {
-            "name": "warp.jpg",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/warp.jpg"
-        },
-        {
-            "name": "warpplus.jpg",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/warpplus.jpg"
-        },
-        {
-            "name": "zerotrust.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/zerotrust.png"
         },
         {
             "name": "cloudflareworkers.jpg",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cloudflareworkers.jpg"
         },
         {
-            "name": "cloudflare-workers.jpg",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cloudflare-workers.jpg"
+            "name": "cnftp.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cnftp.png"
         },
         {
             "name": "LEMO FM.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/LEMO%20FM.png"
-        },
-        {
-            "name": "cnftp.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cnftp.png"
         },
         {
             "name": "iqiyi.png",
@@ -84,66 +112,6 @@
         {
             "name": "sparkmail.jpg",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/sparkmail.jpg"
-        },
-        {
-            "name": "egern1.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/egern1.png"
-        },
-        {
-            "name": "egern2.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/egern2.png"
-        },
-        {
-            "name": "loon.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loon.png"
-        },
-        {
-            "name": "loonlite.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loonlite.png"
-        },
-        {
-            "name": "quantumult x.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/quantumult%20x.png"
-        },
-        {
-            "name": "shadowrocket.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/shadowrocket.png"
-        },
-        {
-            "name": "sing-box.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/sing-box.png"
-        },
-        {
-            "name": "stash.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/stash.png"
-        },
-        {
-            "name": "surge.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surge.png"
-        },
-        {
-            "name": "clash.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/clash.png"
-        },
-        {
-            "name": "surfboardnobackgroud.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surfboardnobackgroud.png"
-        },
-        {
-            "name": "surfboard.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surfboard.png"
-        },
-        {
-            "name": "v2rayN-blue.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/v2rayN-blue.png"
-        },
-        {
-            "name": "v2rayN-red.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/v2rayN-red.png"
-        },
-        {
-            "name": "v2rayN-purple.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/v2rayN-purple.png"
         },
         {
             "name": "China.png",
