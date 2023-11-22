@@ -1,4 +1,4 @@
-# 2023-11-15 09:10
+# 2023-11-22 14:40
 
 # ======= A ======= #
 # 阿里巴巴
@@ -50,8 +50,6 @@ DOMAIN, passport.bilibili.com, REJECT
 DOMAIN, ad.cyapi.cn, REJECT
 # 昌原云充
 DOMAIN, m.adyounger.com, REJECT
-# ChatGPT
-DOMAIN, o33249.ingest.sentry.io, REJECT
 # Clue 智库
 DOMAIN, api.helloclue.com, REJECT
 DOMAIN, brahe.apptimize.com, REJECT
@@ -75,11 +73,14 @@ DOMAIN, free-aos-cdn-image.amap.com, REJECT
 # 工商银行 开屏广告
 DOMAIN, pageviewp.icbc.com.cn, REJECT
 # 广告联盟
+DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
-DOMAIN, mi.gdt.qq.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
+DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD, -tos.pstatp.com, REJECT
+DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
 DOMAIN-KEYWORD, pglstatp-toutiao, REJECT
@@ -91,8 +92,7 @@ DOMAIN-SUFFIX, ehaier.com, REJECT
 
 # ======= J ======= #
 # 建设银行
-DOMAIN, adv.ccb.com, REJECT
-DOMAIN, imageadv.ccb.com, REJECT
+DOMAIN-KEYWORD, adv.ccb.com, REJECT
 # 京东
 DOMAIN, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT
@@ -151,27 +151,22 @@ DOMAIN-SUFFIX, shuzilm.cn, REJECT
 # ======= T ======= #
 # 腾讯
 DOMAIN, adsmind.gdtimg.com, REJECT
-DOMAIN, btrace.qq.com, REJECT
-DOMAIN, btrace.video.qq.com, REJECT
 DOMAIN, info4.video.qq.com, REJECT
 DOMAIN, info6.video.qq.com, REJECT
 DOMAIN, ios.video.mpush.qq.com, REJECT
-DOMAIN, mtrace.qq.com, REJECT
 DOMAIN, otheve.beacon.qq.com, REJECT
-DOMAIN, p.l.qq.com, REJECT
 DOMAIN, pgdt.gtimg.cn, REJECT
-DOMAIN, rpt.gdt.qq.com, REJECT
 DOMAIN, tpns.qq.com, REJECT
-DOMAIN, tytx.m.cn.miaozhen.com, REJECT
+DOMAIN, vv.video.qq.com, REJECT
 DOMAIN, vv6.video.qq.com, REJECT
-DOMAIN-SUFFIX, trace.qq.com, REJECT
+DOMAIN-SUFFIX, gdt.qq.com, REJECT
+DOMAIN-SUFFIX, l.qq.com, REJECT
+DOMAIN-KEYWORD, trace.qq.com, REJECT
+DOMAIN-KEYWORD, trace.video.qq.com, REJECT
 IP-CIDR, 47.110.187.87/32, REJECT
-# 腾讯QQ
-DOMAIN, ipv4.gdt.qq.com, REJECT
 
 # ======= W ======= #
 # 网易云音乐
-DOMAIN, gdt.qq.com, REJECT
 DOMAIN, httpdns.music.163.com, REJECT
 DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
@@ -230,7 +225,3 @@ DOMAIN, zxid-m.mobileservice.cn, REJECT
 IP-CIDR, 103.41.167.237/32, REJECT
 IP-CIDR, 118.89.204.198/32, REJECT
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
-# 字节跳动
-DOMAIN, ad.zijieapi.com, REJECT
-DOMAIN-KEYWORD, asiad.byteactivity, REJECT
-DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
