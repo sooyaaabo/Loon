@@ -1,4 +1,4 @@
-# 2023-11-22 14:40
+# 2023-11-26 07:25
 
 # ======= A ======= #
 # 阿里巴巴
@@ -157,7 +157,7 @@ DOMAIN, ios.video.mpush.qq.com, REJECT
 DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, pgdt.gtimg.cn, REJECT
 DOMAIN, tpns.qq.com, REJECT
-DOMAIN, vv.video.qq.com, REJECT
+;DOMAIN, vv.video.qq.com, REJECT
 DOMAIN, vv6.video.qq.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, l.qq.com, REJECT
