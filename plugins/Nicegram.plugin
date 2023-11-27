@@ -1,0 +1,13 @@
+#!name = Nicegram
+#!desc = Nicegram会员解锁
+#!openUrl = 
+#!author = 恩秀
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Nicegram.png
+#!date = 2023-11-27 17:35
+
+[Script]
+http-response https://nicegram.cloud/api/v6/user/info? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nicegram.js, requires-body = true, tag = Nicegram会员
+
+[Mitm]
+hostname = nicegram.cloud
