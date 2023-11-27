@@ -1,0 +1,14 @@
+#!name = NotBoring Pro
+#!desc = [气氛、天气、小习惯、计时器、计算器]会员解锁
+#!openUrl = 
+#!author = 恩秀
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NotBoring.png
+#!date = 2023-11-27 17:35
+
+[Script]
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/NotBoring.js, requires-body = true, tag = NotBoring会员
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/Revenuecat/NotBoring.js, requires-body = true, tag = NotBoring会员
+
+[Mitm]
+hostname = api.revenuecat.com
