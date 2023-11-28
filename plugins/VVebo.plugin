@@ -1,15 +1,15 @@
 #!name = VVebo时间线修复
 #!desc = 修复用户主页时间线问题
 #!openUrl = 
-#!author = 恩秀
+#!author = suiyuran
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/VVebo.png
 #!date = 2023-11-27 15:06
 
 [Script]
-http-request ^https:\/\/api\.weibo\.cn\/2\/users\/show\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/VVebo/VVebo_repair.js, tag = 修复时间线
-http-request ^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/VVebo/VVebo_repair.js, tag = 修复时间线
-http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\? script-path = https://gitlab.com/lodepuly/vpn_tool/raw/main/Resource/Script/VVebo/VVebo_repair.js, requires-body = true, tag = 修复时间线
+http-request ^https:\/\/api\.weibo\.cn\/2\/users\/show\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, tag = 修复时间线
+http-request ^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, tag = 修复时间线
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, requires-body = true, tag = 修复时间线
 
 [Mitm]
 hostname = api.weibo.cn
