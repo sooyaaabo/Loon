@@ -7,5 +7,5 @@
 #!date = 2023-10-27 17:17:34
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/nodespeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/nodeunlockdetection.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system
+generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
+generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system
