@@ -82,20 +82,28 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cloudflareworkers.png"
         },
         {
-            "name": "cnftp.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cnftp.png"
+            "name": "AdOff.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png"
         },
         {
-            "name": "LEMO FM.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/LEMO%20FM.png"
+            "name": "AdBlack.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png"
         },
         {
-            "name": "iqiyi.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/iqiyi.png"
+            "name": "NodeTools.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NodeTools.png"
         },
         {
-            "name": "neteasecloudmusic.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/neteasecloudmusic.png"
+            "name": "TestFlight.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png"
+        },
+        {
+            "name": "AliyunDrive.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AliyunDrive.png"
+        },
+        {
+            "name": "BaiduNetdisk.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BaiduNetdisk.png"
         },
         {
             "name": "amap.png",
@@ -110,12 +118,45 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/VVebo.png"
         },
         {
+            "name": "RedBook.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RedBook.png"
+        },
+        {
+            "name": "sparkmail.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/sparkmail.png"
+        },
+        {
+            "name": "LEMO FM.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/LEMO%20FM.png"
+        },
+        {
             "name": "eTicket.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/eTicket.png"
         },
         {
             "name": "NotBoring.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NotBoring.png"
+        },
+        {
+            "name": "Cnftp.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Cnftp.png"
+        },
+        {
+            "name": "iqiyi.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/iqiyi.png"
+        },
+        {
+            "name": "BilibiliRed.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BilibiliRed.png"
+        },
+        {
+            "name": "BilibiliBlue.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BilibiliBlue.png"
+        },
+        
+        {
+            "name": "neteasecloudmusic.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/neteasecloudmusic.png"
         },
         {
             "name": "speedtest.png",
@@ -130,8 +171,8 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Nicegram.png"
         },
         {
-            "name": "sparkmail.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/sparkmail.png"
+            "name": "YouTube.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png"
         },
         {
             "name": "China.png",
