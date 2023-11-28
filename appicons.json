@@ -82,12 +82,12 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cloudflareworkers.png"
         },
         {
-            "name": "AdOff.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png"
-        },
-        {
             "name": "AdBlack.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png"
+        },
+        {
+            "name": "AdOff.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png"
         },
         {
             "name": "NodeTools.png",
