@@ -1,8 +1,0 @@
-#!name = 节点网速查询
-#!desc = 请在所有节点页面选择一个节点长按，点击节点网速查询进行测试。
-#!author = @恩秀
-#!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!date = 2023-09-30 11:17:20
-
-[Script]
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/config/main/scripts/nodespeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
