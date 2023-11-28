@@ -1,8 +1,9 @@
 #!name = 中国影视平台
 #!desc = 腾讯视频 爱奇艺 优酷视频 芒果TV
 #!openUrl = 
-#!author = 恩秀
+#!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/cnftp.png
 #!date = 2023-09-28 07:10
 
 [Rule]
