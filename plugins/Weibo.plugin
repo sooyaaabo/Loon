@@ -1,8 +1,9 @@
 #!name = 微博
 #!desc = 微博全面净化
 #!openUrl = 
-#!author = 恩秀
+#!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/weibo.png
 #!date = 2023-11-04 12:20
 
 [Rule]
