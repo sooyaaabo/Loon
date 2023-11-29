@@ -1,0 +1,46 @@
+#!name = 优酷视频
+#!desc = 优酷视频去广告
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YoukuVideo.png
+#!date = 2023-09-28 07:10
+
+[Rule]
+DOMAIN, push.m.youku.com, DIRECT
+DOMAIN, un-acs.youku.com, DIRECT
+DOMAIN, dorangesource.alicdn.com, DIRECT
+DOMAIN, adsmind.ugdtimg.com, REJECT
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, apiv4-iyes.youku.com, REJECT
+DOMAIN, httpdns.alicdn.com, REJECT
+DOMAIN, huichuan-mc.sm.cn, REJECT
+DOMAIN, huichuan.sm.cn, REJECT
+DOMAIN, iyes.youku.com, REJECT
+DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+DOMAIN, mc.atm.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
+
+[Rewrite]
+# 播放页弹窗动图
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
+
+[Script]
+# 播放详情页、首页信息流、顶部标签页、我的页面、评论区
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-首页
+# 底栏
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-底栏
+# 青少年模式弹窗
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-青少年模式弹窗
+# 搜索列表
+^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-搜索列表
+# 热剧弹窗
+^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-热剧弹窗
+# 开屏广告
+^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-开屏广告
+
+[Mitm]
+hostname = acs.youku.com, push.m.youku.com, un-acs.youku.com
