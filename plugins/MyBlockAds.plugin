@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2023-11-13 18:40
+#!date = 2023-11-29 11:05
 
 [Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -158,7 +158,7 @@ http-response ^https:\/\/links\.jianshu\.com\/go\?to= script-path = https://raw.
 http-response ^https:\/\/www\.jianshu\.com\/go-wild\?ac=\d&url= script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, requires-body = true, tag = 简书跳过重定向页面以直接访问
 
 # 京东 //api.m.jd.com
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 京东
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jd.js, requires-body = true, tag = 京东
 
 # 酷安 //api.coolapk.com
 http-response ^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
