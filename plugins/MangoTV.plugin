@@ -1,0 +1,56 @@
+#!name = 芒果TV
+#!desc = 芒果TV去广告
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/MangoTV.png
+#!date = 2023-09-28 07:10
+
+[Rule]
+DOMAIN, credits.bz.mgtv.com, REJECT
+DOMAIN, credits2.bz.mgtv.com, REJECT
+DOMAIN, credits3.bz.mgtv.com, REJECT
+DOMAIN, dflow.bz.mgtv.com, REJECT
+DOMAIN, encounter.bz.mgtv.com, REJECT
+DOMAIN, floor.bz.mgtv.com, REJECT
+DOMAIN, layer.bz.mgtv.com, REJECT
+DOMAIN, mob.bz.mgtv.com, REJECT
+DOMAIN, rc-topic-api.bz.mgtv.com, REJECT
+DOMAIN, rprain.bz.mgtv.com, REJECT
+DOMAIN, rprain.log.mgtv.com, REJECT
+DOMAIN, vip.bz.mgtv.com, REJECT
+DOMAIN-SUFFIX, da.mgtv.com, REJECT
+URL-REGEX, ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes, REJECT
+URL-REGEX, ^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\?, REJECT-DICT
+URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DICT
+
+[Rewrite]
+# 无用请求
+^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes reject
+# 首页左上角推广
+^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\? reject-dict
+# 底栏红点
+^https:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? reject-dict
+# 播放器界面
+^https:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo reject-dict
+# 升级弹窗
+^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? reject-dict
+# 搜索框填充词
+^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? reject-dict
+
+[Script]
+# 我的页面
+http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-我的页面
+# 首页信息流和顶部标签页
+http-response ^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-首页信息流和顶部标签页
+http-response ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-首页信息流和顶部标签页
+# 底栏
+http-response ^https:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-底栏
+# 播放详情页
+http-response ^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-播放详情页
+http-response ^https:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-播放详情页
+# 搜索框填充词
+http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-搜索框填充词
+
+[Mitm]
+hostname = *.mgtv.com
