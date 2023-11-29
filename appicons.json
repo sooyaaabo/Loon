@@ -138,12 +138,20 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NotBoring.png"
         },
         {
-            "name": "ChinaFTP.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/ChinaFTP.png"
+            "name": "TencentVideo.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TencentVideo.png"
         },
         {
-            "name": "iqiyi.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/iqiyi.png"
+            "name": "IQIYI.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/IQIYI.png"
+        },
+        {
+            "name": "YoukuVideo.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YoukuVideo.png"
+        },
+        {
+            "name": "MangoTV.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/MangoTV.png"
         },
         {
             "name": "BilibiliRed.png",
