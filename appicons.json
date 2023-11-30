@@ -2,6 +2,10 @@
     "name": "App Icons",
     "icons": [
         {
+            "name": "Toolbox.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Toolbox.png"
+        },
+        {
             "name": "loon.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loon.png"
         },
@@ -183,16 +187,20 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png"
         },
         {
-            "name": "Toolbox.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Toolbox.png"
-        },
-        {
             "name": "GitHub.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GitHub.png"
         },
         {
             "name": "GitLab.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GitLab.png"
+        },
+        {
+            "name": "GitLab-1.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GitLab-1.png"
+        },
+        {
+            "name": "GitLab-2.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GitLab-2.png"
         },
         {
             "name": "GitBlur.png",
