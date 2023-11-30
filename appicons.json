@@ -2,44 +2,40 @@
     "name": "App Icons",
     "icons": [
         {
-            "name": "Toolbox.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Toolbox.png"
+            "name": "Loon.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Loon.png"
         },
         {
-            "name": "loon.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loon.png"
+            "name": "LoonLite.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/LoonLite.png"
         },
         {
-            "name": "loonlite.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/loonlite.png"
+            "name": "QuantumultX.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/QuantumultX.png"
         },
         {
-            "name": "quantumult x.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/quantumult%20x.png"
+            "name": "Sing-Box.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Sing-Box.png"
         },
         {
-            "name": "sing-box.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/sing-box.png"
+            "name": "Stash.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Stash.png"
         },
         {
-            "name": "stash.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/stash.png"
+            "name": "Surge.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Surge.png"
         },
         {
-            "name": "surge.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/surge.png"
+            "name": "Shadowrocket.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Shadowrocket.png"
         },
         {
-            "name": "shadowrocket.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/shadowrocket.png"
+            "name": "Egern1.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Egern1.png"
         },
         {
-            "name": "egern0.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/egern0.png"
-        },
-        {
-            "name": "egern2.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/egern2.png"
+            "name": "Egern2.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Egern2.png"
         },
         {
             "name": "v2rayN-blue.png",
@@ -142,6 +138,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NotBoring.png"
         },
         {
+            "name": "Toolbox.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Toolbox.png"
+        },
+        {
             "name": "TencentVideo.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TencentVideo.png"
         },
@@ -189,10 +189,6 @@
         {
             "name": "GitHub.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GitHub.png"
-        },
-        {
-            "name": "GitLab.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GitLab.png"
         },
         {
             "name": "GitLab-JiHu.png",
