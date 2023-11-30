@@ -4,7 +4,7 @@
 #!author = Guding88
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/LEMO%20FM.png
-#!date = 2023-10-27 19:35:51
+#!date = 2023-10-27 19:35
 
 [Script]
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/LEMOFM.js, requires-body = true, tag = LEMO FM会员
