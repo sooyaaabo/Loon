@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo.png
-#!date = 2023-11-04 12:20
+#!date = 2023-12-01 12:45
 
 [Rule]
 # 请求放行
@@ -72,4 +72,4 @@ http-response ^https:\/\/shop\.sc\.weibo\.com\/h5\/jump\/error\?(.*&)?url= scrip
 http-response ^https:\/\/(sinaurl|t)\.cn\/ url script-response-header script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, requires-body = true, tag = 跳过重定向页面以直接访问
 
 [Mitm]
-hostname = *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn weibo.cn
+hostname = *.weibo.cn, *.weibo.com, sinaurl.cn, t.cn, weibo.cn
