@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2023-11-29 18:45
+#!date = 2023-12-04 11:10
 
 [Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -40,9 +40,6 @@
 ^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? reject-dict
 ^https:\/\/update\.pan\.baidu\.com\/statistics\? reject-dict
 
-# 昌原云充 五代十路 //www.washpayer.com
-^https:\/\/www\.washpayer\.com\/(ad\/getBannerAd|ad\/user-adword|user\/getBannerList) reject-dict
-
 # 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
 ^https:\/\/api\.chelaile\.net\.cn\/adpub reject
 ^https:\/\/api\.chelaile\.net\.cn\/goocity\/advert reject
@@ -61,13 +58,6 @@
 ^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} reject
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 reject
 ^https:\/\/www1.elecfans.com\/www\/delivery reject
-
-# 飞猪 //acs.m.taobao.com
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) reject-dict
-
-# 海尔智家 //zj.haier.net
-^https:\/\/zj\.haier\.net\/api-gw\/shpmResource\/waterfall\/recommend\/list\? reject
-^https:\/\/zj\.haier\.net\/omsappapi\/ad\/v1\/rotation reject
 
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
@@ -90,10 +80,7 @@
 ^https:\/\/img\.meituan\.net\/bizad\/bizad_brandCpt_\d+\.jpg reject-dict
 ^https:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 
-# 拼多多 //api.pinduoduo.com, api.yangkeduo.com
-^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
-
-# 微信移除公众号中的推广内容 //mp.weixin.qq.com
+# 微信 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? reject-dict
 
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
@@ -102,14 +89,14 @@
 ^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
 
-# 小米商城 //api.m.mi.com
-# 开屏广告
+# 小米商城 //api.m.mi.com, shop-api.retail.mi.com
+## 开屏广告
 ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash reject-dict
-# 搜索框,热词,卡片
+## 搜索框,热词,卡片
 ^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ reject-dict
 ^https:\/\/api\.m\.mi\.com\/v1\/misearch\/search_input$ reject-dict
 ^https:\/\/api\.m\.mi\.com\/v2\/search\/search_default$ reject-dict
-# 商品推荐信息流
+## 商品推荐信息流
 ^https:\/\/api\.m\.mi\.com\/v1\/home\/page_feed(_v5)?$ reject-dict
 
 # 小米金融 //api.jr.mi.com
@@ -145,10 +132,6 @@ http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path
 http-response ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body = true, tag = 百度云
 http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body = true, tag = 百度云
 
-# 昌原云充 五代十路 //www.washpayer.com
-http-response ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
-http-response ^https:\/\/www\.washpayer\.com\/(common\/getReceipt|user\/message\/equipmentPara)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
-
 # JavDB //api.hechuangxinxi.xyz, jdforrepam.com
 http-response ^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = JavDB
 http-request ^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, requires-body = true, tag = JavDB
@@ -171,11 +154,11 @@ http-response ^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs
 http-response ^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body = true, tag = 贴吧全面去广告
 http-response ^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body = true, tag = 贴吧全面去广告
 
-# 跳过微信中转页面,解除被封禁链接 //weixin110.qq.com, security.wechat.com
+# 微信封禁页面 //weixin110.qq.com, security.wechat.com
 http-response ^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js, requires-body = true, tag = 跳过微信中转页面,解除被封禁链接
 
-# 小米商城开屏广告 //api.m.mi.com 
+# 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 http-response ^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城开屏广告
 
 [Mitm]
-hostname = ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, www.washpayer.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, zj.haier.net, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, api.pinduoduo.com, api.yangkeduo.com, tiebac.baidu.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
+hostname = ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, tiebac.baidu.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
