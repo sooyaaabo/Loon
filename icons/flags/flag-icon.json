@@ -1,5 +1,6 @@
 {
-    "name": "Flag@Openmoji",
+    "name": "Flag Icon",
+    "description": "sooyaaabo（恩秀）"
     "icons": [
         {
             "name": "WorldMap",
@@ -1050,5 +1051,4 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Zimbabwe.png"
         }
     ],
-    "description": "sooyaaabo（恩秀）"
 }
