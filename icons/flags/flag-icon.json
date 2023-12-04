@@ -1,0 +1,1050 @@
+{
+    "name": "Openmoji-Flag",
+    "icons": [
+        {
+            "name": "Afghanistan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Afghanistan.png"
+        },
+        {
+            "name": "AlandIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/AlandIslands.png"
+        },
+        {
+            "name": "Albania",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Albania.png"
+        },
+        {
+            "name": "Algeria",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Algeria.png"
+        },
+        {
+            "name": "AmericanSamoa",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/AmericanSamoa.png"
+        },
+        {
+            "name": "Andorra",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Andorra.png"
+        },
+        {
+            "name": "Angola",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Angola.png"
+        },
+        {
+            "name": "Anguilla",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Anguilla.png"
+        },
+        {
+            "name": "Antarctica",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Antarctica.png"
+        },
+        {
+            "name": "AntiguaAndBarbuda",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/AntiguaAndBarbuda.png"
+        },
+        {
+            "name": "Argentina",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Argentina.png"
+        },
+        {
+            "name": "Armenia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Armenia.png"
+        },
+        {
+            "name": "Aruba",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Aruba.png"
+        },
+        {
+            "name": "AscensionIsland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/AscensionIsland.png"
+        },
+        {
+            "name": "Australia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Australia.png"
+        },
+        {
+            "name": "Austria",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Austria.png"
+        },
+        {
+            "name": "Azerbaijan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Azerbaijan.png"
+        },
+        {
+            "name": "Bahamas",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bahamas.png"
+        },
+        {
+            "name": "Bahrain",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bahrain.png"
+        },
+        {
+            "name": "Bangladesh",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bangladesh.png"
+        },
+        {
+            "name": "Barbados",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Barbados.png"
+        },
+        {
+            "name": "Belarus",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Belarus.png"
+        },
+        {
+            "name": "Belgium",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Belgium.png"
+        },
+        {
+            "name": "Belize",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Belize.png"
+        },
+        {
+            "name": "Benin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Benin.png"
+        },
+        {
+            "name": "Bermuda",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bermuda.png"
+        },
+        {
+            "name": "Bhutan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bhutan.png"
+        },
+        {
+            "name": "Bolivia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bolivia.png"
+        },
+        {
+            "name": "BosniaAndHerzegovina",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/BosniaAndHerzegovina.png"
+        },
+        {
+            "name": "Botswana",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Botswana.png"
+        },
+        {
+            "name": "BouvetIsland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/BouvetIsland.png"
+        },
+        {
+            "name": "Brazil",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Brazil.png"
+        },
+        {
+            "name": "BritishIndianOceanTerritory",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/BritishIndianOceanTerritory.png"
+        },
+        {
+            "name": "BritishVirginIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/BritishVirginIslands.png"
+        },
+        {
+            "name": "Brunei",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Brunei.png"
+        },
+        {
+            "name": "Bulgaria",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Bulgaria.png"
+        },
+        {
+            "name": "BurkinaFaso",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/BurkinaFaso.png"
+        },
+        {
+            "name": "Burundi",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Burundi.png"
+        },
+        {
+            "name": "Cambodia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Cambodia.png"
+        },
+        {
+            "name": "Cameroon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Cameroon.png"
+        },
+        {
+            "name": "Canada",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Canada.png"
+        },
+        {
+            "name": "CanaryIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CanaryIslands.png"
+        },
+        {
+            "name": "CapeVerde",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CapeVerde.png"
+        },
+        {
+            "name": "CaribbeanNetherlands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CaribbeanNetherlands.png"
+        },
+        {
+            "name": "CaymanIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CaymanIslands.png"
+        },
+        {
+            "name": "CentralAfricanRepublic",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CentralAfricanRepublic.png"
+        },
+        {
+            "name": "CeutaAndMelilla",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CeutaAndMelilla.png"
+        },
+        {
+            "name": "Chad",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Chad.png"
+        },
+        {
+            "name": "Chile",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Chile.png"
+        },
+        {
+            "name": "China",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/China.png"
+        },
+        {
+            "name": "ChristmasIsland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/ChristmasIsland.png"
+        },
+        {
+            "name": "ClippertonIsland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/ClippertonIsland.png"
+        },
+        {
+            "name": "CocosKeelingIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CocosKeelingIslands.png"
+        },
+        {
+            "name": "Colombia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Colombia.png"
+        },
+        {
+            "name": "Comoros",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Comoros.png"
+        },
+        {
+            "name": "CongoBrazzaville",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CongoBrazzaville.png"
+        },
+        {
+            "name": "CongoKinshasa",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CongoKinshasa.png"
+        },
+        {
+            "name": "CookIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CookIslands.png"
+        },
+        {
+            "name": "CostaRica",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CostaRica.png"
+        },
+        {
+            "name": "CoteDivoire",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/CoteDivoire.png"
+        },
+        {
+            "name": "Croatia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Croatia.png"
+        },
+        {
+            "name": "Cuba",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Cuba.png"
+        },
+        {
+            "name": "Curacao",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Curacao.png"
+        },
+        {
+            "name": "Cyprus",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Cyprus.png"
+        },
+        {
+            "name": "Czechia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Czechia.png"
+        },
+        {
+            "name": "Denmark",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Denmark.png"
+        },
+        {
+            "name": "DiegoGarcia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/DiegoGarcia.png"
+        },
+        {
+            "name": "Djibouti",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Djibouti.png"
+        },
+        {
+            "name": "Dominica",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Dominica.png"
+        },
+        {
+            "name": "DominicanRepublic",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/DominicanRepublic.png"
+        },
+        {
+            "name": "Ecuador",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Ecuador.png"
+        },
+        {
+            "name": "Egypt",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Egypt.png"
+        },
+        {
+            "name": "ElSalvador",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/ElSalvador.png"
+        },
+        {
+            "name": "England",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/England.png"
+        },
+        {
+            "name": "EquatorialGuinea",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/EquatorialGuinea.png"
+        },
+        {
+            "name": "Eritrea",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Eritrea.png"
+        },
+        {
+            "name": "Estonia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Estonia.png"
+        },
+        {
+            "name": "Eswatini",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Eswatini.png"
+        },
+        {
+            "name": "Ethiopia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Ethiopia.png"
+        },
+        {
+            "name": "EuropeanUnion",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/EuropeanUnion.png"
+        },
+        {
+            "name": "FalklandIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/FalklandIslands.png"
+        },
+        {
+            "name": "FaroeIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/FaroeIslands.png"
+        },
+        {
+            "name": "Fiji",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Fiji.png"
+        },
+        {
+            "name": "Finland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Finland.png"
+        },
+        {
+            "name": "France",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/France.png"
+        },
+        {
+            "name": "FrenchGuiana",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/FrenchGuiana.png"
+        },
+        {
+            "name": "FrenchPolynesia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/FrenchPolynesia.png"
+        },
+        {
+            "name": "FrenchSouthernTerritories",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/FrenchSouthernTerritories.png"
+        },
+        {
+            "name": "Gabon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Gabon.png"
+        },
+        {
+            "name": "Gambia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Gambia.png"
+        },
+        {
+            "name": "Georgia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Georgia.png"
+        },
+        {
+            "name": "Germany",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Germany.png"
+        },
+        {
+            "name": "Ghana",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Ghana.png"
+        },
+        {
+            "name": "Gibraltar",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Gibraltar.png"
+        },
+        {
+            "name": "Greece",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Greece.png"
+        },
+        {
+            "name": "Greenland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Greenland.png"
+        },
+        {
+            "name": "Grenada",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Grenada.png"
+        },
+        {
+            "name": "Guadeloupe",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Guadeloupe.png"
+        },
+        {
+            "name": "Guam",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Guam.png"
+        },
+        {
+            "name": "Guatemala",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Guatemala.png"
+        },
+        {
+            "name": "Guernsey",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Guernsey.png"
+        },
+        {
+            "name": "Guinea",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Guinea.png"
+        },
+        {
+            "name": "GuineaBissau",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/VGuineaBissauN.png"
+        },
+        {
+            "name": "Guyana",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Guyana.png"
+        },
+        {
+            "name": "Haiti",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Haiti.png"
+        },
+        {
+            "name": "HeardAndMcdonaldIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/HeardAndMcdonaldIslands.png"
+        },
+        {
+            "name": "Honduras",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Honduras.png"
+        },
+        {
+            "name": "HongKong",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/HongKong.png"
+        },
+        {
+            "name": "Hungary",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Hungary.png"
+        },
+        {
+            "name": "Iceland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Iceland.png"
+        },
+        {
+            "name": "India",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/India.png"
+        },
+        {
+            "name": "Indonesia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Indonesia.png"
+        },
+        {
+            "name": "Iran",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Iran.png"
+        },
+        {
+            "name": "Iraq",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Iraq.png"
+        },
+        {
+            "name":"Ireland", 
+            "url":"https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Ireland.png"
+        }, 
+        {
+            "name":"IsleOfMan",
+            "url":"https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/IsleOfMan.png"
+        }, 
+        {
+            "name":"Israel",
+            "url":"https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Israel.png"
+        }, 
+        {
+            "name":"Italy", 
+            "url":"https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Italy.png"
+        }, 
+        {
+            "name": "Jamaica",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Jamaica.png"
+        },
+        {
+            "name": "Japan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Japan.png"
+        },
+        {
+            "name": "Jersey",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Jersey.png"
+        },
+        {
+            "name": "Jordan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Jordan.png"
+        },
+        {
+            "name": "Kazakhstan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Kazakhstan.png"
+        },
+        {
+            "name": "Kenya",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Kenya.png"
+        },
+        {
+            "name": "Kiribati",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Kiribati.png"
+        },
+        {
+            "name": "Kosovo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Kosovo.png"
+        },
+        {
+            "name": "Kuwait",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Kuwait.png"
+        },
+        {
+            "name": "Kyrgyzstan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Kyrgyzstan.png"
+        },
+        {
+            "name": "Laos",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Laos.png"
+        },
+        {
+            "name": "Latvia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Latvia.png"
+        },
+        {
+            "name": "Lebanon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Lebanon.png"
+        },
+        {
+            "name": "Lesotho",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Lesotho.png"
+        },
+        {
+            "name": "Liberia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Liberia.png"
+        },
+        {
+            "name": "Libya",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Libya.png"
+        },
+        {
+            "name": "Liechtenstein",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Liechtenstein.png"
+        },
+        {
+            "name": "Lithuania",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Lithuania.png"
+        },
+        {
+            "name": "Luxembourg",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Luxembourg.png"
+        },
+        {
+            "name": "Macao",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Macao.png"
+        },
+        {
+            "name": "Madagascar",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Madagascar.png"
+        },
+        {
+            "name": "Malawi",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Malawi.png"
+        },
+        {
+            "name": "Malaysia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Malaysia.png"
+        },
+        {
+            "name": "Maldives",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Maldives.png"
+        },
+        {
+            "name": "Mali",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mali.png"
+        },
+        {
+            "name": "Malta",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Malta.png"
+        },
+        {
+            "name": "MarshallIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/MarshallIslands.png"
+        },
+        {
+            "name": "Martinique",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Martinique.png"
+        },
+        {
+            "name": "Mauritania",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mauritania.png"
+        },
+        {
+            "name": "Mauritius",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mauritius.png"
+        },
+        {
+            "name": "Mayotte",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mayotte.png"
+        },
+        {
+            "name": "Mexico",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mexico.png"
+        },
+        {
+            "name": "Micronesia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Micronesia.png"
+        },
+        {
+            "name": "Moldova",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Moldova.png"
+        },
+        {
+            "name": "Monaco",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Monaco.png"
+        },
+        {
+            "name": "Mongolia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mongolia.png"
+        },
+        {
+            "name": "Montenegro",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Montenegro.png"
+        },
+        {
+            "name": "Montserrat",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Montserrat.png"
+        },
+        {
+            "name": "Morocco",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Morocco.png"
+        },
+        {
+            "name": "Mozambique",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Mozambique.png"
+        },
+        {
+            "name": "MyanmarBurma",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/MyanmarBurma.png"
+        },
+        {
+            "name": "Namibia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Namibia.png"
+        },
+        {
+            "name": "Nauru",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Nauru.png"
+        },
+        {
+            "name": "Nepal",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Nepal.png"
+        },
+        {
+            "name": "Netherlands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Netherlands.png"
+        },
+        {
+            "name": "NewCaledonia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/NewCaledonia.png"
+        },
+        {
+            "name": "NewZealand",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/NewZealand.png"
+        },
+        {
+            "name": "Nicaragua",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Nicaragua.png"
+        },
+        {
+            "name": "Niger",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Niger.png"
+        },
+        {
+            "name": "Nigeria",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Nigeria.png"
+        },
+        {
+            "name": "Niue",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Niue.png"
+        },
+        {
+            "name": "NorfolkIsland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/NorfolkIsland.png"
+        },
+        {
+            "name": "NorthKorea",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/NorthKorea.png"
+        },
+        {
+            "name": "NorthMacedonia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/NorthMacedonia.png"
+        },
+        {
+            "name": "NorthernMarianaIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/NorthernMarianaIslands.png"
+        },
+        {
+            "name": "Norway",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Norway.png"
+        },
+        {
+            "name": "Oman",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Oman.png"
+        },
+        {
+            "name": "Pakistan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Pakistan.png"
+        },
+        {
+            "name": "Palau",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Palau.png"
+        },
+        {
+            "name": "PalestinianTerritories",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/PalestinianTerritories.png"
+        },
+        {
+            "name": "Panama",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Panama.png"
+        },
+        {
+            "name": "PapuaNewGuinea",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/PapuaNewGuinea.png"
+        },
+        {
+            "name": "Paraguay",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Paraguay.png"
+        },
+        {
+            "name": "Peru",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Peru.png"
+        },
+        {
+            "name": "Philippines",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Philippines.png"
+        },
+        {
+            "name": "PitcairnIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/PitcairnIslands.png"
+        },
+        {
+            "name": "Poland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Poland.png"
+        },
+        {
+            "name": "Portugal",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Portugal.png"
+        },
+        {
+            "name": "PuertoRico",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/PuertoRico.png"
+        },
+        {
+            "name": "Qatar",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Qatar.png"
+        },
+        {
+            "name": "Reunion",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Reunion.png"
+        },
+        {
+            "name": "Romania",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Romania.png"
+        },
+        {
+            "name": "Russia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Russia.png"
+        },
+        {
+            "name": "Rwanda",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Rwanda.png"
+        },
+        {
+            "name": "Samoa",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Samoa.png"
+        },
+        {
+            "name": "SanMarino",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SanMarino.png"
+        },
+        {
+            "name": "SaoTomeAndPrincipe",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SaoTomeAndPrincipe.png"
+        },
+        {
+            "name": "SaudiArabia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SaudiArabia.png"
+        },
+        {
+            "name": "Scotland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Scotland.png"
+        },
+        {
+            "name": "Senegal",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Senegal.png"
+        },
+        {
+            "name": "Serbia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Serbia.png"
+        },
+        {
+            "name": "Seychelles",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Seychelles.png"
+        },
+        {
+            "name": "SierraLeone",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SierraLeone.png"
+        },
+        {
+            "name": "Singapore",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Singapore.png"
+        },
+        {
+            "name": "SintMaarten",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SintMaarten.png"
+        },
+        {
+            "name": "Slovakia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Slovakia.png"
+        },
+        {
+            "name": "Slovenia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Slovenia.png"
+        },
+        {
+            "name": "SolomonIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SolomonIslands.png"
+        },
+        {
+            "name": "Somalia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Somalia.png"
+        },
+        {
+            "name": "SouthAfrica",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SouthAfrica.png"
+        },
+        {
+            "name": "SouthGeorgiaAndSouthSandwichIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SouthGeorgiaAndSouthSandwichIslands.png"
+        },
+        {
+            "name": "SouthKorea",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SouthKorea.png"
+        },
+        {
+            "name": "SouthSudan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SouthSudan.png"
+        },
+        {
+            "name": "Spain",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Spain.png"
+        },
+        {
+            "name": "SriLanka",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SriLanka.png"
+        },
+        {
+            "name": "StBarthelemy",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StBarthelemy.png"
+        },
+        {
+            "name": "StHelena",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StHelena.png"
+        },
+        {
+            "name": "StKittsAndNevis",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StKittsAndNevis.png"
+        },
+        {
+            "name": "StLucia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StLucia.png"
+        },
+        {
+            "name": "StMartin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StMartin.png"
+        },
+        {
+            "name": "StPierreAndMiquelon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StPierreAndMiquelon.png"
+        },
+        {
+            "name": "StVincentAndGrenadines",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/StVincentAndGrenadines.png"
+        },
+        {
+            "name": "Sudan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Sudan.png"
+        },
+        {
+            "name": "Suriname",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Suriname.png"
+        },
+        {
+            "name": "SvalbardAndJanMayen",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/SvalbardAndJanMayen.png"
+        },
+        {
+            "name": "Sweden",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Sweden.png"
+        },
+        {
+            "name": "Switzerland",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Switzerland.png"
+        },
+        {
+            "name": "Syria",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Syria.png"
+        },
+        {
+            "name": "Taiwan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Taiwan.png"
+        },
+        {
+            "name": "Tajikistan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Tajikistan.png"
+        },
+        {
+            "name": "Tanzania",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Tanzania.png"
+        },
+        {
+            "name": "Thailand",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Thailand.png"
+        },
+        {
+            "name": "TimorLeste",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/TimorLeste.png"
+        },
+        {
+            "name": "Togo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Togo.png"
+        },
+        {
+            "name": "Tokelau",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Tokelau.png"
+        },
+        {
+            "name": "Tonga",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Tonga.png"
+        },
+        {
+            "name": "TrinidadAndTobago",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/TrinidadAndTobago.png"
+        },
+        {
+            "name": "TristanDaCunha",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/TristanDaCunha.png"
+        },
+        {
+            "name": "Tunisia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Tunisia.png"
+        },
+        {
+            "name": "Turkey",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Turkey.png"
+        },
+        {
+            "name": "Turkmenistan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Turkmenistan.png"
+        },
+        {
+            "name": "TurksAndCaicosIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/TurksAndCaicosIslands.png"
+        },
+        {
+            "name": "Tuvalu",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Tuvalu.png"
+        },
+        {
+            "name": "Uganda",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Uganda.png"
+        },
+        {
+            "name": "Ukraine",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Ukraine.png"
+        },
+        {
+            "name": "UnitedArabEmirates",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/UnitedArabEmirates.png"
+        },
+        {
+            "name": "UnitedKingdom",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/UnitedKingdom.png"
+        },
+        {
+            "name": "UnitedNations",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/UnitedNations.png"
+        },
+        {
+            "name": "UnitedStates",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/UnitedStates.png"
+        },
+        {
+            "name": "Uruguay",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Uruguay.png"
+        },
+        {
+            "name": "UsOutlyingIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/UsOutlyingIslands.png"
+        },
+        {
+            "name": "UsVirginIslands",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/UsVirginIslands.png"
+        },
+        {
+            "name": "Uzbekistan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Uzbekistan.png"
+        },
+        {
+            "name": "Vanuatu",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Vanuatu.png"
+        },
+        {
+            "name": "VaticanCity",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/VaticanCity.png"
+        },
+        {
+            "name": "Venezuela",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Venezuela.png"
+        },
+        {
+            "name": "Vietnam",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Vietnam.png"
+        },
+        {
+            "name": "Wales",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Wales.png"
+        },
+        {
+            "name": "WallisAndFutuna",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/WallisAndFutuna.png"
+        },
+        {
+            "name": "WesternSahara",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/WesternSahara.png"
+        },
+        {
+            "name": "Yemen",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Yemen.png"
+        },
+        {
+            "name": "Zambia",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Zambia.png"
+        },
+        {
+            "name": "Zimbabwe",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Zimbabwe.png"
+        }
+    ],
+    "description": "sooyaaabo（恩秀）"
+}
