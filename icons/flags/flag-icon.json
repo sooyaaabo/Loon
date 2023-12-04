@@ -2,6 +2,10 @@
     "name": "Openmoji-Flag",
     "icons": [
         {
+            "name": "WorldMap",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/WorldMap.png"
+        },
+        {
             "name": "Afghanistan",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/flags/Afghanistan.png"
         },
