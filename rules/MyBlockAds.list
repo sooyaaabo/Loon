@@ -1,4 +1,4 @@
-# 12-01 22:25
+# 2023-12-05 13:05
 
 # ======= A ======= #
 # 阿里巴巴
@@ -193,6 +193,7 @@ DOMAIN, amdc.m.youku.com, REJECT
 DOMAIN, api.sm.cn, REJECT
 DOMAIN, apiv4-iyes.youku.com, REJECT
 DOMAIN, baichuan-sdk.alicdn.com, REJECT
+DOMAIN, cad.youku.com, REJECT
 DOMAIN, huichuan-mc.sm.cn, REJECT
 DOMAIN, huichuan.sm.cn, REJECT
 DOMAIN, iyes.youku.com, REJECT
