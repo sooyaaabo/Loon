@@ -89,6 +89,10 @@ URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DI
 ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
 
 # 芒果TV
+# 会员解锁
+http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/MGTV.js, requires-body = true, tag = 芒果TV-会员解锁
+http-response ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/mgtv.js, requires-body = true, tag = 芒果TV-会员解锁
+http-response ^https:\/\/nuc\.api\.mgtv\.com\/GetUserInfo\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/mgtv.js, requires-body = true, tag = 芒果TV-会员解锁
 # 无用请求
 ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes reject
 # 首页左上角推广
