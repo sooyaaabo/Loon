@@ -146,6 +146,8 @@ http-response ^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_con
 http-response ^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 优酷-开屏广告
 
 # 芒果TV
+# 会员解锁
+http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/MGTV.js, requires-body = true, tag = 芒果TV-会员解锁
 # 我的页面
 http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 芒果TV-我的页面
 # 首页信息流和顶部标签页
