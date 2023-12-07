@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YoukuVideo.png
-#!date = 2023-09-28 07:10
+#!date = 2023-12-07 07:05
 
 [Rule]
 DOMAIN, push.m.youku.com, DIRECT
