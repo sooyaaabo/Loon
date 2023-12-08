@@ -10,11 +10,8 @@
 # 请求放行
 DOMAIN, wbapp.uve.weibo.com, DIRECT
 # 请求拦截
-DOMAIN, adstrategy.biz.weibo.com, REJECT
-DOMAIN, kadmimage.biz.weibo.com, REJECT
-DOMAIN, sdkaction.biz.weibo.com, REJECT
-DOMAIN, sdkclick.biz.weibo.com, REJECT
-DOMAIN, sdkmonitor.biz.weibo.com, REJECT
+# 微博开屏广告
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
