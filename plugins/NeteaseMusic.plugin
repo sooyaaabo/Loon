@@ -7,9 +7,10 @@
 #!date = 2023-09-24 16:50
 
 [Rule]
-DOMAIN, gdt.qq.com, REJECT
+DOMAIN, httpdns.music.163.com, REJECT
 DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
+DOMAIN, iadmatapk.nosdn.127.net, REJECT
 DOMAIN, iadmusicmat.music.126.net, REJECT
 DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
