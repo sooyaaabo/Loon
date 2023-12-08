@@ -1,0 +1,86 @@
+[
+    {
+        "name": "淫水机资源",
+        "api": "https://www.xrbsp.com/api/json.php",
+    },
+    {
+        "name": "佳丽资源",
+        "api": "http://www.jializyzapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "卧龙资源",
+        "api": "https://collect.wolongzy.cc/api.php/provide/vod/"
+    },
+    {
+        "name": "索尼资源",
+        "api": "https://suoniapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "天空资源",
+        "api": "https://api.tiankongapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "飞速资源",
+        "api": "https://www.feisuzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "红牛资源",
+        "api": "https://www.hongniuzy2.com/api.php/provide/vod/"
+    },
+    {
+        "name": "非凡资源",
+        "api": "https://cj.ffzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "量子资源",
+        "api": "https://cj.lziapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "ikun资源",
+        "api": "https://ikunzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "光速资源",
+        "api": "https://api.guangsuapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "百度云资源",
+        "api": "https://api.apibdzy.com/api.php/provide/vod/"
+    },
+    {
+        "name": "ck资源",
+        "api": "https://ckzy.me/api.php/provide/vod/"
+    },
+    {
+        "name": "快播资源",
+        "api": "https://caiji.kczyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "U酷资源",
+        "api": "https://api.ukuapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "闪电资源",
+        "api": "https://sdzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "无尽资源",
+        "api": "https://api.wujinapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "火狐资源",
+        "api": "https://hhzyapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "虎牙资源",
+        "api": "https://www.huyaapi.com/api.php/provide/vod/"
+    },
+    {
+        "name": "樱花资源",
+        "api": "https://m3u8.apiyhzy.com/api.php/provide/vod/"
+    },
+    {
+        "name": "四圈资源",
+        "api": "https://pg.fenwe078.cf/api.php/provide/vod/"
+    }
+]
