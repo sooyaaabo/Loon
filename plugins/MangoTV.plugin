@@ -4,7 +4,7 @@
 #!author = RuCu6 Yu9191
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/MangoTV.png
-#!date = 2023-12-07 07:05
+#!date = 2023-12-09 13:30
 
 [Rule]
 DOMAIN, credits.bz.mgtv.com, REJECT
@@ -35,6 +35,8 @@ URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DI
 ^https:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo reject-dict
 # 升级弹窗
 ^https:\/\/mobile\.api\.mgtv\.com\/v2\/mobile\/checkUpdate\? reject-dict
+# 播放详情页
+^http:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/cms\/list\? reject-dict
 # 搜索框填充词
 ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\? reject-dict
 
