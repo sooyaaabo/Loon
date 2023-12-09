@@ -1,6 +1,6 @@
-海外看資源                 https://haiwaikan.com/api.php/provide/vod/
-紅牛資源                 https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/
-量子資源                 https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/
+海外看资源                 https://haiwaikan.com/api.php/provide/vod/
+紅牛资源                 https://www.hongniuzy2.com/api.php/provide/vod/from/hnm3u8/
+量子资源                 https://cj.lziapi.com/api.php/provide/vod/from/lzm3u8/
 開放電影                 https://vod-demo.onrender.com/pubdovod.php
 优质资源库                 https://api.1080zyku.com/inc/api.php/provide/vod/
 39影視                 https://www.39kan.com/api.php/provide/vod/
@@ -15,7 +15,7 @@
 影库资源网                 https://api.ykapi.net/api.php/provide/vod/
 快车资源                 https://caiji.kczyapi.com/api.php/provide/vod/from/kcm3u8/      
 探探资源                 https://apittzy.com/api.php/provide/vod/
-閃電資源                 https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/
+閃電资源                 https://sdzyapi.com/api.php/provide/vod/from/sdm3u8/
 金鹰资源                 https://jyzyapi.com/provide/vod/from/jinyingm3u8/
 光速资源                 https://api.guangsuapi.com/api.php/provide/vod/from/gsm3u8/
 奥斯卡资源网                 https://aosikazy.com/api.php/provide/vod/
@@ -32,7 +32,7 @@ U酷资源                 https://api.ukuapi.com/api.php/provide/vod/
 飘花电影            http://www.zzrhgg.com/api.php/provide/vod/
 网民电影                 https://www.prinevillesda.org/api.php/provide/vod/
 丝袜资源                 https://siwazyw.cc/api.php/provide/vod/
-天空資源                 https://m3u8.tiankongapi.com/api.php/provide/vod/from/tkm3u8/
+天空资源                 https://m3u8.tiankongapi.com/api.php/provide/vod/from/tkm3u8/
 探探        https://apittzy.com/api.php/provide/vod/
 皇冠        https://hghhh.com/api.php/provide/vod/
 忆梦   http://anltv.cn/api.php/provide/vod/
