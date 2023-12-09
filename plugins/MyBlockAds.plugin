@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2023-12-04 11:10
+#!date = 2023-12-09 08:25
 
 [Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
@@ -22,6 +22,7 @@
 
 # 阿里云盘 //api.alipan.com, member.alipan.com
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
+^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
 
 # 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv reject-dict
