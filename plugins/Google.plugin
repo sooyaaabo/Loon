@@ -12,4 +12,4 @@
 ^https?:\/\/(ditu|maps)\.google\.cn 302 https://maps.google.com
 
 [Mitm]
-hostname = *.google.cn
+hostname = *.google.cn, *.g.cn
