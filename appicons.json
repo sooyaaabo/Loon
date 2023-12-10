@@ -150,6 +150,34 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Toolbox.png"
         },
         {
+            "name": "Arc.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Arc.png"
+        },
+        {
+            "name": "Google.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Google.png"
+        },
+        {
+            "name": "GoogleChrome.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/GoogleChrome.png"
+        },
+        {
+            "name": "MicrosoftEdge.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/MicrosoftEdge.png"
+        },
+        {
+            "name": "Firefox.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Firefox.png"
+        },
+        {
+            "name": "FirefoxNightly.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/FirefoxNightly.png"
+        },
+        {
+            "name": "FirefoxFocus.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/FirefoxFocus.png"
+        },
+        {
             "name": "TencentVideo.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TencentVideo.png"
         },
