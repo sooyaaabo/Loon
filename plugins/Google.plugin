@@ -1,0 +1,15 @@
+#!name = Google
+#!desc = Google搜索重定向至.com，如遇频繁跳转请禁用本插件。
+#!openUrl = 
+#!author = sooyaaabo
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Google.png
+#!date = 2023-11-14 14:41
+
+[Rewrite]
+^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
+^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+^https?:\/\/(ditu|maps).google\.cn 302 https://maps.google.com
+
+[Mitm]
+hostname = www.google.cn
