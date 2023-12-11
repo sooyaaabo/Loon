@@ -1,18 +1,19 @@
 #!name = YouTube
-#!desc = 移除YouTube广告
+#!desc =  移除YouTube视频、瀑布流、搜索和Shorts中的广告，移除底部的上传按钮，增加画中画及解锁更多的字幕地区功能。移除YouTube Music底部的上传、选段和升级按钮，支持二者的后台播放。此插件不能与其他具有YouTube广告过滤能力的插件一起使用，并且需要禁用UDP协议的443端口。此插件仅建议iOS 15以上设备使用，Premium订阅用户请勿使用，不支持tvOS设备。
 #!openUrl = 
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
-#!date = 2023-07-05 21:50
+#!date = 2023-12-11 14:10
 
 [Rewrite]
 # 使用reject-200方法以减少开销
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
 
 [Script]
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-request.js, requires-body = true, binary-body-mode = true, tag = 请求体
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube-response.js, requires-body = true, binary-body-mode = true, tag = 响应体
+# YouTube去广告 - 来自Maasea的作品
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube/request.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube/response.js, requires-body = true, binary-body-mode = true, tag = YouTube响应
 
 [Mitm]
-hostname = rr*.googlevideo.com, youtubei.googleapis.com
+hostname = *.googlevideo.com, youtubei.googleapis.com
