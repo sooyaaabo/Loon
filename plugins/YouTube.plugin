@@ -1,5 +1,5 @@
 #!name = YouTube
-#!desc =  移除YouTube视频、瀑布流、搜索和Shorts中的广告，移除底部的上传按钮，增加画中画及解锁更多的字幕地区功能。移除YouTube Music底部的上传、选段和升级按钮，支持二者的后台播放。此插件不能与其他具有YouTube广告过滤能力的插件一起使用，并且需要禁用UDP协议的443端口。此插件仅建议iOS 15以上设备使用，Premium订阅用户请勿使用，不支持tvOS设备。
+#!desc = 移除广告，优化界面。需禁用UDP 443端口。
 #!openUrl = 
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
