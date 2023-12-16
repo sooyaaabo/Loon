@@ -4,7 +4,7 @@
 #!author = RuCu6 Keywos
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
-#!date = 2023-09-24 16:50
+#!date = 2023-12-16 01:40
 
 [Rule]
 DOMAIN, httpdns.music.163.com, REJECT
@@ -30,7 +30,7 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 # 搜索页,填充词,排行榜
 ^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/(detail|list)|default\/keyword\/list|rcmd\/keyword\/get\/v2|specialkeyword\/get) reject-dict
 # 播放页,多余图标,各种小提示,高品质音乐试用弹窗
-^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/(resource|strategy)|music\/songshare\/text\/recommend\/get) reject-dict
+^https:\/\/interface3\.music\.163\.com\/eapi\/(link\/position\/show\/strategy|music\/songshare\/text\/recommend\/get) reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/mlog\/vinyl\/story\/list reject-dict
 ^https:\/\/interface3\.music\.163\.com\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get) reject-dict
