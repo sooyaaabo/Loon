@@ -6,6 +6,9 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AliyunDrive.png
 #!date = 2023-10-27 19:35
 
+[Rule]
+IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
+
 [Script]
 http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/aliyundrive.js, requires-body = true, tag = 阿里云盘会员去广告
 
