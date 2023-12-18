@@ -31,6 +31,7 @@ DOMAIN-SUFFIX, cupid.iqiyi.com, DIRECT
 DOMAIN, api.iqiyi.com, REJECT
 
 # 优酷视频
+;DOMAIN, acs.youku.com, REJECT
 DOMAIN, push.m.youku.com, DIRECT
 DOMAIN, un-acs.youku.com, DIRECT
 DOMAIN, dorangesource.alicdn.com, DIRECT
