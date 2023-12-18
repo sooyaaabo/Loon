@@ -12,6 +12,7 @@ DOMAIN, push.m.youku.com, DIRECT
 DOMAIN, un-acs.youku.com, DIRECT
 DOMAIN, dorangesource.alicdn.com, DIRECT
 # 拦截地址
+;DOMAIN, acs.youku.com, REJECT
 DOMAIN, acs4baichuan.m.taobao.com, REJECT
 DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, amdc.m.youku.com, REJECT
