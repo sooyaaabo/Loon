@@ -1,9 +1,9 @@
 #!name = 开屏广告
 #!desc = 去除开屏广告
 #!openUrl = 
-#!author = sooyaaabo
+#!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AliyunDrive.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
 #!date = 2023-12-26 23:28
 
 [Rule]
