@@ -4,7 +4,7 @@
 #!author = RuCu6 fmz200
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RedBook.png
-#!date = 2023-12-19 16:00
+#!date = 2023-12-31 13:20
 
 [Rewrite]
 # 惊喜弹窗
@@ -12,7 +12,7 @@
 ^https:\/\/www\.xiaohongshu\.com\/api\/marketing\/box\/trigger\? reject-dict
 # 信息流
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v3\/note\/guide\? reject-dict
-^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v1\/ads\/resource\? reject-dict
+^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) reject-dict
 
 [Script]
 # 详情页小部件,关注页感兴趣的人
