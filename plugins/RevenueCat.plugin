@@ -1,5 +1,5 @@
 #!name = RevenueCat
-#!desc = RevenueCat会员
+#!desc = RevenueCat解锁会员
 #!openUrl = 
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
@@ -7,8 +7,8 @@
 #!date = 2024-01-02 14:35
 
 [Script]
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/echo-response/index.js, requires-body=0, max-size=0, timeout=30, script-update-interval=86400, argument=text/json&url=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, tag = echo-response
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-header.js, argument=(\r\n)X-RevenueCat-ETag:.+(\r\n)->$1X-RevenueCat-ETag:$2, tag = 替换UA
+http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=true, tag=RevenueCat解锁系列
+http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path=https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body=false, tag=RevenueCat解锁系列
 
 [Mitm]
 hostname=api.revenuecat.com
