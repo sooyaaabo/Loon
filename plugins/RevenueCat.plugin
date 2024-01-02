@@ -1,0 +1,14 @@
+#!name = RevenueCat
+#!desc = RevenueCat会员
+#!openUrl = 
+#!author = sooyaaabo
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RevenueCat.png
+#!date = 2024-01-02 14:35
+
+[Script]
+n=type=http-request,pattern=https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$),requires-body=0,max-size=0,timeout=30,script-update-interval=86400,script-path=https://raw.githubusercontent.com/xream/scripts/main/surge/modules/echo-response/index.js, argument=type=text/json&url=https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-header.js, argument=(\r\n)X-RevenueCat-ETag:.+(\r\n)->$1X-RevenueCat-ETag:$2, tag = 替换UA
+
+[Mitm]
+hostname=api.revenuecat.com
