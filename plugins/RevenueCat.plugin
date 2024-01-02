@@ -1,9 +1,9 @@
 #!name = RevenueCat
 #!desc = RevenueCat解锁会员
 #!openUrl = 
-#!author = ddgksf2013
+#!author = chxm1023
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RevenueCat.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RevenueCat-icon.png
 #!date = 2024-01-02 14:35
 
 [Script]
