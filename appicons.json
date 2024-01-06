@@ -2,6 +2,10 @@
     "name": "App Icons",
     "icons": [
         {
+            "name": "Loon-TieTie.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Loon-TieTie.png"
+        },
+        {
             "name": "Loon.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Loon.png"
         },
