@@ -14,6 +14,7 @@ DOMAIN, ios.video.mpush.qq.com, REJECT
 DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, pgdt.gtimg.cn, REJECT
 DOMAIN, tpns.qq.com, REJECT
+DOMAIN, vv6.video.qq.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, l.qq.com, REJECT
 DOMAIN-KEYWORD, trace.qq.com, REJECT
@@ -24,9 +25,6 @@ URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com
 URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+, REJECT
 
 [Rewrite]
-^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
-^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind reject-dict
 
 [Script]
