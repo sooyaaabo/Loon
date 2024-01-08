@@ -6,22 +6,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TencentVideo.png
 #!date = 2023-12-09 13:30
 
-[Rule]
-DOMAIN, adsmind.gdtimg.com, REJECT
-DOMAIN, info4.video.qq.com, REJECT
-DOMAIN, info6.video.qq.com, REJECT
-DOMAIN, ios.video.mpush.qq.com, REJECT
-DOMAIN, otheve.beacon.qq.com, REJECT
-DOMAIN, pgdt.gtimg.cn, REJECT
-DOMAIN, tpns.qq.com, REJECT
-DOMAIN-SUFFIX, gdt.qq.com, REJECT
-DOMAIN-SUFFIX, l.qq.com, REJECT
-DOMAIN-KEYWORD, trace.qq.com, REJECT
-DOMAIN-KEYWORD, trace.video.qq.com, REJECT
-IP-CIDR, 47.110.187.87/32, REJECT
-URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+, REJECT
-URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+, REJECT
-URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+, REJECT
+
 
 [Rewrite]
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind reject-dict
