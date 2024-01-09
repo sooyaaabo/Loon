@@ -3,6 +3,7 @@
 
 # 低端影视
 DOMAIN-SUFFIX, ddys.pro
+DOMAIN-SUFFIX, ddys.mov
 DOMAIN-SUFFIX, ddys.art
 DOMAIN-SUFFIX, ddys.site
 
@@ -114,5 +115,22 @@ DOMAIN-SUFFIX, xinlangtupian.com
 DOMAIN-SUFFIX, ahjiuman.com
 DOMAIN-SUFFIX, youkuphoto.com
 
+# 乐视资源
+DOMAIN-SUFFIX, leshizyapi.com
+
+# 探索页
+DOMAIN-SUFFIX, infuseku.xyz
+
+# 飘零影院
+DOMAIN-SUFFIX, p2100.net
+
 # EMBY-Paul
 DOMAIN-SUFFIX, imetyou.top
+
+# 玩偶哥哥
+DOMAIN-SUFFIX, wogg.link
+DOMAIN-SUFFIX, wogg.xyz
+
+# 小纸条
+DOMAIN-SUFFIX, gitcafe.net
+DOMAIN-SUFFIX, gitcafe.ink
