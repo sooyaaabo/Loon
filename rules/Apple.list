@@ -23,6 +23,7 @@ DOMAIN, gsa.apple.com
 DOMAIN, idmsa.apple.com
 
 # App Store、Apple Music
+DOMAIN, itunes.apple.com
 DOMAIN, ppq.apple.com
 DOMAIN-SUFFIX, applemusic.com
 DOMAIN-SUFFIX, apps.apple.com
