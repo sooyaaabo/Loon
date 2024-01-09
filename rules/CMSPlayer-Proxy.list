@@ -19,6 +19,10 @@ DOMAIN-SUFFIX, cz01.vip
 DOMAIN-SUFFIX, cz01.tv
 DOMAIN-SUFFIX, czzy22.com
 DOMAIN-SUFFIX, czzy66.com
+DOMAIN-SUFFIX, czzy88.com
+
+#天翼资源
+DOMAIN-SUFFIX, 911ysw.top
 
 # TMDB
 DOMAIN-SUFFIX, tmdb.org
