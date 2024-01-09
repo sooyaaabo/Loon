@@ -1,10 +1,35 @@
 # 海外看
-DOMAIN, cdn.iz8qkg.com
-DOMAIN, cdn.kin6c1.com
-DOMAIN, cdn.v82u1l.com
 DOMAIN-SUFFIX, haiwaikan.com
+DOMAIN-SUFFIX, kin6c1.com
+DOMAIN-SUFFIX, iz8qkg.com
+DOMAIN-SUFFIX, v82u1l.com
+
 # 欧乐影视
 DOMAIN-SUFFIX, olelive.com
 DOMAIN-SUFFIX, olevod.com
 DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
+
+# 厂长资源
+DOMAIN-SUFFIX, czzy.site
+DOMAIN-SUFFIX, cz01.vip
+DOMAIN-SUFFIX, cz01.tv
+DOMAIN-SUFFIX, czzy22.com
+DOMAIN-SUFFIX, czzy66.com
+
+# TMDB
+DOMAIN-SUFFIX, tmdb.org
+DOMAIN-SUFFIX, themoviedb.org
+
+# TVDB
+DOMAIN-SUFFIX, thetvdb.com
+
+# 其他
+DOMAIN-SUFFIX, v1.mk
+DOMAIN-SUFFIX, notion-api.splitbee.io
+DOMAIN-SUFFIX, bfvvs.com
+DOMAIN-SUFFIX, cdn.venus7202.com
+DOMAIN-SUFFIX, cdn.ceres9350.com
+DOMAIN-SUFFIX, cdn.efhie.com
+DOMAIN-SUFFIX, picsum.photos
+DOMAIN-SUFFIX, ibb.co
