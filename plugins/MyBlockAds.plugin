@@ -4,7 +4,7 @@
 #!author = RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2024-01-11 15:20
+#!date = 2024-01-12 08:50
 
 [Rule]
 # ======= A ======= #
@@ -388,9 +388,10 @@ http-response ^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs
 http-response ^http:\/\/c\.tieba\.baidu\.com\/c\/s\/sync$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body = true, tag = 贴吧全面去广告
 http-response ^https:\/\/tiebac\.baidu\.com\/tiebaads\/commonbatch\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body = true, tag = 贴吧全面去广告
 
-# 网易新闻 //nex.163.com
-http-response ^https:\/\/nex\.163\.com\/q script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 网易新闻
-
+# 网易新闻 //gw.m.163.com, nex.163.com
+http-response ^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/feed\/dynamic\/headline-list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, requires-body = true, tag = 网易新闻
+http-response ^https:\/\/nex\.163\.com\/q script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, requires-body = true, tag = 网易新闻
+http-response ^https:\/\/gw\.m\.163\.com\/nc\/api\/v1\/search\/hot-word script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/news163.js, requires-body = true, tag = 网易新闻
 # 微信封禁页面 //weixin110.qq.com, security.wechat.com
 http-response ^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/wechat/wechat110.js, requires-body = true, tag = 跳过微信中转页面,解除被封禁链接
 http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js, requires-body = true, tag = 微信110跳转
