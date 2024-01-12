@@ -4,7 +4,7 @@
 #!author = RuCu6 ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png
-#!date = 2024-01-11 11:20
+#!date = 2024-01-12 10:20
 
 [Rewrite]
 # -----------Rucu6----------- #
@@ -30,7 +30,7 @@
 # 百度防跳转
 http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, requires-body = true, tag = 百度防跳转
 # 百度首页
-http-response ^https:\/\/(www|m)\.baidu\.com(\/$|\/\?(tn=&)?from=\w{8,9}$)?(?!\/s\?) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = 百度首页
+http-response ^https:\/\/(www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = 百度首页
 # 百度知道
 http-response ^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js, requires-body = true, tag = 百度知道
 # PornHub (https://cn.pornhub.com/)
