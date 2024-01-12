@@ -123,6 +123,14 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/WeChat.png"
         },
         {
+            "name": "DingTalk.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/DingTalk.png"
+        },
+        {
+            "name": "TikTok.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TikTok.png"
+        },
+        {
             "name": "AliyunDrive.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AliyunDrive.png"
         },
@@ -145,6 +153,22 @@
         {
             "name": "RedBook.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RedBook.png"
+        },
+        {
+            "name": "Alipay.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Alipay.png"
+        },
+        {
+            "name": "Taobao.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Taobao.png"
+        },
+        {
+            "name": "Goofish.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Goofish.png"
+        },
+        {
+            "name": "iCost.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/iCost.png"
         },
         {
             "name": "SparkMail.png",
@@ -233,6 +257,18 @@
         {
             "name": "Speedtest.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Speedtest.png"
+        },
+        {
+            "name": "Instagram.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Instagram.png"
+        },
+        {
+            "name": "X.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/X.png"
+        },
+        {
+            "name": "Swiftgram.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Swiftgram.png"
         },
         {
             "name": "iMe.png",
