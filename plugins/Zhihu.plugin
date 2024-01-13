@@ -7,7 +7,6 @@
 #!date = 2023-11-17 11:30
 
 [Rule]
-# 知乎
 DOMAIN, appcloud.zhihu.com, REJECT
 DOMAIN, appcloud2.in.zhihu.com, REJECT
 DOMAIN, crash2.zhihu.com, REJECT
