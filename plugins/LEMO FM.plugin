@@ -8,7 +8,7 @@
 
 [Script]
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/LEMOFM.js, requires-body = true, tag = LEMO FM会员
-http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/LEMOFM.js, requires-body = true, tag = LEMO FM会员
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/LEMOFM.js, requires-body = false, tag = LEMO FM会员
 
 [Mitm]
 hostname = api.revenuecat.com
