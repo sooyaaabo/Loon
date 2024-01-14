@@ -54,6 +54,10 @@ DOMAIN, images.ctfassets.net, REJECT
 DOMAIN, mapi.apptimize.com, REJECT
 DOMAIN, md-i-s.apptimize.com, REJECT
 
+# ======= D ======= #
+# DNS 无响应
+HOST, adttrackingprd.hwwt8.com, REJECT
+
 # ======= F ======= #
 # Foreca & Google
 DOMAIN, pagead2.googlesyndication.com, REJECT
@@ -97,6 +101,8 @@ DOMAIN-KEYWORD, adv.ccb.com, REJECT
 DOMAIN, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT
 IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
+# JavDB
+DOMAIN, api.liquidlink.cn, REJECT
 
 # ======= K ======= #
 # 酷我音乐
@@ -104,8 +110,6 @@ DOMAIN, ad.tencentmusic.com, REJECT
 DOMAIN, g.koowo.com, REJECT
 DOMAIN, mobilead.kuwo.cn, REJECT
 DOMAIN, rich.kuwo.cn, REJECT
-DOMAIN, tmead.y.qq.com, REJECT
-DOMAIN, tmeadcomm.y.qq.com, REJECT
 
 # ======= L ======= #
 # 蓝奏云
@@ -159,15 +163,15 @@ DOMAIN, info6.video.qq.com, REJECT
 DOMAIN, ios.video.mpush.qq.com, REJECT
 DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, pgdt.gtimg.cn, REJECT
+DOMAIN, tmead.y.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT
+DOMAIN, tmeadcomm.y.qq.com, REJECT
 DOMAIN, tpns.qq.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, l.qq.com, REJECT
 DOMAIN-KEYWORD, trace.qq.com, REJECT
 DOMAIN-KEYWORD, trace.video.qq.com, REJECT
 IP-CIDR, 47.110.187.87/32, REJECT
-URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+, REJECT
-URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+, REJECT
-URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+, REJECT
 
 # ======= W ======= #
 # 网易云音乐
