@@ -1,16 +1,31 @@
 #!name = 百度网盘
 #!desc = 解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
 #!openUrl = 
-#!author = chxm1023
+#!author = chxm1023 ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BaiduNetdisk.png
 #!date = 2023-08-19 13:48
 
 [Rewrite]
+# chxm1023
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
 
-[Script]
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body = true, tag = 解锁SVIP权益
+# ddgksf2013
+# 设置信息流
+^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
+# 通用广告
+^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad reject-200
+# 活动推广
+^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
 
+[Script]
+# chxm1023
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
+
+# ddgksf2013
+# 开屏广告
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body = true, tag = 开屏广告@ddgksf2013
+# 会员权益
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body = true, tag = 会员权益@ddgksf2013
 [Mitm]
 hostname = pan.baidu.com
