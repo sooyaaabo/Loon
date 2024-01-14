@@ -16,17 +16,17 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 
 [Script]
 # sooyaaabo
-http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/aliyundrive.js, requires-body = true, tag = 阿里云盘净化+解锁
+http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/aliyundrive.js, requires-body = true, tag = 阿里云盘净化解锁@sooyaaabo
 
 # ddgksf2013
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.1\/users\/me\/vip\/info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/tools script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/me script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/vip\/info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/feature\/list script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/apps\/v2\/users\/home\/widgets script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/user\.(aliyundrive|alipan)\.com\/v2\/user\/get script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
-http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v2\/activity\/sign_in_info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化+解锁
+http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.1\/users\/me\/vip\/info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/tools script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/me script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/vip\/info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/feature\/list script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/apps\/v2\/users\/home\/widgets script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/user\.(aliyundrive|alipan)\.com\/v2\/user\/get script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
+http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v2\/activity\/sign_in_info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
 
 [Mitm]
 hostname = api.alipan.com, member.aliyundrive.com, member.alipan.com, api.aliyundrive.com
