@@ -23,26 +23,21 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings reject-dict
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) reject-dict
 ^https:\/\/api\.zhihu\.com\/root\/window reject-dict
-
 # 我的页面 - 项目列表、会员卡片
 ^https:\/\/api\.zhihu\.com\/me\/guides reject-dict
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card reject
-
 # 搜索页 - 关键词、猜你想搜
 ^https:\/\/api\.zhihu\.com\/search\/preset_words reject-dict
 ^https:\/\/www\.zhihu\.com\/api\/v4\/search\/related_queries\/(article|answer)\/\d+ reject-dict
-
 # 回答详情页 - 评论区顶部、下一个回答
 ^https:\/\/api\.zhihu\.com\/comment_v5\/(articles|answers)\/\d+\/list-headers reject-dict
 ^https:\/\/api\.zhihu\.com\/prague\/related_suggestion_native\/feed\? reject-dict
 ^https:\/\/api\.zhihu\.com\/v5\.1\/topics\/answer\/\d+\/relation reject-dict
-
 # 其他 - 服务器推送配置
 ^https:\/\/api\.zhihu\.com\/ab\/api\/v1\/products\/zhihu\/platforms\/ios\/config reject
 ^https:\/\/api\.zhihu\.com\/ad-style-service\/request reject-dict
 ^https:\/\/appcloud2\.zhihu\.com\/v3\/resource\?group_name=mp reject-dict
 ^https:\/\/link\.zhihu\.com\/\?target=(https?)?(%3A|:)?(\/\/|%2F%2F)?(.*?)(&source.*)?$ 302 http://$4
-
 # 网页版去广告 //www.zhihu.com, zhuanlan.zhihu.com
 ^https:\/\/api\.zhihu\.com\/distribute\/rhea\/qa_ad_card\/h5\/recommendation\? reject-dict
 ^https:\/\/www\.zhihu\.com\/api\/v4\/hot_recommendation reject
@@ -57,15 +52,12 @@ http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script
 http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
 http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
 http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
-
 # 搜索页 - 关键词、猜你想搜
 http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, requires-body = true, argument = ""recommend_queries":\{.+\}->"recommend_queries":{}", tag = 移除搜索页关键词
-
 # 回答详情页 - 评论区顶部、下一个回答
 http-response ^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除回答详情页推广
 http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(\/answers|\/feeds|\?include=) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除回答详情页推广
 http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除回答详情页推广
-
 # 其他 - 服务器推送配置
 http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
 http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
