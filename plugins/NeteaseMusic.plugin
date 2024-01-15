@@ -4,7 +4,7 @@
 #!author = RuCu6 Keywos
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
-#!date = 2024-01-13 22:30
+#!date = 2024-01-15 18:50
 
 [Rule]
 DOMAIN, httpdns.n.netease.com,REJECT
@@ -17,40 +17,39 @@ DOMAIN, ipv6.music.163.com, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
 
 [Rewrite]
-# 播放页,多余图标,各种小提示,高品质音乐试用弹窗
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(community\/task\/complete|mlog\/vinyl\/story\/list) reject-dict
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(link\/position\/show\/strategy|link\/scene\/show\/resource|music\/songshare\/text\/recommend\/get) reject-dict
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(mlivestream\/entrance\/playpage\/v7|community\/friends\/fans-group\/artist\/group)\/get reject-dict
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(user\/sub\/artist\/exist|vipcenter\/tspopup\/get) reject-dict
-^https:\/\/interface3?\.music\.163\.com\/eapi\/zone\/songplay\/entry\/get reject-dict
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/resniche\/position\/play\/new\/get reject-dict
-# 首页,右上角多余图标,会员续费弹窗,侧边栏推广
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(homepage\/banner\/ad\/get|link\/scene\/show\/resource) reject-dict
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(side-bar\/mini-program\/music-service\/account|delivery\/(batch-)?deliver|yunbei\/account\/entrance\/get) reject-dict
-^https:\/\/interface3?\.music\.163\.com\/eapi\/event\/floating\/layer reject-dict
-# 评论页,插入广告,评论瞬间,回复广告,星评馆
-^https:\/\/interface3?\.music\.163\.com\/eapi\/moment\/tab\/info\/get reject-dict
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/(content\/activity\/music\/jar\/|content\/exposure\/vinyl\/comment\/entrance\/get|v1\/content\/exposure\/comment\/banner\/get) reject-dict
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/comment\/(hotcomment\/collect\/fetchmodelinfov2|feed\/inserted\/resources|tips\/v2\/get) reject-dict
-# 我的页面,小部件红点,流量卡弹窗,播客弹出广告
-^https:\/\/interface3?\.music\.163\.com\/eapi\/(mine\/applet\/redpoint|sp\/flow\/popup\/query|voice\/play\/page\/ad\/info) reject-dict
-# 歌单页,横幅广告
-^https:\/\/interface3?\.music\.163\.com\/w?eapi\/resource-exposure\/(activity\/config\/get|config) reject-dict
-^https:\/\/interface3?\.music\.163\.com\/weapi\/(activity\/bonus\/playpage\/time\/query|middle\/clientcfg\/config\/list) reject-dict
-# 开屏广告,首页顶部横幅广告
-^https?:\/\/interface3?\.music\.163.com\/e?api\/(ocpc\/)?ad\/ reject-dict
-# 搜索页,填充词,排行榜
-^https?:\/\/interface3?\.music\.163.com\/eapi\/search\/(chart\/|default\/keyword\/list|rcmd\/keyword\/get\/v2|specialkeyword\/get) reject-dict
+^https?:\/\/httpdns.n\.netease\.com reject
+^https?:\/\/httpdns\.music\.163\.com reject
+^https?:\/\/(ipv4|interface3?)\.music\.163.com\/e?api\/ad reject-dict
+# 播放页,多余图标,各种小提示
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) reject-dict
+# 会员伪装
+^https:\/\/interface3?\.music\.163\.com\/eapi\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle) reject-dict
+# 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) reject-dict
+# 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(content\/activity\/music\/|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
+# 开屏广告
+^https?:\/\/interface3?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ reject-dict
+# 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
+^https?:\/\/interface3?\.music\.163\.com\/w?eapi\/(activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) reject-dict
 
 [Script]
-# 播放页,多余图标,各种小提示,高品质音乐试用弹窗
-http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, tag = 播放页
-# 首页,右上角多余图标,会员续费弹窗,侧边栏推广
-http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/music-vip-membership\/client\/vip\/info script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, tag = 首页
-# 热推,有话想说,分享一下,歌曲下的祝福等小提示 | 评论区,乐迷,星评等级,图标 | 发现页 |展示关注列表里未关注你的人 | 2024 newui首页
-http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/(v\d\/resource\/comment\/floor\/get|link\/page\/(discovery|rcmd)\/(resource\/show|block\/resource\/multi\/refresh)|user\/follow\/users\/mixed\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, tag = 热推
-# 评论页,插入广告,评论瞬间,回复广告,星评馆
-http-response ^https:\/\/interface3?\.music\.163\.com\/eapi\/batch script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, tag = 评论页
+# mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = mian
+# 会员伪装vip
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 会员伪装vip
+# 底部tab
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部tab
+# 推荐 | home | 主页
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = home
+# 发现页
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
+# effect
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = effect
+# 我的页面
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
+# 显示未关注你
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示未关注你
 
 [Mitm]
-hostname = interface*.music.163.com
+hostname = interface*.music.163.com, interface.music.163.com, interface3.music.163.com, httpdns.n.netease.com, interface.music.163.com.163jiasu.com, interface3.music.163.com.163jiasu.com, ipv4.music.163.com
