@@ -1,3 +1,9 @@
+/*
+ * 节点解锁查询
+ * 感谢并修改自 https://raw.githubusercontent.com/KOP-XIAO/QuantumultX/master/Scripts/streaming-ui-check.js
+ * 脚本功能：检查节点是否支持Dazn/Discovery/Param/Disney/Netflix/ChatGPT/YouTube解锁服务
+ * 原作者：XIAO_KOP
+ */
 const NF_BASE_URL = "https://www.netflix.com/title/81280792";
 const DISNEY_BASE_URL = 'https://www.disneyplus.com';
 const DISNEY_LOCATION_BASE_URL = 'https://disney.api.edge.bamgrid.com/graph/v1/device/graphql';
