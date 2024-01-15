@@ -1,10 +1,10 @@
 #!name = 节点检测工具
 #!desc = 节点解锁、节点网速、节点位置
 #!openUrl = 
-#!author = iKeLee
+#!author = iKeLee KOP-XIAO xream keywos wuhu_zzz 整点猫咪
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NodeTools.png
-#!date = 2023-10-27 17:17:34
+#!date = 2023-09-14 17:20:34
 
 [Script]
 generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
