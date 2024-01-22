@@ -27,7 +27,7 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 # 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
 ^https?:\/\/interface3?\.music\.163\.com\/eapi\/(community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) reject-dict
 # 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
-^https?:\/\/interface3?\.music\.163\.com\/eapi\/(content\/activity\/music\/|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
+^https?:\/\/interface3?\.music\.163\.com\/eapi\/(delivery\/(batch-deliver|deliver)|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
 # 开屏广告
 ^https?:\/\/interface3?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ reject-dict
 # 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
