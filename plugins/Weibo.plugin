@@ -4,7 +4,7 @@
 #!author = RuCu6 zmqcherish
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo.png
-#!date = 2024-01-03 10:20
+#!date = 2024-01-22 17:00
 
 [Rule]
 # 请求放行
@@ -43,7 +43,7 @@ http-response ^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\? script-path 
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
 http-response ^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
 http-response ^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
-http-response ^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
+http-response ^https:\/\/api\.weibo\.cn\/2\/(container\/asyn|flowlist|flowpage)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
 http-response ^https:\/\/api\.weibo\.cn\/2\/friendships\/(create|destroy)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
 http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/(container_timeline|dealatt|me|statuses\/tab|userinfo)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
 http-response ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_timeline(_hot|_topic|_topicpage|_unread)?|unread_hot_timeline)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
