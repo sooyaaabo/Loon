@@ -1,6 +1,8 @@
 # Loon
 自用分流规则、重写、插件、脚本及图标库。
 
+# 禁止fork
+
 # 鸣谢
 排名不分先后<br>
 [@RuCu6](https://github.com/RuCu6)<br>
@@ -19,6 +21,3 @@
 [@zmqcherish](https://github.com/zmqcherish)<br>
 [@lodepuly](https://gitlab.com/lodepuly/vpn_tool)<br>
 [@hfg-gmuend](https://github.com/hfg-gmuend)<br>
-
-# 鸣谢
-禁止fork
