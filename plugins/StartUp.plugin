@@ -4,7 +4,7 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-01-22
+#!date = 2024-01-23
 
 [Rule]
 # 两步路
@@ -13,7 +13,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.01.22/v2.0.394 reject-200
+^https?:\/\/2024.01.23/v2.0.395 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -622,7 +622,8 @@ http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\
 
 # ======= H ======= #
 # 航旅纵横
-http-response ^https?:\/\/(114\.115\.217\.129)|(.*umetrip\.com\.cn)\/gateway\/api\/umetrip\/native$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/hanglvzongheng.js, requires-body = true, tag = 航旅纵横
+http-response ^https?:\/\/.*umetrip\.com\.cn\/gateway\/api\/umetrip\/native$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/hanglvzongheng.js, requires-body = true, tag = 航旅纵横
+;http-response ^https?:\/\/114\.115\.217\.129\/gateway\/api\/umetrip\/native$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/hanglvzongheng.js, requires-body = true, tag = 航旅纵横
 
 # ======= I ======= #
 # i3综合社区
@@ -680,7 +681,7 @@ http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = htt
 # http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = false->true, requires-body = true, tag = 威锋
 
 # ======= X ======= #
-# > 小特
+# 小特
 http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = false->true, requires-body = true, tag = XiaoTe
 
 # ======= Z ======= #
