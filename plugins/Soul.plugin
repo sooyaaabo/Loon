@@ -1,10 +1,10 @@
 #!name = Soul
 #!desc = Soul净化及解锁部分功能
 #!openUrl = 
-#!author = ZenmoFeiShi
+#!author = ZenmoFeiShi iKeLee
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Soul.png
-#!date = 2024-01-22 10:51
+#!date = 2024-01-23 21:44
 
 [Rule]
 # 地理位置 - 影响注册账号时的属地判断
@@ -19,14 +19,17 @@ IP-CIDR, 47.110.187.87/32, REJECT, no-resolve
 ^https:\/\/ssp\.soulapp\.cn\/api\/q reject-dict
 
 [Script]
-http-response ^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/post\.soulapp\.cn\/hot\/soul\/rank script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/api-user\.soulapp\.cn\/furion\/position\/content script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/api-account\.soulapp\.cn\/teenager\/config script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
-http-response ^https:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
+http-response ^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/post\.soulapp\.cn\/hot\/soul\/rank script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/gateway-mobile-gray\.soulapp\.cn\/mobile\/app\/version\/queryIos script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-chat\.soulapp\.cn\/chat\/limitInfo script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/post\.soulapp\.cn\/v\d\/post\/homepage\/guide\/card script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-user\.soulapp\.cn\/furion\/position\/content script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-account\.soulapp\.cn\/teenager\/config script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/47\.110\.187\.87\/winterfell\/v2\/getIpByDomain script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-pay\.soulapp\.cn\/vip\/meet\/userInfo script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-pay\.soulapp\.cn\/privilege\/supervip\/status script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-a\.soulapp\.cn\/official\/scene\/module script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
 
 [Mitm]
 hostname = ssp.soulapp.cn, api-a.soulapp.cn, gateway-mobile-gray.soulapp.cn, api-chat.soulapp.cn, post.soulapp.cn, api-user.soulapp.cn, api-account.soulapp.cn
