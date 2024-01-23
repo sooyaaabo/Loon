@@ -13,7 +13,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.01.23/v2.0.395 reject-200
+^https?:\/\/2024.01.23/v2.0.396 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -508,6 +508,7 @@ https://support.you.163.com/appversync/check.do reject
 ^https?:\/\/cdn\.cmgadx\.com\/sdk\/pool\/\w+\.json reject
 # 1号会员店
 ^https?:\/\/venus\.yhd\.com\/memhome\/launchConfig reject
+^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=home_launchConfig reject-200
 # 医考帮
 ^https?:\/\/api\.yikaobang\.com\.cn\/client\/main\/homePageSmallAd reject
 ^https?:\/\/api\.yikaobang\.com\.cn\/index\.php\/Client\/main\/startPage reject
