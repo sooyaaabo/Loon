@@ -1,11 +1,10 @@
 # Loon
 自用分流规则、重写、插件、脚本及图标库。
-
-# 禁止fork
+禁止fork 禁止fork 禁止fork
 
 # 鸣谢
 排名不分先后<br>
-[@RuCu6](https://github.com/RuCu6)<br>
+·[@RuCu6](https://github.com/RuCu6)<br>
 [@Keywos](https://github.com/Keywos)<br>
 [@Maasea](https://github.com/Maasea)<br>
 [@app2smile](https://github.com/app2smile)<br>
