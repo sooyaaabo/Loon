@@ -4,7 +4,7 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-01-23
+#!date = 2024-01-24
 
 [Rule]
 # 两步路
@@ -13,7 +13,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.01.23/v2.0.396 reject-200
+^https?:\/\/2024.01.24/v2.0.397 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -127,6 +127,8 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # 东方财富
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v2 reject
 ^https?:\/\/emdcadvise\.eastmoney\.com\/infoAdviseService$ reject
+# 得到
+^https?:\/\/entree-ws\.igetget\.com\/oms\/front\/start\/push reject
 
 # ======= E ======= #
 # 饿了么
