@@ -94,6 +94,7 @@ http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teena
 
 # ZenmoFeiShi
 # 哔哩哔哩VIP
-http-request ^https:\/\/app\.bilibili\.com\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite*$ script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/bili.js, requires-body = true, binary-body-mode = true, tag = 哔哩哔哩VIP@ZenmoFeiShi
+http-request ^https:\/\/app\.bilibili\.com\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite*$ script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/bili.js, requires-body = true, tag = 哔哩哔哩VIP@ZenmoFefalseiShi
+
 [Mitm]
 hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
