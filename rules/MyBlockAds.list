@@ -1,4 +1,4 @@
-# 2024-01-14 13:10
+# 2024-01-26 22:50
 
 # ======= A ======= #
 # 阿里巴巴
@@ -62,7 +62,7 @@ HOST, adttrackingprd.hwwt8.com, REJECT
 # Foreca & Google
 DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
-DOMAIN-SUFFIX, adservice.google.com, REJECT
+DOMAIN-KEYWORD, adservice.google.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 
 # ======= G ======= #
@@ -151,8 +151,20 @@ DOMAIN, sin3-ib.adnxs.com, REJECT
 DOMAIN, api.zuihuimai.com, REJECT
 # 数字联盟
 DOMAIN-SUFFIX, shuzilm.cn, REJECT
+# Soul
+DOMAIN, ad-h5-cdn.soulapp.cn, REJECT
+DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT
+DOMAIN, ad-r.soulapp.cn, REJECT
+DOMAIN, soul-ad.soulapp.cn, REJECT
+IP-CIDR, 47.56.131.76/32, REJECT
+IP-CIDR, 47.97.215.55/32, REJECT
+IP-CIDR, 47.99.42.29/32, REJECT
+IP-CIDR, 120.27.235.201/32, REJECT
+IP-CIDR, 121.196.197.147/32, REJECT
 # Speedtest
-DOMAIN-SUFFIX, ad.gt, REJECT
+DOMAIN, ads.pubmatic.com, REJECT
+DOMAIN, id.hadron.ad.gt, REJECT
+DOMAIN-KEYWORD, -adsystem.com, REJECT
 
 # ======= T ======= #
 # 腾讯
