@@ -35,21 +35,21 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 
 [Script]
 # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = mian
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = mian
 # 会员伪装vip
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 会员伪装vip
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 会员伪装vip
 # 底部tab
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部tab
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部tab
 # 推荐 | home | 主页
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = home
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = home
 # 发现页
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
 # effect
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = effect
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = effect
 # 我的页面
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
 # 显示未关注你
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示未关注你
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyresParam_nolog.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示未关注你
 
 [Mitm]
 hostname = interface*.music.163.com, interface.music.163.com, interface3.music.163.com, httpdns.n.netease.com, interface.music.163.com.163jiasu.com, interface3.music.163.com.163jiasu.com, ipv4.music.163.com
