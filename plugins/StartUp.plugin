@@ -607,6 +607,7 @@ http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https:
 http-response ^http:\/\/amdc\.m\.taobao\.com script-path = https://github.com/ddgksf2013/Scripts/raw/master/amdc.js, requires-body = true, tag = amdc
 # ahhhhfs
 http-response ^https?:\/\/.*ahhhhfs\.com\/($|[0-9a-zA-Z_/]+\/$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/ahfs.js, requires-body = true, tag = ahhhhfs
+http-response ^https?:\/\/.*xbwpys\.com\/($|[0-9a-zA-Z_/]+\/$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/ahfs.js, requires-body = true, tag = ahhhhfs
 
 # ======= B ======= #
 # 百度地图
