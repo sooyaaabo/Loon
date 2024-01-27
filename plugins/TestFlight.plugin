@@ -1,10 +1,10 @@
 #!name = TestFlight
 #!desc = TestFlight多账户合并，自动加入TF等
 #!openUrl = 
-#!author = blackmatrix7 NobyDa
+#!author = NobyDa blackmatrix7
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png
-#!date = 2024-01-06 18:12
+#!date = 2024-01-27 22:12
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
@@ -15,21 +15,22 @@ DOMAIN, testflight.apple.com, PROXY
 [Script]
 # NobyDa
 # TestFlight_账户管理
-# http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理@NobyDa
+http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理@NobyDa
+
 
 # blackmatrix7
 # TestFlight_设置篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/settings\/.*\/apps\/\d+ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight设置篡改@blackmatrix7
+# http-request ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/settings\/.*\/apps\/\d+ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight设置篡改@blackmatrix7
 # TestFlight_应用篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps\/\d+ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight应用篡改@blackmatrix7
+# http-request ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps\/\d+ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight应用篡改@blackmatrix7
 # TestFlight_状态篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/apps\/\d+\/\d+\/install\/status$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight状态篡改@blackmatrix7
+# http-request ^https:\/\/testflight\.apple\.com\/v\d\/apps\/\d+\/\d+\/install\/status$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight状态篡改@blackmatrix7
 # TestFlight_更新篡改
-http-request ^https:\/\/testflight\.apple\.com\/v\d+\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps\/\d+\/.*install$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight更新篡改@blackmatrix7
+# http-request ^https:\/\/testflight\.apple\.com\/v\d+\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps\/\d+\/.*install$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight更新篡改@blackmatrix7
 # TestFlight_应用共存
-http-response ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight应用共存@blackmatrix7
+# http-response ^https:\/\/testflight\.apple\.com\/v\d\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/apps$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight应用共存@blackmatrix7
 # TestFlight_自动入列
-http-response ^https:\/\/testflight\.apple\.com\/v3\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/ru\/([a-zA-Z0-9]{8})$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight自动入列@blackmatrix7
+# http-response ^https:\/\/testflight\.apple\.com\/v3\/accounts\/\w{8}-\w{4}-\w{4}-\w{4}-\w{12}\/ru\/([a-zA-Z0-9]{8})$ script-path=https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.js,requires-body=true,tag=TestFlight自动入列@blackmatrix7
 
 [Mitm]
 hostname = testflight.apple.com
