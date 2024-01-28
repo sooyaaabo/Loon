@@ -4,7 +4,7 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-01-27 23:54
+#!date = 2024-01-28 12:54
 
 [Rule]
 # 两步路
@@ -13,7 +13,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.01.27/v2.0.399 reject-200
+^https?:\/\/2024.01.28/v2.0.401 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -541,7 +541,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser reject
 # 游民星空
 ^https?:\/\/entry\.ubixioe\.com\/mob\/sdk\/v\d\/endpoint reject
 # 医脉通
-^https?:\/\/promotion\.medlive\.cn\/getcover-v2\?app_name=medlive url reject
+^https?:\/\/promotion\.medlive\.cn\/getcover-v2\?app_name reject
 
 
 # ======= Z ======= #
