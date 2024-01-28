@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RedBook.png
 #!date = 2023-12-31 13:20
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/xiaohongshu.snippet
+
 [Rewrite]
 # 惊喜弹窗
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/surprisebox\/(get_style|open|submit_action) reject-dict
