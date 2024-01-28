@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo.png
 #!date = 2024-01-22 17:00
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
+
 [Rule]
 # 请求放行
 DOMAIN, wbapp.uve.weibo.com, DIRECT
