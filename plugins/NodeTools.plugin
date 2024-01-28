@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NodeTools.png
 #!date = 2023-09-14 17:20:34
 
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Node_detection_tool.plugin
+
 [Script]
 generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js, timeout = 10, tag = 节点网速测试, img-url = speedometer.system
 generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询, img-url = play.circle.system
