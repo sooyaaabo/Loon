@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/VVebo.png
 #!date = 2024-01-19 22:06
 
+# https://raw.githubusercontent.com/suiyuran/stash/main/override/fix-vvebo.stoverride
+
 [Script]
 http-request ^https:\/\/api\.weibo\.cn\/2\/users\/show\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, tag = 修复时间线
 http-request ^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, tag = 修复时间线
