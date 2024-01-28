@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Amap.png
 #!date = 2024-01-11 17:00
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
+
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, awaken.amap.com, REJECT
