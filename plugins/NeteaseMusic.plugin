@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
 #!date = 2024-01-15 18:50
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
+
 [Rule]
 DOMAIN, httpdns.n.netease.com,REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
