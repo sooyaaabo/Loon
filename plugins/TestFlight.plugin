@@ -6,6 +6,9 @@
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png
 #!date = 2024-01-27 22:12
 
+# https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/script/testflight/testflight.snippet
+
 [General]
 skip-proxy = iosapps.itunes.apple.com
 
@@ -15,8 +18,7 @@ DOMAIN, testflight.apple.com, PROXY
 [Script]
 # NobyDa
 # TestFlight_账户管理
-http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ requires-body=1,script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,tag=TestFlight账户管理@NobyDa
-
+http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ script-path = https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js,requires-body = true,tag = TestFlight账户管理@NobyDa
 
 # blackmatrix7
 # TestFlight_设置篡改
