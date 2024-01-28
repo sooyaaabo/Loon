@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Himalaya.png
 #!date = 2023-10-29 13:48
 
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
+
 [Rewrite]
 # 修复轮播广告失效
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF reject
