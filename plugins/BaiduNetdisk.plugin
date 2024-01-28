@@ -7,8 +7,9 @@
 #!date = 2023-08-19 13:48
 
 [Rewrite]
-# chxm1023
+# RuCu6
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
+^https:\/\/update\.pan\.baidu\.com\/statistics\? reject-dict
 
 # ddgksf2013
 # 设置信息流
@@ -19,13 +20,18 @@
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
 
 [Script]
+# RuCu6
+http-response ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, script-path = 百度网盘广告@RuCu6
+http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, script-path = 百度网盘广告@RuCu6
+
 # chxm1023
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/BaiduNetDisk/BaiduNetDisk_crack.jsscript-path = 解锁SVIP权益@chxm1023
 
 # ddgksf2013
 # 开屏广告
 http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body = true, tag = 开屏广告@ddgksf2013
 # 会员权益
 http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?app_id script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js, requires-body = true, tag = 会员权益@ddgksf2013
+
 [Mitm]
 hostname = pan.baidu.com
