@@ -6,6 +6,9 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AliyunDrive.png
 #!date = 2023-10-27 19:35
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
+
 [Rule]
 IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 
