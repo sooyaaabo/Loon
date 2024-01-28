@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/IQIYI.png
 #!date = 2023-12-09 13:30
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
+
 [Rule]
 # 放行地址
 DOMAIN-SUFFIX, cupid.iqiyi.com, DIRECT
