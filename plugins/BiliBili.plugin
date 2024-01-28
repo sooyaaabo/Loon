@@ -1,10 +1,14 @@
 #!name = 哔哩哔哩
 #!desc = 没有广告的哔哩哔哩更值得干杯
 #!openUrl = 
-#!author = RuCu6 Maasea iKeLee ZenmoFeiShi
+#!author = RuCu6 Maasea iKeLee
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BilibiliRed.png
 #!date = 2024-01-24 15:10
+
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/bilibili.snippet
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
+# https://raw.githubusercontent.com/Maasea/sgmodule/master/Bilibili.Helper.sgmodule
 
 [Rule]
 # 开屏广告
@@ -91,10 +95,6 @@ http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.community\.service\.dm\.v
 http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.community\.service\.dm\.v1\.DM\/DmView script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/dist/bilibili.helper.beta.js, requires-body = true, binary-body-mode = true, tag = 移除交互式弹幕@Maasea
 # 移除青少年模式弹窗
 http-response ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Bilibili/dist/bilibili.helper.beta.js, requires-body = true, binary-body-mode = true, tag = 移除青少年弹窗@Maasea
-
-# ZenmoFeiShi
-# 哔哩哔哩VIP
-http-request ^https:\/\/app\.bilibili\.com\/bilibili\.app\.playerunite\.v1\.Player\/PlayViewUnite*$ script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/bili.js, requires-body = true, tag = 哔哩哔哩VIP@ZenmoFefalseiShi
 
 [Mitm]
 hostname = app.bilibili.com, api.bilibili.com, api.live.bilibili.com, grpc.biliapi.net, www.bilibili.com, m.bilibili.com, live.bilibili.com
