@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo_intl.png
 #!date = 2023-11-22 22:37
 
+# https://raw.githubusercontent.com/Keywos/rule/main/module/weibous.sgmodule
+
 [Rewrite]
 # 热门视频、热推荐
 ^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
