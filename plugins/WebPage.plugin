@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png
 #!date = 2024-01-12 10:20
 
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
+
 [Rewrite]
 # -----------Rucu6----------- #
 # 谷歌服务重定向 //*.google.cn
