@@ -6,6 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
 #!date = 2024-01-28 12:54
 
+# https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
+
 [Rule]
 # 两步路
 # domain-suffix, admobile.top, reject
