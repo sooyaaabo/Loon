@@ -143,6 +143,9 @@
 ^https?:\/\/mime\.baidu\.com\/sapi\/v1\/circle\/joinedlist reject-dict
 ^https?:\/\/mime\.baidu\.com\/commer\/pocket_api\/enterprise_list reject-dict
 ^https?:\/\/mbd\.baidu\.com\/ccs\/v1\/start\/confsync\?appname=baidu_input reject-dict
+^https?:\/\/mime\.baidu\.com\/sapi\/v1\/(circle\/joinedlist|lccorpus\/usercorpussync|aihelpactivity\/aihelpresource) reject-dict
+;^https?:\/\/h2tcbox\.baidu\.com\/ztbox\?action=zubc\&appname=baidu_input reject
+^https:\/\/mime\.baidu\.com\/v5\/(fb\/st\?logtype|(notiv3|cellloc_noti|noti_cloudswitch_noti)\/info) reject-dict
 # 百度网盘 - pan.baidu.com, ndstatic.cdn.bcebos.com, staticsns.cdn.bcebos.com, issuecdn.baidupcs.com, update.pan.baidu.com, fc-video.cdn.bcebos.com, rp.hpplay.cn
 ^https?:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adx reject
 ^https?:\/\/pan\.baidu\.com\/rest\/2\.0\/pcs\/ad reject
@@ -1683,7 +1686,7 @@ http-response ^https:\/\/social\.blued\.cn\/users\/.+\/more\/ios\?v=2 script-pat
 # 百度地图 - dss0.bdstatic.com, tb1.bdstatic.com, tb2..bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
 http-response ^https:\/\/newclient\.map\.baidu\.com\/client\/phpui2\/\?qt=ads script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/baidumap.js,requires-body = true, tag = 百度地图
 # 百度输入法 - r6.mo.baidu.com, res.mi.baidu.com, mime.baidu.com, mbd.baidu.com
-http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/bdsrf.js,requires-body = true, tag = 百度输入法
+http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_robot_list|v5\/custom_page\/(layout|getdata)) script-path=https://raw.githubusercontent.com/Keywos/rule/master/script/baidu_input/js/index.js, requires-body=true, timeout=10, tag=百度输入法
 # 百度贴吧 - tiebac.baidu.com
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js,requires-body = true, tag = 百度贴吧
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,requires-body = true, tag = 百度贴吧
