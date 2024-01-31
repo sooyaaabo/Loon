@@ -1224,7 +1224,13 @@ https://top-widgets-api.xiaozujian.com/api/ad/config reject
 # 微信公众号去除商品推广
 ^https?:\/\/mp\.weixin\.qq\.com\/mp\/cps_product_info\?action reject-dict
 # 网易新闻 - c.m.163.com
-^https?:\/\/c\.m\.163\.com\/nc\/gl\/ reject-200
+^https?:\/\/interface\.music\.163\.com\/eapi\/ad reject
+^https?:\/\/c\.m\.163\.com\/nc\/gl\/ reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds reject
+^https?:\/\/g1\.163\.com\/madfeedback reject
+^https?:\/\/interface\.music\.163\.com\/eapi\/ad\/ reject
+^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json reject
+^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|search/(specialkeyword|defaultkeyword|hot)) reject
 # 网易有钱 - client.mail.163.com
 ^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds reject-200
 # 网易严选 - support.you.163.com, m.you.163.com, yanxuan.nosdn.127.net
@@ -1731,7 +1737,7 @@ http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\
 # 粉笔 - tiku.fenbi.com
 http-response ^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body=true, tag = 粉笔
 
-# >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
+# >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
 http-response ^http?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, requires-body = true, tag = 航旅纵横
 
