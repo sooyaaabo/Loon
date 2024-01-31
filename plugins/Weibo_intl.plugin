@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo_intl.png
 #!date = 2023-11-22 22:37
 
-# https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.sgmodule
+# https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin
 
 [Rewrite]
 # 热门视频、热推荐
