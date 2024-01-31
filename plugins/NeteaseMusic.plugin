@@ -7,6 +7,7 @@
 #!date = 2024-01-15 18:50
 
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
+# https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 
 [Rule]
 DOMAIN, httpdns.n.netease.com,REJECT
