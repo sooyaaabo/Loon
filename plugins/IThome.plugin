@@ -9,6 +9,8 @@
 #!select = 去除置顶,开启,关闭
 #!date = 2024-01-27 23:12
 
+# https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
+
 [Rewrite]
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao reject
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ reject
