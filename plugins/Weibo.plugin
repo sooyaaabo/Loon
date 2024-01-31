@@ -12,6 +12,7 @@
 # 请求放行
 DOMAIN, wbapp.uve.weibo.com, DIRECT
 # 请求拦截 - 微博开屏广告
+DOMAIN, huodong.weibo.cn, REJECT
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 [Rewrite]
