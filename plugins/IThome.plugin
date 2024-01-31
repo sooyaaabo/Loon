@@ -1,0 +1,20 @@
+#!name = IT之家
+#!desc = 过滤IT之家信息流广告和文末广告，自定义移除置顶和轮播图。自定义移除项需在插件配置，此插件仅支持8.30及以上版本客户端。
+#!openUrl = 
+#!author = keywos
+#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/IThome.png
+#!select = 去除轮播图广告,开启,关闭
+#!select = 去除整个轮播图,开启,关闭
+#!select = 去除置顶,开启,关闭
+#!date = 2024-01-27 23:12
+
+[Rewrite]
+^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao reject
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ reject
+
+[Script]
+http-response ^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/js/index.js, requires-body = true, tag = IT之家去广告
+  
+[MITM]
+hostname = napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com
