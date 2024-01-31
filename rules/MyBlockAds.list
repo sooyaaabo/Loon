@@ -1,4 +1,4 @@
-# 2024-01-26 22:50
+# 2024-01-31 12:22
 
 # ======= A ======= #
 # 阿里巴巴
@@ -194,6 +194,7 @@ DOMAIN, ipv4.music.163.com, REJECT
 DOMAIN, ipv6.music.163.com, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
 # 微博 开屏广告
+DOMAIN, huodong.weibo.cn, REJECT
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 # ======= X ======= #
