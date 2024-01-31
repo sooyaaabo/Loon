@@ -186,6 +186,9 @@ URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com
 URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+, REJECT
 
 # ======= W ======= #
+# 网易新闻 - 放行规则
+DOMAIN, nex.163.com, DIRECT
+DOMAIN, gw.m.163.com, DIRECT
 # 网易云音乐
 DOMAIN, iadmat.nosdn.127.net, REJECT
 DOMAIN, iadmatapk.nosdn.127.net, REJECT
@@ -327,6 +330,15 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 
 # Soul //ssp.soulapp.cn
 ^https:\/\/ssp\.soulapp\.cn\/api\/q\? reject-dict
+
+# 网易新闻
+^https?:\/\/interface\.music\.163\.com\/eapi\/ad reject
+^https?:\/\/c\.m\.163\.com\/nc\/gl\/ reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/searchMultiAds reject
+^https?:\/\/g1\.163\.com\/madfeedback reject
+^https?:\/\/interface\.music\.163\.com\/eapi\/ad\/ reject
+^https?:\/\/support\.you\.163\.com\/xhr\/boot\/getBootMedia\.json reject
+^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|search/(specialkeyword|defaultkeyword|hot)) reject
 
 # 微信 //mp.weixin.qq.com
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? reject-dict
