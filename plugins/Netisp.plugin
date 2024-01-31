@@ -9,7 +9,7 @@
 #!select = 是否隐藏真实IP,隐藏,不隐藏
 #!date = 2023-09-19 20:07:19
 
-# https://raw.githubusercontent.com/Keywos/rule/main/loon/Netisp.plugin
+# https://raw.githubusercontent.com/Keywos/rule/main/script/netisp/netisp.plugin
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/Keywos/rule/main/loon/Netisp.js, tag = 入口落地查询, img-url = network
+generic script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/netisp/js/loon.js, tag = 入口落地查询, img-url = network
