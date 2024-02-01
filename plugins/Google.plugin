@@ -7,8 +7,7 @@
 #!date = 2023-11-14 14:41
 
 [Rewrite]
-# ^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
-^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
 ^https?:\/\/translate\.google\.cn 302 https://translate.google.com
 ^https?:\/\/(ditu|maps)\.google\.cn 302 https://maps.google.com
 
