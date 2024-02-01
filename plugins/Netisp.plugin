@@ -9,6 +9,7 @@
 #!select = 是否隐藏真实IP,隐藏,不隐藏
 #!date = 2023-09-19 20:07:19
 
+# 2023-09-19 20:07:19
 # https://raw.githubusercontent.com/Keywos/rule/main/script/netisp/netisp.plugin
 
 [Script]
