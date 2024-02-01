@@ -1,10 +1,10 @@
 #!name = MyBlockAds
-#!desc = 去广告合集，以下app请使用单独配置文件：高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
+#!desc = 去广告合集,以下app请使用单独配置文件:高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
 #!openUrl = 
 #!author = RuCu6 zZPiglet app2smile
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2024-01-21 08:50
+#!date = 2024-02-01 15:15
 
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
@@ -396,9 +396,12 @@ http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-pa
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json2.js, requires-body = true, timeout = 10, tag = 贴吧json
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = 贴吧proto
 
+# 草榴社区 //2023.redircdn.com
+http-response ^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 草榴社区
+
 # JavDB //api.hechuangxinxi.xyz, jdforrepam.com
 http-response ^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/(v1\/(ads|startup|users)|v4\/movies\/\w+) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = JavDB
-http-request ^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, requires-body = false, tag = JavDB
+http-request ^https:\/\/(api\.hechuangxinxi\.xyz|jdforrepam\.com)\/api\/v1\/movies\/\w+\/play\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/javdb.js, requires-body = true, tag = JavDB
 
 # 简书跳过重定向页面以直接访问 //links.jianshu.com, www.jianshu.com
 http-response ^https:\/\/links\.jianshu\.com\/go\?to= script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/noRedirect.js, requires-body = true, tag = 简书跳过重定向页面以直接访问
@@ -431,4 +434,4 @@ http-response ^https\:\/\/(weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspam
 http-response ^https:\/\/api\.m\.mi\.com\/v1\/(app\/start|order\/expressView) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城开屏广告
 
 [Mitm]
-hostname = ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
+hostname = ad.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, 2023.redircdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn
