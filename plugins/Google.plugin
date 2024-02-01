@@ -4,7 +4,7 @@
 #!author = sooyaaabo
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Google.png
-#!date = 2023-11-14 14:41
+#!date = 2024-01-12 10:20
 
 [Rewrite]
 ;^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
