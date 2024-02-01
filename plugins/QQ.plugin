@@ -4,8 +4,9 @@
 #!author = iKeLee
 #!homepage = https://github.com/sooyaaabo/Loon/tree/main
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/QQ.png
-#!date = 2024-01-12 20:21
+#!date = 2024-01-12 20:21:38
 
+# 2024-01-12 20:21:38
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQ_Redirect.plugin
 
 [Rewrite]
