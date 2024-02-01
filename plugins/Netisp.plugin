@@ -12,4 +12,4 @@
 # https://raw.githubusercontent.com/Keywos/rule/main/script/netisp/netisp.plugin
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/netisp/js/loon.js, tag = 入口落地查询, img-url = network
+generic script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/netisp/js/loon.js, tag = 入口落地查询 𝕂, img-url = network
