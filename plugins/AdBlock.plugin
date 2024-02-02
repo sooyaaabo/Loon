@@ -2,7 +2,7 @@
 #!desc = 针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!openUrl = 
 #!author = fmz200
-#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlock.png
 #!date = 2024-02-01 18:34
 
