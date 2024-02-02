@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo.png
 #!date = 2024-02-02 18:51
 
-# 2024-02-02 18:35
+# 2024-01-22 17:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
 
 [Rule]
@@ -42,7 +42,7 @@ DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 [Script]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
-http-response ^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|client\/tabbar|push\/active)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 首页
+http-response ^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 首页
 http-response ^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 首页
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
 http-response ^https:\/\/api\.weibo\.cn\/2\/(cardlist|page)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 详情页
