@@ -11,7 +11,7 @@
 # 2023-07-30
 # https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 # 2023-08-19 13:48:55
-# https://gitlab.com/isous/loonresource/-/raw/main/Plugin/BaiduNetDisk_crack.plugin
+# https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BaiduCloud.js
 
 [Rewrite]
 # RuCu6
@@ -32,7 +32,7 @@ http-response ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? script-path = https:/
 http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, script-path = 百度网盘广告@RuCu6
 
 # chxm1023
-http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://gitlab.com/isous/loonresource/-/raw/master/Script/BaiduNetDisk/BaiduNetDisk_crack.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
+http-response ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/membership\/user script-path = https://raw.githubusercontent.com/510004015/Quantumult_X/Remote/Premium/BaiduCloud.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
 
 # ddgksf2013
 # 开屏广告
