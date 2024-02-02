@@ -2,7 +2,7 @@
 #!desc = Spotify过滤广告，歌词翻译，解锁部分Premium特权。
 #!openUrl = 
 #!author = app2smile
-#!homepage = https://github.com/sooyaaabo/Loon/tree/main
+#!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Spotify.png
 #!input = baidu_appid
 #!input = baidu_securityKey
