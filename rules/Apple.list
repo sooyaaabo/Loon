@@ -1,53 +1,57 @@
 # Apple
 DOMAIN-SUFFIX, aaplimg.com
-DOMAIN-SUFFIX, apple-cloudkit.com
-DOMAIN-SUFFIX, apple-livephotoskit.com
 DOMAIN-SUFFIX, apple-mapkit.com
 DOMAIN-SUFFIX, apple-support.akadns.net
 DOMAIN-SUFFIX, apple.co
 DOMAIN-SUFFIX, apple.com
 DOMAIN-SUFFIX, apple.com.cn
-DOMAIN-SUFFIX, apple.com.akadns.net
 DOMAIN-SUFFIX, apple.com.edgekey.net
-DOMAIN-SUFFIX, cdn-apple.com
 DOMAIN-SUFFIX, smoot.apple.cn
-DOMAIN-KEYWORD,apple.com.akadns.net
-DOMAIN-KEYWORD,apple.com.edgekey.net
-DOMAIN-KEYWORD,apple-support.akadns.net
-DOMAIN-KEYWORD,icloud.com.akadns.net
+DOMAIN-KEYWORD, apple.com.akadns.net
+DOMAIN-KEYWORD, apple.com.edgekey.net
+DOMAIN-KEYWORD, apple-support.akadns.net
 
-# Apple ID
-DOMAIN, appleid.apple.com
-DOMAIN, appleid.cdn-apple.com
-DOMAIN, gsa.apple.com
-DOMAIN, idmsa.apple.com
+# Apple ID - Apple 设备必须能够连接到以下主机才能验证 Apple ID。所有使用 Apple ID 的服务（如 iCloud、App 安装和 Xcode）都需要满足这个条件。
+DOMAIN, appleid.apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
+DOMAIN, appleid.cdn-apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
+DOMAIN, idmsa.apple.com //Apple ID 认证
+DOMAIN, gsa.apple.com //Apple ID 认证
 
-# App Store、Apple Music
-DOMAIN, itunes.apple.com
-DOMAIN, ppq.apple.com
+# App Store - Apple 设备需要访问以下主机和域，才能安装和更新 App。
 DOMAIN-SUFFIX, applemusic.com
-DOMAIN-SUFFIX, apps.apple.com
 DOMAIN-SUFFIX, appstore.com
 DOMAIN-SUFFIX, itunes.com
-DOMAIN-SUFFIX, itunes.apple.com
-DOMAIN-SUFFIX, mzstatic.com
+DOMAIN-SUFFIX, itunes.apple.com //商店内容，如 App、图书和音乐
+DOMAIN-SUFFIX, apps.apple.com //商店内容，如 App、图书和音乐
+DOMAIN-SUFFIX, mzstatic.com //商店内容，如 App、图书和音乐
+DOMAIN, itunes.apple.com
+DOMAIN, ppq.apple.com //企业 App 验证
 
 # TestFlight
 DOMAIN, beta.apple.com
 DOMAIN, testflight.apple.com
 DOMAIN-KEYWORD, testflight
 
-# iCloud
-DOMAIN-SUFFIX, apzones.com
-DOMAIN-SUFFIX, icloud.com
-DOMAIN-SUFFIX, icloud.com.cn
-DOMAIN-SUFFIX, icloud-content.com
+# iCloud - 除了上面列出的 Apple ID 主机外，Apple 设备必须能够连接到以下域的主机才能使用 iCloud 服务。
 DOMAIN-SUFFIX, icloud.com.akadns.net
 DOMAIN-SUFFIX, me.com
+DOMAIN-SUFFIX, apple-cloudkit.com //iCloud 服务
+DOMAIN-SUFFIX, apple-livephotoskit.com //iCloud 服务
+DOMAIN-SUFFIX, apzones.com //中国大陆的 iCloud 服务
+DOMAIN-SUFFIX, cdn-apple.com //iCloud 服务
+DOMAIN-SUFFIX, gc.apple.com //iCloud 服务
+DOMAIN-SUFFIX, icloud.com //iCloud 服务
+DOMAIN-SUFFIX, icloud.com.cn //中国大陆的 iCloud 服务
+DOMAIN-SUFFIX, icloud.apple.com //iCloud 服务
+DOMAIN-SUFFIX, icloud-content.com //iCloud 服务
+DOMAIN-SUFFIX, iwork.apple.com //iWork 文稿
+DOMAIN, mask.icloud.com //iCloud 专用代理
+DOMAIN, mask-h2.icloud.com //iCloud 专用代理
+DOMAIN, mask-api.icloud.com //iCloud 专用代理
 
-# Apple 推送通知
-DOMAIN-SUFFIX, push.apple.com
-DOMAIN, identity.apple.com
+# Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
+DOMAIN-SUFFIX, push.apple.com //推送通知
+DOMAIN, identity.apple.com //APNs 证书请求门户
 IP-CIDR, 17.249.0.0/16, no-resolve
 IP-CIDR, 17.252.0.0/16, no-resolve
 IP-CIDR, 17.57.144.0/22, no-resolve
@@ -57,3 +61,46 @@ IP-CIDR6, 2620:149:a44::/48, no-resolve
 IP-CIDR6, 2403:300:a42::/48, no-resolve
 IP-CIDR6, 2403:300:a51::/48, no-resolve
 IP-CIDR6, 2a01:b740:a42::/48, no-resolve
+
+# 设备管理 - 已在 MDM 中注册的 Apple 设备需要访问以下主机和域。
+DOMAIN-SUFFIX, push.apple.com //推送通知
+DOMAIN, deviceenrollment.apple.com //DEP 暂时注册
+DOMAIN, deviceservices-external.apple.com
+DOMAIN, gdmf.apple.com //供 MDM 服务器用来识别使用“被管理的软件更新”的设备有哪些可用的软件更新
+DOMAIN, identity.apple.com //APNs 证书请求门户
+DOMAIN, iprofiles.apple.com //托管当设备通过设备注册过程在 Apple 校园教务管理或 Apple 商务管理中注册时使用的注册描述文件
+DOMAIN, mdmenrollment.apple.com //当客户端通过设备注册过程在 Apple 校园教务管理或 Apple 商务管理中注册时，供 MDM 服务器用来上传客户端使用的注册描述文件，还可用来查找设备和帐户
+DOMAIN, setup.icloud.com //需要在共享 iPad 上使用管理式 Apple ID 登录
+DOMAIN, vpp.itunes.apple.com //供 MDM 服务器用来执行与“App 和图书”有关的操作，例如在设备上分配或撤销许可证
+
+# 设备设置 - 在设置期间或者在安装、更新或恢复操作系统时，Apple 设备需要访问以下主机。
+DOMAIN, albert.apple.com //设备激活
+DOMAIN, captive.apple.com //针对使用强制门户的网络进行互联网连接验证
+DOMAIN, gs.apple.com
+DOMAIN, humb.apple.com
+DOMAIN, static.ips.apple.com
+DOMAIN, sq-device.apple.com //eSIM 激活
+DOMAIN, tbsc.apple.com
+DOMAIN, time-ios.apple.com //供设备用来设置日期和时间
+DOMAIN, time.apple.com //供设备用来设置日期和时间
+DOMAIN, time-macos.apple.com //供设备用来设置日期和时间
+
+# 软件更新 - 在安装、恢复和更新 iOS、iPadOS、macOS、watchOS 及 Apple tvOS 时，Apple 设备需要访问以下主机。
+DOMAIN, appldnld.apple.com //iOS、iPadOS 和 watchOS 更新
+DOMAIN, configuration.apple.com //Rosetta 2 更新
+DOMAIN, gdmf.apple.com //软件更新目录
+DOMAIN, gg.apple.com //iOS、iPadOS、Apple tvOS、watchOS 和 macOS 更新
+DOMAIN, gs.apple.com //iOS、iPadOS、Apple tvOS、watchOS 和 macOS 更新
+DOMAIN, ig.apple.com //macOS 更新
+DOMAIN, mesu.apple.com //托管软件更新目录
+DOMAIN, ns.itunes.apple.com
+DOMAIN, oscdn.apple.com //macOS 恢复
+DOMAIN, osrecovery.apple.com //macOS 恢复
+DOMAIN, skl.apple.com //macOS 更新
+DOMAIN, swcdn.apple.com //macOS 更新
+DOMAIN, swdist.apple.com //macOS 更新
+DOMAIN, swdownload.apple.com //macOS 更新
+DOMAIN, swscan.apple.com //macOS 更新
+DOMAIN, updates-http.cdn-apple.com //软件更新下载
+DOMAIN, updates.cdn-apple.com //软件更新下载
+DOMAIN, xp.apple.com
