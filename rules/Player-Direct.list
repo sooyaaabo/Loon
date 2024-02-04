@@ -1,7 +1,7 @@
 # 影视播放规则(直连)
 # 2024-02-04
 
-# CMS
+# CMSPlayer
 # 低端影视
 DOMAIN-SUFFIX, ddys.pro
 DOMAIN-SUFFIX, ddys.mov
@@ -93,7 +93,7 @@ DOMAIN-SUFFIX, infuseku.xyz
 # 飘零影院
 DOMAIN-SUFFIX, p2100.net
 
-# VOD
+# XPTV
 # 555电影
 DOMAIN-SUFFIX, zxk555.com
 DOMAIN-SUFFIX, 555app.vip
@@ -101,6 +101,11 @@ DOMAIN-SUFFIX, 5flix.net
 DOMAIN-SUFFIX, 5show.site
 DOMAIN-SUFFIX, 5cine.vip
 DOMAIN-SUFFIX, 5mvee.com
+# 哔嘀影视
+DOMAIN-SUFFIX, bdys.me
+DOMAIN-SUFFIX, bdys10.com
+DOMAIN-SUFFIX, bde4.icu
+DOMAIN-SUFFIX, 52bdys.com
 # 玩偶哥哥
 DOMAIN-SUFFIX, wogg.link
 DOMAIN-SUFFIX, wogg.xyz
