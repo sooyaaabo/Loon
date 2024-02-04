@@ -1,3 +1,6 @@
+# 2024-02-04 22:08
+# Author: 可莉🅥
+
 # Apple
 DOMAIN-SUFFIX, aaplimg.com
 DOMAIN-SUFFIX, apple-mapkit.com
@@ -12,12 +15,14 @@ DOMAIN-KEYWORD, apple.com.edgekey.net
 DOMAIN-KEYWORD, apple-support.akadns.net
 
 # Apple ID - Apple 设备必须能够连接到以下主机才能验证 Apple ID。所有使用 Apple ID 的服务（如 iCloud、App 安装和 Xcode）都需要满足这个条件。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/AppleID.list?ref_type=heads
 DOMAIN, appleid.apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
 DOMAIN, appleid.cdn-apple.com //“设置”和“系统偏好设置”中的 Apple ID 认证
 DOMAIN, idmsa.apple.com //Apple ID 认证
 DOMAIN, gsa.apple.com //Apple ID 认证
 
 # App Store - Apple 设备需要访问以下主机和域，才能安装和更新 App。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/AppStore.list?ref_type=heads
 DOMAIN-SUFFIX, applemusic.com
 DOMAIN-SUFFIX, appstore.com
 DOMAIN-SUFFIX, itunes.com
@@ -33,6 +38,7 @@ DOMAIN, testflight.apple.com
 DOMAIN-KEYWORD, testflight
 
 # iCloud - 除了上面列出的 Apple ID 主机外，Apple 设备必须能够连接到以下域的主机才能使用 iCloud 服务。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/iCloud.list?ref_type=heads
 DOMAIN-SUFFIX, icloud.com.akadns.net
 DOMAIN-SUFFIX, me.com
 DOMAIN-SUFFIX, apple-cloudkit.com //iCloud 服务
@@ -50,6 +56,7 @@ DOMAIN, mask-h2.icloud.com //iCloud 专用代理
 DOMAIN, mask-api.icloud.com //iCloud 专用代理
 
 # Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/ApplePushNotificationService.list?ref_type=heads
 DOMAIN-SUFFIX, push.apple.com //推送通知
 DOMAIN, identity.apple.com //APNs 证书请求门户
 IP-CIDR, 17.249.0.0/16, no-resolve
@@ -63,6 +70,7 @@ IP-CIDR6, 2403:300:a51::/48, no-resolve
 IP-CIDR6, 2a01:b740:a42::/48, no-resolve
 
 # 设备管理 - 已在 MDM 中注册的 Apple 设备需要访问以下主机和域。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/AppleDeviceManagement.list?ref_type=heads
 DOMAIN-SUFFIX, push.apple.com //推送通知
 DOMAIN, deviceenrollment.apple.com //DEP 暂时注册
 DOMAIN, deviceservices-external.apple.com
@@ -74,6 +82,7 @@ DOMAIN, setup.icloud.com //需要在共享 iPad 上使用管理式 Apple ID 登�
 DOMAIN, vpp.itunes.apple.com //供 MDM 服务器用来执行与“App 和图书”有关的操作，例如在设备上分配或撤销许可证
 
 # 设备设置 - 在设置期间或者在安装、更新或恢复操作系统时，Apple 设备需要访问以下主机。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/AppleDeviceSetup.list?ref_type=heads
 DOMAIN, albert.apple.com //设备激活
 DOMAIN, captive.apple.com //针对使用强制门户的网络进行互联网连接验证
 DOMAIN, gs.apple.com
@@ -86,6 +95,7 @@ DOMAIN, time.apple.com //供设备用来设置日期和时间
 DOMAIN, time-macos.apple.com //供设备用来设置日期和时间
 
 # 软件更新 - 在安装、恢复和更新 iOS、iPadOS、macOS、watchOS 及 Apple tvOS 时，Apple 设备需要访问以下主机。
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/AppleSoftwareUpdates.list?ref_type=heads
 DOMAIN, appldnld.apple.com //iOS、iPadOS 和 watchOS 更新
 DOMAIN, configuration.apple.com //Rosetta 2 更新
 DOMAIN, gdmf.apple.com //软件更新目录
