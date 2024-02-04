@@ -4,7 +4,7 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-02-04 18:48
+#!date = 2024-02-04 22:26
 
 # 2024-02-04
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.02.04/v2.0.404 reject-200
+^https?:\/\/2024.02.04/v2.0.405 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -155,7 +155,7 @@ https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNot
 # 丰云行
 ^https?:\/\/carapp\.gtmc\.com\.cn\/api\/appgtmc\/homePage\/HomePageAction\/queryHomePageImg\.json reject
 # 飞猫管家
-^https?:\/\/app\.flymodem\.com\.cn\/Appapi\/Public\/welecome reject
+^https?:\/\/app\.flymodem\.com\.cn\/Appapi\/Public\/welecome reject-200
 
 # ======= G ======= #
 # 工时记录
