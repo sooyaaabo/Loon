@@ -1,0 +1,20 @@
+#!name = iTunes
+#!desc = BuyiTunes解锁
+#!openUrl = 
+#!author = chxm1023 ddgksf2013 Guding88
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/iTunes.png
+#!date = 2024-02-04 17:50
+
+[Script]
+# chxm1023
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body = true, tag = iTunes解锁系列@chxm1023
+
+# ddgksf2013
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body = true, tag = iTunes解锁系列@ddgksf2013
+
+# Guding88
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body = true, tag = iTunes解锁系列@Guding88
+
+[Mitm]
+hostname = buy.itunes.apple.com
