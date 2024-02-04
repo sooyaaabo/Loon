@@ -1,0 +1,77 @@
+# 2024-02-04 21:30
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
+
+# ChatGPT 2023-12-07 16:00:16
+DOMAIN, api.statsig.com
+DOMAIN, browser-intake-datadoghq.com
+DOMAIN, cdn.openai.com
+DOMAIN, chat.openai.com
+DOMAIN, chat.openai.com.cdn.cloudflare.net
+DOMAIN, ios.chat.openai.com
+DOMAIN, o33249.ingest.sentry.io
+DOMAIN, openai-api.arkoselabs.com
+DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
+DOMAIN, openaicomproductionae4b.blob.core.windows.net
+DOMAIN, production-openaicom-storage.azureedge.net
+DOMAIN, static.cloudflareinsights.com
+DOMAIN-SUFFIX, algolia.net
+DOMAIN-SUFFIX, auth0.com
+DOMAIN-SUFFIX, cdn.cloudflare.net
+DOMAIN-SUFFIX, challenges.cloudflare.com
+DOMAIN-SUFFIX, client-api.arkoselabs.com
+DOMAIN-SUFFIX, events.statsigapi.net
+DOMAIN-SUFFIX, featuregates.org
+DOMAIN-SUFFIX, identrust.com
+DOMAIN-SUFFIX, intercom.io
+DOMAIN-SUFFIX, intercomcdn.com
+DOMAIN-SUFFIX, launchdarkly.com
+DOMAIN-SUFFIX, oaistatic.com
+DOMAIN-SUFFIX, oaiusercontent.com
+DOMAIN-SUFFIX, observeit.net
+DOMAIN-SUFFIX, openai.com
+DOMAIN-SUFFIX, openaiapi-site.azureedge.net
+DOMAIN-SUFFIX, openaicom.imgix.net
+DOMAIN-SUFFIX, poe.com
+DOMAIN-SUFFIX, segment.io
+DOMAIN-SUFFIX, sentry.io
+DOMAIN-SUFFIX, stripe.com
+DOMAIN-KEYWORD, openaicom-api
+
+# Copilot 2024-01-05 22:40:35
+DOMAIN, api.msn.com
+DOMAIN, assets.msn.com
+DOMAIN, copilot.microsoft.com
+DOMAIN, dealczars.bing-shopping.microsoft-falcon.io
+DOMAIN, edgeservices.bing.com
+DOMAIN, functional.events.data.microsoft.com
+DOMAIN, gateway.bingviz.microsoftapp.net
+DOMAIN, location.microsoft.com
+DOMAIN, login.microsoftonline.com
+DOMAIN, proteus-assetstore.azurewebsites.net
+DOMAIN, self.events.data.microsoft.com
+DOMAIN, services.bingapis.com
+DOMAIN, shopping.bing-shopping.microsoft-falcon.io
+DOMAIN, sapphire.api.microsoftapp.net
+DOMAIN, sr.bing.com
+DOMAIN, sydney.bing.com
+DOMAIN, ssl.bing.com
+DOMAIN, th.bing.com
+DOMAIN, www.bing.com
+DOMAIN, www2.bing.com
+DOMAIN, www.bingapis.com
+DOMAIN-SUFFIX, edge.microsoft.com
+
+# BingAI 2024-02-04 21:29:04
+DOMAIN-SUFFIX, bing.com
+DOMAIN-SUFFIX, bing.com.cn
+DOMAIN-SUFFIX, bing.net
+DOMAIN-SUFFIX, bingads.com
+DOMAIN-SUFFIX, bingagencyawards.com
+DOMAIN-SUFFIX, bingapistatistics.com
+DOMAIN-SUFFIX, bingsandbox.com
+DOMAIN-SUFFIX, bingvisualsearch.com
+DOMAIN-SUFFIX, bingworld.com
+
+# Gemini 2024-02-04 21:26:13
+DOMAIN, bard.google.com
+DOMAIN, generativelanguage.googleapis.com
