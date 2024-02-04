@@ -1,15 +1,17 @@
 #!name = RevenueCat
 #!desc = RevenueCat解锁会员
 #!openUrl = 
-#!author = chxm1023 ddgksf2013
+#!author = chxm1023 ddgksf2013 Guding88
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RevenueCat-icon.png
-#!date = 2024-02-01 17:08
+#!date = 2024-02-04 17:42
 
 # 2023-12-24
 # https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin
 # 2024-01-30
 # https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
+# 2024-02-01
+# https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Guding.plugin
 
 [Script]
 # chxm1023
@@ -17,8 +19,12 @@ http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*
 http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body = false, tag = RevenueCat解锁@chxm1023
 
 # ddgksf2013
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/echo-response.js, requires-body=true, max-size=-1, timeout=60, argument = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, tag = RevenueCat解锁@ddgksf2013
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/echo-response.js, requires-body = true, max-size = -1, timeout = 60, argument = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, tag = RevenueCat解锁@ddgksf2013
 http-request ^https:\/\/api\.revenuecat\.com\/.+\/subscribers\/[^/]+/(offerings|attributes)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-header.js, argument= "(\r\n)X-RevenueCat-ETag:.+(\r\n)->$1X-RevenueCat-ETag:$2", tag = RevenueCat解锁@ddgksf2013
+
+# Guding88
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = true, tag = Revenuecat合集@Guding88
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, tag = Revenuecat清除缓存@Guding88
 
 [Mitm]
 hostname = api.revenuecat.com
