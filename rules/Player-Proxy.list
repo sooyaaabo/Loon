@@ -12,6 +12,8 @@ DOMAIN-SUFFIX, olelive.com
 DOMAIN-SUFFIX, olevod.com
 DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
+# 低端影视
+DOMAIN-SUFFIX, ddrk.me
 #天翼资源
 DOMAIN-SUFFIX, 911ysw.top
 # TMDB
