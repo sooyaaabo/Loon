@@ -109,6 +109,10 @@ DOMAIN-SUFFIX, bdys.me
 DOMAIN-SUFFIX, bdys10.com
 DOMAIN-SUFFIX, bde4.icu
 DOMAIN-SUFFIX, 52bdys.com
+#哔嘀播放
+DOMAIN-suffix, ibytedtos.com
+DOMAIN-suffix, toutiao50.com
+DOMAIN-suffix, ibyteimg.com
 # 玩偶哥哥
 DOMAIN-SUFFIX, wogg.link
 DOMAIN-SUFFIX, wogg.xyz
@@ -118,6 +122,11 @@ DOMAIN-SUFFIX, ali.gitcafe.ink 
 DOMAIN, yunluo.oss-cn-shanghai.aliyuncs.com
 # JOJO
 DOMAIN-SUFFIX, jiohub.top
+#阿里播放
+DOMAIN-suffix, alicloudccp.com
+DOMAIN, openapi.aliyundrive.com
+DOMAIN, auth.aliyundrive.com
+DOMAIN, api.aliyundrive.com
 
 # Emby
 # Paul
