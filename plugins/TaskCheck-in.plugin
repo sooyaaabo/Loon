@@ -9,31 +9,29 @@
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.conf
 
 [Script]
-//网易云音乐人
+# 网易云音乐人
 cron "0 10 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout=60, tag=网易云音乐人签到
-//波点音乐
+# 波点音乐
 cron "0 1 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js, timeout=60, tag=波点音乐签到
-//微博每日签到
+# 微博每日签到
 cron "1 0 * * *" script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博超话签到
-//微博超话
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.js, timeout=60, tag=微博超话签到
-//腾讯视频V力值
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.js, timeout=60, tag=腾讯视频V力值签到
-//爱奇艺签到
+# 微博超话
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/lowking/Scripts/master/weibo/weiboST.js, timeout=60, tag=微博超话签到
+# 爱奇艺签到
 cron "5 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺签到
-//Bilibili每日等级任务
+# Bilibili每日等级任务
 cron "10 9 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout=60, tag=Bilibili每日等级任务签到
-//Boxjs恢复
+# Boxjs恢复
 cron "5 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js, timeout=60, tag=Boxjs恢复
-//Boxjs备份
+# Boxjs备份
 cron "0 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js, timeout=60, tag=Boxjs备份
-//夸克网盘签到
+# 夸克网盘签到
 cron "0 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout=60, tag=夸克网盘签到
-//TestFlight自动加入
+# TestFlight自动加入
 cron "0 * * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, tag=TestFlight自动加入
-//阿里云任务
+# 阿里云任务
 cron "3 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云签到
-//霸王别姬小程序签到
+# 霸王别姬小程序签到
 cron "0 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=60, tag=霸王别姬小程序签到
-//高德地图打车签到
+# 高德地图打车签到
 cron "0 7 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, tag=高德地图打车签到
