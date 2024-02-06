@@ -18,8 +18,6 @@ cron "0 0 8 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scri
 cron "0 0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, timeout=60, tag=Bilibili每日等级任务Task
 # 微博每日
 cron "0 1 0 * * *" script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日Task
-# 微博超话
-cron "0 1 0 * * *" script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.js, timeout=60, tag=微博超话Task
 # 爱奇艺
 cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Task
 # 夸克网盘
