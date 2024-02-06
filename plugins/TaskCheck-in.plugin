@@ -10,28 +10,30 @@
 
 [Script]
 # 网易云音乐人
-cron "0 10 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout=60, tag=网易云音乐人签到
+cron "0 10 * * *" script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout=60, tag=网易云音乐人Task
+# QQ音乐
+cron "0 10 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js, timeout=60, tag=QQ音乐Task
 # 波点音乐
-cron "0 1 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js, timeout=60, tag=波点音乐签到
+cron "0 1 * * *" script-path=https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/Bdyy/bdyy.js, timeout=60, tag=波点音乐Task
 # 微博每日
-cron "1 0 * * *" script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博超话签到
+cron "1 0 * * *" script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博超话Task
 # 爱奇艺
-cron "5 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺签到
+cron "5 0 * * *" script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Task
 # Bilibili每日等级任务
-cron "10 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, timeout=60, tag=Bilibili每日等级任务签到
+cron "10 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, timeout=60, tag=Bilibili每日等级任务Task
 # Boxjs恢复
-cron "5 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js, timeout=60, tag=Boxjs恢复
+cron "5 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/restore.js, timeout=60, tag=Boxjs恢复Task
 # Boxjs备份
-cron "0 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js, timeout=60, tag=Boxjs备份
+cron "0 10 * * *" script-path=https://raw.githubusercontent.com/dompling/Script/master/gist/backup.js, timeout=60, tag=Boxjs备份Task
 # 夸克网盘签到
 cron "0 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout=60, tag=夸克网盘签到
 # TestFlight自动加入
-cron "0 * * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, tag=TestFlight自动加入
+cron "0 * * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, tag=TestFlight自动加入Task
 # 阿里云盘
-cron "3 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云签到
+cron "3 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout=60, tag=阿里云Task
 # 霸王别姬小程序
-cron "0 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=60, tag=霸王别姬小程序签到
+cron "0 10 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=60, tag=霸王别姬小程序Task
 # 不背单词
-cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout=60, tag=不背单词签到
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout=60, tag=不背单词Task
 # 高德地图打车
-cron "0 7 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, tag=高德地图打车签到
+cron "0 7 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, tag=高德地图打车Task
