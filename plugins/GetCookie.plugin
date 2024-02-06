@@ -1,0 +1,28 @@
+#!name = Cookie获取
+#!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
+#!openUrl = 
+#!author = Sliverkiss
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
+#!date = 2024-02-06 12:38
+
+# https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
+
+[Script]
+# 获取网易云音乐人签到需要的各项参数
+http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body=true, timeout=60, tag=网易云音乐人Cookie
+# 获取微博超话签到需要的各项参数
+http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) script-path=https://raw.githubusercontent.com/toulanboy/scripts/master/weibo/weibotalk.cookie.js, timeout=60, tag=微博超话Cookie
+# 获取爱奇艺签到需要的各项参数
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Cookie
+# 获取自动加入 TestFlight需要的各项参数
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, timeout=60, tag=Testflight自动加入
+# 获取阿里云盘签到需要的各项参数
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘Token
+# 获取霸王茶姬签到需要的各项参数
+http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info script-path=https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout=60, tag=霸王茶姬Cookie
+# 获取高德地图签到需要的各项参数
+http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
+
+[Mitm]
+hostname = music.163.com, api.weibo.cn, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
