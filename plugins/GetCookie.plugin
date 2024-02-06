@@ -29,4 +29,4 @@ http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-ap
 http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
 
 [Mitm]
-hostname = music.163.com, api.weibo.cn, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
+hostname = music.163.com, api.weibo.cn, *.video.qq.com, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
