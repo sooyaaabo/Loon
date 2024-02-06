@@ -15,8 +15,6 @@ http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes scr
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日签到Cookie
 # 获取微博超话签到需要的各项参数
 http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js, requires-body=false, tag=微博超话Cookie
-# 腾讯视频V力值签到需要的各项参数
-http-request ^https:\/\/access.video.qq.com\/user\/auth_refresh script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/videoqq/videoqq.cookie.js, timeout=60, tag=腾讯视频Cookie
 # 获取爱奇艺签到需要的各项参数
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Cookie
 # 获取自动加入 TestFlight需要的各项参数
