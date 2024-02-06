@@ -14,7 +14,7 @@ http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes scr
 # 获取微博每日签到需要的各项参数
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日签到Cookie
 # 获取微博超话签到需要的各项参数
-http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button) script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js, requires-body=false, tag=微博超话Cookie
+http-request https:\/\/weibo\.com\/p\/aj\/general\/button\?ajwvr=6&api=http:\/\/i\.huati\.weibo\.com\/aj\/super\/checkin script-path=https://raw.githubusercontent.com/lowking/Scripts/master/weibo/weiboSTCookie.js, requires-body=false, tag=微博超话Cookie
 # 获取爱奇艺签到需要的各项参数
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Cookie
 # 获取自动加入 TestFlight需要的各项参数
@@ -27,4 +27,4 @@ http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-ap
 http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
 
 [Mitm]
-hostname = music.163.com, api.weibo.cn, *.video.qq.com, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
+hostname = music.163.com, api.weibo.cn, %APPEND% weibo.com, *.video.qq.com, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
