@@ -1,16 +1,17 @@
 #!name = Cookie获取
 #!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
 #!openUrl = 
-#!author = Sliverkiss chavyleung
+#!author = Sliverkiss chavyleung fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
-#!date = 2024-02-06 15:17
+#!date = 2024-02-06 17:49
 
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
+# https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
 
 [Script]
-# 网易云音乐人
-http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body=true, timeout=60, tag=网易云音乐人Cookie
+# 网易云音乐
+http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js, requires-body=true, tag=网易云音乐Cookie
 # QQ音乐
 http-request ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body=true, timeout=60, tag=QQ音乐Cookie
 http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body=true, timeout=60, tag=QQ音乐Cookie
@@ -18,6 +19,8 @@ http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path=https://ra
 http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, tag=哔哩哔哩Cookie
 # 微博每日
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日签到Cookie
+# 微博超话
+http-request ^https?https://raw.githubusercontent.com/fmz200/wool_scripts/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button|page) script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js, requires-body=false, tag=微博超话签到Cookie
 # 爱奇艺
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Cookie
 # 阿里云盘
