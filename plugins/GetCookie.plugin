@@ -4,7 +4,7 @@
 #!author = Sliverkiss chavyleung fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
-#!date = 2024-02-06 17:49
+#!date = 2024-02-06 17:59
 
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
@@ -15,14 +15,16 @@ http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://ra
 # QQ音乐
 http-request ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body=true, timeout=60, tag=QQ音乐Cookie
 http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body=true, timeout=60, tag=QQ音乐Cookie
-# Bilibili
-http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, tag=哔哩哔哩Cookie
+# Bilibili每日等级任务
+http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, tag=Bilibili每日等级任务Cookie
 # 微博每日
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日签到Cookie
 # 微博超话
-http-request ^https?https://raw.githubusercontent.com/fmz200/wool_scripts/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button|page) script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js, requires-body=false, tag=微博超话签到Cookie
+http-request ^https?://m?api\.weibo\.c(n|om)\/2\/(cardlist|page\/button|page) script-path=https://raw.githubusercontent.com/evilbutcher/Quantumult_X/master/check_in/weibo/weibotalk.cookie.js, requires-body=false, tag=微博超话签到Cookie
 # 爱奇艺
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Cookie
+# 夸克网盘
+http-request ^https:\/\/drive-m.quark.cn\/1\/clouddrive\/capacity\/growth\/sign.+ script-path=quarkcloud.js, timeout=10, tag=夸克网盘Token
 # 阿里云盘
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘Token
 # 霸王茶姬小程序
@@ -33,4 +35,4 @@ http-request ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in script-p
 http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
 
 [Mitm]
-hostname = *.y.qq.com, sapi.beingfine.cn, *.bilibili.com, music.163.com, api.weibo.cn, passport.iqiyi.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
+hostname = music.163.com, *.y.qq.com, *.bilibili.com, api.weibo.cn, passport.iqiyi.com, drive-m.quark.cn, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
