@@ -21,7 +21,7 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw
 # 爱奇艺
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺Cookie
 # 自动加入TestFlight
-http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, timeout=60, tag=Testflight自动加入
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, timeout=60, tag=Testflight自动加入Cookie
 # 阿里云盘
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘Token
 # 霸王茶姬小程序
@@ -32,4 +32,4 @@ http-request ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in script-p
 http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
 
 [Mitm]
-hostname = *.y.qq.com, sapi.beingfine.cn, *.bilibili.com, music.163.com, api.weibo.cn, %APPEND% weibo.com, *.video.qq.com, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
+hostname = *.y.qq.com, sapi.beingfine.cn, *.bilibili.com, music.163.com, api.weibo.cn, *.video.qq.com, passport.iqiyi.com, testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, *.amap.com
