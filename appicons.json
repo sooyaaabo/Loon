@@ -119,6 +119,14 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NodeTools.png"
         },
         {
+            "name": "CookieInfo.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png"
+        },
+        {
+            "name": "TaskCheck-in.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png"
+        },
+        {
             "name": "TestFlight.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png"
         },
