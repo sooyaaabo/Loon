@@ -8,6 +8,10 @@
 
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
 
+[Rewrite]
+#超话页面强制用pc模式打开
+^https?://weibo\.com/p/[0-9] header-replace User-Agent "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_13_6) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/12.0.2 Safari/605.1.15"
+
 [Script]
 # 获取网易云音乐人签到需要的各项参数
 http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path=https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body=true, timeout=60, tag=网易云音乐人Cookie
