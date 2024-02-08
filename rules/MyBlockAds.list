@@ -1,4 +1,4 @@
-# 2024-01-31 12:22
+# 2024-02-08 08:45
 
 # ======= A ======= #
 # 阿里巴巴
@@ -70,8 +70,10 @@ DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, awaken.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
-# 工商银行 开屏广告
+# 工商银行
+DOMAIN, image.mybank.icbc.com.cn, REJECT
 DOMAIN, pageviewp.icbc.com.cn, REJECT
+DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
 # 广告联盟
 DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
