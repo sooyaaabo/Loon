@@ -231,7 +231,7 @@ function Checkin() {
     })
   })
 }
-/*
+
 function Lottery(s) {
   return new Promise(resolve => {
     const URL = {
@@ -262,7 +262,7 @@ function Lottery(s) {
     })
   })
 }
-*/
+
 function getTaskList(task) {
   return new Promise(resolve => {
     $nobyda.get(`https://tc.vip.iqiyi.com/taskCenter/task/queryUserTask?P00001=${P00001}`, function (error, response, data) {
