@@ -99,14 +99,6 @@ var $nobyda = nobyda();
       P00003 = cookie.match(/P00003=(.*?);/)[1];
       await login();
       await Checkin();
-      for (let i = 0; i < 3; i++) {
-        const run = await Lottery(i);
-        if (run) {
-          await new Promise(r => setTimeout(r, 1000));
-        } else {
-          break
-        }
-      }
       const tasks = await getTaskList();
       for (let i = 0; i < tasks.length; i++) {
         if (![1, 4].includes(tasks[i].status)) { //0：待领取 1：已完成 2：未开始 4：进行中
