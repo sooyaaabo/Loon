@@ -4,7 +4,7 @@
 #!author = RuCu6 Maasea iKeLee
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BilibiliRed.png
-#!date = 2023-12-26 20:40
+#!date = 2024-02-08 14:20
 
 # 2023-12-26 20:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/bilibili.snippet
@@ -79,7 +79,7 @@ http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/(feed\/index(\/story)?|searc
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/(top\/activity|show\/tab\/v2)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/json.js, requires-body = true, tag = 去除右上角活动入口、精简首页顶部标签@RuCu6
 # 开屏广告 //app.bilibili.com
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(brand\/list|event\/list2|list|show)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/json.js, requires-body = true, tag = 去除开屏广告@RuCu6
-# 我的页面 解锁1080P高码率,4K画质,皮肤推送 //app.bilibili.com
+# 我的页面 伪装会员,皮肤推送 //app.bilibili.com
 http-response ^https:\/\/app\.bilibili\.com\/x\/v2\/account\/(mine(\/ipad)?|myinfo)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/json.js, requires-body = true, tag = 精简我的页面、解锁画质@RuCu6
 http-response ^https:\/\/app\.bilibili\.com\/x\/resource\/show\/skin\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/bilibili/json.js, requires-body = true, tag = 去除皮肤推送@RuCu6
 
