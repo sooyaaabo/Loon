@@ -3,8 +3,8 @@
 
 本脚本仅适用于微博每日签到，支持多账号运行  
 
-
-获取ck: https:\/\/api\.weibo\.cn\/\d\/users\/show url script-request-header weibo.js
+http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日签到Cookie
+cron "0 1 0 * * *" script-path=https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js, timeout=60, tag=微博每日签到Task
 */
 
 const $ = new Env('新浪微博')
@@ -79,7 +79,10 @@ if (isGetCookie = typeof $request !== `undefined`) {
                 if (token.indexOf("from") == -1) {
                     token += "from=10B2193010&"
                 }
-                await getsign()
+                await getsign();
+                await doCard();
+                await paysign();
+                await showmsg()
             }
         }
     })()
@@ -190,7 +193,7 @@ function doCard() {
             //$.log(data)
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                nickname = "昵称: " + result.data.user.nickname
+                nickname = "昵称:sooyaaabo" + result.data.user.nickname
                 if (tokenArr.length == 1) {
                     $.setdata(nickname, 'wb_nick')
                 } else {
@@ -253,9 +256,9 @@ function payinfo() {
 
 async function showmsg() {
     if (paybag) {
-        $.msg($.name, wbsign);
+        $.msg($.name, nickname + (signcash ? signcash : ""), wbsign );
         if ($.isNode()) {
-            await notify.sendNotify($.name, wbsign)
+            await notify.sendNotify($.name, nickname + (signcash ? signcash : "") + '\n' + wbsign)
         }
     }
 }
