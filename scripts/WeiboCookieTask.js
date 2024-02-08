@@ -81,7 +81,6 @@ if (isGetCookie = typeof $request !== `undefined`) {
                 }
                 await getsign();
                 await doCard();
-                await paysign();
                 await showmsg()
             }
         }
