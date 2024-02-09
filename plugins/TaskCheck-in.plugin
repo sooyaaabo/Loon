@@ -1,5 +1,5 @@
-#!name = 任务自动签到打卡
-#!desc = 使用获取Cookie插件后，再使用此插件。
+#!name = Task签到
+#!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
 #!author = Sliverkiss chavyleung fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
