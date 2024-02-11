@@ -20,7 +20,7 @@
 # 微博
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout=60, tag=微博每日签到Cookie
 # 爱奇艺
-http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout=60, tag=爱奇艺会员任务Cookie
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout=60, tag=爱奇艺会员任务Cookie
 # 夸克网盘
 ;http-request ^https:\/\/drive-m.quark.cn\/1\/clouddrive\/capacity\/growth\/sign.+ script-path=https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout=10, tag=夸克网盘Token
 # 阿里云盘
