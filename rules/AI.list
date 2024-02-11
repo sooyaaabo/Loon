@@ -1,4 +1,4 @@
-# 2024-02-04 21:30
+# 2024-02-11 10:26
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
 
 # ChatGPT 2023-12-07 16:00:16
@@ -72,6 +72,7 @@ DOMAIN-SUFFIX, bingsandbox.com
 DOMAIN-SUFFIX, bingvisualsearch.com
 DOMAIN-SUFFIX, bingworld.com
 
-# Gemini 2024-02-04 21:26:13
+# Gemini 2024-02-10 21:58:38
 DOMAIN, bard.google.com
+DOMAIN, gemini.google.com
 DOMAIN, generativelanguage.googleapis.com
