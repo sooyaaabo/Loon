@@ -151,6 +151,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Web_502.png"
         },
         {
+            "name": "Web_redirect.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Web_redirect.png"
+        },
+        {
             "name": "Web_warning.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Web_warning.png"
         },
