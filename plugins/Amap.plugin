@@ -4,9 +4,9 @@
 #!author = RuCu6 kokoryh
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Amap.png
-#!date = 2024-01-11 17:00
+#!date = 2024-02-11 21:58
 
-# 2024-01-11 17:00
+# 2024-02-11 20:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
 
 [Rule]
@@ -33,7 +33,7 @@ DOMAIN, free-aos-cdn-image.amap.com, REJECT
 # 移除阿里巴巴通用广告请求
 http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 阿里巴巴通用广告
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
-http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/routePlan\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
+http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(routeInfo|routePlan)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(common\/coupon\/info|poi\/detail)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(homepage|mps|search\/sp|sug|tips_operation_location)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
