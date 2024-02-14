@@ -10,9 +10,7 @@
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rule]
-# ======= 0~9 ======= #
-# 12306 - 放行规则
-DOMAIN, ad.12306.cn, DIRECT
+# 2024-02-08 08:45
 
 # ======= A ======= #
 # 阿里巴巴
@@ -53,8 +51,7 @@ DOMAIN, afd.baidu.com, REJECT
 DOMAIN, afdconf.baidu.com, REJECT
 DOMAIN, lc.map.baidu.com, REJECT
 # 百度贴吧
-DOMAIN,180.76.76.200,REJECT
-IP-CIDR,180.76.76.200/32,REJECT,no-resolve
+IP-CIDR, 180.76.76.200/32, REJECT
 
 # ======= C ======= #
 # 彩云天气
@@ -69,11 +66,15 @@ DOMAIN, images.ctfassets.net, REJECT
 DOMAIN, mapi.apptimize.com, REJECT
 DOMAIN, md-i-s.apptimize.com, REJECT
 
+# ======= D ======= #
+# DNS 无响应
+HOST, adttrackingprd.hwwt8.com, REJECT
+
 # ======= F ======= #
 # Foreca & Google
 DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
-DOMAIN-SUFFIX, adservice.google.com, REJECT
+DOMAIN-KEYWORD, adservice.google.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 
 # ======= G ======= #
@@ -81,8 +82,10 @@ DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, awaken.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
-# 工商银行 开屏广告
+# 工商银行
+DOMAIN, image.mybank.icbc.com.cn, REJECT
 DOMAIN, pageviewp.icbc.com.cn, REJECT
+DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
 # 广告联盟
 DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
@@ -90,7 +93,6 @@ DOMAIN, is.snssdk.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
-DOMAIN-KEYWORD, -tos.pstatp.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
@@ -112,6 +114,8 @@ DOMAIN-KEYWORD, adv.ccb.com, REJECT
 DOMAIN, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT
 IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT
+# JavDB
+DOMAIN, api.liquidlink.cn, REJECT
 
 # ======= K ======= #
 # 酷我音乐
@@ -119,8 +123,6 @@ DOMAIN, ad.tencentmusic.com, REJECT
 DOMAIN, g.koowo.com, REJECT
 DOMAIN, mobilead.kuwo.cn, REJECT
 DOMAIN, rich.kuwo.cn, REJECT
-DOMAIN, tmead.y.qq.com, REJECT
-DOMAIN, tmeadcomm.y.qq.com, REJECT
 
 # ======= L ======= #
 # 蓝奏云
@@ -141,9 +143,7 @@ DOMAIN, rprain.bz.mgtv.com, REJECT
 DOMAIN, rprain.log.mgtv.com, REJECT
 DOMAIN, vip.bz.mgtv.com, REJECT
 DOMAIN-SUFFIX, da.mgtv.com, REJECT
-# 每日万年历
-^http:\/\/app-cdn\.2q10\.com\/app\/ical\/honored\? reject-dict
-# 美团 & 美团外卖
+# 美团
 DOMAIN, al-log.d.meituan.net, REJECT
 DOMAIN, babel-statistics-android.d.meituan.net, REJECT
 DOMAIN, maplocatesdksnapshot.d.meituan.net, REJECT
@@ -165,8 +165,20 @@ DOMAIN, sin3-ib.adnxs.com, REJECT
 DOMAIN, api.zuihuimai.com, REJECT
 # 数字联盟
 DOMAIN-SUFFIX, shuzilm.cn, REJECT
+# Soul
+DOMAIN, ad-h5-cdn.soulapp.cn, REJECT
+DOMAIN, ad-h5-station-cdn.soulapp.cn, REJECT
+DOMAIN, ad-r.soulapp.cn, REJECT
+DOMAIN, soul-ad.soulapp.cn, REJECT
+IP-CIDR, 47.56.131.76/32, REJECT
+IP-CIDR, 47.97.215.55/32, REJECT
+IP-CIDR, 47.99.42.29/32, REJECT
+IP-CIDR, 120.27.235.201/32, REJECT
+IP-CIDR, 121.196.197.147/32, REJECT
 # Speedtest
-DOMAIN-SUFFIX, ad.gt, REJECT
+DOMAIN, ads.pubmatic.com, REJECT
+DOMAIN, id.hadron.ad.gt, REJECT
+DOMAIN-KEYWORD, -adsystem.com, REJECT
 
 # ======= T ======= #
 # 腾讯
@@ -176,20 +188,17 @@ DOMAIN, info6.video.qq.com, REJECT
 DOMAIN, ios.video.mpush.qq.com, REJECT
 DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, pgdt.gtimg.cn, REJECT
+DOMAIN, tmead.y.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT
+DOMAIN, tmeadcomm.y.qq.com, REJECT
 DOMAIN, tpns.qq.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 DOMAIN-SUFFIX, l.qq.com, REJECT
 DOMAIN-KEYWORD, trace.qq.com, REJECT
 DOMAIN-KEYWORD, trace.video.qq.com, REJECT
 IP-CIDR, 47.110.187.87/32, REJECT
-URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+, REJECT
-URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+, REJECT
-URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+, REJECT
 
 # ======= W ======= #
-# 网易新闻 - 放行规则
-DOMAIN, nex.163.com, DIRECT
-DOMAIN, gw.m.163.com, DIRECT
 # 网易云音乐
 DOMAIN, iadmat.nosdn.127.net, REJECT
 DOMAIN, iadmatapk.nosdn.127.net, REJECT
@@ -199,6 +208,7 @@ DOMAIN, ipv4.music.163.com, REJECT
 DOMAIN, ipv6.music.163.com, REJECT
 DOMAIN-SUFFIX, 163jiasu.com, REJECT
 # 微博 开屏广告
+DOMAIN, huodong.weibo.cn, REJECT
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
 # ======= X ======= #
@@ -249,7 +259,6 @@ DOMAIN, zxid-m.mobileservice.cn, REJECT
 IP-CIDR, 103.41.167.237/32, REJECT
 IP-CIDR, 118.89.204.198/32, REJECT
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
-
 
 [Rewrite]
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
