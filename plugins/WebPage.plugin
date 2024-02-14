@@ -1,13 +1,15 @@
 #!name = WebPage
 #!desc = 网页去广告
 #!openUrl = 
-#!author = RuCu6 ddgksf2013
+#!author = RuCu6 limbopro ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png
-#!date = 2024-01-12 10:20
+#!date = 2024-02-14 17:45
 
-# 2024-01-12 10:20
+# 2024-02-14 16:05
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
+# 2024-01-07
+# https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/WebAdBlock.conf
 
 [Rewrite]
 # -----------Rucu6----------- #
@@ -20,8 +22,6 @@
 ^https?:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* reject
 # Avple 弹窗跳转
 ^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js reject
-# missav 播放页弹窗 //missav.com
-^https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} reject
 
 # -----------ddgksf2013----------- #
 # PornHub - https://cn.pornhub.com
@@ -47,7 +47,7 @@ http-response ^https?:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(/(cdn-cgi))
 # Jable (https://jable.tv/)
 http-response ^https?:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = Jable@RuCu6
 # missav 播放页弹窗 (https://missav.com/)
-http-response ^https?:\/\/(\w{0,3}(\.){0,1}(missav)(\.)\w{0,3})(?!.*?(/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = missav@RuCu6
+http-response ^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = missav@RuCu6
 
 # -----------ddgksf2013----------- #
 # 在线之家 - https://www.zxzjhd.com/
