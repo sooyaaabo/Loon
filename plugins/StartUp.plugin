@@ -4,9 +4,9 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-02-13 19:25
+#!date = 2024-02-14 19:25
 
-# 2024-02-13
+# 2024-02-14
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.02.13/v2.0.415 reject-200
+^https?:\/\/2024.02.14/v2.0.416 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -638,7 +638,7 @@ http-response ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw
 # 动画疯
 ;http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true, tag = 动画疯
 # 叮咚买菜
-http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = ads"->ddgksf2013", requires-body = true, tag = 叮咚买菜
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = rt_time":\d{2}->rt_time":40, requires-body = true, tag = 叮咚买菜
 
 # ======= F ======= #
 # 飞客茶馆
