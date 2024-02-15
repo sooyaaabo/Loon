@@ -10,7 +10,8 @@
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rule]
-# 2024-02-08 08:45
+# 2024-02-15 10:45
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
 # 阿里巴巴
@@ -68,12 +69,13 @@ DOMAIN, md-i-s.apptimize.com, REJECT
 
 # ======= D ======= #
 # DNS 无响应
-HOST, adttrackingprd.hwwt8.com, REJECT
+DOMAIN, adttrackingprd.hwwt8.com, REJECT
 
 # ======= F ======= #
 # Foreca & Google
 DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
+DOMAIN-SUFFIX, adservice.google.com, REJECT
 DOMAIN-KEYWORD, adservice.google.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 
