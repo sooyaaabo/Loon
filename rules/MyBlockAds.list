@@ -1,4 +1,4 @@
-# 2024-02-08 08:45
+# 2024-02-15 10:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -57,12 +57,13 @@ DOMAIN, md-i-s.apptimize.com, REJECT
 
 # ======= D ======= #
 # DNS 无响应
-HOST, adttrackingprd.hwwt8.com, REJECT
+DOMAIN, adttrackingprd.hwwt8.com, REJECT
 
 # ======= F ======= #
 # Foreca & Google
 DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
+DOMAIN-SUFFIX, adservice.google.com, REJECT
 DOMAIN-KEYWORD, adservice.google.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 
@@ -250,32 +251,54 @@ IP-CIDR, 118.89.204.198/32, REJECT
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 
 
-# 2024-02-14 17:20
+# 2024-02-15 12:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/PornAds.list
 
-# General
-DOMAIN, ads.exoclick.com, REJECT
-DOMAIN, partwithner.com, REJECT
-DOMAIN, pv.vipads.cc, REJECT
-DOMAIN, www.vipads.live, REJECT
-DOMAIN-SUFFIX, adxadserv.com, REJECT
-DOMAIN-SUFFIX, jads.co, REJECT
-DOMAIN-SUFFIX, juicyads.com, REJECT
-
-# https://www.eporner.com/
+DOMAIN, 4lke.online, REJECT
+DOMAIN, a.adtng.com, REJECT
 DOMAIN, a.magsrv.com, REJECT
-DOMAIN, s.magsrv.com, REJECT
-
-# https://missav.com/
+DOMAIN, a.orbsrv.com, REJECT
+DOMAIN, ads.exoclick.com, REJECT
 DOMAIN, creative.bbrdbr.com, REJECT
+DOMAIN, creative.mnaspm.com, REJECT
 DOMAIN, creative.myavlive.com, REJECT
+DOMAIN, creative.rmhfrtnd.com, REJECT
+DOMAIN, etahub.com, REJECT
+DOMAIN, evtubescms.phncdn.com, REJECT
+DOMAIN, ezozojawg.com, REJECT
+DOMAIN, go.aoalmfwinbsstec23.com, REJECT
 DOMAIN, go.bbrdbr.com, REJECT
+DOMAIN, go.go-srv.com, REJECT
 DOMAIN, go.mnaspm.com, REJECT
 DOMAIN, go.myavlive.com, REJECT
-DOMAIN, go.stripchat.com, REJECT
+DOMAIN, go.rmhfrtnd.com, REJECT
+DOMAIN, go.spankbanglive.com, REJECT
 DOMAIN, go.xhamsterlive.com, REJECT
+DOMAIN, go.xliirdr.com, REJECT
+DOMAIN, go.xlivesex.com, REJECT
+DOMAIN, go.xlivrdr.com, REJECT
 DOMAIN, go.xxxjmp.com, REJECT
-
-# https://www.xvideos.com/
-DOMAIN, a.orbsrv.com, REJECT
+DOMAIN, go.xxxviijmp.com, REJECT
+DOMAIN, go.xxxvjmp.com, REJECT
+DOMAIN, hhbypdoecp.com, REJECT
+DOMAIN, ht.youporn.com, REJECT
+DOMAIN, partwithner.com, REJECT
+DOMAIN, pv.vipads.cc, REJECT
+DOMAIN, r.trackwilltrk.com, REJECT
+DOMAIN, reactads.engine.adglare.net, REJECT
+DOMAIN, rockpoint.xhamster.com, REJECT
+DOMAIN, s.magsrv.com, REJECT
 DOMAIN, s.orbsrv.com, REJECT
+DOMAIN, video.mnaspm.com, REJECT
+DOMAIN, www.vipads.live, REJECT
+DOMAIN-SUFFIX, adxadserv.com, REJECT
+DOMAIN-SUFFIX, chaturbate.com, REJECT
+DOMAIN-SUFFIX, faphouse.com, REJECT
+DOMAIN-SUFFIX, jads.co, REJECT
+DOMAIN-SUFFIX, juicyads.com, REJECT
+DOMAIN-SUFFIX, stripchat.com, REJECT
+DOMAIN-SUFFIX, stripchat.ooo, REJECT
+DOMAIN-SUFFIX, trafficjunky.com, REJECT
+DOMAIN-SUFFIX, trafficjunky.net, REJECT
+DOMAIN-SUFFIX, tsyndicate.com, REJECT
+DOMAIN-KEYWORD, -cdn2.adtng.com, REJECT
