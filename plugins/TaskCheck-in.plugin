@@ -31,3 +31,5 @@ cron "0 3 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/338
 ;cron "0 0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout=60, tag=不背单词Task
 # 高德地图
 ;cron "0 0 7 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, tag=高德地图打车Task
+# TestFlight
+cron "0 0 9 * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, tag=TestFlight自动加入Task
