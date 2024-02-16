@@ -1,7 +1,7 @@
 #!name = Task签到
 #!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
-#!author = Sliverkiss chavyleung fmz200 MCdasheng Guding88 wf021325
+#!author = Sliverkiss chavyleung fmz200 Guding88 wf021325
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png
 #!date = 2024-02-08 19:59
@@ -31,5 +31,3 @@ cron "0 3 0 * * *" script-path=https://gist.githubusercontent.com/Sliverkiss/338
 ;cron "0 0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout=60, tag=不背单词Task
 # 高德地图
 ;cron "0 0 7 * * *" script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout=60, tag=高德地图打车Task
-# TestFlight
-cron "0 0,8,12,16,20 * * *" script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, timeout=60, tag=TestFlight自动加入Task
