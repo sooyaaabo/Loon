@@ -1,7 +1,7 @@
 #!name = Cookie获取
 #!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
 #!openUrl = 
-#!author = Sliverkiss chavyleung fmz200 MCdasheng Guding88 wf021325
+#!author = Sliverkiss chavyleung fmz200 Guding88 wf021325
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
 #!date = 2024-02-08 19:59
@@ -31,8 +31,6 @@ http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scri
 ;http-request ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, tag=不背单词Cookie
 # 高德地图
 ;http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path=https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body=true, timeout=60, tag=高德地图打车Cookie
-# TestFlight
-http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, timeout=60, tag=TestFlight自动加入Cookie
 
 [Mitm]
-hostname = music.163.com, *.y.qq.com, *.bilibili.com, api.weibo.cn, passport.iqiyi.com, drive-m.quark.cn, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com, testflight.apple.com
+hostname = music.163.com, *.y.qq.com, *.bilibili.com, api.weibo.cn, passport.iqiyi.com, drive-m.quark.cn, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
