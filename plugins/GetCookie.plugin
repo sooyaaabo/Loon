@@ -34,4 +34,4 @@ http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scri
 # TestFlight
 http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path=https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, timeout=60, tag=TestFlight自动加入Cookie
 [Mitm]
-hostname = music.163.com, *.y.qq.com, *.bilibili.com, api.weibo.cn, passport.iqiyi.com, drive-m.quark.cn, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
+hostname = music.163.com, *.y.qq.com, *.bilibili.com, api.weibo.cn, passport.iqiyi.com, drive-m.quark.cn, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com, testflight.apple.com
