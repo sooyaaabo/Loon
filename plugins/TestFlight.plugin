@@ -8,8 +8,6 @@
 
 # 2022-06-22
 # https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin
-# 2023-10-01
-# https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js
 
 # 主要功能：
 # 1. 自动存储多个TestFlight账户，并自动合并APP列表，避免切换账户。
@@ -24,6 +22,10 @@ skip-proxy = iosapps.itunes.apple.com
 [Script]
 # 合并账户
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js, requires-body = true ,tag = TestFlight合并账户
+
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/TF_keys.js, requires-body = true ,tag = TestFlight自动加入
+http-request ^https://testflight.apple.com/join/(.*) script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/TF_keys.js, requires-body = true ,tag = TestFlight自动加入
+cron "* 9 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/Auto_join_TF.js, tag=TestFlight自动加入
 
 [Mitm]
 hostname = testflight.apple.com
