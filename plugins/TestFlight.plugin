@@ -1,7 +1,7 @@
 #!name = TestFlight
 #!desc = 自动存储/合并多个TestFlight账户列表, 并可分享/导出TestFlight APP。
 #!openUrl = 
-#!author = NobyDa
+#!author = NobyDa MCdasheng
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png
 #!date = 2024-01-27 22:12
