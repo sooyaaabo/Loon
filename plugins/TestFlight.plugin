@@ -1,5 +1,5 @@
 #!name = TestFlight
-#!desc = 合并多账户及自动加入TestFlight，可分享/导出TestFlight APP。
+#!desc = 合并多账户，可分享/导出TestFlight APP。
 #!openUrl = 
 #!author = NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
