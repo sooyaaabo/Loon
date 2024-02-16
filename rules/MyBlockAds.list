@@ -1,4 +1,4 @@
-# 2024-02-15 10:45
+# 2024-02-16 11:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -59,14 +59,6 @@ DOMAIN, md-i-s.apptimize.com, REJECT
 # DNS 无响应
 DOMAIN, adttrackingprd.hwwt8.com, REJECT
 
-# ======= F ======= #
-# Foreca & Google
-DOMAIN, pagead2.googlesyndication.com, REJECT
-DOMAIN, www.googleadservices.com, REJECT
-DOMAIN-SUFFIX, adservice.google.com, REJECT
-DOMAIN-KEYWORD, adservice.google.com, REJECT
-DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
-
 # ======= G ======= #
 # 高德地图
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
@@ -81,8 +73,13 @@ DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
+DOMAIN, pagead2.googlesyndication-cn.com, REJECT
+DOMAIN, pagead2.googlesyndication.com, REJECT
+DOMAIN, www.googleadservices.com, REJECT
+DOMAIN-SUFFIX, adservice.google.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, pangolin.snssdk.com, REJECT
