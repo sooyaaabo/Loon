@@ -1,5 +1,5 @@
-#!name = TestFlight
-#!desc = 合并多账户及自动加入TestFlight，可分享/导出TestFlight APP。
+#!name = TestFlight_AutoJoin
+#!desc = 自动加入TestFlight
 #!openUrl = 
 #!author = MCdasheng
 #!homepage = https://github.com/sooyaaabo/Loon
