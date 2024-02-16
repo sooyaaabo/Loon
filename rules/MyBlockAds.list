@@ -251,7 +251,7 @@ IP-CIDR, 118.89.204.198/32, REJECT
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 
 
-# 2024-02-15 14:40
+# 2024-02-16 10:20
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/PornAds.list
 
 DOMAIN, 4lke.online, REJECT
@@ -261,6 +261,8 @@ DOMAIN, a.magsrv.com, REJECT
 DOMAIN, a.orbsrv.com, REJECT
 DOMAIN, a.shukriya90.com, REJECT
 DOMAIN, ads.exoclick.com, REJECT
+DOMAIN, aff-partners-io.ck-cdn.com, REJECT
+DOMAIN, aff.partners.io, REJECT
 DOMAIN, creative.bbrdbr.com, REJECT
 DOMAIN, creative.myavlive.com, REJECT
 DOMAIN, creative.rmhfrtnd.com, REJECT
