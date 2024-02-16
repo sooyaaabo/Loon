@@ -1,10 +1,10 @@
 #!name = TestFlight
-#!desc = 合并多账户及自动加入TestFlight，可分享/导出TestFlight APP。
+#!desc = 合并多账户，可分享/导出TestFlight APP。
 #!openUrl = 
 #!author = NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png
-#!date = 2024-02-16 11:20
+#!date = 2024-02-16 14:47
 
 # 2022-06-22
 # https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin
@@ -20,14 +20,8 @@
 skip-proxy = iosapps.itunes.apple.com
 
 [Script]
-http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts/.*\/apps$ script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/TF_keys.js, requires-body = true ,tag = TestFlight自动加入
-http-request ^https://testflight.apple.com/join/(.*) script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/TF_keys.js, requires-body = true ,tag = TestFlight自动加入
-cron "* 9 * * *" script-path=https://raw.githubusercontent.com/chouchoui/QuanX/master/Scripts/testflight/Auto_join_TF.js, tag=TestFlight自动加入
-
-
 # 合并账户
 http-request ^https:\/\/testflight\.apple\.com\/v\d\/(app|account|invite)s\/ script-path=https://raw.githubusercontent.com/NobyDa/Script/master/TestFlight/TestFlightAccount.js, requires-body = true ,tag = TestFlight合并账户
-
 
 [Mitm]
 hostname = testflight.apple.com
