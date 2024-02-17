@@ -4,9 +4,9 @@
 #!author = RuCu6 Keywos
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
-#!date = 2024-02-01 16:56
+#!date = 2024-02-17 22:42
 
-# 2024-01-27 10:25
+# 2024-01-27 20:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
 # 2024-01-14 22:14:48
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
@@ -49,7 +49,7 @@ http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = home
 # 发现页
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
-# effect
+# 播放音效
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = effect
 # 我的页面
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
