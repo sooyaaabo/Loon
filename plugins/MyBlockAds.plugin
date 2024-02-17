@@ -4,16 +4,12 @@
 #!author = RuCu6 zZPiglet app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2024-02-16 21:05
+#!date = 2024-02-17 10:38
 
-# 2024-02-16 17:25
+# 2024-02-17 09:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
-# 12306 //ad.12306.cn, mobile.12306.cn
-^https:\/\/ad\.12306\.cn\/(ad\/mon\/mzc\?|res\/adfiles\/delivery\/) reject
-^https:\/\/mobile\.12306\.cn\/otsmobile\/h5\/otsbussiness\/travelPageImg\/ reject
-
 # 58同城 //*.58cdn.com.cn, app.58.com, pic?.ajkimg.com
 ^https:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject
 ^https:\/\/app\.58\.com\/api\/home\/invite\/popupAdv reject
@@ -137,8 +133,8 @@
 
 [Script]
 # 12306 //ad.12306.cn, mobile.12306.cn
-http-response ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body = true, tag = 12306广告
-http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 12306广告
+http-response ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body = true, tag = 12306广告
+http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 12306广告
 
 # amdc
 http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = amdc
