@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.02.17/v2.0.419 reject-200
+^https?:\/\/2024.02.17/v2.0.420 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -207,7 +207,7 @@ https://fbchina.flipchina.cn/v2/ad/query/* reject
 # 好轻
 ^https?:\/\/restapi\.iyunmai\.com\/ad-api\/ reject
 # 华尔街见闻
-^https?:\/\/api-one-wscn\.awtmt\.com\/apiv\d\/advertising\/ads reject-dict
+^https?:\/\/api-one-wscn\.awtmt\.com\/apiv\d\/advertising\/ads reject-200
 
 # ======= I ======= #
 # 爱思助手
