@@ -1,8 +1,8 @@
 # Loon
-##自用分流规则、重写、插件、脚本及图标库。<br>
-## 请勿传播，谢谢。<br>
-## 可能存在错误或者遗漏，欢迎指正反馈。<br>
-## ⚠️禁止fork⚠️禁止fork⚠️禁止fork
+自用分流规则、重写、插件、脚本及图标库。<br>
+本资源仅限测试、学习、交流，严禁用于商业用途，请于24小时内删除。请勿传播，谢谢。<br>
+可能存在错误或者遗漏，欢迎指正反馈，可联系[@sooyaaabo]([https://t.me/sooyaaabo])<br>
+⚠️禁止fork⚠️禁止fork⚠️禁止fork
 
 # 鸣谢
 排名不分先后<br>
@@ -26,3 +26,6 @@
 -   [@app2smile](https://github.com/app2smile)<br>
 -   [@Sliverkiss](https://github.com/Sliverkiss)<br>
 -   [@Centralmatrix3](https://github.com/Centralmatrix3)<br>
+-   [@NobyDa](https://github.com/NobyDa)<br>
+-   [@KOP-XIAO](https://github.com/KOP-XIAO)<br>
+-   [@DivineEngine](https://github.com/DivineEngine)<br>
