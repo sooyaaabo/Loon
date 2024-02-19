@@ -5,12 +5,12 @@
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
-### 使用声明
+## 使用声明
 本资源仅限测试、学习、交流，严禁用于商业用途，请于24小时内删除。禁止传播，谢谢。<br>
 可能存在错误或者遗漏，欢迎指正反馈，可联系[@sooyaaabo](https://t.me/sooyaaaiu_bot)。<br>
 ⚠️禁止fork ⚠️禁止fork ⚠️禁止fork
 
-# 鸣谢
+## 鸣谢
 排名不分先后<br>
 -   [@RuCu6](https://github.com/RuCu6)<br>
 -   [@Keywos](https://github.com/Keywos)<br>
@@ -36,4 +36,5 @@
 -   [@KOP-XIAO](https://github.com/KOP-XIAO)<br>
 -   [@DivineEngine](https://github.com/DivineEngine)<br>
 
+## Star历史
 <img src="https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date" alt="Star History Chart" width="600" height="356" align="center">
