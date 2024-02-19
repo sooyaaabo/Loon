@@ -4,9 +4,9 @@
 #!author = RuCu6 zZPiglet app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2024-02-18 20:34
+#!date = 2024-02-19 18:46
 
-# 2024-02-18 19:20
+# 2024-02-19 17:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -42,9 +42,8 @@
 # 菜鸟
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-dict
 
-# 百度云 //pan.baidu.com, update.pan.baidu.com
-^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/welfare\/list|rest\/2\.0\/pcs\/adx)\? reject-dict
-^https:\/\/update\.pan\.baidu\.com\/statistics\? reject-dict
+# 百度云 //pan.baidu.com
+^https:\/\/pan\.baidu\.com\/(act\/api\/activityentry|act\/v2\/|rest\/2\.0\/pcs\/ad) reject-dict
 
 # 车来了 //api.chelaile.net.cn, web.chelaile.net.cn
 ^https:\/\/api\.chelaile\.net\.cn\/adpub reject
@@ -64,6 +63,9 @@
 ^https:\/\/fuss10.elemecdn.com\/.+\/w\/750\/h\/\d{3,4} reject
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 reject
 ^https:\/\/www1.elecfans.com\/www\/delivery reject
+
+# ======= G ====== #
+# 工商银行 //image.mybank.icbc.com.cn
 
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
@@ -198,4 +200,4 @@ http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-pa
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js, requires-body = true, tag = 中国移动云盘
 
 [Mitm]
-hostname = ad.12306.cn, mobile.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, update.pan.baidu.com, 2023.redircdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = ad.12306.cn, mobile.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, image.mybank.icbc.com.cn, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, client.app.coc.10086.cn, ad.mcloud.139.com, jzts.cmpassport.com
