@@ -66,7 +66,6 @@ DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, awaken.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
 # 工商银行
-DOMAIN, image.mybank.icbc.com.cn, REJECT
 DOMAIN, pageviewp.icbc.com.cn, REJECT
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
 # 广告联盟
@@ -74,10 +73,13 @@ DOMAIN, ad.zijieapi.com, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
+DOMAIN, open.kuaishou.com, REJECT
 DOMAIN, pagead2.googlesyndication-cn.com, REJECT
 DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
+DOMAIN-SUFFIX, ads.linkedin.com, REJECT
 DOMAIN-SUFFIX, adservice.google.com, REJECT
+DOMAIN-SUFFIX, kuaishouzt.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
@@ -132,12 +134,9 @@ DOMAIN, rprain.log.mgtv.com, REJECT
 DOMAIN, vip.bz.mgtv.com, REJECT
 DOMAIN-SUFFIX, da.mgtv.com, REJECT
 # 美团
-DOMAIN, al-log.d.meituan.net, REJECT
-DOMAIN, babel-statistics-android.d.meituan.net, REJECT
 DOMAIN, maplocatesdksnapshot.d.meituan.net, REJECT
 DOMAIN, metrics-picture.d.meituan.net, REJECT
-DOMAIN, open.kuaishouzt.com, REJECT
-DOMAIN, route-stats.d.meituan.net, REJECT
+IP-CIDR, 103.37.155.60/32, REJECT
 # 美颜相机
 DOMAIN, aaid.uyunad.com, REJECT
 DOMAIN, adui.tg.meitu.com, REJECT
