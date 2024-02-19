@@ -4,11 +4,11 @@
 #!author = RuCu6 limbopro ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdOff.png
-#!date = 2024-02-15 16:35
+#!date = 2024-02-19 21:35
 
 # 2024-02-15 14:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
-# 2024-01-07
+# 2024-02-19
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/WebAdBlock.conf
 
 [Rewrite]
@@ -56,8 +56,6 @@ http-response ^https?:\/\/www\.zxzjhd\.com\/($|[0-9a-zA-Z=_/-]+\.html$) script-p
 http-response ^https?:\/\/www\.freeok\.(vip|pro)(\/$|\/[0-9a-zA-Z=_/-]+\.html$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/adguard.js, requires-body = true, tag = FreeOk@ddgksf2013
 # 哔嘀影视 - https://www.bdys01.com 
 http-response ^https?:\/\/.*bdys.*com\/($|([a-z]+)\/(play\/)?\d+.*$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/bdys.js, requires-body = true, tag = 哔嘀影视@ddgksf2013
-# 茶杯狐 - https://cupfox.app
-http-response ^https?:/\/.*cupfox\.*\/($|[\u4E00-\u9FFFa-zA-Z0-9%=_/-]+$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js, requires-body = true, tag = 茶杯狐@ddgksf2013
 # PornHub - https://cn.pornhub.com
 http-response ^https?:/\/(cn|www)\.pornhub\.com\/($|(view|video).*$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/pornhub.js, requires-body = true, tag = PornHub@ddgksf2013
 # Bimi - https://www.bimi.net
@@ -70,6 +68,8 @@ http-response ^https?:\/\/.*gimy.*\/($|[0-9a-zA-Z=_/-]+\.html$) script-path = ht
 http-response ^https?:\/\/.*czzy.*\/($|\?btwaf=\w+$|[0-9a-zA-Z=_/-]+\.html) script-path = https://github.com/ddgksf2013/Scripts/raw/master/qianoo.js, requires-body = true, tag = 厂长电影@ddgksf2013
 
 # -----------不维护的或已关服的网站----------- #
+# 茶杯狐 - https://cupfox.app
+http-response ^https?:/\/.*cupfox\.*\/($|[\u4E00-\u9FFFa-zA-Z0-9%=_/-]+$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/cupbox.js, requires-body = true, tag = 茶杯狐@ddgksf2013
 # Cokemv - https://cokemv.me 
 http-response ^https?:/\/cokemv\.me\/($|vod.*$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/cokemv.js, requires-body = true, tag = Cokemv@ddgksf2013
 # 555影视 - https://555yy6.com
