@@ -1,11 +1,9 @@
 # sooyaaabo
 ![Visitor Count](https://profile-counter.glitch.me/sooyaaabo/count.svg)
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sooyaaabo&layout=compact)
-
 ![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=sooyaaabo&show_icons=true&count_private=true&theme=vue)
 
-![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=sooyaaabo&repo=Loon)
+
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
