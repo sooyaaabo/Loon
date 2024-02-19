@@ -4,14 +4,14 @@
 #!author = RuCu6 chxm1023 ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BaiduNetdisk.png
-#!date = 2024-02-16 21:07
+#!date = 2024-02-19 11:51
 
 # 2024-02-01 15:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 # 2024-02-16
 # https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.vip.js
 # 2023-08-19 13:48:55
-# https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js
+# https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
 
 [Rewrite]
 # RuCu6
