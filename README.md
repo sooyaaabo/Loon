@@ -3,6 +3,8 @@
 
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sooyaaabo&layout=compact )
 
+![sooyaaabo's GitHub stats](https://github-readme-stats.vercel.app/api?username=sooyaaabo&show_icons=true&rank_icon=github&count_private=true&theme=buefy)
+
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
