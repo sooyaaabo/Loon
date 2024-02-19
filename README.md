@@ -1,5 +1,5 @@
-![Visitor Count](https://profile-counter.glitch.me/sooyaaabo/count.svg)  
-![Visitor Count](https://profile-counter.glitch.me/ddgksf2013/count.svg)  
+![Visitor Count](https://profile-counter.glitch.me/sooyaaabo/count.svg)
+
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
