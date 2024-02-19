@@ -1,5 +1,7 @@
 ![Visitor Count](https://profile-counter.glitch.me/sooyaaabo/count.svg)
 
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=sooyaaabo&show_icons=true&count_private=true&theme=vue)
+
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
@@ -33,3 +35,5 @@
 -   [@NobyDa](https://github.com/NobyDa)<br>
 -   [@KOP-XIAO](https://github.com/KOP-XIAO)<br>
 -   [@DivineEngine](https://github.com/DivineEngine)<br>
+
+<img src="https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date" alt="Star History Chart" width="600" height="356" align="center">
