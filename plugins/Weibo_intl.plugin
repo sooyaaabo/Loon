@@ -4,7 +4,7 @@
 #!author = Keywos kokoryh
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo_intl.png
-#!date = 2023-11-22 22:37
+#!date = 2024-02-19 11:29
 
 # 2023-09-06 17:07:45
 # https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin
@@ -15,7 +15,7 @@
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
 
 [Script]
-# 趋势页、开屏广告、用户中心、热搜置顶、我的页面、尊享专属、信息流
+# 趋势页、开屏广告、用户中心、热搜置顶、我的页面 尊享专属、瀑布流去广告
 http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = 微博轻享版去广告
 http-response ^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = 微博轻享版去广告
 http-response ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = 微博轻享版去广告
