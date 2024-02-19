@@ -6,8 +6,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/LEMO%20FM.png
 #!date = 2023-10-27 19:35
 
-# 2023-10-27 19:35
-# https://raw.githubusercontent.com/Guding88/Script/main/LEMOFM.js
+# 2023-07-19
+# https://github.com/Guding88/Script/blob/main/LEMOFM.js
 
 [Script]
 http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/LEMOFM.js, requires-body = true, tag = LEMO FM会员
