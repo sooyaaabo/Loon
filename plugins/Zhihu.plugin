@@ -4,9 +4,9 @@
 #!author = RuCu6 app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Zhihu.png
-#!date = 2024-01-24 13:20
+#!date = 2024-02-19 21:10
 
-# 2024-01-24 13:20
+# 2024-02-19 20:05
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet
 
 [Rule]
@@ -26,6 +26,8 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings reject-dict
 ^https:\/\/api\.zhihu\.com\/(moments\/lastread|drama\/hot-drama-list) reject-dict
 ^https:\/\/api\.zhihu\.com\/root\/window reject-dict
+# 会员页面 弹窗,悬浮动图
+^https:\/\/api\.zhihu\.com\/(bazaar\/float_window|market\/popovers_v2) reject-dict
 # 我的页面 - 项目列表、会员卡片
 ^https:\/\/api\.zhihu\.com\/me\/guides reject-dict
 ^https:\/\/api\.zhihu\.com\/unlimited\/go\/my_card reject
