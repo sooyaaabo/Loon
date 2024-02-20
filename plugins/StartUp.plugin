@@ -4,9 +4,9 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-02-19 11:11
+#!date = 2024-02-20 18:52
 
-# 2024-02-18
+# 2024-02-20
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.02.18/v2.0.421 reject-200
+^https?:\/\/2024.02.20/v2.0.422 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject
 # 58同城
@@ -62,6 +62,9 @@
 ^https:\/\/api\.sfacg\.com\/ioscfg reject
 # 比特球
 ^https?:\/\/pan-api\.bitqiu\.com\/activity\/getPromoteGuide reject
+# 宝宝树孕育
+^http:\/\/.*babytree\.com/(plough\.do|go_search\/api\/mobile_search_new\/get_multi_search_default_keywords) reject-200
+^http:\/\/m\.meitun\.com\/newapi\/router\/topic\/hometptf\/feedRecommend reject-200
 
 # ======= C ======= #
 # clicli
