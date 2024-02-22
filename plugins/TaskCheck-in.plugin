@@ -17,7 +17,7 @@
 # Bilibili
 ;cron "0 0 9 * * *" script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, timeout=60, tag=Bilibili每日等级任务Task
 # 微博
-cron "0 1 0 * * *" script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout=60, tag=微博每日签到Task
+cron "0 45 0 * * *" script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout=60, tag=微博每日签到Task
 # 爱奇艺
 cron "0 5 0 * * *" script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout=60, tag=爱奇艺会员任务Task
 # 夸克网盘
