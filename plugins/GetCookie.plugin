@@ -10,6 +10,12 @@
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
 
 [Script]
+# 阿里云盘
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘签到Token
+# 微博
+http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout=60, tag=微博每日签到Cookie
+# 爱奇艺
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout=60, tag=爱奇艺会员任务Cookie
 # 网易云音乐
 ;http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js, requires-body=true, tag=网易云音乐Cookie
 # QQ音乐
@@ -17,14 +23,8 @@
 ;http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body=true, timeout=60, tag=QQ音乐Cookie
 # Bilibili
 ;http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path=https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, tag=Bilibili每日等级任务Cookie
-# 微博
-http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout=60, tag=微博每日签到Cookie
-# 爱奇艺
-http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path=https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout=60, tag=爱奇艺会员任务Cookie
 # 夸克网盘
 ;http-request ^https:\/\/drive-m.quark.cn\/1\/clouddrive\/capacity\/growth\/sign.+ script-path=https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout=10, tag=夸克网盘Token
-# 阿里云盘
-http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path=https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body=true, timeout=60, tag=阿里云盘签到Token
 # 霸王茶姬小程序
 ;http-request ^https?:\/\/qmwebapi\.qmai\.cn\/web\/catering2-apiserver\/customer-suggest\/query-feedback-config script-path=https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, timeout=60, tag=霸王茶姬小程序Cookie
 # 不背单词
