@@ -1,0 +1,16 @@
+#!name = Nicegram
+#!desc = Nicegram Premium
+#!openUrl = 
+#!author = ddgksf2013
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Nicegram.png
+#!date = 2024-02-24 15:05
+
+# 2024-02-24
+# https://raw.githubusercontent.com/ddgksf2013/MoYu/master/NicegramProCrack.js
+
+[Script]
+http-response ^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|telegram\/auth) script-path = https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js, requires-body = true, tag = Nicegram Premium
+
+[Mitm]
+hostname = nicegram.cloud
