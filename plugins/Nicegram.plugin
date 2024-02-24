@@ -9,6 +9,8 @@
 # 2024-02-24
 # https://raw.githubusercontent.com/ddgksf2013/MoYu/master/NicegramProCrack.js
 
+# 使用方法流程图：https://t.me/ddgksf2021/5439
+
 [Script]
 http-response ^https?:\/\/nicegram\.cloud\/api\/v\d\/(ai-assistant\/purchase-list|telegram\/auth) script-path = https://github.com/ddgksf2013/MoYu/raw/master/NicegramProCrack.js, requires-body = true, tag = Nicegram Premium
 
