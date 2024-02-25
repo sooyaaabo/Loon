@@ -4,7 +4,7 @@
 #!author = fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
-#!date = 2024-02-25 13:38
+#!date = 2024-02-25 18:28
 
 # 2024-02-25 11:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1883,7 +1883,7 @@ http-response ^https:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getA
 # 香蕉是一种水果 - *.pipiapps.com, *.fuliapps.com, *.xiangjiaoapps.com, *.xiangxiangapps.com
 http-response ^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/index|getGlobalData|(\/|)vod\/reqplay\/) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/File/xjsp.js, requires-body = true, tag = 香蕉是一种水果
 # 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com
-http-response ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/energy\/mall\/getUserEnergy script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/Scripts/xxyx/xxyx.js, requires-body = true, tag = 晓晓优选
+;http-response ^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/energy\/mall\/getUserEnergy script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/Scripts/xxyx/xxyx.js, requires-body = true, tag = 晓晓优选
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # 悠洗APP - api.ulife.group
