@@ -8,8 +8,8 @@
 
 [Script]
 # 自动加入（勿使用）
-http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path = https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, tag=TestFlight自动加入Cookie
-cron "0 0,12 * * *" script-path = https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, tag=TestFlight自动加入Task
+http-request ^https:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/ru\/([^\/]+)(?!\/accept)$ script-path = https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TF_appIds.js, tag = TestFlight自动加入Cookie
+cron "0 0,12 * * *" script-path = https://raw.githubusercontent.com/MCdasheng/QuantumultX/main/Scripts/myScripts/TestFlight.js, tag = TestFlight自动加入Task
 
 [Mitm]
 hostname = testflight.apple.com
