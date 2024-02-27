@@ -4,9 +4,10 @@
 #!author = Sliverkiss chavyleung fmz200 Guding88 wf021325
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png
-#!date = 2024-02-08 19:59
+#!date = 2024-02-27 22:48
 
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.conf
+# https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/loon.task.scripts
 
 [Script]
@@ -17,16 +18,15 @@ cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loo
 # 爱奇艺
 cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务Task
 # 网易云音乐
-;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.js, timeout = 60, tag = 网易云音乐Task
+;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout = 60, tag = 网易云音乐人Task
 # QQ音乐
 ;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js, timeout = 60, tag = QQ音乐Task
 # Bilibili
-;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.js, timeout = 60, tag = Bilibili每日等级任务Task
+;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务Task
 # 夸克网盘
 ;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 60, tag = 夸克网盘Task
 # 霸王别姬小程序
-;cron "0 0 10 * * *" script-path = https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj.js, timeout = 60, tag = 霸王别姬小程序Task
-;cron "0 0 10 * * *" script-path = https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj2024.js, timeout = 60, tag = 霸王别姬小程序2024Task
+;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout = 60, tag = 霸王别姬小程序Task
 # 不背单词
 ;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout = 60, tag = 不背单词Task
 # 高德地图
