@@ -4,33 +4,34 @@
 #!author = Sliverkiss chavyleung fmz200 Guding88 wf021325
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
-#!date = 2024-02-08 19:59
+#!date = 2024-02-27 22:44
 
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
 
 [Script]
-# 阿里云盘
+# 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, tag = 阿里云盘签到Token
-# 微博
+# 微博 - api.weibo.cn
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到Cookie
-# 爱奇艺
+# 爱奇艺 - passport.iqiyi.com
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务Cookie
-# 网易云音乐
-;http-request ^https:\/\/music.163.com\/weapi\/user\/level script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/neteasemusic/neteasemusic.cookie.js, requires-body = true, tag = 网易云音乐Cookie
-# QQ音乐
+# 网易云音乐 - music.163.com
+;http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body = true, tag = 网易云音乐人Cookie
+# QQ音乐 - *.y.qq.com
 ;http-request ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body = true, timeout = 60, tag = QQ音乐Cookie
 ;http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body = true, timeout = 60, tag = QQ音乐Cookie
-# Bilibili
-;http-request ^https:\/\/(www|live)\.bilibili\.com\/?.? script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bilibili/bilibili.cookie.js, tag = Bilibili每日等级任务Cookie
-# 夸克网盘
+# Bilibili - app.bilibili.com, m.bilibili.com
+;http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务Cookie
+;http-request ^https?:\/\/m.bilibili.com/$ script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务Cookie
+# 夸克网盘 - drive-m.quark.cn
 ;http-request ^https:\/\/drive-m.quark.cn\/1\/clouddrive\/capacity\/growth\/sign.+ script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 10, tag = 夸克网盘Token
-# 霸王茶姬小程序
-;http-request ^https?:\/\/qmwebapi\.qmai\.cn\/web\/catering2-apiserver\/customer-suggest\/query-feedback-config script-path = https://raw.githubusercontent.com/Guding88/Script/main/bawangchaji/bwcj_token.js, timeout = 60, tag = 霸王茶姬小程序Cookie
-# 不背单词
+# 霸王茶姬小程序 - qmwebapi.qmai.cn, webapi.qmai.cn
+;http-request ^https:\/\/(webapi|qmwebapi)\.qmai\.cn\/web\/(catering|catering2-apiserver)\/crm\/points-info script-path = https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout = 60, tag = 霸王茶姬小程序Cookie
+# 不背单词 - sapi.beingfine.cn
 ;http-request ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, tag = 不背单词Cookie
-# 高德地图
+# 高德地图 - *.amap.com
 ;http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body = true, timeout = 60, tag = 高德地图打车Cookie
 
 [Mitm]
-hostname = music.163.com, *.y.qq.com, *.bilibili.com, api.weibo.cn, passport.iqiyi.com, drive-m.quark.cn, auth.alipan.com, auth.aliyundrive.com, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
+hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
