@@ -14,6 +14,18 @@ DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
 # 低端影视
 DOMAIN-SUFFIX, ddrk.me
+DOMAIN-SUFFIX, ddys.pro
+DOMAIN-SUFFIX, ddys.mov
+DOMAIN-SUFFIX, ddys.art
+DOMAIN-SUFFIX, ddys.site
+DOMAIN-SUFFIX, ddys.tv
+DOMAIN-SUFFIX, ddys.info
+DOMAIN-SUFFIX, ddys.love
+# 在线之家
+DOMAIN-SUFFIX, zxzja.com
+DOMAIN-SUFFIX, zxzj.site
+DOMAIN-SUFFIX, zxzjhd.com
+DOMAIN-SUFFIX, zxzj.pro
 #天翼资源
 DOMAIN-SUFFIX, 911ysw.top
 # TMDB
