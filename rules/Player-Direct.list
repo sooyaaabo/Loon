@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-02-28
+# 2024-02-29
 
 # CMSPlayer
 # 低端影视
@@ -130,7 +130,12 @@ DOMAIN, api.aliyundrive.com
 
 # Emby
 # Paul
-DOMAIN-SUFFIX, imetyou.top
+DOMAIN-SUFFIX, cf.imetyou.top
+DOMAIN-SUFFIX, emby.imetyou.top
+DOMAIN-SUFFIX, fk.imetyou.top
+DOMAIN-SUFFIX, kr.imetyou.top
+DOMAIN-SUFFIX, sg.imetyou.top
+DOMAIN-SUFFIX, chun.imetyou.top
 # Nya Media
 DOMAIN-SUFFIX, emby.bangumi.ca
 # 白浪云
