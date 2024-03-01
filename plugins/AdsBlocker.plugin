@@ -810,10 +810,8 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # NTPlay - blog.nilbt.com
 ^https?:\/\/blog\.nilbt\.com\/static\/api\/update reject-200
 # 农业银行 - midc.cdn-static.abchina.com.cn, enjoy.cdn-static.abchina.com
-^https:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/62b8741026164b66b4a528a200eef09e9900032820231025 reject-dict
-^https:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(bdfb4|86fb9) reject-dict
-^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(9ce31|1bf6e) reject-200
-^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/6bd18.*? reject-200
+^https?:\/\/midc\.cdn-static\.abchina\.com\.cn\/distributecenterimg\/file\/download\/(bdfb4|86fb9|7aa68|62b87|7c7d7) reject-dict
+^https?:\/\/enjoy\.cdn-static\.abchina\.com\/yx-engine-web\/file\/download\/(9ce31|1bf6e|6bd18) reject-200
 # 奈菲影视 - www.nfmovies.com
 ^https?:\/\/www\.nfmovies\.com\/pic\/tu\/ reject-img
 ^https?:\/\/www\.nfmovies\.com\/templets\/default\/images\/logos reject-img
