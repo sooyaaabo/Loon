@@ -4,14 +4,13 @@
 #!author = RuCu6 kokoryh
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Amap.png
-#!date = 2024-02-11 21:58
+#!date = 2024-03-01 09:07
 
 # 2024-02-11 20:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
 
 [Rule]
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
-DOMAIN, awaken.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
 
 [Rewrite]
