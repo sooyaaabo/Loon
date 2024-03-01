@@ -3,8 +3,6 @@
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
-![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=sooyaaabo&layout=compact)
-
 ## 使用声明
 本资源仅限测试、学习、交流，严禁用于商业用途，请于24小时内删除。禁止传播，谢谢。<br>
 可能存在错误或者遗漏，欢迎指正反馈，可联系[@sooyaaabo](https://t.me/sooyaaaiu_bot)。<br>
