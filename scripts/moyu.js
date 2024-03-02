@@ -1,5 +1,5 @@
-### 修改自Yuheng0101，纯自用
-### 原文件：https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
+// 修改自Yuheng0101，纯自用
+// 原文件：https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 
 /******************************************
  * @name 摸鱼来啦~
