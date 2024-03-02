@@ -203,9 +203,9 @@ const notify = async () => {
     // 黄历输出
     const almanac = await getTodayAlmanac()
     const title = `【来摸鱼啦】${$.time('MM月dd日')} ${almanac.lunar}`
-    const timeFrame = Hour < 12 ? '☀️ 早上' : Hour < 18 ? '☀️ 下午' : '🌙 晚上'
+    const timeFrame = Hour < 12 ? ' ☀️ 早上' : Hour < 18 ? ' ☀️ 下午' : ' 🌙 晚上'
     const todayOneWord = await getOneWord(0)
-    const subTitle = `${todayOneWord ? `${todayOneWord}` : '生活不止眼前的苟且, 还有摸鱼的快乐~'}`
+    const subTitle = `${timeFrame}好, 摸鱼人, ${todayOneWord ? `${todayOneWord}` : '生活不止眼前的苟且, 还有摸鱼的快乐~'}`
     // 周末提醒
     const weekendDays = getWeekendDays()
     let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀` : `距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
@@ -231,7 +231,7 @@ const notify = async () => {
         content += `\n【节】${detail}`
     }
     // 发送通知
-    await SendNotify(title, subTitle, content)
+    await SendNotify(title, content)
 }
 /** 阴历转阳历 */
 function Lunar2Solar(year, month, day) {
