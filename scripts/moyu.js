@@ -205,7 +205,7 @@ const notify = async () => {
     const subTitle = `${timeFrame}好, 摸鱼人, ${todayOneWord ? `${todayOneWord}` : '生活不止眼前的苟且, 还有摸鱼的快乐~'}`
     // 周末提醒
     const weekendDays = getWeekendDays()
-    let content = weekendDays === 0 ? `🎉周末快乐, ${(await getOneWord()) || `记得多陪陪家人哦~`}` : `距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
+    let content = weekendDays === 0 ? `${timeFrame}好, 周末快乐}` : `距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
     // 节日提醒
     for (let { name: festival, date, diff: diffDays, lunar } of festivalList) {
         if (diffDays === 0) {
@@ -450,7 +450,7 @@ async function SendNotify(title, subtitle = '', content = '', options = {}) {
             $notification.post(title, subtitle, content, opts)
         }
     }
-    // const content_ = `${content}${openURL ? `\n点击跳转: ${openURL}` : ''}${mediaURL ? `\n多媒体: ${mediaURL}` : ''}`
+    const content_ = `${content}`
     if (isJSBox) {
         const push = require('push')
         push.schedule({
