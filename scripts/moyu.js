@@ -213,7 +213,7 @@ const notify = async () => {
     for (let { name: festival, date, diff: diffDays, lunar } of festivalList) {
         if (diffDays === 0) {
             const bless = await getOneWord()
-            content += `\n🎉${festival}快乐${bless ? ', ' + bless : '!'}`
+            content += `\n${festival}快乐${bless ? ', ' + bless : '!'}`
             $.SHOW_LUNAR && lunar && (content += `\n距离农历(${lunar})还有${getDiffDays(lunar)}天`)
         } else if (diffDays > 0 && diffDays <= $.REMIND_DAYS) {
             content += `\n距离${festival}还有${diffDays}天${$.SHOW_LUNAR && lunar ? `, 农历还有${getDiffDays(lunar)}天` : ''}`
