@@ -1,4 +1,4 @@
-// 修改自Yuheng0101，纯自用
+// 修改自Yuheng0101，纯自用，请勿传播，尊重原作者
 // 原文件：https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 
 /******************************************
