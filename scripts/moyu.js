@@ -208,7 +208,7 @@ const notify = async () => {
     const subTitle = ``
     // 周末提醒
     const weekendDays = getWeekendDays()
-    let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀 : `${timeFrame}好, 摸鱼人, 距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
+    let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀` : `${timeFrame}好, 摸鱼人, 距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
     // 节日提醒
     for (let { name: festival, date, diff: diffDays, lunar } of festivalList) {
         if (diffDays === 0) {
