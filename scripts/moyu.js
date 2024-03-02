@@ -202,13 +202,13 @@ const getOneWord = async (random = true) => {
 const notify = async () => {
     // 黄历输出
     const almanac = await getTodayAlmanac()
-    const title = `【来摸鱼啦】${$.time('MM月dd日')} ${almanac.lunar}`
+    const title = `【来摸鱼啦】${$.time('yyyy年MM月dd日')} ${almanac.lunar}`
     const timeFrame = Hour < 12 ? ' ☀️ 早上' : Hour < 18 ? ' ☀️ 下午' : ' 🌙 晚上'
     const todayOneWord = await getOneWord(0)
     const subTitle = ``
     // 周末提醒
     const weekendDays = getWeekendDays()
-    let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀\n【言】${(await getOneWord()) || `记得多陪陪家人哦~`}` : `${timeFrame}好, 摸鱼人, 距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
+    let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀 : `${timeFrame}好, 摸鱼人, 距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
     // 节日提醒
     for (let { name: festival, date, diff: diffDays, lunar } of festivalList) {
         if (diffDays === 0) {
