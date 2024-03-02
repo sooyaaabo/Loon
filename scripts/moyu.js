@@ -202,7 +202,7 @@ const getOneWord = async (random = true) => {
 const notify = async () => {
     // 黄历输出
     const almanac = await getTodayAlmanac()
-    const title = `【来摸鱼啦】${$.time('yyyy年MM月dd日')} ${almanac.lunar}`
+    const title = `${$.time('yyyy年MM月dd日')} ${almanac.lunar}`
     const timeFrame = Hour < 12 ? ' ☀️ 早上' : Hour < 18 ? ' ☀️ 下午' : ' 🌙 晚上'
     const todayOneWord = await getOneWord(0)
     const subTitle = ``
