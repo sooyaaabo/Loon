@@ -23,10 +23,10 @@ DOMAIN-SUFFIX, ddys.tv
 DOMAIN-SUFFIX, ddys.info
 DOMAIN-SUFFIX, ddys.love
 # 在线之家
-DOMAIN-SUFFIX, zxzja.com
-DOMAIN-SUFFIX, zxzj.site
-DOMAIN-SUFFIX, zxzjhd.com
-DOMAIN-SUFFIX, zxzj.pro
+;DOMAIN-SUFFIX, zxzja.com
+;DOMAIN-SUFFIX, zxzj.site
+;DOMAIN-SUFFIX, zxzjhd.com
+;DOMAIN-SUFFIX, zxzj.pro
 #天翼资源
 DOMAIN-SUFFIX, 911ysw.top
 # TMDB
