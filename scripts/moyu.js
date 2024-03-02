@@ -204,7 +204,7 @@ const notify = async () => {
     // const todayOneWord = await getOneWord(0)
     // const subTitle = `${timeFrame}好, 摸鱼人, ${todayOneWord ? `${todayOneWord}` : '生活不止眼前的苟且, 还有摸鱼的快乐~'}`
     // 周末提醒
-    // const weekendDays = getWeekendDays()
+    const weekendDays = getWeekendDays()
     let content = weekendDays === 0 ? `🎉周末快乐, ${(await getOneWord()) || `记得多陪陪家人哦~`}` : `距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
     // 节日提醒
     for (let { name: festival, date, diff: diffDays, lunar } of festivalList) {
