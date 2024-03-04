@@ -1,32 +1,29 @@
 #!name = Spotify
-#!desc = Spotify过滤广告，歌词翻译，解锁部分Premium特权。
+#!desc = Spotify过滤广告，歌词增强及双语模块，解锁部分Premium特权。
 #!openUrl = 
-#!author = app2smile
+#!author = app2smile VirgilClyne
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Spotify.png
-#!input = baidu_appid
-#!input = baidu_securityKey
-#!date = 2023-10-05 21:46
+#!date = 2024-03-04 23:09
 
 # 2023-10-04
 # https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin
-# 2023-10-04
-# https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-lyric.js
-
-# --------------------使用方法-------------------- #
-## 采用百度翻译接口进行翻译,需要先免费申请百度翻译api的id和密钥,然后根据不同软件进行不同配置
-## 申请百度翻译(有标准版和高级版 建议申请高级版)API
-## 标准版(很可能不够用):单次最长请求1000字符,免费调用量5万字符/月,QPS=1
-## 高级版:单次最长请求6000字符,免费调用量100万字符/月,QPS=10
-## 注册百度翻译个人开发者: http://api.fanyi.baidu.com/register
-## 注册后如果需要认证可自行选择是否实人认证(高级版需要验证)
-## 开通(通用翻译)API服务: https://fanyi-api.baidu.com/choose
-## 成功后即可看到自己的appid和密钥(不要泄露给任何人): http://api.fanyi.baidu.com/manage/developer
+# 2024-02-05
+# https://raw.githubusercontent.com/DualSubs/Spotify/main/modules/DualSubs.Spotify.plugin
 
 [Script]
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout = 10, tag = spotifyJson
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = spotifyProto
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-lyric.js, requires-body = true, binary-body-mode = true, tag = Spotify歌词翻译
+# Spotify去广告
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Spotify/Spotify_remove_ads.js, timeout = 10, tag = JSON处理
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Spotify/Spotify_proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = Proto处理
+
+# Spotify歌词增强
+http-response ^https?:\/\/api\.spotify\.com\/v1\/tracks\? script-path = https://raw.githubusercontent.com/DualSubs/Spotify/main/js/Spotify.response.js, requires-body = true, tag = 跟踪响应·JSON
+http-request ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json script-path = https://raw.githubusercontent.com/DualSubs/Spotify/main/js/Spotify.request.js, requires-body = true, tag = 歌词请求·JSON
+http-request ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*) script-path = https://raw.githubusercontent.com/DualSubs/Spotify/main/js/Spotify.request.js, requires-body = true, binary-body-mode = true, tag = 歌词请求·Proto
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = 翻译歌词响应·JSON
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, binary-body-mode = true, tag = 翻译歌词响应·Proto
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/(.+)\?(.*)format=json(.*)subtype=External script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/External.Lyrics.response.js, requires-body = true, tag = 外部歌词响应·JSON
+http-response ^https?:\/\/spclient\.wg\.spotify\.com\/color-lyrics\/v2\/track\/\w+\?(.*)subtype=External script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/External.Lyrics.response.js, requires-body = true, binary-body-mode = true, tag = 外部歌词响应·Proto
 
 [Mitm]
-hostname = spclient.wg.spotify.com
+hostname = api.spotify.com, spclient.wg.spotify.com
