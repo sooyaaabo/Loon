@@ -119,11 +119,11 @@ const defaultFestivalMap = {
 }
 // 星期对应摸鱼语句
 const MOYU_COPY_WRITE = {
-    星期一: `周一周一，奄奄一息(`,
-    星期二: `周二摆烂，啥也不干`,
-    星期三: `周三划水，给加薪水`,
-    星期四: `周四不倦, 卧倒消遣`,
-    星期五: `周五一到, 快乐冒泡)`
+    星期一: `周一周一，奄奄一息。`,
+    星期二: `周二摆烂，啥也不干。`,
+    星期三: `周三划水，给加薪水。`,
+    星期四: `周四不倦，卧倒消遣。`,
+    星期五: `周五一到，快乐冒泡。`
 }
 // ----------------------------------
 // 用户格式化节日配置
@@ -208,7 +208,7 @@ const notify = async () => {
     const subTitle = ``
     // 周末提醒
     const weekendDays = getWeekendDays()
-    let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀` : `${timeFrame}好, 摸鱼人, 距离周末还有${weekendDays}天, ${MOYU_COPY_WRITE[getWeekDay()]}`
+    let content = weekendDays === 0 ? `${timeFrame}好, 摸鱼人, 周末快乐呀` : `${timeFrame}好, 摸鱼人, 距离周末还有${weekendDays}天。\n${MOYU_COPY_WRITE[getWeekDay()]}`
     // 节日提醒
     for (let { name: festival, date, diff: diffDays, lunar } of festivalList) {
         if (diffDays === 0) {
