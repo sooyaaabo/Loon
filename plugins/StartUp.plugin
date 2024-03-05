@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
 #!date = 2024-03-04 12:40
 
-# 2024-03-04
+# 2024-03-05
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.03.04/v2.0.437 reject-200
+^https?:\/\/2024.03.04/v2.0.438 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -91,7 +91,7 @@
 ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ reject-200
 # csdn
 ^https?:\/\/app-gw\.csdn\.net\/silkroad-api\/api\/v\d\/assemble\/list\/pub\/channel\/app_open_screen_ad reject-200
-# cailianshe
+# 财联社
 ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad reject-200
 
 # ======= D ======= #
@@ -107,7 +107,7 @@
 # 滴滴出行
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget reject-200
 ^https?:\/\/res\.xiaojukeji\.com\/resapi\/activity\/get(Ruled|Preload|PasMultiNotices) reject-200
-# daoyu
+# 叨鱼
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd reject-200
 # 斗鱼
 ^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo reject-200
@@ -140,6 +140,8 @@
 # 得间
 ^https?:\/\/dj\.palmestore\.com\/zybk\/api\/ad reject-200
 ^https?:\/\/saad\.ms\.zhangyue\.net\/ad\/ reject-200
+# 嘀嗒出行
+^https?:\/\/capis.*didapinche\.com\/(ad|adbase)\/ reject-200
 
 # ======= E ======= #
 # 饿了么
@@ -150,6 +152,8 @@
 ^https?:\/\/www1.elecfans.com\/www\/delivery\/ reject-200
 # e充电
 ^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 reject-200
+# etnet财经
+^http:\/\/gateway2\.etnet\.com\.hk\/etnetApp\/theme\/seasonal\/v30\/theme.json reject-200
 
 # ======= F ======= #
 # 帆书
@@ -169,7 +173,7 @@
 ^https:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ reject-200
 # 盖得排行
 ^https?:\/\/zone\.guiderank-app\.com\/guiderank-web\/app\/ad\/listLaunchADByCity\.do reject-200
-# guanyu
+# 贯鱼
 ^https?:\/\/guanyu\.longfor\.com\/app-server\/api\/v1\/main\/start reject-200
 # 广汽本田
 ^https?:\/\/gha\.ghac\.cn\:8081\/base\/app\/api\/ad\/query\?adType reject-200
