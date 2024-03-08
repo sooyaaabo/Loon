@@ -124,11 +124,11 @@ const defaultFestivalMap = {
 }
 // 星期对应摸鱼语句
 const MOYU_COPY_WRITE = {
-    星期一: `周一周一，奄奄一息(`,
+    星期一: `周一周一，奄奄一息`,
     星期二: `周二摆烂，啥也不干`,
     星期三: `周三划水，给加薪水`,
     星期四: `周四不倦, 卧倒消遣`,
-    星期五: `周五一到, 快乐冒泡)`
+    星期五: `周五一到, 快乐冒泡`
 }
 // ----------------------------------
 // 用户格式化节日配置
@@ -536,7 +536,7 @@ async function SendNotify(title, subtitle = '', content = '', options = {}) {
             $notification.post(title, subtitle, content, opts)
         }
     }
-    const content_ = ``
+    const content_ = `${content}`
     if (isJSBox) {
         const push = require('push')
         push.schedule({
