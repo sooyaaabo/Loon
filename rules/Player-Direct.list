@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-02-29
+# 2024-03-08
 
 # CMSPlayer
 # 低端影视
@@ -145,6 +145,8 @@ DOMAIN-SUFFIX, chun.imetyou.top
 DOMAIN-SUFFIX, 789.123456.al
 # Nya Media
 DOMAIN-SUFFIX, emby.bangumi.ca
+# 纸片人
+DOMAIN-SUFFIX, embyplus.org
 # 白浪云
 DOMAIN-SUFFIX, emby.airpor.top
 # 垃圾影音
