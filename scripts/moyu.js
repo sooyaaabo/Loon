@@ -302,9 +302,7 @@ const notify = async () => {
     }
     // 发送通知
     const imageUrl = $.CUSTOM_NOTIFY_IMG || images[Math.floor(Math.random() * images.length)]
-    await SendNotify(title, subTitle, content, {
-        'media-url': imageUrl
-    })
+    await SendNotify(title, subTitle, content)
 }
 /** 阴历转阳历 */
 function Lunar2Solar(year, month, day) {
