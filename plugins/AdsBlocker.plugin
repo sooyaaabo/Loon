@@ -4,7 +4,7 @@
 #!author = fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
-#!date = 2024-03-05 18:17
+#!date = 2024-03-09 15:06
 
 # 2024-03-05 18:07:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -421,6 +421,7 @@
 ^https?:\/\/l[0-9]{1}\.51fanli\.net\/app\/images\/splash\/202\d{1}\/\d{2}\/.*.jpg reject-200
 # 发现精彩 - static.95508.com
 ^https?:\/\/static\.95508\.com\/mmg\/images\/ads\/.+\/(.+1125?.+2436|.+%.+%|.+_.+_) reject-dict
+^https?:\/\/static\.95508\.com\/mmg\/ciop\/sysabbr\/cmep\/images\/apppopupads reject-dict
 
 # >>>>>>>>>>>>>>> ✅ G ✅ <<<<<<<<<<<<<<
 # 光大银行 - mobile.cebbank.com, yghsh.cebbank.com
