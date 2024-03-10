@@ -9,7 +9,7 @@
 #!select = TAB_发现, 不隐藏, 隐藏
 #!select = TAB_漫游, 不隐藏, 隐藏
 #!select = TAB_动态, 不隐藏, 隐藏
-#!date = 2024-03-10 09:47
+#!date = 2024-03-10 10:12
 
 # 2024-01-27 20:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
@@ -40,6 +40,8 @@ DOMAIN, httpdns.n.netease.com, REJECT
 ^https?:\/\/interface3?\.music\.163\.com\/w?eapi\/(activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) reject-dict
 
 [Script]
+# 解锁黑胶音乐
+http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员
 # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区 乐迷、星评等级 关注 等 图标去除
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = mian
 # 会员伪装vip
@@ -47,11 +49,11 @@ http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(music-vip
 # 底部tab
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部tab
 # 推荐 | home | 主页
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = home
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 推荐
 # 发现页
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页
 # 播放音效
-http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = effect
+http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 播放音效
 # 我的页面
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 我的页面
 # 显示未关注你
