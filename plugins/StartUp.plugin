@@ -4,9 +4,9 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-03-09 23:45
+#!date = 2024-03-10 18:07
 
-# 2024-03-09
+# 2024-03-10
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.03.09/v2.0.443 reject-200
+^https?:\/\/2024.03.10/v2.0.444 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -431,7 +431,8 @@
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryAdImages reject-200
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen reject-200
 # 识货
-^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/(screen|ad) reject-200
+^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/ad reject-200
+^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen url response-body egin_time":"\d{4} response-body egin_time":"2099
 # Soul
 ^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report$ reject-200
 # 苏宁
@@ -732,6 +733,8 @@ http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|u
 http-response ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryInfoFlow script-path = https://github.com/ddgksf2013/Scripts/raw/master/shunfeng_json.js, requires-body = true, tag = 顺丰
 # Stay
 http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/stay.js, requires-body = true, tag = Stay
+# 识货
+http-response ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = egin_time":"\d{4}->egin_time":"2099, requires-body = true, tag = 识货
 
 # ======= T ======= #
 # 天府通
