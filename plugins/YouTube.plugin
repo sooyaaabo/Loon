@@ -4,16 +4,16 @@
 #!author = RuCu6 Maasea VirgilClyne iKeLee
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
-#!date = 2024-03-04 22:44
+#!date = 2024-03-10 14:44
 
-# 2023-12-21 18:40
+# 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
 # 2024-03-04 15:04:59
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTubeSubtitlesTranslation.plugin
 
 [Rewrite]
 # 使用reject-200方法以减少开销
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-200
+^https:\/\/redirector\.googlevideo\.com\/initplayback\? reject-200
 
 [Script]
 # YouTube去广告 - 来自Maasea的作品
@@ -36,4 +36,4 @@ http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype
 http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music翻译歌词响应, argument = 
 
 [Mitm]
-hostname = *.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, -redirector*.googlevideo.com
+hostname = redirector.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, -redirector*.googlevideo.com
