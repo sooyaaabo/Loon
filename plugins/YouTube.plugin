@@ -36,4 +36,4 @@ http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype
 http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music翻译歌词响应, argument = 
 
 [Mitm]
-hostname = redirector.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, -redirector*.googlevideo.com
+hostname = redirector.googlevideo.com, youtubei.googleapis.com, www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, -redirector*.googlevideo.com, *.googlevideo.com
