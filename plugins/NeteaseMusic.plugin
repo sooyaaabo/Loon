@@ -4,7 +4,7 @@
 #!author = RuCu6 Keywos
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
-#!date = 2024-02-17 22:42
+#!date = 2024-03-10 09:10
 
 # 2024-01-27 20:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
@@ -12,14 +12,13 @@
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 
 [Rule]
-DOMAIN, httpdns.n.netease.com,REJECT
+DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
 DOMAIN, iadmatapk.nosdn.127.net, REJECT
 DOMAIN, iadmusicmat.music.126.net, REJECT
 DOMAIN, iadmusicmatvideo.music.126.net, REJECT
 DOMAIN, ipv4.music.163.com, REJECT
 DOMAIN, ipv6.music.163.com, REJECT
-DOMAIN-SUFFIX, 163jiasu.com, REJECT
 
 [Rewrite]
 ^https?:\/\/httpdns.n\.netease\.com reject
