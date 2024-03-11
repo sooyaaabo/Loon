@@ -5,10 +5,10 @@
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
 #!select = 首页卡片数量, 1, 2, 3, 4, 5
-#!select = 『漫游』, 启用, 禁用
-#!select = 『动态』, 启用, 禁用
-#!select = 『推荐』, 启用, 禁用
-#!select = 『发现』, 启用, 禁用
+#!select = 隐藏『漫游』, 是, 否
+#!select = 隐藏『动态』, 是, 否
+#!select = 隐藏『推荐』, 是, 否
+#!select = 隐藏『发现』, 是, 否
 #!date = 2024-03-11 16:30
 
 # 2024-01-27 20:10
