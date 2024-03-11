@@ -5,11 +5,11 @@
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
 #!select = 首页卡片数量, 1, 2, 3, 4, 5
-#!select = 隐藏『漫游』, 是, 否
-#!select = 隐藏『动态』, 是, 否
-#!select = 隐藏『推荐』, 是, 否
-#!select = 隐藏『发现』, 是, 否
-#!date = 2024-03-11 16:16
+#!select = 隐藏推荐标签, 是, 否
+#!select = 隐藏发现标签, 是, 否
+#!select = 隐藏漫游标签, 是, 否
+#!select = 隐藏动态标签, 是, 否
+#!date = 2024-03-11 16:30
 
 # 2024-01-27 20:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
