@@ -1,8 +1,6 @@
 # Loon
 自用分流规则、重写、插件、脚本及图标库。<br>
 
-![sooyaaabo's GitHub stats](https://github-readme-stats.vercel.app/api?username=sooyaaabo&show_icons=true&rank_icon=github&count_private=true&theme=buefy)
-
 ![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
 
 ## 使用声明
