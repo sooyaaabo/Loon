@@ -9,7 +9,7 @@
 #!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否
 #!select = 隐藏动态标签, 是, 否
-#!date = 2024-03-11 16:30
+#!date = 2024-03-12 21:30
 
 # 2024-01-27 20:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
@@ -68,4 +68,4 @@ http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/link\/posi
 http-response ^https?:\/\/(ipv4|interface3?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_foll
 
 [Mitm]
-hostname = interface*.music.163.com, interface.music.163.com, interface3.music.163.com, httpdns.n.netease.com, interface.music.163.com.163jiasu.com, interface3.music.163.com.163jiasu.com, ipv4.music.163.com
+hostname = interface*.music.163.com, interface.music.163.com, interface3.music.163.com, ipv4.music.163.com
