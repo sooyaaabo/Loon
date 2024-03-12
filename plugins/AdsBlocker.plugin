@@ -4,7 +4,7 @@
 #!author = fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
-#!date = 2024-03-10 22:04
+#!date = 2024-03-12 12:00
 
 # 2024-03-10 17:07:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1743,6 +1743,7 @@ http-response ^https:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subsc
 # 飞客茶馆 - ptf.flyertrip.com, 47.100.65.202, www.flyert.com
 http-response ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = adv -> random_body, requires-body = true, tag = 飞客茶馆
 http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js, requires-body = true, tag = 飞客茶馆
+http-response ^https?:\/\/www\.flyert\.com\/plugin\.php script-path = https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/response/flyert.js, requires-body = true, tag = 飞客茶馆
 # 粉笔 - tiku.fenbi.com
 http-response ^https:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body = true, tag = 粉笔
 
