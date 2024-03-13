@@ -142,7 +142,7 @@ DOMAIN, api.aliyundrive.com
 ;DOMAIN-SUFFIX, sg.imetyou.top
 ;DOMAIN-SUFFIX, chun.imetyou.top
 # TreeDiagram
-;DOMAIN-SUFFIX, 789.123456.al
+DOMAIN-SUFFIX, 789.123456.al
 # Nya Media
 DOMAIN-SUFFIX, emby.bangumi.ca
 # 纸片人
