@@ -4,16 +4,25 @@
 #!author = RuCu6 Keywos qiuxiuya
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
-#!select = 首页卡片数量, 1, 2, 3, 4, 5, 6
-#!select = 隐藏推荐标签, 是, 否
-#!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否
 #!select = 隐藏动态标签, 是, 否
-#!date = 2024-03-13 16:43
+#!select = 隐藏推荐标签, 是, 否
+#!select = 隐藏发现标签, 是, 否
+#!select = 以下为首页卡片板块, --
+#!select = 隐藏首页问候语, 是, 否
+#!select = 隐藏首页排行榜, 是, 否
+#!select = 隐藏首页每日推荐, 是, 否
+#!select = 隐藏首页推荐歌单, 是, 否
+#!select = 隐藏首页最近常听, 是, 否
+#!select = 隐藏首页雷达歌单, 是, 否
+#!select = 隐藏首页音乐合伙人, 是, 否
+#!select = 隐藏首页推荐专属歌单, 是, 否
+#!select = 隐藏首页你的专属歌单, 是, 否
+#!date = 2024-03-13 18:41
 
 # 2024-03-13 15:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
-# 2024-03-10 09:17:37
+# 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
