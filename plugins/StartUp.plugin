@@ -4,9 +4,9 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-03-13 12:45
+#!date = 2024-03-14 19:49
 
-# 2024-03-13
+# 2024-03-14
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.03.13/v2.0.448 reject-200
+^https?:\/\/2024.03.14/v2.0.449 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -145,7 +145,7 @@
 ^https?:\/\/dj\.palmestore\.com\/zybk\/api\/ad reject-200
 ^https?:\/\/saad\.ms\.zhangyue\.net\/ad\/ reject-200
 # 嘀嗒出行
-^https?:\/\/capis.*didapinche\.com\/(ad|adbase)\/ reject-200
+^https?:\/\/capis.*didapinche\.com\/ad\/cx\/startup reject-200
 
 # ======= E ======= #
 # 饿了么
