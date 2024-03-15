@@ -4,9 +4,9 @@
 #!author = fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
-#!date = 2024-03-14 21:38
+#!date = 2024-03-15 21:40
 
-# 2024-03-10 17:07:00
+# 2024-03-15 20:07:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -861,7 +861,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/prefetchAdvList\.ah reject
 ^https:\/\/wap\.spdb\.com\.cn\/mspmk-web-homeassist\/OpenScreenAdv\.ah$ reject
 # 浦大喜奔 - image.spdbccc.com.cn
-^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/.+(4038|0571|M511|V-008|g549|b0628|fg817|5w501|Jo341|Z4583|oo845|i4905|MY245|YU472|Y401) reject-dict
+^https?:\/\/image\.spdbccc\.com\.cn\/group\d\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/.+(4038|0571|M511|V-008|g549|b0628|fg817|5w501|Jo341|Z4583|oo845|i4905|MY245|YU472|Y401|w428|s000) reject-dict
 # 朴朴超市 - j1.pupuapi.com
 ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=(?!2)(.*)&store_id reject
 ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position reject
