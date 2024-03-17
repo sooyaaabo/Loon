@@ -1,4 +1,4 @@
-# 2024-03-01 09:05
+# 2024-03-17 06:05
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -63,7 +63,6 @@ DOMAIN, adttrackingprd.hwwt8.com, REJECT
 # ======= G ======= #
 # 高德地图
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
-DOMAIN, free-aos-cdn-image.amap.com, REJECT
 # 工商银行
 DOMAIN, pageviewp.icbc.com.cn, REJECT
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
