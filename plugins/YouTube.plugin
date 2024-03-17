@@ -4,7 +4,10 @@
 #!author = RuCu6 Maasea VirgilClyne iKeLee
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
-#!date = 2024-03-10 14:44
+#!select =  自动显示翻译字幕, 是, 否
+#!select = 仅输出字幕译文, 是, 否
+#!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
+#!date = 2024-03-17 19:14
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
