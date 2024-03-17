@@ -1,0 +1,23 @@
+#!name = 12306铁路
+#!desc = 过滤12306应用内广告及开屏广告
+#!openUrl = 
+#!author = RuCu6
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/12306.png
+#!date = 2024-03-17 19:30
+
+# 2024-03-15 14:45
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+
+[Rule]
+# 放行规则
+DOMAIN, ad.12306.cn, DIRECT
+
+[Script]
+# 移除12306开屏广告
+http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body = true, tag = 移除12306开屏广告
+# 移除12306应用内广告
+http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 移除12306应用内广告
+
+[Mitm]
+hostname = ad.12306.cn, mobile.12306.cn
