@@ -211,7 +211,9 @@
 ^https:\/\/api\.boohee\.com\/app-interface\/v1\/record\/record_tool(_pop)?_ad reject-dict
 # 哔哩哔哩漫画 - manga.bilibili.com, i0.hdslb.com
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner).* reject
-^https?:\/\/i0\.hdslb\.com\/bfs\/manga-static\/\w+.(png|jpg)$ reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Shop\/GetShopItems reject-dict
+^https?:\/\/i\d\.hdslb\.com\/bfs\/fawkes reject-dict
+^https?:\/\/i\d\.hdslb\.com\/bfs\/manga-static\/\w+\.(jpg|png)$ reject-200
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # clicli - js-ad.ayximgs.com
@@ -768,7 +770,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https:\/\/j-image\.missfresh\.cn\/img_(.+)\.(jpg|jpeg|gif|png)\?iopcmd=convert&dst=webp&q=85$ reject
 # 买单吧 - creditcardapp.bankcomm.cn, creditcard.bankcomm.com
 ^https?:\/\/creditcardapp\.bankcomm\.cn\/mappweb_interface\/common\/(qryPopAds|qryLaunchAds)\.do reject-200
-^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/[A-Z0-9]{2}\/[A-Z0-9]{2}\/[a-zA-Z0-9]{30}\.(jpg|png) reject-200
+^https?:\/\/creditcard\.bankcomm\.com\/tfimg\/public00\/M00\/4C\/6F reject-img
 # 民生银行 - www.cmbc.com.cn, rs.creditcard.cmbc.com.cn
 ^https?:\/\/www\.cmbc\.com\.cn\/m\/image\/loadingpage\/ reject-200
 ^https:\/\/www\.cmbc\.com\.cn\/m\/image\/banner\/.*.png reject-200
@@ -1810,8 +1812,12 @@ http-response ^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? scri
 http-response ^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
 http-response ^https?:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
 
+# >>>>>>>>>>>>>>> ✅ M ✅ <<<<<<<<<<<<<<
+# 买单吧 - creditcardapp.bankcomm.cn, creditcard.bankcomm.com
+http-response ^https?:\/\/creditcardapp\.bankcomm\.com\/rcg\/index\.html\?callbackurl=rcg\/index\.html&orclogin=1& script-path = https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/mdb.js, requires-body = true, tag = 买单吧
+
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
-# 多多买菜
+# 多多买菜 - mobile.yangkeduo.com
 http-response ^https:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = "list":\[.+\] -> "list":[], requires-body = true, tag = 多多买菜
 # 皮皮虾 - *.pipix.com
 http-response ^https:\/\/.+\.pipix\.com\/bds\/feed\/channel_list\/ script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/PPX.js, requires-body = true, tag = 皮皮虾
