@@ -1,0 +1,36 @@
+#!name = QQ音乐
+#!desc = 过滤QQ音乐广告
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/QQMusic.png
+#!date = 2024-03-17 20:02
+
+# 2024-01-10 13:51:07
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin
+
+[Rule]
+DOMAIN, adstats.tencentmusic.com, REJECT-DROP
+DOMAIN, ad.tencentmusic.com, REJECT-DROP
+DOMAIN, adcdn.tencentmusic.com, REJECT
+DOMAIN, adcdn6.tencentmusic.com, REJECT
+DOMAIN, adexpo.tencentmusic.com, REJECT
+DOMAIN, adclick.tencentmusic.com, REJECT
+DOMAIN, otheve.beacon.qq.com, REJECT-DROP
+DOMAIN, mazu.m.qq.com, REJECT-DROP
+DOMAIN, monitor.music.qq.com, REJECT-DROP
+DOMAIN, stat.y.qq.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT-NO-DROP
+DOMAIN, oth.str.mdt.qq.com, REJECT
+DOMAIN, h.trace.qq.com, REJECT
+DOMAIN, sdk.e.qq.com, REJECT
+DOMAIN, p.l.qq.com, REJECT
+DOMAIN, us.l.qq.com, REJECT
+DOMAIN, tangram.e.qq.com, REJECT
+DOMAIN-SUFFIX, imtmp.net, REJECT
+
+# [Rewrite]
+# ^https:\/\/shc6\.y\.qq\.com\/tips\/fcgi-bin\/fcg_get_advert\.fcg
+
+# [Mitm]
+# hostname = shc6.y.qq.com
