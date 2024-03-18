@@ -4,7 +4,7 @@
 #!author = ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-03-17 12:13
+#!date = 2024-03-18 12:36
 
 # 2024-03-17
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -434,9 +434,6 @@
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/appVersion\/detectionUpgrade reject-200
 ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/ad\/queryAdImages reject-200
 ^https?:\/\/shopic\.sf-express\.com\/crm\/mobile\/common\/flashscreen reject-200
-# 识货
-^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/ad reject-200
-^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen url response-body egin_time":"\d{4} response-body egin_time":"2099
 # Soul
 ^https:\/\/data-collector\.soulapp\.cn\/api\/data\/report$ reject-200
 # 苏宁
