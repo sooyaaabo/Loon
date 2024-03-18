@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-03-13
+# 2024-03-18
 
 # CMSPlayer
 # 低端影视
@@ -26,6 +26,11 @@ DOMAIN-SUFFIX, jisuzyimg.com
 DOMAIN-SUFFIX, wolongzy.cc
 # 索尼资源
 DOMAIN-SUFFIX, suoniapi.com
+DOMAIN, v3.sxzyhuij.com
+DOMAIN, v3.suonizy-youku.com
+DOMAIN, v8.sxzyhuij.com
+DOMAIN, snzypic.com
+DOMAIN, v8.suonizy-youku.com
 # 天空资源
 DOMAIN-SUFFIX, tiankongapi.com
 DOMAIN-SUFFIX, huishij.com
@@ -95,12 +100,12 @@ DOMAIN-SUFFIX, ahjiuman.com
 DOMAIN-SUFFIX, youkuphoto.com
 # 乐视资源
 DOMAIN-SUFFIX, leshizyapi.com
-# 探索页
-DOMAIN-SUFFIX, infuseku.xyz
 # 飘零影院
 DOMAIN-SUFFIX, p2100.net
 
 # XPTV
+# 探索页
+DOMAIN-SUFFIX, infuseku.xyz
 # 555电影
 DOMAIN-SUFFIX, zxk555.com
 DOMAIN-SUFFIX, 555app.vip
@@ -121,6 +126,7 @@ DOMAIN-suffix, ibyteimg.com
 # 玩偶哥哥
 DOMAIN-SUFFIX, wogg.link
 DOMAIN-SUFFIX, wogg.xyz
+DOMAIN-SUFFIX, xxooo.cf
 # 小纸条
 DOMAIN-SUFFIX, a.gitcafe.net
 DOMAIN-SUFFIX, ali.gitcafe.ink 
@@ -128,6 +134,7 @@ DOMAIN, yunluo.oss-cn-shanghai.aliyuncs.com
 # JOJO
 DOMAIN-SUFFIX, jiohub.top
 #阿里播放
+DOMAIN-suffix, aliyundrive.asia
 DOMAIN-suffix, alicloudccp.com
 DOMAIN, openapi.aliyundrive.com
 DOMAIN, auth.aliyundrive.com
