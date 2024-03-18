@@ -211,6 +211,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Amap.png"
         },
         {
+            "name": "12306_Railway.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/12306_Railway.png"
+        },
+        {
             "name": "Weibo.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Weibo.png"
         },
@@ -233,6 +237,14 @@
         {
             "name": "Goofish.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Goofish.png"
+        },
+        {
+            "name": "JingDong.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/JingDong.png"
+        },
+        {
+            "name": "CaiNiao.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CaiNiao.png"
         },
         {
             "name": "iCost.png",
@@ -313,6 +325,10 @@
         {
             "name": "IThome.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/IThome.png"
+        },
+        {
+            "name": "CoolApk.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CoolApk.png"
         },
         {
             "name": "Zhihu.png",
