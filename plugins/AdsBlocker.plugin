@@ -4,7 +4,7 @@
 #!author = fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
-#!date = 2024-03-16 18:09
+#!date = 2024-03-18 15:21
 
 # 2024-03-15 20:07:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -885,9 +885,10 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # 皮皮搞笑评论区 - adapi.izuiyou.com
 ^http:\/\/adapi\.izuiyou\.com\/ad\/fetch_api_ads\? reject-dict
 # 平安口袋银行 - cdn.sdb.com.cn
-^https?:\/\/cdn\.sdb\.com\.cn\/bron-coms\/bron-coms\/material-image\/.+.jpg reject-200
 ^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/general-banner reject-200
-^https?:\/\/cdn\.sdb\.com\.cn\/mkt\/materiel-issue\/materials\/2024(?!0124|0306|0221|0228|0229|0301).*\.(jpg|png)$ reject-200
+^https?:\/\/cdn\.sdb\.com\.cn\/widget\/pb\/pb-plugins-recomend-content reject-dict
+^https?:\/\/cdn\.sdb\.com\.cn\/mkt\/materiel-issue\/materials\/2024(?!0116\/17471|0124\/17177|0130\/17522|0221\/17602|0228\/17380|0228\/17152|0229\/17631|0301\/17634|0306\/17427|0306\/17626).*\.(jpg|png)$ reject-img
+#^https?:\/\/cdn\.sdb\.com\.cn\/widget\/magic-module-sprite\/four-rectangle-grid reject-dict
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # QQ钱包 - m.qianbao.qq.com
