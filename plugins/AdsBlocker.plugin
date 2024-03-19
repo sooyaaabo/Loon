@@ -1725,7 +1725,7 @@ http-response ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_in
 # crunchyroll - beta-api.crunchyroll.com
 http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = offset_ms":\d+ -> offset_ms":99999999999999, requires-body = true, tag = crunchyroll
 # 彩云天气 - wrapper.cyapi.cn, api.caiyunapp.com
-http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/echo-response.js, argument = https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json, requires-body = true, tag = 彩云天气
+http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/echo-response.js, argument = application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json, requires-body = true, tag = 彩云天气
 # 菜鸟裹裹 - cn-acs.m.cainiao.com, amdc.m.taobao.com
 http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 菜鸟裹裹
 http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟裹裹
