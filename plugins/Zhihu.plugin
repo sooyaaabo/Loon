@@ -1,10 +1,10 @@
 #!name = 知乎
 #!desc = 知乎去除各部广告，建议卸载知乎重新安装。
 #!openUrl = 
-#!author = RuCu6 app2smile
+#!author = @RuCu6 @app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Zhihu.png
-#!date = 2024-02-19 21:10
+#!date = 2024-03-19 18:00
 
 # 2024-02-19 20:05
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet
