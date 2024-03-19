@@ -1,13 +1,13 @@
 #!name = IT之家
 #!desc = 过滤IT之家信息流广告和文末广告，自定义移除置顶和轮播图。自定义移除项需在插件配置，此插件仅支持8.30及以上版本客户端。
 #!openUrl = 
-#!author = Keywos
+#!author = @Keywos
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/IThome.png
 #!select = 去除轮播图广告,开启,关闭
 #!select = 去除整个轮播图,开启,关闭
 #!select = 去除置顶,开启,关闭
-#!date = 2024-01-27 20:57
+#!date = 2024-03-19 18:00
 
 # 2024-01-27 20:57
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
