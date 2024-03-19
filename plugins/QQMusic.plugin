@@ -1,10 +1,10 @@
 #!name = QQ音乐
 #!desc = 过滤QQ音乐广告
 #!openUrl = 
-#!author = lodepuly
+#!author = @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/QQMusic.png
-#!date = 2024-03-17 20:02
+#!date = 2024-03-19 18:00
 
 # 2024-01-10 13:51:07
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin
