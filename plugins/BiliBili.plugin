@@ -1,7 +1,7 @@
 #!name = 哔哩哔哩
 #!desc = 没有广告的哔哩哔哩更值得干杯
 #!openUrl = 
-#!author = RuCu6 Maasea iKeLee
+#!author = RuCu6 Maasea lodepuly
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/BilibiliRed.png
 #!date = 2024-02-19 11:48
@@ -33,7 +33,7 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip reject
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp=jsonp$ reject-200
 
-# iKeLee
+# lodepuly
 # 开屏广告
 ^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? reject-dict
 # 满意度调研
