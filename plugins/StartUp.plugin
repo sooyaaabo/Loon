@@ -678,7 +678,7 @@ http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path =
 
 # ======= D ======= #
 # 懂球帝
-http-request ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/echo-response.js, argument = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js, requires-body = true, tag = 懂球帝
+http-request ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/echo-response.js, argument = text/json&url=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js, requires-body = true, tag = 懂球帝
 # 动画疯
 ;http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true, tag = 动画疯
 # 叮咚买菜
