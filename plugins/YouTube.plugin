@@ -1,13 +1,13 @@
 #!name = YouTube
 #!desc = 移除广告，优化界面（需禁用UDP 443端口）。字幕增强及双语翻译，支持Youtube Music歌词翻译。
 #!openUrl = 
-#!author = RuCu6 Maasea VirgilClyne
+#!author = @RuCu6 @Maasea @VirgilClyne
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
 #!select =  自动显示翻译字幕, 是, 否
 #!select = 仅输出字幕译文, 是, 否
 #!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-03-17 19:14
+#!date = 2024-03-19 18:00
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
