@@ -1,10 +1,10 @@
 #!name = TestFlight
 #!desc = 多账户合并共存，并可分享/导出TestFlight APP。
 #!openUrl = 
-#!author = NobyDa
+#!author = @NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TestFlight.png
-#!date = 2024-03-19 11:16
+#!date = 2024-03-19 18:00
 
 # 2024-02-22
 # https://github.com/NobyDa/Script/blob/master/Loon/Loon_TF_Account.plugin
