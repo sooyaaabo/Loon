@@ -1,7 +1,7 @@
 #!name = 入口落地查询
 #!desc = 查看目标节点的入口落地详细信息
 #!openUrl = 
-#!author = @Keywos
+#!author = Keywos
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Netisp.png
 #!select = 入口查询超时时间ms,100,200,500,800,1000,1200,2000,5000,10000
