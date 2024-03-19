@@ -1,0 +1,40 @@
+#!name = 闲鱼
+#!desc = 过滤闲鱼广告
+#!openUrl = 
+#!author = RuCu6 fmz200 lodepuly
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Goofish.png
+#!date = 2024-03-19 17:48
+
+# 2024-03-18 18:22:00
+# https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
+# 2024-03-15 14:45
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# 2024-02-21 17:41:44
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Remove_ads_by_keli.plugin
+
+[Rewrite]
+# fmz200 - gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com
+^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ reject-200
+^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} reject-200
+^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ reject-200
+^https?:\/\/asp\.cntv\.myalicdn\.com\/.+?\?maxbr=850 reject-200
+^https?:\/\/(?>heic|gw)\.alicdn\.com\/tfs\/TB1.+?-\d{4}-\d{4}\.jpg_1200x1200q90\.jpg_\.\w{3,4}$ reject-200
+^https?:\/\/(gw|heic)\.alicdn\.com\/\w{2}s\/[\w\/.-]+\.jpg_(9\d{2}|\d{4}) reject
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/\w{2}\/[\w!]+-\d-tps-\d{3,4}-\d{4}\.jpg_(1\d{3}|9\d{2})x(1\d{3}|9\d{2})q\d0\.jpg_\.(heic|webp)$ reject
+^https?:\/\/(gw|heic)\.alicdn\.com\/imgextra\/.+\d{4}-\d{4}\.jpg_(9\d{2}|\d{4}) reject
+^https?:\/\/gw\.alicdn\.com\/mt\/ reject
+^https?:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} reject
+
+# Rucu6 - gw.alicdn.com, acs.m.taobao.com
+^https:\/\/gw\.alicdn\.com\/mt\/ reject
+^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} reject
+^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
+
+# lodepuly
+^https:\/\/iyes\.youku\.com\/uts\/v1\/start\/ reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.get\/ reject-dict
+
+[Mitm]
+hostname = gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, acs.m.taobao.com, acs.m.goofish.com, iyes.youku.com 
