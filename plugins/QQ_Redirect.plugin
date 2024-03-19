@@ -1,7 +1,7 @@
 #!name = QQ链接解锁
 #!desc = 解除QQ内访问非白名单之外的地址提示停止访问该页面的限制，并移除跟踪参数。使用前需要清除QQ的缓存数据。
 #!openUrl = 
-#!author = iKeLee
+#!author = lodepuly
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/QQ.png
 #!date = 2024-01-12 20:21:38
