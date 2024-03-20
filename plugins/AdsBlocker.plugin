@@ -210,10 +210,13 @@
 ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/(discover_chosen|page_float_bubbles) reject-dict
 ^https?:\/\/api\.boohee\.com\/app-interface\/v1\/record\/record_tool(_pop)?_ad reject-dict
 # 哔哩哔哩漫画 - manga.bilibili.com, i*.hdslb.com
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner|GetComicConfigPicList) reject
-^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Shop\/GetShopItems reject-dict
 ^https?:\/\/i\d\.hdslb\.com\/bfs\/fawkes reject-dict
 ^https?:\/\/i\d\.hdslb\.com\/bfs\/manga-static\/\w+\.(jpg|png)$ reject-200
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/(Recommend|Flash|ListFlash|GetBubbles|GetActivityTab|GetCommonBanner|GetComicConfigPicList) reject-200
+^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Shop\/GetShopItems reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.SeasonV\d\/GetSeasonInfo reject-dict
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/FollowOffcial reject-200
+^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.Read\/ActInfo reject-200
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # clicli - js-ad.ayximgs.com
@@ -1720,6 +1723,8 @@ http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js,requires-body = true, tag = 百度贴吧
 # 薄荷健康 - bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.boohee.com
 http-response ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = articles -> random_body, requires-body = true, tag = 薄荷健康
+# 哔哩哔哩漫画 - manga.bilibili.com, i*.hdslb.com
+http-response ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf script-path = https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/bilibiliManga.js, requires-body = true, tag = 哔哩哔哩漫画
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # crunchyroll - beta-api.crunchyroll.com
