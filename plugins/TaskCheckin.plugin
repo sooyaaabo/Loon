@@ -4,7 +4,7 @@
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png
-#!date = 2024-03-19 18:00
+#!date = 2024-03-20 16:40
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.conf
@@ -14,6 +14,8 @@
 [Script]
 # 摸鱼日历
 cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/moyu.js, timeout = 10, tag = 摸鱼日历
+# TestFlight自动加入
+cron "0/5 * * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入
 # 阿里云盘
 cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘签到Task
 # 微博
