@@ -1,7 +1,7 @@
 #!name = Cookie获取
 #!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
 #!openUrl = 
-#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325
+#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
 #!date = 2024-03-20 16:40
