@@ -1,0 +1,15 @@
+#!name = Notability
+#!desc = 解锁Notability高级版
+#!openUrl = 
+#!author = @Yu9191
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
+#!date = 2024-03-21 09:25
+
+# https://raw.githubusercontent.com/Yu9191/Script/main/Not.sgmodule
+
+[Script]
+http-request ^https?:\/\/notability\.com\/global script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/echo-response.js, argument = text/json&url=https://raw.githubusercontent.com/Yu9191/Rewrite/main/Nob.txt/_end_/Nob.txt, requires-body = true, tag = Notability
+
+[Mitm]
+hostname = notability.com
