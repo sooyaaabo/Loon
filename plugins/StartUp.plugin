@@ -4,9 +4,9 @@
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-03-19 18:00
+#!date = 2024-03-21 22:40
 
-# 2024-03-17
+# 2024-03-21
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.03.17/v2.0.453 reject-200
+^https?:\/\/2024.03.21/v2.0.454 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -156,6 +156,7 @@
 ^https?:\/\/www1.elecfans.com\/www\/delivery\/ reject-200
 # e充电
 ^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn\/63c4e3b558bb610008969f89 reject-200
+^https?:\/\/cdn-evone-ceph\.echargenet\.com\/gw-emas-cdn reject-200
 # etnet财经
 ^http:\/\/gateway2\.etnet\.com\.hk\/etnetApp\/theme\/seasonal\/v30\/theme.json reject-200
 
