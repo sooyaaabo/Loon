@@ -4,7 +4,7 @@
 #!author = @app2smile @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Spotify.png
-#!date = 2024-03-19 18:00
+#!date = 2024-03-21 19:30
 
 # 2023-10-04
 # https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin
@@ -15,8 +15,8 @@
 
 [Script]
 # Spotify去广告
-http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Spotify/Spotify_remove_ads.js, timeout = 10, tag = JSON处理
-http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Spotify/Spotify_proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = Proto处理
+http-request ^https:\/\/spclient\.wg\.spotify\.com\/(artistview\/v1\/artist|album-entity-view\/v2\/album)\/ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-json.js, timeout = 10, tag = JSON处理
+http-response ^https:\/\/spclient\.wg\.spotify\.com\/(bootstrap\/v1\/bootstrap|user-customization-service\/v1\/customize)$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/spotify-proto.js, requires-body = true, binary-body-mode = true, timeout = 10, tag = Proto处理
 
 # Spotify歌词增强
 http-response ^https?:\/\/api\.spotify\.com\/v1\/tracks\? script-path = https://raw.githubusercontent.com/DualSubs/Spotify/main/js/Spotify.response.js, requires-body = true, tag = 跟踪响应·JSON
