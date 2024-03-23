@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-03-18
+# 2024-03-23 07:45
 
 # CMSPlayer
 # 海外看
@@ -59,8 +59,7 @@ DOMAIN-SUFFIX, czzy88.com
 # Paul
 DOMAIN-SUFFIX, imetyou.top
 # 江湖
-DOMAIN, film.reddust.link
-DOMAIN, go3.reddust.link
+DOMAIN-SUFFIX, reddust.link
 # 普拉斯影业
 DOMAIN, emby-cf.plusmedia.site
 DOMAIN, emby.plusmedia.site
