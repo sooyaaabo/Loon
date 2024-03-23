@@ -1,0 +1,17 @@
+#!name = CMS_Adblock
+#!desc = 去除CMS资源插入式廣告
+#!openUrl = 
+#!author = @Yswag
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/XPTV.png
+#!date = 2024-03-23 15:30
+
+# 2024-03-23 13:30
+# https://github.com/Yswag/for-own-use/blob/main/module/cmsAdblock.sgmodule
+
+[Script]
+http-response ^https?:\/\/m3u\.haiwaikan\.com\/xm3u8\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 海外看
+http-response ^https?:\/\/(v\.cdnlz\d+\.com|vip.*\.lz-cdn\d+\.com)\/(.+)\/hls\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 量子資源
+
+[Mitm]
+hostname = m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com
