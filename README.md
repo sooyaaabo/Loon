@@ -44,6 +44,7 @@
 -   [@KOP-XIAO](https://github.com/KOP-XIAO)<br>
 -   [@DivineEngine](https://github.com/DivineEngine)<br>
 -   [@Yuheng0101](https://github.com/Yuheng0101)<br>
+-   [@Yswag](https://github.com/Yswag)<br>
 
 ## Star历史
 <img src="https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date" alt="Star History Chart" width="600" height="356" align="center">
