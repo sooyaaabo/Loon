@@ -1567,7 +1567,7 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser reject
 ^https?:\/\/mbs\.boc\.cn\/ubas-mgateway-static\/images\/advertType\/.+.jpg reject-200
 ^https?:\/\/mlife\.jf365\.boc\.cn\/AppPrj\/FirstPic\.do\?txnId=2PIC000001 reject-200
 # 中信银行 - wap.bank.ecitic.com, imcs.citicbank.com
-^https?:\/\/wap.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA reject-200
+^https?:\/\/wap\.bank\.ecitic\.com:6443\/NMBFOServer\/cbframework\.do\?act=CUBEPAGEDATA reject-200
 ^https?:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) reject-dict
 # 中国移动 - client.app.coc.10086.cn, h.client.app.coc.10086.cn
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit reject-200
