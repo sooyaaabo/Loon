@@ -4,7 +4,7 @@
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-03-25 19:30
+#!date = 2024-03-25 21:55
 
 # 2024-03-25
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.03.25/v2.0.458 reject-200
+^https?:\/\/2024.03.25/v2.0.459 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -386,7 +386,7 @@
 # one
 ^https?:\/\/api\.21ec74\.com\/v2\.5\/ad reject-200
 # Oclean Care
-^https?:\/\/careapi.oclean.com\/mall\/v\d\/Temporary\/SafetyGetStartAdvert reject-200
+^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/Temporary\/SafetyGetStartAdvert reject-200
 
 # ======= P ======= #
 # PikPak
@@ -735,6 +735,10 @@ http-response ^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx script-pa
 # ======= N ======= #
 # 农业银行
 http-response ^https?:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/abchina.js, requires-body = true, tag = 农业银行
+
+# ======= O ======= #
+# Oclean Care
+http-response ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/User\/GetUserCenter script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/replace-body.js, argument = banner"->ddgksf2013", requires-body = true, tag = Oclean Care
 
 # ======= P ======= #
 # 朴朴超市
