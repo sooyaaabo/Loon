@@ -4,7 +4,7 @@
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/Advertising.png
-#!date = 2024-03-27 17:55
+#!date = 2024-03-27 18:30
 
 # 2024-03-27
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # version
-^https?:\/\/2024.03.27/v2.0.461 reject-200
+^https?:\/\/2024.03.27/v2.0.462 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -614,7 +614,7 @@
 ^https?:\/\/promotion\.medlive\.cn\/getcover-v2\?app_name reject-200
 # 有道词典
 ^https?:\/\/cdke\.youdao\.com\/course3\/recommend\/dict\/startup reject-200
-^https?:\/\/gorgon\.youdao\.com\/gorgon\/brand\/prefetch\.s reject-200
+^https?:\/\/gorgon\.youdao\.com\/gorgon reject-200
 
 # ======= Z ======= #
 # 掌上生活
