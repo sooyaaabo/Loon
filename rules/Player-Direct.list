@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-03-18
+# 2024-03-27
 
 # CMSPlayer
 # 低端影视
@@ -154,6 +154,9 @@ DOMAIN-SUFFIX, 789.123456.al
 DOMAIN-SUFFIX, emby.bangumi.ca
 # 纸片人
 DOMAIN-SUFFIX, embyplus.org
+# PiliPili
+DOMAIN-SUFFIX, emby.pilipiliultra.top
+DOMAIN-SUFFIX, emby.pilipiliultra.com
 # 白浪云
 DOMAIN-SUFFIX, emby.airpor.top
 # 垃圾影音
