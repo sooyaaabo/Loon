@@ -1,39 +1,42 @@
 #!name = Task签到
 #!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
-#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
+#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @FoKit
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png
-#!date = 2024-03-20 16:40
+#!date = 2024-03-28 16:40
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.conf
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/loon.task.scripts
+# https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
 
 [Script]
 # 摸鱼日历
-cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/moyu.js, timeout = 10, tag = 摸鱼日历Task
+cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/moyu.js, timeout = 10, tag = 摸鱼日历🅣
+# 微信支付有优惠
+cron "30 9 * * *" script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, tag = 微信支付有优惠🅣
 # TestFlight自动加入
-cron "0/5 * * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入Task
+cron "0/5 * * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入🅣
 # 阿里云盘
-cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘签到Task
+cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘签到🅣
 # 微博
-cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到Task
+cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅣
 # 爱奇艺
-cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务Task
+cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅣
 # 网易云音乐
-;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout = 60, tag = 网易云音乐人Task
+;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout = 60, tag = 网易云音乐人🅣
 # QQ音乐
-;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js, timeout = 60, tag = QQ音乐Task
+;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js, timeout = 60, tag = QQ音乐🅣
 # Bilibili
-;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务Task
+;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务🅣
 # 夸克网盘
-;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 60, tag = 夸克网盘Task
+;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 60, tag = 夸克网盘🅣
 # 霸王别姬小程序
-;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout = 60, tag = 霸王别姬小程序Task
+;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout = 60, tag = 霸王别姬小程序🅣
 # 不背单词
-;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout = 60, tag = 不背单词Task
+;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout = 60, tag = 不背单词🅣
 # 高德地图
-;cron "0 0 7 * * *" script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout = 60, tag = 高德地图打车Task
+;cron "0 0 7 * * *" script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout = 60, tag = 高德地图打车🅣
