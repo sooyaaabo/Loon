@@ -17,7 +17,7 @@
 # 摸鱼日历
 cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/moyu.js, timeout = 10, tag = 摸鱼日历🅣
 # 微信支付有优惠
-cron "30 9 * * *" script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, tag = 微信支付有优惠🅣
+cron "0 0 20 * * 1" script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, tag = 微信支付有优惠🅣
 # TestFlight自动加入
 cron "0/5 * * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入🅣
 # 阿里云盘
