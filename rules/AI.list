@@ -1,8 +1,8 @@
-# 2024-03-02 19:55
+# 2024-03-30 19:30
 # Author: 可莉🅥
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
 
-# ChatGPT 2024-03-02 19:41:41
+# ChatGPT 2024-03-30 18:38:16
 DOMAIN, api.statsig.com
 DOMAIN, browser-intake-datadoghq.com
 DOMAIN, cdn.openai.com
@@ -17,7 +17,6 @@ DOMAIN, production-openaicom-storage.azureedge.net
 DOMAIN, static.cloudflareinsights.com
 DOMAIN-SUFFIX, algolia.net
 DOMAIN-SUFFIX, auth0.com
-DOMAIN-SUFFIX, cdn.cloudflare.net
 DOMAIN-SUFFIX, chatgpt.com
 DOMAIN-SUFFIX, challenges.cloudflare.com
 DOMAIN-SUFFIX, client-api.arkoselabs.com
@@ -63,7 +62,7 @@ DOMAIN, www2.bing.com
 DOMAIN, www.bingapis.com
 DOMAIN-SUFFIX, edge.microsoft.com
 
-# BingAI 2024-02-04 21:29:04
+# Bing AI 2024-02-04 21:29:04
 DOMAIN-SUFFIX, bing.com
 DOMAIN-SUFFIX, bing.com.cn
 DOMAIN-SUFFIX, bing.net
