@@ -4,9 +4,9 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/SteveWatch-02.png
-#!date = 2024-03-30 09:50
+#!date = 2024-03-30 15:35
 
-# 2024-03-30 08:22
+# 2024-03-30 15:26
 # https://github.com/Yswag/for-own-use/blob/main/module/cmsAdblock.sgmodule
 
 [Script]
@@ -14,7 +14,7 @@ http-response ^https?:\/\/m3u\.haiwaikan\.com\/xm3u8\/(.+).m3u8 script-path = ht
 http-response ^https?:\/\/(v\.cdnlz\d+\.com|vip.*\.lz-cdn\d+\.com)\/(.+)\/hls\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 量子资源
 http-response ^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/(.+)\/hls\/(.+)\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 非凡资源
 http-response ^https?:\/\/s\d+\.bfengbf\.com\/video\/(.+)\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 暴风影视
-http-response ^https?:\/\/vip\.kuaikan-cdn\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 快看资源
+http-response ^https?:\/\/vip\.kuaikan-(cdn|play)\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 快看资源
 
 [Mitm]
-hostname = m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan-cdn*.com
+hostname = m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com
