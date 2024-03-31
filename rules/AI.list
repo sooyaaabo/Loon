@@ -1,4 +1,4 @@
-# 2024-03-30 19:30
+# 2024-03-31 17:30
 # Author: 可莉🅥
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
 
@@ -73,6 +73,9 @@ DOMAIN-SUFFIX, bingsandbox.com
 DOMAIN-SUFFIX, bingvisualsearch.com
 DOMAIN-SUFFIX, bingworld.com
 
-# Gemini 2024-02-04 21:26:13
+# Gemini 2024-03-31 15:02:45
+DOMAIN, aistudio.google.com
 DOMAIN, bard.google.com
+DOMAIN, gemini.google.com
 DOMAIN, generativelanguage.googleapis.com
+
