@@ -1,7 +1,7 @@
 #!name = Task签到
 #!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
-#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @FoKit
+#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png
 #!date = 2024-03-28 16:40
@@ -11,13 +11,10 @@
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.conf
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/loon.task.scripts
-# https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
 
 [Script]
 # 摸鱼日历
 cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/moyu.js, timeout = 10, tag = 摸鱼日历🅣
-# 微信支付有优惠
-cron "0 21 * * *" script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, tag = 微信支付有优惠🅣
 # TestFlight自动加入
 cron "0/5 * * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入🅣
 # 阿里云盘
