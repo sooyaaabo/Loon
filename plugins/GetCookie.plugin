@@ -1,7 +1,7 @@
 #!name = Cookie获取
 #!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
 #!openUrl = 
-#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @FoKit
+#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
 #!date = 2024-03-28 16:40
@@ -10,13 +10,10 @@
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
-# https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js
 
 [Script]
 # TestFlight自动加入 - testflight.apple.com
 http-request ^https:\/\/testflight\.apple\.com\/(v3\/accounts\/.*\/apps|join\/[A-Za-z0-9]+)$ script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, tag = TestFlight自动加入🅒
-# 微信支付有优惠 - payapp.weixin.qq.com
-http-response https:\/\/payapp\.weixin\.qq\.com\/coupon-center-user\/home\/login script-path = https://raw.githubusercontent.com/FoKit/Scripts/main/scripts/wechat_pay_coupon.js, requires-body = true, tag = 微信支付有优惠🅒
 # 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, tag = 阿里云盘签到🅒
 # 微博 - api.weibo.cn
@@ -41,4 +38,4 @@ http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https:/
 ;http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body = true, timeout = 60, tag = 高德地图打车🅒
 
 [Mitm]
-hostname = testflight.apple.com, payapp.weixin.qq.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
+hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
