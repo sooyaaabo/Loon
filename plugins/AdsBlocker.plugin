@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdsBlock.png
-#!date = 2024-04-03 00:00
+#!date = 2024-04-03 22:10
 
 # 2024-04-02 22:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -784,6 +784,12 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/rs\.creditcard\.cmbc\.com\.cn\/mmc\/img\/126f35586ece469aa2daf2e451ba7b4d\.jpg reject-200
 # 马蜂窝 - mapi.mafengwo.cn
 ^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad reject-200
+^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note reject
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/mark_alert_config reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_push_config reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_alert_config reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config reject
 # 咪咕 - *.cmvideo.cn
 ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ reject-200
 ^https?:\/\/ggic\d?\.cmvideo\.cn\/ad\/ reject-200
