@@ -1,5 +1,5 @@
 #!name = YouTube
-#!desc = 移除广告，优化界面（需禁用UDP 443端口）。字幕增强及双语翻译，支持Youtube Music歌词翻译。
+#!desc = 字幕增强及双语翻译，支持Youtube Music歌词翻译。移除YouTube视频、瀑布流、搜索和Shorts中的广告，移除底部的上传按钮，增加画中画及解锁更多的字幕地区功能。移除YouTube Music底部的上传、选段和升级按钮，支持二者的后台播放，不能与其他具有YouTube广告过滤能力的插件一起使用。此插件需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。支持Premium订阅用户使用，不支持tvOS设备。
 #!openUrl = 
 #!author = @RuCu6 @Maasea @VirgilClyne
 #!homepage = https://github.com/sooyaaabo/Loon
@@ -7,16 +7,20 @@
 #!select =  自动显示翻译字幕, 是, 否
 #!select = 仅输出字幕译文, 是, 否
 #!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-03-19 18:00
+#!date = 2024-04-05 15:00
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
-# 2024-03-10
-# https://raw.githubusercontent.com/DualSubs/YouTube/main/modules/DualSubs.YouTube.plugin
+# 2024-03-11
+# https://github.com/DualSubs/YouTube/blob/main/modules/DualSubs.YouTube.plugin
+
+[Rule]
+AND, ((DOMAIN-SUFFIX, googlevideo.com), (PROTOCOL,QUIC)), REJECT
+AND, ((DOMAIN, youtubei.googleapis.com), (PROTOCOL,QUIC)), REJECT
 
 [Rewrite]
 # 使用reject-200方法以减少开销
-^https:\/\/redirector\.googlevideo\.com\/initplayback\? reject-200
+^https:\/\/redirector\.googlevideo\.com\/initplayback\? reject-dict
 
 [Script]
 # YouTube去广告 - 来自Maasea的作品
