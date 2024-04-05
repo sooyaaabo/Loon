@@ -1,18 +1,25 @@
 #!name = YouTube
 #!desc = 移除YouTube视频、瀑布流、搜索和Shorts中的广告，移除底部的上传按钮，增加画中画及解锁更多的字幕地区功能。移除YouTube Music底部的上传、选段和升级按钮，支持二者的后台播放，不能与其他具有YouTube广告过滤能力的插件一起使用。此插件需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。支持Premium订阅用户使用，不支持tvOS设备。
 #!openUrl = 
-#!author = @RuCu6 @Maasea @VirgilClyne
+#!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
-#!select =  自动显示翻译字幕, 是, 否
+#!select = 隐藏上传按钮, true, false
+#!select = 隐藏选段按钮, true, false
+#!select = 字幕翻译语言, zh-Hans, ja, ko, en
+#!select = 歌词翻译语言, zh-Hans, ja, ko, en
+#!select = 启用调试模式, true, false
+#!select = 自动显示翻译字幕, 是, 否
 #!select = 仅输出字幕译文, 是, 否
 #!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-04-05 15:00
+#!date = 2024-04-05 18:30
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
 # 2024-03-11
 # https://github.com/DualSubs/YouTube/blob/main/modules/DualSubs.YouTube.plugin
+# 2024-04-05 17:44:52
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 [Rule]
 AND, ((DOMAIN-SUFFIX, googlevideo.com), (PROTOCOL,QUIC)), REJECT
