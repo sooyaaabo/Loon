@@ -1,5 +1,5 @@
 #!name = YouTube
-#!desc = 移除YouTube视频、瀑布流、搜索和Shorts中的广告，移除底部的上传按钮，增加画中画及解锁更多的字幕地区功能。移除YouTube Music底部的上传、选段和升级按钮，支持二者的后台播放，不能与其他具有YouTube广告过滤能力的插件一起使用。此插件需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。支持Premium订阅用户使用，不支持tvOS设备。
+#!desc = 优化YouTube、YouTube Music界面，支持YouTube、YouTube Music翻译，支持后台播放。不能与其他具有YouTube广告过滤能力的插件一起使用。去广告功能需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。翻译脚本需要置于去广告脚本之下。支持Premium订阅用户使用，不支持tvOS设备。
 #!openUrl = 
 #!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
