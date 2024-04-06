@@ -23,7 +23,7 @@ cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/3
 # 微博
 cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅣
 # 腾讯视频
-cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频签到🅣
+;cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频签到🅣
 # 爱奇艺
 cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅣
 # 网易云音乐
