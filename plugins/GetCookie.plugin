@@ -20,7 +20,7 @@ http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scri
 # 微博 - api.weibo.cn
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅒
 # 腾讯视频 - iacc.rec.qq.com
-http-request ^https?:\/\/iacc\.rec\.qq\.com script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频🅒
+;http-request ^https?:\/\/iacc\.rec\.qq\.com script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频🅒
 # 爱奇艺 - passport.iqiyi.com
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅒
 # 网易云音乐 - music.163.com
