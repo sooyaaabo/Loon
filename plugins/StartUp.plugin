@@ -1,5 +1,5 @@
 #!name = 开屏广告
-#!desc = 去除开屏广告
+#!desc = 去除开屏广告，部分APP要清除缓存或者重新安装拦截广告才会生效!
 #!openUrl = 
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
