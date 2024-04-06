@@ -1,24 +1,26 @@
 #!name = YouTube
-#!desc = 优化YouTube、YouTube Music界面，支持YouTube、YouTube Music翻译，支持后台播放。不能与其他具有YouTube广告过滤能力的插件一起使用。去广告功能需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。翻译脚本需要置于去广告脚本之下。支持Premium订阅用户使用，不支持tvOS设备。
+#!desc = 优化YouTube、YouTube Music界面，支持YouTube、YouTube Music翻译，支持后台播放。不可与其他具有YouTube和YouTube Music广告过滤和字幕翻译功能的插件一起使用。去广告功能需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。支持Premium订阅用户使用，不支持tvOS设备。
 #!openUrl = 
 #!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
 #!select = 隐藏上传按钮, true, false
 #!select = 隐藏选段按钮, true, false
-#!select = 字幕翻译语言, zh-Hans, ja, ko, en
-#!select = 歌词翻译语言, zh-Hans, ja, ko, en
+#!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en
+#!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en
 #!select = 启用调试模式, true, false
 #!select = 自动显示翻译字幕, 是, 否
 #!select = 仅输出字幕译文, 是, 否
 #!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-04-05 18:30
+#!date = 2024-04-06 10:10
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
+# 2024-04-05
+# https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
 # 2024-03-11
 # https://github.com/DualSubs/YouTube/blob/main/modules/DualSubs.YouTube.plugin
-# 2024-04-05 17:44:52
+# 2024-04-06 02:16:09
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 [Rule]
@@ -31,10 +33,10 @@ AND, ((DOMAIN, youtubei.googleapis.com), (PROTOCOL,QUIC)), REJECT
 
 [Script]
 # YouTube去广告 - 来自Maasea的作品
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube/request.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
-http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/youtube/response.js, requires-body = true, binary-body-mode = true, tag = YouTube响应
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube响应
 
-# YouTube字幕翻译
+# YouTube字幕翻译 - 来自VirgilClyne的作品
 http-request ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, tag = JSON·YouTube播放器请求, argument = 
 http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, requires-body = true, tag = JSON·YouTube播放器响应, argument = 
 http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器请求, argument = 
@@ -43,7 +45,7 @@ http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext script-path = htt
 http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Composite.Subtitles.response.js, requires-body = true, tag = YouTube合成定时文本响应, argument = 
 http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = YouTube翻译定时文本响应, argument = 
 
-# YouTube Music字幕翻译
+# YouTube Music字幕翻译 - 来自VirgilClyne的作品
 http-request ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, tag = JSON·YouTube Music浏览请求, argument = 
 http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music浏览请求, argument = 
 http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = JSON·YouTube Music翻译歌词响应, argument = 
