@@ -1,18 +1,18 @@
-#!name = YouTube
-#!desc = 优化YouTube、YouTube Music界面，支持YouTube、YouTube Music翻译，支持后台播放。不可与其他具有YouTube和YouTube Music广告过滤和字幕翻译功能的插件一起使用。去广告功能需要Loon版本为3.1.7(677)及以上，且需要启用QUIC回退保护。支持Premium订阅用户使用，不支持tvOS设备。
+#!name = YouTube (Music)
+#!desc = 去除广告，优化界面，支持字幕翻译功能，支持后台播放。支持Premium订阅用户使用，不支持tvOS设备。（前5选项为Maasea插件，后3选项为VirgilClyne插件，两者字幕翻译功能会冲突，只能启用其中一个，禁用另一个。）
 #!openUrl = 
 #!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
 #!select = 隐藏上传按钮, true, false
 #!select = 隐藏选段按钮, true, false
-#!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en
-#!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en
+#!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
+#!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #!select = 启用调试模式, true, false
 #!select = 自动显示翻译字幕, 是, 否
 #!select = 仅输出字幕译文, 是, 否
 #!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-04-06 10:10
+#!date = 2024-04-06 18:10
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
@@ -20,7 +20,7 @@
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
 # 2024-03-11
 # https://github.com/DualSubs/YouTube/blob/main/modules/DualSubs.YouTube.plugin
-# 2024-04-06 02:16:09
+# 2024-04-06 17:54:24
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 [Rule]
