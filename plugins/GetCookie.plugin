@@ -1,15 +1,16 @@
 #!name = Cookie获取
 #!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
 #!openUrl = 
-#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
+#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
-#!date = 2024-03-28 16:40
+#!date = 2024-04-06 10:15
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
+# https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Task/GetCookie.plugin
 
 [Script]
 # TestFlight自动加入 - testflight.apple.com
@@ -18,6 +19,8 @@ http-request ^https:\/\/testflight\.apple\.com\/(v3\/accounts\/.*\/apps|join\/[A
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, tag = 阿里云盘签到🅒
 # 微博 - api.weibo.cn
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅒
+# 腾讯视频 - iacc.rec.qq.com
+http-request ^https?:\/\/iacc\.rec\.qq\.com script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频🅒
 # 爱奇艺 - passport.iqiyi.com
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅒
 # 网易云音乐 - music.163.com
@@ -26,8 +29,8 @@ http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https:/
 ;http-request ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body = true, timeout = 60, tag = QQ音乐🅒
 ;http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body = true, timeout = 60, tag = QQ音乐🅒
 # Bilibili - app.bilibili.com, m.bilibili.com
-;http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/domain\? script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务🅒
-;http-request ^https?:\/\/m.bilibili.com/$ script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务🅒
+;http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili(APP)每日任务🅒
+;http-request ^https?:\/\/m.bilibili.com/$ script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili(网页)每日任务🅒
 # 夸克网盘 - drive-m.quark.cn
 ;http-request ^https:\/\/drive-m.quark.cn\/1\/clouddrive\/capacity\/growth\/sign.+ script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 10, tag = 夸克网盘🅒
 # 霸王茶姬小程序 - qmwebapi.qmai.cn, webapi.qmai.cn
@@ -38,4 +41,4 @@ http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https:/
 ;http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body = true, timeout = 60, tag = 高德地图打车🅒
 
 [Mitm]
-hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
+hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
