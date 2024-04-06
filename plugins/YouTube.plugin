@@ -1,5 +1,5 @@
 #!name = YouTube (Music)
-#!desc = 去除广告，优化界面，支持字幕翻译功能，支持后台播放。支持Premium订阅用户使用，不支持tvOS设备。（前5选项为Maasea插件，后3选项为VirgilClyne插件，两者字幕翻译功能会冲突，只能启用其中一个，禁用另一个。）
+#!desc = 去除广告，优化界面，支持字幕翻译功能，支持后台播放。支持Premium订阅用户使用，不支持tvOS设备。（若使用VirgilClyne双语字幕翻译插件，则需要禁用本插件的字幕翻译功能，且需将双语字幕翻译插件调整至本插件下方）
 #!openUrl = 
 #!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
@@ -9,10 +9,10 @@
 #!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #!select = 启用调试模式, true, false
-#!select = 自动显示翻译字幕, 是, 否
-#!select = 仅输出字幕译文, 是, 否
-#!select = 字幕译文的位置, 译文位于原文之上, 译文位于原文之下
-#!date = 2024-04-06 18:10
+#select=自动显示翻译字幕,是,否
+#select=仅输出字幕译文,是,否
+#select=字幕译文的位置,译文位于原文之上,译文位于原文之下
+#!date = 2024-04-06 18:50
 
 # 2024-03-10 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
@@ -37,19 +37,20 @@ http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|pl
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube响应
 
 # YouTube字幕翻译 - 来自VirgilClyne的作品
-http-request ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, tag = JSON·YouTube播放器请求, argument = 
-http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, requires-body = true, tag = JSON·YouTube播放器响应, argument = 
-http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器请求, argument = 
-http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器响应, argument = 
-http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = false, tag = YouTube定时文本请求, argument = 
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Composite.Subtitles.response.js, requires-body = true, tag = YouTube合成定时文本响应, argument = 
-http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = YouTube翻译定时文本响应, argument = 
+
+;http-request ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, tag = JSON·YouTube播放器请求, argument = 
+;http-response ^https?:\/\/(www|m|tv)\.youtube\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, requires-body = true, tag = JSON·YouTube播放器响应, argument = 
+;http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器请求, argument = 
+;http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/player script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube播放器响应, argument = 
+;http-request ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = false, tag = YouTube定时文本请求, argument = 
+;http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=(Official|External) script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Composite.Subtitles.response.js, requires-body = true, tag = YouTube合成定时文本响应, argument = 
+;http-response ^https?:\/\/(www|m)\.youtube\.com\/api\/timedtext\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = YouTube翻译定时文本响应, argument = 
 
 # YouTube Music字幕翻译 - 来自VirgilClyne的作品
-http-request ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, tag = JSON·YouTube Music浏览请求, argument = 
-http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music浏览请求, argument = 
-http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = JSON·YouTube Music翻译歌词响应, argument = 
-http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music翻译歌词响应, argument = 
+;http-request ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, tag = JSON·YouTube Music浏览请求, argument = 
+;http-request ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse script-path = https://raw.githubusercontent.com/DualSubs/YouTube/main/js/YouTube.request.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music浏览请求, argument = 
+;http-response ^https?:\/\/music\.youtube\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, tag = JSON·YouTube Music翻译歌词响应, argument = 
+;http-response ^https?:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/browse\?(.*)subtype=Translate script-path = https://raw.githubusercontent.com/DualSubs/Universal/main/js/Translate.response.js, requires-body = true, binary-body-mode = true, tag = Proto·YouTube Music翻译歌词响应, argument = 
 
 [Mitm]
 hostname = www.youtube.com, m.youtube.com, tv.youtube.com, music.youtube.com, youtubei.googleapis.com, redirector.googlevideo.com
