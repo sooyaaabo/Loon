@@ -4,13 +4,14 @@
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TaskCheck-in.png
-#!date = 2024-03-28 16:40
+#!date = 2024-04-06 10:20
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.conf
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/loon.task.scripts
+# https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js
 
 [Script]
 # 摸鱼日历
@@ -21,6 +22,8 @@ cron "0/5 * * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/
 cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘签到🅣
 # 微博
 cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅣
+# 腾讯视频
+cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频签到🅣
 # 爱奇艺
 cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅣
 # 网易云音乐
@@ -28,7 +31,7 @@ cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loo
 # QQ音乐
 ;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.js, timeout = 60, tag = QQ音乐🅣
 # Bilibili
-;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日等级任务🅣
+;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日任务🅣
 # 夸克网盘
 ;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 60, tag = 夸克网盘🅣
 # 霸王别姬小程序
