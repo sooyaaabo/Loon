@@ -1,12 +1,12 @@
 #!name = MyBlockAds
-#!desc = 去广告合集, 以下app请使用单独配置文件: 高德地图,哔哩哔哩,网易云音乐,微博,YouTube,知乎
+#!desc = 去广告合集，以下app请使用单独配置文件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎
 #!openUrl = 
 #!author = @RuCu6 @zZPiglet @app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/AdBlack.png
-#!date = 2024-04-04 23:50
+#!date = 2024-04-07 22:40
 
-# 2024-04-06 11:50
+# 2024-04-07 22:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -65,7 +65,6 @@
 ^https:\/\/fuss10.elemecdn.com\/.+\.mp4 reject
 ^https:\/\/www1.elecfans.com\/www\/delivery reject
 
-# ======= G ====== #
 # 工商银行 //image.mybank.icbc.com.cn
 
 # 建设银行
@@ -111,6 +110,7 @@
 ^https?:\/\/interface3?\.music\.163\.com/eapi/(ad|abtest|sp|hot|store|search/(specialkeyword|defaultkeyword|hot)) reject
 
 # 微信 //mp.weixin.qq.com
+^http:\/\/[\d\.]+(:49155)?\/finderpdd\.video\.qq\.com\/\d+\/\d+\/stodownload\? reject-dict
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|masonryfeed|relatedarticle)\? reject-dict
 
 # 闲鱼 //gw.alicdn.com, acs.m.taobao.com
