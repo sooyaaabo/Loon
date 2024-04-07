@@ -1,4 +1,4 @@
-# 2024-03-25 12:35
+# 2024-04-07 22:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -195,6 +195,11 @@ DOMAIN-SUFFIX, 163jiasu.com, REJECT
 # 微博 开屏广告
 DOMAIN, huodong.weibo.cn, REJECT
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
+# 微信
+DOMAIN, finderks.video.qq.com, REJECT
+DOMAIN, finderv1.video.qq.com, REJECT
+DOMAIN, wxsnsdy.wxs.qq.com, REJECT
+DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 
 # ======= X ======= #
 # 小米
