@@ -4,10 +4,13 @@
 #!author = @RuCu6 @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/RedBook.png
-#!date = 2024-03-19 18:00
+#!date = 2024-04-09 15:35
 
 # 2023-12-31 13:20
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/xiaohongshu.snippet
+
+[Rule]
+AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 
 [Rewrite]
 # 惊喜弹窗
