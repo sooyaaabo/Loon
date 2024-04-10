@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-03-27
+# 2024-04-11
 
 # CMSPlayer
 # 低端影视
@@ -123,6 +123,13 @@ DOMAIN-SUFFIX, 52bdys.com
 DOMAIN-suffix, ibytedtos.com
 DOMAIN-suffix, toutiao50.com
 DOMAIN-suffix, ibyteimg.com
+# 阿里小站
+DOMAIN-SUFFIX, pan666.net
+# 云盘社区
+DOMAIN-SUFFIX, yunpan1.xyz
+DOMAIN-SUFFIX, yunpan1.cc
+DOMAIN-SUFFIX, yunpan1.fun
+DOMAIN-SUFFIX, yunpan1.co
 # 玩偶哥哥
 DOMAIN-SUFFIX, wogg.link
 DOMAIN-SUFFIX, wogg.xyz
