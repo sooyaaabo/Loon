@@ -1,4 +1,4 @@
-#!name = 开屏广告
+#!name = StartUp
 #!desc = 去除开屏广告，部分APP要清除缓存或者重新安装拦截广告才会生效!
 #!openUrl = 
 #!author = @ddgksf2013
