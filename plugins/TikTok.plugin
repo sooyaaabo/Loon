@@ -1,0 +1,85 @@
+#!name = TikTok
+#!desc = 移除TikTok视频水印并自定义解锁地区，需要配置此插件至对应地区的节点。
+#!openUrl = 
+#!author = @可莉🅥 @Keywos
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/TikTok.png
+#!select = 解锁地区, 台湾, 日本, 韩国, 泰国, 越南, 英国, 法国, 德国, 美国, 巴西, 俄罗斯, 墨西哥, 土耳其, 西班牙, 阿根廷, 新加坡, 菲律宾, 马来西亚
+#!date = 2024-04-14 08:45
+
+# 2024-04-14 03:00:21
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TikTok_redirect.plugin
+# 2023-08-19 22:00:03
+# https://raw.githubusercontent.com/Keywos/rule/main/loon/TikTok.plugin
+
+[Rule]
+DOMAIN-SUFFIX, bytedapm.com, PROXY
+DOMAIN-SUFFIX, bytefcdn-oversea.com, PROXY
+DOMAIN-SUFFIX, bytefcdn-ttpeu.com, PROXY
+DOMAIN-SUFFIX, bytegecko-i18n.com, PROXY
+DOMAIN-SUFFIX, bytegecko.com, PROXY
+DOMAIN-SUFFIX, byteglb.com, PROXY
+DOMAIN-SUFFIX, byteimg.com, PROXY
+DOMAIN-SUFFIX, byteigtm.com, PROXY
+DOMAIN-SUFFIX, byteoversea.com, PROXY
+DOMAIN-SUFFIX, byteoversea.net, PROXY
+DOMAIN-SUFFIX, bytetcdn.com, PROXY
+DOMAIN-SUFFIX, byteicdn.com, PROXY
+DOMAIN-SUFFIX, capcut.com, PROXY
+DOMAIN-SUFFIX, ibytedtos.com, PROXY
+DOMAIN-SUFFIX, ibyteimg.com, PROXY
+DOMAIN-SUFFIX, ipstatp.com, PROXY
+DOMAIN-SUFFIX, isnssdk.com, PROXY
+DOMAIN-SUFFIX, muscdn.com, PROXY
+DOMAIN-SUFFIX, musemuse.cn, PROXY
+DOMAIN-SUFFIX, musical.ly, PROXY
+DOMAIN-SUFFIX, pstatp.com, PROXY
+DOMAIN-SUFFIX, sgpstatp.com, PROXY
+DOMAIN-SUFFIX, sgsnssdk.com, PROXY
+DOMAIN-SUFFIX, snssdk.com, PROXY
+DOMAIN-SUFFIX, tik-tokapi.com, PROXY
+DOMAIN-SUFFIX, tiktok.com, PROXY
+DOMAIN-SUFFIX, tiktok.in, PROXY
+DOMAIN-SUFFIX, tiktokcdn-eu.com, PROXY
+DOMAIN-SUFFIX, tiktokcdn-eu.net, PROXY
+DOMAIN-SUFFIX, tiktokcdn-in.com, PROXY
+DOMAIN-SUFFIX, tiktokcdn-us.com, PROXY
+DOMAIN-SUFFIX, tiktokcdn.com, PROXY
+DOMAIN-SUFFIX, tiktokd.net, PROXY
+DOMAIN-SUFFIX, tiktokd.org, PROXY
+DOMAIN-SUFFIX, tiktokglobalshop.com, PROXY
+DOMAIN-SUFFIX, tiktokglobalshopv.com, PROXY
+DOMAIN-SUFFIX, tiktokmusic.app, PROXY
+DOMAIN-SUFFIX, tiktokshop.com, PROXY
+DOMAIN-SUFFIX, tiktokstaticb.com, PROXY
+DOMAIN-SUFFIX, tiktokv.com, PROXY
+DOMAIN-SUFFIX, tiktokv.eu, PROXY
+DOMAIN-SUFFIX, tiktokv.us, PROXY
+DOMAIN-SUFFIX, tiktokw.us, PROXY
+DOMAIN-SUFFIX, tlivecdn.com, PROXY
+DOMAIN-SUFFIX, ttapis.com, PROXY
+DOMAIN-SUFFIX, ttdns2.com, PROXY
+DOMAIN-SUFFIX, ttlivecdn.com, PROXY
+DOMAIN-SUFFIX, ttoversea.net, PROXY
+DOMAIN-SUFFIX, ttoverseaus.net, PROXY
+DOMAIN-SUFFIX, ttwstatic.com, PROXY
+DOMAIN-KEYWORD, musical.ly, PROXY
+DOMAIN-KEYWORD, tiktok, PROXY
+DOMAIN-KEYWORD, tiktokv, PROXY
+DOMAIN-KEYWORD, tiktokcdn, PROXY
+DOMAIN-KEYWORD, ttlivecdn, PROXY
+DOMAIN-KEYWORD, -default.akamaized.net, PROXY
+DOMAIN-KEYWORD, -effectcdn.byteeffecttos-g.com, PROXY
+DOMAIN-KEYWORD, -tiktokcdn-com.akamaized.net, PROXY
+DOMAIN-KEYWORD, -pkgcdn.pitaya-clientai.com, PROXY
+USER-AGENT, TikTok, PROXY
+
+[Rewrite]
+# 去广告
+^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject-dict
+
+[Script]
+http-request https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
+
+[Mitm]
+hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com, *.tiktokcdn.com
