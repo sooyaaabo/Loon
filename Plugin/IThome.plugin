@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = @Keywos
 #!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/IThome.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/IThome.png
 #!select = 去除轮播图广告,开启,关闭
 #!select = 去除整个轮播图,开启,关闭
 #!select = 去除置顶,开启,关闭

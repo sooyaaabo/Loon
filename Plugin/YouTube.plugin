@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/YouTube.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/YouTube.png
 #!select = 隐藏上传按钮, true, false
 #!select = 隐藏选段按钮, true, false
 #!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en, off

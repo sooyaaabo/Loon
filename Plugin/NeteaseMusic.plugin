@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = @RuCu6 @Keywos @qiuxiuya
 #!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/NeteaseMusic.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NeteaseMusic.png
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否

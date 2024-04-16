@@ -3,7 +3,7 @@
 #!openUrl = 
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/icons/CookieInfo.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png
 #!date = 2024-04-06 10:15
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
@@ -18,11 +18,11 @@ http-request ^https:\/\/testflight\.apple\.com\/(v3\/accounts\/.*\/apps|join\/[A
 # 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, tag = 阿里云盘签到🅒
 # 微博 - api.weibo.cn
-http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅒
+http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅒
 # 腾讯视频 - iacc.rec.qq.com
 ;http-request ^https?:\/\/iacc\.rec\.qq\.com script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频🅒
 # 爱奇艺 - passport.iqiyi.com
-http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/scripts/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅒
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅒
 # 网易云音乐 - music.163.com
 ;http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body = true, tag = 网易云音乐人🅒
 # QQ音乐 - *.y.qq.com
