@@ -391,8 +391,12 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Arc.png"
         },
         {
-            "name": "ArcSearch.png",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch.png"
+            "name": "ArcSearch-01.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch-01.png"
+        },
+	{
+            "name": "ArcSearch-02.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch-02.png"
         },
         {
             "name": "Quark.png",
