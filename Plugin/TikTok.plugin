@@ -5,26 +5,86 @@
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TikTok.png
 #!select = 解锁地区, 台湾, 日本, 韩国, 泰国, 越南, 英国, 法国, 德国, 美国, 巴西, 俄罗斯, 墨西哥, 土耳其, 西班牙, 阿根廷, 新加坡, 菲律宾, 马来西亚
-#!date = 2024-04-14 08:45
+#!date = 2024-04-20 00:30
 
-# 2024-04-14 03:00:21
+# 2024-04-20 00:09:58
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TikTok_redirect.plugin
 # 2023-08-19 22:00:03
 # https://raw.githubusercontent.com/Keywos/rule/main/loon/TikTok.plugin
 
 [Rule]
+AND, ((NOT, (GEOIP, CN)), (DOMAIN, libra-sg.tiktokv.com)), PROXY // 此为抖音和TikTok共用域名，仅国外解析结果走代理
+AND, ((NOT, (GEOIP, CN)), (DOMAIN, pitaya.bytedance.com)), PROXY // 此为抖音和TikTok共用域名，仅国外解析结果走代理
+DOMAIN, api.snapkit.com, PROXY
+DOMAIN, api2-16-h2.musical.ly.edgekey.net, PROXY
+DOMAIN, bytedance.map.fastly.net, PROXY
+DOMAIN, cdn-tos-sg.byteintl.net, PROXY
+DOMAIN, cdn-tos-useast2a.byteintl.net, PROXY
+DOMAIN, cdn-tos-va.byteintl.net, PROXY
+DOMAIN, cocacola.co.jp, PROXY
+DOMAIN, courses.snapsolve.com, PROXY
+DOMAIN, engagements.appsflyer.com, PROXY
+DOMAIN, lf1-ttcdn-tos.pstatp.com, PROXY
+DOMAIN, lf16-campaign.ttlstatic.com, PROXY
+DOMAIN, lf16-csp.oecstatic.com, PROXY
+DOMAIN, lf16-pkgcdn.pitaya-clientai.com, PROXY
+DOMAIN, lf16-scmcdn.oecstatic.com, PROXY
+DOMAIN, lf19-csp.oecstatic.com, PROXY
+DOMAIN, lf19-pkgcdn.pitaya-clientai.com, PROXY
+DOMAIN, lf19-scmcdn.oecstatic.com, PROXY
+DOMAIN, musically-alternate.app.link, PROXY
+DOMAIN, musically.app.link, PROXY
+DOMAIN, p1-tt-ipv6.byteimg.com, PROXY
+DOMAIN, p1-tt.byteimg.com, PROXY
+DOMAIN, p16-tiktokcdn-com.akamaized.net, PROXY
+DOMAIN, p26-tt.byteimg.com, PROXY
+DOMAIN, p3-tt-ipv6.byteimg.com, PROXY
+DOMAIN, p9-tt.byteimg.com, PROXY
+DOMAIN, pull-f3-hs.pstatp.com, PROXY
+DOMAIN, pull-f5-hs.flive.pstatp.com, PROXY
+DOMAIN, pull-f5-hs.pstatp.com, PROXY
+DOMAIN, pull-f5-mus.pstatp.com, PROXY
+DOMAIN, pull-flv-f1-hs.pstatp.com, PROXY
+DOMAIN, pull-flv-f6-hs.pstatp.com, PROXY
+DOMAIN, pull-flv-l1-hs.pstatp.com, PROXY
+DOMAIN, pull-flv-l1-mus.pstatp.com, PROXY
+DOMAIN, pull-flv-l6-hs.pstatp.com, PROXY
+DOMAIN, pull-hls-l1-mus.pstatp.com, PROXY
+DOMAIN, pull-l3-hs.pstatp.com, PROXY
+DOMAIN, pull-rtmp-f1-hs.pstatp.com, PROXY
+DOMAIN, pull-rtmp-f6-hs.pstatp.com, PROXY
+DOMAIN, pull-rtmp-l1-hs.pstatp.com, PROXY
+DOMAIN, pull-rtmp-l1-mus.pstatp.com, PROXY
+DOMAIN, pull-rtmp-l6-hs.pstatp.com, PROXY
+DOMAIN, roovza-launches.appsflyersdk.com, PROXY
+DOMAIN, sessions.bugsnag.com, PROXY
+DOMAIN, sf1-ttcdn-tos.pstatp.com, PROXY
+DOMAIN, sf6-ttcdn-tos.pstatp.com, PROXY
+DOMAIN, tiktokcdn-us.com.atomile.com, PROXY
+DOMAIN, tiktokcdn-us.com.c.worldfcdn2.com, PROXY
+DOMAIN, tiktokcdn.com.atomile.com, PROXY
+DOMAIN, tiktokcdn.com.c.bytefcdn-ttpeu.com, PROXY
+DOMAIN, tiktokcdn.com.c.worldfcdn.com, PROXY
+DOMAIN, tiktokcdn.com.rocket-cdn.com, PROXY
+DOMAIN, tiktokcdn.com.tlivepush.com, PROXY
+DOMAIN, tiktokv.com.c.worldfcdn.com, PROXY
+DOMAIN, tiktokv.com.c.worldfcdn2.com, PROXY
+DOMAIN, ttlivecdn.com.c.worldfcdn.com, PROXY
+DOMAIN, video.h1.bytedance.map.fastly.net, PROXY
+DOMAIN-SUFFIX, bytedance.com, PROXY
+DOMAIN-SUFFIX, bytedance.net, PROXY
 DOMAIN-SUFFIX, bytedapm.com, PROXY
 DOMAIN-SUFFIX, bytefcdn-oversea.com, PROXY
 DOMAIN-SUFFIX, bytefcdn-ttpeu.com, PROXY
 DOMAIN-SUFFIX, bytegecko-i18n.com, PROXY
-DOMAIN-SUFFIX, bytegecko.com, PROXY
 DOMAIN-SUFFIX, byteglb.com, PROXY
-DOMAIN-SUFFIX, byteimg.com, PROXY
+DOMAIN-SUFFIX, byteicdn.com, PROXY
 DOMAIN-SUFFIX, byteigtm.com, PROXY
+DOMAIN-SUFFIX, byteintl.com, PROXY
+DOMAIN-SUFFIX, byteintl.net, PROXY
 DOMAIN-SUFFIX, byteoversea.com, PROXY
 DOMAIN-SUFFIX, byteoversea.net, PROXY
 DOMAIN-SUFFIX, bytetcdn.com, PROXY
-DOMAIN-SUFFIX, byteicdn.com, PROXY
 DOMAIN-SUFFIX, capcut.com, PROXY
 DOMAIN-SUFFIX, ibytedtos.com, PROXY
 DOMAIN-SUFFIX, ibyteimg.com, PROXY
@@ -33,11 +93,10 @@ DOMAIN-SUFFIX, isnssdk.com, PROXY
 DOMAIN-SUFFIX, muscdn.com, PROXY
 DOMAIN-SUFFIX, musemuse.cn, PROXY
 DOMAIN-SUFFIX, musical.ly, PROXY
-DOMAIN-SUFFIX, pstatp.com, PROXY
 DOMAIN-SUFFIX, sgpstatp.com, PROXY
 DOMAIN-SUFFIX, sgsnssdk.com, PROXY
-DOMAIN-SUFFIX, snssdk.com, PROXY
 DOMAIN-SUFFIX, tik-tokapi.com, PROXY
+DOMAIN-SUFFIX, tiktok-usts.net, PROXY
 DOMAIN-SUFFIX, tiktok.com, PROXY
 DOMAIN-SUFFIX, tiktok.in, PROXY
 DOMAIN-SUFFIX, tiktokcdn-eu.com, PROXY
@@ -57,29 +116,22 @@ DOMAIN-SUFFIX, tiktokv.eu, PROXY
 DOMAIN-SUFFIX, tiktokv.us, PROXY
 DOMAIN-SUFFIX, tiktokw.us, PROXY
 DOMAIN-SUFFIX, tlivecdn.com, PROXY
+DOMAIN-SUFFIX, tlivepush.com, PROXY
+DOMAIN-SUFFIX, ttadsmanager.com, PROXY
 DOMAIN-SUFFIX, ttapis.com, PROXY
 DOMAIN-SUFFIX, ttdns2.com, PROXY
 DOMAIN-SUFFIX, ttlivecdn.com, PROXY
 DOMAIN-SUFFIX, ttoversea.net, PROXY
 DOMAIN-SUFFIX, ttoverseaus.net, PROXY
 DOMAIN-SUFFIX, ttwstatic.com, PROXY
-DOMAIN-KEYWORD, musical.ly, PROXY
-DOMAIN-KEYWORD, tiktok, PROXY
-DOMAIN-KEYWORD, tiktokv, PROXY
-DOMAIN-KEYWORD, tiktokcdn, PROXY
-DOMAIN-KEYWORD, ttlivecdn, PROXY
-DOMAIN-KEYWORD, -default.akamaized.net, PROXY
-DOMAIN-KEYWORD, -effectcdn.byteeffecttos-g.com, PROXY
-DOMAIN-KEYWORD, -tiktokcdn-com.akamaized.net, PROXY
-DOMAIN-KEYWORD, -pkgcdn.pitaya-clientai.com, PROXY
-USER-AGENT, TikTok, PROXY
+DOMAIN-SUFFIX, tzvbfs.com, PROXY
 
 [Rewrite]
 # 去广告
 ^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject-dict
 
 [Script]
-http-request https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
+http-request ^https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
 
 [Mitm]
 hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com, *.tiktokcdn.com
