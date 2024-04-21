@@ -4,9 +4,9 @@
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-04-13 22:50
+#!date = 2024-04-21 19:40
 
-# 2024-04-13
+# 2024-04-21
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.04.13/v2.0.473 reject-200
+^https?:\/\/2024.04.21/v2.0.474 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -239,7 +239,7 @@
 # 京东读书
 ^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/channel\/module\/opens reject-200
 ^https?:\/\/jdread-api\.jd\.com\/jdread\/api\/popup reject-200
-# 京东
+# 京东[invalid]
 ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(start|queryMaterialAdverts) reject-200
 ^https?:\/\/(bdsp-x|dsp-x)\.jd\.com\/adx\/ reject-200
 # 京东金融
@@ -736,7 +736,7 @@ http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://git
 # ======= J ======= #
 # 京喜特价
 http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://github.com/ddgksf2013/Scripts/raw/master/startup.js, requires-body = true, tag = 京喜特价
-# 京东
+# 京东[invalid]
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) script-path = https://github.com/ddgksf2013/Scripts/raw/master/jd_json.js, requires-body = true, tag = 京东
 # 京东lite
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = jdLiteAdvertisingVO->ddgksf2013, requires-body = true, tag = 京东lite
