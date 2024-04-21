@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-04-11
+# 2024-04-21 12:20
 
 # CMSPlayer
 # 低端影视
@@ -174,3 +174,6 @@ DOMAIN, emby-best.xeton.dev
 DOMAIN, jz.mcjoker.xyz
 # MisakaF
 DOMAIN, cdn.misakaf.org
+# 牢大科蜜
+DOMAIN, emby-us-v4.mius.uk
+DOMAIN, emby-fr-v6.mius.uk
