@@ -1,84 +1,39 @@
 # Author: 可莉🅥
+# 2024-04-23 09:32:30
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
 
-# ChatGPT 2024-04-15 10:00:44
-DOMAIN, api.statsig.com
-DOMAIN, browser-intake-datadoghq.com
-DOMAIN, cdn.openai.com
-DOMAIN, chat.openai.com
-DOMAIN, chat.openai.com.cdn.cloudflare.net
-DOMAIN, ios.chat.openai.com
-DOMAIN, o33249.ingest.sentry.io
-DOMAIN, openai-api.arkoselabs.com
-DOMAIN, openaicom-api-bdcpf8c6d2e9atf6.z01.azurefd.net
-DOMAIN, openaicomproductionae4b.blob.core.windows.net
-DOMAIN, production-openaicom-storage.azureedge.net
-DOMAIN, static.cloudflareinsights.com
-DOMAIN-SUFFIX, algolia.net
-DOMAIN-SUFFIX, auth0.com
+# ChatGPT
 DOMAIN-SUFFIX, chatgpt.com
-DOMAIN-SUFFIX, challenges.cloudflare.com
-DOMAIN-SUFFIX, client-api.arkoselabs.com
-DOMAIN-SUFFIX, events.statsigapi.net
-DOMAIN-SUFFIX, featuregates.org
-DOMAIN-SUFFIX, identrust.com
-DOMAIN-SUFFIX, intercom.io
-DOMAIN-SUFFIX, intercomcdn.com
-DOMAIN-SUFFIX, launchdarkly.com
 DOMAIN-SUFFIX, oaistatic.com
 DOMAIN-SUFFIX, oaiusercontent.com
-DOMAIN-SUFFIX, observeit.net
 DOMAIN-SUFFIX, openai.com
-DOMAIN-SUFFIX, openaiapi-site.azureedge.net
-DOMAIN-SUFFIX, openaicom.imgix.net
-DOMAIN-SUFFIX, segment.io
-DOMAIN-SUFFIX, sentry.io
-DOMAIN-SUFFIX, stripe.com
-DOMAIN-KEYWORD, openaicom-api
+DOMAIN, api.statsig.com
+DOMAIN, api-iam.intercom.io
+DOMAIN, chatgpt.livekit.cloud
+DOMAIN, o33249.ingest.sentry.io
+DOMAIN, openaiapi-site.azureedge.net
+DOMAIN, sfo3.turn.livekit.cloud
+DOMAIN-KEYWORD, openaicom
 
-# Date: 2024-04-18 19:57:16
+# Copilot
 DOMAIN, api.githubcopilot.com
-DOMAIN, api.msn.com
-DOMAIN, bat.bing.com
-DOMAIN, browser.events.data.microsoft.com
-DOMAIN, cn.bing.com
 DOMAIN, copilot-proxy.githubusercontent.com
 DOMAIN, copilot.microsoft.com
-DOMAIN, dealczars.bing-shopping.microsoft-falcon.io
-DOMAIN, edge.microsoft.com
-DOMAIN, edgeservices.bing.com
-DOMAIN, functional.events.data.microsoft.com
-DOMAIN, gateway.bingviz.microsoftapp.net
-DOMAIN, in.appcenter.ms
-DOMAIN, location.microsoft.com
-DOMAIN, login.live.com
-DOMAIN, login.microsoftonline.com
-DOMAIN, nav-edge.smartscreen.microsoft.com
-DOMAIN, prod.rewardsplatform.microsoft.com
-DOMAIN, sapphire.api.microsoftapp.net
-DOMAIN, sapphire.bingviz.com
-DOMAIN, self.events.data.microsoft.com
-DOMAIN, services.bingapis.com
-DOMAIN, shopping.bing-shopping.microsoft-falcon.io
-DOMAIN, ssl.bing.com
-DOMAIN, storage.live.com
-DOMAIN, strict.bing.com
 DOMAIN, sydney.bing.com
-DOMAIN, th.bing.com
 DOMAIN, www.bing.com
-DOMAIN, www.bingapis.com
-DOMAIN, www.clarity.ms
-DOMAIN, www2.bing.com
-DOMAIN-SUFFIX, bing.net
 
-# Gemini 2024-03-31 15:02:45
-DOMAIN, aistudio.google.com
+# Gemini
 DOMAIN, bard.google.com
 DOMAIN, gemini.google.com
-DOMAIN, generativelanguage.googleapis.com
 
-# Claude 2024-04-14 16:05:36
+# Claude
 DOMAIN-SUFFIX, anthropic.com
 DOMAIN-SUFFIX, claude.ai
-IP-CIDR, 160.79.104.0/23
-IP-CIDR6, 2607:6bc0::/48
+IP-CIDR, 160.79.104.0/23, no-resolve
+IP-CIDR6, 2607:6bc0::/48, no-resolve
+
+# JetBrains AI
+DOMAIN-SUFFIX, grazie.ai
+
+# Meta
+DOMAIN, imagine.meta.com
