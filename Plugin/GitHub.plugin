@@ -1,0 +1,22 @@
+#!name = GitHub
+#!desc = 通过重定向至镜像站解决GitHub的RAW资源下载困难的问题，使用前需要配置镜像源。若开启后无法下载RAW资源，可尝试切换镜像源或禁用此插件。
+#!openUrl = 
+#!author = 可莉🅥
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GitHub.png
+#!select = 镜像源, A镜像, B镜像, C镜像
+#!date = 2024-04-24 17:00
+
+# 2024-04-24 16:13:05
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Switch_github_mirror.plugin
+
+[Rule]
+DOMAIN, fastraw.ixnic.net, DIRECT
+DOMAIN, hub.incept.pw, DIRECT
+DOMAIN, raw.kkgithub.com, DIRECT
+
+[Script]
+http-request ^https:\/\/raw\.githubusercontent\.com\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/GitHub/Switch_github_mirror.js, tag = GitHub加速
+
+[Mitm]
+hostname = raw.githubusercontent.com
