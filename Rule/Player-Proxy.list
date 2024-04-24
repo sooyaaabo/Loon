@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-04-24
+# 2024-04-21 12:20
 
 # CMSPlayer
 # 海外看
@@ -45,7 +45,15 @@ DOMAIN-SUFFIX, picsum.photos
 DOMAIN-SUFFIX, ibb.co
 
 # XPTV
-
+# 厂长资源
+DOMAIN-SUFFIX, czzy.site
+DOMAIN-SUFFIX, cz01.vip
+DOMAIN-SUFFIX, cz01.tv
+DOMAIN-SUFFIX, czzy22.com
+DOMAIN-SUFFIX, czzy55.com
+DOMAIN-SUFFIX, czzy66.com
+DOMAIN-SUFFIX, czzy77.com
+DOMAIN-SUFFIX, czzy88.com
 
 # Emby
 # Paul
@@ -68,8 +76,11 @@ DOMAIN, emby.lcloud.wiki
 # Marmot
 DOMAIN, v.20120714.xyz
 # MisakaF
+DOMAIN, emby.aca.best
+DOMAIN, porn.aca.best
 DOMAIN, emby.misakaf.org
 DOMAIN, push-kr.misakaf.org
+DOMAIN-SUFFIX, misakaf.org
 IP-CIDR, 102.223.180.108/32
 # NMEmby
 DOMAIN, film.ohhhh.org
@@ -81,4 +92,3 @@ DOMAIN, temby4837.285286.xyz
 # ntRRR
 DOMAIN, stream.ntrrr.top
 DOMAIN, stream.synn.cc
-

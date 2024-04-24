@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-04-24
+# 2024-04-21 12:20
 
 # CMSPlayer
 # 低端影视
@@ -106,11 +106,6 @@ DOMAIN-SUFFIX, p2100.net
 # XPTV
 # 探索页
 DOMAIN-SUFFIX, infuseku.xyz
-# 厂长资源
-DOMAIN-SUFFIX, czzy.site
-DOMAIN-SUFFIX, cz01.vip
-DOMAIN-SUFFIX, cz01.tv
-DOMAIN-SUFFIX, cz233.com
 # 555电影
 DOMAIN-SUFFIX, zxk555.com
 DOMAIN-SUFFIX, 555app.vip
@@ -179,3 +174,6 @@ DOMAIN, emby-best.xeton.dev
 DOMAIN, jz.mcjoker.xyz
 # MisakaF
 DOMAIN, cdn.misakaf.org
+# 牢大科蜜
+DOMAIN, emby-us-v4.mius.uk
+DOMAIN, emby-fr-v6.mius.uk

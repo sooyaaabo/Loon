@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-04-18 10:15
+#!date = 2024-04-23 17:40
 
 # 2024-04-20 19:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -666,8 +666,8 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 酷我音乐 - audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
 ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p\?op=get_advertright_endtime reject-dict
 # 看天下 - open3.vistastory.com
-^https?:\/\/open3\.vistastory\.com\/v3\/api\/index\/loading_ad reject
-^https?:\/\/open3\.vistastory\.com\/v3\/api\.*get_popup reject
+^https?:\/\/open3\.vistastory\.com\/v\d\/api\/index\/loading_ad reject
+^https?:\/\/open3\.vistastory\.com\/v\d\/api.*get_popup reject
 # 看理想 - api.vistopia.com.cn
 ^https?:\/\/api\.vistopia\.com\.cn\/api\/v\d\/home\/advertisement reject
 # 快递100 - cdn.kuaidi100.com, p.kuaidi100.com
@@ -689,7 +689,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/lamb\.lakala\.com\/lamo\/adv\/access\/queryMaterialUrl reject-dict
 ^https?:\/\/wallet\.lakala\.com\/m\/lama\/mgt\/activity\/bank\/query\/list reject-dict
 ^https?:\/\/wallet\.lakala\.com\/m\/a\/lama\/mgt\/activity\/biz\/query\/byMerInfo reject-dict
-^https?:\/\/wallet\.lakala\.com\/m\/a\/message\/v3\/fetchMsgList reject-dict
+^https?:\/\/wallet\.lakala\.com\/m\/a\/message\/v\d\/fetchMsgList reject-dict
 # 懒人听书 - 118.178.214.118, dapis.mting.info, display.wting.info
 ^https?:\/\/118\.178\.214\.118\/yyting\/advertclient\/ClientAdvertList\.action reject-img
 ^https?:\/\/dapis\.mting\.info\/yyting\/advertclient\/ClientAdvertList\.action reject-img
@@ -707,7 +707,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 蓝基因 - tk.lanjiyin.com.cn
 ^https?:\/\/tk\.lanjiyin\.com\.cn\/ad\/getAdList reject
 # 乐橙 - dl-cu-hz.lechange.cn
-^https?:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush\/* reject
+^https:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush reject
 # 乐堡潮玩馆小程序 - tbgapplet.carlsberg.asia
 ^https?:\/\/tbgapplet\.carlsberg\.asia\/tuborg\/banner\/(loading|index) reject-dict
 # 联想 - api.club.lenovo.cn
@@ -1804,7 +1804,7 @@ http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A
 http-request ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, argument = application/json&url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json, requires-body = true, tag = 建行生活
 http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "TAG_AD_INFO" -> "TAG_AD_INFO0", requires-body = true, tag = 建行生活
 # 京东 - api.m.jd.com, dns.jd.com
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=start script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 京东
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 京东
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(server|basic)Config script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "dnsvip"\:".+" -> "dnsvip":"", requires-body = true, tag = 京东
 # 京喜 - img14.360buyimg.com, api.m.jd.com
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = jdLiteAdvertisingVO -> random_body, requires-body = true, tag = 京喜
@@ -1812,22 +1812,22 @@ http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_Smart
 http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body = true, tag = 京喜
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
-# keep - api.gotokeep.com, kad.gotokeep.com
+# Keep - api.gotokeep.com, kad.gotokeep.com
 http-response ^https?:\/\/api\.gotokeep\.com\/athena\/v\d\/people\/my$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
 http-response ^https?:\/\/api\.gotokeep\.com\/config\/v\d\/basic script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
 http-response ^https?:\/\/api\.gotokeep\.com\/homepage\/v\d\/tab script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
-http-response ^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v2\/\w+\/preview script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
-http-response ^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v3\/mysport script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
+http-response ^https?:\/\/api\.gotokeep\.com\/nuocha\/course\/v\d\/\w+\/preview script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
+http-response ^https?:\/\/api\.gotokeep\.com\/sportpage\/sport\/v\d\/mysport script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/keep.js, requires-body = true, tag = keep
 # 快手 - open.e.kuaishou.com
-http-response ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 快手
+http-response ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open\/univ$ script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 快手
 # 夸克 - open-cms-api.uc.cn, open-cms-api.quark.cn
 http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body = true, tag = 夸克
 # 酷我音乐 - audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
 http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
 http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
 http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v2\/theme\?op=gd) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v2\/user\/vip\?op=ui script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
 # 快手联盟,优量汇,穿山甲 - api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com
 http-response ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 快手联盟
 http-response ^https?:\/\/is.snssdk.com/api/ad/union/sdk script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 优量汇
