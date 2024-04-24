@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-03-23 07:45
+# 2024-04-24
 
 # CMSPlayer
 # 海外看
@@ -45,15 +45,7 @@ DOMAIN-SUFFIX, picsum.photos
 DOMAIN-SUFFIX, ibb.co
 
 # XPTV
-# 厂长资源
-DOMAIN-SUFFIX, czzy.site
-DOMAIN-SUFFIX, cz01.vip
-DOMAIN-SUFFIX, cz01.tv
-DOMAIN-SUFFIX, czzy22.com
-DOMAIN-SUFFIX, czzy55.com
-DOMAIN-SUFFIX, czzy66.com
-DOMAIN-SUFFIX, czzy77.com
-DOMAIN-SUFFIX, czzy88.com
+
 
 # Emby
 # Paul
