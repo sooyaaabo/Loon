@@ -1,19 +1,13 @@
 # TikTok by 可莉
-# 2024-04-21 21:49:56
+# 2024-04-25 21:08:24
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/TikTok.list
 
 AND, ((NOT, ((GEOIP, CN, no-resolve))), (DOMAIN, libra-sg.tiktokv.com)) // 此为抖音和TikTok共用域名，仅国外解析结果走代理
 AND, ((NOT, ((GEOIP, CN, no-resolve))), (DOMAIN, pitaya.bytedance.com)) // 此为抖音和TikTok共用域名，仅国外解析结果走代理
 DOMAIN, api.snapkit.com
-DOMAIN, api2-16-h2.musical.ly.edgekey.net
-DOMAIN, bytedance.map.fastly.net
-DOMAIN, cdn-tos-sg.byteintl.net
-DOMAIN, cdn-tos-useast2a.byteintl.net
-DOMAIN, cdn-tos-va.byteintl.net
 DOMAIN, cocacola.co.jp
 DOMAIN, courses.snapsolve.com
 DOMAIN, engagements.appsflyer.com
-DOMAIN, lf1-ttcdn-tos.pstatp.com
 DOMAIN, lf16-campaign.ttlstatic.com
 DOMAIN, lf16-csp.oecstatic.com
 DOMAIN, lf16-pkgcdn.pitaya-clientai.com
@@ -25,7 +19,6 @@ DOMAIN, musically-alternate.app.link
 DOMAIN, musically.app.link
 DOMAIN, p1-tt-ipv6.byteimg.com
 DOMAIN, p1-tt.byteimg.com
-DOMAIN, p16-tiktokcdn-com.akamaized.net
 DOMAIN, p26-tt.byteimg.com
 DOMAIN, p3-tt-ipv6.byteimg.com
 DOMAIN, p9-tt.byteimg.com
@@ -47,19 +40,6 @@ DOMAIN, pull-rtmp-l1-mus.pstatp.com
 DOMAIN, pull-rtmp-l6-hs.pstatp.com
 DOMAIN, roovza-launches.appsflyersdk.com
 DOMAIN, sessions.bugsnag.com
-DOMAIN, sf1-ttcdn-tos.pstatp.com
-DOMAIN, sf6-ttcdn-tos.pstatp.com
-DOMAIN, tiktokcdn-us.com.atomile.com
-DOMAIN, tiktokcdn-us.com.c.worldfcdn2.com
-DOMAIN, tiktokcdn.com.atomile.com
-DOMAIN, tiktokcdn.com.c.bytefcdn-ttpeu.com
-DOMAIN, tiktokcdn.com.c.worldfcdn.com
-DOMAIN, tiktokcdn.com.rocket-cdn.com
-DOMAIN, tiktokcdn.com.tlivepush.com
-DOMAIN, tiktokv.com.c.worldfcdn.com
-DOMAIN, tiktokv.com.c.worldfcdn2.com
-DOMAIN, ttlivecdn.com.c.worldfcdn.com
-DOMAIN, video.h1.bytedance.map.fastly.net
 DOMAIN-SUFFIX, bytedance.com
 DOMAIN-SUFFIX, bytedance.net
 DOMAIN-SUFFIX, bytedapm.com
@@ -114,3 +94,10 @@ DOMAIN-SUFFIX, ttoversea.net
 DOMAIN-SUFFIX, ttoverseaus.net
 DOMAIN-SUFFIX, ttwstatic.com
 DOMAIN-SUFFIX, tzvbfs.com
+DOMAIN-KEYWORD, bytedance.map.
+DOMAIN-KEYWORD, musical.ly.
+DOMAIN-KEYWORD, tiktokcdn-
+DOMAIN-KEYWORD, tiktokcdn.com.
+DOMAIN-KEYWORD, tiktokv.com.
+DOMAIN-KEYWORD, ttcdn-tos.
+DOMAIN-KEYWORD, ttlivecdn.com.
