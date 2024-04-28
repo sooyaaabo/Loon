@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-04-25 17:15
+#!date = 2024-04-28 12:50
 
 # 2024-04-25 12:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -870,7 +870,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
 # pikpak - access.mypikpak.com
-^https?:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible reject
+^https?:\/\/access\.mypikpak\.com\/access_controller\/v\d\/area_accessible reject
 # PushPlus微信推送广告 - image.pushplus.plus, www.pushplus.plus
 ;^https?:\/\/image\.pushplus\.plus\/ad.* reject-dict
 # 浦发银行 - lban.spdb.com.cn, wap.spdb.com.cn
@@ -925,15 +925,14 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/qidian\.qpic\.cn\/qidian_common reject-img
 ^https?:\/\/mage\.if\.qidian\.com\/Atom\.axd\/Api\/Client\/GetConfIOS reject-img
 ^https?:\/\/mage\.if\.qidian\.com\/argus\/api\/v\d\/client\/getsplashscreen reject
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/client\/iosad reject
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getad reject
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v4\/client\/getsplashscreen? reject
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv reject-dict
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/followsubscribe reject-dict
-^http[s]?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/refresh reject-200
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/adv\/getadvlistbatch reject
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v1\/bookshelf\/getTopOperation reject-dict
-^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v2\/adv\/getadvlistbatch reject-dict
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/client\/iosad reject
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/getad reject
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/argus\/api\/v\d\/client\/getsplashscreen\? reject
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv reject-dict
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/followsubscribe reject-dict
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/refresh reject-200
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/bookshelf\/getTopOperation reject-dict
+^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/v\d\/adv\/getadvlistbatch reject-dict
 # 七猫小说 - open.e.kuaishou.cn, api-access.pangolin-sdk-toutiao-b.com, api-access.pangolin-sdk-toutiao.com, api-access.pangolin-sdk-toutiao1.com, dsp-x.jd.com,api-cfg.wtzw.com, p1-lm.adukwai.com, lf-cdn-tos.bytescm.com
 ^https?:\/\/open\.e\.kuaishou\.cn\/rest\/e\/v3\/open\/univ reject
 ^https?:\/\/api-access\.pangolin-sdk-toutiao-b\.com\/api\/ad\/union\/sdk\/get_ads reject
@@ -961,10 +960,8 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # 全能浏览器 - mi.gdt.qq.com
 ^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview\.fcg\?posid= reject-dict
 # 全球购骑士卡 - facade-api.black-unique.com
-^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?cityId=102923&channelId=0&width=1170&height=2532 reject-dict
-^https?:\/\/facade-api\.black-unique\.com\/app\/v1\/startScreen\?.* reject-dict
-^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?cityId=102923&positions=mine_popup reject-dict
-^https?:\/\/facade-api\.black-unique\.com\/advertise\/v1\/get\?.* reject-dict
+^https?:\/\/facade-api\.black-unique\.com\/app\/v\d\/startScreen\?.* reject-dict
+^https?:\/\/facade-api\.black-unique\.com\/advertise\/v\d\/get\?.* reject-dict
 
 # >>>>>>>>>>>>>>> ✅ R ✅ <<<<<<<<<<<<<<
 # 人民日报 - app.peopleapp.com, stat.peopleapp.com, adstatic.peopleapp.com
@@ -1853,7 +1850,7 @@ http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?posit
 
 # >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
 # 起点读书 - qidian.qpic.cn, mage.if.qidian.com, magev6.if.qidian.com
-http-response ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v4\/client\/getsplashscreen|v2\/deeplink\/geturl|v1\/(client\/getconf|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js, requires-body = true, tag = 起点读书
+http-response ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v2\/deeplink\/geturl|v1\/(client\/getconf|adv\/getadvlistbatch\?positions=iOS_tab|dailyrecommend\/getdailyrecommend)) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/qidian.js, requires-body = true, tag = 起点读书
 http-response ^https?:\/\/magev6\.if\.qidian\.com\/argus\/api\/(v1\/assembly\/toolbar|v3\/user\/getaccountpage) script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/Qidian_my.js, requires-body = true, tag = 起点读书
 # 去哒 - iqushangwang.8quan.com
 http-response ^https?:\/\/iqushangwang\.8quan\.com\/index\.php\/i\/index\/index script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/QuDa.js, requires-body = true, tag = 去哒
