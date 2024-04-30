@@ -1,9 +1,7 @@
 # TikTok by 可莉
-# 2024-04-25 21:08:24
+# 2024-04-30 00:46:30
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/TikTok.list
 
-AND, ((NOT, ((GEOIP, CN, no-resolve))), (DOMAIN, libra-sg.tiktokv.com)) // 此为抖音和TikTok共用域名，仅国外解析结果走代理
-AND, ((NOT, ((GEOIP, CN, no-resolve))), (DOMAIN, pitaya.bytedance.com)) // 此为抖音和TikTok共用域名，仅国外解析结果走代理
 DOMAIN, api.snapkit.com
 DOMAIN, cocacola.co.jp
 DOMAIN, courses.snapsolve.com
