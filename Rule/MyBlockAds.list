@@ -1,4 +1,4 @@
-# 2024-04-13 17:00
+# 2024-05-02 14:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -68,15 +68,18 @@ DOMAIN, pageviewp.icbc.com.cn, REJECT
 DOMAIN-SUFFIX, mall.icbc.com.cn, REJECT
 # 广告联盟
 DOMAIN, ad.zijieapi.com, REJECT
-DOMAIN, i.snssdk.com, REJECT
+DOMAIN, init.supersonicads.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
 DOMAIN, open.kuaishou.com, REJECT
 DOMAIN, pagead2.googlesyndication-cn.com, REJECT
 DOMAIN, pagead2.googlesyndication.com, REJECT
+DOMAIN, ws.tapjoyads.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
 DOMAIN-SUFFIX, ads.linkedin.com, REJECT
 DOMAIN-SUFFIX, adservice.google.com, REJECT
+DOMAIN-SUFFIX, appsflyer.com, REJECT
+DOMAIN-SUFFIX, appsflyersdk.com, REJECT
 DOMAIN-SUFFIX, kuaishouzt.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
@@ -166,6 +169,8 @@ DOMAIN, id.hadron.ad.gt, REJECT
 DOMAIN-KEYWORD, -adsystem.com, REJECT
 
 # ======= T ======= #
+# 太平洋保险
+DOMAIN, a.cpic.com.cn, REJECT
 # 腾讯
 DOMAIN, adsmind.gdtimg.com, REJECT
 DOMAIN, info4.video.qq.com, REJECT
