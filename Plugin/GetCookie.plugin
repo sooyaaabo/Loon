@@ -4,13 +4,14 @@
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png
-#!date = 2024-04-06 10:15
+#!date = 2024-05-03 18:45
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.gallery.json
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
 # https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Task/GetCookie.plugin
+# https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js
 
 [Script]
 # TestFlight自动加入 - testflight.apple.com
@@ -26,8 +27,8 @@ http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https:/
 # 网易云音乐 - music.163.com
 ;http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body = true, tag = 网易云音乐人🅒
 # QQ音乐 - *.y.qq.com
-;http-request ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body = true, timeout = 60, tag = QQ音乐🅒
-;http-response ^https:\/\/u.y.qq.com\/cgi\-bin\/musicu.fcg script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/qqmusic/qqmusic.cookie.js,requires-body = true, timeout = 60, tag = QQ音乐🅒
+;http-request ^https?:\/\/c6\.y\.qq\.com\/shop\/fcgi-bin\/fcg_get_order\? script-path = https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, requires-body = true, tag = QQ音乐🅒
+;http-request ^https?:\/\/u6\.y\.qq\.com\/cgi-bin\/musics\.fcg\? script-path = https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, requires-body = true, tag = QQ音乐🅒
 # Bilibili - app.bilibili.com, m.bilibili.com
 ;http-request ^https?:\/\/app\.bilibili\.com\/x\/resource\/fingerprint\? script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili(APP)每日任务🅒
 ;http-request ^https?:\/\/m.bilibili.com/$ script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili(网页)每日任务🅒
