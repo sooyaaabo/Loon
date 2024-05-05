@@ -4,9 +4,9 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-05-01 18:00
+#!date = 2024-05-01 18:35
 
-# 2024-05-01 13:50:00
+# 2024-05-05 13:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -647,7 +647,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/explorer\.tratao\.com\/api\/client\/v4\/xtransfer\/ad\/ reject
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
-# keep - api.gotokeep.com, kad.gotokeep.com
+# Keep - api.gotokeep.com, kad.gotokeep.com
 ^https?:\/\/static1\.keepcdn\.com\/ark_optimus\/202\d\/*\/*\/.*.(png|jpg) reject-200
 ^https?:\/\/api\.gotokeep\.com\/guide-webapp\/v\d\/popup\/getPopUp reject
 ^https?:\/\/api\.gotokeep\.com\/kprime\/v\d\/popups\/primeGuide reject
@@ -1829,10 +1829,8 @@ http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path = https://raw
 http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
 http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
 http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-# 快手联盟,优量汇,穿山甲 - api-access.pangolin-sdk-toutiao.com, is.snssdk.com, mi.gdt.qq.com
-http-response ^https?:\/\/api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 快手联盟
-http-response ^https?:\/\/is.snssdk.com/api/ad/union/sdk script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 优量汇
-http-response ^https?:\/\/mi\.gdt\.qq\.com\/gdt_mview script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 穿山甲
+# 快手联盟,优量汇,穿山甲「广告联盟」 - api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
+http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 广告联盟
 # 酷安 - api.coolapk.com
 http-response ^https?:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
 http-response ^https?:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
