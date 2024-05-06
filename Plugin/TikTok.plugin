@@ -5,7 +5,7 @@
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TikTok.png
 #!select = 解锁地区, 台湾, 日本, 韩国, 泰国, 越南, 英国, 法国, 德国, 美国, 巴西, 俄罗斯, 墨西哥, 土耳其, 西班牙, 阿根廷, 新加坡, 菲律宾, 马来西亚
-#!date = 2024-04-30 09:05
+#!date = 2024-05-06 18:25
 
 # 2024-04-30 00:47:47
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TikTok_redirect.plugin
@@ -13,9 +13,7 @@
 # https://raw.githubusercontent.com/Keywos/rule/main/loon/TikTok.plugin
 
 [Rule]
-[Rule]
-# 2024-04-30 00:47:47
-AND, ((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)), DIRECT // 此为抖音和TikTok共用域名，仅国外解析结果走代理
+AND, ((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)), DIRECT // 此为抖音和TikTok的*.bytedance.com共用域名，仅国外解析结果走代理
 DOMAIN, api.snapkit.com, PROXY
 DOMAIN, cocacola.co.jp, PROXY
 DOMAIN, courses.snapsolve.com, PROXY
