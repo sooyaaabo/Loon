@@ -1,0 +1,21 @@
+#!name = 酷我音乐
+#!desc = 〔 酷我音乐&酷我畅听 〕全功能破解
+#!openUrl = 
+#!author = 影子
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
+#!date = 2024-05-06 18:15
+
+# 2024-05-05
+# https://napi.ltd/script/Worker/KuWo.js
+# 请在软件内引入插件链接，切勿直接访问该链接，以免被系统风控拉黑！！！
+
+[Rule]
+USER-AGENT, KWPlayer*, DIRECT
+DOMAIN-SUFFIX, kuwo.cn, DIRECT
+
+[Script]
+http-response ^(?!.*img).*?kuwo\.cn(/vip|/openapi)?(/enc|/audi.tion|/v[\d]/(user/vip\?(vers|apiVersion|platform|op\=ui|_t)|theme\?op=gd|sysinfo\?op=getRePayAndDoPayBoxNew|api(/pay)?/((user/personal/)?user/info|payInfo/kwplayer/payMiniBar|advert/(myPage|iListen|album))|album/(adBar|myRec/vipMusic))|/kuwopay/vip-tab/setting|/(audioApi/)?a\.p($|\?op\=getvip|.*?ptype\=vip)|/mobi\.s\?f\=kwxs|/music\.pay\?newver\=3$|/(EcomResource|(Mobile)?Ad)Serv(er|ice)) script-path = https://napi.ltd/script/BackUP/KuWo.js, requires-body = true, timeout = 60, tag = 酷我音乐
+
+[Mitm]
+hostname = *.kuwo.cn
