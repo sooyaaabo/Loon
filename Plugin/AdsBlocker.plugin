@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-05-07 17:45
+#!date = 2024-05-10 08:35
 
 # 2024-05-05 13:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -392,7 +392,7 @@
 # 飞客茶馆 - ptf.flyertrip.com, 47.100.65.202, www.flyert.com
 ^https?:\/\/ptf\.flyertrip\.com\/common\/cf\/.*.jpg reject-200
 ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=advis reject
-^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=advis.* reject
+^https?:\/\/www\.flyert\.com\/.*\.php\?module=advis reject-dict
 # 番茄小说 - *.pangolin-sdk-toutiao.com, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, *default.ixigua.com
 ^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ reject
 ^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 reject
@@ -1782,7 +1782,7 @@ http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subs
 # 飞客茶馆 - ptf.flyertrip.com, 47.100.65.202, www.flyert.com
 http-response ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = adv -> random_body, requires-body = true, tag = 飞客茶馆
 http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js, requires-body = true, tag = 飞客茶馆
-http-response ^https?:\/\/www\.flyert\.com\/plugin\.php script-path = https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/flyert.js, requires-body = true, tag = 飞客茶馆
+http-response ^https?:\/\/www\.flyert\.com\/.*plugin script-path = https://raw.githubusercontent.com/zirawell/app_remove_ads/main/All/js/flyert.js, requires-body = true, tag = 飞客茶馆
 # 粉笔 - tiku.fenbi.com
 http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body = true, tag = 粉笔
 
