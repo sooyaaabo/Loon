@@ -1,15 +1,18 @@
 #!name = 喜马拉雅
-#!desc = 喜马拉雅去广告
+#!desc = 喜马拉雅会员&去广告
 #!openUrl = 
-#!author = @佚名 @可莉🅥
+#!author = @佚名 @可莉🅥 @WeiGiegie
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Himalaya.png
-#!date = 2024-03-19 18:00
+#!date = 2024-05-10 10:50
 
 # 2023-10-29 13:48
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
+# 2024-05-09
+# https://raw.githubusercontent.com/WeiGiegie/666/main/xmly.js
 
 [Rewrite]
+# 可莉🅥
 # 修复轮播广告失效
 ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF reject
 # 播放页直播
@@ -47,17 +50,36 @@
 # 屏蔽ting广告
 ^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? reject
 
+# WeiGiegie
+# 去广告
+^https?:\/\/openapi\.mysteel\.com\/v5\/getAdv\.htm reject
+^https:\/\/ulogs\.umeng\.com\/unify_logs reject
+^https:\/\/adse\.ximalaya\.com\/ reject
+^http:\/\/gslbali\.ximalaya\.com reject
+^https:\/\/www\.taobao\.com\/help\/getip\.php reject
+^https:\/\/.*location\.ximalaya\.com reject
+^https:\/\/.*dbehavior\.ximalaya\.com reject
+^https:\/\/ad\.ximalaya\.com reject
+^https:\/\/.*audid-api\.taobao\.com reject
+^https:\/\/passport\.ximalaya\.com\/user-http-app\/v1\/token\/refresh reject
+
 [Script]
+# WeiGiegie
+# 会员, 大师课, 音效&音质, 去广告, 界面优化
+http-response ^https?:\/\/.+((ximalaya)|(xmcdn)).+(mobile-user\/v2|mobile-web|queryCategoryPageData|discovery-feed\/v4|vip\/v1\/recommand|product\/detail\/v1|mobile\/v1\/album|playpage|album\/price\/ts|mobile\/user\/member).*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/xmly.js, requires-body = true, timeout = 60, tag = 会员&界面优化@WeiGiegie
+http-request ^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/xmck.js, timeout = 60, tag = 会员&界面优化@WeiGiegie
+
+# 可莉🅥
 # 首页顶部去除直播
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广@可莉🅥
 # 屏蔽首页横幅广告
-http-response ^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页横幅广告
+http-response ^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页横幅广告@可莉🅥
 # 屏蔽首页动态广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告@可莉🅥
 # 屏蔽标签页滚动广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除标签页滚动广告
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除标签页滚动广告@可莉🅥
 # 去除我的页面广告标签
-http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除我的页面广告
+http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除我的页面广告@可莉🅥
 
 [Mitm]
-hostname = *.xima*.*, *.xmcdn.*
+hostname = *.xima*.*, *.xmcdn.*, 43.132.81.*, 101.33.27.*, 114*0.*, 61.172.1*.*, 43.141.11.*, 114.80.99.86, 180.153.255.*, 114.80.99.*, *.mysteel.*, 61.172.194.196, 180.153.*.*, *xima*, *xmcdn*, *.ximalaya.com, *.xmcdn.com, 180.153.140.*, 180.153.250.*, 114.80.139.237, 114.80.161.29, 1.62.62.64, 51*.com, 1.194.255.171, 23.236.99.89, 36.99.200.135, 42.81.4.198, 42.81.26.128, 42.81.120.58, 43.132.80.77, 43.132.83.175, 43.132.84.11, 43.152.24.12, 43.152.24.18, 43.152.25.127, 43.152.29.38, 43.175.16.34, 43.175.22.25, 43.175.44.15, 49.7.69.197, 49.51.224.95, 101.33.11.32, 101.33.11.106, 101.33.20.34, 101.33.29.110, 103.105.60.99, 114.80.99.90, 114.80.99.70, 114.80.99.71, 114.80.99.89, 114.80.99.91, 114.80.99.88, 114.80.99.87, 140.249.84.135, 140.249.85.189, 150.109.90.80, 150.109.91.35, 150.138.47.94, 150.138.136.145, 203.205.136.87, 203.205.136.100, 203.205.136.102, 203.205.136.159, 203.205.137.27, 203.205.137.87, 203.205.137.241, 203.205.250.111, 203.205.250.113, 211.152.137.25, ulogs.umeng.com, passport.ximalaya.com
