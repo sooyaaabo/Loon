@@ -4,9 +4,9 @@
 #!author = @RuCu6 @zZPiglet @app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-04-15 17:15
+#!date = 2024-05-11 19:40
 
-# 2024-04-15 16:25
+# 2024-05-11 18:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -120,7 +120,7 @@
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 ## 开屏广告
-^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/skywheel\/mishop\/splash reject-dict
+^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/(rec\/merge\/|skywheel\/mishop\/splash) reject-dict
 ## 搜索框,热词,卡片
 ^https:\/\/api\.m\.mi\.com\/v1\/app\/popup_info$ reject-dict
 ^https:\/\/api\.m\.mi\.com\/v1\/misearch\/search_input$ reject-dict
