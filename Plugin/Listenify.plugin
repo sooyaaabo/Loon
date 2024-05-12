@@ -1,0 +1,16 @@
+#!name = Listenify
+#!desc = Listenify External Lyrics
+#!openUrl = 
+#!author = @Yswag
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Listenify.png
+#!date = 2024-05-12 08:25
+
+# 2024-05-12
+# https://github.com/Yswag/for-own-use/blob/main/module/Listenify.sgmodule
+
+[Script]
+http-request ^https:\/\/api\.lrc\.cx\/lyrics script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/listenify.js, script-update-interval = 0, tag = Lyrics
+
+[MITM]
+hostname = api.lrc.cx
