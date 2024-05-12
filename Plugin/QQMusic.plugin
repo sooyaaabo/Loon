@@ -4,21 +4,21 @@
 #!author = @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQMusic.png
-#!date = 2024-03-19 18:00
+#!date = 2024-05-12 08:20
 
-# 2024-01-10 13:51:07
+# 2024-05-12 03:50:32
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin
 
 [Rule]
-DOMAIN, adstats.tencentmusic.com, REJECT-DROP
-DOMAIN, ad.tencentmusic.com, REJECT-DROP
+DOMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, ad.tencentmusic.com, REJECT
 DOMAIN, adcdn.tencentmusic.com, REJECT
 DOMAIN, adcdn6.tencentmusic.com, REJECT
 DOMAIN, adexpo.tencentmusic.com, REJECT
 DOMAIN, adclick.tencentmusic.com, REJECT
-DOMAIN, otheve.beacon.qq.com, REJECT-DROP
-DOMAIN, mazu.m.qq.com, REJECT-DROP
-DOMAIN, monitor.music.qq.com, REJECT-DROP
+DOMAIN, otheve.beacon.qq.com, REJECT
+DOMAIN, mazu.m.qq.com, REJECT
+DOMAIN, monitor.music.qq.com, REJECT
 DOMAIN, stat.y.qq.com, REJECT
 DOMAIN, tmead.y.qq.com, REJECT-NO-DROP
 DOMAIN, oth.str.mdt.qq.com, REJECT
@@ -27,6 +27,7 @@ DOMAIN, sdk.e.qq.com, REJECT
 DOMAIN, p.l.qq.com, REJECT
 DOMAIN, us.l.qq.com, REJECT
 DOMAIN, tangram.e.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT-NO-DROP
 DOMAIN-SUFFIX, imtmp.net, REJECT
 
 # [Rewrite]
