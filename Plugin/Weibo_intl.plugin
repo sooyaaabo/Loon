@@ -15,7 +15,7 @@
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
 
 # 私信中绿洲的擦边诱导推广
-^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php reject-dict
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=treehole&auth= reject-dict
 
 [Script]
 # 趋势页、开屏广告、用户中心、热搜置顶、我的页面 尊享专属、瀑布流去广告
