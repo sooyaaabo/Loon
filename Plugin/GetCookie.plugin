@@ -4,7 +4,7 @@
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png
-#!date = 2024-05-03 18:45
+#!date = 2024-05-13 00:15
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
@@ -40,6 +40,8 @@ http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes scr
 ;http-request ^https:\/\/sapi\.beingfine\.cn\/v3\/bb\/reward\/by-sign-in script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, tag = 不背单词🅒
 # 高德地图 - *.amap.com
 ;http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body = true, timeout = 60, tag = 高德地图打车🅒
+# 雨晨IOS
+http-request ^https:\/\/yuchen.tonghuaios.com\/users\?.+ script-path = https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout = 10, tag = 雨晨IOS🅒
 
 [Mitm]
-hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com
+hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com, yuchen.tonghuaios.com
