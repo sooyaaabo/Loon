@@ -25,7 +25,7 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 # 爱奇艺 - passport.iqiyi.com
 ;http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅒
 # 网易云音乐 - music.163.com
-http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body = true, tag = 网易云音乐人🅒
+;http-request ^https?:\/\/music\.163\.com\/weapi\/cloudbean\/records\/incomes script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/cookie.js, requires-body = true, tag = 网易云音乐人🅒
 # QQ音乐 - *.y.qq.com
 ;http-request ^https?:\/\/c6\.y\.qq\.com\/shop\/fcgi-bin\/fcg_get_order\? script-path = https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, requires-body = true, tag = QQ音乐🅒
 ;http-request ^https?:\/\/u6\.y\.qq\.com\/cgi-bin\/musics\.fcg\? script-path = https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, requires-body = true, tag = QQ音乐🅒
