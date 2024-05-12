@@ -4,7 +4,7 @@
 #!author = @Keywos @kokoryh
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo_intl.png
-#!date = 2024-03-19 18:00
+#!date = 2024-05-12 18:20
 
 # 2023-09-06 17:07:45
 # https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin
@@ -13,6 +13,9 @@
 # 热门视频、热推荐
 ^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
 ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
+
+# 私信中绿洲的擦边诱导推广
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php reject-dict
 
 [Script]
 # 趋势页、开屏广告、用户中心、热搜置顶、我的页面 尊享专属、瀑布流去广告
