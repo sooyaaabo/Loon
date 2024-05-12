@@ -4,7 +4,7 @@
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
-#!date = 2024-05-03 18:45
+#!date = 2024-05-13 00:15
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
@@ -39,3 +39,5 @@ cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/leiyiyan/reso
 ;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout = 60, tag = 不背单词🅣
 # 高德地图
 ;cron "0 0 7 * * *" script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout = 60, tag = 高德地图打车🅣
+# 雨晨IOS
+cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout = 300, tag = 雨晨IOS🅣
