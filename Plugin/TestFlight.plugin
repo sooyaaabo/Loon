@@ -1,7 +1,7 @@
 #!name = TestFlight
 #!desc = 多账户共存与自动加入TestFlight
 #!openUrl = 
-#!author = @blackmatrix7
+#!author = @blackmatrix7 @NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight.png
 #!date = 2024-05-14 19:30
