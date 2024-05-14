@@ -12,7 +12,7 @@
 #select=自动显示翻译字幕,是,否
 #select=仅输出字幕译文,是,否
 #select=字幕译文的位置,译文位于原文之上,译文位于原文之下
-#!date = 2024-05-12 18:20
+#!date = 2024-05-14 18:50
 
 # 2024-05-12 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
@@ -20,12 +20,12 @@
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
 # 2024-04-22
 # https://github.com/DualSubs/YouTube/blob/main/modules/DualSubs.YouTube.plugin
-# 2024-04-30 17:49:35
+# 2024-05-14 15:42:41
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 [Rule]
-AND, ((DOMAIN-SUFFIX, googlevideo.com), (DEST-PORT,443), (PROTOCOL, UDP)), REJECT
-AND, ((DOMAIN, youtubei.googleapis.com), (DEST-PORT,443), (PROTOCOL, UDP)), REJECT
+AND, ((DOMAIN-SUFFIX, googlevideo.com), (OR, ((PROTOCOL, QUIC), (AND, ((PROTOCOL, UDP), (DEST-PORT, 443)))))), REJECT
+AND, ((DOMAIN, youtubei.googleapis.com), (OR, ((PROTOCOL, QUIC), (AND, ((PROTOCOL, UDP), (DEST-PORT, 443)))))), REJECT
 
 [Rewrite]
 # 播放页广告
