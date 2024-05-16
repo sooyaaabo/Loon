@@ -1,4 +1,4 @@
-#!name = Google
+#!name = Google Redirect
 #!desc = Google搜索重定向至.com，如遇频繁跳转请禁用本插件。
 #!openUrl = 
 #!author = @sooyaaabo
