@@ -41,7 +41,7 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 # 高德地图 - *.amap.com
 ;http-response ^https:\/\/(m5(|-zb)|dache)\.amap\.com\/(ws\/yuece\/(act|openapi\/activity\/current)\/query|common\/(alipaymini|wxmini)\?_ENCRYPT=) script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, requires-body = true, timeout = 60, tag = 高德地图打车🅒
 # 雨晨IOS
-http-request ^https:\/\/yuchen.tonghuaios.com\/users\?.+ script-path = https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout = 10, tag = 雨晨IOS🅒
+;http-request ^https:\/\/yuchen.tonghuaios.com\/users\?.+ script-path = https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout = 10, tag = 雨晨IOS🅒
 
 [Mitm]
 hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com, yuchen.tonghuaios.com
