@@ -1,0 +1,15 @@
+#!name = Google CAPTCHA
+#!desc = Google搜索人机验证解决方案
+#!openUrl = 
+#!author = @sooyaaabo
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
+#!date = 2024-05-16 21:50
+
+# https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/GoogleCAPTCHA.snippet
+
+[Script]
+http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, tag = Google CAPTCHA
+
+[Mitm]
+hostname = www.google.com*
