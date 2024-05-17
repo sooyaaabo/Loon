@@ -106,6 +106,10 @@
             "name": "1.1.1.1-03.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/1.1.1.1-03.png"
         },
+	{
+            "name": "Cloudflare.png",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Cloudflare.png"
+        },
         {
             "name": "CloudflareWorkers.png",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CloudflareWorkers.png"
