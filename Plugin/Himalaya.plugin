@@ -1,73 +1,71 @@
 #!name = 喜马拉雅
 #!desc = 喜马拉雅会员&去广告
 #!openUrl = 
-#!author = @佚名 @可莉🅥 @WeiGiegie
+#!author = @可莉🅥 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Himalaya.png
-#!date = 2024-05-10 10:50
+#!date = 2024-05-17 11:15
 
 # 2023-10-29 13:48
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
-# 2024-05-09
-# https://raw.githubusercontent.com/WeiGiegie/666/main/xmly.js
+# 2024-05-16
+# https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.sgmodule
+
+[Rule]
+DOMAIN,gslbali.ximalaya.com,REJECT
+DOMAIN,gslbtx.ximalaya.com,REJECT
 
 [Rewrite]
-# 可莉🅥
-# 修复轮播广告失效
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/focus\/queryF reject
-# 播放页直播
-^https?:\/\/.*\.xima.*\.com\/mobile-playpage\/view\/ reject
-# 我的页面红点提醒
-^https?:\/\/.*\.xima.*\.com\/chaos-notice-web\/v1\/message\/preview\/list reject
-# 屏蔽大红包提示
-^https?:\/\/.*\.xima.*\.com\/social-web\/bottomTabs\/dynamicEntrance\/status reject
-# 屏蔽动图弹窗广告
+^https?:\/\/xdcs-collector(hera)?\.ximalaya\.com\/(api|nyx)\/v1 reject
+#播放页Live
+^https?:\/\/.*\.ximalaya\.com\/mobile-playpage\/view\/ reject
+#MyInfo红点提醒
+^https?:\/\/.*\.ximalaya\.com\/chaos-notice-web\/v1\/message\/preview\/list reject
+#大红包Tips
+^https?:\/\/.*\.ximalaya\.com\/social-web\/bottomTabs\/dynamicEntrance\/status reject
+#屏蔽gif弹窗Ad
 ^https?:\/\/.*\.xmcdn\.com\/\w{8}\/\w{4}-\w{16}\/.+gif$ reject
-# gslb
-^https?:\/\/gslb.*\.xima.*\.com\/ reject
-# 屏蔽Aged请求
-^https?:\/\/.*\.xima.*\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) reject
-# 部分标签弹窗
-^https?:\/\/.*\.xima.*\.com\/discovery-feed\/isShowUserGiftPendant reject
-# 屏蔽红点提示
-^https?:\/\/.*\.xima.*\.com\/mobile-user\/unread reject
-# 屏蔽minor请求
-^https?:\/\/.*\.xima.*\.com/mobile-user/minorProtection/pop reject
-# 屏蔽隐私搜集
-^https?:\/\/.*\.xima.*\.com\/collector\/xl\/v\d reject
-# 屏蔽版本更新
-^https?:\/\/.*\.xima.*\.com\/butler-portal\/versionCheck reject
-# 屏蔽开屏广告
-^https?:\/\/(adse\.wsa|adse|adbehavior|xdcs-collector)\.xima.*\.com\/.* reject
-# 屏蔽位置请求
-^https?:\/\/.*\.xima.*\.com\/mobile\/discovery\/v\d\/location reject
-# 屏蔽热搜词
-^https?:\/\/.*\.xima.*\.com\/hotWord reject
-# 屏蔽搜索框定时广告
-^https?:\/\/.*\.xima.*\.com\/(hub)?guideWord reject
-# 屏蔽实时广告请求
-^https?:\/\/.*\.xima.*\.com\/api\/v\d\/adRealTime reject
-# 屏蔽ting广告
-^https?:\/\/.*\.xima.*\.com\/ting\/(loading|feed|home)? reject
-
-# WeiGiegie
-# 去广告
-^https?:\/\/openapi\.mysteel\.com\/v5\/getAdv\.htm reject
-^https:\/\/ulogs\.umeng\.com\/unify_logs reject
-^https:\/\/adse\.ximalaya\.com\/ reject
-^http:\/\/gslbali\.ximalaya\.com reject
-^https:\/\/www\.taobao\.com\/help\/getip\.php reject
-^https:\/\/.*location\.ximalaya\.com reject
-^https:\/\/.*dbehavior\.ximalaya\.com reject
-^https:\/\/ad\.ximalaya\.com reject
-^https:\/\/.*audid-api\.taobao\.com reject
-^https:\/\/passport\.ximalaya\.com\/user-http-app\/v1\/token\/refresh reject
+#屏蔽Aged请求
+^https?:\/\/.*\.ximalaya\.com\/(dog-portal\/checkOld|(child-mobile\/child|aged-mobile\/aged)\/mode\/query) reject
+#部分Tab弹窗
+^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/isShowUserGiftPendant reject
+#屏蔽消息红点提示
+^https?:\/\/.*\.ximalaya\.com\/mobile-user\/unread reject
+#屏蔽minor请求
+^https?:\/\/.*\.ximalaya\.com\/mobile-user\/minorProtection\/pop reject
+#屏蔽隐私搜集
+^https?:\/\/.*\.ximalaya\.com\/collector\/xl\/v\d reject
+#屏蔽版本更新
+^https?:\/\/.*\.ximalaya\.com\/butler-portal\/versionCheck reject
+#屏蔽开屏广告
+^https?:\/\/(adse\.wsa|adse|adbehavior)\.ximalaya\.com\/.* reject
+#屏蔽位置请求
+^https?:\/\/.*\.ximalaya\.com\/mobile\/discovery\/v\d\/location reject
+#屏蔽实时Ad请求
+^https?:\/\/.*\.ximalaya\.com\/api\/v\d\/adRealTime reject
+#屏蔽ting_Ad
+^https?:\/\/.*\.ximalaya\.com\/ting\/(loading|feed|home)? reject
+#修复轮播Ad失效Bug
+^https?:\/\/.*\.ximalaya\.com\/discovery-feed\/focus\/queryF reject
+^https?:\/\.*linkeye-cloud\/checkIP reject
+^https?:\/\/www\.taobao\.com\/help\/getip\.php reject
+^https?:\/\.*audid-api\.taobao\.com reject
+^https?:\/\/passport(ws)?\.ximalaya\.com\/user-http-app\/v1\/token\/refresh reject
 
 [Script]
-# WeiGiegie
-# 会员, 大师课, 音效&音质, 去广告, 界面优化
-http-response ^https?:\/\/.+((ximalaya)|(xmcdn)).+(mobile-user\/v2|mobile-web|queryCategoryPageData|discovery-feed\/v4|vip\/v1\/recommand|product\/detail\/v1|mobile\/v1\/album|playpage|album\/price\/ts|mobile\/user\/member).*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/xmly.js, requires-body = true, timeout = 60, tag = 会员&界面优化@WeiGiegie
-http-request ^https?:\/\/.+((ximalaya)|(xmcdn)).+\/[a-z]{6}\-[a-z]{8}\/track\/(v[0-9])\/[a-zA-Z]+\/ts.*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/xmck.js, timeout = 60, tag = 会员&界面优化@WeiGiegie
+# ClydeTime
+# 专辑音频
+http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/mobile(-user\/v\d\/homePage|-playpage\/(track\/v\d\/baseInfo|playpage\/(tabs\/v\d|recommend(\/resource\/allocation|ContentV\d)))|\/(album\/paid\/info|playlist\/album\/new)|\/v\d\/album\/track) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 专辑音频@ClydeTime
+# 会员页
+http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/business-vip-(presale-mobile-web\/page|level-h5-web\/api\/(gift\/detail|profile)|welfare-mobile-web\/welfare\/module\/exclusive\/list) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 会员页@ClydeTime
+# 发现页
+http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/discovery-(category\/customCategories|feed\/v\d\/(freeListenTab\/queryCardList|mix)|ranking-web\/v\d\/ranking\/concreteRankList) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 发现页@ClydeTime
+# 杂项
+http-response ^https?:\/\/(mobile(hera)?|m(ob)?wsa|m)\.ximalaya\.com\/(browsing-history-business\/browsing\/history\/query|focus-mobile\/focusPic\/info|nyx\/history\/query\/(detail|id\/list)|product\/detail\/v\d\/basicInfo\/dynamic|subscribe\/v\d\/subscribe\/comprehensive\/rank|vip\/(feed\/v1\/mix|v\d\/recommand)) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 杂项@ClydeTime
+# 搜索推荐
+http-response ^https?:\/\/search(wsa)?\.ximalaya\.com\/(hub\/)?(guideWordV\d|hotWord(V\d|Billboard\/card)) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.js, requires-body = true, tag = 搜索推荐@ClydeTime
+# 解锁会员
+http-request ^https?:\/\/(mobile(hera)?|m(ob)?wsa)\.ximalaya\.com\/(mobile-playpage\/track|mobile\/quickplay) script-path = https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly_ck.js, requires-body = true, tag = 解锁会员@ClydeTime
 
 # 可莉🅥
 # 首页顶部去除直播
@@ -82,4 +80,4 @@ http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category scri
 http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除我的页面广告@可莉🅥
 
 [Mitm]
-hostname = *.xima*.*, *.xmcdn.*, 43.132.81.*, 101.33.27.*, 114*0.*, 61.172.1*.*, 43.141.11.*, 114.80.99.86, 180.153.255.*, 114.80.99.*, *.mysteel.*, 61.172.194.196, 180.153.*.*, *xima*, *xmcdn*, *.ximalaya.com, *.xmcdn.com, 180.153.140.*, 180.153.250.*, 114.80.139.237, 114.80.161.29, 1.62.62.64, 51*.com, 1.194.255.171, 23.236.99.89, 36.99.200.135, 42.81.4.198, 42.81.26.128, 42.81.120.58, 43.132.80.77, 43.132.83.175, 43.132.84.11, 43.152.24.12, 43.152.24.18, 43.152.25.127, 43.152.29.38, 43.175.16.34, 43.175.22.25, 43.175.44.15, 49.7.69.197, 49.51.224.95, 101.33.11.32, 101.33.11.106, 101.33.20.34, 101.33.29.110, 103.105.60.99, 114.80.99.90, 114.80.99.70, 114.80.99.71, 114.80.99.89, 114.80.99.91, 114.80.99.88, 114.80.99.87, 140.249.84.135, 140.249.85.189, 150.109.90.80, 150.109.91.35, 150.138.47.94, 150.138.136.145, 203.205.136.87, 203.205.136.100, 203.205.136.102, 203.205.136.159, 203.205.137.27, 203.205.137.87, 203.205.137.241, 203.205.250.111, 203.205.250.113, 211.152.137.25, ulogs.umeng.com, passport.ximalaya.com
+hostname = *.xima*.*, *.xmcdn.*, *.ximalaya.com, 47.100.227.85, 61.164.145.12, 61.172.194.185, 61.172.194.186, 106.41.204.126, 112.80.180.72, 112.98.170.228, 112.99.146.108, 114.80.99.*, 118.25.119.177, 180.153.140.*, 180.153.250.*, 180.153.255.* 
