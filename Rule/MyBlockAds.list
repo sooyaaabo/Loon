@@ -1,11 +1,12 @@
-# 2024-05-02 14:00
+# 2024-05-18 12:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
 # 阿里巴巴
-DOMAIN, ossgw.alicdn.com, REJECT
+DOMAIN, dns.alidns.com, REJECT
 DOMAIN, ems.youku.com, REJECT
 DOMAIN, hudong.alicdn.com, REJECT
+DOMAIN, ossgw.alicdn.com, REJECT
 DOMAIN-SUFFIX, ut.taobao.com, REJECT
 # 阿里云盘
 IP-CIDR, 203.107.1.1/24, REJECT
@@ -77,11 +78,15 @@ DOMAIN, pagead2.googlesyndication.com, REJECT
 DOMAIN, ws.tapjoyads.com, REJECT
 DOMAIN, www.googleadservices.com, REJECT
 DOMAIN-SUFFIX, ads.linkedin.com, REJECT
+DOMAIN-SUFFIX, ads.vungle.com, REJECT
 DOMAIN-SUFFIX, adservice.google.com, REJECT
+DOMAIN-SUFFIX, applovin.com, REJECT
+DOMAIN-SUFFIX, applvn.com, REJECT
 DOMAIN-SUFFIX, appsflyer.com, REJECT
 DOMAIN-SUFFIX, appsflyersdk.com, REJECT
 DOMAIN-SUFFIX, kuaishouzt.com, REJECT
 DOMAIN-SUFFIX, miaozhen.com, REJECT
+DOMAIN-SUFFIX, unityads.unity3d.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
