@@ -4,7 +4,8 @@
 #!author = @NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
-#!date = 2024-05-19 23:50
+#!input = GOOGLE_CAPTCHA_REGEX
+#!date = 2024-05-20 00:00
 
 # 2024-05-19 12:00:00
 # https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Google_CAPTCHA.plugin
