@@ -1,15 +1,16 @@
 #!name = Google CAPTCHA
-#!desc = Google搜索人机验证解决方案
+#!desc = Google搜索内容时并发使用多个策略/策略组，以避免可能出现的人机验证。注意：需要在插件参数填写策略/策略组名的正则表达式。
 #!openUrl = 
 #!author = @NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
-#!date = 2024-05-16 21:50
+#!date = 2024-05-19 23:50
 
-# https://raw.githubusercontent.com/NobyDa/Script/master/QuantumultX/Snippet/GoogleCAPTCHA.snippet
+# 2024-05-19 12:00:00
+# https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Google_CAPTCHA.plugin
 
 [Script]
-http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, tag = Google CAPTCHA
+http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, timeout = 30, tag = Google人机验证
 
 [Mitm]
 hostname = www.google.com*
