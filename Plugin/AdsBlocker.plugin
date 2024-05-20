@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-05-19 00:30
+#!date = 2024-05-20 10:15
 
 # 2024-05-18 09:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1280,9 +1280,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/gw\.kaola\.com\/gw\/dgmobile\/newOpenAd reject
 # 网易邮箱 - appconf.mail.163.com, client.mail.163.com, analytics.163.com
 ^https?:\/\/appconf\.mail\.163\.com\/mmad\/ reject-200
-https:\/\/appconf\.mail\.163\.com\/mmad\/get\.do reject
-http:\/\/analytics\.163\.com\/ntes reject
-^https?:\/\/client\.mail\.163.com\/apptrack\/confinfo\/(searchMultiAds.do|showAds.do) reject
+^https?:\/\/client\.mail\.163\.com\/apptrack\/confinfo\/(searchMultiAds|showAds) reject
 # 网易 - *.music.126.net, img1.126.net, www.icourse163.org, nex.163.com, g1.163.com, client.mail.163.com, c.m.163.com, interface*.music.163.com
 ^https?:\/\/p[^4](c)?\.music\.126\.net\/\w+==\/10995\d{13}\.jpg$ reject-img
 ^https?:\/\/p\.c\.music\.126.net\/.*?jpg$ reject
@@ -1329,7 +1327,7 @@ http:\/\/analytics\.163\.com\/ntes reject
 # 本来生活 - img0*.benlailife.com
 ^https?:\/\/img0[1-9]{1}\.benlailife\.com\/AppHomePageImage\/upload\/files\/.*.jpg reject-200
 # 唯品会 - b.appsimg.com, mapi.appvipshop.com
-https://b.appsimg.com/upload/momin/ reject
+^https?:\/\/b\.appsimg\.com\/upload\/momin reject
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/activity\/advertisement\/get reject-200
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/iosAdInfo\/report reject
 ^https?:\/\/mapi\.appvipshop\.com\/vips-mobile\/rest\/layout\/productList\/eventData\/v reject-200
