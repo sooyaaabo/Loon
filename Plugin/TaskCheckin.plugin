@@ -16,7 +16,7 @@
 
 [Script]
 # TestFlight自动加入
-cron "0 0/1 * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入🅣
+;cron "0 0/1 * * * *" script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js, timeout = 10, tag = TestFlight自动加入🅣
 # 阿里云盘
 cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘签到🅣
 # 微博
