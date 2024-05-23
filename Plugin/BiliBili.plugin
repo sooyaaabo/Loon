@@ -4,11 +4,11 @@
 #!author = @RuCu6 @Maasea @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliRed.png
-#!date = 2024-05-23 09:20
+#!date = 2024-05-23 14:55
 
-# 2024-02-08 14:20
+# 2024-05-23 13:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/bilibili.snippet
-# 2024-05-12 08:01:06
+# 2024-05-23 13:25:06
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
 # 2023-09-05
 # https://github.com/Maasea/sgmodule/blob/master/Bilibili.Helper.sgmodule
@@ -22,7 +22,7 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 # 开屏广告
 ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH reject-dict
 ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH reject-dict
-^https:\/\/api\.bilibili\.com\/x\/mengqi\/v1\/resource\? reject-dict
+^https:\/\/(api\.bilibili\.com\/x\/mengqi\/v1\/resource|app\.bilibili\.com\/x\/resource\/peak\/download)\? reject-dict
 # 满意度调研
 ^https:\/\/api\.bilibili\.com\/x\/v2\/dm\/qoe\/show\? reject-dict
 # 移除搜索中的默认关键词
