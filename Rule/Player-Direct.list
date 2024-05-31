@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-04-29 10:50
+# 2024-05-31 21:50
 
 # CMSPlayer
 # 低端影视
@@ -182,3 +182,5 @@ DOMAIN, emby-fr-v6.mius.uk
 DOMAIN, pub1.emby.wtf
 DOMAIN, pub2.emby.wtf
 DOMAIN, pub3.emby.wtf
+# 大V影院
+DOMAIN, su.viclub.top
