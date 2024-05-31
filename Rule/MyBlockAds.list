@@ -1,4 +1,4 @@
-# 2024-05-18 12:40
+# 2024-05-31 17:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -218,6 +218,11 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 ;DOMAIN, hub5idx.v6.shub.sandai.net, REJECT
 
 # ======= Y ======= #
+# 移花宫
+DOMAIN, 3117kc.saigmpl.com, REJECT
+DOMAIN, 314240585f1fb7266kcc.fwxhvvd.com, REJECT
+DOMAIN, 314240585f1fb7266kg.oiocklg.com, REJECT
+DOMAIN, tong.8888888888.bid, REJECT
 # 优酷 & 菜鸟
 ;DOMAIN, acs.youku.com, REJECT
 DOMAIN, acs4baichuan.m.taobao.com, REJECT
