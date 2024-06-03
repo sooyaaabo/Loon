@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-05-26 00:30
+#!date = 2024-06-03 10:10
 
 # 2024-05-18 09:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1410,8 +1410,6 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/shcss\.suning\.com\/shcss-web\/api\/appImage\/queryAppImage\.do reject-200
 # 小熊艺术 - www.xiaoxiongmeishu.com
 ^https?:\/\/www\.xiaoxiongmeishu\.com\/api\/home\/v1\/config\/appInit\?uid=588888763519696896 reject-dict
-# 小佩宠物 - api.petkit.cn
-^https?:\/\/api\.petkit\.cn\/6\/\/device\/relatedProductsInfo reject-dict
 # 小白学习打印机 - api.xbxxhz.com
 # 捕获试卷脚本：https://raw.githubusercontent.com/Yu9191/Script/main/shijuan.js
 ^https?:\/\/api\.xbxxhz\.com\/big_data\/v1\/home_pages reject
@@ -1472,8 +1470,8 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config reject-dict
 # 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
-^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # 云闪付 - wallet.95516.com, tysdk.95516.com, ads.95516.com
