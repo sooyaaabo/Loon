@@ -4,7 +4,7 @@
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png
-#!date = 2024-05-13 00:15
+#!date = 2024-06-04 19:30
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
@@ -12,6 +12,7 @@
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/get_cookie.scripts
 # https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Task/GetCookie.plugin
 # https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js
+# https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JinDD/JinDD.sgmodule
 
 [Script]
 # TestFlight自动加入 - testflight.apple.com
@@ -20,6 +21,8 @@
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, tag = 阿里云盘签到🅒
 # 微博 - api.weibo.cn
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅒
+# 金多多商城 - www.jindd.shop
+http-response ^https:\/\/www\.jindd\.shop\/addons\/yun_shop\/api.php\?i=12&uuid=0&type=1&mid=(\d+)&version=v1.1.137&basic_info=1&route=member.member.wxJsSdkConfig script-path = https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JinDD/JinDD.js, requires-body = true, tag = 金多多商城任务签到🅒
 # 腾讯视频 - iacc.rec.qq.com
 ;http-request ^https?:\/\/iacc\.rec\.qq\.com script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频🅒
 # 爱奇艺 - passport.iqiyi.com
@@ -44,4 +47,4 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 ;http-request ^https:\/\/yuchen.tonghuaios.com\/users\?.+ script-path = https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout = 10, tag = 雨晨IOS🅒
 
 [Mitm]
-hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com, yuchen.tonghuaios.com
+hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, www.jindd.shop, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn, qmwebapi.qmai.cn, webapi.qmai.cn, sapi.beingfine.cn, *.amap.com, yuchen.tonghuaios.com
