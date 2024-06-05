@@ -1,7 +1,7 @@
 #!name = Task签到
 #!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
-#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @xzxxn777
+#!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
 #!date = 2024-06-04 19:30
@@ -22,8 +22,6 @@
 cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘签到🅣
 # 微博
 cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博每日签到🅣
-# 金多多商城
-cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JinDD/JinDD.js, timeout = 60, tag = 金多多商城任务签到🅣
 # 腾讯视频
 ;cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频签到🅣
 # 爱奇艺
