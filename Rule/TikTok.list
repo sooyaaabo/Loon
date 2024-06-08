@@ -1,5 +1,5 @@
 # TikTok by 可莉
-# 2024-04-30 00:46:30
+# 2024-05-16 17:23:42
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/TikTok.list
 
 DOMAIN, api.snapkit.com
@@ -37,7 +37,6 @@ DOMAIN, pull-rtmp-l1-hs.pstatp.com
 DOMAIN, pull-rtmp-l1-mus.pstatp.com
 DOMAIN, pull-rtmp-l6-hs.pstatp.com
 DOMAIN, roovza-launches.appsflyersdk.com
-DOMAIN, sessions.bugsnag.com
 DOMAIN-SUFFIX, bytedance.com
 DOMAIN-SUFFIX, bytedance.net
 DOMAIN-SUFFIX, bytedapm.com
