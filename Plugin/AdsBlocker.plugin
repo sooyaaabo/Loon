@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-06-06 19:20
+#!date = 2024-06-08 17:45
 
 # 2024-06-06 18:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1940,7 +1940,7 @@ http-response ^https:\/\/mgesq\.api\.mgtv\.com\/dsl\/index\.+ script-path = http
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # 悠洗APP - api.ulife.group
-;http-response ^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 script-path = https://raw.githubusercontent.com/jizhi0520/QX/main/yx.js, requires-body = true, tag = 悠洗APP
+http-response ^https?:\/\/api\.ulife\.group\/market\/homeIconDetail\/list\/v7 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/yx.js, requires-body = true, tag = 悠洗APP
 
 # >>>>>>>>>>>>>>> ✅ Z ✅ <<<<<<<<<<<<<<
 # 掌上公交 - quanguo.mygolbs.com, wx.mygolbs.com
