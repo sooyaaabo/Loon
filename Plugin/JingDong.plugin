@@ -4,9 +4,9 @@
 #!author = @zwf234 @RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JingDong.png
-#!date = 2024-05-01 18:00
+#!date = 2024-06-08 10:00
 
-# 2024-04-15 16:25
+# 2024-05-11 18:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rule]
@@ -21,6 +21,7 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 
 [Script]
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body = true, tag = 移除京东广告
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = jdLiteAdvertisingVO -> rucu6, requires-body = true, tag = 移除京东极速版广告
 http-response ^https?:\/\/api\.m\.jd\.com\/(client\.action|api)\?functionId=(wareBusiness|serverConfig|basicConfig|lite_wareBusiness|pingou_item) script-path = https://raw.githubusercontent.com/zwf234/rules/master/js/jd_price.js, requires-body = true, tag = 京东比价
 
 [Mitm]
