@@ -12,4 +12,4 @@
 [Script]
 generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/CloudflareSpeedtest.js, timeout = 10, tag = 节点网速测试 𝕂, img-url = speedometer.system
 generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询 𝕂, img-url = play.circle.system
-;generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/LocationDetection.js, timeout = 10, tag = 地理位置查询 𝕂, img-url = location.circle.system
+generic script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Node_detection_tool/LocationDetection.js, timeout = 10, tag = 地理位置查询 𝕂, img-url = location.circle.system
