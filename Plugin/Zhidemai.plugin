@@ -8,6 +8,8 @@
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
+# 2024-02-11 01:02
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin
 
 [Rule]
 DOMAIN, aaid.uyunad.com, REJECT
