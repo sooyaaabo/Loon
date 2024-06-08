@@ -6,7 +6,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
 #!date = 2024-06-07 20:20
 
-# 2024-06-07
+# 2024-06-08
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.06.07/v2.0.481 reject-200
+^https?:\/\/2024.06.08/v2.0.483 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -505,6 +505,8 @@
 ^https?:\/\/td\.cgmcare\.cn\/api\/ad reject-200
 # 淘宝
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get reject-200
+# 团团加油
+^https?:\/\/www\.zjyilin\.com\/hykweb\/\/index\/openImg url reject-200
 
 # ======= W ======= #
 # 唯品会
