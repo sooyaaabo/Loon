@@ -1536,7 +1536,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/nnapp\.cloudbae\.cn:\d+\/mc\/api\/advert/ reject
 ^https?:\/\/nnapp\.cloudbae\.cn\/mc\/api\/advert/ reject
 # 友邻优课 - new-app-api.ylyk.com
-https://new-app-api.ylyk.com/v1/user/myinfo/adviser reject
+^https?:\/\/new-app-api\.ylyk\.com\/v\d\/user\/myinfo\/adviser reject
 # 友邦 - e-static.aia.com.cn
 ^https?:\/\/e-static\.aia\.com\.cn\/kyh\/resourcefolder\/ads reject-dict
 # 医考帮 - api.yikaobang.com.cn
@@ -1596,7 +1596,6 @@ https://new-app-api.ylyk.com/v1/user/myinfo/adviser reject
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) reject
 ^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
 # 中国移动 江苏 - wap.js.10086.cn
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v1\/market_content\.page\.queryHasIt reject-dict
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query reject
 # 中国移动 安徽 - api.ahmobile.cn
 ^https?:\/\/api\.ahmobile\.cn:443\/eip\?eip_serv_id=app\.getAllNew reject
@@ -1613,7 +1612,6 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 ^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos reject-dict
 ^https?:\/\/mrp\.mcloud\.139\.com\/mc\/mc-client-service\/openapi\/letter\/query reject-dict
 # 中国联通 - m.client.10010.com, m1.ad.10010.com, res.mall.10010.cn
-^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/getWelcomeAd reject-200
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-img
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/customer\/getclientconfig\.htm reject-dict
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-img
@@ -1629,10 +1627,10 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 ^https?:\/\/e\.weather\.com\.cn\/weChat\/typhoonNull\.json reject-dict
 # 中国知网 - xyz.cnki.net
 ^https?:\/\/xyz\.cnki\.net\/resourcev7\/api\/manualpush\/SlidsList$ reject-200
-# 中国人保 - zgrb.epicc.com.cn
+# 中国人保 人保头条 - zgrb.epicc.com.cn
 ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/h\/headlines\/queryHeadlines reject
-^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/update\/startupPage\/v1 reject-dict
-^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/guessYouLike\/v3 reject-dict
+^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/update\/startupPage\/v reject-dict
+^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/guessYouLike\/v reject-dict
 # 中油优途 - sichuan.95504.net
 ^https?:\/\/sichuan\.95504\.net\/v\d\/gd\/index\/get reject-200
 # 中羽在线 - app.badmintoncn.com
@@ -1698,7 +1696,7 @@ https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-di
 # 指点天下 - zua.zhidiantianxia.cn
 ^https?:\/\/zua\.zhidiantianxia\.cn\/api\/adverts reject
 # 猪八戒 - fastbuyer.zbj.com
-^https?:\/\/fastbuyer\.zbj\.com\/configure\/screenAdConfig\/v2 reject-200
+^https?:\/\/fastbuyer\.zbj\.com\/configure\/screenAdConfig\/ reject-200
 # 智行APP - m.ctrip.com
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/13916\/scjson\/tripAds reject-dict
 # 自如 - ztoread.ziroom.com
@@ -1950,9 +1948,9 @@ http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 scr
 http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = infoData -> random_body, requires-body = true, tag = 转转
 # 郑好办 - app-izz.zhengzhou.gov.cn
 http-response ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "imgUrl19_5x9":".+?" -> "imgUrl19_5x9":"", requires-body = true, tag = 郑好办
-# 中国人保 - zgrb.epicc.com.cn
-http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/homeInit\/v3 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true, tag = 中国人保-主页面
-http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/mpageconfig\/myPageConfigList\/v3 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true, tag = 中国人保-我的页面
+# 中国人保 人保头条- zgrb.epicc.com.cn
+http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/homeInit\/v script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true, tag = 中国人保-主页面
+http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/mpageconfig\/myPageConfigList\/v script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true, tag = 中国人保-我的页面
 # 中国国际航空 - m.airchina.com.cn
 http-response ^https?:\/\/m\.airchina\.com\.cn\/airchina\/gateway\/v\d(\.\d)*\/api\/services script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/airchina.js, requires-body = true, tag = 中国国际航空
 
