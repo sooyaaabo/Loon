@@ -48,4 +48,5 @@
 -   [@xzxxn777](https://github.com/xzxxn777)<br>
 
 ## Stars
-<img src="https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date" alt="Star History Chart" width="600" height="356" align="center">
+[<img src="https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date" alt="Star History Chart" width="600" height="356" align="center">
+](https://star-history.com/#sooyaaabo/Loon&Date)
