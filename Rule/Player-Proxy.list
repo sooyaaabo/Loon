@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-04-21 12:20
+# 2024-06-13 09:30
 
 # CMSPlayer
 # 海外看
@@ -11,14 +11,13 @@ DOMAIN, cdnb.v82u1l.com
 DOMAIN-SUFFIX, olelive.com
 DOMAIN-SUFFIX, olevod.com
 DOMAIN-SUFFIX, olevod.tv
+DOMAIN-SUFFIX, olehdtv.com
 DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
 # 低端影视
 DOMAIN-SUFFIX, ddrk.me
 DOMAIN-SUFFIX, ddys.pro
 DOMAIN-SUFFIX, ddys.mov
-DOMAIN-SUFFIX, ddys.art
-DOMAIN-SUFFIX, ddys.site
 DOMAIN-SUFFIX, ddys.tv
 DOMAIN-SUFFIX, ddys.info
 DOMAIN-SUFFIX, ddys.love
@@ -47,13 +46,12 @@ DOMAIN-SUFFIX, ibb.co
 # XPTV
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
+DOMAIN-SUFFIX, czys.top
+DOMAIN-SUFFIX, czzy.top
+DOMAIN-SUFFIX, czzy.tv
 DOMAIN-SUFFIX, cz01.vip
 DOMAIN-SUFFIX, cz01.tv
-DOMAIN-SUFFIX, czzy22.com
-DOMAIN-SUFFIX, czzy55.com
-DOMAIN-SUFFIX, czzy66.com
 DOMAIN-SUFFIX, czzy77.com
-DOMAIN-SUFFIX, czzy88.com
 
 # Emby
 # Paul
