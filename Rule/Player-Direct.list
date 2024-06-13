@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-05-31 21:50
+# 2024-06-13 09:30
 
 # CMSPlayer
 # 低端影视
@@ -107,17 +107,14 @@ DOMAIN-SUFFIX, p2100.net
 # 探索页
 DOMAIN-SUFFIX, infuseku.xyz
 # 555电影
-DOMAIN-SUFFIX, zxk555.com
-DOMAIN-SUFFIX, 555app.vip
-DOMAIN-SUFFIX, 5app.cc
-DOMAIN-SUFFIX, 5view.shop
-DOMAIN-SUFFIX, 5muvi.net
-DOMAIN-SUFFIX, 5zoom.club
-DOMAIN-SUFFIX, 5muvy.com
+DOMAIN-SUFFIX, fivezn.com
+DOMAIN-SUFFIX, fivemov.com
+DOMAIN-SUFFIX, w5srn.com
+DOMAIN-SUFFIX, 55drm.com
 # 哔嘀影视
 DOMAIN-SUFFIX, bdys.me
-DOMAIN-SUFFIX, bdys10.com
-DOMAIN-SUFFIX, bde4.icu
+DOMAIN-SUFFIX, yjys.me
+DOMAIN-SUFFIX, yjys.top
 DOMAIN-SUFFIX, 52bdys.com
 #哔嘀播放
 DOMAIN-suffix, ibytedtos.com
