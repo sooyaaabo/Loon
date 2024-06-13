@@ -3,519 +3,523 @@
     "description": "sooyaaabo（恩秀）",
     "icons": [
         {
-            "name": "Loon-TieTie.png",
+            "name": "Loon",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-TieTie.png"
         },
         {
-            "name": "Loon.png",
+            "name": "Loon",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon.png"
         },
         {
-            "name": "LoonLite.png",
+            "name": "LoonLite",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LoonLite.png"
         },
         {
-            "name": "QuantumultX-01.png",
+            "name": "QuantumultX",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QuantumultX-01.png"
         },
         {
-            "name": "QuantumultX-02.png",
+            "name": "QuantumultX",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QuantumultX-02.png"
         },
         {
-            "name": "Quantumult.png",
+            "name": "Quantumult",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Quantumult.png"
         },
         {
-            "name": "Sing-Box.png",
+            "name": "Sing-Box",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Sing-Box.png"
         },
         {
-            "name": "Stash.png",
+            "name": "Stash",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Stash.png"
         },
         {
-            "name": "Surge.png",
+            "name": "Surge",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Surge.png"
         },
         {
-            "name": "Shadowrocket.png",
+            "name": "Shadowrocket",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Shadowrocket.png"
         },
         {
-            "name": "Egern-01.png",
+            "name": "Egern",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Egern-01.png"
         },
         {
-            "name": "Egern-02.png",
+            "name": "Egern",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Egern-02.png"
         },
         {
-            "name": "Hiddify-Blue.png",
+            "name": "Hiddify-Blue",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Hiddify-Blue.png"
         },
         {
-            "name": "Hiddify-Red.png",
+            "name": "Hiddify-Red",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Hiddify-Red.png"
         },
         {
-            "name": "Hiddify-Yellow.png",
+            "name": "Hiddify-Yellow",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Hiddify-Yellow.png"
         },
         {
-            "name": "Hiddify-Green.png",
+            "name": "Hiddify-Green",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Hiddify-Green.png"
         },
         {
-            "name": "v2rayN-blue.png",
+            "name": "v2rayN-blue",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/v2rayN-blue.png"
         },
         {
-            "name": "v2rayN-red.png",
+            "name": "v2rayN-red",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/v2rayN-red.png"
         },
         {
-            "name": "v2rayN-purple.png",
+            "name": "v2rayN-purple",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/v2rayN-purple.png"
         },
         {
-            "name": "Clash.png",
+            "name": "Clash",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Clash.png"
         },
         {
-            "name": "ClashX.png",
+            "name": "ClashX",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ClashX.png"
         },
         {
-            "name": "Surfboard-01.png",
+            "name": "Surfboard",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Surfboard-01.png"
         },
         {
-            "name": "Surfboard-02.png",
+            "name": "Surfboard",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Surfboard-02.png"
         },
         {
-            "name": "1.1.1.1-01.png",
+            "name": "1.1.1.1",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/1.1.1.1-01.png"
         },
         {
-            "name": "1.1.1.1-02.png",
+            "name": "1.1.1.1",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/1.1.1.1-02.png"
         },
         {
-            "name": "1.1.1.1-03.png",
+            "name": "1.1.1.1",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/1.1.1.1-03.png"
         },
 	{
-            "name": "Cloudflare.png",
+            "name": "Cloudflare",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Cloudflare_03.png"
         },
         {
-            "name": "CloudflareWorkers.png",
+            "name": "CloudflareWorkers",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CloudflareWorkers.png"
         },
         {
-            "name": "Advertising.png",
+            "name": "Advertising",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png"
         },
         {
-            "name": "AdBlack.png",
+            "name": "AdBlack",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png"
         },
         {
-            "name": "AdOff.png",
+            "name": "AdOff",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png"
         },
         {
-            "name": "Netisp-X.png",
+            "name": "Netisp-X",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Netisp-X.png"
         },
         {
-            "name": "Netisp.png",
+            "name": "Netisp",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Netisp.png"
         },
         {
-            "name": "NodeTools.png",
+            "name": "NodeTools",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NodeTools.png"
         },
         {
-            "name": "CookieInfo.png",
+            "name": "CookieInfo",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png"
         },
         {
-            "name": "TaskCheck-in.png",
+            "name": "TaskCheck-in",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png"
         },
         {
-            "name": "Web_301.png",
+            "name": "Web_301",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_301.png"
         },
         {
-            "name": "Web_302.png",
+            "name": "Web_302",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_302.png"
         },
         {
-            "name": "Web_403.png",
+            "name": "Web_403",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_403.png"
         },
         {
-            "name": "Web_404.png",
+            "name": "Web_404",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_404.png"
         },
         {
-            "name": "Web_500.png",
+            "name": "Web_500",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_500.png"
         },
         {
-            "name": "Web_502.png",
+            "name": "Web_502",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_502.png"
         },
         {
-            "name": "Web_redirect.png",
+            "name": "Web_redirect",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_redirect.png"
         },
         {
-            "name": "Web_warning.png",
+            "name": "Web_warning",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_warning.png"
         },
         {
-            "name": "Web_www.png",
+            "name": "Web_www",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_www.png"
         },
         {
-            "name": "TestFlight.png",
+            "name": "TestFlight",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight.png"
         },
         {
-            "name": "QQ.png",
+            "name": "QQ",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQ.png"
         },
         {
-            "name": "WeChat.png",
+            "name": "WeChat",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/WeChat.png"
         },
         {
-            "name": "DingTalk.png",
+            "name": "DingTalk",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/DingTalk.png"
         },
         {
-            "name": "TikTok.png",
+            "name": "TikTok",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TikTok.png"
         },
         {
-            "name": "AliyunDrive.png",
+            "name": "AliyunDrive",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AliyunDrive.png"
         },
         {
-            "name": "BaiduNetdisk.png",
+            "name": "BaiduNetdisk",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png"
         },
         {
-            "name": "Amap.png",
+            "name": "Amap",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png"
         },
         {
-            "name": "12306_Railway.png",
+            "name": "12306_Railway",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/12306_Railway.png"
         },
         {
-            "name": "Weibo.png",
+            "name": "Weibo",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo.png"
         },
         {
-            "name": "VVebo.png",
+            "name": "VVebo",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/VVebo.png"
         },
         {
-            "name": "RedBook.png",
+            "name": "RedBook",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RedBook.png"
         },
         {
-            "name": "Alipay.png",
+            "name": "Alipay",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Alipay-2024.png"
         },
         {
-            "name": "Taobao.png",
+            "name": "Taobao",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Taobao.png"
         },
         {
-            "name": "Goofish.png",
+            "name": "Goofish",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Goofish.png"
         },
         {
-            "name": "JingDong.png",
+            "name": "JingDong",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JingDong.png"
         },
         {
-            "name": "CaiNiao.png",
+            "name": "CaiNiao",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png"
         },
         {
-            "name": "iCost.png",
+            "name": "iCost",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iCost.png"
         },
         {
-            "name": "SparkMail.png",
+            "name": "SparkMail",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/SparkMail.png"
         },
         {
-            "name": "AppRaven.png",
+            "name": "AppRaven",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppRaven.png"
         },
         {
-            "name": "Demus.png",
+            "name": "Demus",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Demus.png"
         },
         {
-            "name": "QQMusic.png",
+            "name": "QQMusic",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQMusic.png"
         },
         {
-            "name": "NeteaseMusic.png",
+            "name": "NeteaseMusic",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NeteaseMusic.png"
         },
         {
-            "name": "LMPMusic.png",
+            "name": "LMPMusic",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LMPMusic.png"
         },
         {
-            "name": "LightPlayer.png",
+            "name": "LightPlayer",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LightPlayer.png"
         },
 	{
-            "name": "Listenify.png",
+            "name": "Listenify",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Listenify.png"
         },
         {
-            "name": "TencentVideo.png",
+            "name": "TencentVideo",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TencentVideo.png"
         },
         {
-            "name": "IQIYI.png",
+            "name": "IQIYI",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/IQIYI.png"
         },
         {
-            "name": "Youku.png",
+            "name": "Youku",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Youku.png"
         },
         {
-            "name": "MangoTV.png",
+            "name": "MangoTV",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/MangoTV.png"
         },
         {
-            "name": "BilibiliRed.png",
+            "name": "BilibiliRed",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliRed.png"
         },
         {
-            "name": "BilibiliBlue.png",
+            "name": "BilibiliBlue",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliBlue.png"
         },
         {
-            "name": "XPTV.png",
+            "name": "XPTV",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png"
         },
         {
-            "name": "CMSPlayer.png",
+            "name": "CMSPlayer",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer.png"
         },
+	{
+            "name": "CMSPlayer",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png"
+        },
         {
-            "name": "SteveWatch-01.png",
+            "name": "SteveWatch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/SteveWatch-01.png"
         },
         {
-            "name": "SteveWatch-02.png",
+            "name": "SteveWatch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/SteveWatch-02.png"
         },
         {
-            "name": "APTV.png",
+            "name": "APTV",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/APTV.png"
         },
         {
-            "name": "Fileball.png",
+            "name": "Fileball",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Fileball.png"
         },
         {
-            "name": "Infuse.png",
+            "name": "Infuse",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Infuse.png"
         },
         {
-            "name": "VidHub.png",
+            "name": "VidHub",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/VidHub.png"
         },
         {
-            "name": "yyb.png",
+            "name": "yyb",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/yyb.png"
         },
         {
-            "name": "Conflux.png",
+            "name": "Conflux",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Conflux.png"
         },
         {
-            "name": "IThome.png",
+            "name": "IThome",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/IThome.png"
         },
         {
-            "name": "CoolApk.png",
+            "name": "CoolApk",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CoolApk.png"
         },
         {
-            "name": "Zhihu.png",
+            "name": "Zhihu",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png"
         },
         {
-            "name": "Himalaya.png",
+            "name": "Himalaya",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Himalaya.png"
         },
         {
-            "name": "Zhidemai.png",
+            "name": "Zhidemai",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhidemai.png"
         },
         {
-            "name": "LEMO FM.png",
+            "name": "LEMO FM",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LEMO%20FM.png"
         },
         {
-            "name": "eTicket.png",
+            "name": "eTicket",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/eTicket.png"
         },
         {
-            "name": "NotBoring.png",
+            "name": "NotBoring",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NotBoring.png"
         },
         {
-            "name": "Toolbox.png",
+            "name": "Toolbox",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Toolbox.png"
         },
         {
-            "name": "Userscripts.png",
+            "name": "Userscripts",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Userscripts.png"
         },
         {
-            "name": "Clipboard.png",
+            "name": "Clipboard",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Clipboard.png"
         },
         {
-            "name": "Arc.png",
+            "name": "Arc",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Arc.png"
         },
         {
-            "name": "ArcSearch-01.png",
+            "name": "ArcSearch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch-01.png"
         },
 	{
-            "name": "ArcSearch-02.png",
+            "name": "ArcSearch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch-02.png"
         },
         {
-            "name": "Quark.png",
+            "name": "Quark",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Quark.png"
         },
         {
-            "name": "Google.png",
+            "name": "Google",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png"
         },
         {
-            "name": "GoogleChrome.png",
+            "name": "GoogleChrome",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GoogleChrome.png"
         },
         {
-            "name": "MicrosoftEdge.png",
+            "name": "MicrosoftEdge",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/MicrosoftEdge.png"
         },
         {
-            "name": "Firefox.png",
+            "name": "Firefox",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Firefox.png"
         },
         {
-            "name": "FirefoxNightly.png",
+            "name": "FirefoxNightly",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/FirefoxNightly.png"
         },
         {
-            "name": "FirefoxFocus.png",
+            "name": "FirefoxFocus",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/FirefoxFocus.png"
         },
         {
-            "name": "Speedtest.png",
+            "name": "Speedtest",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Speedtest.png"
         },
         {
-            "name": "FastCom.png",
+            "name": "FastCom",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/FastCom.png"
         },
         {
-            "name": "Instagram.png",
+            "name": "Instagram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Instagram.png"
         },
         {
-            "name": "X.png",
+            "name": "X",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/X.png"
         },
         {
-            "name": "Swiftgram.png",
+            "name": "Swiftgram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Swiftgram.png"
         },
         {
-            "name": "iMe.png",
+            "name": "iMe",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iMe.png"
         },
         {
-            "name": "Nicegram.png",
+            "name": "Nicegram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Nicegram.png"
         },
         {
-            "name": "Spotify.png",
+            "name": "Spotify",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Spotify.png"
         },
         {
-            "name": "YouTube.png",
+            "name": "YouTube",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/YouTube.png"
         },
         {
-            "name": "GitHub.png",
+            "name": "GitHub",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GitHub.png"
         },
         {
-            "name": "GitLab-JiHu.png",
+            "name": "GitLab-JiHu",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GitLab-JiHu.png"
         },
         {
-            "name": "GitBlur.png",
+            "name": "GitBlur",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GitBlur.png"
         },
 	{
-            "name": "Sub-Store.png",
+            "name": "Sub-Store",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Sub-Store.png"
         },
 	{
-            "name": "ScriptHub.png",
+            "name": "ScriptHub",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ScriptHub.png"
         },
 	{
-            "name": "BoxJS.png",
+            "name": "BoxJS",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BoxJS.png"
         },
 	{
-            "name": "Scriptable.png",
+            "name": "Scriptable",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Scriptable.png"
         },
 	{
-            "name": "JSeaForJavaScript.png",
+            "name": "JSeaForJavaScript",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JSeaForJavaScript.png"
         },
         {
-            "name": "RevenueCat-icon.png",
+            "name": "RevenueCat-icon",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RevenueCat-icon.png"
         },
         {
-            "name": "iTunes.png",
+            "name": "iTunes",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png"
         },
         {
-            "name": "Files-Yellow.png",
+            "name": "Files-Yellow",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Files-Yellow.png"
         },
         {
-            "name": "Files-Blue.png",
+            "name": "Files-Blue",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Files-Blue.png"
         },
         {
