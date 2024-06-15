@@ -4,9 +4,9 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
-#!date = 2024-06-13 17:35
+#!date = 2024-06-15 20:35
 
-# 2024-06-10 07:18
+# 2024-06-15 04:10
 # https://github.com/Yswag/for-own-use/blob/main/module/cmsAdblock.sgmodule
 
 [Rewrite]
@@ -23,6 +23,7 @@ http-response ^https:\/\/bfikuncdn\.com\/.+\/hls\/.+\.m3u8 script-path = https:/
 http-response ^https:\/\/play\.modujx\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 魔都动漫
 http-response ^https:\/\/vod\.lyhuicheng\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 360资源
 http-response ^https:\/\/ukzy\.ukubf\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = U酷资源
+http-response ^https:\/\/.+\.wgslsw\.com\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 樱花资源
 
 [Mitm]
-hostname = m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com
+hostname = m3u.haiwaikan.com, v.cdnlz*.com, vip*.lz-cdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com
