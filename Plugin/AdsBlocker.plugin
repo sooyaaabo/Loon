@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-06-16 09:25
+#!date = 2024-06-16 09:30
 
 # 2024-06-16 00:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1721,8 +1721,14 @@ http-response ^https?:\/\/api\.u51\.com\/generic-config-gateway\/api\/v\d\/guanj
 http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-tab-dynamic script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/51job.js,requires-body = true, tag = 51job
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
-# Alibaba - acs.m.taobao.com, amdc.m.taobao.com
-http-response ^https?:\/\/amdc\.m\.taobao\.com script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/amdc.js,requires-body = true, tag = 阿里巴巴
+# 阿里云盘 - api.alipan.com, member.alipan.com
+http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
+http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
+
+# 阿里巴巴 - acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
+http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # Blued - social.blued.cn
