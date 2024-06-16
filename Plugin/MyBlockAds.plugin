@@ -4,7 +4,7 @@
 #!author = @RuCu6 @zZPiglet @app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-05-11 19:40
+#!date = 2024-06-16 09:10
 
 # 2024-05-11 18:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -27,7 +27,7 @@
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
 
-# 阿里巴巴 //acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
+# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
 # 淘宝
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(allresource|predict) reject-dict
 ^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv reject-dict
