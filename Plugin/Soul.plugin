@@ -4,11 +4,11 @@
 #!author = @ZenmoFeiShi @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Soul.png
-#!date = 2024-06-13 01:00
+#!date = 2024-06-16 20:30
 
-# 2024-06-12 23:04
+# 2024-06-16 18:41
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
-# 2024-06-12 23:04:44
+# 2024-06-16 20:23:01
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Soul_remove_ads.plugin
 
 [Rule]
@@ -48,6 +48,7 @@ http-response ^https:\/\/chat-live\.soulapp\.cn\/chatroom\/chatClassifyRoomList 
 http-response ^https:\/\/api-user\.soulapp\.cn\/v6\/planet\/config script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
 http-response ^https:\/\/api-a\.soulapp\.cn\/official\/scene\/module script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
 http-response ^https:\/\/post\.soulapp\.cn\/v2\/post\/recSquare\/subTabs script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
+http-response ^https:\/\/api-user\.soulapp\.cn\/homepage\/diamond\/position\/info script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul净化及解锁
 
 [Mitm]
 hostname = 47.110.187.87, api-a.soulapp.cn, api-account.soulapp.cn, api-chat.soulapp.cn, api-user.soulapp.cn, chat-live.soulapp.cn, gateway-mobile-gray.soulapp.cn, post.soulapp.cn, ssp.soulapp.cn
