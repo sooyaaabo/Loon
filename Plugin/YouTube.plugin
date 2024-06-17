@@ -12,7 +12,7 @@
 #select=自动显示翻译字幕,是,否
 #select=仅输出字幕译文,是,否
 #select=字幕译文的位置,译文位于原文之上,译文位于原文之下
-#!date = 2024-06-12 09:25
+#!date = 2024-06-17 18:10
 
 # 2024-05-12 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
@@ -25,7 +25,7 @@
 
 [Rule]
 AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
-AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 
 [Rewrite]
 # 播放页广告
