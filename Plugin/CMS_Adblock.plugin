@@ -4,9 +4,9 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
-#!date = 2024-06-18 20:10
+#!date = 2024-06-20 09:25
 
-# 2024-06-18 19:14
+# 2024-06-20 05:43
 # https://github.com/Yswag/for-own-use/blob/main/module/cmsAdblock.sgmodule
 
 [Rewrite]
@@ -26,6 +26,7 @@ http-response ^https:\/\/vod\.lyhuicheng\.com\/.+\/hls\/.+\.m3u8 script-path = h
 http-response ^https:\/\/ukzy\.ukubf\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = U酷资源
 http-response ^https:\/\/.+\.wgslsw\.com\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 樱花资源
 http-response ^https:\/\/leshiyuncdn\.36s\.top\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 乐视资源
+http-response ^https:\/\/.+\.feidaozy\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 飞刀资源
 
 # NSFW
 http-response ^https:\/\/askzycdn\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 奧斯卡资源
@@ -38,4 +39,4 @@ http-response ^https:\/\/bfnxxcdn\.com\/.+\/hls\/.+\.m3u8 script-path = https://
 http-response ^https:\/\/player\.huangguam3u\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 黄瓜资源
 
 [Mitm]
-hostname = m3u.haiwaikan.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com,*.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top
+hostname = m3u.haiwaikan.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com,*.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
