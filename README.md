@@ -48,4 +48,6 @@
 -   [@xzxxn777](https://github.com/xzxxn777)<br>
 
 ## Star History
+![Stars Video](https://scastiel.dev/github-stars?repository=sooyaaabo/Loon)
+
 [![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://star-history.com/#sooyaaabo/Loon&Date)
