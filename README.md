@@ -50,4 +50,6 @@
 ## Star History
 ![Stars Video](https://scastiel.dev/github-stars?repository=sooyaaabo/Loon)
 
-[![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://star-history.com/#sooyaaabo/Loon&Date)
+![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
+
+## [回到顶部](https://github.com/sooyaaabo/Loon?tab=readme-ov-file#readme)
