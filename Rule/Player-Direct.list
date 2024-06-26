@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-06-13 09:30
+# 2024-06-26 08:50
 
 # CMSPlayer
 # 低端影视
@@ -102,6 +102,11 @@ DOMAIN-SUFFIX, youkuphoto.com
 DOMAIN-SUFFIX, leshizyapi.com
 # 飘零影院
 DOMAIN-SUFFIX, p2100.net
+# 黑木耳
+DOMAIN-SUFFIX, heimuer.tv
+DOMAIN-SUFFIX, heimuer.pro
+DOMAIN-SUFFIX, heimuer.xyz
+DOMAIN-SUFFIX, heimuer.app
 
 # XPTV
 # 探索页
