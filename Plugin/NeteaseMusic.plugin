@@ -18,7 +18,7 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-06-13 18:20
+#!date = 2024-06-28 19:20
 
 # 2024-06-10 18:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
@@ -26,8 +26,6 @@
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
-# 2024-06-12
-# https://github.com/Yuheng0101/X/blob/main/Scripts/NeteaseCloudMusic/netease.plugin
 
 [Rule]
 DOMAIN, httpdns.n.netease.com, REJECT
@@ -57,18 +55,10 @@ DOMAIN, ipv6.music.163.com, REJECT
 # 开屏广告
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ reject-dict
 
-#----------  Yuheng0101 ----------#
-^https?:\/\/interface\d?\.music\.163\.com\/e?api\/vip\/cashier\/tspopup\/get reject-200
-
 [Script]
 #----------  qiuxiuya ----------#
 # 解锁黑胶音乐
-;http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员
-
-#----------  Yuheng0101 ----------#
-# 解锁部分VIP功能
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(v\d\/user\/detail\/\d+|vipnewcenter\/app\/resource\/newaccountpage|music-vip-membership\/client\/vip\/info|batch|playlist\/privilege|search\/complex\/page|v\d\/(discovery\/recommend\/songs|playlist\/detail)) script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/NeteaseCloudMusic/netease.js, requires-body = true, binary-body-mode = true, timeout = 60, tag = 网易云音乐重写
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(song\/enhance\/player\/url\/v\d|vipauth\/app\/auth\/query) script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/NeteaseCloudMusic/netease.js, requires-body = true, timeout = 60, tag = 网易云音乐转发
+http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员
 
 #----------  Keywos ----------#
 # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区、乐迷、星评等级、关注等图标去除
