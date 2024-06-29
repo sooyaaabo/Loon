@@ -4,7 +4,7 @@
 #!author = @RuCu6 @zmqcherish
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo.png
-#!date = 2024-03-19 18:00
+#!date = 2024-06-29 17:40
 
 # 2024-01-22 17:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
@@ -15,6 +15,39 @@ DOMAIN, wbapp.uve.weibo.com, DIRECT
 # 请求拦截 - 微博开屏广告
 DOMAIN, huodong.weibo.cn, REJECT
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN, bootpreload.uve.weibo.com, REJECT
+# 收集用户信息，上传用户日志的请求
+URL-REGEX, ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload), REJECT-DROP
+URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
+# 其他广告
+DOMAIN, f.video.weibocdn.com, REJECT
+DOMAIN-SUFFIX, fastimage.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, adimg.vue.weibo.com, REJECT
+DOMAIN-SUFFIX, zymo.mps.weibo.com, REJECT
+DOMAIN-SUFFIX, weibomingzi.com, REJECT
+DOMAIN-SUFFIX, sdkapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, promote.biz.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw5.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw6.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, game.weibo.cn, REJECT
+DOMAIN-SUFFIX, adimg.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, game.weibo.com, REJECT
+DOMAIN-SUFFIX, ads.viber.com, REJECT
+DOMAIN-SUFFIX, ads-d.viber.com, REJECT
+DOMAIN-SUFFIX, ads.aws.viber.com, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com, REJECT
+DOMAIN-SUFFIX, dp.im.weibo.cn, REJECT
+DOMAIN-SUFFIX, biz.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN-SUFFIX, click.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com, REJECT
+DOMAIN-SUFFIX, wbapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, widget.weibo.com, REJECT
+DOMAIN-SUFFIX, dsp.edm.weibo.cn, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, tui.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, ad.weibo.com, REJECT
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
