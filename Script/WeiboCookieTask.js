@@ -141,16 +141,16 @@ function getsign() {
         $.get(signurl, async(error, resp, data) => {
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                wbsign = `【微博签到】 连续签到${result.data.continuous}天，收益: ${result.data.desc}💰\n`
+                wbsign = `【微博签到】 连续签到${result.data.continuous}天，收益: ${result.data.desc}元`
             } else if (result.errno == 30000) {
-                wbsign = `【每日签到】 已签到\n`
+                wbsign = `【每日签到】 已签到`
                 if (cookie) {
                     await getcash()
                 }
             } else if (result.status == 90005) {
-                wbsign = `【每日签到】‼️` + result.msg + '\n'
+                wbsign = `【每日签到】‼️` + result.msg
             } else {
-                wbsign = `【每日签到】 签到失败 ` + result.errmsg;
+                wbsign = `【每日签到】 签到失败` + result.errmsg;
                 $.msg($.name, wbsign, `请检查微博Token`)
                 if ($.isNode()) {
                     await notify.sendNotify($.name, wbsign)
