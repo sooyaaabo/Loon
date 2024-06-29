@@ -141,16 +141,16 @@ function getsign() {
         $.get(signurl, async(error, resp, data) => {
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                wbsign = `【微博签到】 连续签到 ${result.data.continuous} 天 `
+                wbsign = `【微博签到】✅ 连续签到${result.data.continuous}天，收益: ${result.data.desc}💰\n`
             } else if (result.errno == 30000) {
-                wbsign = `【每日签到】 已签到 `
+                wbsign = `【每日签到】 🔁 已签到\n`
                 if (cookie) {
                     await getcash()
                 }
             } else if (result.status == 90005) {
-                wbsign = `【每日签到】‼️` + result.msg 
+                wbsign = `【每日签到】‼️` + result.msg + '\n'
             } else {
-                wbsign = `【每日签到】 签到失败 ` + result.errmsg;
+                wbsign = `【每日签到】 ❌ 签到失败 ` + result.errmsg;
                 $.msg($.name, wbsign, `请检查微博Token`)
                 if ($.isNode()) {
                     await notify.sendNotify($.name, wbsign)
@@ -193,16 +193,16 @@ function doCard() {
             //$.log(data)
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                nickname = "昵称:sooyaaabo" + result.data.user.nickname
+                nickname = "昵称: " + result.data.user.nickname
                 if (tokenArr.length == 1) {
                     $.setdata(nickname, 'wb_nick')
                 } else {
                     $.setdata(tokenArr.length + "合一(多账号)", 'wb_nick')
                 }
                 signday = result.data.signin.title.split('<')[0]
-                docard = `【每日打卡】 ` + signday + '天 积分总计: ' + result.data.user.energy
+                docard = `【每日打卡】 ✅ ` + signday + '天 积分总计: ' + result.data.user.energy
             } else {
-                docard = `【每日打卡】 活动过期或失效`
+                docard = `【每日打卡】 ❌ 活动过期或失效`
             }
             resolve()
         })
@@ -215,12 +215,12 @@ function paysign() {
         $.post(payApi('aj/mobile/home/welfare/signin/do?_=' + $.startTime + 10), async(error, resp, data) => {
             let result = JSON.parse(data)
             if (result.status == 1) {
-                paybag = `【微博钱包】 +` + result.score + ' 分\n'
+                paybag = `【微博钱包】 ✅ +` + result.score + ' 分\n'
             } else if (result.status == '2') {
-                paybag = `【微博钱包】 `
+                paybag = `【微博钱包】 🔁 `
                 await payinfo()
             } else {
-                paybag = `【钱包签到】 Cookie失效` + '\n'
+                paybag = `【钱包签到】❌ Cookie失效` + '\n'
             }
             resolve()
 
@@ -256,9 +256,9 @@ function payinfo() {
 
 async function showmsg() {
     if (paybag) {
-        $.msg($.name, nickname + (signcash ? signcash : ""), wbsign );
+        $.msg($.name, nickname + (signcash ? signcash : ""), wbsign + paybag + docard);
         if ($.isNode()) {
-            await notify.sendNotify($.name, nickname + (signcash ? signcash : "") + '\n' + wbsign)
+            await notify.sendNotify($.name, nickname + (signcash ? signcash : "") + '\n' + wbsign + paybag + docard)
         }
     }
 }
