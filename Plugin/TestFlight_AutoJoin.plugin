@@ -1,11 +1,11 @@
 #!name = TestFlight
 #!desc = 自动监控TestFlight名额，一旦有新的名额即刻加入。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id899247664
 #!author = @DecoAri @xream @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight.png
 #!input = APP_ID
-#!date = 2024-05-14 19:10
+#!date = 2024-06-30 19:00
 
 # 2024-02-22
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Auto_Join_TF.plugin

@@ -1,10 +1,10 @@
 #!name = 铁路12306
 #!desc = 过滤12306应用内广告及开屏广告
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id564818797
 #!author = @RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/12306_Railway.png
-#!date = 2024-06-08 10:00
+#!date = 2024-06-30 19:00
 
 # 2024-05-11 18:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

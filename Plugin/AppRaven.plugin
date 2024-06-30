@@ -1,10 +1,10 @@
 #!name = AppRaven
 #!desc = AppRaven解锁会员
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id1490607195
 #!author = @Yu9191
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppRaven.png
-#!date = 2024-03-19 18:00
+#!date = 2024-06-30 19:00
 
 # 2024-02-21
 # https://github.com/Yu9191/Rewrite/blob/main/AppRaven.js

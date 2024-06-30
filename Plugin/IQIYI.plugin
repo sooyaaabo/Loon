@@ -1,10 +1,10 @@
 #!name = 爱奇艺
 #!desc = 爱奇艺去广告
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id1461999674
 #!author = @RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/IQIYI.png
-#!date = 2024-03-19 18:00
+#!date = 2024-06-30 19:00
 
 # 2023-12-09 13:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet

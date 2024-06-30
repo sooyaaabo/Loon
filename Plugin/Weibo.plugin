@@ -1,10 +1,10 @@
 #!name = 微博
 #!desc = 微博全面净化
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id350962117
 #!author = @RuCu6 @zmqcherish
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo.png
-#!date = 2024-06-29 17:40
+#!date = 2024-06-30 19:00
 
 # 2024-01-22 17:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet

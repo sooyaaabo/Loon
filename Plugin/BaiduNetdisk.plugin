@@ -1,10 +1,10 @@
 #!name = 百度网盘
 #!desc = 去除百度网盘广告，解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id547166701
 #!author = @RuCu6 @chxm1023 @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
-#!date = 2024-06-27 19:30
+#!date = 2024-06-30 19:00
 
 # 2024-05-11 18:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

@@ -1,10 +1,10 @@
 #!name = 知乎
 #!desc = 在知识的海洋里狗刨，去除各部广告，建议卸载知乎重新安装。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id432274380
 #!author = @RuCu6 @app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png
-#!date = 2024-06-27 19:35
+#!date = 2024-06-30 19:00
 
 # 2024-04-29 00:55
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet

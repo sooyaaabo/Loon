@@ -1,10 +1,10 @@
 #!name = Google Redirect
 #!desc = Google搜索重定向至.com，如遇频繁跳转请禁用本插件。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id284815942
 #!author = @sooyaaabo
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
-#!date = 2024-03-19 18:00
+#!date = 2024-06-30 19:00
 
 [Rewrite]
 ;^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com

@@ -1,17 +1,18 @@
 #!name = QQ链接解锁
 #!desc = 解除QQ内访问非白名单之外的地址提示停止访问该页面的限制，并移除跟踪参数。使用前需要清除QQ的缓存数据。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id444934666
 #!author = @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQ.png
-#!date = 2024-06-28 12:25
+#!date = 2024-06-30 19:00
 
-# 2024-06-28 12:04:00
+# 2024-06-30 17:23:22
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQ_Redirect.plugin
 
 [Rewrite]
 (^https:\/\/c\.pc\.qq\.com\/middlem\.html\?pfurl=)(http.*)(&pfuin=.*) 302 $2
 (^https:\/\/c\.pc\.qq\.com\/middlect\.html\?pfuin=.*&pfurl=)(http.*)(&gjsublevel=.*) 302 $2
+(^https:\/\/c\.pc\.qq\.com\/middlect\.html\?iscontinue=.*pfurl=)(http.*)(&pfuin=.*) 302 $2
 (^https:\/\/pingtas\.qq\.com\/webview\/pingd\?dm=c\.pc\.qq\.com&pvi=\d+&si=s\d+&url=\/middlem\.html\?pfurl%3d)(http.*)(%26pfuin%3d.*%26pfuin%3d.*) 302 $2
 (^https:\/\/cgi\.connect\.qq\.com\/qqconnectopen\/get_urlinfoForQQV2\?url=)(http.*) 302 $2
 (^https:\/\/c\.pc\.qq\.com\/index\.html\?pfurl=)(http.*)(&pfuin=.*) 302 $2

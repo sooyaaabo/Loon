@@ -1,11 +1,11 @@
 #!name = Google CAPTCHA
 #!desc = Google搜索内容时并发使用多个策略/策略组，以避免可能出现的人机验证。注意：需要在插件参数填写策略/策略组名的正则表达式。
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id284815942
 #!author = @NobyDa
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
 #!input = GOOGLE_CAPTCHA_REGEX
-#!date = 2024-05-20 00:00
+#!date = 2024-06-30 19:00
 
 # 2024-05-19 12:00:00
 # https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Google_CAPTCHA.plugin

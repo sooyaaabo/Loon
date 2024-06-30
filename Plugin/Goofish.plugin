@@ -1,10 +1,10 @@
 #!name = 闲鱼
 #!desc = 过滤闲鱼广告
-#!openUrl = 
+#!openUrl = https://apps.apple.com/app/id510909506
 #!author = @RuCu6 @fmz200 @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Goofish.png
-#!date = 2024-06-08 10:00
+#!date = 2024-06-30 19:00
 
 # 2024-06-06 18:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
