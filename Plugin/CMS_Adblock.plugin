@@ -1,7 +1,6 @@
 #!name = CMS_Adblock
 #!desc = 去除CMS资源插入式广告
-#!openUrl = https://apps.apple.com/app/xptv/id6459409368
-#!openUrl = https://apps.apple.com/app/cmsplayer/id6450680262
+#!openUrl = 
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
