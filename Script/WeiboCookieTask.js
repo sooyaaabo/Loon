@@ -141,7 +141,7 @@ function getsign() {
         $.get(signurl, async(error, resp, data) => {
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                wbsign = `【微博签到】 连续签到${result.data.continuous}天，收益: ${result.data.desc}元`
+                wbsign = `【微博签到】 连续签到${result.data.continuous}天`
             } else if (result.errno == 30000) {
                 wbsign = `【每日签到】 已签到`
                 if (cookie) {
@@ -193,7 +193,7 @@ function doCard() {
             //$.log(data)
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                nickname = "昵称: " + result.data.user.nickname
+                nickname = "昵称:sooyaaabo" + result.data.user.nickname
                 if (tokenArr.length == 1) {
                     $.setdata(nickname, 'wb_nick')
                 } else {
