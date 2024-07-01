@@ -193,7 +193,7 @@ function doCard() {
             //$.log(data)
             let result = JSON.parse(data)
             if (result.status == 10000) {
-                nickname = "昵称:sooyaaabo" + result.data.user.nickname
+                nickname = "昵称:@sooyaaabo" + result.data.user.nickname
                 if (tokenArr.length == 1) {
                     $.setdata(nickname, 'wb_nick')
                 } else {
