@@ -4,9 +4,9 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-06-29 17:40
+#!date = 2024-07-03 23:30
 
-# 2024-06-29 14:20:00
+# 2024-07-03 22:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -1420,6 +1420,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 # 希沃白板5 - cstore-en-public-tx.seewo.com
 ^https?:\/\/cstore-en-public-tx\.seewo\.com\/easinote5_public reject-dict
 # 向日葵 - client-api-v2.oray.com
+# ^https?:\/\/client-api-v2\.oray\.com\/materials url reject-200
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP reject-dict
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE reject-dict
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject-dict
