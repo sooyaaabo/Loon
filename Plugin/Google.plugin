@@ -1,0 +1,23 @@
+#!name = Google Redirect
+#!desc = 1.Google Redirect（如遇频繁跳转请禁用本插件）；2.Google CAPTCHA（需要在插件参数处填写策略/策略组名的正则表达式）。
+#!openUrl = https://apps.apple.com/app/id284815942
+#!author = @sooyaaabo @NobyDa
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
+#!input = GOOGLE_CAPTCHA_REGEX
+#!date = 2024-07-05 00:50
+
+# 2024-05-19 12:00:00
+# https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_Google_CAPTCHA.plugin
+
+[Rewrite]
+;^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 302 https://www.google.com
+^https?:\/\/(www.)?(g|google)\.cn 302 https://www.google.com
+^https?:\/\/translate\.google\.cn 302 https://translate.google.com
+^https?:\/\/(ditu|maps)\.google\.cn 302 https://maps.google.com
+
+[Script]
+http-response ^https:\/\/www\.google\.com(?:\.[a-z]+|)\/(?:search\?(?:|.+?&)q=|$) script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Surge/JS/Google_CAPTCHA.js, requires-body = true, timeout = 30, tag = Google人机验证
+
+[Mitm]
+hostname = *.google.cn, *.g.cn, www.google.com*
