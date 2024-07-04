@@ -4,15 +4,27 @@
     "icons": [
         {
             "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-TieTie.png"
-        },
-        {
-            "name": "Loon",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon.png"
         },
         {
             "name": "LoonLite",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LoonLite.png"
+        },
+        {
+            "name": "Loon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-TieTie.png"
+        },
+        {
+            "name": "Loon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-BB-Quietly.png"
+        },
+        {
+            "name": "Loon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-BB-Loudly.png"
+        },
+        {
+            "name": "Loon",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-BB-VeryLoudly.png"
         },
         {
             "name": "QuantumultX",
@@ -106,7 +118,7 @@
             "name": "1.1.1.1",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/1.1.1.1-03.png"
         },
-	{
+        {
             "name": "Cloudflare",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Cloudflare_03.png"
         },
@@ -282,7 +294,7 @@
             "name": "LightPlayer",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LightPlayer.png"
         },
-	{
+        {
             "name": "Listenify",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Listenify.png"
         },
@@ -318,7 +330,7 @@
             "name": "CMSPlayer",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer.png"
         },
-	{
+        {
             "name": "CMSPlayer",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png"
         },
@@ -406,7 +418,7 @@
             "name": "ArcSearch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch-01.png"
         },
-	{
+        {
             "name": "ArcSearch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ArcSearch-02.png"
         },
@@ -486,23 +498,23 @@
             "name": "GitBlur",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GitBlur.png"
         },
-	{
+        {
             "name": "Sub-Store",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Sub-Store.png"
         },
-	{
+        {
             "name": "ScriptHub",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ScriptHub.png"
         },
-	{
+        {
             "name": "BoxJS",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BoxJS.png"
         },
-	{
+        {
             "name": "Scriptable",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Scriptable.png"
         },
-	{
+        {
             "name": "JSeaForJavaScript",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JSeaForJavaScript.png"
         },
