@@ -4,13 +4,14 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-07-04 20:00
+#!date = 2024-07-05 00:30
 
-# 2024-07-04 19:06
+# 2024-07-05 00:21
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
 
 [Script]
-http-request https?:\/\/ykusu\.ykusu\/bttwo\/provide\/vod script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/bttwo.js, tag = BTTwo
+http-request https?:\/\/ykusu\.ykusu\/(bttwo|saohuo)\/provide\/vod script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-sources
+http-request https?:\/\/ykusu\.ykusu\/getJSON\/(.*).json script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-getJSON
 
 [Mitm]
 hostname = ykusu.ykusu
