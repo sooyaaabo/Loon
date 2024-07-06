@@ -4,11 +4,11 @@
 #!author = @RuCu6 @Maasea @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliRed.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-06 17:50
 
 # 2024-06-24 18:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/bilibili.snippet
-# 2024-05-23 13:25:06
+# 2024-07-06 17:09:17
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
 # 2023-09-05
 # https://github.com/Maasea/sgmodule/blob/master/Bilibili.Helper.sgmodule
@@ -42,6 +42,8 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 ^https?:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/ListFlash reject-dict
 # 屏蔽默认搜索框关键词
 ^https:\/\/(app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords reject
+# 流量卡推荐
+^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/TFInfo$ reject
 # IP请求、地理位置请求 //api.bilibili.com
 ^https:\/\/app\.bilibili\.com\/x\/resource\/ip reject
 ^https:\/\/api\.bilibili\.com\/x\/web-interface\/zone\?jsonp reject-200

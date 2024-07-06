@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-06-13 09:30
+# 2024-07-06 18:15
 
 # CMSPlayer
 # 海外看
@@ -15,17 +15,21 @@ DOMAIN-SUFFIX, olehdtv.com
 DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
 # 低端影视
-DOMAIN-SUFFIX, ddrk.me
-DOMAIN-SUFFIX, ddys.pro
-DOMAIN-SUFFIX, ddys.mov
-DOMAIN-SUFFIX, ddys.tv
-DOMAIN-SUFFIX, ddys.info
-DOMAIN-SUFFIX, ddys.love
+;DOMAIN-SUFFIX, ddrk.me
+;DOMAIN-SUFFIX, ddys.pro
+;DOMAIN-SUFFIX, ddys.mov
+;DOMAIN-SUFFIX, ddys.tv
+;DOMAIN-SUFFIX, ddys.info
+;DOMAIN-SUFFIX, ddys.love
 # 在线之家
 ;DOMAIN-SUFFIX, zxzja.com
 ;DOMAIN-SUFFIX, zxzj.site
 ;DOMAIN-SUFFIX, zxzjhd.com
 ;DOMAIN-SUFFIX, zxzj.pro
+# 独播库
+DOMAIN-SUFFIX, duboku.tv
+DOMAIN-SUFFIX, pub.duboku.net
+DOMAIN-SUFFIX, tv.gboku.com
 #天翼资源
 DOMAIN-SUFFIX, 911ysw.top
 # TMDB
@@ -45,13 +49,19 @@ DOMAIN-SUFFIX, ibb.co
 
 # XPTV
 # 厂长资源
-DOMAIN-SUFFIX, czzy.site
-DOMAIN-SUFFIX, czys.top
-DOMAIN-SUFFIX, czzy.top
-DOMAIN-SUFFIX, czzy.tv
-DOMAIN-SUFFIX, cz01.vip
-DOMAIN-SUFFIX, cz01.tv
-DOMAIN-SUFFIX, czzy77.com
+;DOMAIN-SUFFIX, czzy.site
+;DOMAIN-SUFFIX, czys.top
+;DOMAIN-SUFFIX, czzy.top
+;DOMAIN-SUFFIX, czzy.tv
+;DOMAIN-SUFFIX, cz01.vip
+;DOMAIN-SUFFIX, cz01.tv
+;DOMAIN-SUFFIX, czzy22.com
+;DOMAIN-SUFFIX, czzy66.com
+;DOMAIN-SUFFIX, czzy77.com
+;DOMAIN-SUFFIX, czzy88.com
+;DOMAIN-SUFFIX, cz233.com
+# ギリギリ动漫
+DOMAIN-SUFFIX, girigirilove.com
 
 # Emby
 # Paul
