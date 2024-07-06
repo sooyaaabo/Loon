@@ -4,9 +4,9 @@
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-07-04 23:40
+#!date = 2024-07-06 21:45
 
-# 2024-07-04
+# 2024-07-06
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.07.04/v2.0.485 reject-200
+^https?:\/\/2024.07.06/v2.0.486 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -418,6 +418,8 @@
 # ======= Q ======= #
 # QQ浏览器
 ^https:\/\/us\.l\.qq\.com\/exapp\?spsa=\d reject-200
+# QQ阅读
+^https?:\/\/(commontgw|comapi)\.reader\.qq\.com\/(common\/adV|com-ad\/config) reject-200
 # 去哪儿旅行
 ^https:\/\/homefront\.qunar\.com\/front\/splash\/ad reject-200
 ^https?:\/\/client\.qunar\.com\/pitcher-proxy\?qrt=p_splashAd reject-200
