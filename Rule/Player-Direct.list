@@ -115,6 +115,9 @@ DOMAIN-SUFFIX, heimuer.tv
 DOMAIN-SUFFIX, heimuer.pro
 DOMAIN-SUFFIX, heimuer.xyz
 DOMAIN-SUFFIX, heimuer.app
+# 华为吧
+DOMAIN-SUFFIX, huawei8.live
+DOMAIN-SUFFIX, hw8.live
 
 # XPTV
 # 探索页
@@ -255,11 +258,11 @@ DOMAIN-SUFFIX, jiasu.buzz
 DOMAIN-KEYWORD, feidaozy
 DOMAIN-KEYWORD, modujx
 DOMAIN-KEYWORD, simanuo
-DOMAIN-SUFFIX, huawei8.live
-DOMAIN-SUFFIX, hw8.live
 DOMAIN-KEYWORD, heimuer
 DOMAIN-KEYWORD, hhuus
 DOMAIN-KEYWORD, hhwenjian
+DOMAIN-SUFFIX, huawei8.live
+DOMAIN-SUFFIX, hw8.live
 DOMAIN, hhmage.com
 DOMAIN, xinlangtupian.com
 DOMAIN-KEYWORD, xlzyd
