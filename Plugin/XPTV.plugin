@@ -1,13 +1,20 @@
 #!name = XPTV
-#!desc = 将视频数据格式化为 CMS API 结构
+#!desc = 安装此插件后在XPTV内添加订阅地址：https://ykusu.ykusu/getJSON/cmsbeta.json
 #!openUrl = https://apps.apple.com/app/id6459409368
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-07-06 17:50
+#!date = 2024-07-06 19:10
 
 # 2024-07-06 13:48
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
+
+# 目前支持：两个BT、烧火电影、素白白影视、韩剧看看
+# 已知问题：
+# 1. 两个BT及素白白经常盗用小红书图床存资源，如果播放失败很可能是被小红书删除了
+# 2. 海外访问小红书cdn会分配到cf ip，速度很慢，解决方法是将域名(dc.xhscdn.com)本地DNS映射到境内ip
+# 3. 烧火电影的搜索需要通过图形验证码，所以脚本会请求ocr api，如果烧火搜寻失败有可能是api连接失败(域名为api.nn.ci)
+# (仅作为VOD的补充，日常以VOD源为主)
 
 [Script]
 http-request ^https?:\/\/ykusu\.ykusu\/(.*)\/provide\/vod script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-sources
