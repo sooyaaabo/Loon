@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-06 18:15
+# 2024-07-07 01:00
 
 # CMSPlayer
 # 低端影视
@@ -122,6 +122,9 @@ DOMAIN-SUFFIX, hw8.live
 # XPTV
 # 探索页
 DOMAIN-SUFFIX, infuseku.xyz
+# 两个BT
+DOMAIN-SUFFIX, bttwo.org
+DOMAIN-SUFFIX, bttwoo.com
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
 DOMAIN-SUFFIX, czys.top
