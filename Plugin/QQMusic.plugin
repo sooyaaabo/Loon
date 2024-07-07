@@ -4,9 +4,9 @@
 #!author = @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQMusic.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-27 17:55
 
-# 2024-05-20 22:12:34
+# 2024-07-07 15:31:22
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin
 
 [Rule]
@@ -20,6 +20,7 @@ DOMAIN, otheve.beacon.qq.com, REJECT
 DOMAIN, monitor.music.qq.com, REJECT
 DOMAIN, stat.y.qq.com, REJECT
 DOMAIN, tmead.y.qq.com, REJECT-NO-DROP
+DOMAIN, tmeadquic.y.qq.com, REJECT
 DOMAIN, oth.str.mdt.qq.com, REJECT
 DOMAIN, h.trace.qq.com, REJECT
 DOMAIN, sdk.e.qq.com, REJECT
