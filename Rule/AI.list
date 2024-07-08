@@ -1,5 +1,5 @@
 # Author: 可莉🅥
-# 2024-05-30 15:51:48
+# 2024-07-08 12:57:55
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
 
 # ChatGPT
@@ -46,3 +46,6 @@ DOMAIN-SUFFIX, grazie.aws.intellij.net
 # Meta
 DOMAIN, imagine.meta.com
 DOMAIN-SUFFIX, meta.ai
+
+# Perplexity
+DOMAIN-SUFFIX, perplexity.ai
