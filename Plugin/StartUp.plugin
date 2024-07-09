@@ -4,9 +4,9 @@
 #!author = @ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-07-06 22:20
+#!date = 2024-07-08 19:20
 
-# 2024-07-06
+# 2024-07-08
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.07.06/v2.0.486 reject-200
+^https?:\/\/2024.07.08/v2.0.487 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -595,6 +595,8 @@
 ^https?:\/\/qcwx\.medproad\.com:8080\/ad\/ reject-200
 # 新漫画
 ^https?:\/\/xapi\.xinmanhua\.net\/splashgroups\?include=splashs reject-200
+# 西瓜皮
+^https?:\/\/cmt\.comp\.360os\.com\/adv reject-200
 
 # ======= Y ======= #
 # 鸭奈飞
