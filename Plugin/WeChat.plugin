@@ -4,7 +4,7 @@
 #!author = @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/WeChat.png
-#!date = 2024-07-05 00:00
+#!date = 2024-07-09 12:00
 
 # 2024-04-14 20:49:25
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
@@ -32,7 +32,7 @@ DOMAIN, ad.maoyan.com, REJECT
 [Rewrite]
 #---------- 微信公众号 ----------#
 # 移除公众号中的推广内容 //mp.weixin.qq.com
-^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/snssvpdownload\/SH\/reserved\/ads_svp_video reject-dict
+^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? reject-dict
 
 #---------- 微信小程序 ----------#
