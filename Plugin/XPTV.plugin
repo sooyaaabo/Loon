@@ -4,9 +4,9 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-07-08 08:40
+#!date = 2024-07-09 23:40
 
-# 2024-07-08 01:53
+# 2024-07-09 23:33
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
 
 # 目前支持：两个BT、烧火电影、素白白影视、韩剧看看
@@ -17,11 +17,12 @@
 # (仅作为VOD的补充，日常以VOD源为主)
 
 [Rewrite]
-^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php header-replace Content-Type application/vnd.apple.mpegURL
+;^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php header-replace Content-Type application/vnd.apple.mpegURL
 
 [Script]
 http-request ^https?:\/\/ykusu\.ykusu\/(.*)\/provide\/vod script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-sources
 http-request ^https?:\/\/ykusu\.ykusu\/getJSON\/(.*).json script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-getJSON
+http-response ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, requires-body = true, timeout = 10, tag = 美剧星球
 
 [Mitm]
 hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net
