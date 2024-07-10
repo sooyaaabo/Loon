@@ -4,12 +4,12 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-07-09 23:40
+#!date = 2024-07-10 08:55
 
-# 2024-07-09 23:33
+# 2024-07-10 06:41
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
 
-# 目前支持：两个BT、烧火电影、素白白影视、韩剧看看
+# 目前支持：两个BT、烧火电影、素白白影视、韩剧看看、美剧星球、耐看点播、短剧天堂、速讯影院
 # 已知问题：
 # 1. 两个BT及素白白经常盗用小红书图床存资源，如果播放失败很可能是被小红书删除了
 # 2. 海外访问小红书cdn会分配到cf ip，速度很慢，解决方法是将域名(dc.xhscdn.com)本地DNS映射到境内ip
@@ -22,7 +22,9 @@
 [Script]
 http-request ^https?:\/\/ykusu\.ykusu\/(.*)\/provide\/vod script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-sources
 http-request ^https?:\/\/ykusu\.ykusu\/getJSON\/(.*).json script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = XPTV-getJSON
-http-response ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, requires-body = true, timeout = 10, tag = 美剧星球
+http-response ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 美剧星球
+http-request ^https:\/\/api\.emasmr\.com.*mp4 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 短剧天堂
+http-response ^https?:\/\/hd\.suxun\.site\/api\.php\/provide\/vod(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 速讯影院
 
 [Mitm]
-hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net
+hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, api.emasmr.com
