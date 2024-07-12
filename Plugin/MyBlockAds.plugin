@@ -4,9 +4,9 @@
 #!author = @RuCu6 @zZPiglet @app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-07-09 12:00
+#!date = 2024-07-12 10:00
 
-# 2024-07-05 17:40
+# 2024-07-12 08:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -84,8 +84,8 @@
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
 # 猫眼 //p0.pipi.cn
-^https:\/\/p0\.pipi\.cn\/adAdmin\/\w+\.jpg\?imageMogr2\/quality\/ reject-dict
-^https:\/\/p0\.pipi\.cn\/adAdmin\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) reject-dict
+^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ reject-dict
+^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.(jpg|png)\?imageMogr2\/thumbnail\/(860x0|!165x165|!1049x1169) reject-dict
 
 # 美团 & 美团外卖 //flowplus.meituan.net, img.meituan.net, s3plus.meituan.net
 ^http:\/\/wmapi\.meituan\.com\/api\/v7\/(loadInfo|openscreen|startpicture)\? reject-dict
