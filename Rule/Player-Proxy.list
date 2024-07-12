@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-07-09 23:35
+# 2024-07-12 17:45
 
 # CMSPlayer
 # 海外看
@@ -81,6 +81,9 @@ DOMAIN, emby.xeton.dev
 DOMAIN, jellyfin.xeton.dev
 DOMAIN, movie.xeton.dev
 DOMAIN, servers.xeton.dev
+# 牢大科蜜野兽
+DOMAIN, emby-us-v4.mius.uk
+DOMAIN, emby-fr-v6.mius.uk
 # 叔服
 DOMAIN, emby3.mcjoker.xyz
 # 私房菜
