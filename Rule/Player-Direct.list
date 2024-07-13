@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-12 17:45
+# 2024-07-13 23:55
 
 # CMSPlayer
 # 低端影视
@@ -116,6 +116,7 @@ DOMAIN-SUFFIX, heimuer.tv
 DOMAIN-SUFFIX, heimuer.pro
 DOMAIN-SUFFIX, heimuer.xyz
 DOMAIN-SUFFIX, heimuer.app
+DOMAIN, m3u8.hmrvideo.com
 # 华为吧
 DOMAIN-SUFFIX, huawei8.live
 DOMAIN-SUFFIX, hw8.live
@@ -196,7 +197,7 @@ DOMAIN-SUFFIX, alicloudccp.com
 DOMAIN, openapi.aliyundrive.com
 DOMAIN, auth.aliyundrive.com
 DOMAIN, api.aliyundrive.com
-#厂长&低端播放
+# 厂长&低端播放
 DOMAIN-SUFFIX, cz01.site
 DOMAIN-SUFFIX, larksuitecdn.com
 DOMAIN-SUFFIX, fotile.com
