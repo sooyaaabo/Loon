@@ -19,36 +19,42 @@
   > **您使用或者复制了本仓库的任何脚本，则视为`已接受`此声明，请仔细阅读。**
 
 ## 鸣谢
-排名不分先后<br>
--   [@RuCu6](https://github.com/RuCu6)<br>
--   [@Keywos](https://github.com/Keywos)<br>
--   [@Maasea](https://github.com/Maasea)<br>
--   [@app2smile](https://github.com/app2smile)<br>
--   [@blackmatrix7](https://github.com/blackmatrix7)<br>
--   [@xream](https://github.com/xream)<br>
--   [@ddgksf2013](https://github.com/ddgksf2013)<br>
--   [@kokoryh](https://github.com/kokoryh)<br>
--   [@Guding88](https://github.com/Guding88)<br>
--   [@chxm1023](https://github.com/chxm1023)<br>
--   [@Yu9191](https://github.com/Yu9191)<br>
--   [@fmz200](https://github.com/fmz200)<br>
--   [@suiyuran](https://github.com/suiyuran)<br>
--   [@zmqcherish](https://github.com/zmqcherish)<br>
--   [@lodepuly](https://gitlab.com/lodepuly/vpn_tool)<br>
--   [@hfg-gmuend](https://github.com/hfg-gmuend)<br>
--   [@ZenmoFeiShi](https://github.com/ZenmoFeiShi)<br>
--   [@app2smile](https://github.com/app2smile)<br>
--   [@Sliverkiss](https://github.com/Sliverkiss)<br>
--   [@Centralmatrix3](https://github.com/Centralmatrix3)<br>
--   [@NobyDa](https://github.com/NobyDa)<br>
--   [@KOP-XIAO](https://github.com/KOP-XIAO)<br>
--   [@Yuheng0101](https://github.com/Yuheng0101)<br>
--   [@Yswag](https://github.com/Yswag)<br>
--   [@FoKit](https://github.com/FoKit)<br>
--   [@xzxxn777](https://github.com/xzxxn777)<br>
+<table width:100%; height:100%>
+    <tr>
+        <td colspan="8" align=center><b>作者（以下排名不分先后）</b></td>
+    </tr>
+    <tr>
+        <td width="125px"><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
+        <td width="125px"><a href="https://github.com/fmz200"><em>@fmz200</em></a></td>
+        <td width="125px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
+        <td width="125px"><a href="https://github.com/app2smile"><em>@app2smile</em></a></td>
+        <td width="125px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
+        <td width="125px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
+        <td width="125px"><a href="https://github.com/ddgksf2013"><em>@ddgksf2013</em></a></td>
+        <td width="125px"><a href="https://github.com/blackmatrix7"><em>@blackmatrix7</em></a></td>
+     </tr>
+     <tr>
+        <td width="125px"><a href="https://github.com/xream"><em>@xream</em></a></td>
+        <td width="125px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
+        <td width="125px"><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
+        <td width="125px"><a href="https://github.com/Guding88"><em>@Guding88</em></a></td>
+        <td width="125px"><a href="https://github.com/chxm1023"><em>@chxm1023</em></a></td>
+        <td width="125px"><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
+        <td width="125px"><a href="https://gitlab.com/lodepuly/vpn_tool"><em>@lodepuly</em></a></td>
+        <td width="125px"><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
+     </tr>
+     <tr>
+        <td width="125px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
+        <td width="125px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
+        <td width="125px"><a href="https://github.com/FoKit"><em>@FoKit</em></a></td>
+        <td width="125px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
+        <td width="125px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
+        <td width="125px"><a href="https://github.com/xzxxn777"><em>@xzxxn777</em></a></td>
+        <td width="125px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
+        <td width="125px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
+     </tr>
+</table>
 
 ## Star History
-![Stars Video](https://scastiel.dev/github-stars?repository=sooyaaabo/Loon)
-
 ![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
 
