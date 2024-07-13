@@ -4,7 +4,7 @@
 #!author = @fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-07-11 22:20
+#!date = 2024-07-13 10:40
 
 # 2024-07-11 21:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -327,8 +327,8 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 ^https?:\/\/api\.dangdang\.com\/mapi\d\/mobile\/init reject
 ^https?:\/\/mapi\.dangdang\.com\/index\.php\?action=init reject
 # 叮咚买菜 - maicai.api.ddxq.mobi
-^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd\?ad_id reject-dict
-^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop reject-dict
+^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/ reject
+^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/getHomeAdPop reject
 # 叮嗒出行 - img.admobile.top, webcdn.m.qq.com
 ^https?:\/\/img\.admobile\.top\/admobile-adRequest\/.*.(jpg|png) reject-200
 ^https?:\/\/webcdn\.m\.qq\.com\/qiantu\/upload\/202[0-9]{5}\/.*.(jpg|png) reject-200
@@ -1796,6 +1796,8 @@ http-response ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway script-path = https
 http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js, requires-body = true, tag = 滴滴出行
 # 大师兄 - sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
 http-response ^https?:\/\/adservice\.sigmob\.cn\/extconfig script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = false -> true, requires-body = true, tag = 大师兄
+# 叮咚买菜 - maicai.api.ddxq.mobi
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = suspension -> random_body, requires-body = true, tag = 叮咚买菜
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # Flightradar24 - mobile.flightradar24.com
