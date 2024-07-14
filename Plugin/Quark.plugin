@@ -1,12 +1,12 @@
 #!name = 夸克
-#!desc = 移除广告，精简我的页面。
+#!desc = 移除阅读广告，精简我的页面。
 #!openUrl = https://apps.apple.com/app/id1160172628
 #!author = @可莉🅥
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Quark.png
-#!date = 2024-07-14 10:20
+#!date = 2024-07-14 23:35
 
-# 2024-07-14 03:12:21
+# 2024-07-14 22:55:24
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QuarkBrowser_remove_ads.plugin
 
 [Rewrite]
