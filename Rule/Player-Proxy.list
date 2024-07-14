@@ -99,6 +99,10 @@ DOMAIN, emby.misakaf.org
 DOMAIN, push-kr.misakaf.org
 DOMAIN-SUFFIX, misakaf.org
 IP-CIDR, 102.223.180.108/32
+# 终点站
+DOMAIN, pub1cf.emby.wtf
+DOMAIN, pub2cf.emby.wtf
+DOMAIN, pub3cf.emby.wtf
 # PiliPili
 DOMAIN-SUFFIX, emby.pilipiliultra.top
 DOMAIN-SUFFIX, emby.pilipiliultra.com
