@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-13 23:55
+# 2024-07-14 11:40
 
 # CMSPlayer
 # 低端影视
@@ -127,6 +127,39 @@ DOMAIN-SUFFIX, infuseku.xyz
 # 两个BT
 DOMAIN-SUFFIX, bttwo.org
 DOMAIN-SUFFIX, bttwoo.com
+DOMAIN-SUFFIX, bttwo.vip
+# 耐看点播
+DOMAIN-SUFFIX, nkvod.com
+# 烧火电影
+DOMAIN-SUFFIX, saohuo.tv
+DOMAIN-SUFFIX, saohuo.us
+DOMAIN-SUFFIX, shdy2.com
+DOMAIN-KEYWORD, saohuo
+# 素白白影院
+DOMAIN-SUFFIX, subaibai.vip
+DOMAIN-SUFFIX, subaibai.com
+DOMAIN-SUFFIX, subaibaiys.com
+DOMAIN-KEYWORD, subaibaiys
+# 速讯影院
+DOMAIN, hd.suxun.site
+DOMAIN-SUFFIX, suxun.site
+DOMAIN-SUFFIX, esuxun.com
+DOMAIN-KEYWORD, suxun
+# 文才资源
+DOMAIN, api.zeqaht.com
+DOMAIN-SUFFIX, zeqaht.com
+# 韩剧看看
+DOMAIN-SUFFIX, hanjukankan.com
+DOMAIN-KEYWORD, hanjukankan
+# AGE动漫
+DOMAIN-SUFFIX, agedm.org
+DOMAIN-SUFFIX, age.tv
+DOMAIN-SUFFIX, agefans.com
+# AnFuns动漫
+DOMAIN-SUFFIX, anfuns.org
+# 短剧天堂
+DOMAIN-SUFFIX, duanjutt.tv
+DOMAIN-KEYWORD, duanjutt
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
 DOMAIN-SUFFIX, czys.top
@@ -159,10 +192,6 @@ DOMAIN-SUFFIX, bdys10.com
 DOMAIN-suffix, ibytedtos.com
 DOMAIN-suffix, toutiao50.com
 DOMAIN-suffix, ibyteimg.com
-# AGE动漫
-DOMAIN-SUFFIX, agedm.org
-DOMAIN-SUFFIX, age.tv
-DOMAIN-SUFFIX, agefans.com
 # LIBVIO
 DOMAIN-SUFFIX, lib.ifabu.vip
 DOMAIN-SUFFIX, libvio.app
@@ -244,6 +273,24 @@ DOMAIN, su.viclub.top
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-KEYWORD, hmrvideo
+DOMAIN-SUFFIX, ykusu.ykusu
+DOMAIN-SUFFIX, myqcloud.com
+DOMAIN-SUFFIX, esuxun.com
+DOMAIN-KEYWORD, duanjutt
+DOMAIN-KEYWORD, suxun
+DOMAIN-KEYWORD, ffzy
+DOMAIN-KEYWORD, cdnlz
+DOMAIN-KEYWORD, lzcdn
+DOMAIN-SUFFIX, bfengbf.com
+DOMAIN-SUFFIX, bfikuncdn.com
+DOMAIN-KEYWORD, tencent-1257389134.cos
+DOMAIN, gvideo.qpic.cn
+DOMAIN, media-hncs-fy-person.hn12oss.ctyunxs.cn
+DOMAIN, qchannelvideo.photo.qq.com
+DOMAIN, sf16-sg.larksuitecdn.com
+DOMAIN, op.xn--it-if7c19g5s4bps5c.com
+DOMAIN, tjdownload.pan.wo.cn
 DOMAIN-SUFFIX, 13to.com
 DOMAIN-KEYWORD, thehanju
 DOMAIN-KEYWORD, hanjukankan

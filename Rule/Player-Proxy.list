@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-07-12 17:45
+# 2024-07-14 11:40
 
 # CMSPlayer
 # 海外看
@@ -32,10 +32,6 @@ DOMAIN-SUFFIX, pub.duboku.net
 DOMAIN-SUFFIX, tv.gboku.com
 #天翼资源
 DOMAIN-SUFFIX, 911ysw.top
-# 耐看点播
-DOMAIN-SUFFIX, nkvod.com
-# 美剧星球
-DOMAIN-SUFFIX, kmeiju.cc
 # TMDB
 DOMAIN-SUFFIX, tmdb.org
 DOMAIN-SUFFIX, themoviedb.org
@@ -66,8 +62,12 @@ DOMAIN-SUFFIX, ibb.co
 ;DOMAIN-SUFFIX, cz233.com
 # ギリギリ动漫
 DOMAIN-SUFFIX, girigirilove.com
+# AnFuns动漫
+DOMAIN-SUFFIX, anfuns.cc
 # 两个BT
 DOMAIN-SUFFIX, bttwo.net
+# 美剧星球
+DOMAIN-SUFFIX, kmeiju.cc
 
 # Emby
 # Paul
