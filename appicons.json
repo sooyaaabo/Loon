@@ -223,6 +223,38 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png"
         },
         {
+            "name": "ThunderDrive",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ThunderDrive.png"
+        },
+        {
+            "name": "123pan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/123pan.png"
+        },
+        {
+            "name": "FeijiPan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/FeijiPan.png"
+        },
+        {
+            "name": "115pan",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/115pan.png"
+        },
+        {
+            "name": "CtfileDrive",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CtfileDrive.png"
+        },
+        {
+            "name": "PikPak",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/PikPak.png"
+        },
+        {
+            "name": "GoogleDrive",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/GoogleDrive.png"
+        },
+        {
+            "name": "OneDrive",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/OneDrive.png"
+        },
+        {
             "name": "Amap",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png"
         },
@@ -322,6 +354,10 @@
             "name": "BilibiliBlue",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliBlue.png"
         },
+	{
+            "name": "Ezviz",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Ezviz.png"
+        },
         {
             "name": "XPTV",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png"
@@ -405,6 +441,10 @@
         {
             "name": "Userscripts",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Userscripts.png"
+        },
+	{
+            "name": "Currency",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Currency.png"
         },
         {
             "name": "Clipboard",

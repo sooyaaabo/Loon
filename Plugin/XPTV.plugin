@@ -4,9 +4,9 @@
 #!author = @Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-07-10 08:55
+#!date = 2024-07-14 10:20
 
-# 2024-07-10 06:41
+# 2024-07-14 08:02
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
 
 # 目前支持：两个BT、烧火电影、素白白影视、韩剧看看、美剧星球、耐看点播、短剧天堂、速讯影院
@@ -25,6 +25,7 @@ http-request ^https?:\/\/ykusu\.ykusu\/getJSON\/(.*).json script-path = https://
 http-response ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 美剧星球
 http-request ^https:\/\/api\.emasmr\.com.*mp4 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 短剧天堂
 http-response ^https?:\/\/hd\.suxun\.site\/api\.php\/provide\/vod(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 速讯影院
+http-request ^https?:\/\/ppvod01\.blbtgg\.com.*(ts|m3u8) script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 文才影院
 
 [Mitm]
-hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, api.emasmr.com
+hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, api.emasmr.com, ppvod01.blbtgg.com

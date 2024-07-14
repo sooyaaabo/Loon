@@ -1,0 +1,22 @@
+#!name = 夸克
+#!desc = 移除广告，精简我的页面。
+#!openUrl = https://apps.apple.com/app/id1160172628
+#!author = @可莉🅥
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Quark.png
+#!date = 2024-07-14 10:20
+
+# 2024-07-14 03:12:21
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QuarkBrowser_remove_ads.plugin
+
+[Rewrite]
+# 小说底部文案广告
+^https:\/\/huichuan\.sm\.cn\/nativead$ reject
+^https:\/\/stars\.shuqireader\.com\/kkios\/render\/load\/resource\/appConfig$ reject-dict
+
+[Script]
+# 精简我的页面
+http-response ^https:\/\/open-cms-api\.quark\.cn\/open-cms script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/QuarkBrowser/QuarkBrowser_remove_ads.js, requires-body = true, tag = 精简我的页面
+
+[Mitm]
+hostname = huichuan.sm.cn, stars.shuqireader.com, open-cms-api.quark.cn
