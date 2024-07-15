@@ -17,7 +17,6 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 [Rewrite]
 # RuCu6
 # 首页活动日历
-# ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_info reject-dict
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
 # 首页板块入口
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
