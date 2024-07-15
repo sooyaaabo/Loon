@@ -28,7 +28,7 @@ if (url.includes("/v1/users/onboard_list")) {
     "banners", // 顶部奖励
     "coreFeatures", // 横版图标
     "introduceAlipan", // 认识阿里云盘
-    "mainBackup", // 手机备份
+    //"mainBackup", // 手机备份
     "minorBackup", // 备份设备列表
     //"signIn" // 签到
   ];
