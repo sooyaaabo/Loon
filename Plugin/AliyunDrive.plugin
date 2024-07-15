@@ -4,7 +4,7 @@
 #!author = @sooyaaabo @ddgksf2013 @RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AliyunDrive.png
-#!date = 2024-07-12 10:00
+#!date = 2024-07-15 22:10
 
 # 2024-07-12 08:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -31,7 +31,7 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 http-response ^https?:\/\/(api|member)\.(aliyundrive|alipan)\.com\/(.+\/(users|activity|user\/get)|((business|apps)\/.+\/users|adrive\/.+\/user)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 阿里云盘净化解锁@sooyaaabo
 
 # RuCu6
-http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 移除阿里云盘广告@RuCu6
+http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 移除阿里云盘广告@RuCu6
 http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 移除阿里云盘广告@RuCu6
 
 # ddgksf2013
