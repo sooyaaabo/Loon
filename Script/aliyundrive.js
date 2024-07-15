@@ -26,10 +26,8 @@ if (url.includes("/v1/users/onboard_list")) {
   const item = [
     // "album", // 相册
     "banners", // 顶部奖励
-    "coreFeatures", // 横版图标
+    //"coreFeatures", // 横版图标
     "introduceAlipan", // 认识阿里云盘
-    "recentWatch", // 最近观看
-    "recentSave" //  最近保存
     // "mainBackup", // 手机备份
     // "minorBackup", // 备份设备列表
     // "signIn" // 签到
