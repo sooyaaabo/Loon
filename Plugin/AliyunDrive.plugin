@@ -1,15 +1,13 @@
 #!name = 阿里云盘
 #!desc = 阿里云盘净化，移除广告
 #!openUrl = https://apps.apple.com/app/id1494661473
-#!author = @sooyaaabo @ddgksf2013 @RuCu6
+#!author = @RuCu6 @sooyaaabo
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AliyunDrive.png
-#!date = 2024-07-15 23:30
+#!date = 2024-07-16 19:00
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
-# 2023-08-05
-# https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js
 
 [Rule]
 IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
@@ -21,24 +19,8 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 # 首页板块入口
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
 
-# ddgksf2013
-^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/onboard_list reject
-^https?:\/\/api\.(aliyundrive|alipan)\.com\/adrive\/v2\/backup\/device reject
-
 [Script]
-# RuCu6
-http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 移除阿里云盘广告@RuCu6
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 移除阿里云盘广告@RuCu6
-
-# ddgksf2013
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.1\/users\/me\/vip\/info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/tools script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v1\/users\/me script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/vip\/info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/business\/v1\.0\/users\/feature\/list script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/api\.(aliyundrive|alipan)\.com\/apps\/v2\/users\/home\/widgets script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/user\.(aliyundrive|alipan)\.com\/v2\/user\/get script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-http-response ^https?:\/\/member\.(aliyundrive|alipan)\.com\/v2\/activity\/sign_in_info script-path = https://gist.githubusercontent.com/ddgksf2013/f4752e632fd3375ea2811985c5b635dc/raw/alicloud.js, requires-body = true, tag = 阿里云盘净化解锁@ddgksf2013
-
+http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 移除阿里云盘广告
+http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 移除阿里云盘广告
 [Mitm]
 hostname = *api.alipan.com, *api.aliyundrive.com, member.alipan.com, member.aliyundrive.com
