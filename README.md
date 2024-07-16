@@ -18,8 +18,6 @@
 
   > **您使用或者复制了本仓库的任何脚本，则视为`已接受`此声明，请仔细阅读。**
 
-<a href="loon://import?plugin=loon://import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/12306_Railway.plugin">12306</a>
-
 ## 鸣谢
 <table width:100%; height:100%>
     <tr>
