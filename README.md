@@ -18,6 +18,20 @@
 
   > **您使用或者复制了本仓库的任何脚本，则视为`已接受`此声明，请仔细阅读。**
 
+<table>
+  <tr>
+    <th>类别</th>
+    <th>序号</th>
+    <th>名称</th>
+  </tr>
+  <tr>
+    <td rowspan="72"><strong>去广告插件</strong></td>
+  <tr>
+    <td>01</td>
+    <td><a href="loon://import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/12306_Railway.plugin">12306</a></td>
+  </tr>
+</table>
+
 ## 鸣谢
 <table width:100%; height:100%>
     <tr>
