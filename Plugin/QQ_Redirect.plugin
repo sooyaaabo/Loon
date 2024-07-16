@@ -2,9 +2,10 @@
 #!desc = 解除QQ内访问非白名单之外的地址提示停止访问该页面的限制，并移除跟踪参数。使用前需要清除QQ的缓存数据。
 #!openUrl = https://apps.apple.com/app/id444934666
 #!author = @可莉🅥
+#!keyword = 重定向, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQ.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-16 23:00
 
 # 2024-06-30 17:23:22
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQ_Redirect.plugin

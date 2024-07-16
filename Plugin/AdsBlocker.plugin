@@ -2,9 +2,10 @@
 #!desc = 针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!openUrl = 
 #!author = @fmz200
+#!keyword = 去广告, fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-07-13 10:40
+#!date = 2024-07-16 23:00
 
 # 2024-07-11 21:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt

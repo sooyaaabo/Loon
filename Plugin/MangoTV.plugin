@@ -2,11 +2,12 @@
 #!desc = 芒果TV去广告
 #!openUrl = https://apps.apple.com/app/id629774477
 #!author = @RuCu6 @Yu9191
+#!keyword = 去广告, 解锁会员, RuCu6, Yu9191
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/MangoTV.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-16 23:40
 
-# 2023-12-09 13:30
+# 2024-07-16 23:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
 
 [Rule]
@@ -45,6 +46,7 @@ URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DI
 
 [Script]
 # 会员解锁
+http-request ^https:\/\/mobile\.api\.mgtv\.com\/v8\/video\/getSource\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/MGTV.js, requires-body = false, tag = 港版会员解锁@Yu9191
 http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
 # 我的页面
 http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 我的页面@RuCu6

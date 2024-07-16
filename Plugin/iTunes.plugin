@@ -1,10 +1,11 @@
 #!name = iTunes
-#!desc = BuyiTunes解锁
+#!desc = Buy iTunes解锁
 #!openUrl = https://apps.apple.com/app/id915061235
 #!author = @chxm1023 @ddgksf2013 @Guding88
+#!keyword = 解锁会员, chxm1023, ddgksf2013, Guding88
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-16 23:00
 
 # 2024-01-10
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js

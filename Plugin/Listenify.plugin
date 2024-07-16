@@ -2,9 +2,10 @@
 #!desc = 从网易云音乐获取歌词与艺人封面
 #!openUrl = https://apps.apple.com/app/id6475892753
 #!author = @Yswag
+#!keyword = 功能增强, Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Listenify.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-16 23:00
 
 # 2024-05-30
 # https://github.com/Yswag/for-own-use/blob/main/module/Listenify.sgmodule

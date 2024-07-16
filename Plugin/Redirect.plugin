@@ -2,9 +2,10 @@
 #!desc = 针对部分网站进行重定向
 #!openUrl = 
 #!author = @blackmatrix7
+#!keyword = 重定向, blackmatrix7
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_302.png
-#!date = 2024-05-01 18:20
+#!date = 2024-07-16 23:00
 
 # 2024-04-29 13:37:18
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rewrite/Loon/Redirect/Redirect.plugin

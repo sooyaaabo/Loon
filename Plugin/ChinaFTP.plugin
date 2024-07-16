@@ -2,11 +2,12 @@
 #!desc = 腾讯视频 爱奇艺 优酷视频 芒果TV
 #!openUrl = 
 #!author = @RuCu6
+#!keyword = 去广告, 解锁会员, RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaFTP.png
-#!date = 2024-03-19 18:00
+#!date = 2024-07-16 23:40
 
-# 2023-12-09 13:30
+# 2024-07-16 23:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
 
 [Rule]

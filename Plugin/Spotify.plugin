@@ -1,10 +1,11 @@
 #!name = Spotify
 #!desc = Spotify过滤广告，歌词增强及双语模块，解锁部分Premium特权。
 #!openUrl = https://apps.apple.com/app/id324684580
-#!author = @app2smile @VirgilClyne @可莉🅥
+#!author = @ddgksf2013 @VirgilClyne @可莉🅥
+#!keyword = 去广告, 功能增强, ddgksf2013, VirgilClyne, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Spotify.png
-#!date = 2024-06-30 19:00
+#!date = 2024-07-16 23:00
 
 # 2024.05.27
 # https://raw.githubusercontent.com/app2smile/rules/master/plugin/spotify.plugin

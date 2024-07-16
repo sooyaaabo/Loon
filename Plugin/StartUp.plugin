@@ -2,9 +2,10 @@
 #!desc = 去除开屏广告，部分APP要清除缓存或者重新安装拦截广告才会生效!
 #!openUrl = 
 #!author = @ddgksf2013
+#!keyword = 去广告, ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-07-14 17:20
+#!date = 2024-07-16 23:00
 
 # 2024-07-14
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf

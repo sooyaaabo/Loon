@@ -2,9 +2,10 @@
 #!desc = 去广告合集，以下app请使用单独配置文件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎
 #!openUrl = 
 #!author = @RuCu6 @zZPiglet @app2smile
+#!keyword = 去广告, RuCu6, zZPiglet, app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-07-15 22:30
+#!date = 2024-07-16 23:00
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

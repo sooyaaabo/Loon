@@ -1,7 +1,8 @@
 #!name = YouTube (Music)
 #!desc = 去除广告，优化界面，支持字幕翻译功能，支持后台播放。支持Premium订阅用户使用，不支持tvOS设备。（若使用VirgilClyne双语字幕翻译插件，则需要禁用本插件的字幕翻译功能，且需将双语字幕翻译插件调整至本插件下方）
 #!openUrl = https://apps.apple.com/app/id544007664
-#!author = @RuCu6 @Maasea @VirgilClyne @可莉🅥
+#!author = @RuCu6 @Maasea @VirgilClyne @Choler @DivineEngine @app2smile @可莉🅥
+#!keyword = 去广告, 功能增强, VirgilClyne, Maasea, Choler, DivineEngine, app2smile, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/YouTube.png
 #!select = 隐藏上传按钮, true, false
@@ -12,7 +13,7 @@
 #select=自动显示翻译字幕,是,否
 #select=仅输出字幕译文,是,否
 #select=字幕译文的位置,译文位于原文之上,译文位于原文之下
-#!date = 2024-06-30 19:00
+#!date = 2024-07-16 23:00
 
 # 2024-05-12 13:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/youtube.snippet
