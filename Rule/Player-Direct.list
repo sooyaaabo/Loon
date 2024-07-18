@@ -158,8 +158,8 @@ DOMAIN-SUFFIX, agefans.com
 # AnFuns动漫
 DOMAIN-SUFFIX, anfuns.org
 # timi芒果TV
-DOMAIN-SUFFIX, mgtv.com, DIRECT
-DOMAIN-SUFFIX, timizy.com, DIRECT
+DOMAIN-SUFFIX, mgtv.com
+DOMAIN-SUFFIX, timizy.com
 # 短剧天堂
 DOMAIN-SUFFIX, duanjutt.tv
 DOMAIN-KEYWORD, duanjutt
@@ -271,17 +271,17 @@ DOMAIN, su.viclub.top
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
-DOMAIN-SUFFIX, 115.com, DIRECT
-DOMAIN-SUFFIX, mgtv.com, DIRECT
-DOMAIN-SUFFIX, timizy.com, DIRECT
-DOMAIN-KEYWORD, ghw9zwp5, DIRECT
-DOMAIN-SUFFIX, ywxohs.com, DIRECT
-DOMAIN-SUFFIX, miyoushe.com, DIRECT
-DOMAIN-KEYWORD, media-oss, DIRECT
-DOMAIN-SUFFIX, netease.com, DIRECT
-DOMAIN-SUFFIX, aliyuncs.com, DIRECT
-DOMAIN-SUFFIX, xmcdn.com, DIRECT
-DOMAIN-SUFFIX, anfuns.org, DIRECT
+DOMAIN-SUFFIX, 115.com
+DOMAIN-SUFFIX, mgtv.com
+DOMAIN-SUFFIX, timizy.com
+DOMAIN-KEYWORD, ghw9zwp5
+DOMAIN-SUFFIX, ywxohs.com
+DOMAIN-SUFFIX, miyoushe.com
+DOMAIN-KEYWORD, media-oss
+DOMAIN-SUFFIX, netease.com
+DOMAIN-SUFFIX, aliyuncs.com
+DOMAIN-SUFFIX, xmcdn.com
+DOMAIN-SUFFIX, anfuns.org
 DOMAIN-KEYWORD, hmrvideo
 DOMAIN-SUFFIX, ykusu.ykusu
 DOMAIN-SUFFIX, myqcloud.com
