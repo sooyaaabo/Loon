@@ -1,21 +1,75 @@
 #!name = 酷我音乐
 #!desc = 解锁会员皮肤、会员音频(至高320K)、听书权限, 配合其他去广告脚本达到最佳效果
 #!openUrl = https://apps.apple.com/app/id588673713
-#!author = @Yuheng0101
-#!keyword = 解锁会员, Yuheng0101
+#!author = @Yuheng0101 @可莉🅥
+#!keyword = 去广告, 解锁会员, Yuheng0101, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-18 09:30
 
 # version 1.0.1
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
+# 2024-07-18 05:09:37
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Kuwo_remove_ads.plugin
 
 [Rule]
-USER-AGENT, KWPlayer*, DIRECT
-DOMAIN-SUFFIX, kuwo.cn, DIRECT
+# 拦截HTTPDNS
+DOMAIN, serveraddr.service.kugou.com, REJECT
+DOMAIN, twns.p2ptun.qq.com, REJECT
+DOMAIN, tp2p.kg.qq.com, REJECT
+IP-CIDR, 81.71.61.216/32, REJECT, no-resolve
+# 腾讯优量汇 - 广告服务商
+DOMAIN, ios.bugly.qq.com, REJECT
+DOMAIN, mazu.m.qq.com, REJECT
+DOMAIN, sdk.e.qq.com, REJECT
+DOMAIN, us.l.qq.com, REJECT
+DOMAIN-SUFFIX, ugdtimg.com, REJECT
+# DOMAIN, adsmind.ugdtimg.com, REJECT
+# DOMAIN, pgdt.ugdtimg.com, REJECT
+# DOMAIN, qzs.gdtimg.com, REJECT
+DOMAIN, i.gtimg.cn, REJECT
+DOMAIN-SUFFIX, gdt.qq.com, REJECT
+# DOMAIN, mi.gdt.qq.com, REJECT
+# DOMAIN, win.gdt.qq.com, REJECT
+# DOMAIN, v2.gdt.qq.com, REJECT
+# v.gdt.qq.com, REJECT
+# t.gdt.qq.com, REJECT
+# c2.gdt.qq.com, REJECT
+DOMAIN, tmeadcomm.y.qq.com, REJECT
+DOMAIN, mobilead.kuwo.cn, REJECT
+DOMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, adsmind.gdtimg.com, REJECT
+DOMAIN, ad.tencentmusic.com, REJECT
+DOMAIN, mc.tencentmusic.com, REJECT
+# 广告配置
+URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/AdService\/, REJECT-DICT
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/, REJECT-DICT
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/, REJECT-DICT
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config, REJECT-DICT
+URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/, REJECT-DICT
+URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/AdService\/, REJECT-DICT
+IP-CIDR, 111.206.98.63/32, REJECT, no-resolve
+# 搜索填充词
+URL-REGEX, ^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s, REJECT-DICT
+# 精简我的页面侧边栏
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/newMenuList\/menuListInfo, REJECT-DICT
+# 迷你播放器横幅
+URL-REGEX, ^http:\/\/vip\d\.kuwo\.cn\/vip\/v\d\/sysinfo\?op=getRePayAndDoPayBox, REJECT-DICT
+# 听书页面广告
+URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/album\/adBar\/, REJECT-DICT
+
+[Rewrite]
+# 首页 - 推广语
+^https:\/\/vip\d\.kuwo\.cn\/commercia\/vipconf\/projectPage\/getPageContent reject-dict
+^https:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/user\/info reject-dict
+# 我的页面横幅
+^https:\/\/appi\.kuwo\.cn\/kuwopay\/personal\/cells reject-dict
 
 [Script]
-http-response ^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info) script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body = true, timeout = 60, tag = 酷我音乐
+# 会员
+http-response ^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info) script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body = true, timeout = 60, tag = 酷我音乐会员
+# 移除听书页面广告
+http-response ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/tingshu\/index\/radio script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Kuwo/Kuwo_remove_ads.js, requires-body = true, tag = 移除听书页面广告
 
 [Mitm]
-hostname = *.kuwo.cn
+hostname = appi.kuwo.cn, mc.tencentmusic.com, vip*.kuwo.cn, tingshu.kuwo.cn, *.kuwo.cn
