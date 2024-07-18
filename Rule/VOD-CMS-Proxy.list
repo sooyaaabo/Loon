@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-07-14 11:40
+# 2024-07-18 23:20
 
 # CMSPlayer
 # 海外看
@@ -68,51 +68,3 @@ DOMAIN-SUFFIX, anfuns.cc
 DOMAIN-SUFFIX, bttwo.net
 # 美剧星球
 DOMAIN-SUFFIX, kmeiju.cc
-
-# Emby
-# Paul
-DOMAIN-SUFFIX, imetyou.top
-# 江湖
-DOMAIN-SUFFIX, reddust.link
-# 普拉斯影业
-DOMAIN, emby-cf.plusmedia.site
-DOMAIN, emby.plusmedia.site
-DOMAIN, emby.xeton.dev
-DOMAIN, jellyfin.xeton.dev
-DOMAIN, movie.xeton.dev
-DOMAIN, servers.xeton.dev
-# 牢大科蜜野兽
-DOMAIN, emby-us-v4.mius.uk
-DOMAIN, emby-fr-v6.mius.uk
-# 叔服
-DOMAIN, emby3.mcjoker.xyz
-# 私房菜
-DOMAIN, notnetflix.cos.cat
-# Lend
-DOMAIN, emby.lcloud.wiki
-# Marmot
-DOMAIN, v.20120714.xyz
-# MisakaF
-DOMAIN, emby.aca.best
-DOMAIN, porn.aca.best
-DOMAIN, emby.misakaf.org
-DOMAIN, push-kr.misakaf.org
-DOMAIN-SUFFIX, misakaf.org
-IP-CIDR, 102.223.180.108/32
-# 终点站
-DOMAIN, pub1cf.emby.wtf
-DOMAIN, pub2cf.emby.wtf
-DOMAIN, pub3cf.emby.wtf
-# PiliPili
-DOMAIN-SUFFIX, emby.pilipiliultra.top
-DOMAIN-SUFFIX, emby.pilipiliultra.com
-# NMEmby
-DOMAIN, film.ohhhh.org
-# Temby
-DOMAIN, temby.285286.xyz
-DOMAIN, temby4837.285286.xyz
-# TreeDiagram
-;DOMAIN, 789.123456.al
-# ntRRR
-DOMAIN, stream.ntrrr.top
-DOMAIN, stream.synn.cc
