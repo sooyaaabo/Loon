@@ -5,9 +5,9 @@
 #!keyword = 去广告, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliComics.png
-#!date = 2024-07-19 09:20
+#!date = 2024-07-19 10:00
 
-# 2024-07-19 08:08:11
+# 2024-07-19 09:51:31
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BiliComic_remove_ads.plugin
 
 [Rule]
@@ -44,7 +44,7 @@ http-response ^https:\/\/manga\.bilibili\.com\/twirp\/comic\.v\d\.Comic\/GetClas
 # 我的页面
 http-response ^https:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/UCenterConf script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BiliComic/BiliComic_remove_ads.js, requires-body = true, tag = 精简我的页面
 # 小说列表横幅
-http-response ^https:\/\/manga\.bilibili\.com\/twirp\/novel\.v\d\.Home\/Home script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BiliComic/BiliComic_remove_ads.js, requires-body = true, tag = 移除小说列表横幅
+# http-response ^https:\/\/manga\.bilibili\.com\/twirp\/novel\.v\d\.Home\/Home script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/BiliComic/BiliComic_remove_ads.js, requires-body = true, tag = 移除小说列表横幅
 
 [Mitm]
 hostname = manga.bilibili.com
