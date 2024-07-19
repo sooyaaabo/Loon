@@ -1,22 +1,31 @@
 #!name = 酷安
 #!desc = 过滤酷安广告
 #!openUrl = https://apps.apple.com/app/id1422581869
-#!author = @RuCu6
-#!keyword = 去广告, RuCu6
+#!author = @RuCu6 @ZenmoFeiShi
+#!keyword = 去广告, RuCu6, ZenmoFeiShi
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CoolApk.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-19 09:00
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# 2024-07-19 00:45
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.snippet
 
 [Rewrite]
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
 [Script]
-http-response ^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 移除酷安广告
-http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 移除酷安广告
-http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 移除酷安广告
+# RuCu6
+http-response ^https:\/\/api\.coolapk\.com\/v6\/feed\/(detail|replyList)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 移除酷安广告@RuCu6
+http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 移除酷安广告@RuCu6
+http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 移除酷安广告@RuCu6
+
+# ZenmoFeiShi
+http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告@ZenmoFeiShi
+http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8 script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告@ZenmoFeiShi
+http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告@ZenmoFeiShi
+http-response ^https:\/\/api\.coolapk\.com\/v6\/account\/loadConfig\?key=my_page_card_config script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告@ZenmoFeiShi
 
 [Mitm]
 hostname = api.coolapk.com
