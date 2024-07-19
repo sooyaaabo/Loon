@@ -347,12 +347,20 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/MangoTV.png"
         },
         {
-            "name": "BilibiliRed",
+            "name": "Bilibili",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliRed.png"
         },
         {
-            "name": "BilibiliBlue",
+            "name": "Bilibili",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliBlue.png"
+        },
+	{
+            "name": "Bilibili",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliWhite.png"
+        },
+	{
+            "name": "BilibiliComics",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BilibiliComics.png"
         },
 	{
             "name": "Ezviz",
