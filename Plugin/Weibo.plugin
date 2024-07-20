@@ -21,7 +21,7 @@ DOMAIN, bootpreload.uve.weibo.com, REJECT
 URL-REGEX, ^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload), REJECT-DROP
 URL-REGEX, ^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/, REJECT-DROP
 # 其他广告
-DOMAIN, f.video.weibocdn.com, REJECT
+;DOMAIN, f.video.weibocdn.com, REJECT
 DOMAIN-SUFFIX, fastimage.uve.weibo.com, REJECT
 DOMAIN-SUFFIX, adimg.vue.weibo.com, REJECT
 DOMAIN-SUFFIX, zymo.mps.weibo.com, REJECT
