@@ -5,7 +5,7 @@
 #!keyword = 去广告, 解锁会员, Yuheng0101, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
-#!date = 2024-07-18 09:30
+#!date = 2024-07-20 10:55
 
 # version 1.0.1
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
@@ -47,7 +47,6 @@ URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/, REJECT-DICT
 URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/, REJECT-DICT
 URL-REGEX, ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config, REJECT-DICT
 URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/, REJECT-DICT
-URL-REGEX, ^http:\/\/rich\.kuwo\.cn\/AdService\/, REJECT-DICT
 IP-CIDR, 111.206.98.63/32, REJECT, no-resolve
 # 搜索填充词
 URL-REGEX, ^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s, REJECT-DICT
