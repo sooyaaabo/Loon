@@ -1,11 +1,11 @@
 #!name = 百度网盘
 #!desc = 去除百度网盘广告，解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
 #!openUrl = https://apps.apple.com/app/id547166701
-#!author = @RuCu6 @chxm1023 @ddgksf2013
-#!keyword = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013
+#!author = @RuCu6 @chxm1023 @ddgksf2013 @可莉🅥
+#!keyword = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-20 10:10
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -21,6 +21,14 @@ IP-CIDR, 180.76.76.200/32, REJECT, no-resolve
 [Rewrite]
 # RuCu6
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
+
+# 可莉🅥
+# 应用配置
+^https:\/\/pan\.baidu\.com\/api\/getsyscfg reject-dict
+# 签到任务配置
+^https:\/\/pan\.baidu\.com\/api\/taskscore\/tasklist reject-dict
+# 弹窗配置
+^https:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-dict
 
 # ddgksf2013
 # 设置信息流
