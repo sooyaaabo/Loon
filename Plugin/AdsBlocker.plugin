@@ -1,11 +1,11 @@
-#!name = 广告拦截器
+#!name = 广告拦截合集
 #!desc = 针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!openUrl = 
 #!author = @fmz200
 #!keyword = 去广告, fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-22 22:25
 
 # 2024-07-11 21:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1107,7 +1107,6 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # 省省回头车 - www.ymm56.com
 ^https:\/\/www\.ymm56\.com\/short-distance-match-app\/openAppAd reject-dict
 
-
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # Talkatone - alt-r.my.com, imgx.jampp.com
 ^https?:\/\/alt-r\.my\.com\/mobile reject-dict
@@ -1607,7 +1606,6 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/imcs\.citicbank\.com\/cloud\/.+(1125.+2436|1242.+2688|750.+1638|563.+1218) reject-dict
 # 中国移动 - client.app.coc.10086.cn, h.client.app.coc.10086.cn, app.10086.cn
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) reject
-;^https?:\/\/(client\.app\.coc|h\.app\.coc|app)\.10086\.cn\/biz-orange\/DN\/emotionMarket reject
 # 中国移动 江苏 - wap.js.10086.cn
 ^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query reject
 # 中国移动 安徽 - api.ahmobile.cn
