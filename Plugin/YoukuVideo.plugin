@@ -1,13 +1,13 @@
 #!name = 优酷视频
-#!desc = 优酷视频去广告
+#!desc = 为好内容 全力以赴
 #!openUrl = https://apps.apple.com/app/id336141475
 #!author = @RuCu6
 #!keyword = 去广告, RuCu6
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Youku.png
-#!date = 2024-07-22 18:16
+#!date = 2024-07-22 23:15
 
-# 2024-07-22 16:10
+# 2024-07-22 22:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
 
 [Rule]
