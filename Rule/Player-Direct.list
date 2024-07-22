@@ -127,6 +127,8 @@ DOMAIN-SUFFIX, ecmys.cc
 # 影视猫
 DOMAIN, ysm.tkbot.fun
 DOMAIN-SUFFIX, tkbot.fun
+# TIMI蓝光
+DOMAIN-SUFFIX, zyz.ikum.cc
 # 4K电影馆
 DOMAIN-SUFFIX, 4kdyg.vip
 DOMAIN-SUFFIX, 4kdyg.com
@@ -283,6 +285,9 @@ DOMAIN, su.viclub.top
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-SUFFIX, cloudflarestorage.com
+DOMAIN-SUFFIX, ho7k.com
+DOMAIN-SUFFIX, dsakf23665.com
 DOMAIN-SUFFIX, 115.com
 DOMAIN-SUFFIX, mgtv.com
 DOMAIN-SUFFIX, timizy.com
