@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-22 10:45
+# 2024-07-22 19:00
 
 # CMSPlayer
 # 低端影视
@@ -120,6 +120,18 @@ DOMAIN, m3u8.hmrvideo.com
 # 华为吧
 DOMAIN-SUFFIX, huawei8.live
 DOMAIN-SUFFIX, hw8.live
+# 二次萌影视
+DOMAIN-SUFFIX, ecmys.com
+DOMAIN-SUFFIX, ecmys.top
+DOMAIN-SUFFIX, ecmys.cc
+# 影视猫
+DOMAIN, ysm.tkbot.fun
+DOMAIN-SUFFIX, tkbot.fun
+# 4K电影馆
+DOMAIN-SUFFIX, 4kdyg.vip
+DOMAIN-SUFFIX, 4kdyg.com
+DOMAIN-SUFFIX, 4kdyg.top
+DOMAIN-SUFFIX, wangyoung.com
 
 # XPTV
 # 探索页
