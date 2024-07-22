@@ -15,13 +15,13 @@
 # https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Guding.plugin
 
 [Script]
-# Guding88
-http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = true, tag = Revenuecat合集@Guding88
-http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, tag = Revenuecat清除缓存@Guding88
-
 # chxm1023
 http-response ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body = true, tag = RevenueCat解锁@chxm1023
 http-request ^https?:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/?(.*?)*$) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js, requires-body = false, tag = RevenueCat解锁@chxm1023
+
+# Guding88
+http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, requires-body = true, tag = Revenuecat合集@Guding88
+http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, tag = Revenuecat清除缓存@Guding88
 
 # ddgksf2013
 http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body = true, tag = RevenueCat解锁@ddgksf2013
