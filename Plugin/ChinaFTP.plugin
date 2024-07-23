@@ -5,7 +5,7 @@
 #!keyword = 去广告, 解锁会员, RuCu6,Yu9191
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaFTP.png
-#!date = 2024-07-22 23:15
+#!date = 2024-07-23 19:40
 
 # 2024-07-22 22:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
@@ -78,8 +78,13 @@ DOMAIN, rprain.bz.mgtv.com, REJECT
 DOMAIN, rprain.log.mgtv.com, REJECT
 DOMAIN, vip.bz.mgtv.com, REJECT
 DOMAIN-SUFFIX, da.mgtv.com, REJECT
+# 无用请求
 URL-REGEX, ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes, REJECT
+# 首页左上角推广
 URL-REGEX, ^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\?, REJECT-DICT
+# 播放详情页
+URL-REGEX, ^http:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/cms\/list\?, REJECT-DICT
+# 搜索框填充词
 URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DICT
 
 [Rewrite]
