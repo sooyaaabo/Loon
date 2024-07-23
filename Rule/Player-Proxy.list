@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-07-22 19:00
+# 2024-07-23 23:00
 
 # CMSPlayer
 # 海外看
@@ -113,3 +113,5 @@ DOMAIN, temby4837.285286.xyz
 # ntRRR
 DOMAIN, stream.ntrrr.top
 DOMAIN, stream.synn.cc
+# 大V影院
+DOMAIN, su.viclub.top

@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-22 19:00
+# 2024-07-23 23:00
 
 # CMSPlayer
 # 低端影视
@@ -279,8 +279,7 @@ DOMAIN-SUFFIX, cloudfront.net
 DOMAIN, pub1.emby.wtf
 DOMAIN, pub2.emby.wtf
 DOMAIN, pub3.emby.wtf
-# 大V影院
-DOMAIN, su.viclub.top
+
 
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
