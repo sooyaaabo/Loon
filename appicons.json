@@ -435,14 +435,6 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LEMO%20FM.png"
         },
         {
-            "name": "eTicket",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/eTicket.png"
-        },
-        {
-            "name": "NotBoring",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NotBoring.png"
-        },
-        {
             "name": "Toolbox",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Toolbox.png"
         },
@@ -453,10 +445,6 @@
 	{
             "name": "Currency",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Currency.png"
-        },
-        {
-            "name": "Clipboard",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Clipboard.png"
         },
         {
             "name": "Arc",
@@ -501,10 +489,6 @@
         {
             "name": "Speedtest",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Speedtest.png"
-        },
-        {
-            "name": "FastCom",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/FastCom.png"
         },
         {
             "name": "Instagram",
@@ -557,14 +541,6 @@
         {
             "name": "BoxJS",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BoxJS.png"
-        },
-        {
-            "name": "Scriptable",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Scriptable.png"
-        },
-        {
-            "name": "JSeaForJavaScript",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JSeaForJavaScript.png"
         },
         {
             "name": "RevenueCat-icon",
