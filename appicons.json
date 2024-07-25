@@ -319,8 +319,8 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NeteaseMusic.png"
         },
         {
-            "name": "LMPMusic",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LMPMusic.png"
+            "name": "LMP",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LMP.png"
         },
         {
             "name": "LightPlayer",
@@ -369,10 +369,6 @@
         {
             "name": "XPTV",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png"
-        },
-        {
-            "name": "CMSPlayer",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer.png"
         },
         {
             "name": "CMSPlayer",
