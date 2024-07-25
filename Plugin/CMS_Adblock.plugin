@@ -5,9 +5,10 @@
 #!keyword = 去广告, Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
-#!date = 2024-07-23 19:40
+#!select = 弹窗通知, true, false
+#!date = 2024-07-25 22:25
 
-# 2024-07-23 19:28
+# 2024-07-25 22:24
 # https://github.com/Yswag/for-own-use/blob/main/module/cmsAdblock.sgmodule
 
 [Rewrite]
