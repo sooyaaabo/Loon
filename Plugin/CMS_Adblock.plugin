@@ -1,12 +1,12 @@
 #!name = CMS_Adblock
 #!desc = 去除CMS资源插入式广告
-#!openUrl = https://apps.apple.com/app/id6450680262
+#!openUrl = https://apps.apple.com/app/id6459409368
 #!author = @Yswag
 #!keyword = 去广告, Yswag
 #!homepage = https://github.com/sooyaaabo/Loon
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
 #!select = 弹窗通知, true, false
-#!date = 2024-07-25 22:25
+#!date = 2024-07-25 22:30
 
 # 2024-07-25 22:24
 # https://github.com/Yswag/for-own-use/blob/main/module/cmsAdblock.sgmodule
