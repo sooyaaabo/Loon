@@ -5,7 +5,7 @@
 #!keyword = 解锁会员, chxm1023, ddgksf2013, Guding88
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RevenueCat-icon.png
-#!date = 2024-07-22 09:45
+#!date = 2024-07-26 20:10
 
 # 2023-12-24
 # https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin
@@ -24,8 +24,8 @@ http-response ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receip
 http-request ^https?:\/\/api\.revenuecat\.com\/v1\/(subscribers\/[^\/]+$|receipts$) script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_Revenuecat.js, tag = Revenuecat清除缓存@Guding88
 
 # ddgksf2013
-http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body = true, tag = RevenueCat解锁@ddgksf2013
-http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, requires-body = false, tag = RevenueCat解锁@ddgksf2013
+http-response ^https:\/\/api\.revenuecat\.com\/.+\/(receipts$|subscribers\/[^/]+$) script-path = https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js, requires-body = true, tag = RevenueCatVip@ddgksf2013
+http-request ^https:\/\/api\.revenuecat\.com\/.+\/(receipts|subscribers) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/deleteHeader.js, requires-body = false, tag = RevenueCatDeleteHeader@ddgksf2013
 
 [Mitm]
 hostname = api.revenuecat.com
