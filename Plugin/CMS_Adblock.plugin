@@ -17,8 +17,7 @@
 
 [Script]
 # SFW
-http-response ^https?:\/\/m3u\.haiwaikan\.com\/xm3u8\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 海外看
-http-response ^https?:\/\/m3u8\.hmrvideo\.com\/play\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, timeout = 30, tag = 黑木耳
+# http-response ^https?:\/\/m3u8\.hmrvideo\.com\/play\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, timeout = 30, tag = 黑木耳
 http-response ^https?:\/\/((?:v\.lzcdn|v\.cdnlz|vip.*\.lz[-]?cdn)\d+\.com)\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 量子资源
 http-response ^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 非凡资源
 http-response ^https?:\/\/s\d+\.bfengbf\.com\/video\/(.+)\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 暴风影视
