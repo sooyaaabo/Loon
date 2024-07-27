@@ -5,7 +5,7 @@
 #!keyword = 去广告, 解锁会员, Yuheng0101, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
-#!date = 2024-07-27 22:00
+#!date = 2024-07-27 23:00
 
 # version 1.0.1
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
@@ -13,6 +13,8 @@
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Kuwo_remove_ads.plugin
 
 [Rule]
+DOMAIN, g.koowo.com, REJECT
+DOMAIN, rich.kuwo.cn, REJECT
 # 拦截HTTPDNS
 DOMAIN, serveraddr.service.kugou.com, REJECT
 DOMAIN, twns.p2ptun.qq.com, REJECT
