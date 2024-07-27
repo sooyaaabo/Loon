@@ -5,7 +5,7 @@
 #!keyword = 去广告, 功能增强, RuCu6, zZPiglet, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/WeChat.png
-#!date = 2024-07-20 22:50
+#!date = 2024-07-27 23:00
 
 # 2024-07-13 21:08:47
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
@@ -15,6 +15,7 @@
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
 [Rule]
+DOMAIN, badjs.weixinbridge.com, REJECT
 #---------- 微信公众号 ----------#
 DOMAIN, wxsnsdy.wxs.qq.com, REJECT
 DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
