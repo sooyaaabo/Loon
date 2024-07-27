@@ -1,13 +1,13 @@
-#!name = 墨鱼去开屏广告
+#!name = 墨鱼去开屏
 #!desc = 去除开屏广告，部分APP要清除缓存或者重新安装拦截广告才会生效!
 #!openUrl = 
 #!author = @ddgksf2013
 #!keyword = 去广告, ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-07-26 21:20
+#!date = 2024-07-27 20:30
 
-# 2024-07-26
+# 2024-07-27
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -525,7 +525,9 @@
 # 淘宝
 ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get reject-200
 # 团团加油
-^https?:\/\/www\.zjyilin\.com\/hykweb\/\/index\/openImg url reject-200
+^https?:\/\/www\.zjyilin\.com\/hykweb\/\/index\/openImg reject-200
+# 天猫
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.fc\.resource\.tacdata\.get reject-200
 
 # ======= W ======= #
 # 唯品会
@@ -596,7 +598,7 @@
 # 小爱音箱
 ^https?:\/\/info\.mina\.mi\.com\/advertise\/splash reject-200
 # 雪球
-^https?:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json url reject-200
+^https?:\/\/api\.xueqiu\.com\/snowpard\/launch_strategy\/query\.json reject-200
 # 小猿搜题
 ^https?:\/\/.*yuanfudao\.com\/iphone\/splashes reject-200
 # 小猿口算
