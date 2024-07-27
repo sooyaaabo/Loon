@@ -18,45 +18,213 @@
 
   > **您使用或者复制了本仓库的任何脚本，则视为`已接受`此声明，请仔细阅读。**
 
-## 鸣谢
-<table width:100%; height:100%>
+## 插件列表
+- 列表中所有插件可直接点击链接一键添加，自动跳转至Loon，无需复制链接手动添加。
+<table>
     <tr>
-        <td colspan="6" align=center><b>作者（以下排名不分先后）</b></td>
+        <th>类别</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
     </tr>
     <tr>
-        <td width="150px"><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
-        <td width="150px"><a href="https://github.com/fmz200"><em>@fmz200</em></a></td>
-        <td width="150px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
-        <td width="150px"><a href="https://github.com/app2smile"><em>@app2smile</em></a></td>
-        <td width="150px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
-        <td width="150px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
-     </tr>
-     <tr>
-        <td width="150px"><a href="https://github.com/xream"><em>@xream</em></a></td>
-        <td width="150px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
-        <td width="150px"><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
-        <td width="150px"><a href="https://github.com/Guding88"><em>@Guding88</em></a></td>
-        <td width="150px"><a href="https://github.com/chxm1023"><em>@chxm1023</em></a></td>
-        <td width="150px"><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
-     </tr>
-     <tr>
-        <td width="150px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
-        <td width="150px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
-        <td width="150px"><a href="https://github.com/FoKit"><em>@FoKit</em></a></td>
-        <td width="150px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
-        <td width="150px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
-        <td width="150px"><a href="https://github.com/xzxxn777"><em>@xzxxn777</em></a></td>
-     </tr>
-     <tr>
-        <td width="150px"><a href="https://github.com/ddgksf2013"><em>@ddgksf2013</em></a></td>
-        <td width="150px"><a href="https://github.com/blackmatrix7"><em>@blackmatrix7</em></a></td>
-        <td width="150px"><a href="https://gitlab.com/lodepuly/vpn_tool"><em>@lodepuly</em></a></td>
-        <td width="150px"><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
-        <td width="150px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
-        <td width="150px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
-     </tr>
+        <td width="95px" rowspan="20"><strong>去广告</strong></td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/12306_Railway.plugin">铁路12306</a></td>
+        <td>02</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AdsBlocker.plugin">广告拦截合集</a></td>
+        <td>03</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AliyunDrive.plugin">阿里云盘</a></td>
+        <td>04</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Amap.plugin">高德地图</a></td>
+    </tr>
+    <tr>
+        <td>05</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduNetdisk.plugin">百度网盘</a></td>
+        <td>06</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bank.plugin">银行</a></td>
+        <td>07</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BiliBili.plugin">哔哩哔哩</a></td>
+        <td>08</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BilibiliComics.plugin">哔哩哔哩漫画</a></td>
+    </tr>
+    <tr>
+        <td>09</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CMS_Adblock.plugin">CMS Adblocker</a></td>
+        <td>10</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CaiNiao.plugin">菜鸟</a></td>
+        <td>11</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CoolApk.plugin">酷安</a></td>
+        <td>12</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Ezviz.plugin">萤石云视频</a></td>
+    </tr>
+    <tr>
+        <td>13</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Goofish.plugin">闲鱼</a></td>
+        <td>14</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Himalaya.plugin">喜马拉雅</a></td>
+        <td>15</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/IQIYI.plugin">爱奇艺</a></td>
+        <td>16</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/IThome.plugin">IT之家</a></td>
+    </tr>
+    <tr>
+        <td>17</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/JingDong.plugin">京东</a></td>
+        <td>18</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/KuwoMusic.plugin">酷我音乐</a></td>
+        <td>19</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/MangoTV.plugin">芒果TV</a></td>
+        <td>20</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/MyBlockAds.plugin">MyBlockAds</a></td>
+    </tr>
+    <tr>
+        <td>21</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NeteaseMusic.plugin">网易云音乐</a></td>
+        <td>22</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/QQMusic.plugin">QQ音乐</a></td>
+        <td>23</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Quark.plugin">夸克</a></td>
+        <td>24</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/RedPaper.plugin">小红书</a></td>
+    </tr>
+    <tr>
+        <td>25</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Soul.plugin">Soul</a></td>
+        <td>26</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Spotify.plugin">Spotify</a></td>
+        <td>27</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUp.plugin">墨鱼去开屏广告</a></td>
+        <td>28</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Taobao.plugin">淘宝</a></td>
+    </tr>
+    <tr>
+        <td>29</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TencentVideo.plugin">腾讯视频</a></td>
+        <td>30</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ThunderDrive.plugin">迅雷</a></td>
+        <td>31</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WeChat.plugin">微信</a></td>
+        <td>32</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WebPage.plugin">WebPage</a></td>
+    </tr>
+    <tr>
+        <td>33</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo.plugin">微博</a></td>
+        <td>34</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo_intl.plugin">微博轻享版</a></td>
+        <td>35</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube (Music)</a></td>
+        <td>36</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YoukuVideo.plugin">优酷视频</a></td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhidemai.plugin">什么值得买</a></td>
+        <td>38</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhihu.plugin">知乎</a></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>类别</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+    </tr>
+    <tr>
+        <td width="95px" rowspan="10"><strong>功能增强</strong></td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Google.plugin">Google</a></td>
+        <td>02</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Listenify.plugin">Listenify</a></td>
+        <td>03</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp.plugin">入口落地查询</a></td>
+        <td>04</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeTools.plugin">节点检测工具</a></td>
+    </tr>
+    <tr>
+        <td>05</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/QQ_Redirect.plugin">QQ链接解锁</a></td>
+        <td>06</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Redirect.plugin">重定向</a></td>
+        <td>07</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
+        <td>08</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TikTok.plugin">TikTok</a></td>
+    </tr>
+    <tr>
+        <td>09</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
+        <td>10</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>类别</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+    </tr>
+    <tr>
+        <td width="95px" rowspan="10"><strong>会员解锁</strong></td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AppRaven.plugin">AppRaven</a></td>
+        <td>02</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Nicegram.plugin">Nicegram</a></td>
+        <td>03</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/RevenueCat.plugin">RevenueCat</a></td>
+        <td>04</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iTunes.plugin">iTunes</a></td>
+    </tr>
+</table>
+
+<table>
+    <tr>
+        <th>类别</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
+    </tr>
+    <tr>
+        <td width="95px" rowspan="10"><strong>定时任务</strong></td>
+    </tr>
+    <tr>
+        <td>01</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/GetCookie.plugin">Cookie获取</a></td>
+        <td>02</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TaskCheckin.plugin">Task签到</a></td>
+        <td>03</td>
+        <td width="160px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight_AutoJoin.plugin">TestFlight自动加入</a></td>
+    </tr>
 </table>
 
 ## Star History
 ![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
-
