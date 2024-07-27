@@ -5,9 +5,9 @@
 #!keyword = 去广告, RuCu6, app2smile, blackmatrix7
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-27 22:50
 
-# 2024-04-29 00:55
+# 2024-07-27 22:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet
 
 [Rule]
@@ -58,6 +58,7 @@ http-response ^https:\/\/api\.zhihu\.com\/(answers|articles)\/v2\/\d+ script-pat
 http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
 http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
 http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
 http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
 # 会员页面 - 弹窗,悬浮动图
 http-response ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除知乎会员弹窗
