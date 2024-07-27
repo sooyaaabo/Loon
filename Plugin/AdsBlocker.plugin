@@ -5,7 +5,7 @@
 #!keyword = 去广告, fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-07-24 22:20
+#!date = 2024-07-27 20:35
 
 # 2024-07-24 21:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -106,7 +106,7 @@
 ^https?:\/\/www\.onstar\.com\.cn\/mssos\/sos\/social\/v1\/community\/article\/page reject-dict
 ^https?:\/\/api\.shanghaionstar\.com\/sos\/contentinfo\/v1\/public\/landingpage reject-dict
 # 澳觅 - interface.aomiapp.com
-^https?:\/\/interface\.aomiapp\.com\/aomi-ads url reject
+^https?:\/\/interface\.aomiapp\.com\/aomi-ads reject
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # Blued - social.blued.cn
@@ -697,7 +697,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/res\.kfc\.com\.cn\/CRM\/kfcad\/apphome6\/\w+\.json\? reject-dict
 ^https?:\/\/res\.kfc\.com.\cn\/advertisement\/ reject
 # 考公雷达 - api.gongkaoleida.com
-^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info url reject-dict
+^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info reject-dict
 
 # >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<
 # 拉卡拉 - lamb.lakala.com, wallet.lakala.com
@@ -770,7 +770,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/s3plus\.meituan\.net\/ocean-blk-index\/index\/blk_conf_73\.json reject-dict
 ^https?:\/\/s3plus\.meituan\.net\/v1\/mss_\w+\/(brandcpt-vedio|waimai-alita)\/\w+\.zip$ reject-dict
 # 美团订单详情页更多推荐
-^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends url reject-dict
+^https?:\/\/apimobile\.meituan\.com\/group\/v1\/recommend\/unity\/recommends reject-dict
 # 美团众包 - peisongapi.meituan.com
 ^https?:\/\/peisongapi\.meituan\.com\/client\/getInitiateImage reject-200
 # 美团充电宝小程序 - cdb.meituan.com
@@ -1427,7 +1427,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 # 希沃白板5 - cstore-en-public-tx.seewo.com
 ^https?:\/\/cstore-en-public-tx\.seewo\.com\/easinote5_public reject-dict
 # 向日葵 - client-api-v2.oray.com
-# ^https?:\/\/client-api-v2\.oray\.com\/materials url reject-200
+# ^https?:\/\/client-api-v2\.oray\.com\/materials reject-200
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_STARTUP reject-dict
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SLCC_IOS_DEVICE reject-dict
 ^https?:\/\/client-api-v2\.oray\.com\/materials\/SUNLOGIN_CLIENT_IOS_PROMOTION reject-dict
