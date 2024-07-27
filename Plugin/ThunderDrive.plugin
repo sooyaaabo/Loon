@@ -5,7 +5,7 @@
 #!keyword = 去广告, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ThunderDrive.png
-#!date = 2024-07-16 23:00
+#!date = 2024-07-27 22:00
 
 # 2024-07-14 20:23:48
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/XunLei_remove_ads.plugin
@@ -53,7 +53,6 @@ DOMAIN, sdk.e.qq.com, REJECT
 DOMAIN-SUFFIX, ugdtimg.com, REJECT
 # DOMAIN, adsmind.ugdtimg.com, REJECT
 # DOMAIN, pgdt.ugdtimg.com, REJECT
-DOMAIN, i.gtimg.cn, REJECT
 DOMAIN-SUFFIX, gdtimg.com, REJECT
 # DOMAIN, qzs.gdtimg.com, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT

@@ -5,7 +5,7 @@
 #!keyword = 去广告, 解锁会员, Yuheng0101, 可莉
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
-#!date = 2024-07-20 10:55
+#!date = 2024-07-27 22:00
 
 # version 1.0.1
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
@@ -27,7 +27,6 @@ DOMAIN-SUFFIX, ugdtimg.com, REJECT
 # DOMAIN, adsmind.ugdtimg.com, REJECT
 # DOMAIN, pgdt.ugdtimg.com, REJECT
 # DOMAIN, qzs.gdtimg.com, REJECT
-DOMAIN, i.gtimg.cn, REJECT
 DOMAIN-SUFFIX, gdt.qq.com, REJECT
 # DOMAIN, mi.gdt.qq.com, REJECT
 # DOMAIN, win.gdt.qq.com, REJECT
