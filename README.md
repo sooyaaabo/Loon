@@ -33,7 +33,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="95px" rowspan="20"><strong>去广告</strong></td>
+        <td width="100px" rowspan="20"><strong>去广告</strong></td>
     </tr>
     <tr>
         <td>01</td>
@@ -210,11 +210,9 @@
         <th>名称</th>
         <th>序号</th>
         <th>名称</th>
-        <th>序号</th>
-        <th>名称</th>
     </tr>
     <tr>
-        <td width="95px" rowspan="10"><strong>定时任务</strong></td>
+        <td width="100px" rowspan="10"><strong>定时任务</strong></td>
     </tr>
     <tr>
         <td>01</td>
