@@ -146,7 +146,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="95px" rowspan="10"><strong>功能增强</strong></td>
+        <td width="100px" rowspan="10"><strong>功能增强</strong></td>
     </tr>
     <tr>
         <td>01</td>
@@ -189,7 +189,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="95px" rowspan="10"><strong>会员解锁</strong></td>
+        <td width="100px" rowspan="10"><strong>会员解锁</strong></td>
     </tr>
     <tr>
         <td>01</td>
@@ -221,8 +221,6 @@
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/GetCookie.plugin">Cookie获取</a></td>
         <td>02</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TaskCheckin.plugin">Task签到</a></td>
-        <td>03</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight_AutoJoin.plugin">TestFlight自动加入</a></td>
     </tr>
 </table>
 
