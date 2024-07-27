@@ -33,7 +33,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="100px" rowspan="20"><strong>去广告</strong></td>
+        <td rowspan="20"><strong>去广告</strong></td>
     </tr>
     <tr>
         <td>01</td>
@@ -101,7 +101,7 @@
         <td>26</td>
         <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Spotify.plugin">Spotify</a></td>
         <td>27</td>
-        <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUp.plugin">墨鱼去开屏广告</a></td>
+        <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUp.plugin">墨鱼去开屏</a></td>
         <td>28</td>
         <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Taobao.plugin">淘宝</a></td>
     </tr>
@@ -121,7 +121,7 @@
         <td>34</td>
         <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo_intl.plugin">微博轻享版</a></td>
         <td>35</td>
-        <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube (Music)</a></td>
+        <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube(Music)</a></td>
         <td>36</td>
         <td width="140px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YoukuVideo.plugin">优酷视频</a></td>
     </tr>
@@ -146,7 +146,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="100px" rowspan="10"><strong>功能增强</strong></td>
+        <td rowspan="10"><strong>功能增强</strong></td>
     </tr>
     <tr>
         <td>01</td>
@@ -189,7 +189,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="100px" rowspan="10"><strong>会员解锁</strong></td>
+        <td rowspan="10"><strong>会员解锁</strong></td>
     </tr>
     <tr>
         <td>01</td>
@@ -212,7 +212,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="100px" rowspan="10"><strong>定时任务</strong></td>
+        <td rowspan="10"><strong>定时任务</strong></td>
     </tr>
     <tr>
         <td>01</td>
