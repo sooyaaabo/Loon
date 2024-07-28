@@ -5,9 +5,9 @@
 #!keyword = 去广告, RuCu6, app2smile, blackmatrix7
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png
-#!date = 2024-07-27 22:50
+#!date = 2024-07-28 09:20
 
-# 2024-07-27 22:30
+# 2024-07-28 07:55
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet
 
 [Rule]
@@ -53,21 +53,21 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 ^https:\/\/zhuanlan\.zhihu\.com\/api\/articles\/\d+\/recommendation reject
 
 [Script]
-# 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片
-http-response ^https:\/\/api\.zhihu\.com\/(answers|articles)\/v2\/\d+ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除首页推广
+# 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片、顶部标签栏
+http-response ^https:\/\/(api|page-info)\.zhihu\.com\/(answers|articles)\/v2\/\d+ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 回答下的相关搜索
+http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 悬浮图标
+http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 首页顶部tab
+http-response ^https:\/\/api\.zhihu\.com\/(moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 热榜排行榜、推荐信息流
+http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 顶部标签栏
+http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 热榜信息流
 # 会员页面 - 弹窗,悬浮动图
-http-response ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除知乎会员弹窗
+http-response ^https:\/\/api\.zhihu\.com\/bazaar\/vip_tab\/header\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 知乎会员弹窗
 # 搜索页 - 关键词、猜你想搜
-http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = ""recommend_queries":\{.+\}->"recommend_queries":{}", tag = 移除搜索页关键词
+http-response ^https:\/\/api\.zhihu\.com\/search\/recommend_query\/v2\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, argument = ""recommend_queries":\{.+\}->"recommend_queries":{}", tag = 搜索页关键词
 # 回答详情页 - 评论区顶部、下一个回答
-http-response ^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除回答详情页推广
-http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(\/answers|\/feeds|\?include=) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除回答详情页推广
-http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 移除回答详情页推广
+http-response ^https:\/\/api\.zhihu\.com\/next-(bff|data|render)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 回答详情页
+http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(\/answers|\/feeds|\?include=) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 回答详情页
+http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/recommendations?\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 回答详情页
 # 其他 - 服务器推送配置
 http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
 http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
