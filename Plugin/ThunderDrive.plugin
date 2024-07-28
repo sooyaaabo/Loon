@@ -1,14 +1,16 @@
 #!name = 迅雷
 #!desc = 移除开屏广告、首页横幅广告，精简我的页面。
 #!openUrl = https://apps.apple.com/app/id1503466530
-#!author = @可莉🅥
-#!keyword = 去广告, 可莉
+#!author = @可莉🅥 @Marol62926
+#!keyword = 去广告, 解锁会员, 可莉, Marol62926
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ThunderDrive.png
-#!date = 2024-07-27 22:00
+#!date = 2024-07-28 11:30
 
 # 2024-07-14 20:23:48
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/XunLei_remove_ads.plugin
+# 2022-09-10 v1.4.5
+# https://github.com/Marol62926/Loon/blob/main/xunlei.plugin
 
 [Rule]
 # 字节跳动广告
@@ -71,8 +73,10 @@ DOMAIN, et.tanx.com, REJECT
 ^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ reject-dict
 
 [Script]
+# 解锁迅雷会员
+http-response ^https:\/\/xluser-ssl\.xunlei\.com\/xluser\.core\.login\/v3\/getuserinfo script-path = https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body = true, tag = 解锁迅雷会员
 # 精简我的页面
 http-response ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/XunLei/XunLei_remove_ads.js, requires-body = true, tag = 精简我的页面
 
 [Mitm]
-hostname = api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com
+hostname = api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com, xluser-ssl.xunlei.com
