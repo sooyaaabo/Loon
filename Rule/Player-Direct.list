@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-27 23:00
+# 2024-07-28 11:20
 
 # CMSPlayer
 # 低端影视
@@ -280,10 +280,14 @@ DOMAIN, pub1.emby.wtf
 DOMAIN, pub2.emby.wtf
 DOMAIN, pub3.emby.wtf
 
-
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN, yk7ynj4ts.com
+DOMAIN, r8qgyo0ts.com
+DOMAIN, 9t5af8lts.com
+DOMAIN, d4y3409ts.com
+DOMAIN, 3zj55vots.com
 DOMAIN-SUFFIX, m3u8.girigirilove.com
 DOMAIN-SUFFIX, cloudflarestorage.com
 DOMAIN-SUFFIX, ho7k.com
