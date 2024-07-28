@@ -406,6 +406,10 @@
             "name": "Conflux",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Conflux.png"
         },
+	{
+            "name": "Emby",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Emby.png"
+        },
         {
             "name": "IThome",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/IThome.png"
@@ -441,6 +445,18 @@
 	{
             "name": "Currency",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Currency.png"
+        },
+	{
+            "name": "Apple",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Apple.png"
+        },
+	{
+            "name": "Microsoft",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Microsoft.png"
+        },
+	{
+            "name": "ChatGPT",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChatGPT.png"
         },
         {
             "name": "Arc",
@@ -493,6 +509,10 @@
         {
             "name": "X",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/X.png"
+        },
+	{
+            "name": "Telegram",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Telegram.png"
         },
         {
             "name": "Swiftgram",
