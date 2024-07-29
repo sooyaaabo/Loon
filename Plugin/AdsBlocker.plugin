@@ -7,7 +7,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
 #!date = 2024-07-27 20:35
 
-# 2024-07-24 21:00:00
+# 2024-07-28 21:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -1477,6 +1477,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config reject-dict
 # 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
 ^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form reject
 # 厦门航空 - mobileapi.xiamenair.com
