@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-07-28 11:20
+# 2024-07-31 23:00
 
 # CMSPlayer
 # 低端影视
@@ -179,6 +179,8 @@ DOMAIN-SUFFIX, duanjutt.tv
 DOMAIN-KEYWORD, duanjutt
 # dsakf23665
 DOMAIN-SUFFIX, dsakf23665.com
+# NO视频
+DOMAIN-SUFFIX, novipnoad.net
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
 DOMAIN-SUFFIX, czys.top
@@ -283,6 +285,9 @@ DOMAIN, pub3.emby.wtf
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-SUFFIX, mediap.svc.ms
+DOMAIN-SUFFIX, yangkeduo.com
+DOMAIN-KEYWORD, ts.com
 DOMAIN, yk7ynj4ts.com
 DOMAIN, r8qgyo0ts.com
 DOMAIN, 9t5af8lts.com
