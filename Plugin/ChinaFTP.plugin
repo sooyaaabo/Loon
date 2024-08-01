@@ -90,9 +90,9 @@ URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DI
 [Rewrite]
 # 腾讯视频
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind reject-dict
-^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ REJECT
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ REJECT
-^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ REJECT
+^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
+^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
+^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
 
 # 爱奇艺 
 # 播放页开通会员提示
