@@ -5,9 +5,9 @@
 #!keyword = 去广告, ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-07-30 22:05
+#!date = 2024-08-01 20:25
 
-# 2024-07-29
+# 2024-08-01
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -17,7 +17,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.07.30/v2.0.498 reject-200
+^https?:\/\/2024.08.01/c324/v2.0.499 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -94,8 +94,6 @@
 ^https?:\/\/emdcadvertise\.eastmoney\.com\/infoService\/v\d reject-200
 # 财经杂志
 ^https?:\/\/api\.caijingmobile\.com\/(ad|advert)\/ reject-200
-# 彩云
-^https:\/\/api\.caiyunapp\.com\/v1\/activity reject-200
 # 刺猬猫阅读
 ^https?:\/\/app\.hbooker\.com\/setting\/get_startpage_url_list reject-200
 # 菜鸟
@@ -391,6 +389,8 @@
 ^https?:\/\/app-api\.medsci\.cn\/app-advertisement-space\/showAdList reject-200
 # moomoo
 ^https?:\/\/api\.moomoo\.com(\/v\d)?\/ad reject-200
+# 喵街
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.mos\.app\.homepage\.launch reject-200
 
 # ======= N ======= #
 # 南方航空
