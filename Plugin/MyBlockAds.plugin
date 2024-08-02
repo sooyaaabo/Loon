@@ -5,9 +5,9 @@
 #!keyword = 去广告, RuCu6, zZPiglet, app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-02 17:45
 
-# 2024-07-15 21:25
+# 2024-08-02 17:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -83,6 +83,9 @@
 
 # 酷安 //api.coolapk.com
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
+
+# 酷狗音乐
+^http:\/\/adserviceretry\.kglink\.cn\/v4\/mobile_splash\? reject-dict
 
 # 猫眼 //p0.pipi.cn
 ^https:\/\/p0\.pipi\.cn\/(adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ reject-dict
