@@ -1,4 +1,4 @@
-# 2024-08-02 16:45
+# 2024-08-03 08:30
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -132,7 +132,6 @@ DOMAIN, api.liquidlink.cn
 # ======= K ======= #
 # 酷狗音乐
 DOMAIN, ads.service.kugou.com
-DOMAIN, adserviceretry.kglink.cn
 DOMAIN, adserviceretry.kugou.com
 # 酷我音乐
 DOMAIN, ad.tencentmusic.com
