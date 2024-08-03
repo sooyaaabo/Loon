@@ -22,7 +22,6 @@ DOMAIN, tp2p.kg.qq.com, REJECT
 IP-CIDR, 81.71.61.216/32, REJECT, no-resolve
 # 腾讯优量汇 - 广告服务商
 DOMAIN, ios.bugly.qq.com, REJECT
-DOMAIN, mazu.m.qq.com, REJECT
 DOMAIN, sdk.e.qq.com, REJECT
 DOMAIN, us.l.qq.com, REJECT
 DOMAIN-SUFFIX, ugdtimg.com, REJECT
