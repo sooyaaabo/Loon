@@ -166,6 +166,15 @@
         <th>一次性</th>
     </tr>
     <tr>
+        <td align=center>Small</td>
+        <td align=center>100G</td>
+        <td align=center>8</td>
+        <td align=center>24</td>
+        <td align=center>×</td>
+        <td align=center>80</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
         <td align=center>Basics</td>
         <td align=center>200G</td>
         <td align=center>10</td>
