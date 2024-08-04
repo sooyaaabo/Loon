@@ -5,9 +5,9 @@
 #!keyword = 去广告, ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-08-02 19:10
+#!date = 2024-08-02 11:45
 
-# 2024-08-02
+# 2024-08-04
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -17,7 +17,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.08.01/c324/v2.0.499 reject-200
+^https?:\/\/2024.08.04/c325/v2.0.501 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -817,6 +817,8 @@ http-response ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/a
 http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://github.com/ddgksf2013/Scripts/raw/master/stay.js, requires-body = true, tag = Stay
 # 识货
 http-response ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = egin_time":"\d{4}->egin_time":"2099, requires-body = true, tag = 识货
+# 什么值得买
+http-response ^https?:\/\/app-api\.smzdm\.com\/util\/loading script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = start_date":"\d{4}->start_date":"4099, requires-body = true, tag = 什么值得买
 
 # ======= T ======= #
 # 天府通
