@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-03 09:50
+# 2024-08-05 22:20
 
 # CMSPlayer
 # 低端影视
@@ -181,6 +181,8 @@ DOMAIN-KEYWORD, duanjutt
 DOMAIN-SUFFIX, dsakf23665.com
 # NO视频
 DOMAIN-SUFFIX, novipnoad.net
+# BILFUN
+DOMAIN-SUFFIX, bilfun.cc
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
 DOMAIN-SUFFIX, czys.top
@@ -290,13 +292,16 @@ DOMAIN, yomo.7777777.buzz
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
 DOMAIN-SUFFIX, mediap.svc.ms
+DOMAIN-SUFFIX, novipnoad.net
 DOMAIN-SUFFIX, yangkeduo.com
 DOMAIN-KEYWORD, ts.com
+DOMAIN, n45lxpvts.com
 DOMAIN, yk7ynj4ts.com
 DOMAIN, r8qgyo0ts.com
 DOMAIN, 9t5af8lts.com
 DOMAIN, d4y3409ts.com
 DOMAIN, 3zj55vots.com
+DOMAIN-KEYWORD, heimuer
 DOMAIN-SUFFIX, m3u8.girigirilove.com
 DOMAIN-SUFFIX, cloudflarestorage.com
 DOMAIN-SUFFIX, ho7k.com
@@ -313,6 +318,7 @@ DOMAIN-SUFFIX, aliyuncs.com
 DOMAIN-SUFFIX, xmcdn.com
 DOMAIN-SUFFIX, anfuns.org
 DOMAIN-KEYWORD, hmrvideo
+DOMAIN-KEYWORD, heimuer
 DOMAIN-SUFFIX, ykusu.ykusu
 DOMAIN-SUFFIX, myqcloud.com
 DOMAIN-SUFFIX, esuxun.com
@@ -330,12 +336,13 @@ DOMAIN, qchannelvideo.photo.qq.com
 DOMAIN, sf16-sg.larksuitecdn.com
 DOMAIN, op.xn--it-if7c19g5s4bps5c.com
 DOMAIN, tjdownload.pan.wo.cn
+DOMAIN-SUFFIX, nkvod.com
 DOMAIN-SUFFIX, 13to.com
 DOMAIN-KEYWORD, thehanju
 DOMAIN-KEYWORD, hanjukankan
 DOMAIN-KEYWORD, subaibaiys
 DOMAIN-SUFFIX, xhscdn.com
-DOMAIN-SUFFIX, wangchuanxin
+DOMAIN-KEYWORD, wangchuanxin
 DOMAIN-SUFFIX, vod-qcloud.com
 DOMAIN-KEYWORD, hhplayer
 DOMAIN-KEYWORD, saohuo
@@ -346,10 +353,15 @@ DOMAIN-SUFFIX, jiasu.buzz
 DOMAIN-KEYWORD, feidaozy
 DOMAIN-KEYWORD, modujx
 DOMAIN-KEYWORD, simanuo
+DOMAIN-SUFFIX, huawei8.live
+DOMAIN-SUFFIX, hw8.live
 DOMAIN-KEYWORD, heimuer
 DOMAIN-KEYWORD, hhuus
 DOMAIN-KEYWORD, hhwenjian
+DOMAIN, hhmage.com
+DOMAIN, xinlangtupian.com
 DOMAIN-KEYWORD, xlzyd
+DOMAIN, ikunzyapi.com
 DOMAIN-KEYWORD, ikzybf
 DOMAIN-KEYWORD, 49zyvideoplayurl
 DOMAIN-KEYWORD, v.cdnlz
@@ -375,3 +387,4 @@ DOMAIN, vip.imgffzy.com
 DOMAIN, vip.ffzyread1.com
 DOMAIN, vip.ffzy-play3.com
 DOMAIN, vip.ffzyread.com
+DOMAIN, www.imgikzy.com
