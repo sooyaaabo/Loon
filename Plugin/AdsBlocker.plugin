@@ -5,9 +5,9 @@
 #!keyword = 去广告, fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-06 11:20
+#!date = 2024-08-07 00:30
 
-# 2024-08-05 19:25:00
+# 2024-08-07 00:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -701,6 +701,36 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/api\.gongkaoleida\.com\/api\/v2\/ad\/info reject-dict
 
 # >>>>>>>>>>>>>>> ✅ L ✅ <<<<<<<<<<<<<<
+# Line - a.line.me, ad.line-scdn.net, buy.line.me, cix.line-apps.com, crs-event.line.me, d.line-scdn.net, gw.line.naver.jp, legy.line-apps.com, nelo2-col.linecorp.com, obs.line-scdn.net, scdn.line-apps.com, sch.line.me, static.line-scdn.net, uts-front.line-apps.com, w.line.me
+https:\/\/a\.line\.me\/er\/lads\/v\d\/ei\? reject-img
+https:\/\/a\.line\.me\/er\/l.*\/v\d\/event\/image reject-img
+https:\/\/a\.line\.me\/lass\/api\/v\d\/ads$ reject
+https:\/\/a\.line\.me\/oa\/v\d\/e$ reject
+https:\/\/a\.line\.me\/cs\/v\d\/oa$ reject
+https:\/\/ad\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$ reject-img
+https:\/\/gw\.line\.naver\.jp\/ext\/lgfp\/lad\/v1$ reject
+https:\/\/gw\.line\.naver\.jp\/lass\/api\/v1\/ads$ reject
+https:\/\/gw\.line\.naver\.jp\/tr\/event$ reject
+https:\/\/legy\.line-apps\.com\/ext\/lgfp\/lad\/v1$ reject
+https:\/\/legy\.line-apps\.com\/ext\/smartch\/banner\/sch\/v1$ reject
+https:\/\/legy\.line-apps\.com\/tr\/event$ reject
+https:\/\/w\.line\.me\/adp\/api\/ad\/v\d\/ reject
+https:\/\/buy\.line\.me\/api\/graphql\?variables reject
+https:\/\/crs-event\.line\.me\/v\d\/imp reject
+https:\/\/obs\.line-scdn\.net\/0h.+\/(o|m)\d+x\d+$ reject
+https:\/\/obs\.line-scdn\.net\/0hGH\d reject
+https:\/\/obs\.line-scdn\.net\/0h.+\/\d+p\.mp4$ reject
+https:\/\/obs\.line-scdn\.net\/r\/linecrs\/.+\/m180x180$ reject-img
+https:\/\/d\.line-scdn\.net\/lcp-prod-photo\/20.+\.(jpg|jpeg|png) reject-img
+https:\/\/cix\.line-apps\.com\/R4\? reject
+https:\/\/scdn\.line-apps\.com\/appresources\/moretab\/list\.json reject
+https:\/\/scdn\.line-apps\.com\/lan\/image\/line\/bannerImageEvent\/ reject
+https:\/\/scdn\.line-apps\.com\/lan\/document\/pageEvent\/line\/ios\/ reject
+https:\/\/sch\.line\.me\/api\/v\d\/ads$ reject
+https:\/\/uts-front\.line-apps\.com\/event$ reject
+https:\/\/uts-front\.line-apps\.com\/settings$ reject
+https:\/\/static\.line-scdn\.net\/ad-sdk\/ reject
+https:\/\/nelo2-col\.linecorp\.com\/_store$ reject
 # 拉卡拉 - lamb.lakala.com, wallet.lakala.com
 ^https?:\/\/lamb\.lakala\.com\/lamo\/adv\/access\/queryMaterialUrl reject-dict
 ^https?:\/\/wallet\.lakala\.com\/m\/lama\/mgt\/activity\/bank\/query\/list reject-dict
