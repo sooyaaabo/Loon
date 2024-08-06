@@ -5,7 +5,7 @@
 #!keyword = 去广告, RuCu6, Keywos, ddgksf2013
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-06 21:50
 
 # 2024-02-18 15:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet
@@ -13,6 +13,9 @@
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/1b9c624b6e813bb7b5da83f59b544dee97436be5/AdBlock/Cainiao.conf
 
 [Rule]
+# 移除广告下发请求
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$), (USER-AGENT, Cainiao4iPhone)), REJECT
+
 DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, amdc.m.youku.com, REJECT
 DOMAIN, apiv4-iyes.youku.com, REJECT

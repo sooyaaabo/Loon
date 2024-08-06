@@ -5,12 +5,15 @@
 #!keyword = 去广告, RuCu6, kokoryh
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-06 21:50
 
 # 2024-02-11 20:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
 
 [Rule]
+# 移除广告下发请求
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$), (USER-AGENT, AMapiPhone)), REJECT
+
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
 
