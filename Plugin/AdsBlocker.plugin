@@ -5,7 +5,7 @@
 #!keyword = 去广告, fmz200
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-05 20:00
+#!date = 2024-08-06 11:20
 
 # 2024-08-05 19:25:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -598,7 +598,8 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 # 吉林银行 - cdn.jlbank.com.cn
 ^https?:\/\/cdn\.jlbank\.com\.cn\/jlstaticresource\/APPSTART reject-200
 # 建行生活 - yunbusiness.ccb.com, g.alicdn.com, waimai-guide.ele.me
-^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A00(2|6|9) reject-200
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341A(002|006|009|119|120) reject-200
+^https?:\/\/yunbusiness\.ccb\.com\/clp_service\/txCtrl\?txcode=A3341C147 reject-200
 ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.eleme\.\w+\.trigger\.respond reject-dict
 ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.alsc\.wamai\.store\.detail\.miniapp\.popup reject
 ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopcouponpopupservice\.getshopcouponspopup reject
