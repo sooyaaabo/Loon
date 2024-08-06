@@ -5,9 +5,9 @@
 #!keyword = 去广告, RuCu6, zZPiglet, app2smile
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-08-03 09:15
+#!date = 2024-08-06 19:45
 
-# 2024-08-03 08:30
+# 2024-08-06 19:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -194,7 +194,7 @@ http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/(dataList|indexV8|init) sc
 http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
 
 # 酷狗音乐 //adserviceretry.kglink.cn, gateway.kugou.com
-http-response ^https:\/\/gateway\.kugou\.com\/adp\/ad\/v1\/mine_top_banner\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
+http-response ^https:\/\/gateway\.kugou\.com\/(adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
 http-response ^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ url script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
 
 # 贴吧全面去广告 //tiebac.baidu.com
