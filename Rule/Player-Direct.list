@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-05 23:20
+# 2024-08-07 11:15
 
 # CMSPlayer
 # 低端影视
@@ -289,6 +289,8 @@ DOMAIN, pub2.emby.wtf
 DOMAIN, pub3.emby.wtf
 # yomo服不服
 DOMAIN, yomo.7777777.buzz
+# peach
+DOMAIN-SUFFIX,embymv.tk
 
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
