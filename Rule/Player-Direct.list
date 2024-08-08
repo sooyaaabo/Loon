@@ -290,7 +290,11 @@ DOMAIN, pub3.emby.wtf
 # yomo服不服
 DOMAIN, yomo.7777777.buzz
 # peach
-DOMAIN-SUFFIX,embymv.tk
+DOMAIN-SUFFIX, embymv.tk
+
+# Jellyfin
+# 探花TV
+DOMAIN-SUFFIX, tanhuatv.site
 
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
