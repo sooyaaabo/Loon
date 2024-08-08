@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-07 11:15
+# 2024-08-08 09:50
 
 # CMSPlayer
 # 低端影视
@@ -295,6 +295,15 @@ DOMAIN-SUFFIX,embymv.tk
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-SUFFIX, akamaized.net
+DOMAIN-SUFFIX, wegame.com.cn
+DOMAIN-SUFFIX, tc.qq.com
+DOMAIN-SUFFIX, centos.chat
+DOMAIN-SUFFIX, bilfun.cc
+DOMAIN-SUFFIX, novipnoad.net
+DOMAIN-SUFFIX, yangkeduo.com
+DOMAIN-SUFFIX, xingya.com.cn
+DOMAIN-SUFFIX, whjzjx.cn
 DOMAIN-SUFFIX, mediap.svc.ms
 DOMAIN-SUFFIX, novipnoad.net
 DOMAIN-SUFFIX, yangkeduo.com
