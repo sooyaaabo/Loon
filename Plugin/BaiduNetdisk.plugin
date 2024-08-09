@@ -2,10 +2,13 @@
 #!desc = 移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
 #!openUrl = https://apps.apple.com/app/id547166701
 #!author = @RuCu6 @chxm1023 @ddgksf2013 @可莉🅥
-#!keyword = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013, 可莉
+#!tag = 去广告, 解锁会员, RuCu6, chxm1023, ddgksf2013, 可莉
+#!system = iOS
+#!system_version = 13
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
-#!date = 2024-07-20 10:45
+#!date = 2024-08-10 00:00
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

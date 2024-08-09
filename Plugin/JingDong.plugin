@@ -2,10 +2,13 @@
 #!desc = 移除京东开屏广告，精简我的页面产品推广。 在京东应用内嵌入比价信息，点击商品标题即可查看。仅支持京东的标准模式。
 #!openUrl = https://apps.apple.com/app/id414245413
 #!author = @RuCu6 @zwf234 
-#!keyword = 去广告, 功能增强, RuCu6, zwf234
+#!tag = 去广告, 功能增强, RuCu6, zwf234
+#!system = iOS
+#!system_version = 11
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JingDong.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2024-07-15 21:25
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

@@ -2,10 +2,13 @@
 #!desc = 节点解锁、节点网速、节点位置
 #!openUrl = 
 #!author = @可莉🅥 @KOP-XIAO @xream @Keywos @wuhu_zzz @整点猫咪
-#!keyword = 节点检测, KOP-XIAO, xream, keywos, wuhu_zzz, 整点猫咪, 可莉
+#!tag = 节点检测, 可莉, KOP-XIAO, xream, keywos, wuhu_zzz, 整点猫咪
+#!system = iOS
+#!system_version = 
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/NodeTools.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2023-09-14 17:20:34
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Node_detection_tool.plugin

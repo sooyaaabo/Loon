@@ -2,10 +2,13 @@
 #!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
 #!author = @Sliverkiss @chavyleung @fmz200 @Guding88 @wf021325 @Yuheng0101 @ClydeTime
-#!keyword = 定时任务, Sliverkiss, chavyleung, fmz200, Guding88, wf021325, Yuheng0101, ClydeTime
+#!tag = 定时任务, Sliverkiss, chavyleung, fmz200, Guding88, wf021325, Yuheng0101, ClydeTime
+#!system = iOS
+#!system_version = 
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js

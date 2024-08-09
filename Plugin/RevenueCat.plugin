@@ -2,10 +2,13 @@
 #!desc = RevenueCat解锁会员
 #!openUrl = 
 #!author = @chxm1023 @ddgksf2013 @Guding88
-#!keyword = 解锁会员, chxm1023, ddgksf2013, Guding88
+#!tag = 解锁会员, chxm1023, ddgksf2013, Guding88
+#!system = iOS
+#!system_version = 
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RevenueCat-icon.png
-#!date = 2024-07-26 20:10
+#!date = 2024-08-10 00:00
 
 # 2023-12-24
 # https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin

@@ -2,10 +2,13 @@
 #!desc = 伪CMS源，安装此插件后在XPTV内添加订阅地址：https://ykusu.ykusu/getJSON/cmsbeta.json
 #!openUrl = https://apps.apple.com/app/id6459409368
 #!author = @Yswag
-#!keyword = 功能增强, Yswag
+#!tag = 功能增强, Yswag
+#!system = iOS
+#!system_version = 16
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-08-06 18:55
+#!date = 2024-08-10 00:00
 
 # 2024-08-06 00:14
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin

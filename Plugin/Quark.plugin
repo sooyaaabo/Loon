@@ -2,10 +2,13 @@
 #!desc = 移除阅读广告，精简我的页面。
 #!openUrl = https://apps.apple.com/app/id1160172628
 #!author = @可莉🅥
-#!keyword = 去广告, 可莉
+#!tag = 去广告, 可莉
+#!system = iOS
+#!system_version = 12
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Quark.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2024-07-14 22:55:24
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QuarkBrowser_remove_ads.plugin

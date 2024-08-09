@@ -2,10 +2,13 @@
 #!desc = 修复用户主页时间线问题
 #!openUrl = https://apps.apple.com/app/id670910957
 #!author = @suiyuran @androidcn
-#!keyword = 功能增强, suiyuran, androidcn
+#!tag = 功能增强, suiyuran, androidcn
+#!system = iOS
+#!system_version = 14
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/VVebo.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2024-04-04
 # https://github.com/suiyuran/stash/blob/main/override/fix-vvebo.stoverride

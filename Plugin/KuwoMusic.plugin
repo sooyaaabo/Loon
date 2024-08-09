@@ -2,10 +2,13 @@
 #!desc = 1.移除开屏广告、各类弹窗、悬浮窗、各类横幅广告、信息流广告、歌词评论区广告和播放器界面广告，精简侧边栏。2.解锁会员皮肤、会员音频(至高320K)、听书权限。
 #!openUrl = https://apps.apple.com/app/id588673713
 #!author = @Yuheng0101 @可莉🅥
-#!keyword = 去广告, 解锁会员, Yuheng0101, 可莉
+#!tag = 去广告, 解锁会员, Yuheng0101, 可莉
+#!system = iOS
+#!system_version = 12
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
-#!date = 2024-07-27 23:00
+#!date = 2024-08-10 00:00
 
 # version 1.0.1
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js

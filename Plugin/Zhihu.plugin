@@ -2,10 +2,13 @@
 #!desc = 在知识的海洋里狗刨，去除各部广告，建议卸载知乎重新安装。
 #!openUrl = https://apps.apple.com/app/id432274380
 #!author = @RuCu6 @app2smile @blackmatrix7
-#!keyword = 去广告, RuCu6, app2smile, blackmatrix7
+#!tag = 去广告, RuCu6, app2smile, blackmatrix7
+#!system = iOS
+#!system_version = 11
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png
-#!date = 2024-07-28 09:20
+#!date = 2024-08-10 00:00
 
 # 2024-07-28 07:55
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet

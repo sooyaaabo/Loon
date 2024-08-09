@@ -2,13 +2,16 @@
 #!desc = 过滤IT之家信息流广告和文末广告，自定义移除置顶和轮播图。自定义移除项需在插件配置，此插件仅支持8.30及以上版本客户端。
 #!openUrl = https://apps.apple.com/app/id570610859
 #!author = @Keywos
-#!keyword = 去广告, Keywos
+#!tag = 去广告, Keywos
+#!system = iOS
+#!system_version = 13
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/IThome.png
 #!select = 去除轮播图广告,开启,关闭
 #!select = 去除整个轮播图,开启,关闭
 #!select = 去除置顶,开启,关闭
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2024-01-27 20:57
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin

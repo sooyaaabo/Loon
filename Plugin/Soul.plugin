@@ -2,7 +2,10 @@
 #!desc = Soul全面净化
 #!openUrl = https://apps.apple.com/app/id1032287195
 #!author = @ZenmoFeiShi @RuCu6 @可莉🅥
-#!keyword = 去广告, ZenmoFeiShi, RuCu6, 可莉
+#!tag = 去广告, ZenmoFeiShi, RuCu6, 可莉
+#!system = iOS
+#!system_version = 12.4
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Soul.png
 #!date = 2024-07-19 09:00

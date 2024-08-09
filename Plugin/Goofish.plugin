@@ -2,10 +2,13 @@
 #!desc = 过滤闲鱼广告
 #!openUrl = https://apps.apple.com/app/id510909506
 #!author = @RuCu6 @fmz200 @可莉🅥
-#!keyword = 去广告, RuCu6, fmz200, 可莉
+#!tag = 去广告, RuCu6, fmz200, 可莉
+#!system = iOS
+#!system_version = 11
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Goofish.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2024-06-06 18:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt

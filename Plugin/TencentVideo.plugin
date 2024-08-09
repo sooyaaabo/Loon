@@ -2,10 +2,13 @@
 #!desc = 不负好时光
 #!openUrl = https://apps.apple.com/app/id458318329
 #!author = @RuCu6
-#!keyword = 去广告, RuCu6
+#!tag = 去广告, RuCu6
+#!system = iOS
+#!system_version = 11
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TencentVideo.png
-#!date = 2024-07-22 23:15
+#!date = 2024-08-10 00:00
 
 # 2024-07-22 22:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet

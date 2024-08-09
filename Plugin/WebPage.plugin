@@ -2,10 +2,13 @@
 #!desc = 网页去广告
 #!openUrl = 
 #!author = @RuCu6 @limbopro @ddgksf2013
-#!keyword = 去广告, RuCu6, limbopro, ddgksf2013
+#!tag = 去广告, RuCu6, limbopro, ddgksf2013
+#!system = iOS
+#!system_version = 
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
-#!date = 2024-07-27 17:50
+#!date = 2024-08-10 00:00
 
 # 2024-06-30 11:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf

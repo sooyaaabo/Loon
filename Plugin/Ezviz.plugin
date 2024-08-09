@@ -2,10 +2,13 @@
 #!desc = 移除开屏广告、首页推广、我的页面推广。
 #!openUrl = https://apps.apple.com/app/id571195405
 #!author = 可莉🅥
-#!keyword = 去广告, 可莉
+#!tag = 去广告, 可莉
+#!system = iOS
+#!system_version = 13
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Ezviz.png
-#!date = 2024-07-27 22:00
+#!date = 2024-08-10 00:00
 
 # 2024-07-10 02:10:56
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/VideoGo_remove_ads.plugin

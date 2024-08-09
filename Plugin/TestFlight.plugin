@@ -2,10 +2,13 @@
 #!desc = 多账户共存与自动加入TestFlight
 #!openUrl = https://apps.apple.com/app/id899247664
 #!author = @blackmatrix7 @NobyDa
-#!keyword = 功能增强, 定时任务, blackmatrix7, NobyDa
+#!tag = 功能增强, 定时任务, blackmatrix7, NobyDa
+#!system = iOS
+#!system_version = 14
+#!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight.png
-#!date = 2024-07-16 23:00
+#!date = 2024-08-10 00:00
 
 # 2022-12-22
 # https://github.com/blackmatrix7/ios_rule_script/blob/master/script/testflight/testflight.lnplugin
