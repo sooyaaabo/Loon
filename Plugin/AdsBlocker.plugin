@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-10 21:45
+#!date = 2024-08-11 01:15
 
 # 2024-08-07 20:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1487,7 +1487,8 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/mbd\.baidu\.com\/newspage\/api\/getmobads\?page\=landingshare reject
 # 虾米音乐 - acs.m.taobao.com
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ reject
-# 闲鱼 - gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com
+# 闲鱼 - gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
+^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ reject
 ^https?:\/\/gw\.alicdn\.com\/tfs\/.+?\d{4}-\d{4}\/[a-z]{3}$ reject-200
 ^https?:\/\/gw\.alicdn\.com\/tfs\/TB1.+?750-\d{4} reject-200
 ^https?:\/\/heic\.alicdn\.com\/tps\/i4\/.+?\.jpg_1200x1200q90\.jpg_\.heic$ reject-200
@@ -1995,6 +1996,11 @@ http-response ^https?:\/\/.+?\.(pipi|fuli|xiang(jiao|xiang))apps\.com\/(ucp\/ind
 ;http-response ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/energy\/mall\/getUserEnergy script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/Scripts/xxyx/xxyx.js, requires-body = true, tag = 晓晓优选
 # 小芒 - mgesq.api.mgtv.com, *.hitv.com
 http-response ^https:\/\/mgesq\.api\.mgtv\.com\/dsl\/index\.+ script-path = https://raw.githubusercontent.com/Sliverkiss/QuantumultX/main/AdBlock/xmApp/xmApp.js, requires-body = true, tag = 小芒
+# 闲鱼 - acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ script-path = https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true, tag = 首页顶部标签
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ script-path = https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true, tag = 搜索栏填充词
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ script-path = https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true, tag = 首页闲鱼币入口、底部发布球
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://github.com/fmz200/wool_scripts/raw/main/Scripts/xianyu/xianyu_ads.js, requires-body = true, tag = 商品信息流广告
 
 # >>>>>>>>>>>>>>> ✅ Y ✅ <<<<<<<<<<<<<<
 # 悠洗APP - api.ulife.group
