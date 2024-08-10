@@ -246,41 +246,41 @@
         <td>07</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BiliBili.plugin">哔哩哔哩</a></td>
         <td>08</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BilibiliComics.plugin">哔哩哔哩漫画</a></td>
-        <td>09</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CMS_Adblock.plugin">CMS Adblocker</a></td>
+        <td>09</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CaiNiao.plugin">菜鸟</a></td>
     </tr>
     <tr>
         <td>10</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CaiNiao.plugin">菜鸟</a></td>
-        <td>11</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CoolApk.plugin">酷安</a></td>
-        <td>12</td>
+        <td>11</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Ezviz.plugin">萤石云视频</a></td>
+     <td>12</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Goofish.plugin">闲鱼</a></td>
     </tr>
     <tr>
         <td>13</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Goofish.plugin">闲鱼</a></td>
-        <td>14</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Himalaya.plugin">喜马拉雅</a></td>
-        <td>15</td>
+        <td>14</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/IQIYI.plugin">爱奇艺</a></td>
+        <td>15</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/IThome.plugin">IT之家</a></td>
     </tr>
     <tr>
         <td>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/IThome.plugin">IT之家</a></td>
-        <td>17</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/JingDong.plugin">京东</a></td>
-        <td>18</td>
+        <td>17</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/KuwoMusic.plugin">酷我音乐</a></td>
+        <td>18</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/MangoTV.plugin">芒果TV</a></td>
     </tr>
     <tr>
         <td>19</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/MangoTV.plugin">芒果TV</a></td>
-        <td>20</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/MyBlockAds.plugin">MyBlockAds</a></td>
-        <td>21</td>
+        <td>20</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NeteaseMusic.plugin">网易云音乐</a></td>
+        <td>21</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Pinduoduo.plugin">拼多多</a></td>
     </tr>
     <tr>
         <td>22</td>
