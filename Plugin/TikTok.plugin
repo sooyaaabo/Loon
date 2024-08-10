@@ -11,12 +11,13 @@
 #!select = 解锁地区, 台湾, 日本, 韩国, 泰国, 越南, 英国, 法国, 德国, 美国, 巴西, 俄罗斯, 墨西哥, 土耳其, 西班牙, 阿根廷, 新加坡, 菲律宾, 马来西亚
 #!date = 2024-08-10 00:00
 
-# 2024-04-30 00:47:47
+# 2024-07-27 20:21:36
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TikTok_redirect.plugin
 # 2023-08-19 22:00:03
 # https://raw.githubusercontent.com/Keywos/rule/main/loon/TikTok.plugin
 
 [Rule]
+# 2024-04-30 00:47:47
 AND, ((GEOIP, CN), (DOMAIN, pitaya.bytedance.com)), DIRECT // 此为抖音和TikTok的*.bytedance.com共用域名，仅国外解析结果走代理
 DOMAIN, api.snapkit.com, PROXY
 DOMAIN, cocacola.co.jp, PROXY
@@ -53,7 +54,6 @@ DOMAIN, pull-rtmp-l1-hs.pstatp.com, PROXY
 DOMAIN, pull-rtmp-l1-mus.pstatp.com, PROXY
 DOMAIN, pull-rtmp-l6-hs.pstatp.com, PROXY
 DOMAIN, roovza-launches.appsflyersdk.com, PROXY
-DOMAIN, sessions.bugsnag.com, PROXY
 DOMAIN-SUFFIX, bytedance.com, PROXY
 DOMAIN-SUFFIX, bytedance.net, PROXY
 DOMAIN-SUFFIX, bytedapm.com, PROXY
@@ -118,10 +118,12 @@ DOMAIN-KEYWORD, ttlivecdn.com., PROXY
 
 [Rewrite]
 # 去广告
-^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject-dict
+^https:\/\/api-va\.tiktokv\.com\/api\/ad\/ reject
+# 域名解析
+^https:\/\/tnc\d+-platform-\w+\.tiktokv\.com\/get_domains\/ reject
 
 [Script]
-http-request https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
+http-request ^https?:\/\/.+.(tiktokv|tiktokcdn).com\/.+(region\d?=CN|&mcc_mnc=\d+) script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/TikTok/TikTok_redirect.js, tag = TikTok解锁
 
 [Mitm]
 hostname = *.byteoversea.com, *.tik-tokapi.com, *.tiktokv.com, *.tiktokcdn.com

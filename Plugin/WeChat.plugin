@@ -14,7 +14,7 @@
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
 # 2024-01-17 19:20:19
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin
-# 2024-07-20 20:40:18
+# 2024-07-21 13:15:34
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
 [Rule]
@@ -145,8 +145,8 @@ DOMAIN, ad.maoyan.com, REJECT
 # 松果出行 @keywos api.songguo7.com
 ^https:\/\/api\.songguo7\.com\/(\w{3})?mp\/v2\/misc\/(toast|user_operate_info|unlock_without_order|unlock_operate_info) reject-dict
 # 花小猪打车 api.hongyibo.com.cn, res.hongyibo.com.cn
-^https:\/\/api\.hongyibo\.com\.cn reject-dict
-^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity reject-dict
+# ^https:\/\/api\.hongyibo\.com\.cn reject-dict
+# ^https:\/\/res\.hongyibo\.com\.cn\/os\/gs\/resapi\/activity reject-dict
 # 乘车码 @jinlvei ccmsupport-sz.tenpay.com
 ^https:\/\/ccmsupport-sz\.tenpay\.com\/cgi-bin\/common\/ccm_page_element.cgi reject
 # 奈雪 tm-api.pin-dao.cn
