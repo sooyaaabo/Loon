@@ -1,0 +1,46 @@
+#!name = 拼多多
+#!desc = 净化页面布局
+#!openUrl = 
+#!author = @ZenmoFeiShi
+#!tag = 去广告, ZenmoFeiShi
+#!system = iOS
+#!system_version = 10
+#!loon_version = 3.2.1(733)
+#!homepage = https://github.com/sooyaaabo/Loon
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
+#!date = 2024-08-10 10:30
+
+# 2024-08-10 09:33
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
+# 2024.08.10
+# https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
+
+[Rule]
+DOMAIN, titan.pinduoduo.com, REJECT
+IP-CIDR, 81.69.104.0/24, REJECT
+IP-CIDR, 114.110.98.0/24, REJECT
+IP-CIDR, 183.194.214.0/24, REJECT
+IP-CIDR, 183.194.214.21/32, REJECT
+IP-CIDR, 36.152.46.0/24, REJECT
+IP-CIDR, 49.235.102.190/32, REJECT
+IP-CIDR, 81.69.116.33/32, REJECT
+IP-CIDR, 114.110.96.0/24, REJECT
+IP-CIDR, 183.194.214.20/32, REJECT
+IP-CIDR, 117.185.242.0/24, REJECT
+IP-CIDR, 117.185.244.145/32, REJECT
+IP-CIDR, 101.35.204.35/32, REJECT
+IP-CIDR, 114.110.97.97/32, REJECT
+
+[Rewrite]
+^https:\/\/api\.pinduoduo\.com\/search_hotquery reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/new_chat_group reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/personal reject-dict
+
+[Script]
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
+
+[Mitm]
+hostname = api.pinduoduo.com
