@@ -1,5 +1,5 @@
 #!name = 拼多多
-#!desc = 净化页面布局
+#!desc = 移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广、精简我的页面。
 #!openUrl = https://apps.apple.com/app/id1044283059
 #!author = @ZenmoFeiShi
 #!tag = 去广告, ZenmoFeiShi
@@ -8,15 +8,16 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-08-10 17:40
+#!date = 2024-08-11 01:40
 
 # 2024-08-10 15:23
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024.08.10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
+# 2024-08-11 01:20:52
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]
-DOMAIN, titan.pinduoduo.com, REJECT
 IP-CIDR, 81.69.104.17/32, REJECT
 IP-CIDR, 114.110.98.3/32, REJECT
 IP-CIDR, 114.110.96.1/32, REJECT
@@ -60,14 +61,6 @@ IP-CIDR, 140.206.232.16/32, REJECT
 IP-CIDR, 121.5.84.85/32, REJECT
 IP-CIDR, 140.206.232.18/32, REJECT
 IP-CIDR, 117.185.244.25/32, REJECT
-DOMAIN, apm-a.pinduoduo.com, REJECT
-DOMAIN, apm.pinduoduo.com, REJECT
-DOMAIN, m.pinduoduo.net, REJECT
-DOMAIN, ta-a.pinduoduo.com, REJECT
-DOMAIN, ta.pinduoduo.com, REJECT
-DOMAIN, th-a.pinduoduo.com, REJECT
-DOMAIN, th-b.pinduoduo.com, REJECT
-DOMAIN, th.pinduoduo.com, REJECT
 IP-CIDR, 114.110.96.6/32, REJECT
 IP-CIDR, 117.185.242.150/32, REJECT
 IP-CIDR, 36.152.46.13/32, REJECT
@@ -76,6 +69,22 @@ IP-CIDR, 49.235.102.100/32, REJECT
 IP-CIDR, 49.235.102.235/32, REJECT
 IP-CIDR, 183.194.214.14/32, REJECT
 IP-CIDR, 36.152.46.3/32, REJECT
+DOMAIN, titan.pinduoduo.com, REJECT
+DOMAIN, apm-a.pinduoduo.com, REJECT
+DOMAIN, apm.pinduoduo.com, REJECT
+DOMAIN, m.pinduoduo.net, REJECT
+DOMAIN, ta-a.pinduoduo.com, REJECT
+DOMAIN, ta.pinduoduo.com, REJECT
+DOMAIN, th-a.pinduoduo.com, REJECT
+DOMAIN, th-b.pinduoduo.com, REJECT
+DOMAIN, th.pinduoduo.com, REJECT
+URL-REGEX, ^http:\/\/81\.69\.130\.131\/d, REJECT
+URL-REGEX, ^http:\/\/101\.35\.204\.35\/d, REJECT
+URL-REGEX, ^http:\/\/101\.35\.212\.35\/d, REJECT
+URL-REGEX, ^http:\/\/114\.110\.96\.26\/d, REJECT
+URL-REGEX, ^http:\/\/114\.110\.97\.30\/d, REJECT
+URL-REGEX, ^http:\/\/114\.110\.97\.97\/d, REJECT
+URL-REGEX, ^http:\/\/121\.5\.84\.85\/d, REJECT
 
 [Rewrite]
 ^https:\/\/api\.pinduoduo\.com\/search_hotquery reject-dict

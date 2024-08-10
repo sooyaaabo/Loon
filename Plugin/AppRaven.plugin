@@ -1,20 +1,20 @@
 #!name = AppRaven
 #!desc = AppRaven解锁会员
 #!openUrl = https://apps.apple.com/app/id1490607195
-#!author = @Yu9191
-#!tag = 解锁会员, Yu9191
+#!author = @Yu9191 @sooyaaabo
+#!tag = 解锁会员, Yu9191, sooyaaabo
 #!system = iOS
 #!system_version = 15
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppRaven.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-11 01:45
 
 # 2024-08-06
 # https://github.com/Yu9191/Rewrite/blob/main/AppRaven.js
 
 [Script]
-http-response ^https:\/\/appraven\.net\/appraven\/graphql script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/AppRaven.js, requires-body = true, tag = AppRaven解锁
+http-response ^https:\/\/appraven\.net\/appraven\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/AppRaven.js, requires-body = true, tag = AppRaven解锁
 
 [Mitm]
 hostname = appraven.net

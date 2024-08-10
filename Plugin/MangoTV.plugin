@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/MangoTV.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-11 01:45
 
 # 2024-07-22 22:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
@@ -55,8 +55,8 @@ URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DI
 
 [Script]
 # 会员解锁（国区，美区，平板端，Mac端）
-http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
-http-request ^https:\/\/(mobile|pad|pcc)\.api\.mgtv\.com\/v8\/video\/getSource\? script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
+http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
+http-request ^https:\/\/(mobile|pad|pcc)\.api\.mgtv\.com\/v8\/video\/getSource\? script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
 # 我的页面
 http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 我的页面@RuCu6
 # 首页信息流和顶部标签页
