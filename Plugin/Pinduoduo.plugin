@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-08-10 10:30
+#!date = 2024-08-10 17:30
 
-# 2024-08-10 09:33
+# 2024-08-10 15:23
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024.08.10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
@@ -37,10 +37,15 @@ IP-CIDR, 114.110.97.97/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/new_chat_group reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/personal reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/my_order_group reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/likes reject-dict
 
 [Script]
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
 
 [Mitm]
 hostname = api.pinduoduo.com
