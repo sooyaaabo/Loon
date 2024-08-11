@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-11 11:30
+#!date = 2024-08-12 01:30
 
 # 2024-08-11 01:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1851,8 +1851,6 @@ http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-pat
 http-response ^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, requires-body = true, tag = 航旅纵横
 # 盒马 - acs.m.taobao.com, acs-m.freshippo.com
 http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/freshippo.js, requires-body = true, tag = 盒马
-# 汇来米 - saas-ad.cloudpnr.com
-http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/huifu/huifu_remove_ads.js, requires-body = true, tag = 汇来米
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # i3 - www.i3zh.com
