@@ -1,23 +1,23 @@
 #!name = 菜鸟
 #!desc = 过滤菜鸟广告
 #!openUrl = https://apps.apple.com/app/id951610982
-#!author = @RuCu6 @Keywos @ddgksf2013
-#!tag = 去广告, RuCu6, Keywos, ddgksf2013
+#!author = @RuCu6 @Keywos @可莉🅥
+#!tag = 去广告, RuCu6, Keywos, 可莉
 #!system = iOS
 #!system_version = 13
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-11 20:45
 
 # 2024-02-18 15:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet
-# 2024-03-20
-# https://raw.githubusercontent.com/ddgksf2013/Rewrite/1b9c624b6e813bb7b5da83f59b544dee97436be5/AdBlock/Cainiao.conf
+# 2024-08-11 20:33:15
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$), (USER-AGENT, Cainiao4iPhone)), REJECT
+# AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$), (USER-AGENT, Cainiao4iPhone*)), REJECT
 
 DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, amdc.m.youku.com, REJECT
@@ -26,7 +26,7 @@ DOMAIN, httpdns.alicdn.com, REJECT
 DOMAIN, huichuan-mc.sm.cn, REJECT
 DOMAIN, huichuan.sm.cn, REJECT
 DOMAIN, iyes.youku.com, REJECT
-;DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+# DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
 DOMAIN, mc.atm.youku.com, REJECT
 DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
 DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
@@ -34,6 +34,10 @@ DOMAIN, yk-ssp.ad.youku.com, REJECT
 DOMAIN, ykad-data.youku.com, REJECT
 
 [Rewrite]
+# ---------- 可莉🅥 ---------- #
+# 新的首页商品推广
+# ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn response-body-json-del data
+
 # ---------- RuCu6 ---------- #
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn reject-dict
@@ -49,18 +53,6 @@ DOMAIN, ykad-data.youku.com, REJECT
 # 支付宝 - 菜鸟小程序
 ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-dict
 
-# ---------- ddgksf2013 ---------- #
-# 通用广告请求
-^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.(show|mshow)\.cn\/ reject-200
-# 支付宝小程序_通用广告请求
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.show reject-200
-# 支付宝小程序_底部商品推广新
-^https?:\/\/acs4miniapp-inner\.m\.taobao\.com\/gw\/mtop\.alimama\.abyss\.unionpage\.get reject-200
-# 支付宝小程序_底部商品推广旧
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-200
-# 支付宝小程序_匿名选择
-^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.nbmensa\.research\.researchservice\.consultmerge reject-200
-
 [Script]
 # ---------- RuCu6 ---------- #
 # 移除阿里巴巴通用广告请求
@@ -73,19 +65,5 @@ http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.c
 # 支付宝 - 菜鸟小程序
 http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 移除菜鸟小程序推广@RuCu6
 
-# ---------- ddgksf2013 ---------- #
-# amdc处理[Anti已将Amdc分流删除,故更换屏蔽策略]
-http-response ^http:\/\/amdc\.m\.taobao\.com script-path = https://github.com/ddgksf2013/Scripts/raw/master/amdc.js, requires-body = true, tag = amdc处理@ddgksf2013
-# 首页中部的问邻居推广
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.homepage\.merge\.get\.cn script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js, requires-body = true, tag = 首页中部的问邻居推广@ddgksf2013
-# 首页中部的惊喜福利推广
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.protocol\.homepage\.get\.cn script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js, requires-body = true, tag = 首页中部的惊喜福利推广@ddgksf2013
-# 搜索框下方今日好物推荐
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js, requires-body = true, tag = 搜索框下方今日好物推荐@ddgksf2013
-# 首页底部商品推广
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js, requires-body = true, tag = 首页底部商品推广@ddgksf2013
-# 支付宝小程序_中部的寄件推广[导致的空白占位后续处理]
-http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/cainiao_json.js, requires-body = true, tag = 支付宝小程序_中部的寄件推广@ddgksf2013
-
 [Mitm]
-hostname = cn-acs.m.cainiao.com, guide-acs.m.taobao.com, acs4miniapp-inner.m.taobao.com
+hostname = cn-acs.m.cainiao.com, guide-acs.m.taobao.com
