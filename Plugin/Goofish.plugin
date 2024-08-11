@@ -1,26 +1,25 @@
 #!name = 闲鱼
 #!desc = 移除开屏广告、商品信息流广告、搜索栏填充词、我的页面推广横幅。
 #!openUrl = https://apps.apple.com/app/id510909506
-#!author = @RuCu6 @可莉🅥
-#!tag = 去广告, RuCu6, 可莉
+#!author = @ZenmoFeiShi @可莉🅥
+#!tag = 去广告, ZenmoFeiShi, 可莉
 #!system = iOS
 #!system_version = 11
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Goofish.png
-#!date = 2024-08-11 00:45
+#!date = 2024-08-11 17:40
 
-#2024-08-06 19:15
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
-# 2024-08-11 00:27:40
+# 2024-08-11 17:14:46
 # https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
 
 [Rule]
 # 可莉🅥
+# 拦截广告下发
 AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E9%97%B2%E9%B1%BC*)), REJECT
 
 [Rewrite]
-# 可莉🅥 - acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
+# 可莉🅥
 # 首页顶部标签
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ response-body-json-del data.container.sections
 # 搜索栏填充词
@@ -29,17 +28,18 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ response-body-json-del data
 # 我的页面横幅
 ^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ reject
-
-# RuCu6 - gw.alicdn.com, acs.m.taobao.com
-^https:\/\/gw\.alicdn\.com\/mt\/ reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
+# 我的页面
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-del data.container.sections[5]
+# 搜索页面内容
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ reject-dict
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
 
 [Script]
 # 可莉🅥
 # 商品信息流广告
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除商品信息流广告
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除宝贝信息流广告
+# 首页标签图片
+http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除首页标签图片
 
 [Mitm]
-hostname = acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com, gw.alicdn.com, acs.m.taobao.com
+hostname = acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com

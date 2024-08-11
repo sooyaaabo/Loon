@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-08-11 11:45
+#!date = 2024-08-11 17:45
 
 # 2024-08-10 15:23
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -19,14 +19,14 @@
 
 [Rule]
 # 拦截HTTPDNS
-URL-REGEX, ^http:\/\/81\.69\.130\.131\/d, REJECT
-URL-REGEX, ^http:\/\/101\.35\.204\.35\/d, REJECT
-URL-REGEX, ^http:\/\/101\.35\.212\.35\/d, REJECT
-URL-REGEX, ^http:\/\/114\.110\.96\.6\/d, REJECT
-URL-REGEX, ^http:\/\/114\.110\.96\.26\/d, REJECT
-URL-REGEX, ^http:\/\/114\.110\.97\.30\/d, REJECT
-URL-REGEX, ^http:\/\/114\.110\.97\.97\/d, REJECT
-URL-REGEX, ^http:\/\/121\.5\.84\.85\/d, REJECT
+# URL-REGEX, ^http:\/\/81\.69\.130\.131\/d, REJECT
+# URL-REGEX, ^http:\/\/101\.35\.204\.35\/d, REJECT
+# URL-REGEX, ^http:\/\/101\.35\.212\.35\/d, REJECT
+# URL-REGEX, ^http:\/\/114\.110\.96\.6\/d, REJECT
+# URL-REGEX, ^http:\/\/114\.110\.96\.26\/d, REJECT
+# URL-REGEX, ^http:\/\/114\.110\.97\.30\/d, REJECT
+# URL-REGEX, ^http:\/\/114\.110\.97\.97\/d, REJECT
+# URL-REGEX, ^http:\/\/121\.5\.84\.85\/d, REJECT
 URL-REGEX, ^http:\/\/\[2402:4e00:1411:201:0:9964:ba21:5a41\]\/d, REJECT
 
 AND, ((URL-REGEX, ^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d), (USER-AGENT, *com.xunmeng.pinduoduo)), REJECT
