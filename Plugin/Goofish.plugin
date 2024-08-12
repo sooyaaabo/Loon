@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Goofish.png
-#!date = 2024-08-11 20:30
+#!date = 2024-08-12 09:35
 
-# 2024-08-11 20:22:37
+# 2024-08-12 02:08:10
 # https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
 
 [Rule]
@@ -28,6 +28,7 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ response-body-json-del data
 # 我的页面横幅
 ^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ reject
+^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.topic\.banner\/ reject-dict
 # 我的页面
 ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-del data.container.sections[5]
 # 搜索页面内容
