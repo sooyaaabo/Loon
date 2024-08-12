@@ -1857,6 +1857,8 @@ http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.re
 http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = cm-pop-up-banners -> fmz200, requires-body = true, tag = i3
 # IT之家 - napi.ithome.com
 http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js, requires-body = true, tag = IT之家
+# 汇来米 - saas-ad.cloudpnr.com
+# http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/WexinMiniPrograms/huifu/huifu_remove_ads.js, requires-body = true, tag = 汇来米
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
 # 建行生活 - yunbusiness.ccb.com
