@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(733)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhidemai.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-12 21:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
@@ -28,7 +28,7 @@ DOMAIN, ulogs.umeng.com, REJECT
 DOMAIN, ynuf.aliapp.org, REJECT
 
 [Rewrite]
-^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul) reject-dict
+^https:\/\/haojia\.m\.smzdm\.com\/detail_modul\/(other_modul|wiki_related_modul|user_related_modul) reject-dict
 ^https:\/\/s3\.zdmimg\.com\/third\/indexreject-dict
 ^https:\/\/app-api\.smzdm\.com\/util\/loading reject-dict
 
