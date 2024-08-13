@@ -2,7 +2,7 @@
 #!desc = 1.Google Redirect（如遇频繁跳转请禁用本插件）；2.Google CAPTCHA（需要在插件参数处填写策略/策略组名的正则表达式）。
 #!openUrl = https://apps.apple.com/app/id284815942
 #!author = @sooyaaabo @NobyDa
-#!tag = 重定向, 功能增强, NobyDa, sooyaaabo
+#!tag = 功能增强, NobyDa, sooyaaabo
 #!system = iOS
 #!system_version = 15
 #!loon_version = 3.2.1(733)
