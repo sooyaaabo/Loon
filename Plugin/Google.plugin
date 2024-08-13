@@ -5,7 +5,7 @@
 #!tag = 功能增强, NobyDa, sooyaaabo
 #!system = iOS
 #!system_version = 15
-#!loon_version = 3.2.1(733)
+#!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Google.png
 #!input = GOOGLE_CAPTCHA_REGEX

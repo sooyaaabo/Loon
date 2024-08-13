@@ -2,10 +2,10 @@
 #!desc = 针对部分网站进行重定向
 #!openUrl = 
 #!author = @blackmatrix7
-#!tag = 重定向, blackmatrix7
+#!tag = 功能增强, blackmatrix7
 #!system = iOS
 #!system_version = 
-#!loon_version = 3.2.1(733)
+#!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_302.png
 #!date = 2024-08-10 00:00
