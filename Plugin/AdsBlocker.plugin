@@ -1,7 +1,7 @@
 #!name = 广告拦截合集
 #!desc = 针对部分APP和小程序广告进行拦截，某些APP要清除缓存或者重新安装拦截广告才会生效！
 #!openUrl = 
-#!author = @fmz200[https://github.com/fmz200]
+#!author = fmz200[https://github.com/fmz200]
 #!tag = 去广告, fmz200
 #!system = iOS
 #!system_version = 
