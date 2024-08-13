@@ -1,14 +1,14 @@
 #!name = 银行
 #!desc = 去除部分银行应用广告
 #!openUrl = 
-#!author = @可莉🅥
-#!tag = 去广告, 可莉
+#!author = @可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CNY.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-07-11 19:10:01
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bank_remove_ads.plugin

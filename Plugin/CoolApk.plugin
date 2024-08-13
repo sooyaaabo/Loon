@@ -1,14 +1,14 @@
 #!name = 酷安
 #!desc = 过滤酷安广告
 #!openUrl = https://apps.apple.com/app/id1422581869
-#!author = @RuCu6 @ZenmoFeiShi
-#!tag = 去广告, RuCu6, ZenmoFeiShi
+#!author = RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 12
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CoolApk.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-08-06 19:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

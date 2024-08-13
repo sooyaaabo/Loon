@@ -1,15 +1,15 @@
 #!name = TikTok
 #!desc = 移除TikTok视频水印并自定义解锁地区，需要配置此插件至对应地区的节点。
 #!openUrl = https://apps.apple.com/app/id835599320
-#!author = @Keywos @可莉🅥 
-#!tag = 功能增强, Keywos, 可莉
+#!author = Keywos[https://github.com/Keywos], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 功能增强
 #!system = iOS
 #!system_version = 12
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TikTok.png
 #!select = 解锁地区, 台湾, 日本, 韩国, 泰国, 越南, 英国, 法国, 德国, 美国, 巴西, 俄罗斯, 墨西哥, 土耳其, 西班牙, 阿根廷, 新加坡, 菲律宾, 马来西亚
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-07-27 20:21:36
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/TikTok_redirect.plugin

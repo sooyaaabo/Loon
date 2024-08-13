@@ -1,14 +1,14 @@
 #!name = 高德地图
 #!desc = 过滤高德地图广告
 #!openUrl = https://apps.apple.com/app/id461703208
-#!author = @RuCu6 @kokoryh
-#!tag = 去广告, RuCu6, kokoryh
+#!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 11
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png
-#!date = 2024-08-13 21:35
+#!date = 2024-08-13 23:00
 
 # 2024-08-13 19:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet

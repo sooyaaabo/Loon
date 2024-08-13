@@ -1,14 +1,14 @@
 #!name = MyBlockAds
 #!desc = 去广告合集，以下app请使用单独配置文件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎
 #!openUrl = 
-#!author = @RuCu6 @zZPiglet @app2smile
-#!tag = 去广告, RuCu6, zZPiglet, app2smile
+#!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], app2smile[https://github.com/app2smile]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-08-06 19:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

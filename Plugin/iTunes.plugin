@@ -1,14 +1,14 @@
 #!name = iTunes
 #!desc = Buy iTunes解锁
 #!openUrl = https://apps.apple.com/app/id915061235
-#!author = @chxm1023 @ddgksf2013 @Guding88
-#!tag = 解锁会员, chxm1023, ddgksf2013, Guding88
+#!author = chxm1023[https://github.com/chxm1023], ddgksf2013[https://github.com/ddgksf2013], Guding88[https://github.com/Guding88]
+#!tag = 解锁会员
 #!system = iOS
 #!system_version = 
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-08-10
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js

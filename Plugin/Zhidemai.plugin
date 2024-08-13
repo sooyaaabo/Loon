@@ -1,14 +1,14 @@
 #!name = 什么值得买
 #!desc = 什么值得买去广告、红包弹窗、精简我的页面。
 #!openUrl = https://apps.apple.com/app/id518213356
-#!author = @ZenmoFeiShi
-#!tag = 去广告, ZenmoFeiShi
+#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 13
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage =https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhidemai.png
-#!date = 2024-08-12 21:00
+#!date = 2024-08-13 23:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet

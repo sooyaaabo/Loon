@@ -1,14 +1,14 @@
 #!name = 微博轻享版
 #!desc = 过滤广告及去除各部分推广模块
 #!openUrl = https://apps.apple.com/app/id1215210046
-#!author = @Keywos @kokoryh
-#!tag = 去广告, Keywos, kokoryh
+#!author = Keywos[https://github.com/Keywos], kokoryh[https://github.com/kokoryh]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 11
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo_intl.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2023-09-06 17:07:45
 # https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin

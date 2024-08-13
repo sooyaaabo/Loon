@@ -1,14 +1,14 @@
 #!name = 拼多多
 #!desc = 移除开屏广告、底栏多多视频、会场入口、聊天页面精选推荐及推广、精简我的页面。
 #!openUrl = https://apps.apple.com/app/id1044283059
-#!author = @ZenmoFeiShi @可莉🅥
-#!tag = 去广告, ZenmoFeiShi, 可莉
+#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 10
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-08-13 17:35
+#!date = 2024-08-13 23:00
 
 # 2024-08-13 17:04
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet

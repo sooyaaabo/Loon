@@ -1,14 +1,14 @@
 #!name = 墨鱼去开屏
 #!desc = 去除开屏广告，部分APP要清除缓存或者重新安装拦截广告才会生效!
 #!openUrl = 
-#!author = @ddgksf2013
-#!tag = 去广告, ddgksf2013
+#!author = ddgksf2013[https://github.com/ddgksf2013]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-08-11 21:25
+#!date = 2024-08-13 23:00
 
 # 2024-08-11
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf

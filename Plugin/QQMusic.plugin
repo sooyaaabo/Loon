@@ -1,14 +1,14 @@
 #!name = QQ音乐
 #!desc = 过滤QQ音乐广告
 #!openUrl = https://apps.apple.com/app/id414603431
-#!author = @可莉🅥
-#!tag = 去广告, 可莉
+#!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 11
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQMusic.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-07-07 15:31:22
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/QQMusic_remove_ads.plugin

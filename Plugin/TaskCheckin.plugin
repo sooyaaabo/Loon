@@ -1,14 +1,14 @@
 #!name = Task签到
 #!desc = 使用获取Cookie插件后，再使用此插件，自动签到打卡任务。
 #!openUrl = 
-#!author = @Sliverkiss @sooyaaabo
-#!tag = 定时任务, Sliverkiss, sooyaaabo
+#!author = Sliverkiss[https://github.com/Sliverkiss], sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 定时任务
 #!system = iOS
 #!system_version = 
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
@@ -17,7 +17,6 @@
 # https://github.com/fmz200/wool_scripts/blob/1fdca1b915282b42a5e140570e4fdda643a3a700/Loon/scripts/loon.task.scripts
 # https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js
 # https://raw.githubusercontent.com/WowYiJiu/Personal/main/WowYiJiu.box.json
-# https://raw.githubusercontent.com/xzxxn777/Surge/main/Script/JinDD/JinDD.sgmodule
 
 [Script]
 # TestFlight自动加入

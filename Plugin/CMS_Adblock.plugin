@@ -1,15 +1,15 @@
 #!name = CMS Adblocker
 #!desc = 去除CMS资源插入式广告
 #!openUrl = https://apps.apple.com/app/id6450680262
-#!author = @Yswag
-#!tag = 去广告, Yswag
+#!author = Yswag[https://github.com/Yswag]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 16
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
 #!select = 弹窗通知, true, false
-#!date = 2024-08-10 00:00
+#!date = 2024-08-13 23:00
 
 # 2024-07-25 22:10
 # https://github.com/Yswag/for-own-use/blob/main/loon-plugin/cmsAdblock.plugin

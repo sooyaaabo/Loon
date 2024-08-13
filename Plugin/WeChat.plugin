@@ -1,14 +1,14 @@
 #!name = 微信
 #!desc = 微信公众号、小程序去广告以及微信外部链接解锁
 #!openUrl = https://apps.apple.com/app/id414478124
-#!author = @RuCu6 @zZPiglet @可莉🅥
-#!tag = 去广告, RuCu6, zZPiglet, 可莉
+#!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 13
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/WeChat.png
-#!date = 2024-08-12 00:40
+#!date = 2024-08-13 23:00
 
 # 2024-07-13 21:08:47
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin

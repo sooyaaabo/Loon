@@ -1,14 +1,14 @@
 #!name = 闲鱼
 #!desc = 移除开屏广告、商品信息流广告、搜索栏填充词、我的页面推广横幅。
 #!openUrl = https://apps.apple.com/app/id510909506
-#!author = @ZenmoFeiShi @可莉🅥
-#!tag = 去广告, ZenmoFeiShi, 可莉
+#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
 #!system = iOS
 #!system_version = 11
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Goofish.png
-#!date = 2024-08-12 09:35
+#!date = 2024-08-13 23:00
 
 # 2024-08-12 02:08:10
 # https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin

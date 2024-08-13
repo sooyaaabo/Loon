@@ -1,14 +1,14 @@
 #!name = AppRaven
 #!desc = AppRaven解锁会员
 #!openUrl = https://apps.apple.com/app/id1490607195
-#!author = @Yu9191 @sooyaaabo
-#!tag = 解锁会员, Yu9191, sooyaaabo
+#!author = Yu9191[https://github.com/Yu9191], sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 解锁会员
 #!system = iOS
 #!system_version = 15
 #!loon_version = 3.2.1(734)
-#!homepage = https://github.com/sooyaaabo/Loon
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppRaven.png
-#!date = 2024-08-11 01:45
+#!date = 2024-08-13 23:00
 
 # 2024-08-06
 # https://github.com/Yu9191/Rewrite/blob/main/AppRaven.js
