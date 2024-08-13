@@ -2,7 +2,7 @@
 #!desc = 常用脚本获取Cookie合集，获取方法请看脚本注释。建议使用后手动将该插件禁用，以避免无意义的MITM。
 #!openUrl = 
 #!author = Sliverkiss[https://github.com/Sliverkiss], sooyaaabo[https://github.com/sooyaaabo]
-#!tag = 获取数据
+#!tag = 定时任务
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.1(734)
