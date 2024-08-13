@@ -294,38 +294,32 @@
         <td>25</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Soul.plugin">Soul</a></td>
         <td>26</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Spotify.plugin">Spotify</a></td>
-        <td>27</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/StartUp.plugin">墨鱼去开屏</a></td>
+        <td>27</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Taobao.plugin">淘宝</a></td>
     </tr>
     <tr>
         <td>28</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Taobao.plugin">淘宝</a></td>
-        <td>29</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TencentVideo.plugin">腾讯视频</a></td>
-        <td>30</td>
+        <td>29</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ThunderDrive.plugin">迅雷</a></td>
+        <td>30</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WeChat.plugin">微信</a></td>
     </tr>
     <tr>
         <td>31</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WeChat.plugin">微信</a></td>
-        <td>32</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WebPage.plugin">WebPage</a></td>
-        <td>33</td>
+        <td>32</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo.plugin">微博</a></td>
+        <td>33</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo_intl.plugin">微博轻享版</a></td>
     </tr>
     <tr>
         <td>34</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Weibo_intl.plugin">微博轻享版</a></td>
-        <td>35</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube(Music)</a></td>
-        <td>36</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YoukuVideo.plugin">优酷视频</a></td>
-    </tr>
-    <tr>
-        <td>37</td>
+        <td>35</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhidemai.plugin">什么值得买</a></td>
-        <td>38</td>
+        <td>36</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhihu.plugin">知乎</a></td>
     </tr>
 </table>
@@ -456,6 +450,7 @@
         <td width="150px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
         <td width="150px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
      </tr>
+</table>
 
 ## Star History
 ![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
