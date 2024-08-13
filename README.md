@@ -419,6 +419,43 @@
     </tr>
 </table>
 
+## 鸣谢
+<table width:100%; height:100%>
+    <tr>
+        <td colspan="6" align=center><b>作者（以下排名不分先后）</b></td>
+    </tr>
+    <tr>
+        <td width="150px"><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
+        <td width="150px"><a href="https://github.com/fmz200"><em>@fmz200</em></a></td>
+        <td width="150px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
+        <td width="150px"><a href="https://github.com/app2smile"><em>@app2smile</em></a></td>
+        <td width="150px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
+        <td width="150px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
+     </tr>
+     <tr>
+        <td width="150px"><a href="https://github.com/xream"><em>@xream</em></a></td>
+        <td width="150px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
+        <td width="150px"><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
+        <td width="150px"><a href="https://github.com/Guding88"><em>@Guding88</em></a></td>
+        <td width="150px"><a href="https://github.com/chxm1023"><em>@chxm1023</em></a></td>
+        <td width="150px"><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
+     </tr>
+     <tr>
+        <td width="150px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
+        <td width="150px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
+        <td width="150px"><a href="https://github.com/FoKit"><em>@FoKit</em></a></td>
+        <td width="150px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
+        <td width="150px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
+        <td width="150px"><a href="https://github.com/Marol62926"><em>@Marol62926</em></a></td>
+     </tr>
+     <tr>
+        <td width="150px"><a href="https://github.com/ddgksf2013"><em>@ddgksf2013</em></a></td>
+        <td width="150px"><a href="https://github.com/blackmatrix7"><em>@blackmatrix7</em></a></td>
+        <td width="150px"><a href="https://gitlab.com/lodepuly/vpn_tool"><em>@lodepuly</em></a></td>
+        <td width="150px"><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
+        <td width="150px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
+        <td width="150px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
+     </tr>
 
 ## Star History
 ![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
