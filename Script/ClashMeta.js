@@ -1,8 +1,10 @@
 // 参考 Verge Rev 示例 Script 配置
-//
+// 
 // Clash Verg Rev Version ≥ 1.7.2
-//
+// 
 // 最后更新时间: 2024-08-13 21:30
+// 
+// https://raw.githubusercontent.com/Repcz/Tool/X/Clash/Meta/Verge_Rev_Script.js
 
 // 规则集通用配置
 const ruleProviderCommon = {
@@ -261,7 +263,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "^(?=.*((?i)🇭🇰|香港|(\b(HK|Hong)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$",
+      "filter": "(?i)🇭🇰|香港|(\b(HK|Hong)\b)",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Hong_Kong.png"
     },
     {
@@ -270,7 +272,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "^(?=.*((?i)🇺🇸|美国|波特兰|达拉斯|俄勒冈|凤凰城|费利蒙|硅谷|拉斯维加斯|洛杉矶|圣何塞|圣克拉拉|西雅图|芝加哥|(\b(US|United States)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$",
+      "filter": "(?i)🇺🇸|美国|洛杉矶|圣何塞|(\b(US|United States)\b)",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/United_States.png"
     },
     {
@@ -279,7 +281,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "^(?=.*((?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$",
+      "filter": "(?i)🇸🇬|新加坡|狮|(\b(SG|Singapore)\b)",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Singapore.png"
     },
     {
@@ -288,7 +290,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "^(?=.*((?i)🇯🇵|日本|川日|东京|大阪|泉日|埼玉|(\b(JP|Japan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$",
+      "filter": "(?i)🇯🇵|日本|东京|(\b(JP|Japan)\b)",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/Japan.png"
     },
     {
@@ -297,7 +299,7 @@ function main(config) {
       "type": "url-test",
       "tolerance": 0,
       "include-all": true,
-      "filter": "^(?=.*((?i)🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)))(?!.*((?i)回国|校园|游戏|🎮|(\b(GAME)\b))).*$",
+      "filter": "(?i)🇨🇳|🇹🇼|台湾|(\b(TW|Tai|Taiwan)\b)",
       "icon": "https://raw.githubusercontent.com/Koolson/Qure/master/IconSet/Color/China.png"
     }
   ];
