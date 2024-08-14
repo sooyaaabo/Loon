@@ -1,4 +1,4 @@
-# 2024-08-08 08:50
+# 2024-08-14 16:05
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rules/MyBlockAds.list
 
 # ======= A ======= #
@@ -103,6 +103,7 @@ DOMAIN-SUFFIX, kuaishouzt.com
 DOMAIN-SUFFIX, miaozhen.com
 DOMAIN-SUFFIX, ubixioe.com
 DOMAIN-SUFFIX, unityads.unity3d.com
+DOMAIN-SUFFIX, v.smtcdns.com
 DOMAIN-SUFFIX, zijieapi.com
 DOMAIN-KEYWORD, -ad-sign.byteimg.com
 DOMAIN-KEYWORD, ads.g.doubleclick
