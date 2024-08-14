@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-14 21:20
 
-# 2024-08-11
+# 2024-08-14
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.08.10/c328/v2.0.510 reject-200
+^https?:\/\/2024.08.14/c328/v2.0.511 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -396,6 +396,8 @@
 ^https?:\/\/api\.moomoo\.com(\/v\d)?\/ad reject-200
 # 喵街
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.mos\.app\.homepage\.launch reject-200
+# 咪咕视频爱看版
+^https?:\/\/aikanvod\.miguvideo\.com\/video\/p\/i_adverseInterface\.jsp reject-200
 
 # ======= N ======= #
 # 南方航空

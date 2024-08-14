@@ -8,13 +8,13 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-14 21:15
 
-# 2024-08-13 17:04
+# 2024-08-14 20:53
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024.08.10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
-#2024-08-13 17:11:12
+#2024-08-14 21:05:32
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]
@@ -94,6 +94,7 @@ IP-CIDR, 36.152.46.3/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/my_order_group reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/likes reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_express_group reject-dict
 
 [Script]
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
