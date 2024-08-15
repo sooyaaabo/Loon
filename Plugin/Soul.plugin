@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Soul.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-15 19:10
 
-# 2024-06-20 22:49
+# 2024-08-15 19:00
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
 # 2024-06-16 20:23:01
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Soul_remove_ads.plugin
@@ -35,8 +35,9 @@ IP-CIDR, 120.27.235.201/32, REJECT, no-resolve
 IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
 
 [Rewrite]
-# 开屏广告
 ^https:\/\/ssp\.soulapp\.cn\/api\/q reject-dict
+^https:\/\/api-chat\.soulapp\.cn\/chat\/quick\/menu\/v2 reject-dict
+^https:\/\/api-chat\.soulapp\.cn\/chat\/entrance\/first reject-dict
 ^https:\/\/chat-live\.soulapp\.cn\/live\/planet\/recListV2 reject-200
 
 [Script]
