@@ -1,5 +1,5 @@
 #!name = 百度网盘
-#!desc = 移除开屏广告、首页卡片广告、传输页面广告、各类弹窗，精简侧拉抽屉和我的页面。解锁百度网盘高速加载、倍速播放、高清画质、智能字幕、完整文稿、SVIP10皮肤以及点亮SVIP10标识等内容。
+#!desc = 过滤百度网盘广告，解锁部分SVIP功能。
 #!openUrl = https://apps.apple.com/app/id547166701
 #!author = RuCu6[https://github.com/RuCu6], chxm1023[https://github.com/chxm1023], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告

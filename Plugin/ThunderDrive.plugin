@@ -1,5 +1,5 @@
 #!name = 迅雷
-#!desc = 移除开屏广告、首页横幅广告，精简我的页面。
+#!desc = 过滤迅雷广告，解锁部分会员功能。
 #!openUrl = https://apps.apple.com/app/id1503466530
 #!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md], Marol62926[https://github.com/Marol62926]
 #!tag = 去广告

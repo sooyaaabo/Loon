@@ -1,5 +1,5 @@
 #!name = 京东
-#!desc = 移除京东开屏广告，精简我的页面产品推广。 在京东应用内嵌入比价信息，点击商品标题即可查看。仅支持京东的标准模式。
+#!desc = 过滤京东广告，嵌入历史比价信息，点击商品标题即可查看。仅支持京东的标准模式。
 #!openUrl = https://apps.apple.com/app/id414245413
 #!author = RuCu6[https://github.com/fmz200], zwf234[https://github.com/zwf234]
 #!tag = 去广告

@@ -147,12 +147,12 @@
 ### **EFCloud**
 
 - **机场介绍**<br>
-1.多地中转隧道跨境出国SLA在线保障<br>
-2.超高带宽接入晚高峰速率保障4k秒开<br>
-3.支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
-4.全球 30+ 国家/地区， 50+ 节点<br>
-5.Trojan 协议，不限制设备数量<br>
-6.支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
+  1.多地中转隧道跨境出国SLA在线保障<br>
+  2.超高带宽接入晚高峰速率保障4k秒开<br>
+  3.支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
+  4.全球 30+ 国家/地区， 50+ 节点<br>
+  5.Trojan 协议，不限制设备数量<br>
+  6.支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
   
 - **套餐介绍**<br>
 <table>
@@ -321,6 +321,10 @@
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhidemai.plugin">什么值得买</a></td>
         <td>36</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Zhihu.plugin">知乎</a></td>
+    </tr>
+    <tr>
+        <td>37</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduMap.plugin">百度地图</a></td>
     </tr>
 </table>
 

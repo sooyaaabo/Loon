@@ -1,5 +1,5 @@
 #!name = 知乎
-#!desc = 在知识的海洋里狗刨，去除各部广告，建议卸载知乎重新安装。
+#!desc = 过滤知乎广告，建议卸载知乎重新安装。
 #!openUrl = https://apps.apple.com/app/id432274380
 #!author = RuCu6[https://github.com/RuCu6], app2smile[https://github.com/app2smile], blackmatrix7[https://github.com/blackmatrix7]
 #!tag = 去广告

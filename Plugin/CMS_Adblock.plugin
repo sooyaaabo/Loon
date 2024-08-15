@@ -1,5 +1,5 @@
 #!name = CMS Adblocker
-#!desc = 去除CMS资源插入式广告
+#!desc = 过滤CMS资源插入式广告
 #!openUrl = https://apps.apple.com/app/id6450680262
 #!author = Yswag[https://github.com/Yswag]
 #!tag = 去广告
