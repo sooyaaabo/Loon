@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-15 01:30
+#!date = 2024-08-15 11:20
 
-# 2024-08-12 19:00:00
+# 2024-08-15 06:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -316,7 +316,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 ^https?:\/\/erebor\.douban\.com\/count\/\?ad= reject
 # 斗鱼直播 - daoyu.sdo.com, rtbapi.douyucdn.cn, staticlive.douyucdn.cn, capi.douyucdn.cn, douyucdn.cn
 ^https?:\/\/daoyu\.sdo\.com\/api\/userCommon\/getAppStartAd reject
-^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo reject-200
+^https?:\/\/rtbapi\.douyucdn\.cn\/japi\/sign\/app\/getinfo reject-dict
 ^https?:\/\/staticlive\.douyucdn\.cn\/upload\/signs\/ reject
 ^https?:\/\/staticlive\.douyucdn\.cn\/.+\/getStartSend reject
 ^https?:\/\/staticlive\.douyucdn\.cn\/.+?\/getStartSend reject-img
