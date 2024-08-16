@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Advertising.png
-#!date = 2024-08-15 21:45
+#!date = 2024-08-16 17:40
 
-# 2024-08-15
+# 2024-08-16
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.08.15/c329/v2.0.512 reject-200
+^https?:\/\/2024.08.16/c330/v2.0.513 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -673,6 +673,8 @@
 ^https?:\/\/compus\.xiaofubao\.com\/compus\/advertising reject-200
 # 银河证券
 ^https?:\/\/cdns\.chinastock\.com\.cn\/cdn\/omc\/app\/app\/(index_pop_banner|startup_banner) reject-200
+# 越牛新闻
+^https?:\/\/m\.api\.shaoxing\.com\.cn\/v\d\/start reject-200
 
 # ======= Z ======= #
 # 掌上生活
