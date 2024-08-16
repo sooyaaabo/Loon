@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-16 01:00
+#!date = 2024-08-16 11:20
 
-# 2024-08-15 23:00:00
+# 2024-08-16 10:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
 
 [Rewrite]
@@ -1523,6 +1523,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/search\/goods\/rank reject-dict
 ^https:\/\/mgesq\.api\.mgtv\.com\/user\/center\/config reject-dict
 # 晓晓优选 - xxyx-client-api.xiaoxiaoyouxuan.com, statistic.live.126.net
+^https:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/vajra reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
 # ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
