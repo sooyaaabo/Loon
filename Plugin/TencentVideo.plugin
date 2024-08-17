@@ -40,7 +40,7 @@ URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.
 ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
 
 [Script]
-# http-request ^https?:\/\/vv\.video\.qq\.com\/getvinfo script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "&sppreviewtype=\d(.*)&spsrt=\d->&sppreviewtype=0$1&spsrt=0", tag = 腾讯视频
+http-request ^https?:\/\/vv\.video\.qq\.com\/getvinfo script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/CommonScript/replace-body.js, requires-body = true, argument = "&sppreviewtype=\d(.*)&spsrt=\d->&sppreviewtype=0$1&spsrt=0", tag = 腾讯视频
 
 [Mitm]
 hostname = vv.video.qq.com
