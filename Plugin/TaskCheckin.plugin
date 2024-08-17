@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-18 00:50
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/moyu.js
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
@@ -29,19 +29,9 @@ cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loo
 ;cron "0 10 0 * * *" script-path=https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/videoqq.js, tag = 腾讯视频签到🅣
 # 爱奇艺
 ;cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺会员任务🅣
-# 网易云音乐
-;cron "0 0 8 * * *" script-path = https://raw.githubusercontent.com/leiyiyan/resource/main/script/netease_musician/task.js, timeout = 60, tag = 网易云音乐人🅣
 # QQ音乐
 ;cron "25 7-12/1 * * *" script-path = https://raw.githubusercontent.com/WowYiJiu/Personal/main/Script/qqMusic.js, timeout = 60, tag = QQ音乐🅣
 # Bilibili
 ;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/ClydeTime/Quantumult/main/Script/Task/BiliBili.js, timeout = 60, tag = Bilibili每日任务🅣
 # 夸克网盘
 ;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 60, tag = 夸克网盘🅣
-# 霸王别姬小程序
-;cron "0 0 10 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/4984f7f34d6df8bcdd1e13ecac4bba51/raw/bwcj.js, timeout = 60, tag = 霸王别姬小程序🅣
-# 不背单词
-;cron "0 0 9 * * *" script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/bubei/bubei.js, timeout = 60, tag = 不背单词🅣
-# 高德地图
-;cron "0 0 7 * * *" script-path = https://raw.githubusercontent.com/wf021325/qx/master/task/ampDache.js, timeout = 60, tag = 高德地图打车🅣
-# 雨晨IOS
-;cron "0 5 0 * * *" script-path = https://raw.githubusercontent.com/Sliverkiss/GoodNight/master/Script/yuchenios.js, timeout = 300, tag = 雨晨IOS🅣
