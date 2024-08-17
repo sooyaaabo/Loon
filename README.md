@@ -337,7 +337,6 @@
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduMap.plugin">百度地图</a></td>
     </tr>
 </table>
-
 <table>
     <tr>
         <th>类别</th>
@@ -378,9 +377,20 @@
     <tr>
         <td>10</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/XPTV.plugin">XPTV</a></td>
+        <td>11</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/1.1.1.1.plugin">1.1.1.1</a></td>
+        <td>12</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BoxJs.plugin">BoxJs</a></td>
+    </tr>
+        <tr>
+        <td>13</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/LoonGallery.plugin">Loon Gallery</a></td>
+        <td>14</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
+        <td>15</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
     </tr>
 </table>
-
 <table>
     <tr>
         <th>类别</th>
