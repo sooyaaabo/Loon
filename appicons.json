@@ -556,7 +556,11 @@
         },
         {
             "name": "ScriptHub",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ScriptHub.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Script-Hub-light.png"
+        },
+        {
+            "name": "ScriptHub",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Script-Hub-dark.png"
         },
         {
             "name": "BoxJS",
