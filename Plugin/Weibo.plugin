@@ -8,10 +8,14 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo.png
-#!date = 2024-08-18 08:15
+#!date = 2024-08-19 00:00
 
 # 2024-08-18 08:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
+
+[Argument]
+cookieScriptEnable = switch, true, tag = 微博每日签到🅒
+cron = input, "0 3 0 * * *", tag = 微博每日签到🅣, desc = 微博每日签到🅣
 
 [Rule]
 # 请求放行
@@ -44,6 +48,11 @@ DOMAIN-SUFFIX, biz.weibo.com, REJECT
 ^https:\/\/weibo\.com\/ttarticle\/x\/m\/aj\/(reward|uvead)\? reject-dict
 
 [Script]
+# 
+http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable = {cookieScriptEnable}, tag = 微博每日签到🅒
+cron {cron} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable=true, tag = 微博每日签到🅣
+
+
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
 http-response ^https:\/\/api\.weibo\.cn\/2\/(checkin\/show|client\/publisher_list|push\/active)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 首页
 http-response ^https:\/\/api\.weibo\.cn\/2\/groups\/allgroups\/v2\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/weibo.js, requires-body = true, tag = 首页

@@ -8,10 +8,14 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AliyunDrive.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-19 00:00
 
 # 2024-08-06 19:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+
+[Argument]
+cookieScriptEnable = switch, true, tag = 阿里云盘签到🅒
+cron = input, "0 1 0 * * *", tag = 阿里云盘签到🅣, desc = 阿里云盘签到🅣
 
 [Rule]
 IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
@@ -24,7 +28,13 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
 
 [Script]
+# 阿里云盘获取Cookie和定时任务
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, enable = {cookieScriptEnable}, tag = 阿里云盘签到🅒
+cron {cron} script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, enable=true, tag = 阿里云盘签到🅣
+
+# 移除阿里云盘广告
 http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 移除阿里云盘广告
 http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/aliyundrive.js, requires-body = true, tag = 移除阿里云盘广告
+
 [Mitm]
-hostname = *api.alipan.com, *api.aliyundrive.com, member.alipan.com, member.aliyundrive.com
+hostname = *api.alipan.com, *api.aliyundrive.com, member.alipan.com, member.aliyundrive.com, auth.alipan.com, auth.aliyundrive.com
