@@ -1,5 +1,5 @@
 #!name = Cookie & Task
-#!desc = 获取Cookie后关闭Cookie脚本，自动签到打卡任务。
+#!desc = 先启用Cookie脚本，在获取Cookie后关闭脚本以避免无意义的MITM，插件便可自动签到完成打卡任务。
 #!openUrl = 
 #!author = Sliverkiss[https://github.com/Sliverkiss], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -7,34 +7,34 @@
 #!system_version = 
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
-#!date = 2024-08-19 00:40
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Memento.png
+#!date = 2024-08-19 01:00
 
 [Argument]
 # 阿里云盘
-cookieScriptEnable-aliyun = switch, true, tag = 阿里云盘Cookie
-cron-aliyun = input, "0 1 0 * * *", tag = 阿里云盘Task
+cookieScriptEnable-aliyun = switch, true, false, tag = 阿里云盘Cookie, desc = 是否启用阿里云盘Cookie脚本来获取Cookie
+cron-aliyun = input, "0 1 0 * * *", tag = 阿里云盘Task, desc = 输入cron表达式来定时运行阿里云盘Task
 
 # 微博
-cookieScriptEnable-weibo = switch, true, tag = 微博Cookie
-cron-weibo = input, "0 3 0 * * *", tag = 微博Task
+cookieScriptEnable-weibo = switch, true, false, tag = 微博Cookie, desc = 是否启用微博Cookie脚本来获取Cookie
+cron-weibo = input, "0 3 0 * * *", tag = 微博Task, desc = 输入cron表达式来定时运行微博Task
 
 # 爱奇艺
-# cookieScriptEnable-iqiyi = switch, true, tag = 爱奇艺Cookie
-# cron-iqiyi = input, "0 3 0 * * *", tag = 爱奇艺Task
+# cookieScriptEnable-iqiyi = switch, true, false, tag = 爱奇艺Cookie, desc = 是否启用爱奇艺Cookie脚本来获取Cookie
+# cron-iqiyi = input, "0 3 0 * * *", tag = 爱奇艺Task, desc = 输入cron表达式来定时运行爱奇艺Task
 
 [Script]
 # 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
 http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, enable = {cookieScriptEnable-aliyun}, tag = 阿里云盘Cookie
-cron {cron-aliyun} script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, enable=true, tag = 阿里云盘Task
+cron {cron-aliyun} script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘Task
 
 # 微博 - api.weibo.cn
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable = {cookieScriptEnable-weibo}, tag = 微博Cookie
-cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable=true, tag = 微博Task
+cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博Task
 
 # 爱奇艺 - passport.iqiyi.com
 # http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable = {cookieScriptEnable-iqiyi}, tag = 爱奇艺Cookie
-# cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable=true, tag = 爱奇艺Task
+# cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
 
 [Mitm]
 hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn

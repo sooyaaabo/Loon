@@ -431,9 +431,7 @@
     </tr>
     <tr>
         <td>01</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/GetCookie.plugin">Cookie获取</a></td>
-        <td>02</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TaskCheckin.plugin">Task签到</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CookieTask.plugin">CookieTask</a></td>
     </tr>
 </table>
 
