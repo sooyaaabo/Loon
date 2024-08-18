@@ -440,7 +440,11 @@
         },
 	{
             "name": "Memento",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Memento.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Memento-light.png"
+        },
+	{
+            "name": "Memento",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Memento-dark.png"
         },
         {
             "name": "Toolbox",
