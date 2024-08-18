@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-16 21:40
+#!date = 2024-08-18 08:15
 
 # 2024-08-16 10:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -295,7 +295,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/xgapp\.php\/v\d\/top_notice\? reject-200
 ^https?:\/\/sdk\.alibaba\.com\.ailbaba\.me\/(dsx|xgapp)\.php\/v\d\/(top_notice\?|version|advert\?position=[^2]+) reject-200
 # 大智慧 - ssp.dzh.com.cn
-^https?://ssp\.dzh\.com\.cn/v2api/adgroupjson reject
+^https?:\/\/ssp\.dzh\.com\.cn\/v2api\/adgroupjson reject
 # 大众点评 - img.meituan.net
 # ^https?:\/\/img\.meituan\.net\/dpmobile\/.+93241\.png reject-dict
 # ^https?:\/\/img\.meituan\.net\/dpmobile\/.*.(gif|jpg) reject-200

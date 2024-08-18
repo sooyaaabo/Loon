@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo.png
-#!date = 2024-08-17 09:00
+#!date = 2024-08-18 08:15
 
-# 2024-08-17 08:25
+# 2024-08-18 08:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
 
 [Rule]
@@ -26,7 +26,6 @@ DOMAIN-SUFFIX, biz.weibo.com, REJECT
 # 详情页 - 超话、评论区、看图界面、个人主页、我的页面、信息流、商品橱窗、视频流、视频号、视频调查、话题卡片
 ^https:\/\/api\.weibo\.cn\/2\/comments\/bullet_screens\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/photo\/info\? reject-dict
-^https:\/\/api\.weibo\.cn\/2\/profile\/container_timeline\?flowId=\d+&invokeType=manual&manualType=scroll&pageDataType=flow&taskType=loadMore& reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/statuses\/(container_positive|push_info)\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/vote\/get_vote_detail\? reject-dict
 ^https:\/\/api\.weibo\.cn\/2\/!\/chaohua\/discovery\/home_bottom\/switch\? reject-dict
