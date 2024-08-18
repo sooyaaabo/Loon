@@ -1,0 +1,32 @@
+#!name = test
+#!desc = test
+#!openUrl = 
+#!author = Sliverkiss[https://github.com/Sliverkiss], sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(734)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png
+#!date = 2024-08-18 00:50
+
+[Argument]
+cron = input,"0 1 0 * * *",tag=阿里云盘签到🅒,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=阿里云盘签到🅣
+
+cron = input,"0 3 0 * * *",tag=微博每日签到🅒,desc=定时任务的cron表达式
+cookieScriptEnable = switch,true,tag=微博每日签到🅣
+
+[Script]
+# 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, enable = {cookieScriptEnable}, tag = 阿里云盘签到🅒
+# 阿里云盘
+cron "0 1 0 * * *" script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, enable=true, tag = 阿里云盘签到🅣
+
+# 微博 - api.weibo.cn
+http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable = {cookieScriptEnable}, tag = 微博每日签到🅒
+# 微博
+cron "0 3 0 * * *" script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable=true, tag = 微博每日签到🅣
+
+[Mitm]
+hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn
