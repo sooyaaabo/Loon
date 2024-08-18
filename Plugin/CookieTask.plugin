@@ -20,8 +20,8 @@ cookieScriptEnable-weibo = switch, true, tag = 微博Cookie
 cron-weibo = input, "0 3 0 * * *", tag = 微博Task
 
 # 爱奇艺
-cookieScriptEnable-iqiyi = switch, true, tag = 爱奇艺Cookie
-cron-iqiyi = input, "0 3 0 * * *", tag = 爱奇艺Task
+# cookieScriptEnable-iqiyi = switch, true, tag = 爱奇艺Cookie
+# cron-iqiyi = input, "0 3 0 * * *", tag = 爱奇艺Task
 
 [Script]
 # 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
