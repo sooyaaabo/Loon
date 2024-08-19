@@ -520,7 +520,11 @@
         },
         {
             "name": "X",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/X.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/X-01.png"
+        },
+	{
+            "name": "X",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/X-02.png"
         },
 	{
             "name": "Telegram",
