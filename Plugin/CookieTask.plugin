@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Memento-dark.png
-#!date = 2024-08-19 09:00
+#!date = 2024-08-19 18:00
 
 [Argument]
 # 阿里云盘
@@ -20,8 +20,8 @@ cookieScriptEnable-weibo = switch, true, false, tag = 微博Cookie, desc = 是�
 cron-weibo = input, "0 3 0 * * *", tag = 微博Task, desc = 输入cron表达式来定时运行微博Task
 
 # 爱奇艺
-# cookieScriptEnable-iqiyi = switch, true, false, tag = 爱奇艺Cookie, desc = 是否启用爱奇艺Cookie脚本来获取Cookie
-# cron-iqiyi = input, "0 5 0 * * *", tag = 爱奇艺Task, desc = 输入cron表达式来定时运行爱奇艺Task
+cookieScriptEnable-iqiyi = switch, true, false, tag = 爱奇艺Cookie, desc = 是否启用爱奇艺Cookie脚本来获取Cookie
+cron-iqiyi = input, "0 5 0 * * *", tag = 爱奇艺Task, desc = 输入cron表达式来定时运行爱奇艺Task
 
 [Script]
 # 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
@@ -33,8 +33,8 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博Task
 
 # 爱奇艺 - passport.iqiyi.com
-# http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable = {cookieScriptEnable-iqiyi}, tag = 爱奇艺Cookie
-# cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout = 60, enable = {cookieScriptEnable-iqiyi}, tag = 爱奇艺Cookie
+cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout = 60, tag = 爱奇艺Task
 
 [Mitm]
-hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn
+hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com
