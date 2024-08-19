@@ -200,7 +200,11 @@
         },
         {
             "name": "TestFlight",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-01.png"
+        },
+	{
+            "name": "TestFlight",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-02.png"
         },
         {
             "name": "QQ",
