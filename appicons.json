@@ -199,6 +199,18 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_www.png"
         },
         {
+            "name": "AppStore",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppStore-01.png"
+        },
+	{
+            "name": "AppStore",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppStore-02.png"
+        },
+	{
+            "name": "AppStore",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppStore-03.png"
+        },
+        {
             "name": "TestFlight",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-01.png"
         },
