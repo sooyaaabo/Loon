@@ -528,7 +528,11 @@
         },
 	{
             "name": "Telegram",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Telegram.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Telegram-01.png"
+        },
+	{
+            "name": "Telegram",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Telegram-02.png"
         },
         {
             "name": "Swiftgram",
