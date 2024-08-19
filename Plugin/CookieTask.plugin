@@ -1,7 +1,7 @@
 #!name = Cookie & Task
 #!desc = 先启用Cookie脚本，在获取Cookie后关闭脚本以避免无意义的MITM，插件便可自动签到完成打卡任务。
 #!openUrl = 
-#!author = Sliverkiss[https://github.com/Sliverkiss], sooyaaabo[https://github.com/sooyaaabo]
+#!author = Sliverkiss[https://github.com/Sliverkiss], NobyDa[https://github.com/NobyDa], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
@@ -33,8 +33,8 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博Task
 
 # 爱奇艺 - passport.iqiyi.com
-http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout = 60, enable = {cookieScriptEnable-iqiyi}, tag = 爱奇艺Cookie
-cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js, timeout = 60, tag = 爱奇艺Task
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable = {cookieScriptEnable-iqiyi}, tag = 爱奇艺Cookie
+cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
 
 [Mitm]
 hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com
