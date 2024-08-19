@@ -163,6 +163,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TaskCheck-in.png"
         },
         {
+            "name": "Final",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Final.png"
+        },
+        {
             "name": "Web_301",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Web_301.png"
         },
@@ -569,6 +573,10 @@
         {
             "name": "YouTube",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/YouTube.png"
+        },
+        {
+            "name": "Netflix",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Netflix.png"
         },
         {
             "name": "GitHub",
