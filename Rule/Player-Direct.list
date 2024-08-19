@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-08 19:00
+# 2024-08-19 09:20
 
 # CMSPlayer
 # 低端影视
@@ -185,6 +185,8 @@ DOMAIN-SUFFIX, novipnoad.net
 DOMAIN-SUFFIX, bilfun.cc
 # 星芽短剧
 DOMAIN, app.whjzjx.cn
+# 小苹果
+DOMAIN, tipu.xjqxz.top
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
 DOMAIN-SUFFIX, czys.top
