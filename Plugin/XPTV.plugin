@@ -8,12 +8,12 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/XPTV.png
-#!date = 2024-08-19 09:00
+#!date = 2024-08-20 23:10
 
 # 2024-08-06 00:14
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
 
-# 目前支持：4K测试、Anfuns、BILFUN、NO视频、短剧天堂、韩剧看看、两个BT、MGTV、美剧星球、耐看点播、烧火电影、素白白影视、速讯影院、文才资源、小苹果、小蚂蚁、星芽短剧
+# 目前支持：4K测试、Anfuns、BILFUN、NO视频、短剧天堂、韩剧看看、两个BT、MGTV、美剧星球、耐看点播、烧火电影、素白白影视、速讯影院、文才资源、小苹果、小蚂蚁、星芽短剧、瓜子影视
 # 已知问题：
 # 1. 两个BT及素白白经常盗用小红书图床存资源，如果播放失败很可能是被小红书删除了
 # 2. 海外访问小红书cdn会分配到cf ip，速度很慢，解决方法是将域名(dc.xhscdn.com)本地DNS映射到境内ip
