@@ -1,4 +1,5 @@
-// 2024.08.10
+// https://github.com/ZenmoFeiShi/Qx/blob/main/Pinduoduo.js
+// 2024.08.13
 const url = $request.url;
 let obj = JSON.parse($response.body);
 
@@ -8,7 +9,11 @@ try {
         delete obj.result.icon_set;
         delete obj.result.search_bar_hot_query;
         }
-
+        
+    if (url.includes("/search")) {
+    delete obj.expansion;
+         }
+        
     if (url.includes('/api/philo/personal/hub')) {
         delete obj.monthly_card_entrance;
         delete obj.personal_center_style_v2_vo;
