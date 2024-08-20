@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CNY.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-20 12:50
 
 # 2024-07-11 19:10:01
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bank_remove_ads.plugin
@@ -31,6 +31,7 @@ URL-REGEX, ^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mpsp
 # 中信银行
 # 开屏广告 @jFrecht
 ^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png)\?width=(1125|1242|750|563|1400|1863)&height=(2436|2688|1624|1218|3031|4032) reject
+^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|jpeg|png)\?width=[0-9]{4}&height=[0-9]{4} url reject
 
 # 浦发银行
 ^https:\/\/lban\.spdb\.com\.cn\/mspmk-web-component\/getAdvertisementList\.ah$ reject-dict

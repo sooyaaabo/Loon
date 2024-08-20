@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-20 12:50
 
 # 2024-08-06 19:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -145,9 +145,6 @@
 
 # 中国移动 //client.app.coc.10086.cn
 ^https:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) reject-dict
-
-# 中信银行 //imcs.citicbank.com
-^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png)\?width=(1125|1242|750|563|1400|1863)&height=(2436|2688|1624|1218|3031|4032) reject
 
 [Script]
 # 12306 //ad.12306.cn, mobile.12306.cn
