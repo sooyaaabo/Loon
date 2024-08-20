@@ -148,7 +148,6 @@
 
 # 中信银行 //imcs.citicbank.com
 ^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png)\?width=(1125|1242|750|563|1400|1863)&height=(2436|2688|1624|1218|3031|4032) reject
-^https:\/\/imcs\.citicbank\.com\/cloud\/([a-fA-F0-9]{32})\.(jpg|png) reject
 
 [Script]
 # 12306 //ad.12306.cn, mobile.12306.cn
