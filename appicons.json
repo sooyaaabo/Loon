@@ -143,8 +143,16 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png"
         },
         {
-            "name": "Netisp-X",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Netisp-X.png"
+            "name": "Network",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Network.png"
+        },
+        {
+            "name": "Wi-Fi",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Wi-Fi.png"
+        },
+        {
+            "name": "Cellular",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Cellular.png"
         },
         {
             "name": "Netisp",
