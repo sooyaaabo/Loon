@@ -392,7 +392,7 @@
     </tr>
     <tr>
         <td>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NetIsp-x.plugin">网络信息</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp-x.plugin">网络信息</a></td>
     </tr>
 </table>
 <table>
