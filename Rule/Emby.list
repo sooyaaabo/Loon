@@ -1,5 +1,5 @@
-# 来源： https://github.com/Repcz/Tool/blob/X/Loon/Rules/Emby.list
-# 最后更新时间： 2024-07-19 23:25
+# 来源： https://github.com/MisakaFxxk/MisakaF_Subconverter/blob/main/Sub/Emby.list
+# 最后更新时间： 2024-08-23 18:50
 
 
 ##### A #####
@@ -120,17 +120,6 @@ DOMAIN-SUFFIX,infinityfly.top
 
 ##### J #####
 
-# jmsooo
-DOMAIN-SUFFIX,jmsooo.com
-DOMAIN-SUFFIX,agahk1.jmsooo.com
-DOMAIN-SUFFIX,agasg1.jmsooo.com
-DOMAIN-SUFFIX,agajp1.jmsooo.com
-DOMAIN-SUFFIX,aws.jmsooo.com
-DOMAIN-SUFFIX,ntt1.jmsooo.com
-DOMAIN-SUFFIX,hinet.jmsooo.com
-DOMAIN-SUFFIX,cf.jmsooo.com
-DOMAIN-SUFFIX,cf1.jmsooo.com
-
 # 剧狗
 DOMAIN-SUFFIX,ju.dog
 IP-CIDR,202.61.255.248/32,no-resolve
@@ -155,6 +144,7 @@ DOMAIN-SUFFIX,loseremby.org
 
 # 牢大(Emby餐厅)
 DOMAIN-SUFFIX,mius.uk
+DOMAIN-SUFFIX,16bit.cfd
 
 # Land Emby
 DOMAIN-SUFFIX,emby.lcloud.wiki
@@ -180,6 +170,7 @@ DOMAIN-SUFFIX,20120714.xyz
 
 # Magpie(喜鹊)
 DOMAIN-SUFFIX,magpie.cyou
+DOMAIN-SUFFIX,magpiecdn.tech
 
 # Misty Emby
 DOMAIN-SUFFIX,misty.ltd
@@ -241,6 +232,9 @@ DOMAIN-SUFFIX,emby.ok.edu.hk
 DOMAIN-SUFFIX,emby.neko.edu.rs
 DOMAIN-SUFFIX,emby.otakudrive.life
 DOMAIN-SUFFIX,emby2.otakudrive.life
+
+# OUO
+DOMAIN-SUFFIX,ouonet.org
 
 ##### P #####
 
