@@ -1,5 +1,5 @@
 #!name = VVebo
-#!desc = 修复用户主页时间线问题
+#!desc = 修复用户主页时间线问题，需将本插件置于[微博去广告]之前，并禁用[微博轻享版去广告]，以避免本插件不生效。
 #!openUrl = https://apps.apple.com/app/id670910957
 #!author = suiyuran[https://github.com/suiyuran], androidcn[https://github.com/androidcn]
 #!tag = 功能增强
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/VVebo.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-23 23:00
 
 # 2024-04-04
 # https://github.com/suiyuran/stash/blob/main/override/fix-vvebo.stoverride
