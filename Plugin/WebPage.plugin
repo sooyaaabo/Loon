@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-24 17:30
 
 # 2024-06-30 11:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
@@ -53,7 +53,7 @@ http-response ^https:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(\/(cdn-cgi))
 # Jable (https://jable.tv/)
 http-response ^https:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = Jable@RuCu6
 # missav 播放页弹窗 (https://missav.com/)
-http-response ^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = missav@RuCu6
+# http-response ^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = missav@RuCu6
 
 # -----------ddgksf2013----------- #
 # 在线之家 - https://www.zxzjhd.com/
