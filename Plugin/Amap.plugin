@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png
-#!date = 2024-08-14 15:50
+#!date = 2024-08-24 08:55
 
-# 2024-08-14 15:25
+# 2024-08-24 07:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
 
 [Rule]
@@ -23,7 +23,6 @@ DOMAIN, free-aos-cdn-image.amap.com, REJECT
 [Rewrite]
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(car-end|route-plan) reject-dict
-^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? reject-dict
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? reject-dict
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅

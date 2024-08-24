@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Emby.png
-#!date = 2024-08-24 00:00
+#!date = 2024-08-24 09:00
 
-# 2024-08-23
+# 2024-08-24
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js
 
 [Argument]
@@ -20,8 +20,8 @@ cron-emby = input, "35 22 15,30 * *", tag = Emby自动保号, desc = 输入cron�
 
 [Script]
 # Emby - -*.fileball.app, *
-http-request ^https:\/\/.+\/emby\/Sessions\/Playing\/Stopped script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js, requires-body = true, enable = {cookieScriptEnable-emby}, tag = Emby获取参数
-cron {cron-emby} script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js, tag = Emby自动保号
+http-request ^https:\/\/.+\/emby\/Sessions\/Playing\/Stopped script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/emby.js, requires-body = true, enable = {cookieScriptEnable-emby}, tag = Emby获取参数
+cron {cron-emby} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/emby.js, tag = Emby自动保号
 
 [Mitm]
 hostname = -*.fileball.app, *
