@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-08-20 12:50
+#!date = 2024-08-24 16:00
 
-# 2024-08-06 19:15
+# 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 
 [Rewrite]
@@ -152,7 +152,7 @@ http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https:/
 http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 12306广告
 
 # amdc
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = amdc
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = amdc
 
 # 阿里云盘 //*api.alipan.com, member.alipan.com
 http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
@@ -196,6 +196,9 @@ http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList\? script-path = h
 http-response ^https:\/\/gateway\.kugou\.com\/(adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
 http-response ^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ url script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
 
+# 搜狗输入法 //sec.sginput.qq.com
+http-response ^https:\/\/sec\.sginput\.qq\.com\/q script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 搜狗输入法
+
 # 贴吧全面去广告 //tiebac.baidu.com
 http-response ^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaJson.js, requires-body = true, tag = 贴吧全面去广告
 http-response ^http:\/\/c\.tieba\.baidu\.com\/c\/f\/(excellent\/personalized|frs\/(generalTabList|page|threadlist)|pb\/(pic)?page)\?cmd script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/tiebaProto.js, requires-body = true, tag = 贴吧全面去广告
@@ -221,4 +224,4 @@ http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-pa
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cloud139.js, requires-body = true, tag = 中国移动云盘
 
 [Mitm]
-hostname = ad.12306.cn, mobile.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, image.mybank.icbc.com.cn, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, tiebac.baidu.com, osg-service.sgcc.com.cn, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, client.app.coc.10086.cn, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = ad.12306.cn, mobile.12306.cn, *.58cdn.com.cn, app.58.com, pic?.ajkimg.com, gw.aihuishou.com, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, api.chelaile.net.cn, web.chelaile.net.cn, app-gw.csdn.net, api.douban.com, elemecdn.com, fuss10.elemecdn.com, www1.elecfans.com, image.mybank.icbc.com.cn, api.hechuangxinxi.xyz, jdforrepam.com, links.jianshu.com, www.jianshu.com, api.m.jd.com, gab.122.gov.cn, res.kfc.com.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, ssp.soulapp.cn, sec.sginput.qq.com, tiebac.baidu.com, osg-service.sgcc.com.cn, gw.m.163.com, nex.163.com, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, api.jr.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, client.app.coc.10086.cn, ad.mcloud.139.com, jzts.cmpassport.com

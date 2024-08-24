@@ -8,14 +8,14 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png
-#!date = 2024-08-24 08:55
+#!date = 2024-08-24 16:00
 
-# 2024-08-24 07:50
+# 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
 
 [Rule]
 # 移除广告下发请求
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$), (USER-AGENT, AMapiPhone)), REJECT
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone)), REJECT
 
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
@@ -36,7 +36,7 @@ DOMAIN, free-aos-cdn-image.amap.com, REJECT
 
 [Script]
 # 移除阿里巴巴通用广告请求
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 阿里巴巴通用广告
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 阿里巴巴通用广告
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 http-response ^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页
 http-response ^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/amap.js, requires-body = true, tag = 导航详情页

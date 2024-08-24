@@ -8,9 +8,9 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-24 16:00
 
-# 2024-02-18 15:50
+# 2024-08-24 12:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet
 # 2024-08-11 20:33:15
 # https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
@@ -56,7 +56,7 @@ DOMAIN, ykad-data.youku.com, REJECT
 [Script]
 # ---------- RuCu6 ---------- #
 # 移除阿里巴巴通用广告请求
-http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 移除阿里巴巴通用广告请求@RuCu6
+http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 移除阿里巴巴通用广告请求@RuCu6
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 移除首页推广@RuCu6
 http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 移除首页推广@RuCu6
