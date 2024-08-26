@@ -1,0 +1,42 @@
+#!name = Youtube (Music)
+#!desc = 过滤Youtube (Music)广告，增加画中画、字幕翻译、歌词翻译功能，支持后台播放。需要启用QUIC回退保护。不支持tvOS设备。
+#!openUrl = https://apps.apple.com/app/id544007664
+#!author = Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(734)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/YouTube.png
+#!date = 2024-08-26 12:30
+#!select = 隐藏上传按钮, true, false
+#!select = 隐藏选段按钮, true, false
+#!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
+#!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
+#select = 启用调试模式, true, false
+
+# 2024-5-12
+# https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
+# 2024-06-11 21:59:22
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/YouTube_remove_ads.plugin
+
+# Youtube 画中画和后台播放分别在客户端内关闭
+#   - 设置 -> 通用 -> 画中画
+#   - 设置 -> 后台播放和下载 -> 后台播放
+
+[Rule]
+AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
+AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
+
+[Rewrite]
+# 使用reject-dict方法以减少开销
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
+
+[Script]
+# YouTube去广告
+http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
+
+http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube响应
+
+[Mitm]
+hostname = *.googlevideo.com, youtubei.googleapis.com

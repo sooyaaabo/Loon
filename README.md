@@ -335,6 +335,8 @@
     <tr>
         <td>37</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduMap.plugin">百度地图</a></td>
+        <td>38</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube (Music)</a></td>
     </tr>
 </table>
 <table>
@@ -421,7 +423,6 @@
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/iTunes.plugin">iTunes</a></td>
     </tr>
 </table>
-
 <table>
     <tr>
         <th>类别</th>
@@ -436,6 +437,8 @@
     <tr>
         <td>01</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CookieTask.plugin">CookieTask</a></td>
+        <td>02</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Emby.plugin">Emby</a></td>
     </tr>
 </table>
 
