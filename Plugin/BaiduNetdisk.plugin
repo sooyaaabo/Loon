@@ -8,12 +8,14 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
-#!date = 2024-08-24 16:00
+#!date = 2024-08-26 18:20
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 # 2023-08-19 13:48:55
 # https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
+# 2024-08-26
+# https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js
 # 2024-07-20 10:30:06
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin
 
@@ -76,12 +78,20 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 ^https:\/\/pan\.baidu\.com\/rest\/\d\.\d\/pcs\/adv reject-dict
 
 # ddgksf2013
+# 启动弹窗
+^https?:\/\/afd\.baidu\.com\/rest\/.*\/membership\/proxy\/guide reject-200
 # 设置信息流
 ^https?:\/\/pan\.baidu\.com\/act\/v\d\/(bchannel|welfare)\/list reject-200
 # 通用广告
 ^https?:\/\/pan\.baidu\.com\/rest\/.*\/pcs\/ad reject-200
 # 活动推广
 ^https?:\/\/pan\.baidu\.com\/act\/api\/activityentry reject-200
+# 热搜list
+^https:\/\/pan\.baidu\.com\/feed\/hotlist reject-200
+# 搜索填词
+^https:\/\/pan\.baidu\.com\/queryintent\/queryhint reject-200
+# 金币乐园
+^https:\/\/pan\.baidu\.com\/coins\/center\/notice reject-200
 
 [Script]
 # RuCu6
@@ -91,5 +101,15 @@ http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-pa
 # chxm1023
 http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
 
+# ddgksf2013
+# 开屏广告
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+# 广告推广
+http-response ^https?:\/\/afd\.baidu\.com\/afd\/entry script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+# 设置页游戏
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+# 首页信息流
+http-response ^https:\/\/pan\.baidu\.com\/feed\/cardinfos script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+
 [Mitm]
-hostname = pan.baidu.com, 180.76.76.200, 180.76.76.112
+hostname = pan.baidu.com, afd.baidu.com, 180.76.76.200, 180.76.76.112
