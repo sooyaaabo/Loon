@@ -483,5 +483,3 @@
 
 ## Star History
 ![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
-
-## [回到顶部](https://github.com/sooyaaabo/sooyaaabo?tab=readme-ov-file#readme)
