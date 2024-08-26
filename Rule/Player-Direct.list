@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-20 00:00
+# 2024-08-26 09:50
 
 # CMSPlayer
 # 低端影视
@@ -287,13 +287,14 @@ DOMAIN, jz.mcjoker.xyz
 # MisakaF
 DOMAIN, cdn.misakaf.org
 DOMAIN-SUFFIX, cloudfront.net
+# 牢大科蜜野兽
+DOMAIN-SUFFIX, mius.uk
 # 终点站
 DOMAIN, pub1.emby.wtf
 DOMAIN, pub2.emby.wtf
 DOMAIN, pub3.emby.wtf
-# yomo服不服
+# yomo
 DOMAIN, emby.yomo.lol
-DOMAIN, yomo.7777777.buzz
 # peach
 DOMAIN-SUFFIX, embymv.tk
 
