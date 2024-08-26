@@ -28,10 +28,10 @@ AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/v\d+\/(ads\/resource|hey\/\w+\/hey_gallery) reject-dict
 
 # 评论区图片水印 (实验功能可能无效)
-# ^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark reject-img
+^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark reject-img
 
 # 笔记创作推荐
-# ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner reject-dict
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner reject-dict
 
 [Script]
 # 详情页小部件,关注页感兴趣的人
