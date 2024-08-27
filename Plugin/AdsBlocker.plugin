@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-08-27 11:00
+#!date = 2024-08-27 12:45
 
 # 2024-08-18 10:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -833,12 +833,10 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 # 全民生活
 ^https?:\/\/rs\.creditcard\.cmbc\.com\.cn\/mmc\/img\/126f35586ece469aa2daf2e451ba7b4d\.jpg reject-200
 # 马蜂窝 - mapi.mafengwo.cn
-^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad reject-200
+^https?:\/\/mapi\.mafengwo\.cn\/(travelguide\/)?ad reject
 ^https?:\/\/mapi\.mafengwo\.cn\/widget\/note\/get_widget_note reject
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/mark_alert_config reject-dict
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_push_config reject-dict
-^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/get_alert_config reject-dict
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/update\/check_update reject-dict
+^https?:\/\/mapi\.mafengwo\.cn\/system\/config\/(get|mark)_(push|alert)_config reject-dict
 ^https?:\/\/mapi\.mafengwo\.cn\/system\/push\/get_local_push_config reject
 # 咪咕 - *.cmvideo.cn
 ^https?:\/\/gg\w+?\.cmvideo\.cn\/v\d\/iflyad\/ reject-200
@@ -915,7 +913,7 @@ https?:\/\/helper\.2bulu\.com\/(greenPea\/queryTasks|proSpecial\/allData|saveSpl
 ^https?:\/\/slapi\.oray\.net\/adver reject
 
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
-# pikpak - access.mypikpak.com
+# PikPak - access.mypikpak.com
 ^https?:\/\/access\.mypikpak\.com\/access_controller\/v1\/area_accessible reject
 # PushPlus微信推送广告 - image.pushplus.plus, www.pushplus.plus
 # ^https?:\/\/image\.pushplus\.plus\/ad.* reject-dict
@@ -1853,6 +1851,8 @@ http-response ^https?:\/\/adservice\.sigmob\.cn\/extconfig script-path = https:/
 http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = suspension -> random_body, requires-body = true, tag = 叮咚买菜
 # 大众点评 - img.meituan.net
 http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body = true, tag = 大众点评
+# 多多买菜 - mobile.yangkeduo.com
+http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "list":\[.+\] -> "list":[], requires-body = true, tag = 多多买菜
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # Flightradar24 - mobile.flightradar24.com
@@ -1923,10 +1923,10 @@ http-response ^https?:\/\/creditcardapp\.bankcomm\.(com|cn)\/rcg\/index\.html\?c
 # 脉脉 - open.taou.com, h3.open.taou.com
 http-response ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/feed\/v6\/detail_recommend_feeds\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body = true, tag = 脉脉
 http-response ^https:\/\/(h3\.)?open\.taou\.com\/maimai\/(feed|gossip)\/v\d\/(focus_feed|gossip_detail_comment|feed_detail_comment?)\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/maimai/maimai_ads.js, requires-body = true, tag = 脉脉
+# 马蜂窝 - mapi.mafengwo.cn
+http-response ^https?:\/\/mapi\.mafengwo\.cn\/user\/profile\/get_(list|profile) script-path =  https://raw.githubusercontent.com/zirawell/R-Store/main/Res/Scripts/mafengwo.js, requires-body = true, tag = 马蜂窝
 
 # >>>>>>>>>>>>>>> ✅ P ✅ <<<<<<<<<<<<<<
-# 多多买菜 - mobile.yangkeduo.com
-http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "list":\[.+\] -> "list":[], requires-body = true, tag = 多多买菜
 # 朴朴超市 - j1.pupuapi.com
 http-response ^https?:\/\/j1\.pupuapi\.com\/client\/marketing\/banner\/v7\?position_types=2(%[A-Z0-9]+)+&store_id script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/PupuSplashAds.js, requires-body = true, tag = 朴朴超市
 
