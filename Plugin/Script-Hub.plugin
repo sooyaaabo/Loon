@@ -1,7 +1,7 @@
 #!name = Script Hub
 #!desc = 重写 & 规则集转换，使用前请在本插件的详情页面为[PROXY]项分配代理策略。
 #!openUrl = https://script.hub/
-#!author = 小白脸 xream[https://github.com/xream], keywos[https://github.com/keywos], CKYB[https://github.com/CKYB]
+#!author = xream[https://github.com/xream], keywos[https://github.com/keywos], CKYB[https://github.com/CKYB], 小白脸
 #!tag = 功能增强
 #!system = 
 #!system_version = 
@@ -14,7 +14,7 @@
 #!select = ScriptHub通知, 开启通知, 关闭通知, 跟随链接
 #!input = Parser_body_max
 #!input = Parser_http_timeout
-#!date = 2024-08-17 09:00
+#!date = 2024-08-27 10:50
 
 # 2024-04-07
 # https://github.com/Script-Hub-Org/Script-Hub/blob/main/modules/script-hub.loon.plugin
