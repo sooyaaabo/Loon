@@ -372,7 +372,7 @@
         <td>07</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TestFlight.plugin">TestFlight</a></td>
         <td>08</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TikTok.plugin">TikTok</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp-x.plugin">网络信息</a></td>
         <td>09</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/VVebo.plugin">VVebo</a></td>
     </tr>
@@ -391,10 +391,6 @@
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Sub-Store.plugin">Sub-Store</a></td>
         <td>15</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
-    </tr>
-    <tr>
-        <td>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Netisp-x.plugin">网络信息</a></td>
     </tr>
 </table>
 <table>
