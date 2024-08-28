@@ -21,6 +21,7 @@ AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-A
 
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT
+DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 
 [Rewrite]
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
