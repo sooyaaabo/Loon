@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-26 09:50
+# 2024-08-29 19:25
 
 # CMSPlayer
 # 低端影视
@@ -113,10 +113,7 @@ DOMAIN-SUFFIX, xkanzy10.com
 DOMAIN-SUFFIX, kuaiyunzy.com
 # 黑木耳
 DOMAIN-SUFFIX, heimuer.tv
-DOMAIN-SUFFIX, heimuer.pro
 DOMAIN-SUFFIX, heimuer.xyz
-DOMAIN-SUFFIX, heimuer.app
-DOMAIN, m3u8.hmrvideo.com
 # 华为吧
 DOMAIN-SUFFIX, huawei8.live
 DOMAIN-SUFFIX, hw8.live
@@ -195,45 +192,37 @@ DOMAIN-SUFFIX, czys.top
 DOMAIN-SUFFIX, czys.pro
 DOMAIN-SUFFIX, czzy.top
 DOMAIN-SUFFIX, czzy.tv
-DOMAIN-SUFFIX, cz01.vip
 DOMAIN-SUFFIX, cz01.tv
-DOMAIN-SUFFIX, czzy22.com
-DOMAIN-SUFFIX, czzy66.com
 DOMAIN-SUFFIX, czzy77.com
-DOMAIN-SUFFIX, czzy88.com
 DOMAIN-SUFFIX, cz233.com
 # 555电影
-DOMAIN-SUFFIX, fivemov.com
-DOMAIN-SUFFIX, w5srn.com
 DOMAIN-SUFFIX, 55drm.com
-DOMAIN-SUFFIX, v5deo.com
-DOMAIN-SUFFIX, w55tv.com
 DOMAIN-SUFFIX, 5cinv.net
-DOMAIN-SUFFIX, 5scrn.com
+DOMAIN-SUFFIX, 55flix.com
+DOMAIN-SUFFIX, 12filmvault.com
+DOMAIN-SUFFIX, 5vidw.com
+DOMAIN-SUFFIX, f6lz.com
 # 哔嘀影视
 DOMAIN-SUFFIX, bdys.me
-DOMAIN-SUFFIX, yjys.me
 DOMAIN-SUFFIX, yjys.top
 DOMAIN-SUFFIX, yjys02.com
 DOMAIN-SUFFIX, 52bdys.com
-DOMAIN-SUFFIX, bdys10.com
+DOMAIN-SUFFIX, yjys.inf.ua
+DOMAIN-SUFFIX, yjys.cc.ua
 # 哔嘀播放
 DOMAIN-suffix, ibytedtos.com
 DOMAIN-suffix, toutiao50.com
 DOMAIN-suffix, ibyteimg.com
 # LIBVIO
-DOMAIN-SUFFIX, lib.ifabu.vip
 DOMAIN-SUFFIX, libvio.app
-DOMAIN-SUFFIX, libfabu.com
 DOMAIN-SUFFIX, libvio.link
-DOMAIN-SUFFIX, libvio.cc
+DOMAIN-SUFFIX, libvio.pro
 DOMAIN-SUFFIX, libvio.vip
 # 阿里小站
 DOMAIN-SUFFIX, pan666.net
 # 云盘社区
 DOMAIN-SUFFIX, yunpan1.xyz
 DOMAIN-SUFFIX, yunpan1.cc
-DOMAIN-SUFFIX, yunpan1.fun
 DOMAIN-SUFFIX, yunpan1.co
 # 玩偶哥哥
 DOMAIN-SUFFIX, wogg.net
@@ -305,6 +294,10 @@ DOMAIN-SUFFIX, tanhuatv.site
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-SUFFIX, zaqohu.com
+DOMAIN-SUFFIX, xjqxz.top
+DOMAIN-SUFFIX, wjm.xpgtv.net
+DOMAIN-SUFFIX, vvmlm.com
 DOMAIN-SUFFIX, akamaized.net
 DOMAIN-SUFFIX, wegame.com.cn
 DOMAIN-SUFFIX, tc.qq.com
