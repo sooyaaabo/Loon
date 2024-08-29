@@ -1,21 +1,27 @@
 #!name = WebPage
 #!desc = 过滤部分网页广告
 #!openUrl = 
-#!author = RuCu6[https://github.com/RuCu6], limbopro[https://github.com/limbopro], ddgksf2013[https://github.com/ddgksf2013]
+#!author = RuCu6[https://github.com/RuCu6], limbopro[https://github.com/limbopro], ddgksf2013[https://github.com/ddgksf2013], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
-#!date = 2024-08-13 23:00
+#!date = 2024-08-29 20:00
 
 # 2024-06-30 11:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
 # 2024-02-19
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/WebAdBlock.conf
+# 2024-08-28 15:16:38
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/555DY_remove_ads.plugin
 
 [Rewrite]
+# -----------可莉🅥----------- #
+# 555电影
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/advert\/config reject-dict
+
 # -----------Rucu6----------- #
 # 谷歌服务重定向 //*.google.cn
 ^https?:\/\/www\.google\.cn 302 https://www.google.com
@@ -32,6 +38,10 @@
 ^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads reject-dict
 
 [Script]
+# -----------可莉🅥----------- #
+# 555电影
+http-response ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/555DY/555DY_remove_ads.js, requires-body = true, tag = 555电影
+
 # -----------Rucu6----------- #
 # 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
 # 百度防跳转
@@ -94,4 +104,4 @@ http-response ^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$) script-path = https://
 http-response ^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$) script-path = https://github.com/ddgksf2013/Scripts/raw/master/libvio.js, requires-body = true, tag = libvio@ddgksf2013
 
 [Mitm]
-hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, missav.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
+hostname = app-v1.ecoliving168.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, missav.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*

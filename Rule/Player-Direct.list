@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-29 19:25
+# 2024-08-29 20:45
 
 # CMSPlayer
 # 低端影视
@@ -183,7 +183,7 @@ DOMAIN-SUFFIX, bilfun.cc
 # 星芽短剧
 DOMAIN, app.whjzjx.cn
 # 小苹果
-DOMAIN, tipu.xjqxz.top
+DOMAIN, item.xpgtv.xyz
 # 瓜子影视
 DOMAIN, api.zaqohu.com
 # 厂长资源
@@ -202,6 +202,7 @@ DOMAIN-SUFFIX, 55flix.com
 DOMAIN-SUFFIX, 12filmvault.com
 DOMAIN-SUFFIX, 5vidw.com
 DOMAIN-SUFFIX, f6lz.com
+DOMAIN-SUFFIX, 5wuv.com
 # 哔嘀影视
 DOMAIN-SUFFIX, bdys.me
 DOMAIN-SUFFIX, yjys.top
