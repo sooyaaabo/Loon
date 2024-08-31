@@ -1,5 +1,5 @@
 #!name = Swiftgram
-#!desc = Telegram外部链接重定向至第三方客户端Swiftgram
+#!desc = Telegram外链跳转至Swiftgram
 #!openUrl = https://apps.apple.com/app/id6471879502
 #!author = sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
