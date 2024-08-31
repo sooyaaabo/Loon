@@ -1,4 +1,4 @@
-#!name = 银行
+#!name = 银行App
 #!desc = 过滤部分银行应用广告
 #!openUrl = 
 #!author = @可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CNY.png
-#!date = 2024-08-20 12:50
+#!date = 2024-08-31 20:00
 
 # 2024-07-11 19:10:01
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bank_remove_ads.plugin
