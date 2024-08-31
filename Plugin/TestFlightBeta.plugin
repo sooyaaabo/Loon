@@ -1,4 +1,4 @@
-#!name = iRingo: TestFlight
+#!name = iRingo:TestFlight
 #!desc = 1.自定义TestFlight登录商店地区 2.多账户保存及切换(需配置BoxJs使用) 3.让通用应用在任意苹果处理器设备上可安装
 #!openUrl = https://apps.apple.com/app/id899247664
 #!author = VirgilClyne[https://github.com/VirgilClyne]
