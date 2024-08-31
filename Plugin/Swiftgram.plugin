@@ -1,0 +1,17 @@
+#!name = Swiftgram
+#!desc = Telegram外部链接重定向至第三方客户端Swiftgram
+#!openUrl = https://apps.apple.com/app/id6471879502
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(734)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Swiftgram.png
+#!date = 2024-08-31 22:50
+
+[Rewrite]
+(https:\/\/)?t\.me\/(.+) 302 sg://resolve?domain=$2
+
+[Mitm]
+hostname = t.me

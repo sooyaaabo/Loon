@@ -8,11 +8,11 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Amap.png
-#!date = 2024-08-27 12:05
+#!date = 2024-08-31 22:40
 
 # 2024-08-27 11:45
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/amap.snippet
-# 2024-08-28 08:27:52
+# 2024-08-31 22:19:28
 # https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/Amap_remove_ads.plugin
 
 [Rule]
