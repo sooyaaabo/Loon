@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Turrit.png
-#!date = 2024-08-31 23:00
+#!date = 2024-09-01 22:15
 
 [Rewrite]
 (https:\/\/)?t\.me\/(.+) 302 turrit://resolve?domain=$2
