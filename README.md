@@ -1,5 +1,5 @@
 # Loon
-自用分流规则、重写、插件、脚本及图标库。<br>
+Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 
 ![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
 
