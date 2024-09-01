@@ -340,6 +340,10 @@
         <td>39</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ColorfulCloudsWeather.plugin">彩云天气</a></td>
     </tr>
+    <tr>
+        <td>40</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ChinaMobile.plugin">中国移动</a></td>
+    </tr>
 </table>
 <table>
     <tr>
@@ -439,7 +443,6 @@
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Emby.plugin">Emby</a></td>
     </tr>
 </table>
-
 ## 鸣谢
 <table width:100%; height:100%>
     <tr>
