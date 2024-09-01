@@ -322,8 +322,6 @@
 ^https?:\/\/api\.00bang\.cn\/llb\/baseinfo\/advertise\/getAdvertiseByPageCode reject-200
 # linxi
 ^https?:\/\/api\.internetofcity\.cn\/api\/resource\/anon\/popups\/(getSplashList|getList) reject-200
-# 乐橙
-^https?:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush\/* reject-200
 # 拦截100
 ^https?:\/\/tagit\.hyhuo\.com\/recover\/list reject-200
 # 莱充
@@ -346,6 +344,7 @@
 ^https?:\/\/app-gateway\.leisuapi\.com\/v\d\/app\/mobile\/(banners|ads) reject-200
 # 乐橙
 ^https?:\/\/adx.*anythinktech\.com\/bid reject-200
+^https?:\/\/dl-cu-hz\.lechange\.cn\/oms-online\/advertisementPush\/* reject-200
 # 乐刻运动
 ^https?:\/\/lens\.leoao\.com\/lens\/.+(getUserScheme|queryAppBanners|Advert|popup) reject-200
 
