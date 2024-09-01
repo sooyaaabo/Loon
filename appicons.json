@@ -510,6 +510,10 @@
             "name": "Userscripts",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Userscripts.png"
         },
+        {
+            "name": "Tampermonkey",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Tampermonkey.png"
+        },
 	{
             "name": "Currency",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Currency.png"
@@ -657,6 +661,14 @@
         {
             "name": "Files-Blue",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Files-Blue.png"
+        },
+        {
+            "name": "Limbo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Limbo-01.png"
+        },
+        {
+            "name": "Limbo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Limbo-02.png"
         },
         {
             "name": "SSID-HK",
