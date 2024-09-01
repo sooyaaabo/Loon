@@ -1,0 +1,32 @@
+#!name = 彩云天气
+#!desc = 过滤彩云天气广告，解锁SVIP功能。
+#!openUrl = https://apps.apple.com/app/id847764912
+#!author = RuCu6[https://github.com/RuCu6], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(734)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ColorfulCloudsWeather.png
+#!date = 2024-09-01 16:00
+
+# 2024-09-01 09:15
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/AppUnlock.conf
+# 2024-09-01 11:21:02
+# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/ColorfulClouds_remove_ads.plugin
+
+[Rewrite]
+^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) reject-dict
+^https:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/\w+\/conditions|notification\/message_center|operation\/homefeatures) reject-dict
+^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather reject-dict
+
+[Script]
+# 去广告
+http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气去广告
+
+# 共享会员
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, tag = 彩云天气共享会员
+http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气共享会员
+
+[Mitm]
+hostname = biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, *.cyapi.cn
