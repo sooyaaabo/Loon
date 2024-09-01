@@ -8,62 +8,62 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Limbo-02.png
-#!date = 2024-09-01 19:50
+#!date = 2024-09-01 20:00
 
 # 2024-09-01
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
 
 [Rewrite]
-^https?:\/\/www\.novel543\.com\/log\/ad\.html - reject
-^https?:\/\/stat\.gn01\.top\/js\/script\.js - reject
-^https?:\/\/adc\.tamedia\.com\.tw\/rmadp/static/js/gm-sdk8-mobile\.js - reject
-^https?:\/\/.*?.gliacloud.com.*?www\.novel543\..* - reject
-^https?:\/\/cdn\.holmesmind\.com\/js\/init\.js - reject
+^https?:\/\/www\.novel543\.com\/log\/ad\.html reject
+^https?:\/\/stat\.gn01\.top\/js\/script\.js reject
+^https?:\/\/adc\.tamedia\.com\.tw\/rmadp\/static\/js\/gm-sdk8-mobile\.js reject
+^https?:\/\/\.*?\.gliacloud\.com\.*?www\.novel543\..* reject
+^https?:\/\/cdn\.holmesmind\.com\/js\/init\.js reject
 # missav 播放页弹窗
-https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} - reject
+https?:\/\/[0-9a-zA-Z]{10,16}\.cloudfront\.net\/\?[a-z]{3,7}=\d{4,8} reject
 # Avple 弹窗跳转
-^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js - reject
+^https?:\/\/assert\.avple\.tv\/file\/avple-images\/ad\.js reject
 # Pornhub 视频广告
-^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads.* - reject
+^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads\.* reject
 # 91Porn 视频广告
-^https:\/\/(img|vthumb)\.killcovid2021\.com.*?\.mp4 - reject
+^https:\/\/(img|vthumb)\.killcovid2021\.com\.*?\.mp4 reject
 # Pornhub 跳转
 (^https?:\/\/www\.pornhub\.com)(.*) https://cn.pornhub.com$2 307
 # Xvideos JS abort
-^https?:\/\/.*\/js\/static\/header\/sda\/ppsuma*.js - reject
+^https?:\/\/.*\/js\/static\/header\/sda\/ppsuma*\.js reject
 # javmost 播放页弹窗广告
-^https:\/\/suzihaza\.com\/asset\/jquery\/slim-3\.2\.min\.js.* - reject
+^https:\/\/suzihaza\.com\/asset\/jquery\/slim-3\.2\.min\.js\.* reject
 # Netflav 播放页弹窗广告
-filemoon\.sx.*/js/baf.js - reject
-^https:\/\/mmfl02\.com\/assets\/jquery\/p2adult\.js.* - reject
-^https:\/\/mmfl02\.com\/.*?\&ads - reject
+filemoon\.sx.*/js/baf.js reject
+^https:\/\/mmfl02\.com\/assets\/jquery\/p2adult\.js\.* reject
+^https:\/\/mmfl02\.com\/\.*?\&ads reject
 # Nivod4 广告插入页
-https://api.nivodz.com/commercial/incr/WEB/3.2?_ts=1697870082522 - reject
-https://api.nivodz.com/commercial/incr/WEB/3.2?_ts=1697870082520 - reject
+^https?:\/\/api\.nivodz\.com\/commercial\/incr\/WEB\/3.2?_ts=1697870082522 reject
+^https?:\/\/api\.nivodz\.com\/commercial\/incr\/WEB\/3.2?_ts=1697870082520 reject
 # Supjav 
-https://a.realsrv.com/ad-provider.js - reject
-https://help.fanza.cc/* - reject
-https://creative.xlivrdr.com/widgets/Spot/lib.js - reject
-https://static.adxadserv.com/js/adb.js - reject
-https://creative.xlivrdr.com/widgets/v4/Universal?tag - reject
-https://goesdeedinsensitive.com/bd/0d/e2/*.js - reject
-https://streamwish.com/.*ads.js - reject
-/assets/jquery/main100.js? - reject
+^https?:\/\/a\.realsrv\.com\/ad-provider\.js reject
+^https?:\/\/help\.fanza\.cc\/* reject
+^https?:\/\/creative\.xlivrdr\.com\/widgets\/Spot\/lib\.js reject
+^https?:\/\/static\.adxadserv\.com\/js\/adb\.js reject
+^https?:\/\/creative\.xlivrdr\.com\/widgets\/v4\/Universal?tag reject
+^https?:\/\/goesdeedinsensitive\.com\/bd\/0d\/e2\/*\.js reject
+^https?:\/\/streamwish.com/\.*ads\.js reject
+\/assets\/jquery\/main100\.js? reject
 # rouman5
-https://rouman5.com/_next/static/chunks/pages/home-8ff6090a1203a289.js - reject
-https://mc.yandex.ru/metrika/tag.js - reject
-https://cdn.tsyndicate.com/sdk/v1/master.spot.js - reject
-https://poweredby.jads.co/js/jads.js - reject
-https://a.magsrv.com/ad-provider.js - reject
-https://ra7.xyz/z/.*/code.js - reject
+^https?:\/\/rouman5\.com\/_next\/static\/chunks\/pages\/home-8ff6090a1203a289\.js reject
+^https?:\/\/mc\.yandex\.ru\/metrika\/tag\.js reject
+^https?:\/\/cdn\.tsyndicate\.com\/sdk\/v1\/master\.spot\.js reject
+^https?:\/\/poweredby\.jads\.co\/js\/jads\.js reject
+^https?:\/\/a\.magsrv\.com\/ad-provider\.js reject
+^https?:\/\/ra7\.xyz\/z\/\.*\/code\.js reject
 # 禁知乎网页广告
-https://(www|zhuanlan)\.zhihu\.com/api/v4/questions/\d+/related-readings - reject
-https://(www|zhuanlan)\.zhihu\.com/api/v4/answers/\d+/related-readings - reject
-#https://(www|zhuanlan)\.zhihu\.com/api/v4/hot_recommendation - reject
-https://(www|zhuanlan)\.zhihu\.com/commercial_api/banners_v3/(mobile_banner|mobile_question) - reject
-https://(www|zhuanlan)\.zhihu\.com/api/articles/\d+/recommendation - reject
+^https?:\/\/(www|zhuanlan)\.zhihu\.com\/api\/v4\/questions\/\d+\/related-readings reject
+^https?:\/\/(www|zhuanlan)\.zhihu\.com\/api\/v4\/answers\/\d+\/related-readings reject
+# ^https?:\/\/(www|zhuanlan)\.zhihu\.com\/api\/v4\/hot_recommendation reject
+^https?:\/\/(www|zhuanlan)\.zhihu\.com\/commercial_api\/banners_v3\/(mobile_banner|mobile_question) reject
+^https?:\/\/(www|zhuanlan)\.zhihu\.com\/api\/articles\/\d+\/recommendation reject
 # missav 直播跳出广告
-https://creative.live.missav.com/widgets/Spot/lib.js - reject
+^https?:\/\/creative\.live\.missav\.com\/widgets\/Spot\/lib\.js reject
 ^https?:\/\/(www\.xvideos)(\.)(\w{0,3})(?!(.*(api|cdn-cgi|\.))).* header-replace Content-Security-Policy *
 
 [Script]
