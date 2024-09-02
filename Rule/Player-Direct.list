@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-08-29 20:45
+# 2024-09-02 12:15
 
 # CMSPlayer
 # 低端影视
@@ -286,7 +286,7 @@ DOMAIN, pub3.emby.wtf
 # yomo
 DOMAIN, emby.yomo.lol
 # peach
-DOMAIN-SUFFIX, embymv.tk
+DOMAIN-SUFFIX, embymv.link
 
 # Jellyfin
 # 探花TV
