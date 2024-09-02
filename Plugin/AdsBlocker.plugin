@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdsBlock.png
-#!date = 2024-09-02 12:10
+#!date = 2024-09-02 18:05
 
 # 2024-08-18 10:50:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -1820,7 +1820,7 @@ http-response ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/GetInitI
 # crunchyroll - beta-api.crunchyroll.com
 http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = crunchyroll, argument="offset_ms":\d+->offset_ms":99999999999999"
 # 彩云天气 - wrapper.cyapi.cn, api.caiyunapp.com
-http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, tag = 彩云天气, argument="application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json"
+# http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, tag = 彩云天气, argument="application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json"
 # 菜鸟裹裹 - cn-acs.m.cainiao.com, amdc.m.taobao.com
 http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 菜鸟裹裹
 http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟裹裹
