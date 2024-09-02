@@ -22,12 +22,14 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-08-13 23:00
+#!date = 2024-09-03 00:30
 
 # 2024-06-10 18:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
 # 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
+# 2024-03-13 18:00:06
+# https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.sgmodule
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
 
@@ -52,6 +54,8 @@ DOMAIN, ipv6.music.163.com, REJECT
 # 搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
 ^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) reject-dict
 ^https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) reject-dict
+# mian、主页
+^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(?:batch|v\d\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/resource\/show|user\/follow\/users\/mixed\/get) header-del x-aeapi
 
 #----------  Rucu6 ----------#
 # 会员伪装
