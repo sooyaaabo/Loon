@@ -1,0 +1,15 @@
+#!name = TestDemo
+#!desc = 样例测试插件
+#!openUrl = 
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.1(734)
+#!homepage = 
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Limbo-01.png
+#!date = 2024-09-02 11:30
+
+[Script]
+http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument=""list":\[.+\]->"list":[]", requires-body = true, tag = 多多买菜
+http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 多多买菜, argument=""list":\[.+\]->"list":[]"
