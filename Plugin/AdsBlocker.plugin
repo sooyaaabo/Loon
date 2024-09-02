@@ -1807,7 +1807,7 @@ http-response ^https?:\/\/mime\.baidu\.com\/(imrobot\/v1\/pub\/relation\/get_rob
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/(c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)$|tiebaads\/commonbatch|c\/s\/sync$) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-json.js, requires-body = true, tag = 百度贴吧
 http-response ^http(s:\/\/tiebac|:\/\/c\.tieba)\.baidu\.com\/c\/f\/(frs\/(page|threadlist|generalTabList)|pb\/page|excellent\/personalized)\?cmd script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/tieba-proto.js, requires-body = true, tag = 百度贴吧
 # 薄荷健康 - bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, api.boohee.com
-http-response ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 薄荷健康, argument = "articles->fmz200"
+http-response ^https?:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/record_index script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "articles->fmz200", requires-body = true, tag = 薄荷健康
 # 薄荷 - api.boohee.com, bohe.sfo-tx-shanghai-01.saas.sensorsdata.cn, lego.boohee.com, status.boohee.com
 http-response ^https:\/\/api\.boohee\.com\/meta-interface\/v2\/index\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body = true, tag = 薄荷
 http-response ^https:\/\/api\.boohee\.com\/meta-interface\/v1\/index\/plaza\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/bohe/bohe_ads.js, requires-body = true, tag = 薄荷
@@ -1818,9 +1818,9 @@ http-response ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/GetInitI
 
 # >>>>>>>>>>>>>>> ✅ C ✅ <<<<<<<<<<<<<<
 # crunchyroll - beta-api.crunchyroll.com
-http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = crunchyroll, argument = "offset_ms":\d+->offset_ms":99999999999999"
+http-response ^https?:\/\/beta-api\.crunchyroll\.com\/cms script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "offset_ms":\d+->offset_ms":99999999999999", requires-body = true, tag = crunchyroll
 # 彩云天气 - wrapper.cyapi.cn, api.caiyunapp.com
-http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, tag = 彩云天气, argument = "application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json"
+http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, argument = application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json, requires-body = true, tag = 彩云天气
 # 菜鸟裹裹 - cn-acs.m.cainiao.com, amdc.m.taobao.com
 http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 菜鸟裹裹
 http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟裹裹
@@ -1845,19 +1845,19 @@ http-response ^https?:\/\/daijia\.kuaidadi\.com\/gateway script-path = https://r
 http-response ^https?:\/\/daijia\.kuaidadi\.com:443\/gateway script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Didichuxing.js, requires-body = true, tag = 滴滴出行
 http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/didi/didi.js, requires-body = true, tag = 滴滴出行
 # 大师兄 - sdk.alibaba.com.ailbaba.me, adservice.sigmob.cn
-http-response ^https?:\/\/adservice\.sigmob\.cn\/extconfig script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 大师兄, argument = "false->true"
+http-response ^https?:\/\/adservice\.sigmob\.cn\/extconfig script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "false->true", requires-body = true, tag = 大师兄
 # 叮咚买菜 - maicai.api.ddxq.mobi
-http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 叮咚买菜, argument = "suspension->random_body"
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/homeApi\/newDetails script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "suspension->random_body", requires-body = true, tag = 叮咚买菜
 # 大众点评 - img.meituan.net
 http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body = true, tag = 大众点评
 # 多多买菜 - mobile.yangkeduo.com
-http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 多多买菜, argument = ""list":\[.+\]->"list":[]"
+http-response ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""list":\[.+\]->"list":[]", requires-body = true, tag = 多多买菜
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # Flightradar24 - mobile.flightradar24.com
 http-response ^https?:\/\/mobile\.flightradar24\.com\/mobile\/(user-session|subscribe) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/scripts/Flightradar24.js, requires-body = true, tag = Flightradar24
 # 飞客茶馆 - ptf.flyertrip.com, 47.100.65.202, www.flyert.com
-http-response ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 飞客茶馆, argument = "adv->fmz200"
+http-response ^https?:\/\/47\.100\.65\.202\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "adv->fmz200", requires-body = true, tag = 飞客茶馆
 http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fly.js, requires-body = true, tag = 飞客茶馆
 http-response ^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/flyert.js, requires-body = true, tag = 飞客茶馆
 # 粉笔 - tiku.fenbi.com
@@ -1874,22 +1874,22 @@ http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # i3 - www.i3zh.com
-http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = i3, argument = "cm-pop-up-banners->fmz200"
+http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "cm-pop-up-banners->fmz200", requires-body = true, tag = i3
 # IT之家 - napi.ithome.com
 http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js, requires-body = true, tag = IT之家
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
 # 建行生活 - yunbusiness.ccb.com
 http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB04 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/ccbLifeAds.js, requires-body = true, tag = 建行生活
-http-request ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, tag = 建行生活, argument = "application/json&url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json"
-http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 建行生活, argument = ""TAG_AD_INFO"->"fmz200""
+http-request ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3341AB05 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, argument = application/json&url=https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ccbLife/A3341AB05.json, requires-body = true, tag = 建行生活
+http-response ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""TAG_AD_INFO"->"fmz200"", requires-body = true, tag = 建行生活
 http-response ^https?:\/\/g\.alicdn\.com\/.*o2o-ad script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/alicdn.js, requires-body = true, tag = 建行生活
-http-response ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 建行生活, argument = "posterList->random_body"
+http-response ^https?:\/\/waimai-guide\.ele\.me\/\w+\/mtop\.venus\.shopresourceservice\.getshopresource script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "posterList->random_body", requires-body = true, tag = 建行生活
 # 京东 - api.m.jd.com, dns.jd.com
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body = true, tag = 京东
 # 京喜 - api.m.jd.com
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 京喜, argument = "jdLiteAdvertisingVO->fmz200"
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 京喜, argument = "pushData->fmz200"
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "jdLiteAdvertisingVO->fmz200", requires-body = true, tag = 京喜
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "pushData->fmz200", requires-body = true, tag = 京喜
 http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body = true, tag = 京喜
 
 # >>>>>>>>>>>>>>> ✅ K ✅ <<<<<<<<<<<<<<
@@ -1950,10 +1950,10 @@ http-response ^https?:\/\/api\.rr\.tv\/drama\/app\/get_combined_drama_detail scr
 http-response ^https?:\/\/api\.rr\.tv\/watch\/v4 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body = true, tag = 人人视频
 http-response ^https?:\/\/api\.rr\.tv\/user\/profile script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/rrtv_json.js, requires-body = true, tag = 人人视频
 # RARBG - dyncdn.me
-http-response ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = RARBG, argument = "true->false"
+http-response ^https?:\/\/dyncdn\.me\/static\/\d{0,2}\/js\/showads\.js$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "true->false", requires-body = true, tag = RARBG
 # 瑞幸咖啡 - capi.lkcoffee.com, ecapi.lkcoffee.com, m.lkcoffee.com, img0*.luckincoffeecdn.com
-http-response ^https?:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 瑞幸咖啡, argument = "\{.+\}->{"status":"SUCCESS"}"
-http-response ^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 瑞幸咖啡, argument = ""popTitle":".+?"->"popTitle":"""
+http-response ^https?:\/\/m\.lkcoffee\.com\/ecapi\/resource\/m\/member\/exchange\/page script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "\{.+\}->{"status":"SUCCESS"}", requires-body = true, tag = 瑞幸咖啡
+http-response ^https?:\/\/m\.lkcoffee\.com\/capi\/resource\/m\/growUp\/main script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""popTitle":".+?"->"popTitle":""", requires-body = true, tag = 瑞幸咖啡
 
 # >>>>>>>>>>>>>>> ✅ S ✅ <<<<<<<<<<<<<<
 # Stay - api.shenyin.name
@@ -1976,10 +1976,10 @@ http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # 天府市民云 - tfsmy.chengdu.gov.cn, tft-app.cdtft.cn
-http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 天府市民云, argument = "officialAdvertResultVo->random-response"
-http-response ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 天府市民云, argument = ""imgUrl"->"imgUrl0""
+http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "officialAdvertResultVo->random-response", requires-body = true, tag = 天府市民云
+http-response ^https?:\/\/chl\.tf\.cn\/channelmg\/sys\/socso\/order\/queryOrderInfo script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""imgUrl"->"imgUrl0"", requires-body = true, tag = 天府市民云
 # 途家民宿 - client.tujia.com
-http-response ^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 途家民宿, argument = ""banners":\[.+\]->"banners":[]"
+http-response ^https?:\/\/client\.tujia\.com\/bnbapp-node\/app\/portal\/getportalconfig\/bnb\/v2 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""banners":\[.+\]->"banners":[]", requires-body = true, tag = 途家民宿
 # 淘宝 - acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
 http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
 http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
@@ -1992,9 +1992,9 @@ http-response ^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # 万达电影小程序 - misc-api-prd-mx.wandafilm.com
-http-response ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 万达电影小程序, argument = ""WX_index_mp-&-boxAD"->"WX_index_mp-&-boxAD0""
+http-response ^https?:\/\/misc-api-prd-mx\.wandafilm\.com\/commend\/common_banner_batch\.api\?bannerInfos=%5B%7B%22cinemaI script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""WX_index_mp-&-boxAD"->"WX_index_mp-&-boxAD0"", requires-body = true, tag = 万达电影小程序
 # 微信 - mp.weixin.qq.com, weixin110.qq.com, security.wechat.com
-http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 微信, argument = "advertisement->fmz200"
+http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "advertisement->fmz200", requires-body = true, tag = 微信
 # 微信跳过中间界面，支付宝链接、被封禁链接进行通知弹窗跳转，在微信中用快照显示被封禁的链接（可选），在微信中进行强制重定向（可选），群聊 / 扫码均可使用，可选项可在脚本 2、3 行更改，也可在 BoxJs 中更改。
 http-response ^https?:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/zZPiglet/Task/master/asset/UnblockURLinWeChat.js, requires-body = true, tag = 微信跳过中间界面
 # 网易有道词典 - dict.youdao.com, api-overmind.youdao.com, cdke.youdao.com, dictvip-business.youdao.com, dsp-impr2.youdao.com, impservice.dictapp.youdao.com, oral.youdao.com, oimage*.ydstatic.com
@@ -2006,7 +2006,7 @@ http-response ^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index script-pat
 # 小米商城 - api.m.mi.com
 http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城
 # 小特- 首选特斯拉中文社区 - lcen.xiaote.net
-http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 小特, argument = "screenSplashAd->random-response"
+http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "screenSplashAd->random-response", requires-body = true, tag = 小特
 # 小兔充充 - ad.xiaotucc.com, mapi.xiaotucc.com
 http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body = true, tag = 小兔充充
 # 香蕉是一种水果 - *.pipiapps.com, *.fuliapps.com, *.xiangjiaoapps.com, *.xiangxiangapps.com
@@ -2032,9 +2032,9 @@ http-response ^https?:\/\/wx\.mygolbs\.com\/WxBusServer\/ApiData\.do script-path
 # 转转 - app.zhuanzhuan.com
 http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getfeedflowinfo\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body = true, tag = 转转
 http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/transfer\/getmyprofilev3 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/zhuanzhuan/zhuanzhuan.js, requires-body = true, tag = 转转
-http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 转转, argument = "infoData->fmz200"
+http-response ^https?:\/\/app\.zhuanzhuan\.com\/zz\/v2\/zzinfoshow\/getchoicegoodsinfos script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = "infoData->fmz200", requires-body = true, tag = 转转
 # 郑好办 - app-izz.zhengzhou.gov.cn
-http-response ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 郑好办, argument = ""imgUrl19_5x9":".+?"->"imgUrl19_5x9":"""
+http-response ^https?:\/\/app-izz\.zhengzhou\.gov\.cn:10019\/bizgw\/gateway\.do script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = ""imgUrl19_5x9":".+?"->"imgUrl19_5x9":""", requires-body = true, tag = 郑好办
 # 中国人保 人保头条- zgrb.epicc.com.cn
 http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/a\/config\/homeInit\/v script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true, tag = 中国人保-主页面
 http-response ^https?:\/\/zgrb\.epicc\.com\.cn\/G-HAPP\/mpageconfig\/myPageConfigList\/v script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/picc/picc_ads.js, requires-body = true, tag = 中国人保-我的页面
