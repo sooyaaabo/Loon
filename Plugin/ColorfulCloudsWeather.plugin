@@ -8,12 +8,16 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ColorfulCloudsWeather.png
-#!date = 2024-09-02 18:00
+#!date = 2024-09-05 11:30
 
 # 2024-09-01 09:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/AppUnlock.conf
-# 2024-09-01 11:21:02
-# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/ColorfulClouds_remove_ads.plugin
+# 2024-09-05 10:51:41
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/ColorfulClouds_remove_ads.plugin
+
+[Rule]
+DOMAIN, abyss.cyapi.cn, REJECT
+DOMAIN, ad.cyapi.cn, REJECT
 
 [Rewrite]
 ^https?:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com)\/v\d\/activity\? url reject-dict
