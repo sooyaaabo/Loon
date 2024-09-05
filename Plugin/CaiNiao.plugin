@@ -8,12 +8,12 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-08-27 10:50
+#!date = 2024-09-05 08:55
 
 # 2024-08-24 12:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet
-# 2024-08-27 05:18:19
-# https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
+# 2024-2024-09-05 08:32:35
+# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
