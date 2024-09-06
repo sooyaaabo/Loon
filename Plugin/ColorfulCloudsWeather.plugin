@@ -7,8 +7,8 @@
 #!system_version = 
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ColorfulCloudsWeather.png
-#!date = 2024-09-06 09:10
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ColorfulCloudsWeatherPro.png
+#!date = 2024-09-06 09:30
 
 # 2024-09-01 09:15
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/AppUnlock.conf
@@ -20,10 +20,8 @@ DOMAIN, abyss.cyapi.cn, REJECT
 DOMAIN, ad.cyapi.cn, REJECT
 
 [Rewrite]
-^https?:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com)\/v\d\/activity\? url reject-dict
 ^https:\/\/biz\.cyapi\.cn\/(p\/v1\/entries|p\/v1\/trial_card\/info|v2\/product) reject-dict
 ^https:\/\/starplucker\.cyapi\.cn\/v3\/(config\/cypage\/\w+\/conditions|notification\/message_center|operation\/homefeatures) reject-dict
-^https:\/\/ad\.cyapi\.cn\/v2\/req\?app_name=weather reject-dict
 
 [Script]
 # 共享会员
@@ -32,7 +30,6 @@ http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v
 
 # 去广告
 http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气去广告
-http-response ^https:\/\/biz\.cyapi\.cn(\/p)?\/v\d\/(user\?app_name=weather|user_info|visitors|login_by_code)$ script-path = https://raw.githubusercontent.com/Keywos/rule/main/JS/caiyun.js, requires-body = true, tag = 彩云天气去广告
 
 [Mitm]
 hostname = biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, *.cyapi.cn
