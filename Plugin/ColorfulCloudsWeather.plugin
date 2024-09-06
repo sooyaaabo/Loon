@@ -16,8 +16,8 @@
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/ColorfulClouds_remove_ads.plugin
 
 [Rule]
-DOMAIN, abyss.cyapi.cn, REJECT
-DOMAIN, ad.cyapi.cn, REJECT
+# DOMAIN, abyss.cyapi.cn, REJECT
+# DOMAIN, ad.cyapi.cn, REJECT
 
 [Rewrite]
 ^https?:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com)\/v\d\/activity\? url reject-dict
