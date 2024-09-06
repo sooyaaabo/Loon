@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-02 16:55
+# 2024-09-06 23:05
 
 # CMSPlayer
 # 低端影视
@@ -264,6 +264,8 @@ DOMAIN, wxsnsencsvp.wxs.qq.com
 DOMAIN-SUFFIX, 789.123456.al
 # NyaMedia
 DOMAIN-SUFFIX, emby.bangumi.ca
+# PiliPili
+DOMAIN-SUFFIX, xn--pp5aa2sb.com
 # 纸片人
 DOMAIN-SUFFIX, embyplus.org
 # 大V影院
