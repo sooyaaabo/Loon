@@ -258,6 +258,10 @@
             "name": "TestFlight",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-02.png"
         },
+	{
+            "name": "AppleWeather",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppleWeather.png"
+        },
         {
             "name": "QQ",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/QQ.png"
