@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-08-26 09:50
+# 2024-09-08 08:50
 
 # CMSPlayer
 # 海外看
@@ -108,3 +108,5 @@ DOMAIN, temby4837.285286.xyz
 # ntRRR
 DOMAIN, stream.ntrrr.top
 DOMAIN, stream.synn.cc
+# Jellyfish+
+DOMAIN, vip3.jellyfin.asia
