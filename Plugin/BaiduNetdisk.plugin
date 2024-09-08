@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/BaiduNetdisk.png
-#!date = 2024-08-26 18:20
+#!date = 2024-09-08 07:40
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -16,14 +16,10 @@
 # https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
 # 2024-08-26
 # https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js
-# 2024-07-20 10:30:06
+# 2024-09-08 02:01:52
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/BaiduNetDisk_remove_ads.plugin
 
 [Rule]
-# 拦截HTTPDNS
-^https?:\/\/180\.76\.76\.200\/v\d\/resolve reject
-^https?:\/\/180\.76\.76\.112\/v\d\/resolve reject
-
 # 字节跳动广告
 AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, normal), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
@@ -61,6 +57,9 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 ^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
 
 # 可莉🅥
+# 拦截HTTPDNS
+^https?:\/\/180\.76\.76\.200\/v\d\/resolve reject
+^https?:\/\/180\.76\.76\.112\/v\d\/resolve reject
 # 应用配置
 ^https:\/\/pan\.baidu\.com\/api\/getconfig reject-dict
 ^https:\/\/pan\.baidu\.com\/api\/getsyscfg reject-dict
