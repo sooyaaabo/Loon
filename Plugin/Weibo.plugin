@@ -8,7 +8,7 @@
 #!loon_version = 3.2.1(734)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Weibo.png
-#!date = 2024-08-19 00:00
+#!date = 2024-09-09 15:40
 
 # 2024-08-18 08:10
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/weibo.snippet
@@ -18,6 +18,12 @@
 DOMAIN, wbapp.uve.weibo.com, DIRECT
 # 请求拦截 - 微博开屏广告
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
+# 拦截HTTPDNS
+DOMAIN, dns.weibo.cn, REJECT
+IP-CIDR, 39.97.130.51/32, REJECT, no-resolve
+IP-CIDR, 39.97.128.148/32, REJECT, no-resolve
+URL-REGEX, ^http:\/\/api\.weibo\.cn\/2\/httpdns\/config, REJECT
+URL-REGEX, ^http:\/\/api\.weibo\.cn\/httpdns\/config, REJECT
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
