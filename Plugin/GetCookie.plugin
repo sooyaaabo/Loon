@@ -5,10 +5,10 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png
-#!date = 2024-08-18 00:50
+#!date = 2024-09-09 23:00
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin

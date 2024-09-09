@@ -5,14 +5,14 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-09-05 08:55
+#!date = 2024-09-09 23:00
 
 # 2024-08-24 12:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet
-# 2024-2024-09-05 08:32:35
+# 2024-09-05 08:32:35
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
 
 [Rule]

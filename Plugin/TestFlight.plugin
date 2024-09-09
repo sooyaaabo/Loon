@@ -5,15 +5,15 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-01.png
-#!date = 2024-08-19 18:15
+#!date = 2024-09-09 23:00
 
 # 2022-12-22
 # https://github.com/blackmatrix7/ios_rule_script/blob/master/script/testflight/testflight.lnplugin
 # 2024-02-22
-# https://raw.githubusercontent.com/NobyDa/Script/master/Loon/Loon_TF_Account.plugin
+# https://github.com/NobyDa/Script/blob/master/Loon/Loon_TF_Account.plugin
 
 [General]
 skip-proxy = iosapps.itunes.apple.com

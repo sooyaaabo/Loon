@@ -5,10 +5,10 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://t.me/zhetengsha
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Network.png
-#!date = 2024-08-22 23:30
+#!date = 2024-09-09 23:00
 
 # 2024-02-03
 # https://github.com/xream/scripts/blob/main/surge/modules/network-info/net-lsp-x.plugin

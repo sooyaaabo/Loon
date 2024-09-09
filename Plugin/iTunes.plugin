@@ -5,17 +5,19 @@
 #!tag = 解锁会员
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png
-#!date = 2024-08-13 23:00
+#!date = 2024-09-09 23:00
 
-# 2024-08-10
+# 2024-09-08
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
 # 2024-02-20
 # https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js
 # 2024-02-10
 # https://github.com/Guding88/Script/blob/main/APPheji_iTunes.js
+# 2023-09-09
+# https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
 
 [Script]
 # chxm1023
@@ -24,6 +26,8 @@ http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = 
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body = true, tag = iTunes解锁系列@ddgksf2013
 # Guding88
 http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body = true, tag = iTunes解锁系列@Guding88
+# Yu9191
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Yu9191/Rewrite/main/iTunes.js, requires-body = true, tag = iTunes解锁系列@Yu9191
 
 [Mitm]
 hostname = buy.itunes.apple.com

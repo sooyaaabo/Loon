@@ -1,14 +1,21 @@
 #!name = Cookie & Task
 #!desc = 先启用Cookie脚本，在获取Cookie后关闭脚本以避免无意义的MITM，插件便可自动签到完成打卡任务。
 #!openUrl = 
-#!author = Sliverkiss[https://github.com/Sliverkiss], NobyDa[https://github.com/NobyDa], sooyaaabo[https://github.com/sooyaaabo]
+#!author = Sliverkiss[https://github.com/Sliverkiss], NobyDa[https://github.com/NobyDa], GoodHolidays[https://github.com/GoodHolidays], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Memento-dark.png
-#!date = 2024-08-19 18:00
+#!date = 2024-09-09 23:00
+
+# 2024-01-24 13:13:56
+# https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
+# 2021-02-21 22:30
+# https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js
+# 2024/05/15
+# https://raw.githubusercontent.com/NobyDa/Script/master/iQIYI-DailyBonus/iQIYI.js
 
 [Argument]
 # 阿里云盘

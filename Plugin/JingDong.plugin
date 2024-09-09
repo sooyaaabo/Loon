@@ -1,14 +1,14 @@
 #!name = 京东
 #!desc = 过滤京东广告，嵌入历史比价信息，点击商品标题即可查看。仅支持京东的标准模式。
 #!openUrl = https://apps.apple.com/app/id414245413
-#!author = RuCu6[https://github.com/fmz200], zwf234[https://github.com/zwf234]
+#!author = RuCu6[https://github.com/RuCu6], zwf234[https://github.com/zwf234]
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JingDong.png
-#!date = 2024-08-24 16:00
+#!date = 2024-09-09 23:00
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf

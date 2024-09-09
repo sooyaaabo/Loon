@@ -5,13 +5,13 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.1(734)
+#!loon_version = 3.2.2(749)
 #!homepage = http://boxjs.com/#/app/iRingo.TestFlight
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-02.png
-#!date = 2024-08-19 18:15
+#!date = 2024-09-09 23:00
 
 # 2024-04-15
-# https://raw.githubusercontent.com/VirgilClyne/iRingo/main/plugin/TestFlight.plugin
+# https://github.com/VirgilClyne/iRingo/blob/main/plugin/TestFlight.plugin
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
