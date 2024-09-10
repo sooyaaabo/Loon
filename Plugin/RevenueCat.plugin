@@ -1,5 +1,5 @@
 #!name = RevenueCat
-#!desc = RevenueCat解锁会员
+#!desc = RevenueCat系列解锁合集
 #!openUrl = 
 #!author = chxm1023[https://github.com/chxm1023], ddgksf2013[https://github.com/ddgksf2013], Guding88[https://github.com/Guding88]
 #!tag = 解锁会员
@@ -8,14 +8,14 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RevenueCat-icon.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-10 09:00
 
-# 2023-12-24
-# https://raw.githubusercontent.com/chxm1023/Script_X/main/Collections.plugin
+# 2024-09-06
+# https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
 # 2024-07-06
 # https://gist.githubusercontent.com/ddgksf2013/dbb1695cd96743eef18f3fac5c6fe227/raw/revenuecat.js
-# 2024-03-08
-# https://github.com/Guding88/Script/blob/main/APPheji_Guding.plugin
+# 2024-09-08
+# https://github.com/Guding88/Script/blob/main/APPheji_Revenuecat.js
 #2023-09-08
 # https://raw.githubusercontent.com/Yu9191/Rewrite/main/Revenuecat.js
 
