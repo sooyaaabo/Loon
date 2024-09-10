@@ -1,14 +1,14 @@
 #!name = RevenueCat
-#!desc = RevenueCat系列解锁合集
+#!desc = RevenueCat系列解锁合集，支持在设置中选择需要的原作者脚本以使用此插件。
 #!openUrl = 
-#!author = chxm1023[https://github.com/chxm1023], ddgksf2013[https://github.com/ddgksf2013], Guding88[https://github.com/Guding88]
+#!author = chxm1023[https://github.com/chxm1023], ddgksf2013[https://github.com/ddgksf2013], Guding88[https://github.com/Guding88], Yu9191[https://github.com/Yu9191]
 #!tag = 解锁会员
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RevenueCat-icon.png
-#!date = 2024-09-10 09:10
+#!date = 2024-09-10 09:40
 
 # 2024-09-06
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/Reheji.js
