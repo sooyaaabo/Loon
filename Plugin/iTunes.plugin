@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/iTunes.png
-#!date = 2024-09-10 09:00
+#!date = 2024-09-10 09:10
 
 # 2024-09-08
 # https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js
@@ -19,15 +19,21 @@
 # 2023-09-09
 # https://raw.githubusercontent.com/Yunxingz/Rewrite/main/iTunes.js
 
+[Argument]
+iTunesScriptEnable-chxm1023 = switch, true, false, tag = iTunes-chxm1023, desc = 是否启用chxm1023的脚本来解锁iTunes系列
+iTunesScriptEnable-Guding88 = switch, true, false, tag = iTunes-Guding88, desc = 是否启用Guding88的脚本来解锁iTunes系列
+iTunesScriptEnable-ddgksf2013 = switch, true, false, tag = iTunes-ddgksf2013, desc = 是否启用ddgksf2013的脚本来解锁iTunes系列
+iTunesScriptEnable-Yu9191 = switch, true, false, tag = iTunes-Yu9191, desc = 是否启用Yu9191的脚本来解锁iTunes系列
+
 [Script]
 # chxm1023
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body = true, tag = iTunes解锁系列@chxm1023
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/iTunes.js, requires-body = true, enable={iTunesScriptEnable-chxm1023}, tag = iTunes解锁系列@chxm1023
 # ddgksf2013
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body = true, tag = iTunes解锁系列@ddgksf2013
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://gist.githubusercontent.com/ddgksf2013/9e0f6c7341beea09a31aa309d9d7f502/raw/buyitunes.js, requires-body = true, enable={iTunesScriptEnable-ddgksf2013}, tag = iTunes解锁系列@ddgksf2013
 # Guding88
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body = true, tag = iTunes解锁系列@Guding88
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Guding88/Script/main/APPheji_iTunes.js, requires-body = true, enable={iTunesScriptEnable-Guding88}, tag = iTunes解锁系列@Guding88
 # Yu9191
-http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/iTunes.js, requires-body = true, tag = iTunes解锁系列@Yu9191
+http-response ^https?:\/\/buy\.itunes\.apple\.com\/verifyReceipt$ script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/iTunes.js, requires-body = true, enable={iTunesScriptEnable-Yu9191}, tag = iTunes解锁系列@Yu9191
 
 [Mitm]
 hostname = buy.itunes.apple.com
