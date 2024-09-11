@@ -82,12 +82,12 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 ### **EFCloud**
 
 - **机场介绍**<br>
-  1. 多地中转隧道跨境出国SLA在线保障<br>
-  2. 超高带宽接入晚高峰速率保障4k秒开<br>
-  3. 支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
-  4. 全球 30+ 国家/地区， 50+ 节点<br>
-  5. Trojan 协议，不限制设备数量<br>
-  6. 支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
+1. 多地中转隧道跨境出国SLA在线保障<br>
+2. 超高带宽接入晚高峰速率保障4k秒开<br>
+3. 支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
+4. 全球 30+ 国家/地区， 50+ 节点<br>
+5. Trojan 协议，不限制设备数量<br>
+6. 支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
   
 - **套餐介绍**<br>
 <table>
@@ -139,7 +139,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买（关闭代理），新用户八折优惠码：`new` （关闭代理进入官网，否则）
+点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买（关闭代理），新用户八折优惠码：`new`
 
 - **联系方式**<br>
 官方频道：[@efcloud](https://t.me/efcloud)<br>
