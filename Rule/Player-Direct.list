@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-09 16:20
+# 2024-09-12 09:30
 
 # CMSPlayer
 # 低端影视
@@ -135,6 +135,10 @@ DOMAIN-SUFFIX, wangyoung.com
 # XPTV
 # 探索页
 DOMAIN-SUFFIX, infuseku.xyz
+# 4k-av
+DOMAIN-SUFFIX, 4k-av.com
+# 金牌影院
+DOMAIN-SUFFIX, cfkj86.com
 # 两个BT
 DOMAIN-SUFFIX, bttwo.org
 DOMAIN-SUFFIX, bttwoo.com
@@ -302,6 +306,8 @@ DOMAIN-SUFFIX, tanhuatv.site
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-SUFFIX, 4k-av.com
+DOMAIN, ppvod01.blbtgg.com
 DOMAIN-SUFFIX, zaqohu.com
 DOMAIN-SUFFIX, xjqxz.top
 DOMAIN-SUFFIX, wjm.xpgtv.net
