@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-09-12 12:00
+#!date = 2024-09-09 23:00
 
 # 2024-08-24 12:35
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cainiao.snippet
@@ -17,7 +17,7 @@
 
 [Rule]
 # 移除广告下发请求
-# AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Cainiao4iPhone*)), REJECT
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Cainiao4iPhone*)), REJECT
 
 DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, amdc.m.youku.com, REJECT
