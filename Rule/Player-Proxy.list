@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-08 08:50
+# 2024-09-13 19:35
 
 # CMSPlayer
 # 海外看
@@ -103,6 +103,8 @@ DOMAIN, film.ohhhh.org
 # Temby
 DOMAIN, temby.285286.xyz
 DOMAIN, temby4837.285286.xyz
+# CharonTV
+DOMAIN, play.charontv.com
 # TreeDiagram
 ;DOMAIN, 789.123456.al
 # ntRRR
