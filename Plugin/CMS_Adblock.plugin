@@ -9,9 +9,9 @@
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CMSPlayer-1.0.15.png
 #!select = 弹窗通知, true, false
-#!date = 2024-09-13 19:15
+#!date = 2024-09-13 19:30
 
-# 2024-09-13 18:56
+# 2024-09-13 19:14
 # https://github.com/Yswag/for-own-use/blob/main/loon-plugin/cmsAdblock.plugin
 
 [Rewrite]
@@ -23,7 +23,7 @@
 http-response ^https?:\/\/m3u8\.(hmrvideo|heimuertv)\.com\/play\/(.+).m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, timeout = 30, tag = 黑木耳
 http-response ^https?:\/\/((?:v\.lzcdn|v\.cdnlz|vip.*\.lz[-]?cdn)\d+\.com)\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 量子资源
 http-response ^https?:\/\/(super|svipsvip|vip)\.ffzy[A-Za-z0-9-]+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 非凡资源
-http-response ^https?:\/\/s\d+\.bfengbf\.com\/video\/(.+)\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 暴风影视
+http-response ^https?:\/\/c\d+\.rrcdnbf\d+\.com\/video\/(.+)\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 暴风影视
 http-response ^https?:\/\/vip\.kuaikan-(cdn|play)\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 快看资源
 http-response ^https:\/\/bfikuncdn\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = ikun资源
 http-response ^https:\/\/play\.modujx\d+\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 魔都动漫
@@ -44,4 +44,4 @@ http-response ^https:\/\/bfnxxcdn\.com\/.+\/hls\/.+\.m3u8 script-path = https://
 http-response ^https:\/\/player\.huangguam3u\.com\/.+\/hls\/.+\.m3u8 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/js/cmsAdblock.js, requires-body = true, tag = 黄瓜资源
 
 [Mitm]
-hostname = m3u8.heimuertv.com, m3u8.hmrvideo.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com, *.ffzy*.com, s*.bfengbf.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
+hostname = m3u8.heimuertv.com, m3u8.hmrvideo.com, v.cdnlz*.com, v.lzcdn*.com, vip*.lz-cdn*.com, vip.lzcdn*.com, *.ffzy*.com, *.rrcdnbf*.com, vip.kuaikan*.com, bfikuncdn.com, play.modujx*.com, vod.lyhuicheng.com, ukzy.ukubf*.com, *.wgslsw.com, askzycdn.com, t0.97img.com, *.bfbfhao.com, player.cl9987.com:188, v.ykv3.com, *.3sybf.com, bfnxxcdn.com, player.huangguam3u.com, leshiyuncdn.36s.top, cs1.feidaozy.com
