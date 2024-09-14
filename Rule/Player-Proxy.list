@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-13 19:35
+# 2024-09-14 18:50
 
 # CMSPlayer
 # 海外看
@@ -72,8 +72,6 @@ DOMAIN-SUFFIX, bttwo.net
 DOMAIN-SUFFIX, kmeiju.cc
 
 # Emby
-# Paul
-DOMAIN-SUFFIX, imetyou.top
 # 普拉斯影业
 DOMAIN-SUFFIX, plusmedia.site
 DOMAIN, emby.xeton.dev
@@ -103,6 +101,8 @@ DOMAIN, film.ohhhh.org
 # Temby
 DOMAIN, temby.285286.xyz
 DOMAIN, temby4837.285286.xyz
+# 牢大科蜜野兽
+DOMAIN, ph.16bit.cfd
 # CharonTV
 DOMAIN, play.charontv.com
 # TreeDiagram
