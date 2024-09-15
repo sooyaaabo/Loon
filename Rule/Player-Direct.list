@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-15 10:00
+# 2024-09-15 20:00
 
 # CMSPlayer
 # 低端影视
@@ -283,6 +283,8 @@ DOMAIN-SUFFIX, embyplus.org
 DOMAIN, media.nijigem.by
 # 大V影院
 DOMAIN, su.viclub.top
+# 蘑菇
+DOMAIN-SUFFIX, mooguu.top
 # 垃圾影音
 DOMAIN, cf.xmsl.org
 # 普拉斯影业
