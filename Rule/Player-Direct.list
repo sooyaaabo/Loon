@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-15 20:00
+# 2024-09-15 20:20
 
 # CMSPlayer
 # 低端影视
@@ -263,16 +263,10 @@ DOMAIN, wxsnsencsvp.wxs.qq.com
 # Emby
 # Paul
 DOMAIN-SUFFIX, imetyou.top
-;DOMAIN-SUFFIX, cf.imetyou.top
-;DOMAIN-SUFFIX, emby.imetyou.top
-;DOMAIN-SUFFIX, fk.imetyou.top
-;DOMAIN-SUFFIX, kr.imetyou.top
-;DOMAIN-SUFFIX, sg.imetyou.top
-;DOMAIN-SUFFIX, chun.imetyou.top
 # TreeDiagram
 DOMAIN-SUFFIX, 789.123456.al
 # NyaMedia
-DOMAIN-SUFFIX, emby.bangumi.ca
+DOMAIN-SUFFIX,bangumi.ca
 # PiliPili
 DOMAIN-SUFFIX, pilipili.club
 DOMAIN-SUFFIX, pilifun.top:443
@@ -280,25 +274,18 @@ DOMAIN, xn--ohq746dhyifsj.xn--pp5aa2sb.com
 # 纸片人
 DOMAIN-SUFFIX, embyplus.org
 # 二刺螈
-DOMAIN, media.nijigem.by
+DOMAIN-SUFFIX, nijigem.by
 # 大V影院
 DOMAIN, su.viclub.top
 # 蘑菇
 DOMAIN-SUFFIX, mooguu.top
-# 垃圾影音
-DOMAIN, cf.xmsl.org
 # 普拉斯影业
 DOMAIN, emby-best.xeton.dev
-# 叔服
-DOMAIN, jz.mcjoker.xyz
 # lily
-DOMAIN, emby.lilyya.xyz
+DOMAIN-SUFFIX, lilyya.xyz
 # CC
 DOMAIN, cc.coemn.com
 DOMAIN, cc.embycc.link
-# MisakaF
-DOMAIN, cdn.misakaf.org
-DOMAIN-SUFFIX, cloudfront.net
 # apop
 DOMAIN, cn.apopcloud.live
 # 牢大科蜜野兽
@@ -315,6 +302,7 @@ DOMAIN-SUFFIX, 811861.xyz
 # Jellyfin
 # 探花TV
 DOMAIN-SUFFIX, tanhuatv.site
+IP-CIDR, 152.53.67.239/32, no-resolve
 
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com

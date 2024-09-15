@@ -1,5 +1,5 @@
-# 来源： https://github.com/MisakaFxxk/MisakaF_Subconverter/blob/main/Sub/Emby.list
-# 最后更新时间： 2024-08-23 18:50
+# 来源： https://github.com/Repcz/Tool/blob/X/Loon/Rules/Emby.list
+# 最后更新时间：2024-09-14 17:02
 
 
 ##### A #####
@@ -157,7 +157,6 @@ IP-CIDR,212.90.120.164/32,no-resolve
 
 # MisakaF
 DOMAIN-SUFFIX,misakaf.org
-DOMAIN-SUFFIX,cloudfront.net
 
 # MjjEmby
 DOMAIN-SUFFIX,mjjemby.org
@@ -219,6 +218,9 @@ DOMAIN-SUFFIX,emby.nyancat.net
 DOMAIN-SUFFIX,nivod4.tv
 DOMAIN-SUFFIX,newpppp.com
 
+# Nanflix
+DOMAIN-SUFFIX,nanflix.net
+
 ##### O #####
 
 # Odyssey+
@@ -243,6 +245,7 @@ DOMAIN-SUFFIX,emby77.cf
 DOMAIN-SUFFIX,emby77.org
 DOMAIN-SUFFIX,pilipiliultra.top
 DOMAIN-SUFFIX,pilipiliultra.com
+DOMAIN-SUFFIX,pilipili.club
 
 # PornEmby
 DOMAIN-SUFFIX,pornemby.club

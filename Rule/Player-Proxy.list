@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-15 12:40
+# 2024-09-15 20:20
 
 # CMSPlayer
 # 海外看
@@ -78,37 +78,17 @@ DOMAIN, emby.xeton.dev
 DOMAIN, jellyfin.xeton.dev
 DOMAIN, movie.xeton.dev
 DOMAIN, servers.xeton.dev
-# 叔服
-DOMAIN, emby3.mcjoker.xyz
-# Marmot
-DOMAIN, v.20120714.xyz
 # MisakaF
-DOMAIN, emby.aca.best
-DOMAIN, porn.aca.best
-DOMAIN, emby.misakaf.org
-DOMAIN, push-kr.misakaf.org
+DOMAIN-SUFFIX, aca.best
 DOMAIN-SUFFIX, misakaf.org
 IP-CIDR, 102.223.180.108/32
 # 终点站
 DOMAIN-SUFFIX, emby.wtf
-# PiliPili
-DOMAIN-SUFFIX, emby.pilipiliultra.top
-DOMAIN-SUFFIX, emby.pilipiliultra.com
-# NMEmby
-DOMAIN, film.ohhhh.org
-# Temby
-DOMAIN, temby.285286.xyz
-DOMAIN, temby4837.285286.xyz
 # 牢大科蜜野兽
 DOMAIN, ph.16bit.cfd
 # apop
 DOMAIN, us.886318.xyz
 # CharonTV
-DOMAIN, play.charontv.com
-# TreeDiagram
-;DOMAIN, 789.123456.al
-# ntRRR
-DOMAIN, stream.ntrrr.top
-DOMAIN, stream.synn.cc
+DOMAIN-SUFFIX, charontv.com
 # Jellyfish+
 DOMAIN, vip3.jellyfin.asia
