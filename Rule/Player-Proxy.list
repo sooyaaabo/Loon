@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-14 18:50
+# 2024-09-15 12:40
 
 # CMSPlayer
 # 海外看
@@ -90,9 +90,7 @@ DOMAIN, push-kr.misakaf.org
 DOMAIN-SUFFIX, misakaf.org
 IP-CIDR, 102.223.180.108/32
 # 终点站
-DOMAIN, pub1cf.emby.wtf
-DOMAIN, pub2cf.emby.wtf
-DOMAIN, pub3cf.emby.wtf
+DOMAIN-SUFFIX, emby.wtf
 # PiliPili
 DOMAIN-SUFFIX, emby.pilipiliultra.top
 DOMAIN-SUFFIX, emby.pilipiliultra.com
@@ -103,6 +101,8 @@ DOMAIN, temby.285286.xyz
 DOMAIN, temby4837.285286.xyz
 # 牢大科蜜野兽
 DOMAIN, ph.16bit.cfd
+# apop
+DOMAIN, us.886318.xyz
 # CharonTV
 DOMAIN, play.charontv.com
 # TreeDiagram

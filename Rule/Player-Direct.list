@@ -297,12 +297,12 @@ DOMAIN, cc.embycc.link
 # MisakaF
 DOMAIN, cdn.misakaf.org
 DOMAIN-SUFFIX, cloudfront.net
+# apop
+DOMAIN, cn.apopcloud.live
 # 牢大科蜜野兽
 DOMAIN-SUFFIX, mius.uk
 # 终点站
-DOMAIN, pub1.emby.wtf
-DOMAIN, pub2.emby.wtf
-DOMAIN, pub3.emby.wtf
+DOMAIN-SUFFIX, term.wtf
 # yomo
 DOMAIN, emby.yomo.lol
 # peach
