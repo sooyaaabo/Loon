@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CNY.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-07-11 19:10:01
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bank_remove_ads.plugin
@@ -42,5 +42,5 @@ URL-REGEX, ^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mpsp
 # 开屏广告
 ^https:\/\/s3gw\.cmbimg\.com\/mbappinitads\/ reject
 
-[Mitm]
+[MitM]
 hostname = static.95508.com, unionsr.chinalifeonline.com.cn, imcs.citicbank.com, lban.spdb.com.cn, s3gw.cmbimg.com

@@ -8,10 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Turrit.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 [Rewrite]
 (https:\/\/)?t\.me\/(.+) 302 turrit://resolve?domain=$2
 
-[Mitm]
+[MitM]
 hostname = t.me

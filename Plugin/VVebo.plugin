@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/VVebo.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-04-04
 # https://github.com/suiyuran/stash/blob/main/override/fix-vvebo.stoverride
@@ -19,5 +19,5 @@ http-request ^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? script-path
 http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, requires-body = true, tag = 修复时间线
 http-response ^https:\/\/api\.weibo\.cn\/2\/cardlist\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-fans.js, requires-body = true, tag = 修复我的页面
 
-[Mitm]
+[MitM]
 hostname = api.weibo.cn

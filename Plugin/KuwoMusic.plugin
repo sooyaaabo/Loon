@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/KuwoMusic.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # version 1.0.1
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
@@ -73,5 +73,5 @@ http-response ^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn
 # 移除听书页面广告
 http-response ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/tingshu\/index\/radio script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Kuwo/Kuwo_remove_ads.js, requires-body = true, tag = 移除听书页面广告
 
-[Mitm]
+[MitM]
 hostname = appi.kuwo.cn, mc.tencentmusic.com, vip*.kuwo.cn, tingshu.kuwo.cn, *.kuwo.cn

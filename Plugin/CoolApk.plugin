@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CoolApk.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -30,5 +30,5 @@ http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8 script-path = http
 http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告@ZenmoFeiShi
 http-response ^https:\/\/api\.coolapk\.com\/v6\/account\/loadConfig\?key=my_page_card_config script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告@ZenmoFeiShi
 
-[Mitm]
+[MitM]
 hostname = api.coolapk.com

@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/VirgilClyne/iRingo/wiki
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppleWeather.png
-#!date = 2024-09-10 10:30
+#!date = 2024-09-16 22:30
 
 # 2024-09-09
 # https://github.com/VirgilClyne/iRingo/blob/main/plugin/WeatherKit.plugin
@@ -32,5 +32,5 @@ DOMAIN, weather-analytics-events.apple.com, REJECT-DROP
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ script-path = https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/WeatherKit.response.js, requires-body = true, tag = WeatherKit.api.v1.availability.response, argument=
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ script-path = https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/WeatherKit.response.js, requires-body = true, binary-body-mode = true, tag = WeatherKit.api.v2.weather.response, argument=[{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token}]
 
-[Mitm]
+[MitM]
 hostname = weatherkit.apple.com

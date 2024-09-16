@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CookieInfo.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Tasks/AutoJoinTF.js
 # https://gist.githubusercontent.com/Sliverkiss/a7496bd073820942b44a9b36874aaf4c/raw/sliverkiss.loon.plugin
@@ -37,5 +37,5 @@ http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://r
 # 夸克网盘 - drive-m.quark.cn
 ;http-request ^https:\/\/drive-m.quark.cn\/1\/clouddrive\/capacity\/growth\/sign.+ script-path = https://gist.githubusercontent.com/Sliverkiss/2694a665b4e52d8788c18394201ff3eb/raw/quarkcloud.js, timeout = 10, tag = 夸克网盘🅒
 
-[Mitm]
+[MitM]
 hostname = testflight.apple.com, auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, iacc.rec.qq.com, passport.iqiyi.com, music.163.com, *.y.qq.com, app.bilibili.com, m.bilibili.com, drive-m.quark.cn

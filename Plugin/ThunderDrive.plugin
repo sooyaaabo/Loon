@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ThunderDrive.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-07-14 20:23:48
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/XunLei_remove_ads.plugin
@@ -80,5 +80,5 @@ http-response ^https:\/\/xluser-ssl\.xunlei\.com\/xluser\.core\.login\/v3\/getus
 # 精简我的页面
 http-response ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/XunLei/XunLei_remove_ads.js, requires-body = true, tag = 精简我的页面
 
-[Mitm]
+[MitM]
 hostname = api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com, xluser-ssl.xunlei.com

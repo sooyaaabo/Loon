@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = http://boxjs.com/#/app/iRingo.TestFlight
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/TestFlight-02.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-04-15
 # https://github.com/VirgilClyne/iRingo/blob/main/plugin/TestFlight.plugin
@@ -20,5 +20,5 @@ skip-proxy = iosapps.itunes.apple.com
 http-request ^https?:\/\/testflight\.apple\.com\/ script-path = https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/TestFlight.request.js, requires-body = true, tag = iRingo.TestFlight.request, argument=
 http-response ^https?:\/\/testflight\.apple\.com\/ script-path = https://raw.githubusercontent.com/VirgilClyne/iRingo/main/js/TestFlight.response.js, requires-body = true, tag = iRingo.TestFlight.response, argument=
 
-[MITM]
+[MitM]
 hostname = testflight.apple.com

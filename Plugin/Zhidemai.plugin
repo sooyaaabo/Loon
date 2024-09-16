@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhidemai.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
@@ -44,5 +44,5 @@ http-response ^https:\/\/qianbao\.smzdm\.com\/v\d\/app\/home script-path = https
 http-response ^https:\/\/s3\.zdmimg\.com\/third\/index script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body = true, tag = 什么值得买移除广告
 http-response ^https:\/\/post\.m\.smzdm\.com\/ajax_app\/ajax_get_footer_list script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.js, requires-body = true, tag = 什么值得买移除广告
 
-[Mitm]
+[MitM]
 hostname = haojia-api.smzdm.com, homepage-api.smzdm.com, app-api.smzdm.com, user-api.smzdm.com, article-api.smzdm.com ,qianbao.smzdm.com,s3.zdmimg.com,post.m.smzdm.com,haojia.m.smzdm.com

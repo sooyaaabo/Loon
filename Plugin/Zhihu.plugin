@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png
-#!date = 2024-09-13 11:05
+#!date = 2024-09-16 22:30
 
 # 2024-09-13 11:00
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/zhihu.snippet
@@ -78,5 +78,5 @@ http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(articles|answers)\/\d+\/reco
 http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
 http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
 
-[Mitm]
+[MitM]
 hostname = *.zhihu.com

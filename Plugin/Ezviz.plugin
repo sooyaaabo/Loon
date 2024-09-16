@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Ezviz.png
-#!date = 2024-09-09 23:00
+#!date = 2024-09-16 22:30
 
 # 2024-07-10 02:10:56
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/VideoGo_remove_ads.plugin
@@ -89,5 +89,5 @@ DOMAIN-SUFFIX, pos.baidu.com, REJECT
 [Script]
 # http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/VideoGo/VideoGo_remove_ads.js, requires-body = true, tag = 我的页面去广告
 
-[Mitm]
+[MitM]
 hostname = api.ys7.com, i.ys7.com
