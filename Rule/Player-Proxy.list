@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-15 20:20
+# 2024-09-16 09:30
 
 # CMSPlayer
 # 海外看
@@ -87,7 +87,7 @@ DOMAIN-SUFFIX, emby.wtf
 # 牢大科蜜野兽
 DOMAIN, ph.16bit.cfd
 # apop
-DOMAIN, us.886318.xyz
+DOMAIN-SUFFIX, 886318.xyz
 # CharonTV
 DOMAIN-SUFFIX, charontv.com
 # Jellyfish+
