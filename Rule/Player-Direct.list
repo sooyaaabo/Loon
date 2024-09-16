@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-16 09:30
+# 2024-09-16 12:05
 
 # CMSPlayer
 # 低端影视
@@ -281,6 +281,8 @@ DOMAIN, su.viclub.top
 DOMAIN-SUFFIX, mooguu.top
 # 普拉斯影业
 DOMAIN, emby-best.xeton.dev
+# nanflix
+DOMAIN-SUFFIX, nanflix.net
 # lily
 DOMAIN-SUFFIX, lilyya.xyz
 # CC
