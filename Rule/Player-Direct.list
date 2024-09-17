@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-16 12:05
+# 2024-09-17 11:30
 
 # CMSPlayer
 # 低端影视
@@ -288,6 +288,8 @@ DOMAIN, cc.coemn.com
 DOMAIN, cc.embycc.link
 # apop
 DOMAIN-SUFFIX, apopcloud.live
+# Nanflix
+DOMAIN-SUFFIX, nanflix.net
 # 牢大科蜜野兽
 DOMAIN-SUFFIX, mius.uk
 # 终点站
