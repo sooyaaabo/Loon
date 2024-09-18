@@ -1,7 +1,7 @@
 #!name = 网络信息 𝕏
 #!desc = 国内外 IP, 运营商, ASN, ORG, 位置, 策略; IPv6; 入口落地; 隐私; LAN; SSID. 自己设置对应域名的分流. 支持网络变化时进行查询通知. 支持长按节点进行查询. 提供 https://net-lsp-x.com 数据接口, 参数与模块参数相同. 详细参数设置见频道说明: https://t.me/zhetengsha
 #!openUrl = https://net-lsp-x.com
-#!author = Keywos[https://github.com/Keywos], xream[https://github.com/xream], 折腾啥[https://t.me/zhetengsha]
+#!author = Keywos[https://github.com/Keywos], xream[https://github.com/xream]
 #!tag = 功能增强
 #!system = 
 #!system_version = 

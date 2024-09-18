@@ -417,6 +417,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
     <tr>
         <td width="150px"><a href="https://github.com/githubdulong"><em>@githubdulong</em></a></td>
         <td width="150px"><a href="https://github.com/chavyleung"><em>@chavyleung</em></a></td>
+        <td width="150px"><a href="https://github.com/CKYB"><em>@CKYB</em></a></td>
+        <td width="150px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
      </tr>
 </table>
 
