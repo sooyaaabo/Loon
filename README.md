@@ -406,6 +406,18 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td width="150px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
         <td width="150px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
      </tr>
+     <tr>
+        <td width="150px"><a href="https://github.com/wf021325"><em>@wf021325</em></a></td>
+        <td width="150px"><a href="https://github.com/githubdulong"><em>@githubdulong</em></a></td>
+        <td width="150px"><a href="https://gitlab.com/I-am-R-E"><em>@I-am-R-E</em></a></td>
+        <td width="150px"><a href="https://github.com/GoodHolidays"><em>@GoodHolidays</em></a></td>
+        <td width="150px"><a href="https://github.com/ClydeTime"><em>@ClydeTime</em></a></td>
+        <td width="150px"><a href="https://github.com/VirgilClyne"><em>@VirgilClyne</em></a></td>
+     </tr>
+    <tr>
+        <td width="150px"><a href="https://github.com/githubdulong"><em>@githubdulong</em></a></td>
+        <td width="150px"><a href="https://github.com/chavyleung"><em>@chavyleung</em></a></td>
+     </tr>
 </table>
 
 ## Star History

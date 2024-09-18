@@ -1,14 +1,14 @@
 #!name = 京东
-#!desc = 过滤京东广告，嵌入历史比价信息，点击商品标题即可查看。历史比价仅适用于App版本低于V12.4.3，否则失效。仅支持京东的标准模式。
+#!desc = 过滤京东广告，嵌入历史比价信息，点击商品标题即可查看。历史比价仅适用于App版本低于12.4.3使用，否则失效。仅支持京东的标准模式。
 #!openUrl = https://apps.apple.com/app/id414245413
-#!author = RuCu6[https://github.com/RuCu6], zwf234[https://github.com/zwf234]
+#!author = RuCu6[https://github.com/RuCu6], 苍井灰灰[https://github.com/wf021325], MuTu[https://github.com/githubdulong]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/JingDong.png
-#!date = 2024-09-16 22:30
+#!date = 2024-09-18 16:55
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -26,8 +26,11 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
 
 [Script]
+# 京东
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body = true, tag = 移除京东广告
+# 京东极速版
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, argument = jdLiteAdvertisingVO -> rucu6, requires-body = true, tag = 移除京东极速版广告
+# 京东比价
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(wareBusiness|serverConfig|basicConfig) script-path = https://raw.githubusercontent.com/wf021325/qx/master/js/jd_price.js, requires-body = true, tag = 京东比价
 
 [MitM]
