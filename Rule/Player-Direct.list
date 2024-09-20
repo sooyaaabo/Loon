@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-18 23:50
+# 2024-09-20 10:10
 
 # CMSPlayer
 # 低端影视
@@ -289,8 +289,6 @@ DOMAIN-SUFFIX, lilyya.xyz
 DOMAIN-SUFFIX, embycc.link
 # apop
 DOMAIN-SUFFIX, apopcloud.live
-# Nanflix
-DOMAIN-SUFFIX, nanflix.net
 # Watermelon
 DOMAIN-SUFFIX, 1024.name
 # 牢大科蜜野兽
