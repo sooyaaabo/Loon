@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-20 10:10
+# 2024-09-18 23:50
 
 # CMSPlayer
 # 海外看
@@ -86,8 +86,6 @@ IP-CIDR, 102.223.180.108/32
 DOMAIN-SUFFIX, emby.wtf
 # 牢大科蜜野兽
 DOMAIN, ph.16bit.cfd
-# Nanflix
-DOMAIN-SUFFIX, nanflix.net
 # CC
 DOMAIN-SUFFIX, coemn.com
 # Apop
