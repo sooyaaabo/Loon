@@ -8,15 +8,16 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
-#!date = 2024-09-16 22:30
+#!date = 2024-09-20 09:10
 
+# 2024-06-30 11:40
+# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
 # 2024-06-30 11:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
 # 2024-02-19
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/WebAdBlock.conf
 
 [Rewrite]
-
 # -----------Rucu6----------- #
 # 谷歌服务重定向 //*.google.cn
 ^https?:\/\/www\.google\.cn 302 https://www.google.com

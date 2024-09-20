@@ -13,8 +13,10 @@
 #!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #select = 启用调试模式, true, false
-#!date = 2024-09-16 22:30
+#!date = 2024-09-20 09:10
 
+# 2024-06-11 21:59:22
+# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/youtube.plugin
 # 2024-05-12
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
 # 2024-06-11 21:59:22
