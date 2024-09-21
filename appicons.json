@@ -27,30 +27,6 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-BB-VeryLoudly.png"
         },
         {
-            "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-Lumina-01.png"
-        },
-        {
-            "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-Lumina-02.png"
-        },
-        {
-            "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-Lumina-03.png"
-        },
-        {
-            "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-Dreamscape-01.png"
-        },
-        {
-            "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-Dreamscape-02.png"
-        },
-        {
-            "name": "Loon",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Loon-Dreamscape-03.png"
-        },
-        {
             "name": "LoonLite",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/LoonLite.png"
         },
@@ -261,6 +237,10 @@
 	{
             "name": "AppleWeather",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppleWeather.png"
+        },
+        {
+            "name": "ChinaMobile",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaMobile.png"
         },
         {
             "name": "ChinaTelecom",
