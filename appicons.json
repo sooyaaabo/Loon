@@ -239,20 +239,20 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AppleWeather.png"
         },
         {
-            "name": "ChinaMobile",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaMobile.png"
+            "name": "ChinaMobile CMCC",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaMobile-CMCC.png"
         },
         {
-            "name": "ChinaTelecom",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaTelecom.png"
+            "name": "ChinaTelecom CTCC",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaTelecom-CTCC.png"
         },
         {
-            "name": "ChinaUnicom",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaUnicom.png"
+            "name": "ChinaUnicom CUCC",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaUnicom-CUCC.png"
         },
         {
-            "name": "ChinaBroadnet",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaBroadnet.png"
+            "name": "ChinaBroadnet CBN",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ChinaBroadnet-CBN.png"
         },
         {
             "name": "QQ",
