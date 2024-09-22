@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdOff.png
-#!date = 2024-09-20 09:10
+#!date = 2024-09-22 15:25
 
-# 2024-06-30 11:40
+# 2024-09-22 12:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
 # 2024-06-30 11:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
@@ -54,8 +54,6 @@ http-response ^https:\/\/javdb\.com\/ script-path = https://raw.githubuserconten
 http-response ^https:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/avpleQX.js, requires-body = true, tag = Avple@RuCu6
 # Jable (https://jable.tv/)
 http-response ^https:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = Jable@RuCu6
-# missav 播放页弹窗 (https://missav.com/)
-http-response ^https:\/\/missav\.com\/(dm\d+\/)?\w{2}\/[\w-]+ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = missav@RuCu6
 
 # -----------ddgksf2013----------- #
 # 在线之家 - https://www.zxzjhd.com/
@@ -96,4 +94,4 @@ http-response ^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$) script-path = https://
 http-response ^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/libvio.js, requires-body = true, tag = libvio@ddgksf2013
 
 [MitM]
-hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, missav.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
+hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
