@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-09-17 23:00
+#!date = 2024-09-24 22:25
 
 # 2024-09-17 22:35
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/myblockads.plugin
@@ -119,7 +119,7 @@ DOMAIN-SUFFIX, miaozhen.com, REJECT
 DOMAIN-SUFFIX, ubixioe.com, REJECT
 DOMAIN-SUFFIX, unityads.unity3d.com, REJECT
 DOMAIN-SUFFIX, v.smtcdns.com, REJECT
-DOMAIN-SUFFIX, zijieapi.com, REJECT
+# DOMAIN-SUFFIX, zijieapi.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
