@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-21 19:10
+# 2024-09-24 15:20
 
 # CMSPlayer
 # 低端影视
@@ -290,8 +290,6 @@ DOMAIN-SUFFIX, embycc.link
 # apop
 DOMAIN-SUFFIX, apopcloud.live
 IP-CIDR, 132.226.20.31, no-resolve
-# Nanflix
-DOMAIN-SUFFIX, nanflix.net
 # Watermelon
 DOMAIN-SUFFIX, 1024.name
 # 牢大科蜜野兽
