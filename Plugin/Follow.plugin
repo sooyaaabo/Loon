@@ -1,12 +1,12 @@
 #!name = Follow
-#!desc = 每日签到获取Power，需电脑抓包获取csrf token和cookie参数填入BoxJs
-#!openUrl = http://boxjs.com
+#!desc = 每日签到获取Power，需电脑抓包获取csrf token和cookie填入BoxJs中
+#!openUrl = https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.json
 #!author = chavyleung[https://github.com/chavyleung]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
-#!homepage = https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.json
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Follow-256.png
 #!date = 2024-09-25 16:00
 
