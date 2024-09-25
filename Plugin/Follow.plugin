@@ -1,25 +1,20 @@
 #!name = Follow
-#!desc = 每日签到获取Follow Power，需电脑抓包获取csrf token和cookie
-#!openUrl = 
-#!author = chavyleung[https://github.com/chavyleung], sooyaaabo[https://github.com/sooyaaabo]
+#!desc = 每日签到获取Power，需电脑抓包获取csrf token和cookie参数填入BoxJs
+#!openUrl = http://boxjs.com
+#!author = chavyleung[https://github.com/chavyleung]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
-#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!homepage = https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.json
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Follow-256.png
-#!date = 2024-09-25 15:57
+#!date = 2024-09-25 16:00
 
-# 2024-01-24 13:13:56
+# 2024-09-25
 # https://github.com/chavyleung/scripts/blob/master/follow/follow.js
 
 [Argument]
-follow_csrfToken = input, "", tag = Follow csrfToken, desc = 填写Follow的csrfToken
-follow_cookie = input, "", tag = Follow cookie, desc = 填写Follow的cookie
-
-cron-follow = input, "0 9 * * *", tag = Follow Task, desc = 输入cron表达式来定时运行Follow Task
+cron-follow = input, "0 0 9 * * *", tag = Follow Task, desc = 输入cron表达式来定时运行Follow Task
 
 [Script]
-
-http-request ^https:\/\/api\.follow\.is\/wallets\/transactions\/claim_daily script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Follow.js, argument=[{follow_csrfToken},{follow_cookie}], tag = Follow
-cron {cron-follow} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Follow.js, timeout = 60, tag = Follow Task
+cron {cron-follow} script-path = https://raw.githubusercontent.com/chavyleung/scripts/refs/heads/master/follow/follow.js, timeout = 60, tag = Follow Task
