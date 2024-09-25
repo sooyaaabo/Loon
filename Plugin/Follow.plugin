@@ -1,0 +1,23 @@
+#!name = Follow
+#!desc = 每日签到获取Follow  Power，需电脑抓包获取 csrf token 和 cookie
+#!openUrl = 
+#!author = chavyleung[https://github.com/chavyleung], sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.2(749)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Follow-256.png
+#!date = 2024-09-25 15:50
+
+# 2024-01-24 13:13:56
+# https://github.com/chavyleung/scripts/blob/master/follow/follow.js
+
+[Argument]
+follow_csrfToken = input, "", tag = Follow csrfToken, desc = 填写Follow的csrfToken
+follow_cookie = input, "", tag = Follow cookie, desc = 填写Follow的cookie
+
+cron-follow = input, "0 9 * * *", tag = Follow Task, desc = 输入cron表达式来定时运行Follow Task
+
+[Script]
+cron {cron-follow} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Follow.js, argument=[{follow_csrfToken},{follow_cookie}], timeout = 60, tag = Follow Task
