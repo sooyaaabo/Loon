@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-09-25 12:35
+# 2024-09-25 20:40
 
 # CMSPlayer
 # 海外看
@@ -94,6 +94,7 @@ DOMAIN-SUFFIX, nanflix.net
 DOMAIN-SUFFIX, coemn.com
 # Apop
 DOMAIN-SUFFIX, 886318.xyz
+DOMAIN-SUFFIX, fabu.lonancc.net
 # Plumber
 DOMAIN, tiancheng.boaz.cf
 # CharonTV
