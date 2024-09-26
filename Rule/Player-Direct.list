@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-26 22:00
+# 2024-09-26 23:25
 
 # CMSPlayer
 # 低端影视
@@ -276,7 +276,7 @@ DOMAIN-SUFFIX, embyplus.org
 # 二刺螈
 DOMAIN-SUFFIX, nijigem.by
 # 大V影院
-DOMAIN, su.viclub.top
+DOMAIN-SUFFIX, viclub.top
 # 蘑菇
 DOMAIN-SUFFIX, mooguu.top
 # 普拉斯影业
@@ -302,7 +302,7 @@ DOMAIN-SUFFIX, mius.uk
 # 终点站
 DOMAIN-SUFFIX, term.wtf
 # yomo
-DOMAIN, emby.yomo.lol
+DOMAIN-SUFFIX, yomo.lol
 # peach
 DOMAIN-SUFFIX, embymv.link
 # awa
