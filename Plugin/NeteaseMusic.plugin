@@ -22,12 +22,10 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-09-20 09:10
+#!date = 2024-09-26 11:00
 
 # 2024-09-16 02:35
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
-# 2024-06-10 18:00
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cloudmusic.snippet
 # 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 

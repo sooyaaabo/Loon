@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ColorfulCloudsWeatherPro.png
-#!date = 2024-09-20 09:10
+#!date = 2024-09-26 11:00
 
 # 2024-09-01 11:21:02
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/caiyun.plugin
@@ -27,11 +27,11 @@ DOMAIN, ad.cyapi.cn, REJECT
 
 [Script]
 # 共享会员
-http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, tag = 彩云天气共享会员
-http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气共享会员
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/caiyun.js, tag = 彩云天气共享会员
+http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气共享会员
 
 # 底部菜单栏,活动推广
-http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气去广告
+http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气去广告
 
 [MitM]
 hostname = biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, *.cyapi.cn
