@@ -1,5 +1,5 @@
 #!name = 彩云天气
-#!desc = 过滤彩云天气广告，解锁SVIP功能。
+#!desc = 过滤彩云天气广告，解锁SVIP功能。（解锁功能需版本低于7.20.2）
 #!openUrl = https://apps.apple.com/app/id847764912
 #!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/ColorfulCloudsWeatherPro.png
-#!date = 2024-09-26 11:00
+#!date = 2024-09-27 17:40
 
 # 2024-09-01 11:21:02
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/caiyun.plugin
