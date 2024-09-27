@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/CaiNiao.png
-#!date = 2024-09-26 11:00
+#!date = 2024-09-27 13:00
 
-# 2024-09-04 08:50
+# 2024-09-27 11:50
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cainiao.plugin
 # 2024-09-05 08:32:35
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
@@ -45,6 +45,9 @@ DOMAIN, youku-acs.m.taobao.com, REJECT
 # ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.index\.cn response-body-json-del data
 
 # ---------- RuCu6 ---------- #
+# 底部发现页 - 角标
+^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.home\.tabbar\.marketing\.get\.cn reject-dict
+
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.adkeyword\.get\.cn reject-dict
 ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.cncommunity\.my\.station\.query\.cn reject-dict
@@ -64,6 +67,9 @@ DOMAIN, youku-acs.m.taobao.com, REJECT
 [Script]
 # 移除阿里巴巴通用广告请求
 # http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 移除阿里巴巴通用广告请求@RuCu6
+
+# 我的页面
+http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.app\.mine\.main\.cn script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cainiao.js, requires-body = true, tag = 移除我的页面推广
 
 # 首页 - 好物推荐、商品推广、底部标签页、快递详情页、问卷调查、主页图标
 http-response ^https:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cainiao.js, requires-body = true, tag = 移除首页推广
