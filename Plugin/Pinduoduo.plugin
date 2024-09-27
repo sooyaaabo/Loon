@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-09-16 22:30
+#!date = 2024-09-27 21:00
 
 # 2024-08-14 20:53
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -24,8 +24,8 @@ AND, ((URL-REGEX, ^http:\/\/\[s*((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|((
 
 DOMAIN, titan.pinduoduo.com, REJECT
 # DOMAIN, apm-a.pinduoduo.com, REJECT
-DOMAIN, apm.pinduoduo.com, REJECT
-DOMAIN, m.pinduoduo.net, REJECT
+# DOMAIN, apm.pinduoduo.com, REJECT
+# DOMAIN, m.pinduoduo.net, REJECT
 DOMAIN, ta-a.pinduoduo.com, REJECT
 DOMAIN, ta.pinduoduo.com, REJECT
 DOMAIN, th-a.pinduoduo.com, REJECT
