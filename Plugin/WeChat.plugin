@@ -8,13 +8,13 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/WeChat.png
-#!date = 2024-09-25 13:00
+#!date = 2024-09-27 22:30
 
 # 2024-09-05 23:53:41
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
 # 2024-01-17 19:20:19
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin
-# 2024-09-25 12:45:41
+# 2024-09-27 22:18:09
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
 [Rule]
@@ -31,6 +31,8 @@ DOMAIN, wxsnsdythumb.wxs.qq.com, REJECT
 DOMAIN, ads-shopping.shouqianba.com, REJECT
 # 猫眼电影
 DOMAIN, ad.maoyan.com, REJECT
+# 捷停车 @怎么肥事
+DOMAIN, e.jparking.cn, REJECT
 
 [Rewrite]
 #---------- 微信公众号 ----------#
