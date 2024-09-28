@@ -1,5 +1,5 @@
 #!name = Emby Account
-#!desc = Emby自动观看保号，需手动观看一次，提示“获取成功✅”即可食用，获取完参数后在下方设置内关闭“Emby获取参数”，并在“Emby自动保号”中输入cron表达式。
+#!desc = Emby自动观看保号，需手动观看一次，提示“获取成功✅”即可食用，获取完参数后在下方设置内关闭“Emby获取参数”以避免不必要的MitM，并在“Emby自动保号”中输入cron表达式。
 #!openUrl = 
 #!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi]
 #!tag = 功能增强
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Emby-02.png
-#!date = 2024-09-21 22:15
+#!date = 2024-09-28 15:00
 
 # 2024-09-21 21:12
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Emby.js
