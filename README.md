@@ -271,7 +271,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td>38</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/YouTube.plugin">YouTube (Music)</a></td>
         <td>39</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ColorfulCloudsWeather.plugin">彩云天气</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ColorfulCloudsWeatherPro.plugin">彩云天气</a></td>
     </tr>
     <tr>
         <td>40</td>
@@ -331,6 +331,10 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td>15</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Script-Hub.plugin">Script Hub</a></td>
     </tr>
+    <tr>
+        <td>16</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/AppleWeather.plugin">Apple天气</a></td>
+    </tr>
 </table>
 <table>
     <tr>
@@ -374,6 +378,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CookieTask.plugin">CookieTask</a></td>
         <td>02</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Emby.plugin">Emby</a></td>
+        <td>03</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Follow.plugin">Follow</a></td>
     </tr>
 </table>
 
