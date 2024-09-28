@@ -1,21 +1,21 @@
 #!name = 拼多多
 #!desc = 过滤拼多多广告
 #!openUrl = https://apps.apple.com/app/id1044283059
-#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Pinduoduo.png
-#!date = 2024-09-27 21:00
+#!date = 2024-09-28 08:55
 
 # 2024-08-14 20:53
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024.08.10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
-#2024-08-14 21:05:32
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
+# 2024-09-27 19:50
+# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/pinduoduo.plugin
 
 [Rule]
 # 拦截HTTPDNS
@@ -31,76 +31,23 @@ DOMAIN, ta.pinduoduo.com, REJECT
 DOMAIN, th-a.pinduoduo.com, REJECT
 DOMAIN, th-b.pinduoduo.com, REJECT
 DOMAIN, th.pinduoduo.com, REJECT
-IP-CIDR, 81.69.104.17/32, REJECT
-IP-CIDR, 114.110.98.3/32, REJECT
-IP-CIDR, 114.110.96.1/32, REJECT
-IP-CIDR, 183.194.214.21/32, REJECT
-IP-CIDR, 49.235.102.190/32, REJECT
-IP-CIDR, 81.69.116.33/32, REJECT
-IP-CIDR, 114.110.96.0/24, REJECT
-IP-CIDR, 183.194.214.20/32, REJECT
-IP-CIDR, 117.185.242.0/24, REJECT
-IP-CIDR, 117.185.244.145/32, REJECT
-IP-CIDR, 101.35.204.35/32, REJECT
-IP-CIDR, 114.110.97.97/32, REJECT
-IP-CIDR, 81.69.208.12/32, REJECT
-IP-CIDR, 175.24.144.100/32, REJECT
-IP-CIDR, 114.110.99.5/32, REJECT
-IP-CIDR, 117.185.244.212/32, REJECT
-IP-CIDR, 114.110.97.18/24, REJECT
-IP-CIDR, 111.29.42.213/32, REJECT
-IP-CIDR, 153.3.240.56/32, REJECT
-IP-CIDR, 153.3.240.47/32, REJECT
-IP-CIDR, 81.69.212.29/32, REJECT
-IP-CIDR, 140.206.232.6/32, REJECT
-IP-CIDR, 153.3.240.57/32, REJECT
-IP-CIDR, 140.206.232.17/32, REJECT
-IP-CIDR, 81.69.105.56/32, REJECT
-IP-CIDR, 220.196.137.227/32, REJECT
-IP-CIDR, 220.196.137.58/32, REJECT
-IP-CIDR, 220.196.137.122/32, REJECT
-IP-CIDR, 101.226.46.41/32, REJECT
-IP-CIDR, 101.226.46.40/32, REJECT
-IP-CIDR, 81.69.105.47/32, REJECT
-IP-CIDR, 81.69.204.21/32, REJECT
-IP-CIDR, 101.226.46.38/32, REJECT
-IP-CIDR, 101.226.147.13/32, REJECT
-IP-CIDR, 101.226.152.31/32, REJECT
-IP-CIDR, 212.129.220.107/32, REJECT
-IP-CIDR, 212.129.220.114/32, REJECT
-IP-CIDR, 212.129.220.121/32, REJECT
-IP-CIDR, 212.129.220.100/32, REJECT
-IP-CIDR, 140.206.232.16/32, REJECT
-IP-CIDR, 121.5.84.85/32, REJECT
-IP-CIDR, 140.206.232.18/32, REJECT
-IP-CIDR, 117.185.244.25/32, REJECT
-IP-CIDR, 114.110.96.6/32, REJECT
-IP-CIDR, 117.185.242.150/32, REJECT
-IP-CIDR, 36.152.46.13/32, REJECT
-IP-CIDR, 36.152.46.15/32, REJECT
-IP-CIDR, 49.235.102.100/32, REJECT
-IP-CIDR, 49.235.102.235/32, REJECT
-IP-CIDR, 183.194.214.14/32, REJECT
-IP-CIDR, 36.152.46.3/32, REJECT
 
 [Rewrite]
-^https:\/\/api\.(pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash reject
-^https:\/\/api\.pinduoduo\.com\/search_hotquery reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/new_chat_group reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/personal reject-dict
+^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|my_order_group|new_chat_group|order_express_group|personal) reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/my_order_group reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/likes reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_express_group reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
+^https:\/\/api\.pinduoduo\.com\/search_hotquery\? reject-dict
+
+^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
+^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items
+^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
 
 [Script]
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 拼多多净化页面布局
-http-response ^https:\/\/api\.pinduoduo\.com\/search script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.js, requires-body = true, tag = 移除搜索结果推广
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/pdd.js, requires-body = true, tag = 精简首页
 
 [MitM]
 hostname = api.pinduoduo.com, api.yangkeduo.com
