@@ -181,7 +181,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td>04</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Amap.plugin">高德地图</a></td>
         <td>05</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduNetdisk.plugin">百度网盘</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/BaiduNetDisk.plugin">百度网盘</a></td>
         <td>06</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Bank.plugin">银行App</a></td>
     </tr>
@@ -191,7 +191,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td>08</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CMS_Adblock.plugin">CMS Adblocker</a></td>
         <td>09</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CaiNiao.plugin">菜鸟</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Cainiao.plugin">菜鸟</a></td>
     </tr>
     <tr>
         <td>10</td>
@@ -211,7 +211,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
     </tr>
     <tr>
         <td>16</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/JingDong.plugin">京东</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Jingdong.plugin">京东</a></td>
         <td>17</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/KuwoMusic.plugin">酷我音乐</a></td>
         <td>18</td>
@@ -245,7 +245,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td>28</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/TencentVideo.plugin">腾讯视频</a></td>
         <td>29</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ThunderDrive.plugin">迅雷</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ThunderCloudDisk.plugin">迅雷</a></td>
         <td>30</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/WeChat.plugin">微信</a></td>
     </tr>
