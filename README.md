@@ -153,6 +153,88 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 官方频道：[@efcloud](https://t.me/efcloud)<br>
 官方群组：暂无<br>
 
+### **CloudFisher（云渔）**
+- **机场介绍**<br>
+1. 1倍率中国大陆沪日专线、深港专线传输网络<br>
+2. 20+ 全球边缘网络<br>
+3. 多种流媒体服务访问解锁<br>
+4. 最高 600Mbps 速率可用<br>
+5. 适用于 SLA 保障<br>
+6. 第三方EMBY影视库合作<br>
+- **套餐介绍**<br>
+<table>
+    <tr>
+        <th>套餐</th>
+        <th>流量</th>
+        <th>月付</th>
+        <th>季付</th>
+        <th>半年付</th>
+        <th>年付</th>
+        <th>一次性</th>
+    </tr>
+    <tr>
+        <td align=center>Lite</td>
+        <td align=center>150G</td>
+        <td align=center>9</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Plus</td>
+        <td align=center>300G</td>
+        <td align=center>15</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Max</td>
+        <td align=center>500G</td>
+        <td align=center>25</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Air</td>
+        <td align=center>148G</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>60</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Plus</td>
+        <td align=center>300G</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>40</td>
+    </tr>
+    <tr>
+        <td align=center>Plus+</td>
+        <td align=center>1000G</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>80</td>
+    </tr>
+</table>
+
+- **购买方式**<br>
+点击[官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，国庆88折优惠码（截止10月3日 20:00）：`且听渔吟`
+
+- **联系方式**<br>
+官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
+官方群组：[@CloudFisherGroup](https://t.me/CloudFisherGroup)<br>
+
 
 ## 插件列表
 - 列表中所有插件可直接点击链接一键添加，自动跳转至Loon，无需复制链接手动添加。
