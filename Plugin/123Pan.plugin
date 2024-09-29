@@ -1,5 +1,5 @@
 #!name = 123云盘
-#!desc = 过滤123云盘广告
+#!desc = 过滤123云盘应用端及网页端广告，解除网页端流量1G下载限制（请单文件下载，不要文件夹或多文件下载）。
 #!openUrl = https://apps.apple.com/app/id1597682672
 #!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
@@ -8,10 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/123Pan.png
-#!date = 2024-09-16 22:30
+#!date = 2024-09-29 20:25
 
 # 2024-09-06 21:52:55
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/123NetWorkDisk_remove_ads.plugin
+# 2024-09-29 19:54
+# https://raw.githubusercontent.com/ddgksf2013/Modules/main/123pan.webEnhance.sgmodule
 
 [Rule]
 # 友盟
@@ -111,6 +113,10 @@ DOMAIN, v.adx.hubcloud.com.cn, REJECT
 ^https:\/\/t-dsp\.pinduoduo\.com\/dspcb\/i\/mrk_union reject
 ^https:\/\/images\.pinduoduo\.com\/mrk\/ reject
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ reject
+
+[Script]
+http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://github.com/ddgksf2013/Scripts/raw/master/123pan.js, requires-body = true, timeout = 60, tag = 123pan.Ads
+http-request ^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info script-path=https://github.com/ddgksf2013/Scripts/raw/master/123pan.js, timeout = 60, tag = 123pan.Enhance
 
 [MitM]
 hostname = www.123pan.com, ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com
