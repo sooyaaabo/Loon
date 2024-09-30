@@ -283,6 +283,8 @@ DOMAIN-SUFFIX, mooguu.top
 DOMAIN, emby-best.xeton.dev
 # 放映机
 DOMAIN-SUFFIX, 9191001.xyz
+# 非越
+DOMAIN-SUFFIX, sfcj.org
 # hka
 DOMAIN-SUFFIX, aliz.work
 # lily
