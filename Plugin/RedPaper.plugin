@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/RedBook.png
-#!date = 2024-09-26 11:00
+#!date = 2024-09-30 22:10
 
 # 2024-04-13 14:20:28
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/xiaohongshu.plugin
@@ -30,6 +30,9 @@ AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 
 # 评论区图片水印 (实验功能可能无效)
 ^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark reject-img
+
+# 评论区用户id置空 (实验功能可能无效)
+^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/comment\/list response-body-replace-regex red_id fmz200
 
 # 笔记创作推荐
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner reject-dict
