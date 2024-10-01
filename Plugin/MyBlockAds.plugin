@@ -1,5 +1,5 @@
 #!name = MyBlockAds
-#!desc = 去广告合集，以下app请使用单独配置文件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎
+#!desc = 去广告插件，以下app请使用单独插件：高德地图，哔哩哔哩，网易云音乐，微博，YouTube (Music)，知乎。
 #!openUrl = 
 #!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], app2smile[https://github.com/app2smile]
 #!tag = 去广告
@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/AdBlack.png
-#!date = 2024-09-29 11:30
+#!date = 2024-10-01 16:35
 
-# 2024-09-29 01:50
+# 2024-10-01 10:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/myblockads.plugin
 
 [Rule]
@@ -95,6 +95,7 @@ DOMAIN, gdfp.gifshow.com, REJECT
 DOMAIN, init.supersonicads.com, REJECT
 #DOMAIN, is.snssdk.com, REJECT
 DOMAIN, janapi.jd.com, REJECT
+DOMAIN, lf-ad-ies.bytecdn.cn, REJECT
 DOMAIN, mercury-gateway.ixiaochuan.cn, REJECT
 DOMAIN, open.e.kuaishou.com, REJECT
 DOMAIN, open.kuaishou.com, REJECT
