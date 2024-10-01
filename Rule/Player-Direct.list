@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-09-27 13:00
+# 2024-10-01 10:40
 
 # CMSPlayer
 # 低端影视
@@ -307,6 +307,7 @@ DOMAIN-SUFFIX, yomo.lol
 DOMAIN-SUFFIX, embymv.link
 # awa
 DOMAIN-SUFFIX, 811861.xyz
+DOMAIN-SUFFIX, awatv.de
 
 # Jellyfin
 # 探花TV
