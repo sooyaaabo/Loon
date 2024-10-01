@@ -81,7 +81,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://ww1.12345.al/#/register?code=ZxedfVfQ)购买，输入八折优惠码 `misakaf` 
+点击[官网](https://ww1.12345.al/#/register?code=ZxedfVfQ)购买，输入8折优惠码 `misakaf` 
 
 - **联系方式**<br>
 官方频道：[@ACA_Channel](https://t.me/ACA_Channel)<br>
@@ -147,7 +147,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买（关闭代理），新用户八折优惠码：`new`
+点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买（关闭代理），新用户八折优惠码：`new`，国庆8折优惠码（截止10月10日）：`国庆七天乐`
 
 - **联系方式**<br>
 官方频道：[@efcloud](https://t.me/efcloud)<br>
