@@ -12,8 +12,9 @@
 
 # 2024-08-28 08:25:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/weibo.plugin
+# 2024-10-02 11:15:56
+#https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin
 
-[Rule]
 [Rule]
 # 请求放行
 DOMAIN-SUFFIX, uve.weibo.com, DIRECT
