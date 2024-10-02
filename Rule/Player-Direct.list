@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-01 10:40
+# 2024-10-02 11:20
 
 # CMSPlayer
 # 低端影视
@@ -285,6 +285,8 @@ DOMAIN, emby-best.xeton.dev
 DOMAIN-SUFFIX, 9191001.xyz
 # 非越
 DOMAIN-SUFFIX, sfcj.org
+# Temby
+DOMAIN-SUFFIX,285286.xyz
 # hka
 DOMAIN-SUFFIX, aliz.work
 # lily
