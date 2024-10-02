@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Zhihu.png
-#!date = 2024-09-26 22:00
+#!date = 2024-10-02 15:15
 
-# 2024-09-26 01:50
+# 2024-10-02 13:00
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/zhihu.plugin
 # 2024-09-26 21:31:15
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Zhihu_remove_ads.plugin
@@ -83,7 +83,7 @@ http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/re
 
 # 其他 - 服务器推送配置
 http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
-http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/config\/all\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
+http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/zhihu.js, requires-body = true, tag = 拦截服务器推送配置
 
 [MitM]
 hostname = *.zhihu.com
