@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/123Pan.png
-#!date = 2024-09-29 21:50
+#!date = 2024-10-03 23:40
 
 # 2024-09-06 21:52:55
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/123NetWorkDisk_remove_ads.plugin
@@ -54,6 +54,7 @@ AND, ((DOMAIN-KEYWORD, api), (DOMAIN-KEYWORD, pangolin), (DOMAIN-SUFFIX, sgsnssd
 AND, ((DOMAIN-KEYWORD, ads), (DOMAIN-KEYWORD, -normal-lq), (DOMAIN-SUFFIX, zijieapi.com)), REJECT
 URL-REGEX, ^http:\/\/p\d+-be-pack-sign\.pglstatp-toutiao\.com\/(ad-app-package|web\.business\.image)\/, REJECT
 DOMAIN, mon.zijieapi.com, REJECT
+DOMAIN, lf-ad-ies.bytecdn.cn, REJECT
 DOMAIN, i.snssdk.com, REJECT
 DOMAIN, is.snssdk.com, REJECT
 DOMAIN, bds.snssdk.com, REJECT
@@ -105,8 +106,9 @@ DOMAIN, v.adx.hubcloud.com.cn, REJECT
 
 # 字节跳动广告
 ^https:\/\/ether-pack\.pangolin-sdk-toutiao\.com\/union\/endcard\/ reject
-^https:\/\/api-access\.pangolin-sdk-toutiao\d?\.com\/api\/ad\/ reject
+^https:\/\/api-access\.pangolin-sdk-toutiao(\d|-[a-z])?\.com\/api\/ad\/ reject
 ^https:\/\/sf\d+-fe-tos\.pglstatp-toutiao\.com\/obj\/ad-pattern\/ reject
+^https:\/\/lf-cdn-tos\.bytescm\.com\/obj\/static\/ad\/ reject
 
 # 拼多多广告平台
 ^https:\/\/video-dsp\.pddpic\.com\/market-dsp-video\/ reject
@@ -119,4 +121,4 @@ http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-pat
 http-request ^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info script-path=https://github.com/ddgksf2013/Scripts/raw/master/123pan.js, timeout = 60, tag = 123pan.Enhance
 
 [MitM]
-hostname = www.123pan.com, ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api-access.pangolin-sdk-toutiao?.com, sf*-fe-tos.pglstatp-toutiao.com
+hostname = www.123pan.com, ether-pack.pangolin-sdk-toutiao.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com, api-access.pangolin-sdk-toutiao*.com, sf*-fe-tos.pglstatp-toutiao.com
