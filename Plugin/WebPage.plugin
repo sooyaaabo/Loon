@@ -1,32 +1,29 @@
 #!name = WebPage
 #!desc = 过滤部分网页广告
 #!openUrl = 
-#!author = RuCu6[https://github.com/RuCu6], limbopro[https://github.com/limbopro], ddgksf2013[https://github.com/ddgksf2013], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!author = RuCu6[https://github.com/RuCu6], limbopro[https://github.com/limbopro], ddgksf2013[https://github.com/ddgksf2013]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Alook.png
-#!date = 2024-09-22 15:25
+#!date = 2024-10-04 09:20
 
-# 2024-09-22 12:20
+# 2024-10-04 01:25
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
-# 2024-06-30 11:40
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/WebPage.conf
 # 2024-02-19
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/WebAdBlock.conf
 
 [Rewrite]
 # -----------Rucu6----------- #
+# 桌面端请使用 https://google.com/ncr
 # 谷歌服务重定向 //*.google.cn
 ^https?:\/\/www\.google\.cn 302 https://www.google.com
 ^https?:\/\/translate\.google\.cn 302 https://translate.google.com
-# PornHub //*.pornhub.com
-^https:\/\/(cn|www)\.pornhub\.com\/_xa\/ads(_batch)?\? reject
-# 禁漫天堂 //18comic.org, 18comic.vip
-^https:\/\/18comic\.(org|vip)\/templates\/frontend\/airav\/js\/jquery.avs.*?\.js.* reject
-# Avple 弹窗跳转
+# PornHub (https://cn.pornhub.com/) //*.pornhub.com
+^https:\/\/(?:cn|www)\.pornhub\.com\/_xa\/ads(_batch)?\? reject
+# Avple 跳转弹窗 //asserts.avple.tv
 ^https:\/\/asserts\.avple\.tv\/file\/avple-images\/ad\.js reject
 
 # -----------ddgksf2013----------- #
@@ -34,26 +31,16 @@
 ^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads reject-dict
 
 [Script]
-# -----------Rucu6----------- #
-# 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
-# 百度防跳转
-http-response ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduNoRedirect.js, requires-body = true, tag = 百度防跳转@RuCu6
-# 百度首页
-http-response ^https:\/\/(www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = 百度首页@RuCu6
-# 百度知道
-http-response ^https:\/\/zhidao\.baidu\.com\/(question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/baidu-zhidao.js, requires-body = true, tag = 百度知道@RuCu6
-# PornHub (https://cn.pornhub.com/)
-http-response ^https:\/\/(\w{0,3}(\.){0,1}(pornhub)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = PornHub@RuCu6
-# 禁漫天堂 (https://18comic.org/)
-http-response ^https:\/\/(\w{0,3}(\.){0,1}(18comic)(\.)\w{0,3})(?!.*?(\/(cdn-cgi|onclick)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = 禁漫天堂@RuCu6
-# JavBus (https://www.javbus.com/)
-http-response ^https:\/\/(\w{0,3}(\.){0,1}(javbus)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/javbusQX.js, requires-body = true, tag = JavBus@RuCu6
-# JavDB (https://javdb.com/)
-http-response ^https:\/\/javdb\.com\/ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/webpage/javdb.js,requires-body = true, tag = JavDB@RuCu6
-# Avple (https://avple.tv/)
-http-response ^https:\/\/(\w{0,3}(\.){0,1}(avple)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/avpleQX.js, requires-body = true, tag = Avple@RuCu6
-# Jable (https://jable.tv/)
-http-response ^https:\/\/(\w{0,3}(\.){0,1}(jable)(\.)\w{0,3})(?!.*?(\/(cdn-cgi)))(?!.*?(\.(css|js|jpeg|jpg|png|php|gif|ico|mp3|mp4|svg|tff|PNG|woff|woff2|m3u8))).* script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/limbo/Adblock4limboQX.js, requires-body = true, tag = Jable@RuCu6
+# -----------RuCu6----------- #
+## 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
+## 百度防跳转
+http-request ^https:\/\/boxer\.baidu\.com\/scheme\?scheme script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/baidu/baiduNoRedirect.js, tag = 百度防跳转@RuCu6
+## 百度首页
+http-response ^https:\/\/(?:www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/baidu-index.js, requires-body = true, tag = 百度首页@RuCu6
+## 百度知道
+http-response ^https:\/\/zhidao\.baidu\.com\/(?:question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/baidu-zhidao.js, requires-body = true, tag = 百度知道@RuCu6
+# JavDB //javdb.com
+http-response ^https:\/\/javdb\.com\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/javdb.js, requires-body = true, tag = JavDB@RuCu6
 
 # -----------ddgksf2013----------- #
 # 在线之家 - https://www.zxzjhd.com/
@@ -94,4 +81,4 @@ http-response ^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$) script-path = https://
 http-response ^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/libvio.js, requires-body = true, tag = libvio@ddgksf2013
 
 [MitM]
-hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, *.pornhub.com, 18comic.org, 18comic.vip, www.javbus.com, javdb.com, *.avple.tv, jable.tv, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*, *cupfox*, *cokemv*, *lezhutv*, *bimi*, *5y*, *gimy*, *tkznp*, *czzy*, *ikandy*, *libvio*
+hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimy*,*tkznp*,*czzy*,*ikandy*,*libvio*
