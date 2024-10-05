@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MyBlockAds.png
-#!date = 2024-10-01 16:35
+#!date = 2024-10-05 11:30
 
-# 2024-10-01 10:20
+# 2024-10-05 11:05
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/myblockads.plugin
 
 [Rule]
@@ -120,6 +120,7 @@ DOMAIN-SUFFIX, unityads.unity3d.com, REJECT
 DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 DOMAIN-SUFFIX, zijieapi.com, REJECT
 DOMAIN-KEYWORD, -ad-sign.byteimg.com, REJECT
+DOMAIN-KEYWORD, -normal-lq.zijieapi.com, DIRECT
 DOMAIN-KEYWORD, ads.g.doubleclick, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
 DOMAIN-KEYWORD, pangolin-sdk-toutiao, REJECT
@@ -130,6 +131,8 @@ DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 # ======= H ======= #
 # 海尔智家
 DOMAIN-SUFFIX, ehaier.com, REJECT
+# 盒马
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Hema4iPhone*)), REJECT
 # httpdns
 DOMAIN, hdns.ksyun.com, REJECT
 DOMAIN-KEYWORD, httpdns., REJECT
@@ -238,7 +241,7 @@ DOMAIN, sdkconfig.ad.xiaomi.com, REJECT
 # ======= Y ======= #
 # 移花宫
 DOMAIN, tong.8888888888.bid, REJECT
-DOMAIN-KEYWORD, 4240585f1fb7266, REJECT
+AND, ((OR, ((DOMAIN-KEYWORD, kc.), (DOMAIN-KEYWORD, kcc.), (DOMAIN-KEYWORD, kg.))), (DEST-PORT, 8008)), REJECT
 # 云闪付 开屏广告
 DOMAIN, ads.95516.com, REJECT
 DOMAIN, switch.cup.com.cn, REJECT
@@ -272,6 +275,9 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 # 百度云 //pan.baidu.com
 ^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) reject-dict
 
+# 昌原云充 五代十路 //www.washpayer.com
+^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) reject-dict
+
 # 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
 ^https:\/\/(?:img|qnmob)3\.doubanio\.com\/view\/dale-online\/dale_ad\/public\/\w+ reject-dict
@@ -280,6 +286,9 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 
 # 和风天气 //hfapp-service.qweather.net
 ^https:\/\/hfapp-service\.qweather\.net\/v2\.0\/app\/ad\/list\? reject-dict
+
+# 盒马
+^https:\/\/acs-m\.freshippo\.com\/gw\/mtop\.wdk\.render\.querysinglepage\/ reject-dict
 
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
@@ -339,6 +348,10 @@ http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path
 # 草榴社区 //2023.redircdn.com
 http-response ^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 草榴社区
 
+# 昌原云充 五代十路 //www.washpayer.com
+http-response ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
+http-response ^https:\/\/www\.washpayer\.com\/(?:common\/getReceipt|user\/message\/equipmentPara) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
+
 # 京东 //api.m.jd.com
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/jingdong.js, requires-body = true, tag = 京东
 
@@ -362,5 +375,5 @@ http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ script-path 
 http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js, requires-body = true, tag = 中国移动云盘
 http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js, requires-body = true, tag = 中国移动云盘
 
-[MITM]
-hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
+[MitM]
+hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, www.washpayer.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
