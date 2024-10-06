@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Alook.png
-#!date = 2024-10-04 09:20
+#!date = 2024-10-06 23:20
 
 # 2024-10-04 01:25
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
@@ -40,7 +40,7 @@ http-response ^https:\/\/(?:www|m)\.baidu\.com(\/|\/\?(tn=&)?from=\d+\w)?$ scrip
 ## 百度知道
 http-response ^https:\/\/zhidao\.baidu\.com\/(?:question|index|\?fr|\?word) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/baidu-zhidao.js, requires-body = true, tag = 百度知道@RuCu6
 # JavDB //javdb.com
-http-response ^https:\/\/javdb\.com\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/javdb.js, requires-body = true, tag = JavDB@RuCu6
+http-response ^https:\/\/javdb\.com\/(?!over18\?) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/webpage/javdb.js, requires-body = true, tag = JavDB@RuCu6
 
 # -----------ddgksf2013----------- #
 # 在线之家 - https://www.zxzjhd.com/
