@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdsBlock.png
-#!date = 2024-09-30 23:20
+#!date = 2024-10-06 23:30
 
 # 2024-09-28 21:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2024-09-30 22:00:00
+# 2024-10-06 23:00:00
 https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Loon/plugin/blockAds.plugin
 
 [Rule]
@@ -2016,6 +2016,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit\/ reject
 
 # 闲鱼 - gw.alicdn.com, heic.alicdn.com, asp.cntv.myalicdn.com, acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
+# ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch reject
 ^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ reject
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ reject-dict
@@ -2028,7 +2029,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 
 # 小蚕霸王餐 - zlsdk.1rtb.net, web2.realtech-inc.com, sdk.1rtb.net, gw.xiaocantech.com
 ^https?:\/\/zlsdk\.1rtb\.net\/sdk\/req_ad reject-dict
-^https:\/\/gw\.xiaocantech\.com\/rpc reject-dict
+# ^https:\/\/gw\.xiaocantech\.com\/rpc reject-dict
 ^https:\/\/web2\.realtech-inc\.com\/oss\/xc-app-assets\/configs\/common\/theme\.json reject-dict
 ^https:\/\/sdk\.1rtb\.net\/sdk\/req_ad\? reject-dict
 ^https:\/\/gw\.xiaocantech\.com\/g\/pa reject-dict
