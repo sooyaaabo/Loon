@@ -36,6 +36,10 @@
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
 
+[Argument]
+NeteaseMusicMembership-qiuxiuya = switch, true, false, tag = 网易云音乐会员@qiuxiuya, desc = 是否启用qiuxiuya网易云音乐会员
+NeteaseMusicMembership-RuCu6 = switch, true, false, tag = 网易云音乐会员@RuCu6, desc = 是否启用RuCu6网易云音乐会员
+
 [Rule]
 DOMAIN, httpdns.n.netease.com, REJECT
 DOMAIN, iadmat.nosdn.127.net, REJECT
@@ -77,44 +81,44 @@ DOMAIN, ipv6.music.163.com, REJECT
 [Script]
 #----------  qiuxiuya ----------#
 # 解锁黑胶音乐
-http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员@qiuxiuya
+http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 黑胶会员@qiuxiuya
 
 #----------  RuCu6 ----------#
 # 会员解锁
 # 播放会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 播放器会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 播放器会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 播放器会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员歌曲
 # 播放器会员皮肤
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 播放器会员皮肤
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员皮肤
 # 搜索结果会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 搜索结果会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 搜索结果会员歌曲
 # 侧边栏会员等级
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 侧边栏会员等级
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 侧边栏会员等级
 # 歌单列表会员认证
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 首页歌单会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 首页歌单会员歌曲
 # 动态信息流
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 动态信息流
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 动态信息流
 # 会员认证
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 会员认证
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 会员认证
 
 #----------  Keywos ----------#
 # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区、乐迷、星评等级、关注等图标去除
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_mian
 # 会员伪装vip
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_vip
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(music-vip-membership\/client\/vip\/info|vipauth\/app\/auth\/recycle|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_vip
 # 底部tab
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_tab
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_tab
 # 推荐 | home | 主页
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_home
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_home
 # 发现页
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_fx
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_fx
 # 播放音效
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_effect
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_effect
 # 我的页面
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mybarad
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_mybarad
 # 显示未关注你
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_foll
+http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_foll
 
 [MitM]
 hostname = interface*.music.163.com, ipv4.music.163.com
