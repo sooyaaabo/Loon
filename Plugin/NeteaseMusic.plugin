@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NeteaseMusic.png
-#!input = music163_Cookie
-#!input = music163_MConfigInfo
-#!input = music163_UserAgent
+#!input = Music163_Cookie
+#!input = Music163_MConfigInfo
+#!input = Music163_UserAgent
 #!select = 以下为底部Tab栏板块, --
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
