@@ -11,7 +11,6 @@
 #!input = music163_Cookie
 #!input = music163_MConfigInfo
 #!input = music163_UserAgent
-#!select = 开启共享会员, 是, 否
 #!select = 以下为底部Tab栏板块, --
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
@@ -86,21 +85,21 @@ http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/sear
 #----------  RuCu6 ----------#
 # 会员解锁
 # 播放会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 播放器会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 播放器会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 播放器会员歌曲
 # 播放器会员皮肤
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 播放器会员皮肤
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 播放器会员皮肤
 # 搜索结果会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 搜索结果会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 搜索结果会员歌曲
 # 侧边栏会员等级
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 侧边栏会员等级
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 侧边栏会员等级
 # 歌单列表会员认证
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 首页歌单会员歌曲
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 首页歌单会员歌曲
 # 动态信息流
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 动态信息流
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 动态信息流
 # 会员认证
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-qiuxiuya}, tag = 会员认证
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NeteaseMusicMembership.js, requires-body = false, enable = {NeteaseMusicMembership-RuCu6}, tag = 会员认证
 
 #----------  Keywos ----------#
 # mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区、乐迷、星评等级、关注等图标去除
