@@ -12,12 +12,10 @@
 #!input = RuCu6_Music163_MConfigInfo
 #!input = RuCu6_Music163_UserAgent
 #!select = 开启共享会员, 是, 否
-#!select = 以下为底部Tab栏板块, ---
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否
 #!select = 隐藏动态标签, 是, 否
-#!select = 以下为首页卡片板块, ---
 #!select = 隐藏首页问候语, 是, 否
 #!select = 隐藏首页排行榜, 是, 否
 #!select = 隐藏首页每日推荐, 是, 否
@@ -27,7 +25,7 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-10-07 12:45
+#!date = 2024-10-07 16:45
 
 # 2024-10-07 02:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
@@ -46,28 +44,20 @@ DOMAIN, ipv4.music.163.com, REJECT
 DOMAIN, ipv6.music.163.com, REJECT
 
 [Rewrite]
-#----------  Keywos ----------#
 ^https?:\/\/httpdns.n\.netease\.com reject
 ^https?:\/\/httpdns\.music\.163\.com reject
 ^https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad reject-dict
-# 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
-^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(side-bar\/mini-program\/music-service\/account|delivery\/(batch-deliver|deliver)|moment\/tab\/info\/get|yunbei\/account\/entrance\/get) reject-dict
-# 播放页歌名下方∶乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示?
-^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(resource\/comments?\/musiciansaid|community\/friends\/fans-group\/artist\/group\/get|user\/sub\/artist|music\/songshare\/text\/recommend\/get|mine\/applet\/redpoint|resniche\/position\/play\/new\/get) reject-dict
-# 搜索页热搜卡片｜猜你喜欢｜我的应用下方提醒
-^https?:\/\/interface\d?\.music\.163.com\/w?e?api\/(search\/(chart|default|rcmd\/keyword|specialkeyword)|resource-exposure\/|activity\/bonus\/playpage\/time\/query) reject-dict
-^https?:\/\/interface\d?\.music\.163.com\/eapi\/(mlivestream\/entrance\/playpage|link\/(position\/show\/strategy|scene\/show)|ios\/version|v\d\/content\/exposure\/comment\/banner) reject-dict
-# mian、主页
-^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/e?api\/(?:batch|v\d\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/resource\/show|user\/follow\/users\/mixed\/get) header-del x-aeapi
 
-#----------  Rucu6 ----------#
 # 开屏广告
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ reject-dict
+
 # 今日运势 商城 Beat专区 音乐收藏家 | type:ACTIVITY | 低至5.2折
 ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:delivery\/(batch-)?deliver|moment\/tab\/info\/|side-bar\/mini-program\/music-service\/account|yunbei\/account\/entrance\/) reject-dict
+
 # 播放页 歌名下方 乐迷团｜关注｜播放页提示｜音乐应用红点｜播放提示
 ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:community\/friends\/fans-group\/artist\/group\/|mine\/applet\/redpoint|music\/songshare\/text\/recommend\/|resniche\/position\/play\/new\/|resource\/comments?\/musiciansaid\/|user\/sub\/artist) reject-dict
 ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:ios\/version|mlivestream\/entrance\/playpage\/|link\/position\/show\/strategy|link\/scene\/show\/resource|v1\/content\/exposure\/comment\/banner\/) reject-dict
+
 # 搜索页 搜索词 热搜卡片 猜你喜欢 我的应用下方提醒
 ^https?:\/\/interface\d?\.music\.163\.com\/w?eapi\/(?:activity\/bonus\/playpage\/time\/query|resource-exposure\/|search\/(?:chart\/|default\/|rcmd\/keyword\/|specialkeyword\/)) reject-dict
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(?:batch|v2\/resource\/comment\/floor\/get|homepage\/block\/page|link\/page\/rcmd\/resource\/show|user\/follow\/users\/mixed\/get) header-del x-aeapi
@@ -83,32 +73,43 @@ DOMAIN, ipv6.music.163.com, REJECT
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+
 # 播放器会员皮肤
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+
 # 搜索结果会员歌曲
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+
 # 侧边栏会员等级
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+
 # 歌单列表会员认证
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+
 # 会员认证
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 #----------  Keywos ----------#
-# mian | 热推、有话想说、分享一下、歌曲下的祝福等小提示去除 ｜ 评论区、乐迷、星评等级、关注等图标去除
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(batch|v\d\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_mian
+# 热推,有话想说,分享一下,歌曲下的祝福等小提示,评论区,乐迷,星评等级,关注等图标
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:batch|v2\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mian
+
+# 推荐,home,主页
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_home
+
 # 底部tab
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_tab
-# 推荐 | home | 主页
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/(homepage\/block\/page|link\/page\/rcmd\/(resource\/show|block\/resource\/multi\/refresh)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_home
-# 发现页
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_fx
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_tab
+
+# 发现
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_fx
+
 # 播放音效
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/song\/play\/more\/list\/v\d script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_effect
+# http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/play\/more\/list\/ script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_effect
+
 # 我的页面
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_mybarad
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/position\/show\/resource script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_mybarad
+
 # 显示未关注你
-http-response ^https?:\/\/(ipv4|interface\d?)\.music\.163\.com\/e?api\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, tag = ne_foll
+http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = ne_foll
 
 [MitM]
 hostname = interface*.music.163.com, ipv4.music.163.com
