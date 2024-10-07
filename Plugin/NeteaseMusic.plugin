@@ -8,6 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NeteaseMusic.png
+#!select = 开启共享会员, 是, 否
+#!input = music163_Cookie
+#!input = music163_MConfigInfo
+#!input = music163_UserAgent
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否
@@ -22,9 +26,9 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-09-26 11:00
+#!date = 2024-10-07 09:30
 
-# 2024-09-16 02:35
+# 2024-10-07 02:50
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
 # 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
@@ -86,8 +90,10 @@ http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/sear
 # http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 搜索结果会员歌曲
 # 侧边栏会员等级
 # http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 侧边栏会员等级
-# 首页歌单会员歌曲
-# http-request ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(homepage\/|v6\/)?playlist\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 首页歌单会员歌曲
+# 歌单列表会员认证
+# http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 首页歌单会员歌曲
+# 动态信息流
+# http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 动态信息流
 # 会员认证
 # http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = 会员认证
 
