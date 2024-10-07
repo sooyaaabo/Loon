@@ -8,10 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NeteaseMusic.png
-#!select = 开启共享会员, 是, 否
 #!input = music163_Cookie
 #!input = music163_MConfigInfo
 #!input = music163_UserAgent
+#!select = 开启共享会员, 是, 否
 #!select = 以下为底部Tab栏板块, --
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
@@ -27,7 +27,7 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-10-07 12:20
+#!date = 2024-10-07 12:45
 
 # 2024-10-07 02:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
@@ -35,9 +35,6 @@
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
-
-[Argument]
-ScriptEnable-wyy = switch, true, false, tag = qiuxiuya网易云音乐会员, desc = 是否启用qiuxiuya网易云音乐会员
 
 [Rule]
 DOMAIN, httpdns.n.netease.com, REJECT
@@ -80,7 +77,7 @@ DOMAIN, ipv6.music.163.com, REJECT
 [Script]
 #----------  qiuxiuya ----------#
 # 解锁黑胶音乐
-http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, enable = {ScriptEnable-wyy}, tag = 黑胶会员
+http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员@qiuxiuya
 
 #----------  RuCu6 ----------#
 # 会员解锁
