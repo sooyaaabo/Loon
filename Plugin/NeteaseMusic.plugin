@@ -8,10 +8,6 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NeteaseMusic.png
-#!input = RuCu6_Music163_Cookie
-#!input = RuCu6_Music163_MConfigInfo
-#!input = RuCu6_Music163_UserAgent
-#!select = 开启共享会员, 是, 否
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否
@@ -25,7 +21,7 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-10-07 16:45
+#!date = 2024-10-07 17:15
 
 # 2024-10-07 02:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
@@ -65,29 +61,29 @@ DOMAIN, ipv6.music.163.com, REJECT
 [Script]
 #----------  qiuxiuya ----------#
 # 解锁黑胶音乐
-http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员@qiuxiuya
+# http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员@qiuxiuya
 
 #----------  RuCu6 ----------#
 # 会员解锁
 # 播放会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/song\/(?:chorus|enhance\/|play\/|type\/detail\/get) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 # 播放器会员皮肤
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/playermode\/ script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 # 搜索结果会员歌曲
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/search\/(?:complex\/page|complex\/rec\/song\/get|song\/list\/page) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 # 侧边栏会员等级
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipnewcenter\/app\/resource\/newaccountpage script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 # 歌单列表会员认证
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/w?e?api\/(homepage\/|v6\/)?playlist\/(?!(?:delete|subscribe|unsubscribe)) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 # 会员认证
-http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/header.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
+http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, tag = ne_vip
 
 #----------  Keywos ----------#
 # 热推,有话想说,分享一下,歌曲下的祝福等小提示,评论区,乐迷,星评等级,关注等图标
