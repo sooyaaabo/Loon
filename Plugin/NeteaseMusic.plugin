@@ -61,7 +61,7 @@ DOMAIN, ipv6.music.163.com, REJECT
 [Script]
 #----------  qiuxiuya ----------#
 # 解锁黑胶音乐
-# http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path= https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout=60, tag = 黑胶会员@qiuxiuya
+http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout = 60, tag = 黑胶会员@qiuxiuya
 
 #----------  RuCu6 ----------#
 # 会员解锁
