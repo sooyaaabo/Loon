@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/123Pan.png
-#!date = 2024-10-04 09:20
+#!date = 2024-10-08 17:30
 
 # 2024-09-06 21:52:55
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/123NetWorkDisk_remove_ads.plugin
@@ -112,8 +112,8 @@ DOMAIN, v.adx.hubcloud.com.cn, REJECT
 ^https:\/\/images\.pinduoduo\.com\/marketing_api\/ reject
 
 [Script]
-http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://github.com/ddgksf2013/Scripts/raw/master/123pan.js, requires-body = true, timeout = 60, tag = 123pan.Ads
-http-request ^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info script-path=https://github.com/ddgksf2013/Scripts/raw/master/123pan.js, timeout = 60, tag = 123pan.Enhance
+http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, timeout = 60, tag = 123pan.Ads
+http-request ^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, timeout = 60, tag = 123pan.Enhance
 
 [MitM]
 hostname = www.123pan.com, video-dsp.pddpic.com, t-dsp.pinduoduo.com, images.pinduoduo.com
