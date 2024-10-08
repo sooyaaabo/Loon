@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdsBlock.png
-#!date = 2024-10-06 23:30
+#!date = 2024-10-08 11:10
 
 # 2024-09-28 21:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2024-10-06 23:00:00
+# 2024-10-08 10:50:00
 https://raw.githubusercontent.com/fmz200/wool_scripts/refs/heads/main/Loon/plugin/blockAds.plugin
 
 [Rule]
@@ -100,6 +100,10 @@ DOMAIN-KEYWORD, log-api.pangolin-sdk-toutiao, REJECT
 DOMAIN-KEYWORD, -ad.byteoversea.com, REJECT
 DOMAIN-KEYWORD, video-cn.snssdk.com, REJECT
 DOMAIN-KEYWORD, asiad.byteactivity, REJECT
+
+# >>>>>>>>>>>>>>> ✅ Q ✅ <<<<<<<<<<<<<<
+# 天猫精灵
+AND, ((URL-REGEX, ^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig), (USER-AGENT, %E6%B7%98%E5%AE%9D/40491997)), REJECT
 
 # >>>>>>>>>>>>>>> ✅ W ✅ <<<<<<<<<<<<<<
 # 网易大神
@@ -1615,7 +1619,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 
 # 天猫精灵 - ossgw.alicdn.com, zconfig.alibabausercontent.com
 ^https?:\/\/ossgw.alicdn.com\/creatives-assets\/image\/ reject-200
-^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
+# ^https?:\/\/zconfig\.alibabausercontent\.com\/zconfig reject
 
 # 天猫养车 - api.ncarzone.com
 ^https?:\/\/api\.ncarzone\.com\/superapi\/canary\/appHomeFacade\/getNewUserPlateActivity reject-200
