@@ -436,6 +436,10 @@
         },
         {
             "name": "SteveWatch",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/SteveWatch.png"
+        },
+        {
+            "name": "SteveWatch",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/SteveWatch-01.png"
         },
         {
@@ -485,6 +489,10 @@
         {
             "name": "Conflux",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Conflux.png"
+        },
+	{
+            "name": "MediaStorm",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MediaStorm.png"
         },
 	{
             "name": "Emby",
@@ -612,7 +620,11 @@
         },
         {
             "name": "Instagram",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Instagram.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Instagram-01.png"
+        },
+        {
+            "name": "Instagram",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Instagram-02.png"
         },
         {
             "name": "X",
