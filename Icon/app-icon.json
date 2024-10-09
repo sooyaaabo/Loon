@@ -139,6 +139,26 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/CloudflareWorkers.png"
         },
         {
+            "name": "Select",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Select.png"
+        },
+        {
+            "name": "UrlTest",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/UrlTest.png"
+        },
+        {
+            "name": "Fallback",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Fallback.png"
+        },
+        {
+            "name": "LoadBalance",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/LoadBalance.png"
+        },
+        {
+            "name": "Relay Chain",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Relay.png"
+        },
+        {
             "name": "Advertising",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Advertising.png"
         },
