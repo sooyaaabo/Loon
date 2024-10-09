@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MyBlockAds.png
-#!date = 2024-10-07 00:15
+#!date = 2024-10-09 11:50
 
-# 2024-10-06 23:20
+# 2024-10-09 11:30
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/myblockads.plugin
 
 [Rule]
@@ -20,7 +20,6 @@ DOMAIN, ad.12306.cn, DIRECT
 
 # ======= A ======= #
 # 阿里巴巴
-DOMAIN, amdc.m.taobao.com, DIRECT
 DOMAIN-SUFFIX, ut.taobao.com, REJECT
 DOMAIN, dns.alidns.com, REJECT
 DOMAIN, ems.youku.com, REJECT
