@@ -21,7 +21,7 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-10-08 09:20
+#!date = 2024-10-10 09:10
 
 # 2024-10-08 02:35
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
@@ -43,10 +43,6 @@ DOMAIN, ipv4.music.163.com, REJECT
 DOMAIN, ipv6.music.163.com, REJECT
 
 [Rewrite]
-^https?:\/\/httpdns.n\.netease\.com reject
-^https?:\/\/httpdns\.music\.163\.com reject
-^https?:\/\/(ipv4|interface\d?)\.music\.163.com\/e?api\/ad reject-dict
-
 # 开屏广告
 ^https?:\/\/interface\d?\.music\.163\.com\/e?api\/(ocpc\/)?ad\/ reject-dict
 
@@ -94,10 +90,10 @@ http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail s
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/vipauth\/app\/auth\/(soundquality\/)?query script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 会员认证
 
 #----------  广告过滤 ----------#
-# 热推,有话想说,分享一下,歌曲下的祝福等小提示,评论区,乐迷,星评等级,关注等图标
+# 热推、有话想说、分享一下、歌曲下的祝福等小提示、评论区、乐迷、星评等级、关注等图标
 http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:batch|v2\/resource\/comment\/floor\/get) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 评论区
 
-# 推荐,home,主页
+# 推荐、home、主页
 http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 主页
 
 # 底部Tab
@@ -116,4 +112,4 @@ http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/link\/position\/s
 http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/user\/follow\/users\/mixed\/get script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 显示未关注你的人
 
 [MitM]
-hostname = interface*.music.163.com, ipv4.music.163.com
+hostname = interface*.music.163.com
