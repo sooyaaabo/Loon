@@ -190,10 +190,15 @@ DOMAIN-SUFFIX, novipnoad.net
 DOMAIN-SUFFIX, bilfun.cc
 # 星芽短剧
 DOMAIN, app.whjzjx.cn
+# 南风短剧
+DOMAIN-SUFFIX, www.nanf.cc
 # 小苹果
 DOMAIN, item.xpgtv.xyz
 # 瓜子影视
 DOMAIN, api.zaqohu.com
+# HDmoli
+DOMAIN-SUFFIX, damoli.pro
+DOMAIN-SUFFIX, hdmoli.pro
 # 厂长资源
 DOMAIN-SUFFIX, czzy.site
 DOMAIN-SUFFIX, czys.top
@@ -323,6 +328,8 @@ IP-CIDR, 152.53.67.239/32, no-resolve
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
 #杂七杂八的播放
+DOMAIN-SUFFIX, damoli.pro
+DOMAIN-SUFFIX, hdmoli.pro
 DOMAIN-SUFFIX, 4k-av.com
 DOMAIN, ppvod01.blbtgg.com
 DOMAIN-SUFFIX, zaqohu.com
