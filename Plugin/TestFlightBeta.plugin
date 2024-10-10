@@ -10,8 +10,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-02.png
 #!date = 2024-09-16 22:30
 
-# 2024-04-15
-# https://github.com/VirgilClyne/iRingo/blob/main/plugin/TestFlight.plugin
+# 2024-10-06
+# https://github.com/NSRingo/TestFlight/blob/main/modules/TestFlight.plugin
 
 [General]
 skip-proxy = iosapps.itunes.apple.com

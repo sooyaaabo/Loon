@@ -10,8 +10,8 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AppleWeather.png
 #!date = 2024-09-27 17:40
 
-# 2024-09-27
-# https://github.com/VirgilClyne/iRingo/blob/main/plugin/WeatherKit.plugin
+# 2024-09-29
+# https://github.com/NSRingo/WeatherKit/blob/main/modules/WeatherKit.plugin
 
 [Argument]
 NextHour.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", tag = [未来一小时降水强度]数据源, desc = 选择WeatherKit等同于不做修改
