@@ -68,9 +68,6 @@ DOMAIN, ipv6.music.163.com, REJECT
 http-request ^https?:\/\/.+music\.163\.com\/.*(player\/url|entrance|\/eapi\/search\/) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, timeout = 60, enable = {Music163_VIP_Shared}, tag = 黑胶会员@qiuxiuya
 
 #----------  会员解锁 ----------#
-# 会员伪装vip
-http-response ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(music-vip-membership\/client\/vip\/info|vipnewcenter\/app\/resource\/newaccountpage) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 会员伪装
-
 # 播放会员歌曲
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/(?:v1\/artist\/top\/song|v3\/discovery\/recommend\/songs) script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
 http-request ^https?:\/\/interface\d?\.music\.163\.com\/eapi\/v3\/song\/detail script-path = https://raw.githubusercontent.com/qiuxiuya/qiuxiuya/main/Loon/wyy.js, requires-body = false, binary-body-mode = false, timeout = 20, enable = {Music163_VIP_Shared}, tag = 播放会员歌曲
