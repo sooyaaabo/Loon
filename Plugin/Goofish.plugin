@@ -8,55 +8,54 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Goofish.png
-#!date = 2024-09-16 22:30
+#!date = 2024-10-12 10:00
 
-# 2024-08-12 02:08:10
+# 2024-10-12 08:46:39
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
-# 2024-08-24 12:50
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# 2024-10-12 04:00
+# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/xianyu.plugin
 
 [Rule]
-# 可莉🅥
-# 拦截广告下发
-# AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E9%97%B2%E9%B1%BC*)), REJECT
+# 移除广告下发请求
+AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, %E9%97%B2%E9%B1%BC*)), REJECT
 
 [Rewrite]
-# RuCu6
-^https:\/\/gw\.alicdn\.com\/mt\/ reject
-^https:\/\/gw\.alicdn\.com\/tfs\/.+\d{3,4}-\d{4} reject
-^https:\/\/gw\.alicdn\.com\/tps\/.+\d{3,4}-\d{4} reject
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.taobao\.idle\.home\.welcome reject
-
-# 可莉🅥
 # 首页顶部标签
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ response-body-json-del data.container.sections
-# 搜索栏填充词
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ response-body-json-del data
-# 首页闲鱼币入口、底部发布球
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ response-body-json-del data
-# 我的页面横幅
-^https:\/\/dinamicx\.alibabausercontent\.com\/pub\/fish_home_top_kingkong_new\/ reject
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.topic\.banner\/ reject-dict
-# 我的页面
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-del data.container.sections[5]
-# 搜索页面内容
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ reject-dict
-^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ reject-dict
+
 # 这些宝贝超好卖
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/ reject-dict
+
+# 消息列表推广
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/ reject-dict
+
+# 我的页面
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.topic\.banner\/ reject-dict
+
+# 首页动画样式
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ reject-dict
+
 # 用闲鱼币买更便宜
 # ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.idle\.coin\.nextfresh\/ reject-dict
 
+# 搜索列表
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ reject-dict
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
+^https:\/\/h5\.m\.goofish\.com\/wow\/moyu\/moyu-project\/[\w-]*search[\w-]*\/pages\/ reject-dict
+
 [Script]
-# RuCu6
 # 移除阿里巴巴通用广告请求
 http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 阿里巴巴通用广告
 
-# 可莉🅥
-# 商品信息流广告
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除宝贝信息流广告
-# 首页标签图片
-http-response ^https:\/\/(g-)?acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除首页标签图片
+# 我的页面
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xianyu.js, requires-body = true, tag = 移除我的页面推广
+
+# 首页信息流
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xianyu.js, requires-body = true, tag = 移除首页信息流推广
+
+# 首页顶部标签
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xianyu.js, requires-body = true, tag = 移除首页顶部标签推广
 
 [MitM]
-hostname = acs.m.goofish.com, g-acs.m.goofish.com, dinamicx.alibabausercontent.com
+hostname = acs.m.goofish.com, g-acs.m.goofish.com
