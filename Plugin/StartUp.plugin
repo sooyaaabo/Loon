@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Advertising.png
-#!date = 2024-10-12 21:25
+#!date = 2024-10-12 21:30
 
 # 2024-10-12
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -834,7 +834,7 @@ http-response ^https?:\/\/.*umetrip\.com\.cn\/gateway\/api\/umetrip\/native$ scr
 # 爱奇艺
 http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js, requires-body = true, tag = 爱奇艺
 # IT之家
-http-response ^https?:\/\/napi\.ithome\.com\/api\/news\/indexv\d\/iphone script-path = https://github.com/ddgksf2013/Scripts/raw/master/ithome.js, requires-body = true, tag = IT之家
+http-response ^https?:\/\/napi\.ithome\.com\/api\/news\/indexv\d\/iphone script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/ithome.js, requires-body = true, tag = IT之家
 
 # ======= J ======= #
 # 京喜特价
