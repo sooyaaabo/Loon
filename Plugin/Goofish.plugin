@@ -10,7 +10,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Goofish.png
 #!date = 2024-10-12 16:45
 
-# 2024-10-12 08:46:39
+# 2024-10-12 20:54:22
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
 # 2024-10-12 12:50
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/xianyu.plugin
@@ -61,4 +61,4 @@ http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\
 http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xianyu.js, requires-body = true, tag = 移除搜索结果广告
 
 [MitM]
-hostname = acs.m.goofish.com, g-acs.m.goofish.com
+hostname = *.m.goofish.com
