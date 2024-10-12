@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Goofish.png
-#!date = 2024-10-12 10:00
+#!date = 2024-10-12 16:45
 
 # 2024-10-12 08:46:39
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
-# 2024-10-12 04:00
+# 2024-10-12 12:50
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/xianyu.plugin
 
 [Rule]
@@ -22,6 +22,9 @@
 [Rewrite]
 # 首页顶部标签
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ reject-dict
+
+# 商品详情为你推荐
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ reject-dict
 
 # 这些宝贝超好卖
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.resell\.recommendorhotcate\/ reject-dict
@@ -42,7 +45,7 @@
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ reject-dict
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ reject-dict
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
-^https:\/\/h5\.m\.goofish\.com\/wow\/moyu\/moyu-project\/[\w-]*search[\w-]*\/pages\/ reject-dict
+^https:\/\/h5\.m\.goofish\.com\/wow\/moyu\/moyu-project\/[\w-]*search[\w-]*\/pages\/ reject-200
 
 [Script]
 # 我的页面
@@ -53,6 +56,9 @@ http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\
 
 # 首页顶部标签
 http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xianyu.js, requires-body = true, tag = 移除首页顶部标签推广
+
+# 搜索结果广告
+http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xianyu.js, requires-body = true, tag = 移除搜索结果广告
 
 [MitM]
 hostname = acs.m.goofish.com, g-acs.m.goofish.com
