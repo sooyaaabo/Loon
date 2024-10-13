@@ -102,7 +102,7 @@
             "name": "Clash",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Clash.png"
         },
-      {
+        {
             "name": "ClashMeta",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ClashMeta-01.png"
         },
@@ -242,11 +242,11 @@
             "name": "AppStore",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AppStore_01.png"
         },
-	{
+        {
             "name": "AppStore",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AppStore_02.png"
         },
-	{
+        {
             "name": "AppStore",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AppStore_03.png"
         },
@@ -254,11 +254,11 @@
             "name": "TestFlight",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-01.png"
         },
-	{
+        {
             "name": "TestFlight",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-02.png"
         },
-	{
+        {
             "name": "AppleWeather",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AppleWeather.png"
         },
@@ -438,11 +438,11 @@
             "name": "Bilibili",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliBlue.png"
         },
-	{
+        {
             "name": "Bilibili",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliWhite.png"
         },
-	{
+        {
             "name": "Ezviz",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Ezviz.png"
         },
@@ -474,11 +474,11 @@
             "name": "VidHub",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/VidHub-01.png"
         },
-	{
+        {
             "name": "VidHub",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/VidHub-02.png"
         },
-	{
+        {
             "name": "Forward",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Forward.png"
         },
@@ -502,15 +502,19 @@
             "name": "Conflux",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Conflux.png"
         },
-	{
+        {
+            "name": "MediaPlayer",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MediaPlayer.png"
+        },
+        {
             "name": "MediaStorm",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MediaStorm.png"
         },
-	{
+        {
             "name": "Emby",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Emby-01.png"
         },
-	{
+        {
             "name": "Emby",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Emby-02.png"
         },
@@ -546,11 +550,11 @@
             "name": "LEMO FM",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/LEMO%20FM.png"
         },
-	{
+        {
             "name": "Memento",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Memento-light.png"
         },
-	{
+        {
             "name": "Memento",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Memento-dark.png"
         },
@@ -566,21 +570,45 @@
             "name": "Tampermonkey",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Tampermonkey.png"
         },
-	{
+        {
             "name": "Currency",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Currency.png"
         },
-	{
+        {
             "name": "Apple",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Apple.png"
         },
-	{
+        {
             "name": "Microsoft",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Microsoft.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Microsoft-01.png"
         },
-	{
+        {
+            "name": "Microsoft",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Microsoft-02.png"
+        },
+        {
+            "name": "Microsoft",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Microsoft-03.png"
+        },
+        {
+            "name": "Windows",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Windows-01.png"
+        },
+        {
+            "name": "Windows",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Windows-02.png"
+        },
+        {
+            "name": "Windows",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Windows-03.png"
+        },
+        {
             "name": "ChatGPT OpenAI",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ChatGPT.png"
+        },
+        {
+            "name": "InternetExplorer",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/InternetExplorer.png"
         },
         {
             "name": "Arc",
@@ -642,15 +670,15 @@
             "name": "X",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/X-01.png"
         },
-	{
+        {
             "name": "X",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/X-02.png"
         },
-	{
+        {
             "name": "Telegram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Telegram-01.png"
         },
-	{
+        {
             "name": "Telegram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Telegram-02.png"
         },
