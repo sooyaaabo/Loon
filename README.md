@@ -456,6 +456,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <th>名称</th>
         <th>序号</th>
         <th>名称</th>
+        <th>序号</th>
+        <th>名称</th>
     </tr>
     <tr>
         <td width="100px" rowspan="10"><strong>定时任务</strong></td>
