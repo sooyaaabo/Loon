@@ -82,6 +82,8 @@ DOMAIN, servers.xeton.dev
 DOMAIN-SUFFIX, aca.best
 DOMAIN-SUFFIX, misakaf.org
 IP-CIDR, 102.223.180.108/32
+# Watermelon
+DOMAIN-SUFFIX, 1024.name
 # 终点站
 DOMAIN-SUFFIX, emby.wtf
 # 牢大科蜜野兽

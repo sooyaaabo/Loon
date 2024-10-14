@@ -306,8 +306,6 @@ IP-CIDR, 50.114.159.46/32, no-resolve
 IP-CIDR, 109.176.203.63/32, no-resolve
 IP-CIDR, 45.119.99.41/32, no-resolve
 IP-CIDR, 132.226.20.31/32, no-resolve
-# Watermelon
-DOMAIN-SUFFIX, 1024.name
 # 牢大科蜜野兽
 DOMAIN-SUFFIX, mius.uk
 # 终点站
