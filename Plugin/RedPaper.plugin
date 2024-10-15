@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/RedPaper.png
-#!date = 2024-09-30 22:10
+#!date = 2024-10-15 10:50
 
-# 2024-04-13 14:20:28
+# 2024-10-15 10:45
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/xiaohongshu.plugin
 # 2024-04-13 14:20:28
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/RedPaper_remove_ads.plugin
@@ -28,6 +28,12 @@ AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) reject-dict
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) reject-dict
 
+# 搜索页
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/banner_list$ response-body-json-replace data {}
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/hot_list$ response-body-json-replace data.items []
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/hint response-body-json-replace data.hint_words []
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/trending\? response-body-json-replace data.queries [] data.hint_word {}
+
 # 评论区图片水印 (实验功能可能无效)
 ^https?:\/\/ci\.xiaohongshu\.com\/system_config\/watermark reject-img
 
@@ -42,8 +48,6 @@ AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js, requires-body = true, tag = 移除详情页小部件
 
 # 搜索页
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/search\/(?:banner|hot)_list script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js, requires-body = true, tag = 移除搜索页广告
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/search\/(?:hint|trending) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js, requires-body = true, tag = 移除搜索页广告
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js, requires-body = true, tag = 移除搜索页广告
 
 # 开屏广告
