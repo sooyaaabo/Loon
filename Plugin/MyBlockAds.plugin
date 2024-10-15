@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MyBlockAds.png
-#!date = 2024-10-09 11:50
+#!date = 2024-10-15 10:30
 
-# 2024-10-09 11:30
+# 2024-10-15 10:05
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/myblockads.plugin
 
 [Rule]
@@ -297,7 +297,9 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) reject-dict
 
 # 昌原云充 五代十路 //www.washpayer.com
+^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? response-body-json-del payload.adInfo
 ^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) reject-dict
+^https:\/\/www\.washpayer\.com\/common\/getReceipt response-body-json-del payload.adInfo
 
 # 豆瓣 //api.douban.com, img3.doubanio.com, qnmob3.doubanio.com
 ^https:\/\/api\.douban\.com\/v2\/app_ads\/splash\w+ reject-dict
@@ -344,6 +346,7 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
+^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView response-body-json-del data.bottom.ad_info
 ^https:\/\/api\.m\.mi\.com\/(?:v1\/(?:app\/popup_info|home\/page_feed|misearch\/search_input)|v2\/search\/search_default) reject-dict
 ^https:\/\/shop-api\.retail\.mi\.com\/mtop\/navi\/(?:rec\/merge\/|skywheel\/mishop\/splash) reject-dict
 
@@ -370,8 +373,7 @@ http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path
 http-response ^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 草榴社区
 
 # 昌原云充 五代十路 //www.washpayer.com
-http-response ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
-http-response ^https:\/\/www\.washpayer\.com\/(?:common\/getReceipt|user\/message\/equipmentPara) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
+http-response ^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
 
 # 京东 //api.m.jd.com
 http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/jingdong.js, requires-body = true, tag = 京东
@@ -387,7 +389,7 @@ http-response ^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ script-path
 http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/wechat/unlockUrls.js, requires-body = true, tag = 微信封禁页面
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
-http-response ^https:\/\/api\.m\.mi\.com\/v1\/(?:app\/start|order\/expressView) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城
+http-response ^https:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城
 
 # 中国农业银行 //mobilepaas.abchina.com.cn
 http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js, tag = 中国农业银行
