@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-10-03 18:40
+# 2024-10-16 22:20
 
 # CMSPlayer
 # 海外看
@@ -94,10 +94,6 @@ DOMAIN-SUFFIX, alphatvapp.top
 DOMAIN-SUFFIX, nanflix.net
 # CC
 DOMAIN-SUFFIX, coemn.com
-# Apop
-IP-CIDR, 64.110.90.125/32, no-resolve
-# Plumber
-DOMAIN, tiancheng.boaz.cf
 # CharonTV
 DOMAIN-SUFFIX, charontv.com
 # Jellyfish+

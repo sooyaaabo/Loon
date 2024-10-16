@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-03 18:40
+# 2024-10-16 22:20
 
 # CMSPlayer
 # 低端影视
@@ -274,7 +274,6 @@ DOMAIN-SUFFIX, 789.123456.al
 DOMAIN-SUFFIX,bangumi.ca
 # PiliPili
 DOMAIN-SUFFIX, pilipili.club
-DOMAIN-SUFFIX, pilifun.top
 DOMAIN, xn--ohq746dhyifsj.xn--pp5aa2sb.com
 # 纸片人
 DOMAIN-SUFFIX, embyplus.org
@@ -301,11 +300,6 @@ DOMAIN-SUFFIX, embycc.link
 # Apop
 DOMAIN-SUFFIX, apopcloud.me
 DOMAIN-SUFFIX, apopcloud.live
-IP-CIDR, 208.75.134.189/32, no-resolve
-IP-CIDR, 50.114.159.46/32, no-resolve
-IP-CIDR, 109.176.203.63/32, no-resolve
-IP-CIDR, 45.119.99.41/32, no-resolve
-IP-CIDR, 132.226.20.31/32, no-resolve
 # 牢大科蜜野兽
 DOMAIN-SUFFIX, mius.uk
 # 终点站
@@ -314,9 +308,11 @@ DOMAIN-SUFFIX, term.wtf
 DOMAIN-SUFFIX, yomo.lol
 # peach
 DOMAIN-SUFFIX, embymv.link
+# Plumber
+DOMAIN-SUFFIX, boaz.cf
+DOMAIN-SUFFIX, 910427.xyz
 # awa
 DOMAIN-SUFFIX, 811861.xyz
-DOMAIN-SUFFIX, awatv.de
 
 # Jellyfin
 # 探花TV
