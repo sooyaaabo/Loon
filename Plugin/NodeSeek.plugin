@@ -1,0 +1,25 @@
+#!name = NodeSeek
+#!desc = NodeSeek自动签到获取鸡腿🍗
+#!openUrl = 
+#!author = Sliverkiss[https://github.com/Sliverkiss]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.2(749)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NodeSeek.png
+#!date = 2024-10-16 16:40
+
+# 2024-04-13 20:34:33
+# https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
+
+[Argument]
+CookieScript-nodeseek = switch, true, false, tag = NodeSeek Cookie, desc = 是否启用NodeSeek Cookie脚本来获取Cookie
+cron-nodeseek = input, "0 7 0 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
+
+[Script]
+http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, enabled = {CookieScript-nodeseek}, tag = NodeSeek Token
+cron {cron-nodeseek} script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout = 60, tag = NodeSeek Task
+
+[MitM]
+hostname = www.nodeseek.com
