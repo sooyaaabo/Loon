@@ -1,5 +1,5 @@
 #!name = NodeSeek
-#!desc = NodeSeek自动签到获取鸡腿🍗
+#!desc = NodeSeek自动签到获取鸡腿。登录账号进入设置页面以获取Token，获取成功后关闭Token脚本。
 #!openUrl = 
 #!author = Sliverkiss[https://github.com/Sliverkiss]
 #!tag = 功能增强
@@ -8,13 +8,13 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NodeSeek.png
-#!date = 2024-10-16 16:40
+#!date = 2024-10-16 17:00
 
 # 2024-04-13 20:34:33
 # https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
 
 [Argument]
-CookieScript-nodeseek = switch, true, false, tag = NodeSeek Cookie, desc = 是否启用NodeSeek Cookie脚本来获取Cookie
+CookieScript-nodeseek = switch, true, false, tag = NodeSeek Token, desc = 是否启用NodeSeek Token脚本来获取Token
 cron-nodeseek = input, "0 7 0 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
 
 [Script]

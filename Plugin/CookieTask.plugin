@@ -1,5 +1,5 @@
 #!name = Cookie & Task
-#!desc = 先启用Cookie脚本，在获取Cookie后关闭脚本以避免无意义的MITM，插件便可自动签到完成打卡任务。
+#!desc = 在成功获取Cookie/Token后关闭脚本以避免无意义的MitM，插件便可自动签到完成打卡任务。（具体获取Cookie/Token方法自行查看脚本内容）
 #!openUrl = 
 #!author = Sliverkiss[https://github.com/Sliverkiss], NobyDa[https://github.com/NobyDa], GoodHolidays[https://github.com/GoodHolidays], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -8,12 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Memento-dark.png
-#!date = 2024-10-16 16:40
+#!date = 2024-10-16 17:00
 
 # 2024-01-24 13:13:56
 # https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
-# 2024-04-13 20:34:33
-# https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
 # 2021-02-21 22:30
 # https://raw.githubusercontent.com/GoodHolidays/Scripts/master/Task/weibo.js
 # 2024-05-15
@@ -21,7 +19,7 @@
 
 [Argument]
 # 阿里云盘
-CookieScript-alipan = switch, true, false, tag = 阿里云盘Cookie, desc = 是否启用阿里云盘Cookie脚本来获取Cookie
+CookieScript-alipan = switch, true, false, tag = 阿里云盘Token, desc = 是否启用阿里云盘Cookie脚本来获取Token
 cron-alipan = input, "0 1 0 * * *", tag = 阿里云盘Task, desc = 输入cron表达式来定时运行阿里云盘Task
 
 # 微博
@@ -32,13 +30,9 @@ cron-weibo = input, "0 3 0 * * *", tag = 微博Task, desc = 输入cron表达式�
 CookieScript-iqiyi = switch, true, false, tag = 爱奇艺Cookie, desc = 是否启用爱奇艺Cookie脚本来获取Cookie
 cron-iqiyi = input, "0 5 0 * * *", tag = 爱奇艺Task, desc = 输入cron表达式来定时运行爱奇艺Task
 
-# NodeSeek
-CookieScript-nodeseek = switch, true, false, tag = NodeSeek Cookie, desc = 是否启用NodeSeek Cookie脚本来获取Cookie
-cron-nodeseek = input, "0 7 0 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
-
 [Script]
 # 阿里云盘 - auth.alipan.com, auth.aliyundrive.com
-http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, enable = {CookieScript-alipan}, tag = 阿里云盘Cookie
+http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, requires-body = true, timeout = 60, enable = {CookieScript-alipan}, tag = 阿里云盘Token
 cron {cron-alipan} script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘Task
 
 # 微博 - api.weibo.cn
@@ -49,9 +43,5 @@ cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable = {CookieScript-iqiyi}, tag = 爱奇艺Cookie
 cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
 
-# NodeSeek - www.nodeseek.com
-http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, enabled = {CookieScript-nodeseek}, tag = NodeSeek Token
-cron {cron-nodeseek} script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout = 60, tag = NodeSeek Task
-
 [MitM]
-hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com, www.nodeseek.com
+hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com
