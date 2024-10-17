@@ -1,8 +1,12 @@
-const $ = new Env('follow 每日签到')
+/*
+2024-09-25
+https://github.com/chavyleung/scripts/blob/master/follow/follow.js
+*/
+const $ = new Env('Follow 每日签到')
 $.desc = []
 
-const csrfToken = $argument.follow_csrfToken
-const cookie = $argument.follow_cookie
+const csrfToken = $argument.csrfToken
+const cookie = $argument.cookie
 
 !(async () => {
   await sign()
