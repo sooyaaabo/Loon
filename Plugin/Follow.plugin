@@ -8,12 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Follow.plugin
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Follow.png
-#!date = 2024-10-17 23:50
+#!date = 2024-10-18 00:00
 
 # 2024-09-25
 # https://github.com/chavyleung/scripts/blob/master/follow/follow.js
 
-# 使用说明
+# 使用说明（基于电脑和Chrome浏览器，其他移动端和浏览器自行尝试）
 # 1. 电脑登录网页版https://app.follow.is
 # 2. 打开Power页面，具体页面链接为https://app.follow.is/power
 # 3. 浏览器按F12打开开发者工具，选择`网络`，在`名称`中找到`wallets`并选中；
