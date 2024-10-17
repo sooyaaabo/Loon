@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-16 22:20
+# 2024-10-17 15:50
 
 # CMSPlayer
 # 低端影视
@@ -190,8 +190,6 @@ DOMAIN-SUFFIX, novipnoad.net
 DOMAIN-SUFFIX, bilfun.cc
 # 星芽短剧
 DOMAIN, app.whjzjx.cn
-# 南风短剧
-DOMAIN-SUFFIX, www.nanf.cc
 # 小苹果
 DOMAIN, item.xpgtv.xyz
 # 瓜子影视
@@ -248,6 +246,16 @@ DOMAIN-SUFFIX, ali.gitcafe.ink 
 DOMAIN, yunluo.oss-cn-shanghai.aliyuncs.com
 # JOJO
 DOMAIN-SUFFIX, jiohub.top
+# 南风短剧
+DOMAIN, www.nanf.cc
+# 多多影音
+DOMAIN-SUFFIX, yydsys.top
+# 蜡笔盘
+DOMAIN-SUFFIX, labipan.com
+# 至臻视觉
+DOMAIN-SUFFIX, mihdr.top
+# 云盘资源网
+DOMAIN-SUFFIX, res.yunpan.win
 # 网盘播放
 DOMAIN-KEYWORD, quark
 DOMAIN, drive-pc.quark.cn

@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-10-16 22:20
+# 2024-10-17 15:50
 
 # CMSPlayer
 # 海外看
@@ -70,6 +70,8 @@ DOMAIN-SUFFIX, anfuns.cc
 DOMAIN-SUFFIX, bttwo.net
 # 美剧星球
 DOMAIN-SUFFIX, kmeiju.cc
+# 木偶哥哥
+DOMAIN, www.mogg.top
 
 # Emby
 # 普拉斯影业
