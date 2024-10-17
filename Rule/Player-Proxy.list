@@ -86,6 +86,8 @@ IP-CIDR, 102.223.180.108/32
 DOMAIN-SUFFIX, 1024.name
 # 终点站
 DOMAIN-SUFFIX, emby.wtf
+# 纸片人
+DOMAIN-SUFFIX, embyplus.org
 # 牢大科蜜野兽
 DOMAIN, ph.16bit.cfd
 # Alpha
