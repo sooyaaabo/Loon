@@ -798,7 +798,7 @@ http-response ^https?:\/\/[a-zA-Z0-9_-]+(\.[a-zA-Z0-9_-]+){1,3}(:\d+)?\/api\/v\d
 # 12306
 http-response ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/12306.js, requires-body = true, tag = 12306
 # 123云盘
-http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://github.com/ddgksf2013/Scripts/raw/master/123pan.js, requires-body = true, tag = 123云盘
+http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, tag = 123云盘
 
 # ======= A ======= #
 # amdc
