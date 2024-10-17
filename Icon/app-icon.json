@@ -535,6 +535,14 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Emby-02.png"
         },
         {
+            "name": "Follow",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Follow.png"
+        },
+        {
+            "name": "RSSHubRadar",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/RSSHubRadar.png"
+        },
+        {
             "name": "IThome",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/IThome.png"
         },
