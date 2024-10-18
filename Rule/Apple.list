@@ -1,3 +1,4 @@
+# https://gitlab.com/lodepuly/vpn_tool/-/tree/master/Tool/Loon/Rule
 # Apple
 DOMAIN-SUFFIX, aaplimg.com
 DOMAIN-SUFFIX, apple-mapkit.com
@@ -49,7 +50,6 @@ DOMAIN-SUFFIX, iwork.apple.com // iWork 文稿
 DOMAIN, mask.icloud.com // iCloud 专用代理
 DOMAIN, mask-h2.icloud.com // iCloud 专用代理
 DOMAIN, mask-api.icloud.com // iCloud 专用代理
-
 
 # Apple 推送通知 - 当使用 Apple 推送通知服务 (APNS) 时，Apple 设备需要访问以下主机。
 # https://gitlab.com/lodepuly/vpn_tool/-/blob/master/Tool/Loon/Rule/ApplePushNotificationService.list
@@ -110,4 +110,3 @@ DOMAIN, swscan.apple.com //macOS 更新
 DOMAIN, updates-http.cdn-apple.com //软件更新下载
 DOMAIN, updates.cdn-apple.com //软件更新下载
 DOMAIN, xp.apple.com
-
