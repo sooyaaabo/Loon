@@ -1,5 +1,5 @@
 #!name = Follow
-#!desc = 每日签到获取Power，需抓包获取csrf token和cookie填入下方设置中，具体使用说明请在浏览器内打开该插件的链接查看。
+#!desc = 每日签到获取Power，需先获取csrf token和cookie填入下方设置中，具体使用说明请在浏览器内访问本插件链接查看。
 #!openUrl = https://app.follow.is
 #!author = chavyleung[https://github.com/chavyleung], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -13,9 +13,9 @@
 # 2024-09-25
 # https://github.com/chavyleung/scripts/blob/master/follow/follow.js
 
-# 使用说明（基于电脑和Chrome浏览器，其他移动端和浏览器自行尝试）
-# 1. 电脑登录网页版https://app.follow.is
-# 2. 打开Power页面，具体页面链接为https://app.follow.is/power
+# 使用流程说明（基于电脑和Chrome浏览器操作，其他设备和浏览器自行尝试）
+# 1. 在电脑上，使用Chrome浏览器访问https://app.follow.is，并登录账号；
+# 2. 点击个人头像，打开Power页面，或者直接访问https://app.follow.is/power；
 # 3. 浏览器按F12打开开发者工具，选择`网络`，在`名称`中找到`wallets`并选中；
 # 3. 找到`请求标头`中的`cookie:`字段，可以看到字段中包含`authjs.session-token`和`authjs.csrf-token`；
 # 4. `cookie`的值是`authjs.session-token=xxx-xxxx-xxxx`，如`authjs.session-token=65u7ed9f-0a1f-4341-b1be-4cce07e82204`；
