@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-17 15:50
+# 2024-10-18 17:50
 
 # CMSPlayer
 # 低端影视
@@ -279,7 +279,7 @@ DOMAIN-SUFFIX, imetyou.top
 # TreeDiagram
 DOMAIN-SUFFIX, 789.123456.al
 # NyaMedia
-DOMAIN-SUFFIX,bangumi.ca
+DOMAIN-SUFFIX, bangumi.ca
 # PiliPili
 DOMAIN-SUFFIX, pilipili.club
 DOMAIN, xn--ohq746dhyifsj.xn--pp5aa2sb.com
@@ -296,7 +296,9 @@ DOMAIN-SUFFIX, 9191001.xyz
 # 非越
 DOMAIN-SUFFIX, sfcj.org
 # Temby
-DOMAIN-SUFFIX,285286.xyz
+DOMAIN-SUFFIX, 285286.xyz
+# 飞跃银河
+DOMAIN-SUFFIX, yhemby.top
 # hka
 DOMAIN-SUFFIX, aliz.work
 # lily

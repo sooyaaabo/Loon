@@ -86,7 +86,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://ww1.12345.al/#/register?code=ZxedfVfQ)购买，日常8折优惠码`misakaf`
+点击[官网](https://ww1.12345.al/#/register?code=ZxedfVfQ)购买，日常8折优惠码`misakaf`（目前被打中，暂勿购买）
 
 - **联系方式**<br>
 官方频道：[@ACA_Channel](https://t.me/ACA_Channel)<br>
