@@ -1,6 +1,6 @@
 #!name = NodeSeek
-#!desc = NodeSeek自动签到获取鸡腿。登录账号进入设置页面以获取Token，获取成功后关闭Token脚本。
-#!openUrl = 
+#!desc = NodeSeek自动签到。登录账号进入设置页面以获取Token，获取成功后关闭Token脚本。
+#!openUrl = https://www.nodeseek.com
 #!author = Sliverkiss[https://github.com/Sliverkiss]
 #!tag = 功能增强
 #!system = 
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NodeSeek.png
-#!date = 2024-10-16 17:00
+#!date = 2024-10-18 10:00
 
 # 2024-04-13 20:34:33
 # https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js

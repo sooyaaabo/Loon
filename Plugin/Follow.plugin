@@ -1,5 +1,5 @@
 #!name = Follow
-#!desc = 每日签到获取Power，需先获取csrf token和cookie填入下方设置中，具体使用说明请在浏览器内访问本插件链接查看。
+#!desc = 每日签到获取Power。使用本插件前需先获取csrf token和cookie填入下方设置中，具体使用说明请在浏览器内访问本插件链接查看。
 #!openUrl = https://app.follow.is
 #!author = chavyleung[https://github.com/chavyleung], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Follow.plugin
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Follow.png
-#!date = 2024-10-18 00:00
+#!date = 2024-10-18 10:00
 
 # 2024-09-25
 # https://github.com/chavyleung/scripts/blob/master/follow/follow.js
