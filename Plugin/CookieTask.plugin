@@ -1,5 +1,5 @@
 #!name = Cookie & Task
-#!desc = 在成功获取Cookie/Token后关闭脚本以避免无意义的MitM，插件便可自动签到完成打卡任务。（具体获取Cookie/Token方法自行查看脚本内容）
+#!desc = 阿里云盘、微博、爱奇艺每日签到。需先获取Cookie/Token，成功后后关闭脚本以避免无意义的MitM。（具体获取Cookie/Token方法自行查看脚本内容）
 #!openUrl = 
 #!author = Sliverkiss[https://github.com/Sliverkiss], NobyDa[https://github.com/NobyDa], GoodHolidays[https://github.com/GoodHolidays], sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Memento-dark.png
-#!date = 2024-10-16 17:00
+#!date = 2024-10-18 10:00
 
 # 2024-01-24 13:13:56
 # https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
