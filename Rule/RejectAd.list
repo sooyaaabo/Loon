@@ -1,4 +1,4 @@
-# 2024-09-15 11:10:00
+# 2024-10-18 23:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
@@ -387,14 +387,14 @@ DOMAIN, ad.chelaile.net.cn
 
 # >>>>>>>>>>>>>>> ✅ D ✅ <<<<<<<<<<<<<<
 # Dr.Peng
-#IP-CIDR, 10.72.25.0/24
+# IP-CIDR, 10.72.25.0/24
 IP-CIDR, 211.161.101.110/32, no-resolve
 
 # 叮嗒出行
 DOMAIN-KEYWORD, image.bianxianmao.com
 
 # 滴滴青桔（支付界面图片有误杀）
-#DOMAIN-KEYWORD, pt-starimg.didistatic.com
+# DOMAIN-KEYWORD, pt-starimg.didistatic.com
 IP-CIDR, 203.107.1.1/24, no-resolve
 
 # 懂车帝
@@ -435,7 +435,7 @@ DOMAIN, mcs.snssdk.com
 DOMAIN, tnc3-alisc1.snssdk.com
 DOMAIN, security-lq.snssdk.com
 DOMAIN, tnc3-aliec2.snssdk.com
-#DOMAIN, is.snssdk.com
+# DOMAIN, is.snssdk.com
 DOMAIN, i.snssdk.com
 DOMAIN, v6-novelapp.ixigua.com
 DOMAIN, msync-im1-vip6-std.easemob.com
@@ -444,8 +444,9 @@ DOMAIN, api.iegadp.qq.com
 DOMAIN-SUFFIX, novelapp.ixigua.com
 DOMAIN-SUFFIX, default.ixigua.com
 DOMAIN-SUFFIX, byteorge.com
-DOMAIN-SUFFIX, bytegoofy.com
-#DOMAIN-SUFFIX, bytedance.com
+# 下面两条误杀严重导致懂车帝无法正常使用
+# DOMAIN-SUFFIX, bytegoofy.com
+# DOMAIN-SUFFIX, bytedance.com
 IP-CIDR, 49.71.37.101/32, no-resolve
 IP-CIDR, 117.71.105.23/32, no-resolve
 IP-CIDR, 218.94.207.205/32, no-resolve
@@ -523,8 +524,8 @@ DOMAIN, apis.alenable.com
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # HDO
-#DOMAIN-suffix, applovin.com
-#DOMAIN-suffix, applvn.com
+# DOMAIN-suffix, applovin.com
+# DOMAIN-suffix, applvn.com
 
 # Huawei AspiegelBot
 IP-CIDR, 114.119.160.0/21, no-resolve
@@ -2016,7 +2017,7 @@ DOMAIN-SUFFIX, vegent.cn
 DOMAIN-SUFFIX, vipads.cn
 DOMAIN-SUFFIX, vmzqwz.cn
 DOMAIN-SUFFIX, voiceads.cn
-#DOMAIN-SUFFIX, vungle.cn
+# DOMAIN-SUFFIX, vungle.cn
 DOMAIN-SUFFIX, vwkhdi.cn
 DOMAIN-SUFFIX, waps.cn
 DOMAIN-SUFFIX, wapx.cn
@@ -5235,7 +5236,7 @@ DOMAIN-SUFFIX, g.aligames.com
 DOMAIN-SUFFIX, optimus-ads.amap.com.w.alikunlun.com
 DOMAIN-SUFFIX, osfota.cdn.aliyun.com
 DOMAIN-SUFFIX, oa-panther.data.aliyun.com
-#DOMAIN-SUFFIX, oss-accelerate.aliyuncs.com
+# DOMAIN-SUFFIX, oss-accelerate.aliyuncs.com
 DOMAIN-SUFFIX, dressimage.img-cn-beijing.aliyuncs.com
 DOMAIN-SUFFIX, adash.man.aliyuncs.com
 DOMAIN-SUFFIX, ooss.oss.aliyuncs.com
