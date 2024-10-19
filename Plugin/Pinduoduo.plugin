@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Pinduoduo.png
-#!date = 2024-10-18 15:30
+#!date = 2024-10-19 17:30
 
 # 2024-10-18 13:13
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -16,7 +16,7 @@
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
 # 2024-10-18 10:25
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/pinduoduo.plugin
-# 2024-10-07 21:05:14
+# 2024-10-19 17:18:31
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]
