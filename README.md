@@ -1,9 +1,11 @@
 # Loon
+
 Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 
 ![Alt](https://repobeats.axiom.co/api/embed/3deb351aeae7762d0a77427ce568557e05d239b0.svg "Repobeats analytics image")
 
 ## 使用声明
+
 > [!IMPORTANT]
 > - 本资源仅用于测试、学习、研究，严禁用于商业用途或非法目的，不能保证其合法性，准确性，完整性和有效性，请根据情况自行判断，否则后果自负。
 >   
@@ -20,6 +22,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 >   > **您使用或者复制了本仓库的任何脚本，则视为`已接受`此声明，请仔细阅读。**
 
 ## 配置模板：
+
 **配置文件导入（点击跳转）：**
 - [适用于App Store版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
 
@@ -37,133 +40,14 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 
 > **下方所有推荐机场均只推荐购买月付套餐，请根据个人情况自行判断，理性消费，量力而行，本人不承担任何后果。**
 
-### **Academy City Airport (ACA)**
-
-- **机场介绍**<br>
-1. 知名Emby服MisakaF合作机场，购买即送MisakaF同款专属机场服<br>
-2. 流媒体解锁无忧，提供专属Emby 0.1x线路<br>
-3. 亚洲节点含TG DC5优化<br>
-4. 港、日、台、新、美、英、冷门地区家宽<br>
-
-- **套餐介绍**<br>
-<table>
-    <tr>
-        <th>套餐</th>
-        <th>流量</th>
-        <th>月付</th>
-        <th>季付</th>
-        <th>半年付</th>
-        <th>年付</th>
-        <th>一次性</th>
-    </tr>
-    <tr>
-        <td align=center>小杯</td>
-        <td align=center>120G</td>
-        <td align=center>8</td>
-        <td align=center>22</td>
-        <td align=center>41</td>
-        <td align=center>77</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>中杯</td>
-        <td align=center>240G</td>
-        <td align=center>15</td>
-        <td align=center>41</td>
-        <td align=center>77</td>
-        <td align=center>144</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>大杯</td>
-        <td align=center>120G</td>
-        <td align=center>30</td>
-        <td align=center>81</td>
-        <td align=center>153</td>
-        <td align=center>288</td>
-        <td align=center>×</td>
-    </tr>
-</table>
-
-- **购买方式**<br>
-点击[官网](https://ww1.12345.al/#/register?code=ZxedfVfQ)购买，日常8折优惠码`misakaf`（目前被打中，暂勿购买）
-
-- **联系方式**<br>
-官方频道：[@ACA_Channel](https://t.me/ACA_Channel)<br>
-官方群组：联系[@ACA_Embybot](https://t.me/ACA_Embybot)，绑定链接进入群组<br>
-
-### **EFCloud**
-
-- **机场介绍**<br>
-1. 多地中转隧道跨境出国SLA在线保障<br>
-2. 超高带宽接入晚高峰速率保障4k秒开<br>
-3. 支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
-4. 全球 30+ 国家/地区， 50+ 节点<br>
-5. Trojan 协议，不限制设备数量<br>
-6. 支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
-
-- **套餐介绍**<br>
-<table>
-    <tr>
-        <th>套餐</th>
-        <th>流量</th>
-        <th>月付</th>
-        <th>季付</th>
-        <th>半年付</th>
-        <th>年付</th>
-        <th>一次性</th>
-    </tr>
-    <tr>
-        <td align=center>Small</td>
-        <td align=center>100G</td>
-        <td align=center>8</td>
-        <td align=center>24</td>
-        <td align=center>×</td>
-        <td align=center>80</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>Basics</td>
-        <td align=center>200G</td>
-        <td align=center>10</td>
-        <td align=center>30</td>
-        <td align=center>×</td>
-        <td align=center>100</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>Prime</td>
-        <td align=center>500G</td>
-        <td align=center>20</td>
-        <td align=center>60</td>
-        <td align=center>×</td>
-        <td align=center>200</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>Mini</td>
-        <td align=center>100G</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>×</td>
-        <td align=center>25</td>
-    </tr>
-</table>
-
-- **购买方式**<br>
-点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买（关闭代理），新用户8折优惠码`new`
-
-- **联系方式**<br>
-官方频道：[@efcloud](https://t.me/efcloud)<br>
-官方群组：暂无<br>
-
 ### **Aladdin（阿拉丁）**
+
 - **机场介绍**<br>
 1. 采用Shadowsocks协议，延迟低，速度快<br>
 2. 多达50+ 节点，包含常用地区及冷门地区节点<br>
 3. 支持但不限于 Chatgpt/Netfilx 等多种流媒体服务访问解锁<br>
 4. 第三方EMBY影视库合作，提供专属Emby 0.2x 节点<br>
+
 - **套餐介绍**<br>
 <table>
     <tr>
@@ -228,6 +112,138 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 - **联系方式**<br>
 官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
 官方群组：联系[@AladdinNET_bot](https://t.me/AladdinNET_bot)，绑定链接进入群组<br>
+
+### **EFCloud**
+
+- **机场介绍**<br>
+1. 多地中转隧道跨境出国SLA在线保障<br>
+2. 超高带宽接入晚高峰速率保障4k秒开<br>
+3. 支持但不限于 Chatgpt/Netfilx/Hulu/Hbo/Disney+/Dazn 等流媒体<br>
+4. 全球 30+ 国家/地区， 50+ 节点<br>
+5. Trojan 协议，不限制设备数量<br>
+6. 支持Android/iOS/Mac/Windows/Linux/路由器全平台<br>
+
+- **套餐介绍**<br>
+<table>
+    <tr>
+        <th>套餐</th>
+        <th>流量</th>
+        <th>月付</th>
+        <th>季付</th>
+        <th>半年付</th>
+        <th>年付</th>
+        <th>一次性</th>
+    </tr>
+    <tr>
+        <td align=center>Small</td>
+        <td align=center>100G</td>
+        <td align=center>8</td>
+        <td align=center>24</td>
+        <td align=center>×</td>
+        <td align=center>80</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Basics</td>
+        <td align=center>200G</td>
+        <td align=center>10</td>
+        <td align=center>30</td>
+        <td align=center>×</td>
+        <td align=center>100</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Prime</td>
+        <td align=center>500G</td>
+        <td align=center>20</td>
+        <td align=center>60</td>
+        <td align=center>×</td>
+        <td align=center>200</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Mini</td>
+        <td align=center>100G</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>25</td>
+    </tr>
+</table>
+
+- **购买方式**<br>
+点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买，新用户8折优惠码`new`
+
+- **联系方式**<br>
+官方频道：[@efcloud](https://t.me/efcloud)<br>
+官方群组：暂无<br>
+
+### **CloudFisher（云渔）**
+
+- **机场介绍**<br>
+1. 1倍率中国大陆沪日专线、深港专线传输网络<br>
+2. 20+ 全球边缘网络<br>
+3. 多种流媒体服务访问解锁<br>
+4. 最高 600Mbps 速率可用<br>
+5. 适用于 SLA 保障<br>
+6. 第三方EMBY影视库合作<br>
+
+- **套餐介绍**<br>
+<table>
+    <tr>
+        <th>套餐</th>
+        <th>流量</th>
+        <th>月付</th>
+        <th>季付</th>
+        <th>半年付</th>
+        <th>年付</th>
+        <th>一次性</th>
+    </tr>
+    <tr>
+        <td align=center>Lite</td>
+        <td align=center>120G</td>
+        <td align=center>9</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Plus</td>
+        <td align=center>300G</td>
+        <td align=center>15</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Max</td>
+        <td align=center>500G</td>
+        <td align=center>25</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>Air</td>
+        <td align=center>148G</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>×</td>
+        <td align=center>60</td>
+        <td align=center>×</td>
+    </tr>
+</table>
+
+- **购买方式**<br>
+点击[官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`
+
+- **联系方式**<br>
+官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
+官方群组：[@CloudFisherGroup](https://t.me/CloudFisherGroup)<br>
 
 
 ## 插件列表
