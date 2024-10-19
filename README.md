@@ -107,7 +107,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj)购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
+点击[Aladdin官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj)购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
 
 - **联系方式**<br>
 官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
@@ -173,7 +173,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://inv.easyfastcloud.com/#/register?code=hBKGQjGQ)购买，新用户8折优惠码`new`
+点击[EFCloud官网](https://www.efc2.cc/register?aff=hBKGQjGQ)购买，新用户8折优惠码`new`
 
 - **联系方式**<br>
 官方频道：[@efcloud](https://t.me/efcloud)<br>
@@ -239,7 +239,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`
+点击[CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`
 
 - **联系方式**<br>
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
