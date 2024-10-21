@@ -8,14 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Soul.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
 # 2024-08-15 19:00
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
-# 2024-10-15 10:20
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/soul.plugin
 # 2024-10-15 10:53:02
-# https://loon.126996.xyz/Tool/Loon/Plugin/Soul_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/Soul_remove_ads.plugin
 
 [Rule]
 # 地理位置 - 影响注册账号时的属地判断
@@ -51,8 +49,8 @@ IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
 ^https:\/\/(?:api-\w+|gateway-mobile-gray|post)\.soulapp\.cn\/(?:furion\/position\/content|hot\/soul\/rank|mobile\/app\/version\/queryIos|official\/scene\/module|teenager\/config|v2\/post\/gift\/list|v\d\/post\/homepage\/guide\/card) response-body-json-del data
 
 [Script]
-# RuCu6
-http-response ^https:\/\/(?:api-\w+|chat-live|post)\.soulapp\.cn\/(?:chat\/limitInfo|chatroom\/chatClassifyRoomList|homepage\/diamond\/position\/info|v2\/post\/recSquare\/subTabs|v6\/planet\/config) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Soul/Soul.js, requires-body = true, tag = 移除Soul广告
+# 可莉🅥
+http-response ^https:\/\/(?:api-\w+|chat-live|post)\.soulapp\.cn\/(?:chat\/limitInfo|chatroom\/chatClassifyRoomList|homepage\/diamond\/position\/info|v2\/post\/recSquare\/subTabs|v6\/planet\/config) script-path = https://kelee.one/Resource/Script/Soul/Soul_remove_ads.js, requires-body = true, tag = 移除Soul广告
 
 # ZenmoFeiShi
 http-response ^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul全面净化

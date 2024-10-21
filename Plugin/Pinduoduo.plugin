@@ -8,16 +8,14 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Pinduoduo.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
 # 2024-10-18 13:13
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024.08.10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
-# 2024-10-18 10:25
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/pinduoduo.plugin
 # 2024-10-19 17:18:31
-# https://loon.126996.xyz/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]
 # 拦截HTTPDNS
@@ -50,7 +48,7 @@ DOMAIN, titan.pinduoduo.com, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
 
 [Script]
-http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Pinduoduo/Pinduoduo.js, requires-body = true, tag = 精简首页
+http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/Script/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = 精简首页
 
 [MitM]
 hostname = api.pinduoduo.com, api.yangkeduo.com

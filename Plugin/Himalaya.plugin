@@ -8,10 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Himalaya.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
 # 2023-10-29 13:48
-# https://loon.126996.xyz/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
 # 2024-05-16
 # https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.sgmodule
 
@@ -73,15 +73,15 @@ http-request ^https?:\/\/(mobile(hera)?|m(ob)?wsa)\.ximalaya\.com\/(mobile-playp
 
 # 可莉🅥
 # 首页顶部去除直播
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://loon.126996.xyz/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/customCategories script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页直播推广
 # 屏蔽首页横幅广告
-http-response ^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic script-path = https://loon.126996.xyz/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页横幅广告
+http-response ^https?:\/\/.*\.xima.*\.com\/focus-mobile\/focusPic script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页横幅广告
 # 屏蔽首页动态广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path = https://loon.126996.xyz/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-feed\/v\d\/mix script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除首页动态广告
 # 屏蔽标签页滚动广告
-http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path = https://loon.126996.xyz/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除标签页滚动广告
+http-response ^https?:\/\/.*\.xima.*\.com\/discovery-category\/v\d/category script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除标签页滚动广告
 # 去除我的页面广告标签
-http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path = https://loon.126996.xyz/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除我的页面广告
+http-response ^https?:\/\/.*\.xima.*\.com\/mobile-user\/v\d\/homePage script-path = https://kelee.one/Resource/Script/Himalaya/Himalaya_remove_ads.js, requires-body = true, tag = 移除我的页面广告
 
 [MitM]
 hostname = *.xima*.*, *.xmcdn.*, *.ximalaya.com, 47.100.227.85, 61.164.145.12, 61.172.194.185, 61.172.194.186, 106.41.204.126, 112.80.180.72, 112.98.170.228, 112.99.146.108, 114.80.99.*, 118.25.119.177, 180.153.140.*, 180.153.250.*, 180.153.255.*

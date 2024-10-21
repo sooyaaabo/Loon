@@ -8,12 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Goofish.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
 # 2024-10-19 17:18:31
-# https://loon.126996.xyz/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
-# 2024-10-12 12:50
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/xianyu.plugin
+# https://kelee.one/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
@@ -49,16 +47,16 @@
 
 [Script]
 # 我的页面
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Goofish/Goofish.js, requires-body = true, tag = 移除我的页面推广
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除我的页面推广
 
 # 首页信息流
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Goofish/Goofish.js, requires-body = true, tag = 移除首页信息流推广
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除首页信息流推广
 
 # 首页顶部标签
-http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Goofish/Goofish.js, requires-body = true, tag = 移除首页顶部标签推广
+http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除首页顶部标签推广
 
 # 搜索结果广告
-http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Goofish/Goofish.js, requires-body = true, tag = 移除搜索结果广告
+http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://kelee.one/Resource/Script/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = 移除搜索结果广告
 
 [MitM]
 hostname = *.m.goofish.com

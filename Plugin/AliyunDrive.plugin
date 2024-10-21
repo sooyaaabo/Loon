@@ -1,17 +1,17 @@
 #!name = 阿里云盘
 #!desc = 过滤阿里云盘广告
 #!openUrl = https://apps.apple.com/app/id1494661473
-#!author = RuCu6[https://github.com/RuCu6], sooyaaabo[https://github.com/sooyaaabo]
+#!author = RuCu6[https://github.com/RuCu6], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AliyunDrive.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-22 00:00
 
-# 2024-08-24 12:50
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# 2024-07-15 22:28:47
+# https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin
 
 [Rule]
 IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
@@ -25,8 +25,8 @@ IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 
 [Script]
 # 移除阿里云盘广告
-http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/AliyunDrive/AliyunDrive.js, requires-body = true, tag = 移除阿里云盘广告
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/AliyunDrive/AliyunDrive.js, requires-body = true, tag = 移除阿里云盘广告
+http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) script-path = https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body = true, tag = 移除阿里云盘广告
+http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body = true, tag = 移除阿里云盘广告
 
 [MitM]
 hostname = *api.alipan.com, *api.aliyundrive.com, member.alipan.com, member.aliyundrive.com

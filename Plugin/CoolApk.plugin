@@ -1,17 +1,17 @@
 #!name = 酷安
 #!desc = 过滤酷安广告
 #!openUrl = https://apps.apple.com/app/id1422581869
-#!author = RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi]
+#!author = RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/CoolApk.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-22 00:00
 
-# 2024-08-24 12:50
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
+# 2023-11-15 17:20:55
+# https://kelee.one/Tool/Loon/Plugin/CoolApk_remove_ads.plugin
 # 2024-07-19 00:45
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.snippet
 
@@ -19,8 +19,8 @@
 ^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
 [Script]
-# RuCu6
-http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Coolapk/Coolapk.js, requires-body = true, tag = 移除酷安广告
+# 可莉🅥
+http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://kelee.one/Resource/Script/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = 移除酷安广告
 
 # ZenmoFeiShi
 http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告

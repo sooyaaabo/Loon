@@ -11,19 +11,19 @@
 #!select = 去除轮播图广告,开启,关闭
 #!select = 去除整个轮播图,开启,关闭
 #!select = 去除置顶,开启,关闭
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
 # 2024-01-27 20:57
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
 # 2024-08-11 12:57:27
-# https://loon.126996.xyz/Tool/Loon/Plugin/IThome_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin
 
 [Rewrite]
 ^https?:\/\/api\.zuihuimai\.com\/static\/.*\/hongbao reject
 ^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ reject
 
 [Script]
-http-response ^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo) script-path = https://loon.126996.xyz/Resource/Script/IThome/IThome_remove_ads.js, requires-body = true, tag = IT之家去广告
+http-response ^https:\/\/napi\.ithome\.com\/api\/(?:news\/index|topmenu\/getfeeds\?|api\/douyin\/GetLiveInfo) script-path = https://kelee.one/Resource/Script/IThome/IThome_remove_ads.js, requires-body = true, tag = IT之家去广告
   
 [MitM]
 hostname = napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

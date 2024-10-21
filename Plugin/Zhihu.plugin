@@ -8,12 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Zhihu.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
-# 2024-10-15 10:50
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/zhihu.plugin
 # 2024-10-15 10:56:31
-# https://loon.126996.xyz/Tool/Loon/Plugin/Zhihu_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin
 
 [Rule]
 DOMAIN, appcloud.zhihu.com, REJECT
@@ -67,21 +65,21 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 [Script]
 # 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片、精简顶部标签
-http-response ^https:\/\/(?:api|page-info)\.zhihu\.com\/(?:answers|articles)\/v2\/\d+ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/(?:moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 精简顶部标签
-http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/(?:api|page-info)\.zhihu\.com\/(?:answers|articles)\/v2\/\d+ script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/commercial_api\/app_float_layer script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/feed\/render\/tab\/config\? script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/(?:moments_v3|topstory\/hot-lists\/total|topstory\/recommend) script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/api\.zhihu\.com\/root\/tab script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 精简顶部标签
+http-response ^https:\/\/api\.zhihu\.com\/v2\/topstory\/hot-lists\/everyone-seeing\? script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除首页推广
 
 # 回答详情页 - 评论区顶部、下一个回答
-http-response ^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除回答详情页推广
-http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除回答详情页推广
-http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 移除回答详情页推广
+http-response ^https:\/\/api\.zhihu\.com\/next-(?:bff|data|render) script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除回答详情页推广
+http-response ^https:\/\/api\.zhihu\.com\/questions\/\d+(?:\/answers|\/feeds|\?include=) script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除回答详情页推广
+http-response ^https:\/\/www\.zhihu\.com\/api\/v4\/(?:articles|answers)\/\d+\/recommendations?\? script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 移除回答详情页推广
 
 # 其他 - 服务器推送配置
-http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 拦截服务器推送配置
-http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Zhihu/Zhihu.js, requires-body = true, tag = 拦截服务器推送配置
+http-response ^https:\/\/appcloud2\.zhihu\.com\/v3\/config script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 拦截服务器推送配置
+http-response ^https:\/\/m-cloud\.zhihu\.com\/api\/cloud\/zhihu\/config\/all\? script-path = https://kelee.one/Resource/Script/Zhihu/Zhihu_remove_ads.js, requires-body = true, tag = 拦截服务器推送配置
 
 [MitM]
 hostname = *.zhihu.com

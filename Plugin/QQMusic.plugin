@@ -8,10 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/QQMusic.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
 # 2024-10-19 17:18:31
-# https://loon.126996.xyz/Tool/Loon/Plugin/QQMusic_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/QQMusic_remove_ads.plugin
 
 [Rule]
 DOMAIN, adstats.tencentmusic.com, REJECT

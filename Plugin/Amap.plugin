@@ -1,19 +1,17 @@
 #!name = 高德地图
 #!desc = 过滤高德地图广告
 #!openUrl = https://apps.apple.com/app/id461703208
-#!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh]
+#!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Amap.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-22 00:00
 
-# 2024-10-19 22:45
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/amap.plugin
 # 2024-10-15 10:15:26
-# https://loon.126996.xyz/Tool/Loon/Plugin/Amap_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
@@ -49,33 +47,33 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 
 [Script]
 # 移除阿里巴巴通用广告请求
-# http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/MyBlockAds/header.js, tag = 阿里巴巴通用广告
+# http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js, tag = 阿里巴巴通用广告
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
-http-response ^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/c3frontend\/af-(?:hotel|launch)\/page\/main\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(?:routeInfo|routePlan) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(?:mps|search\/sp|sug|tips_operation_location) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/c3frontend\/af-(?:hotel|launch)\/page\/main\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(?:routeInfo|routePlan) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(?:mps|search\/sp|sug|tips_operation_location) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除导航详情页推广
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
-http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:card-service-plan-home|main-page) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除首页推广
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:card-service-plan-home|main-page) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除首页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除首页推广
 
 # 我的页面 - 个人主页、推广卡片
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除我的页面推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除我的页面推广
 
 # 附近页
-http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除附近页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除附近页推广
 
 # 开屏广告
-http-response ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除开屏广告
+http-response ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除开屏广告
 
 # 打车页 - 红点角标、弹窗、天气图标、推广卡片
-http-response ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:car\/order\/content_info|order_web\/friendly_information) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除打车页推广
-http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Amap/Amap.js, requires-body = true, tag = 移除打车页推广
+http-response ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:car\/order\/content_info|order_web\/friendly_information) script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除打车页推广
+http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? script-path = https://kelee.one/Resource/Script/Amap/Amap_remove_ads.js, requires-body = true, tag = 移除打车页推广
 
 [MitM]
 hostname = m5.amap.com, m5-zb.amap.com, oss.amap.com, sns.amap.com
