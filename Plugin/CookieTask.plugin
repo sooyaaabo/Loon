@@ -36,11 +36,11 @@ http-request ^https:\/\/(auth|aliyundrive)\.alipan\.com\/v2\/account\/token scri
 cron {cron-alipan} script-path = https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js, timeout = 60, tag = 阿里云盘Task
 
 # 微博 - api.weibo.cn
-http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable = {CookieScript-weibo}, tag = 微博Cookie
+http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js, timeout = 60, enable = {CookieScript-weibo}, tag = 微博Cookie
 cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js, timeout = 60, tag = 微博Task
 
 # 爱奇艺 - passport.iqiyi.com
-http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable = {CookieScript-iqiyi}, tag = 爱奇艺Cookie
+http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/IQIYICookieTask.js, timeout = 60, enable = {CookieScript-iqiyi}, tag = 爱奇艺Cookie
 cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
 
 [MitM]
