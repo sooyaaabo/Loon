@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Pinduoduo.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-10-18 13:13
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -17,7 +17,7 @@
 # 2024-10-18 10:25
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/pinduoduo.plugin
 # 2024-10-19 17:18:31
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]
 # 拦截HTTPDNS

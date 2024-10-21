@@ -8,10 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ThunderCloudDisk.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-07-14 20:23:48
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/XunLei_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/XunLei_remove_ads.plugin
 # 2022-09-10 v1.4.5
 # https://github.com/Marol62926/Loon/blob/main/xunlei.plugin
 
@@ -120,7 +120,7 @@ DOMAIN, et.tanx.com, REJECT
 # 解锁迅雷会员
 http-response ^https:\/\/xluser-ssl\.xunlei\.com\/xluser\.core\.login\/v3\/getuserinfo script-path = https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body = true, tag = 解锁迅雷会员
 # 精简我的页面
-http-response ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/XunLei/XunLei_remove_ads.js, requires-body = true, tag = 精简我的页面
+http-response ^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ script-path = https://loon.126996.xyz/Resource/Script/XunLei/XunLei_remove_ads.js, requires-body = true, tag = 精简我的页面
 
 [MitM]
 hostname = api-shoulei-ssl.xunlei.com, conf-m-ssl.xunlei.com, xluser-ssl.xunlei.com

@@ -8,12 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Zhidemai.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
 # 2024-09-08 20:59:02
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/smzdm_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/smzdm_remove_ads.plugin
 
 [Rule]
 DOMAIN, aaid.uyunad.com, REJECT

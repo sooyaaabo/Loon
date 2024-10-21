@@ -8,12 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Taobao.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
 # 2024-01-25 18:00:54
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Taobao_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/Taobao_remove_ads.plugin
 
 [Rule]
 DOMAIN, dns.alidns.com, REJECT

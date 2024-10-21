@@ -8,10 +8,10 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Ezviz.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-07-10 02:10:56
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/VideoGo_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/VideoGo_remove_ads.plugin
 
 [Rule]
 # 拦截HTTPDNS
@@ -114,7 +114,7 @@ DOMAIN-SUFFIX, pos.baidu.com, REJECT
 ^https:\/\/api\.ys7\.com\/v3\/videoclips\/square\/video\/query reject-dict
 
 [Script]
-# http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/VideoGo/VideoGo_remove_ads.js, requires-body = true, tag = 我的页面去广告
+# http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://loon.126996.xyz/Resource/Script/VideoGo/VideoGo_remove_ads.js, requires-body = true, tag = 我的页面去广告
 
 [MitM]
 hostname = api.ys7.com, i.ys7.com

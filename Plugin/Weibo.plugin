@@ -8,12 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Weibo.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-08-28 08:25:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/weibo.plugin
 # 2024-10-16 11:58:29
-#https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weibo_remove_ads.plugin
+#https://loon.126996.xyz/Tool/Loon/Plugin/Weibo_remove_ads.plugin
 
 [Rule]
 # 请求放行

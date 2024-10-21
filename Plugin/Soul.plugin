@@ -8,14 +8,14 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Soul.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-08-15 19:00
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
 # 2024-10-15 10:20
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/soul.plugin
 # 2024-10-15 10:53:02
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Soul_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/Soul_remove_ads.plugin
 
 [Rule]
 # 地理位置 - 影响注册账号时的属地判断

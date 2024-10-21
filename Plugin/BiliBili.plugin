@@ -8,12 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 22:00
 
 # 2024-10-15 22:45
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/bilibili.plugin
 # 2024-10-19 17:18:31
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
+# https://loon.126996.xyz/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
 
 [General]
 force-http-engine-hosts = :8000
