@@ -20,7 +20,7 @@
 
 [Script]
 # RuCu6
-http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Coolapk/Coolapk.js/, requires-body = true, tag = 移除酷安广告
+http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Coolapk/Coolapk.js, requires-body = true, tag = 移除酷安广告
 
 # ZenmoFeiShi
 http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = 移除酷安广告

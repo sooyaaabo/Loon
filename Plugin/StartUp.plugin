@@ -818,15 +818,15 @@ http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path =
 
 # ======= D ======= #
 # 懂球帝
-http-request ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, tag = 懂球帝, argument="text/json&url=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js"
+http-request ^https?:\/\/ap\.dongqiudi\.com\/plat\/v4 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/echo-response.js, requires-body = true, tag = 懂球帝, argument="text/json&url=https://raw.githubusercontent.com/ddgksf2013/Scripts/master/dongqiudi.js"
 # 动画疯
 ;http-response ^https:\/\/api\.gamer\.com\.tw\/mobile_app\/anime\/v\d\/(token|m3u8).php\? script-path = https://raw.githubusercontent.com/NobyDa/Script/master/Bahamut/BahamutAnimeAds.js, requires-body = true, tag = 动画疯
 # 叮咚买菜
-http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 叮咚买菜, argument="rt_time":\d{2}->rt_time":40"
+http-response ^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/getAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 叮咚买菜, argument="rt_time":\d{2}->rt_time":40"
 
 # ======= F ======= #
 # 飞客茶馆
-http-response ^https?:\/\/www\.flyert\.com\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 飞客茶馆, argument="adv->ddgksf2013"
+http-response ^https?:\/\/www\.flyert\.com\/api\/mobile\/index\.php\?version=\d&mobile=yes&module=basicdata&type=forumlist script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 飞客茶馆, argument="adv->ddgksf2013"
 http-response ^https?:\/\/www\.flyert\.com\/source\/plugin\/mobile\/mobile\.php\?module=threadpost&.+?&page=1 script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/fly.js, requires-body = true, tag = 飞客茶馆
 
 # ======= H ======= #
@@ -836,7 +836,7 @@ http-response ^https?:\/\/.*umetrip\.com\.cn\/gateway\/api\/umetrip\/native$ scr
 
 # ======= I ======= #
 # i3综合社区
-;http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = i3综合社区, argument="cm-pop-up-banners->ddgksf2013"
+;http-response ^https?:\/\/www\.i3zh\.com script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = i3综合社区, argument="cm-pop-up-banners->ddgksf2013"
 # 爱奇艺
 http-response ^https?:\/\/.*cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/iqiyi_open_ads.js, requires-body = true, tag = 爱奇艺
 # IT之家
@@ -848,12 +848,12 @@ http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-
 # 京东[invalid]
 http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=(hotWords|hotSearchTerms) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/jd_json.js, requires-body = true, tag = 京东
 # 京东lite
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 京东lite, argument="jdLiteAdvertisingVO->ddgksf2013"
-http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 京东lite, argument="pushData->ddgksf2013"
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_advertising script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 京东lite, argument="jdLiteAdvertisingVO->ddgksf2013"
+http-response ^https?:\/\/api\.m\.jd\.com\/client\.action\?functionId=lite_SmartPush script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 京东lite, argument="pushData->ddgksf2013"
 
 # ======= K ======= #
 # KFC肯德基
-http-response ^https?:\/\/res.kfc.com.cn\/CRM\/kfcad\/apphome6\/apphome.*json script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = KFC肯德基, argument="bootStrapAd->ddgksf2013"
+http-response ^https?:\/\/res.kfc.com.cn\/CRM\/kfcad\/apphome6\/apphome.*json script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = KFC肯德基, argument="bootStrapAd->ddgksf2013"
 # 酷安
 http-response ^https?:\/\/api\.coolapk\.com\/v6\/(feed\/(replyList|detail)|main\/indexV8|dataList) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body = true, tag = 酷安
 http-response ^https?:\/\/api.coolapk.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/coolapk.js, requires-body = true, tag = 酷安
@@ -862,7 +862,7 @@ http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path = h
 
 # ======= M ======= #
 # 慢慢买
-http-response ^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 慢慢买, argument="splashAD->ddgksf2013"
+http-response ^https?:\/\/apapia-sqk\.manmanbuy\.com\/index_json\.ashx script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 慢慢买, argument="splashAD->ddgksf2013"
 
 # ======= N ======= #
 # 农业银行
@@ -870,7 +870,7 @@ http-response ^https?:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm script-path
 
 # ======= O ======= #
 # Oclean Care
-http-response ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/User\/GetUserCenter script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = Oclean Care, argument="banner"->ddgksf2013""
+http-response ^https?:\/\/careapi\.oclean\.com\/mall\/v\d\/User\/GetUserCenter script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = Oclean Care, argument="banner"->ddgksf2013""
 
 # ======= P ======= #
 # 朴朴超市
@@ -891,7 +891,7 @@ http-response ^https?:\/\/ccsp-egmas\.sf-express\.com\/cx-app-base\/base\/app\/a
 # Stay
 http-response ^https?:\/\/api\.shenyin\.name\/stay-fork\/browse\/featured$ script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/stay.js, requires-body = true, tag = Stay
 # 识货
-http-response ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 识货, argument="egin_time":"\d{4}->egin_time":"2099"
+http-response ^https?:\/\/sh-gateway\.shihuo\.cn\/v\d\/services\/sh-adapi\/home\/screen script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 识货, argument="egin_time":"\d{4}->egin_time":"2099"
 # 什么值得买
 http-response ^https?:\/\/.*zdmimg\.com\/cpm\/api\/v\d\/advert_distribution\/get_all_advertise script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/smzdm_json.js, requires-body = true, tag = 什么值得买
 # 神州租车
@@ -899,7 +899,7 @@ http-response ^https?:\/\/apiproxy\.zuche\.com\/resource\/cardes\/toufang\/marke
 
 # ======= T ======= #
 # 天府通
-http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 天府通, argument="officialAdvertResultVo->ddgksf2013"
+http-response ^https?:\/\/tft-app\.cdtft\.cn\/gateway-customer\/tftapp\/tft-ams\/api\/appAd script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 天府通, argument="officialAdvertResultVo->ddgksf2013"
 
 # ======= V ======= #
 # v2ex
@@ -909,15 +909,15 @@ http-response ^https?:\/\/.*v2ex\.com\/($|t\/\d+) script-path = https://raw.gith
 # 微信110
 http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/weixin110.js, requires-body = true, tag = 微信110
 # 微信
-;http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 微信, argument="advertisement->ddgksf2013"
+;http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 微信, argument="advertisement->ddgksf2013"
 # 威锋
-;http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 威锋, argument="dataList":\[.+\]->dataList":[{}]"
+;http-response ^https?:\/\/api\.wfdata\.club\/v\d\/search\/hot\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 威锋, argument="dataList":\[.+\]->dataList":[{}]"
 
 # ======= X ======= #
 # 小特
-http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 小特, argument="screenSplashAd->ddgksf2013"
+http-response ^https?:\/\/lcen\.xiaote\.net\/api\/graphql script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 小特, argument="screenSplashAd->ddgksf2013"
 # 小熊播放器
-http-response ^https?:\/\/apps\.workair\.cn\/app\/version script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/replace-body.js, requires-body = true, tag = 小熊播放器, argument="ads"->ddgksf2013""
+http-response ^https?:\/\/apps\.workair\.cn\/app\/version script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = 小熊播放器, argument="ads"->ddgksf2013""
 
 # ======= Z ======= #
 # 知乎
