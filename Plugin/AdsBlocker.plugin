@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdsBlock.png
-#!date = 2024-10-21 11:00
+#!date = 2024-10-21 19:40
 
-# 2024-10-21 10:20:00
+# 2024-10-21 19:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2024-10-21 10:20:00
+# 2024-10-21 19:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
 
 [Rule]
@@ -2493,7 +2493,7 @@ http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-pat
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
-http-response ^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Umetrip/Umetrip_remove_ads.js, requires-body = true, tag = 航旅纵横
+http-response ^https?:\/\/(114\.115\.217\.129)|(home\.umetrip\.com)\/gateway\/api\/umetrip\/native$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/Umetrip_remove_ads.js, requires-body = true, tag = 航旅纵横
 
 # 盒马 - acs.m.taobao.com, acs-m.freshippo.com
 http-response ^https?:\/\/acs(\.|-)m\.(taobao|freshippo)\.com\/gw\/mtop\.wdk\.render\.query(index|my)page script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/freshippo.js, requires-body = true, tag = 盒马
