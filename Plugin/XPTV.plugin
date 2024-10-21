@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/XPTV.png
-#!date = 2024-09-16 22:30
+#!date = 2024-10-21 11:00
 
 # 2024-08-06 00:14
 # https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
@@ -32,7 +32,7 @@ http-response ^https?:\/\/hd\.suxun\.site\/api\.php\/provide\/vod(.*)&ids script
 http-request ^https?:\/\/ppvod01\.blbtgg\.com.*(ts|m3u8) script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = 文才资源
 http-response ^https?:\/\/vipcj\.timizy\.top\/api\.php\/provide\/vod\/from\/mgtv(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = MGTV
 http-response ^https?:\/\/dsakf23665\.com\/api\.php\/provide\/vod(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = dsakf23665
-http-response ^https:\/\/42\.157\.129\.29:2222\/.*\.png script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = jx
+http-response ^https:\/\/42\.157\.129\.29:2222\/.*\.png script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = JX
 
 [MitM]
 hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, api.emasmr.com, ppvod01.blbtgg.com, vipcj.timizy.top, 42.157.129.29:2222

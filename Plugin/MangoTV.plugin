@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MangoTV.png
-#!date = 2024-09-16 22:30
+#!date = 2024-10-21 11:00
 
 # 2024-08-11 08:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
@@ -55,20 +55,20 @@ URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DI
 
 [Script]
 # 会员解锁（国区，美区，平板端，Mac端）
-http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
-http-request ^https:\/\/(mobile|pad|pcc)\.api\.mgtv\.com\/v8\/video\/getSource\? script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁@Yu9191
+http-request ^https:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁
+http-request ^https:\/\/(mobile|pad|pcc)\.api\.mgtv\.com\/v8\/video\/getSource\? script-path = https://raw.githubusercontent.com/Yunxingz/Rewrite/main/MGTV.js, requires-body = false, tag = 会员解锁
 # 我的页面
-http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 我的页面@RuCu6
+http-response ^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 我的页面
 # 首页信息流和顶部标签页
-http-response ^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页信息流和顶部标签页@RuCu6
-http-response ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页信息流和顶部标签页@RuCu6
+http-response ^http:\/\/mob-st\.bz\.mgtv\.com\/odin\/c1\/channel\/index\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 首页信息流和顶部标签页
+http-response ^https?:\/\/dc2?\.bz\.mgtv\.com\/dynamic\/v1\/channel\/(index|vrsList)\/\w script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 首页信息流和顶部标签页
 # 底栏
-http-response ^https:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 底栏@RuCu6
+http-response ^https:\/\/mobile\.api\.mgtv\.com\/mobile\/config\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 底栏
 # 播放详情页
-http-response ^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 播放详情页@RuCu6
-http-response ^https:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 播放详情页@RuCu6
+http-response ^https:\/\/mobile\.api\.mgtv\.com\/v10\/video\/info\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 播放详情页
+http-response ^https:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/info\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 播放详情页
 # 搜索框填充词
-http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 搜索框填充词@RuCu6
+http-response ^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v2\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 搜索框填充词
 
 [MitM]
 hostname = *.mgtv.com

@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Swiftgram.png
-#!date = 2024-09-16 22:30
+#!date = 2024-10-21 11:00
 
 [Rewrite]
 (https:\/\/)?t\.me\/(.+) 302 sg://resolve?domain=$2

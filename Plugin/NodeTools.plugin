@@ -11,7 +11,7 @@
 #!select = 入口查询超时时间ms, 100, 200, 500, 800, 1000, 1200, 2000, 5000, 10000
 #!select = 落地查询超时时间ms, 100, 200, 500, 1000, 1500, 2000, 3000, 5000, 10000
 #!select = 是否隐藏真实IP, 隐藏, 不隐藏
-#!date = 2024-09-16 22:30
+#!date = 2024-10-21 11:00
 
 # 2024-07-01 01:05:12
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Node_detection_tool.plugin
@@ -19,7 +19,7 @@
 # https://raw.githubusercontent.com/Keywos/rule/main/script/netisp/netisp.plugin
 
 [Script]
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NodeSpeedtest.js, timeout = 10, tag = 节点网速测试 𝕂, img-url = speedometer.system
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询 𝕂, img-url = play.circle.system
-generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NodeLocation.js, timeout = 10, tag = 节点位置查询 𝕂, img-url = location.circle.system
+generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NodeTools/NodeSpeedtest.js, timeout = 10, tag = 节点网速测试 𝕂, img-url = speedometer.system
+generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NodeTools/NodeUnlockDetection.js, timeout = 20, tag = 节点解锁查询 𝕂, img-url = play.circle.system
+generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/NodeTools/NodeLocation.js, timeout = 10, tag = 节点位置查询 𝕂, img-url = location.circle.system
 generic script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/netisp/js/loon.js, tag = 入口落地查询 𝕂, img-url = network

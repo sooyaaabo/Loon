@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Soul.png
-#!date = 2024-10-15 10:50
+#!date = 2024-10-21 11:00
 
 # 2024-08-15 19:00
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.snippet
@@ -52,7 +52,7 @@ IP-CIDR, 121.196.197.147/32, REJECT, no-resolve
 
 [Script]
 # RuCu6
-http-response ^https:\/\/(?:api-\w+|chat-live|post)\.soulapp\.cn\/(?:chat\/limitInfo|chatroom\/chatClassifyRoomList|homepage\/diamond\/position\/info|v2\/post\/recSquare\/subTabs|v6\/planet\/config) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/soul.js, requires-body = true, tag = 移除Soul广告
+http-response ^https:\/\/(?:api-\w+|chat-live|post)\.soulapp\.cn\/(?:chat\/limitInfo|chatroom\/chatClassifyRoomList|homepage\/diamond\/position\/info|v2\/post\/recSquare\/subTabs|v6\/planet\/config) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Soul/Soul.js, requires-body = true, tag = 移除Soul广告
 
 # ZenmoFeiShi
 http-response ^https:\/\/api-a\.soulapp\.cn\/v2\/post\/gift\/list script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Soul.js, requires-body = true, tag = Soul全面净化

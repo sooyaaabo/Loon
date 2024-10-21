@@ -13,7 +13,7 @@
 #!select = 字幕翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #!select = 歌词翻译语言, zh-Hans, zh-Hant, ja, ko, en, off
 #select = 启用调试模式, true, false
-#!date = 2024-09-26 11:00
+#!date = 2024-10-21 11:00
 
 # 2024-06-11 21:59:22
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/youtube.plugin

@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/IQIYI.png
-#!date = 2024-09-16 22:30
+#!date = 2024-10-21 11:00
 
 # 2024-08-11 08:40
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
@@ -31,28 +31,28 @@ DOMAIN, api.iqiyi.com, REJECT
 
 [Script]
 # 首页信息流广告
-http-response ^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页信息流
-http-response ^http:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页信息流
-http-response ^https:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页信息流
-http-response ^https:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页信息流
+http-response ^http:\/\/[\d\.]+\/3f1\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺首页信息流
+http-response ^http:\/\/access\.if\.iqiyi\.com\/3f1\/cards\.iqiyi\.com\/(views_category\/3\.0\/category_home|views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺首页信息流
+http-response ^https:\/\/cards\.iqiyi\.com\/views_category\/3\.0\/(category_home|categorylib_content|film_hybrid)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺首页信息流
+http-response ^https:\/\/cards\.iqiyi\.com\/(views_home\/3\.0\/qy_home|waterfall\/3\.0\/feed)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺首页信息流
 # 播放详情页
-http-response ^https:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 播放详情页
+http-response ^https:\/\/cards\.iqiyi\.com\/views_plt\/3\.0\/player_tabs_v2\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺播放详情页
 # 搜索页列表
-http-response ^https:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 搜索页列表
+http-response ^https:\/\/cards\.iqiyi\.com\/views_search\/3\.0\/(hot_query_)?search\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺搜索页列表
 # 评论区
-http-response ^https:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 评论区
+http-response ^https:\/\/comment-card\.iqiyi\.com\/views_comment\/3\.0\/long_video_comments\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺评论区
 # 我的页面菜单
-http-response ^https:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 我的页面菜单
+http-response ^https:\/\/iface2\.iqiyi\.com\/aggregate\/3\.0\/getMyMenus\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺我的页面菜单
 # 首页左上角天气
-http-response ^https:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 首页左上角天气
+http-response ^https:\/\/iface2\.iqiyi\.com\/control\/3\.0\/init_proxy\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺首页左上角天气
 # 通用控制-各标签页二楼
-http-response ^https:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 各标签页页二楼推广
+http-response ^https:\/\/iface2\.iqiyi\.com\/fusion\/3\.0\/common_switch\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺各标签页页二楼推广
 # 底栏和顶部标签页推广
-http-response ^https:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 底栏和顶部标签页推广
+http-response ^https:\/\/iface2\.iqiyi\.com\/views\/3\.0\/(bottom_theme|home_top_menu)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺底栏和顶部标签页推广
 # 搜索框填充词
-http-response ^https:\/\/search\.video\.iqiyi\.com\/q\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 搜索框填充词
+http-response ^https:\/\/search\.video\.iqiyi\.com\/q\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺搜索框填充词
 # 开屏和播放广告
-http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cnftp.js, requires-body = true, tag = 开屏和播放广告
+http-response ^https?:\/\/(kjp|t7z)\.cupid\.iqiyi\.com\/mixer\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = 爱奇艺开屏和播放广告
 
 [MitM]
 hostname = -i.vip.iqiyi.com, *.iqiyi.com

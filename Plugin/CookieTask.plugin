@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Memento-dark.png
-#!date = 2024-10-18 10:00
+#!date = 2024-10-21 11:00
 
 # 2024-01-24 13:13:56
 # https://gist.githubusercontent.com/Sliverkiss/33800a98dcd029ba09f8b6fc6f0f5162/raw/aliyun.js
@@ -37,11 +37,11 @@ cron {cron-alipan} script-path = https://gist.githubusercontent.com/Sliverkiss/3
 
 # 微博 - api.weibo.cn
 http-request ^https?:\/\/api\.weibo\.cn\/\d\/users\/show script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, enable = {CookieScript-weibo}, tag = 微博Cookie
-cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/WeiboCookieTask.js, timeout = 60, tag = 微博Task
+cron {cron-weibo} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/WeiboCookieTask.js, timeout = 60, tag = 微博Task
 
 # 爱奇艺 - passport.iqiyi.com
 http-request ^https:\/\/passport\.iqiyi\.com\/apis\/user\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, enable = {CookieScript-iqiyi}, tag = 爱奇艺Cookie
-cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
+cron {cron-iqiyi} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CookieTask/IQIYICookieTask.js, timeout = 60, tag = 爱奇艺Task
 
 [MitM]
 hostname = auth.alipan.com, auth.aliyundrive.com, api.weibo.cn, passport.iqiyi.com

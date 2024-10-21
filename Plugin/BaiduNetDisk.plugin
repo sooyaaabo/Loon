@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BaiduNetDisk.png
-#!date = 2024-10-04 09:20
+#!date = 2024-10-21 11:00
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -105,7 +105,7 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 
 [Rewrite]
 # RuCu6
-^https?:\/\/pan\.baidu\.com\/(act\/(api\/activityentry|v2\/(bchannel|welfare)\/list)|rest\/2\.0\/pcs\/ad) reject
+^https?:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) reject-dict
 
 # 可莉🅥
 # 拦截HTTPDNS
@@ -145,21 +145,21 @@ DOMAIN-SUFFIX, union.baidu.com, REJECT
 
 [Script]
 # RuCu6
-http-response ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body = true, tag = 百度网盘广告@RuCu6
-http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/baidu/baiduCloud.js, requires-body = true, tag = 百度网盘广告@RuCu6
+http-response ^https:\/\/pan\.baidu\.com\/api\/getsyscfg\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduNetDisk.js, requires-body = true, tag = 百度网盘广告@RuCu6
+http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Baidu/BaiduNetDisk.js, requires-body = true, tag = 百度网盘广告@RuCu6
 
 # chxm1023
-http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body = true, tag = 解锁SVIP权益@chxm1023
+http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body = true, tag = 解锁SVIP权益
 
 # ddgksf2013
 # 开屏广告
-http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+http-response ^https?:\/\/pan\.baidu\.com\/api\/getsyscfg script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
 # 广告推广
-http-response ^https?:\/\/afd\.baidu\.com\/afd\/entry script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+http-response ^https?:\/\/afd\.baidu\.com\/afd\/entry script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
 # 设置页游戏
-http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+http-response ^https:\/\/pan\.baidu\.com\/rest\/.*\/membership\/user\?method=gamecenter script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
 # 首页信息流
-http-response ^https:\/\/pan\.baidu\.com\/feed\/cardinfos script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告@ddgksf2013
+http-response ^https:\/\/pan\.baidu\.com\/feed\/cardinfos script-path = https://gist.githubusercontent.com/ddgksf2013/f43026707830c7818ee3ba624e383c8d/raw/baiduCloud.adblock.js, requires-body = true, tag = 百度网盘广告
 
 [Mitm]
 hostname = pan.baidu.com, afd.baidu.com, 180.76.76.200, 180.76.76.112

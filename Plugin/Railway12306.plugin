@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Railway12306.png
-#!date = 2024-09-16 22:30
+#!date = 2024-10-21 11:00
 
 # 2024-08-24 12:50
 # https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/MyBlockAds.conf
@@ -19,9 +19,9 @@ DOMAIN, ad.12306.cn, DIRECT
 
 [Script]
 # 移除12306开屏广告
-http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/12306.js, requires-body = true, tag = 移除12306开屏广告
+http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Railway12306/Railway12306.js, requires-body = true, tag = 移除12306开屏广告
 # 移除12306应用内广告
-http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, tag = 移除12306应用内广告
+http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js, tag = 移除12306应用内广告
 
 [MitM]
 hostname = ad.12306.cn, mobile.12306.cn

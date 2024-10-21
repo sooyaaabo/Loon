@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/WeChat.png
-#!date = 2024-09-27 22:30
+#!date = 2024-10-21 11:00
 
 # 2024-09-05 23:53:41
 # https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
@@ -38,7 +38,7 @@ DOMAIN, e.jparking.cn, REJECT
 #---------- 微信公众号 ----------#
 # 移除公众号中的推广内容 //mp.weixin.qq.com
 # ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle)\? reject-dict
+^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
 
 #---------- 微信小程序 ----------#
 # 企迈点单系统
@@ -245,7 +245,7 @@ DOMAIN, e.jparking.cn, REJECT
 # http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true, tag = 微信公众号去广告
 
 #---------- 微信外部链接解锁 ----------#
-http-response ^https\:\/\/(weixin110\.qq|security.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body = true, tag = 微信外部链接解锁
+http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body = true, tag = 微信外部链接解锁
 
 #---------- 微信小程序 ----------#
 # 企迈点单系统 webapi.qmai.cn, images.qmai.cn

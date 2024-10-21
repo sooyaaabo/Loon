@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ColorfulCloudsWeatherPro.png
-#!date = 2024-09-27 17:40
+#!date = 2024-10-21 11:00
 
 # 2024-09-28 10:30
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/caiyun.plugin
@@ -28,11 +28,11 @@ DOMAIN, gather.colorfulclouds.net, REJECT
 
 [Script]
 # 共享会员
-http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/caiyun.js, tag = 彩云天气共享会员
-http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气共享会员
+http-request ^https:\/\/wrapper\.cyapi\.cn\/v1\/(nafp\/origin_images|satellite)\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, tag = 彩云天气共享会员
+http-response ^https:\/\/biz\.cyapi\.cn\/(api\/v1\/user_detail|p\/v1\/vip_info|v2\/user) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, requires-body = true, tag = 彩云天气共享会员
 
 # 底部菜单栏,活动推广
-http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/break/caiyun.js, requires-body = true, tag = 彩云天气去广告
+http-response ^https:\/\/(wrapper\.cyapi\.cn|api\.caiyunapp\.com|cdn-w\.caiyunapp\.com)\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ColorfulCloudsWeatherPro/ColorfulCloudsWeatherPro.js, requires-body = true, tag = 彩云天气去广告
 
 [MitM]
 hostname = biz.cyapi.cn, starplucker.cyapi.cn, api.caiyunapp.com, cdn-w.caiyunapp.com, *.cyapi.cn

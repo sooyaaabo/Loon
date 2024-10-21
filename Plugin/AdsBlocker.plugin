@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdsBlock.png
-#!date = 2024-10-18 20:50
+#!date = 2024-10-21 11:00
 
-# 2024-10-18 19:30:00
+# 2024-10-21 10:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2024-10-18 19:30:00
+# 2024-10-21 10:20:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
 
 [Rule]
@@ -2413,13 +2413,13 @@ http-response ^https?:\/\/cupid\.51job(app)?\.com\/open\/noauth\/recommend\/job-
 
 # >>>>>>>>>>>>>>> ✅ A ✅ <<<<<<<<<<<<<<
 # 阿里云盘 - api.alipan.com, member.alipan.com
-http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
+http-response ^https:\/\/api\.alipan\.com\/apps\/v2\/users\/home\/(news|widgets) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body = true, tag = 阿里云盘
+http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/adrive/adrive.js, requires-body = true, tag = 阿里云盘
 
 # 阿里巴巴 - acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
-http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.mshow script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true, tag = 菜鸟
+http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
+http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
 
 # >>>>>>>>>>>>>>> ✅ B ✅ <<<<<<<<<<<<<<
 # Blued - social.blued.cn
@@ -2449,10 +2449,10 @@ http-response ^https?:\/\/manga\.bilibili\.com\/twirp\/user\.v\d\.User\/GetInitI
 # http-request ^https?:\/\/wrapper\.cyapi\.cn\/v1\/activity\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/echo-response.js, requires-body = true, tag = 彩云天气, argument="application/json&url=https://raw.githubusercontent.com/Keywos/rule/main/mocks/caiyun.json"
 
 # 菜鸟裹裹 - cn-acs.m.cainiao.com, amdc.m.taobao.com
-http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/header.js, requires-body = true, tag = 菜鸟裹裹
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟裹裹
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟裹裹
-http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/cainiao.js, requires-body = true, tag = 菜鸟裹裹
+http-response ^https?:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch$ script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/header.js, requires-body = true, tag = 菜鸟裹裹
+http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.guoguo\.nbnetflow\.ads\.m?show\.cn script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true, tag = 菜鸟裹裹
+http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.cainiao\.nbpresentation\.(pickup\.empty\.page|protocol\.homepage)\.get\.cn script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true, tag = 菜鸟裹裹
+http-response ^https?:\/\/cn-acs\.m\.cainiao\.com\/gw\/mtop\.nbfriend\.message\.conversation\.list\.cn script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/cainiao/cainiao.js, requires-body = true, tag = 菜鸟裹裹
 
 # 财新 - gg.caixin.com
 http-response ^https?:\/\/gg\.caixin\.com\/s\?z=caixin&op=1&c=3362 script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/caixin/caixinAd.js, requires-body = true, tag = 财新
@@ -2489,7 +2489,7 @@ http-response ^https?:\/\/47\.100\.65\.202\/source\/plugin\/mobile\/mobile\.php\
 http-response ^https?:\/\/www\.flyert\.com(\.cn)?\/.*plugin script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/flyert.js, requires-body = true, tag = 飞客茶馆
 
 # 粉笔 - tiku.fenbi.com
-http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/fenbi.js, requires-body = true, tag = 粉笔
+http-response ^https?:\/\/tiku\.fenbi\.com\/activity\/app\/launcher\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/fenbi.js, requires-body = true, tag = 粉笔
 
 # >>>>>>>>>>>>>>> ✅ H ✅ <<<<<<<<<<<<<<
 # 航旅纵横 - home.umetrip.com, discardrp.umetrip.com, startup.umetrip.com,
@@ -2504,7 +2504,7 @@ http-response ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\
 
 # >>>>>>>>>>>>>>> ✅ I ✅ <<<<<<<<<<<<<<
 # IT之家 - napi.ithome.com
-http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/ithome.js, requires-body = true, tag = IT之家
+http-response ^https?:\/\/napi\.ithome\.com\/api\/(news\/index|topmenu\/getfeeds) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/ithome/ithome.js, requires-body = true, tag = IT之家
 
 # >>>>>>>>>>>>>>> ✅ J ✅ <<<<<<<<<<<<<<
 # 建行生活 - yunbusiness.ccb.com
@@ -2513,7 +2513,7 @@ http-request ^https?:\/\/yunbusiness\.ccb\.com\/basic_service\/txCtrl\?txcode=A3
 http-response ^https?:\/\/g\.alicdn\.com\/.*o2o-ad script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/alicdn.js, requires-body = true, tag = 建行生活
 
 # 京东 - api.m.jd.com, dns.jd.com
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/jingdong.js, requires-body = true, tag = 京东
+http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingdong/jingdong.js, requires-body = true, tag = 京东
 
 # 京喜 - api.m.jd.com
 http-response ^https?:\/\/api\.m\.jd\.com\/api\?functionId=delivery_show script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/jingxiAd.js, requires-body = true, tag = 京喜
@@ -2533,11 +2533,11 @@ http-response ^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open\/univ$ scri
 http-response ^https?:\/\/open-cms-api\.(uc|quark)\.cn\/open-cms script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/quark.js, requires-body = true, tag = 夸克
 
 # 酷我音乐 - audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, vip1.kuwo.cn
-http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
-http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/break/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = 酷我音乐
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = 酷我音乐
 
 # 快手联盟,优量汇,穿山甲「广告联盟」 - api-access.pangolin-sdk-toutiao.com, mi.gdt.qq.com, open.e.kuaishou.com
 http-response ^https:\/\/(api-access\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/get_ads|open\.e\.kuaishou\.com\/rest\/e\/v3\/open\/univ$|mi\.gdt\.qq\.com\/gdt_mview\.fcg\?) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/adsense.js, requires-body = true, tag = 广告联盟
@@ -2597,8 +2597,8 @@ http-response ^https?:\/\/www\.1314zhilv\.com\/ltsstnew\/(common\/getJGQIconNew|
 
 # >>>>>>>>>>>>>>> ✅ T ✅ <<<<<<<<<<<<<<
 # 淘宝 - acs.m.taobao.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
-http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
+http-response ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
+http-response ^https?:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true, tag = 淘宝
 
 # 腾讯新闻 - r.inews.qq.com, news.ssp.qq.com
 http-response ^https?:\/\/(news\.ssp\.qq\.com\/app|r\.inews\.qq\.com\/(get(QQNewsUnreadList|TagFeedList)|gw\/page\/event_detail|news_feed\/hot_module_list)) script-path = https://raw.githubusercontent.com/app2smile/rules/master/js/qq-news.js, requires-body = true, tag = 腾讯新闻
@@ -2620,7 +2620,7 @@ http-response ^https:\/\/vue3-api\.zhixiny\.cn\/v1\/initui\?key=index script-pat
 
 # >>>>>>>>>>>>>>> ✅ X ✅ <<<<<<<<<<<<<<
 # 小米商城 - api.m.mi.com
-http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/RuCu6/QuanX/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城
+http-response ^https?:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城
 
 # 小兔充充 - ad.xiaotucc.com, mapi.xiaotucc.com
 http-response ^https?:\/\/mapi\.xiaotucc\.com\/(mall\/main|main_page\/index\/getActivity) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/xiaotucc.js, requires-body = true, tag = 小兔充充

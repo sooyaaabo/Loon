@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MyBlockAds.png
-#!date = 2024-10-15 10:30
+#!date = 2024-10-21 11:00
 
 # 2024-10-15 10:05
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/myblockads.plugin
@@ -276,26 +276,6 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 # 爱思助手 //list-app-m.i4.cn
 ^https:\/\/list-app-m\.i4\.cn\/(?:adclickcb|getHotSearchList|getopfstadinfo)\.xhtml reject
 
-# 阿里云盘 //*api.alipan.com, member.alipan.com
-^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
-^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
-
-# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.(?:allresource|predict) reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimama\.etao\.config\.query\/.+?etao_advertise reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alimusic\.common\.mobileservice\.startinit reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.etao\.noah\.query\/.+tao_splash reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.film\.mtopadvertiseapi\.queryadvertise reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.o2o\.ad\.gateway\.get reject-dict
-^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.activity\.querytmsresources reject-dict
-^https:\/\/heic\.alicdn\.com\/imgextra\/i\d\/\d*\/?[\w!]+-\d-(?:octopus|tps-1125-1602|tps-1080-1920)\.(?:jpg|png)_(?:1\d{3}|9\d{2})x(?:1\d{3}|9\d{2})q[59]0 reject-dict
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.cainiao\.adx\.flyad\.getad reject-dict
-^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:volvo\.secondfloor\.getconfig|wireless\.home\.newface\.awesome\.get) reject-dict
-
-# 百度云 //pan.baidu.com
-^https:\/\/pan\.baidu\.com\/(?:act\/|aipic\/|aisearch\/|api\/getsyscfg\?|rest\/) reject-dict
-
 # 昌原云充 五代十路 //www.washpayer.com
 ^http:\/\/ad\.5tao5ai\.com\/common\/getReceipt\? response-body-json-del payload.adInfo
 ^https:\/\/www\.washpayer\.com\/(?:ad\/getBannerAd|ad\/user-adword|user\/getBannerList) reject-dict
@@ -316,14 +296,8 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 # 建设银行
 ^http:\/\/image1\.ccb\.com\/newsinfo\/eBranch\/check\/(?:nf\/newfin\/activity|po\/poortheme\/activity)\/\w+\.png reject
 
-# 京东 //api.m.jd.com
-^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:searchBoxWord|stationPullService|uniformRecommend[06]) reject-dict
-
 # 交管12123 //gab.122.gov.cn
 ^https:\/\/gab\.122\.gov\.cn\/eapp\/m\/sysquery\/adver reject-dict
-
-# 酷安 //api.coolapk.com
-^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
 
 # 猫眼 //p0.pipi.cn
 ^https:\/\/p0\.pipi\.cn\/(?:adAdmin|mediaplus\/maoyantong_ads_fe)\/\w+\.jpg\?imageMogr2\/quality\/ reject-dict
@@ -342,9 +316,6 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 # 网上国网 //osg-service.sgcc.com.cn
 ^https:\/\/osg-service\.sgcc\.com\.cn:18600\/emss-pfa-appset-front\/bootpageoutter\/ reject-dict
 
-# 微信 //mp.weixin.qq.com
-^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
-
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
 ^https:\/\/api\.m\.mi\.com\/v1\/order\/expressView response-body-json-del data.bottom.ad_info
 ^https:\/\/api\.m\.mi\.com\/(?:v1\/(?:app\/popup_info|home\/page_feed|misearch\/search_input)|v2\/search\/search_default) reject-dict
@@ -357,46 +328,25 @@ URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
 ^https:\/\/wallet\.95516\.com(:10533)?\/s\/wl\/icon\/large\/1 reject
 
 [Script]
-# 12306 //ad.12306.cn, mobile.12306.cn
-http-request ^https:\/\/ad\.12306\.cn\/ad\/ser\/getAdList$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/12306.js, requires-body = true, tag = 铁路12306
-http-response ^https:\/\/mobile\.12306\.cn\/otsmobile\/app\/mgs\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js, tag = 铁路12306
-
-# 阿里云盘 //*api.alipan.com, member.alipan.com
-http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/adrive.js, requires-body = true, tag = 阿里云盘
-
-# 阿里巴巴 //acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com
-http-response ^https:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.(?:cloudvideo\.video\.query|wireless\.home\.splash\.awesome\.get) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 阿里巴巴
-http-response ^https:\/\/poplayer\.template\.alibaba\.com\/\w+\.json script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 阿里巴巴
-
 # 草榴社区 //2023.redircdn.com
-http-response ^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 草榴社区
+http-response ^https:\/\/2023\.redircdn\.com\/web\/mob_post\.js\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/MyBlockAds.js, requires-body = true, tag = 草榴社区
 
 # 昌原云充 五代十路 //www.washpayer.com
-http-response ^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/changyuan.js, requires-body = true, tag = 昌原云充 五代十路
-
-# 京东 //api.m.jd.com
-http-response ^https:\/\/api\.m\.jd\.com\/client\.action\?functionId=(?:deliverLayer|getTabHomeInfo|myOrderInfo|orderTrackBusiness|personinfoBusiness|start|welcomeHome) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/jingdong.js, requires-body = true, tag = 京东
-
-# 酷安 //api.coolapk.com
-http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/coolapk.js, requires-body = true, tag = 酷安
+http-response ^https:\/\/www\.washpayer\.com\/user\/message\/equipmentPara\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Changyuan.js, requires-body = true, tag = 昌原云充 五代十路
 
 # 酷狗音乐 //adserviceretry.kglink.cn, gateway.kugou.com
-http-response ^https:\/\/gateway\.kugou\.com\/(?:adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card) script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
-http-response ^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/kugou.js, requires-body = true, tag = 酷狗音乐
-
-# 微信封禁页面 //weixin110.qq.com, security.wechat.com
-http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/wechat/unlockUrls.js, requires-body = true, tag = 微信封禁页面
+http-response ^https:\/\/gateway\.kugou\.com\/(?:adp\/ad\/v1\/mine_top_banner|ads\.gateway\/v2\/home_card) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Kugou.js, requires-body = true, tag = 酷狗音乐
+http-response ^https?:\/\/adserviceretry\.kglink\.cn\/v\d\/mobile\w+ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Kugou.js, requires-body = true, tag = 酷狗音乐
 
 # 小米商城 //api.m.mi.com, shop-api.retail.mi.com
-http-response ^https:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/myBlockAds.js, requires-body = true, tag = 小米商城
+http-response ^https:\/\/api\.m\.mi\.com\/v1\/app\/start script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/MyBlockAds.js, requires-body = true, tag = 小米商城
 
 # 中国农业银行 //mobilepaas.abchina.com.cn
-http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/header.js, tag = 中国农业银行
+http-request ^https:\/\/mobilepaas\.abchina\.com\.cn:441\/mgw\.htm$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js, tag = 中国农业银行
 
 # 中国移动云盘 //ad.mcloud.139.com, jzts.cmpassport.com
-http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js, requires-body = true, tag = 中国移动云盘
-http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/cloud139.js, requires-body = true, tag = 中国移动云盘
+http-response ^https:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Cloud139.js, requires-body = true, tag = 中国移动云盘
+http-response ^https:\/\/jzts\.cmpassport\.com\/personalized\/getPushContent script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/Cloud139.js, requires-body = true, tag = 中国移动云盘
 
 [MitM]
-hostname = ad.12306.cn, mobile.12306.cn, list-app-m.i4.cn, *api.alipan.com, member.alipan.com, acs.m.taobao.com, heic.alicdn.com, guide-acs.m.taobao.com, poplayer.template.alibaba.com, pan.baidu.com, 2023.redircdn.com, www.washpayer.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, api.m.jd.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, mp.weixin.qq.com, weixin110.qq.com, security.wechat.com, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
+hostname = list-app-m.i4.cn, 2023.redircdn.com, www.washpayer.com, api.douban.com, img3.doubanio.com, qnmob3.doubanio.com, image.mybank.icbc.com.cn, hfapp-service.qweather.net, acs-m.freshippo.com, gab.122.gov.cn, api.coolapk.com, adserviceretry.kglink.cn, gateway.kugou.com, p0.pipi.cn, flowplus.meituan.net, img.meituan.net, s3plus.meituan.net, osg-service.sgcc.com.cn, api.m.mi.com, home.mi.com, shop-api.retail.mi.com, wallet.95516.com, mobilepaas.abchina.com.cn, ad.mcloud.139.com, jzts.cmpassport.com
