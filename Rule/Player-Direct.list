@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-18 17:50
+# 2024-10-22 23:50
 
 # CMSPlayer
 # 低端影视
@@ -303,6 +303,8 @@ DOMAIN-SUFFIX, yhemby.top
 DOMAIN-SUFFIX, aliz.work
 # Watermelon
 DOMAIN-SUFFIX, 1024.name
+# Levilde Luminia
+DOMAIN-SUFFIX, itsmyduty.top
 # lily
 DOMAIN-SUFFIX, lilyya.xyz
 # CC
