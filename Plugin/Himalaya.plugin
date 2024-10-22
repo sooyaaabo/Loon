@@ -1,7 +1,7 @@
 #!name = 喜马拉雅
 #!desc = 过滤喜马拉雅广告，解锁部分会员功能
 #!openUrl = https://apps.apple.com/app/id876336838
-#!author = 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md], ClydeTime[https://github.com/ClydeTime]
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], ClydeTime[https://github.com/ClydeTime]
 #!tag = 去广告
 #!system = 
 #!system_version = 
@@ -10,7 +10,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Himalaya.png
 #!date = 2024-10-22 00:00
 
-# 2023-10-29 13:48
+# 2023-10-29 13:48:55
 # https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
 # 2024-05-16
 # https://raw.githubusercontent.com/ClydeTime/Surge/main/Script/XMLY/xmly.sgmodule

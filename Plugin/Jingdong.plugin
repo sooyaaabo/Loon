@@ -1,7 +1,8 @@
 #!name = 京东
 #!desc = 过滤京东广告，嵌入历史比价信息，点击商品标题即可查看。历史比价仅适用于App版本低于12.4.3使用，否则失效。仅支持京东的标准模式。
 #!openUrl = https://apps.apple.com/app/id414245413
-#!author = RuCu6[https://github.com/RuCu6], 苍井灰灰[https://github.com/wf021325], MuTu[https://github.com/githubdulong]
+#!author = RuCu6[https://github.com/RuCu6], 苍井灰灰[https://github.com/wf021325], MuTu[https://github.com/githubdulong], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+
 #!tag = 去广告
 #!system = 
 #!system_version = 

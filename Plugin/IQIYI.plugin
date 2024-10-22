@@ -10,9 +10,6 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/IQIYI.png
 #!date = 2024-10-21 11:00
 
-# 2024-08-11 08:40
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
-
 [Rule]
 # 放行地址
 DOMAIN-SUFFIX, cupid.iqiyi.com, DIRECT

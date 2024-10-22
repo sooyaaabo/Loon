@@ -1,7 +1,7 @@
 #!name = IT之家
 #!desc = 过滤IT之家广告，自定义移除置顶和轮播图。此插件仅支持8.30及以上版本客户端。
 #!openUrl = https://apps.apple.com/app/id570610859
-#!author = Keywos[https://github.com/Keywos], 可莉🅥[https://gitlab.com/lodepuly/vpn_tool/-/blob/master/README.md]
+#!author = Keywos[https://github.com/Keywos], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 

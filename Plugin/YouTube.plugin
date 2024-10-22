@@ -15,12 +15,10 @@
 #select = 启用调试模式, true, false
 #!date = 2024-10-21 22:00
 
-# 2024-06-11 21:59:22
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/youtube.plugin
 # 2024-05-12
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
 # 2024-06-11 21:59:22
-# https://loon.126996.xyz/Tool/Loon/Plugin/YouTube_remove_ads.plugin
+# https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 # Youtube 画中画和后台播放分别在客户端内关闭
 #   - 设置 -> 通用 -> 画中画

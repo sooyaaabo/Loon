@@ -1,7 +1,7 @@
 #!name = 网易云音乐
 #!desc = 网易云音乐全面净化
 #!openUrl = https://apps.apple.com/app/id590338362
-#!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], qiuxiuya[https://github.com/qiuxiuya]
+#!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], qiuxiuya[https://github.com/qiuxiuya], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
@@ -23,12 +23,12 @@
 #!select = 隐藏首页你的专属歌单, 是, 否
 #!date = 2024-10-11 09:00
 
-# 2024-10-11 01:45
-# https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/cloudmusic.plugin
 # 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
+# 2024-10-11 07:22:12
+# https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin
 
 [Argument]
 Music163_VIP_Shared = switch, true, false, tag = 网易云音乐共享会员, desc = 是否启用网易云音乐共享会员

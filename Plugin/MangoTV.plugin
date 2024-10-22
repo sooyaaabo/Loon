@@ -10,9 +10,6 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MangoTV.png
 #!date = 2024-10-21 11:00
 
-# 2024-08-11 08:40
-# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
-
 [Rule]
 DOMAIN, credits.bz.mgtv.com, REJECT
 DOMAIN, credits2.bz.mgtv.com, REJECT
