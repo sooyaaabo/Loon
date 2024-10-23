@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Amap.png
-#!date = 2024-10-22 00:00
+#!date = 2024-10-23 09:00
 
-# 2024-10-15 10:15:26
+# 2024-10-23 00:38:46
 # https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin
 
 [Rule]
@@ -26,6 +26,7 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 # ^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject-dict
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
+^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(?:car-end|route-plan) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? response-body-json-del data.tipsOperationLocation obj.data.resourcePlacement
@@ -34,7 +35,6 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? reject-dict
 
 # 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
-^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
