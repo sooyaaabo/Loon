@@ -10,7 +10,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Zhihu.png
 #!date = 2024-10-23 13:00
 
-# 2024-10-15 10:56:31
+# 2024-10-23 12:53:57
 # https://kelee.one/Tool/Loon/Plugin/Zhihu_remove_ads.plugin
 
 [Rule]
@@ -25,7 +25,7 @@ IP-CIDR, 118.89.204.198/32, REJECT, no-resolve
 IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 
 [Rewrite]
-# 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片
+# 首页 - 悬浮图标、顶部横幅、开屏广告、关注页推荐、推荐信息流、热榜信息流、热榜直播、回答底部卡片、双十一弹窗
 ^https:\/\/api\.zhihu\.com\/commercial_api\/ reject-dict
 ^https:\/\/api\.zhihu\.com\/content-distribution-core\/bubble\/common\/settings reject-dict
 ^https:\/\/api\.zhihu\.com\/(?:moments\/lastread|drama\/hot-drama-list) reject-dict
