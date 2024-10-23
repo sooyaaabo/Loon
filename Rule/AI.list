@@ -1,5 +1,5 @@
 # 2024-10-10 14:36:12
-# https://gitlab.com/lodepuly/vpn_tool/-/raw/master/Tool/Loon/Rule/AI.list
+# https://kelee.one/Tool/Loon/Rule/AI.list
 
 # ChatGPT
 AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-SUFFIX, webpubsub.azure.com))
