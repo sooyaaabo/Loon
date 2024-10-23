@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-22 23:50
+# 2024-10-23 23:00
 
 # CMSPlayer
 # 低端影视
@@ -322,7 +322,7 @@ DOMAIN-SUFFIX, embymv.link
 DOMAIN-SUFFIX, boaz.cf
 DOMAIN-SUFFIX, 910427.xyz
 # awa
-DOMAIN-SUFFIX, 811861.xyz
+DOMAIN-SUFFIX, awatv.de
 
 # Jellyfin
 # 探花TV
