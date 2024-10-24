@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Advertising.png
-#!date = 2024-10-23 22:55
+#!date = 2024-10-21 15:30
 
 # 2024-10-21
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -572,7 +572,7 @@
 # 糖动
 ^https?:\/\/td\.cgmcare\.cn\/api\/ad reject-200
 # 淘宝
-# ^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get reject-200
+^https?:\/\/guide-acs\.m\.taobao\.com\/gw\/mtop\.taobao\.wireless\.home\.splash\.awesome\.get reject-200
 # 团团加油
 ^https?:\/\/www\.zjyilin\.com\/hykweb\/\/index\/openImg reject-200
 # 天猫
