@@ -1,15 +1,17 @@
 #!name = 微信
 #!desc = 微信公众号、小程序去广告以及微信外部链接解锁
 #!openUrl = https://apps.apple.com/app/id414478124
-#!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], zZPiglet[https://github.com/zZPiglet], blackmatrix7[https://github.com/blackmatrix7], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/WeChat.png
-#!date = 2024-10-22 00:00
+#!date = 2024-10-25 20:30
 
+# 2024-07-03 16:17:23
+# https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
 # 2024-09-05 23:53:41
 # https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
 # 2024-01-17 19:20:19
@@ -17,8 +19,77 @@
 # 2024-09-27 22:18:09
 # https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
+[Host]
+# 腾讯
+*.tencent.com = server:https://doh.pub/dns-query
+# QQ
+*.qq.com = server:https://doh.pub/dns-query
+# 腾讯头像
+*.qlogo.cn = server:https://doh.pub/dns-query
+# 腾讯图片
+*.qpic.cn = server:https://doh.pub/dns-query
+# 微信
+*.weixin.qq.com = server:https://doh.pub/dns-query
+*.wx.qq.com = server:https://doh.pub/dns-query
+*.weixin.com = server:https://doh.pub/dns-query
+# 微信公众平台
+*.weixinbridge.com = server:https://doh.pub/dns-query
+# WeChat
+*.wechat.com = server:https://doh.pub/dns-query
+# 微信小程序
+*.servicewechat.com = server:https://doh.pub/dns-query
+# 微云
+*.weiyun.com = server:https://doh.pub/dns-query
+# 腾讯 图片 静态资源
+*.gtimg.cn = server:https://doh.pub/dns-query
+*.idqqimg.com = server:https://doh.pub/dns-query
+# 腾讯 静态资源 CDN
+*.cdn-go.cn = server:https://doh.pub/dns-query
+# 腾讯云 智能云解析DNS
+*.smtcdns.com = server:https://doh.pub/dns-query
+*.smtcdns.net = server:https://doh.pub/dns-query
+# 腾讯短网址
+url.cn = server:https://doh.pub/dns-query
+
 [Rule]
-DOMAIN, badjs.weixinbridge.com, REJECT
+# 屏蔽443端口
+AND, ((DOMAIN-KEYWORD, wechat), (OR, ((PROTOCOL, UDP), (PROTOCOL, QUIC))), (DEST-PORT, 443)), REJECT
+
+# WeChat用户请走代理，微信用户直连
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, PROXY
+DOMAIN, btrace.qq.com, PROXY
+DOMAIN, dldir1.qq.com, PROXY
+DOMAIN, slife.xy-asia.com, PROXY
+DOMAIN, soup.v.qq.com, PROXY
+DOMAIN, vweixinf.tc.qq.com, PROXY
+DOMAIN, weixin110.qq.com, PROXY
+DOMAIN, wup.imtt.qq.com, PROXY
+DOMAIN-SUFFIX, iot-tencent.com, PROXY
+DOMAIN-SUFFIX, lbs.gtimg.com, PROXY
+DOMAIN-SUFFIX, map.qq.com, PROXY
+DOMAIN-SUFFIX, qlogo.cn, PROXY
+DOMAIN-SUFFIX, qpic.cn, PROXY
+DOMAIN-SUFFIX, servicewechat.com, PROXY
+DOMAIN-SUFFIX, tenpay.com, PROXY
+DOMAIN-SUFFIX, up-hl.3g.qq.com, PROXY
+DOMAIN-SUFFIX, vweixinthumb.tc.qq.com, PROXY
+DOMAIN-SUFFIX, wechat.com, PROXY
+DOMAIN-SUFFIX, wechatlegal.net, PROXY
+DOMAIN-SUFFIX, wechatos.net, PROXY
+DOMAIN-SUFFIX, wechatpay.com, PROXY
+DOMAIN-SUFFIX, weixin.com, PROXY
+DOMAIN-SUFFIX, weixin.qq.com, PROXY
+DOMAIN-SUFFIX, weixinbridge.com, PROXY
+DOMAIN-SUFFIX, weixinsxy.com, PROXY
+DOMAIN-SUFFIX, wx.gtimg.com, PROXY
+DOMAIN-SUFFIX, wx.qq.com, PROXY
+DOMAIN-SUFFIX, wxapp.tc.qq.com, PROXY
+DOMAIN-SUFFIX, wxs.qq.com, PROXY
+DOMAIN-SUFFIX, yun-hl.3g.qq.com, PROXY
+USER-AGENT, MicroMessenger*, PROXY
+USER-AGENT, WeChat*, PROXY
+IP-ASN,132203, no-resolve, PROXY
+
 #---------- 微信公众号 ----------#
 DOMAIN-SUFFIX, wxs.qq.com, REJECT
 
@@ -241,11 +312,11 @@ DOMAIN, e.jparking.cn, REJECT
 ^https:\/\/saas-ad\.cloudpnr\.com\/huifuad-base-api\/api\/tactics\/ad$ response-body-json-del data[0] data[1] data[2]
 
 [Script]
-#---------- 微信公众号 ----------#
-# http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://kelee.one/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true, tag = 微信公众号去广告
-
 #---------- 微信外部链接解锁 ----------#
 http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://kelee.one/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body = true, tag = 微信外部链接解锁
+
+#---------- 微信公众号 ----------#
+# http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://kelee.one/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true, tag = 微信公众号去广告
 
 #---------- 微信小程序 ----------#
 # 企迈点单系统 webapi.qmai.cn, images.qmai.cn
