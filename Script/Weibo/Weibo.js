@@ -1,4 +1,4 @@
-// 2024-10-16 11:55
+// 2024-10-27 01:20
 
 const url = $request.url;
 if (!$response) $done({});
@@ -915,27 +915,27 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/statuses/container_timeline_topic")) {
     // 超话信息流
-    delete obj.header.data.follow_guide_info; // 底部弹出的关注按钮
+    if (obj?.header?.data?.follow_guide_info) {
+      delete obj.header.data.follow_guide_info; // 底部弹出的关注按钮
+    }
     if (obj?.items?.length > 0) {
       let newItems = [];
       for (let item of obj.items) {
         if (item?.category === "feed") {
-          if (item.data) {
-            removeAvatar(item?.data); // 头像挂件,关注按钮
-            if (!isAd(item?.data)) {
-              if (item?.data?.title?.text?.includes("新人导师")) {
-                // 萌新帖 互动赢新人导师
-                delete item.data.title;
-              }
-              newItems.push(item);
+          removeAvatar(item?.data); // 头像挂件,关注按钮
+          if (!isAd(item?.data)) {
+            if (item?.data?.title?.text?.includes("新人导师")) {
+              // 萌新帖 互动赢新人导师
+              delete item.data.title;
             }
+            newItems.push(item);
           }
         } else if (item?.category === "card") {
-          if (![4, 197, 1012]?.includes(item?.data?.card_type)) {
+          if ([4, 197, 1012]?.includes(item?.data?.card_type)) {
             // 4 你可能感兴趣的超话
             // 197 你可能感兴趣的超话
             // 1012 热门超话
-            newItems.push(item);
+            continue;
           }
         } else if (item?.category === "group") {
           delete item.style.topHover; // 空降发帖背景图
@@ -961,15 +961,23 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   newII.push(ii); // 放行无itemid字段的内容
                 }
                 removeAvatar(ii?.data); // 头像挂件,关注按钮
-                item.items = newII;
               }
+              item.items = newII;
             } else {
+              let newII = [];
               for (let ii of item.items) {
                 if (ii?.data) {
-                  removeAvatar(ii?.data);
                   delete ii.data.common_struct;
+                  removeAvatar(ii?.data);
+                  if ([1008, 1024]?.includes(ii?.data?.card_type)) {
+                    // 1008关注你感兴趣的超话 1024超话顶部发现
+                    continue;
+                  } else {
+                    newII.push(ii);
+                  }
                 }
               }
+              item.items = newII;
             }
           }
           if (item?.header?.arrayText?.contents?.length > 0) {
@@ -1099,16 +1107,22 @@ if (url.includes("/interface/sdk/sdkad.php")) {
 
 // 判断信息流
 function isAd(data) {
-  if (data?.mblogtypename?.includes("广告")) {
+  if (data?.mblogtypename === "广告") {
     return true;
   }
-  if (data?.mblogtypename?.includes("热推")) {
+  if (data?.mblogtypename === "热推") {
+    return true;
+  }
+  if (data?.promotion?.recommend === "热推") {
     return true;
   }
   if (data?.promotion?.type?.includes("ad")) {
     return true;
   }
-  if (data?.content_auth_info?.content_auth_title?.includes("广告")) {
+  if (data?.content_auth_info?.content_auth_title === "广告") {
+    return true;
+  }
+  if (data?.content_auth_info?.content_auth_title === "热推") {
     return true;
   }
   if (data?.ads_material_info?.is_ads === true) {
