@@ -5,8 +5,6 @@ https://github.com/chavyleung/scripts/blob/master/follow/follow.js
 const $ = new Env('Follow 每日签到')
 $.desc = []
 
-$.argument = getArguments();
-
 const csrfToken = $argument.csrfToken
 const cookie = $argument.cookie
 
