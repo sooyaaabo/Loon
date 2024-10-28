@@ -7,8 +7,8 @@ $.desc = []
 
 $.argument = getArguments();
 
-const csrfToken = $.argument?.csrfToken || $.getdata('csrfToken');
-const cookie = $.argument?.cookie || $.getdata('cookie');
+const csrfToken = $argument.csrfToken
+const cookie = $argument.cookie
 
 !(async () => {
     await sign()
