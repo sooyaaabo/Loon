@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdsBlock.png
-#!date = 2024-10-27 10:30
+#!date = 2024-10-28 15:00
 
-# 2024-10-25 20:10:00
+# 2024-10-28 12:30:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2024-10-25 20:10:00
+# 2024-10-28 12:30:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
 
 [Rule]
@@ -491,6 +491,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 # 到梦空间 - appdmkj.5idream.net
 ^https?:\/\/appdmkj\.5idream\.net\/appPic\/homepage reject-dict
 ^https?:\/\/appdmkj\.5idream\.net\/v2\/login\/message\/tip reject-dict
+^https?:\/\/appdmkj\.5idream\.net\/v3\/user\/advertising\/list reject-dict
 
 # 低端影视 - img.ddrk.me, ddrk.me
 ^https?:\/\/img\.ddrk\.me\/ad190824 reject-img
