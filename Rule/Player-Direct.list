@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-25 22:50
+# 2024-10-29 09:50
 
 # CMSPlayer
 # 低端影视
@@ -318,9 +318,6 @@ DOMAIN-SUFFIX, term.wtf
 DOMAIN-SUFFIX, yomo.lol
 # peach
 DOMAIN-SUFFIX, embymv.link
-# Plumber
-DOMAIN-SUFFIX, boaz.cf
-DOMAIN-SUFFIX, 910427.xyz
 # awa
 DOMAIN-SUFFIX, awatv.de
 # PrejuDice Jellyfin
