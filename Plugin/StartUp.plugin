@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Advertising.png
-#!date = 2024-10-27 12:30
+#!date = 2024-10-30 17:50
 
-# 2024-10-27
+# 2024-10-30
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.10.27/c352/v2.0.540 reject-200
+^https?:\/\/2024.10.30/c352/v2.0.541 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -164,6 +164,7 @@
 # 丁香妈妈
 ^https?:\/\/mama\.dxy\.com\/api\/cms\/client\/popup-window\/list reject-200
 # 叮咚买菜
+^https?:\/\/maicai\.api\.ddxq\.mobi\/advert\/startUpScreen reject-200
 ^https?:\/\/mobile\.yangkeduo\.com\/proxy\/api\/api\/express\/post\/waybill\/red_packet\/goods_list$ response-body-replace-regex rt_time":\d{2} rt_time":40
 
 # ======= E ======= #
