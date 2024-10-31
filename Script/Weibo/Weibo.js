@@ -1,4 +1,4 @@
-// 2024-10-30 01:05
+// 2024-10-30 14:55
 
 const url = $request.url;
 if (!$response) $done({});
@@ -1055,6 +1055,8 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             // 197 你可能感兴趣的超话
             // 1012 热门超话
             continue;
+          } else {
+            newItems.push(item);
           }
         } else if (item?.category === "group") {
           if (item?.style?.topHover) {
@@ -1167,7 +1169,18 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     }
   } else if (url.includes("/2/statuses/repost_timeline")) {
     // 评论详情页 转发区
+    if (obj?.hot_reposts?.length > 0) {
+      // 样式1
+      let newReposts = [];
+      for (let item of obj.hot_reposts) {
+        if (!isAd(item)) {
+          newReposts.push(item);
+        }
+      }
+      obj.hot_reposts = newReposts;
+    }
     if (obj?.reposts?.length > 0) {
+      // 样式2
       let newReposts = [];
       for (let item of obj.reposts) {
         if (!isAd(item)) {
