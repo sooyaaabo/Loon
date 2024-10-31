@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-31 09:25
+# 2024-10-31 23:00
 
 # CMSPlayer
 # 低端影视
@@ -299,6 +299,9 @@ DOMAIN-SUFFIX, 9191001.xyz
 DOMAIN-SUFFIX, sfcj.org
 # Temby
 DOMAIN-SUFFIX, 285286.xyz
+# 飞跃彩虹
+DOMAIN-SUFFIX, 581658.best
+DOMAIN-SUFFIX, 7777777.buzz
 # 飞跃银河
 DOMAIN-SUFFIX, yhemby.top
 # hka
