@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-29 09:50
+# 2024-10-31 09:25
 
 # CMSPlayer
 # 低端影视
@@ -256,6 +256,8 @@ DOMAIN-SUFFIX, labipan.com
 DOMAIN-SUFFIX, mihdr.top
 # 云盘资源网
 DOMAIN-SUFFIX, res.yunpan.win
+# 正奕
+DOMAIN-SUFFIX, jnczyl.top
 # 网盘播放
 DOMAIN-KEYWORD, quark
 DOMAIN, drive-pc.quark.cn
