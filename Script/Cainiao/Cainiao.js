@@ -1,4 +1,4 @@
-// 2024-09-27 11:50
+// 2024-10-31 14:55
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -95,23 +95,18 @@ if (url.includes("/mtop.cainiao.guoguo.nbnetflow.ads.mshow")) {
           let newBizs = [];
           for (let i of item.bizData.items) {
             const lists = [
-              "618cjhb", // 超级红包
-              "bgxq", // 包裹星球
-              "cncy", // 填字赚现金
-              "cngy", // 免费领水果
-              "cngreen", // 绿色家园
-              "cnhs", // 菜鸟回收
-              "dtxb", // 地图寻宝
-              "gjjf", // 裹酱积分
-              "jkymd", // 集卡赢免单
-              "ljjq", // 领寄件券
-              "ttlhb", // 天天领红包
-              "xybg" // 幸运包裹
+              "appCentreMore", // 更多
+              "dzb", // 地址簿
+              "jdj", // 特惠大件
+              "kddh", // 快递电话
+              "yfjsq" // 运费计算器
             ];
             if (lists?.includes(i?.key)) {
+              // 白名单
+              newBizs.push(i);
+            } else {
               continue;
             }
-            newBizs.push(i);
           }
           item.bizData.items = newBizs;
           for (let i of item.bizData.items) {
