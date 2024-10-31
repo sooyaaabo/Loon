@@ -8,34 +8,35 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Cainiao.png
-#!date = 2024-10-22 00:00
+#!date = 2024-10-31 23:15
 
-# 2024-09-27 11:50:35
+# 2024-10-31 16:04:04
 # https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
 AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Cainiao4iPhone*)), REJECT
 
-DOMAIN, acs4baichuan.m.taobao.com, REJECT
+# DOMAIN, acs4baichuan.m.taobao.com, REJECT
 DOMAIN, adsmind.ugdtimg.com, REJECT
 DOMAIN, amdc.m.youku.com, REJECT
-DOMAIN, api.sm.cn, REJECT
+# DOMAIN, api.sm.cn, REJECT
 DOMAIN, apiv4-iyes.youku.com, REJECT
-DOMAIN, baichuan-sdk.alicdn.com, REJECT
-DOMAIN, cad.youku.com, REJECT
+DOMAIN, httpdns.alicdn.com, REJECT
+# DOMAIN, baichuan-sdk.alicdn.com, REJECT
+# DOMAIN, cad.youku.com, REJECT
 DOMAIN, huichuan-mc.sm.cn, REJECT
 DOMAIN, huichuan.sm.cn, REJECT
 DOMAIN, iyes.youku.com, REJECT
-DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
+# DOMAIN, m-vali.cp31.ott.cibntv.net, REJECT
 DOMAIN, mc.atm.youku.com, REJECT
-DOMAIN, nbsdk-baichuan.alicdn.com, REJECT
-DOMAIN, pre-acs.youku.com, REJECT
+# DOMAIN, nbsdk-baichuan.alicdn.com, REJECT
+# DOMAIN, pre-acs.youku.com, REJECT
 DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
 DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
 DOMAIN, yk-ssp.ad.youku.com, REJECT
 DOMAIN, ykad-data.youku.com, REJECT
-DOMAIN, youku-acs.m.taobao.com, REJECT
+# DOMAIN, youku-acs.m.taobao.com, REJECT
 
 [Rewrite]
 # ---------- 可莉🅥 ---------- #
