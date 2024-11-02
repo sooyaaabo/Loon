@@ -331,7 +331,6 @@ DOMAIN, jellyfin.1l1.icu
 # Jellyfin
 # 探花TV
 DOMAIN-SUFFIX, tanhuatv.site
-IP-CIDR, 152.53.67.239/32, no-resolve
 
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com
