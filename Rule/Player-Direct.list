@@ -222,9 +222,9 @@ DOMAIN-SUFFIX, 52bdys.com
 DOMAIN-SUFFIX, yjys.inf.ua
 DOMAIN-SUFFIX, yjys.cc.ua
 # 哔嘀播放
-DOMAIN-suffix, ibytedtos.com
-DOMAIN-suffix, toutiao50.com
-DOMAIN-suffix, ibyteimg.com
+DOMAIN-SUFFIX, ibytedtos.com
+DOMAIN-SUFFIX, toutiao50.com
+DOMAIN-SUFFIX, ibyteimg.com
 # LIBVIO
 DOMAIN-SUFFIX, libvio.app
 DOMAIN-SUFFIX, libvio.link
