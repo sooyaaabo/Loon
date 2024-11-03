@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-11-03 13:00
+# 2024-11-03 22:00
 
 # CMSPlayer
 # 低端影视
@@ -270,63 +270,6 @@ DOMAIN-SUFFIX, pstatp.com
 DOMAIN-SUFFIX, ugdtimg.com
 DOMAIN-SUFFIX, ctyunxs.cn
 DOMAIN, wxsnsencsvp.wxs.qq.com
-
-# Emby
-# Paul
-DOMAIN-SUFFIX, imetyou.top
-# TreeDiagram
-DOMAIN-SUFFIX, 789.123456.al
-# NyaMedia
-DOMAIN-SUFFIX, bangumi.ca
-# PiliPili
-DOMAIN-SUFFIX, pilipili.club
-DOMAIN, xn--ohq746dhyifsj.xn--pp5aa2sb.com
-# 二刺螈
-DOMAIN-SUFFIX, nijigem.by
-# 大V影院
-DOMAIN-SUFFIX, viclub.top
-# 蘑菇
-DOMAIN-SUFFIX, mooguu.top
-# 普拉斯影业
-DOMAIN, emby-best.xeton.dev
-# 放映机
-DOMAIN-SUFFIX, 9191001.xyz
-# 非越
-DOMAIN-SUFFIX, sfcj.org
-# Temby
-DOMAIN-SUFFIX, 285286.xyz
-# 飞跃彩虹
-DOMAIN-SUFFIX, 581658.best
-DOMAIN-SUFFIX, 7777777.buzz
-# 飞跃银河
-DOMAIN-SUFFIX, yhemby.top
-# hka
-DOMAIN-SUFFIX, aliz.work
-# Watermelon
-DOMAIN-SUFFIX, 1024.name
-# Levilde Luminia
-DOMAIN-SUFFIX, itsmyduty.top
-# lily
-DOMAIN-SUFFIX, lilyya.xyz
-# CC
-DOMAIN-SUFFIX, embycc.link
-# Apop
-DOMAIN-SUFFIX, apopcloud.me
-DOMAIN-SUFFIX, apopcloud.live
-# 终点站
-DOMAIN-SUFFIX, term.wtf
-# yomo
-DOMAIN-SUFFIX, yomo.lol
-# peach
-DOMAIN-SUFFIX, embymv.link
-# awa
-DOMAIN-SUFFIX, awatv.de
-# PrejuDice Jellyfin
-DOMAIN, jellyfin.1l1.icu
-
-# Jellyfin
-# 探花TV
-DOMAIN-SUFFIX, tanhuatv.site
 
 #豆瓣封面
 DOMAIN-SUFFIX, doubanio.com

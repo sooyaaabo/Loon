@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-10-29 09:50
+# 2024-11-03 22:00
 
 # CMSPlayer
 # 海外看
@@ -72,34 +72,3 @@ DOMAIN-SUFFIX, bttwo.net
 DOMAIN-SUFFIX, kmeiju.cc
 # 木偶哥哥
 DOMAIN, www.mogg.top
-
-# Emby
-# 普拉斯影业
-DOMAIN-SUFFIX, plusmedia.site
-DOMAIN, emby.xeton.dev
-DOMAIN, jellyfin.xeton.dev
-DOMAIN, movie.xeton.dev
-DOMAIN, servers.xeton.dev
-# MisakaF
-DOMAIN-SUFFIX, aca.best
-DOMAIN-SUFFIX, misakaf.org
-IP-CIDR, 102.223.180.108/32
-# 终点站
-DOMAIN-SUFFIX, emby.wtf
-# 纸片人
-DOMAIN-SUFFIX, embyplus.org
-# 牢大科蜜野兽
-DOMAIN-SUFFIX, mius.uk
-# Alpha
-DOMAIN-SUFFIX, alphatvapp.top
-# Nanflix
-DOMAIN-SUFFIX, nanflix.net
-# CC
-DOMAIN-SUFFIX, coemn.com
-# CharonTV
-DOMAIN-SUFFIX, charontv.com
-# Plumber
-DOMAIN-SUFFIX, boaz.cf
-DOMAIN-SUFFIX, 910427.xyz
-# Jellyfish+
-DOMAIN, vip3.jellyfin.asia
