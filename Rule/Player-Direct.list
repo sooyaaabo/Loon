@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-10-31 23:00
+# 2024-11-03 13:00
 
 # CMSPlayer
 # 低端影视
@@ -198,14 +198,10 @@ DOMAIN, api.zaqohu.com
 DOMAIN-SUFFIX, damoli.pro
 DOMAIN-SUFFIX, hdmoli.pro
 # 厂长资源
-DOMAIN-SUFFIX, czzy.site
-DOMAIN-SUFFIX, czys.top
-DOMAIN-SUFFIX, czys.pro
-DOMAIN-SUFFIX, czzy.top
-DOMAIN-SUFFIX, czzy.tv
 DOMAIN-SUFFIX, cz01.tv
+DOMAIN-SUFFIX, cz01.vip
 DOMAIN-SUFFIX, czzy77.com
-DOMAIN-SUFFIX, cz233.com
+DOMAIN-SUFFIX, czzyvideo.com
 # 555电影
 DOMAIN-SUFFIX, 55drm.com
 DOMAIN-SUFFIX, 5cinv.net
