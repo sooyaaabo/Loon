@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/WeChat.png
-#!date = 2024-11-02 19:45
+#!date = 2024-11-04 19:45
 
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
@@ -52,9 +52,6 @@
 url.cn = server:https://doh.pub/dns-query
 
 [Rule]
-# 屏蔽443端口
-AND, ((DOMAIN-KEYWORD, wechat), (OR, ((PROTOCOL, UDP), (PROTOCOL, QUIC))), (DEST-PORT, 443)), REJECT
-
 # WeChat用户请走代理，微信用户直连
 DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, PROXY
 DOMAIN, btrace.qq.com, PROXY
