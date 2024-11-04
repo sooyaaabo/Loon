@@ -159,20 +159,12 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Relay.png"
         },
         {
-            "name": "Advertising",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Advertising.png"
-        },
-        {
-            "name": "AdBlack",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdBlack.png"
-        },
-        {
-            "name": "AdOff",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdOff.png"
-        },
-        {
             "name": "AdReject",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdReject.png"
+        },
+        {
+            "name": "ShieldPlus",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ShieldPlus.png"
         },
         {
             "name": "Network",
