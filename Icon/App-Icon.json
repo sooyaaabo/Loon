@@ -171,6 +171,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdOff.png"
         },
         {
+            "name": "AdReject",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdReject.png"
+        },
+        {
             "name": "Network",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Network.png"
         },
