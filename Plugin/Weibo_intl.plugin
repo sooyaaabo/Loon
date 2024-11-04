@@ -8,17 +8,22 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Weibo_intl.png
-#!date = 2024-10-21 11:00
+#!date = 2024-11-04 16:20
 
 # 2023-09-06 17:07:45
 # https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin
 
 [Rewrite]
+#  开屏广告
+^https?:\/\/open\.e\.kuaishou\.com\/rest\/e\/v\d\/open reject-dict
+^https?:\/\/mi\.gdt\.qq\.com\/ reject
+^https?:\/\/tqt\.weibo\.cn\/ reject
+^https?:\/\/adstrategy\.biz\.weibo\.com\/v\d\/strategy\/ad reject-dict
+^https?:\/\/boot(?:preload|realtime)\.uve\.weibo\.com\/v\d\/ad\/(?:preload|realtime) reject-dict
+
 # 热门视频、热推荐
-^https?:\/\/api\.weibo\.cn\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
-^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=hot_search_users reject-dict
-^https?:\/\/api\.weibo\.cn\/\d\/cardlist\?v_f=.*Weibo_intl reject-dict
-^https?:\/\/m?api\.weibo\.c(n|om)\/\d\/ad\/weibointl\? url reject-dict
+^https?:\/\/api\.weibo\.cn\/\d\/(?:cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
+^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=hot_search_users reject-dict
 
 # 私信中绿洲的擦边诱导推广
 ^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=treehole&auth= reject-dict
@@ -30,4 +35,4 @@ http-response ^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline script-path =
 http-response ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = 微博轻享版去广告
 
 [MitM]
-hostname = *api.weibo.cn, sdkapp.uve.weibo.com
+hostname = open.e.kuaishou.com, mi.gdt.qq.com, tqt.weibo.cn, *biz.weibo.com, *uve.weibo.com, *api.weibo.cn
