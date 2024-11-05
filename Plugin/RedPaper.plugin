@@ -8,13 +8,12 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/RedPaper.png
-#!date = 2024-10-22 00:00
+#!date = 2024-11-05 11:30
 
-# 2024-10-15 10:55:06
+# 2024-11-05 10:05:41
 # https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin
 
 [Rule]
-AND, ((PROTOCOL, UDP), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 
 [Rewrite]
@@ -36,26 +35,25 @@ AND, ((PROTOCOL, QUIC), (DOMAIN-SUFFIX, xiaohongshu.com)), REJECT
 ^https?:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/guide\/user_banner reject-dict
 
 [Script]
-# 详情页小部件、关注页感兴趣的人
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除详情页小部件
+# 开屏广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告 config
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告 splash_config
+
+# 详情页、关注页
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/(?:note\/widgets|user\/followings\/followfeed) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除详情页小部件、关注页感兴趣的人
+http-response https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除详情页感兴趣的人
+
+# 信息流
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除信息流广告
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除信息流广告
 
 # 搜索页
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除搜索页广告
 
-# 开屏广告
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/system_service\/config\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v2\/system_service\/splash_config script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除开屏广告
-
-# 信息流、详情页感兴趣的人
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v4\/followfeed\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除信息流广告
-http-response https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v5\/recommend\/user\/follow_recommend\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除详情页感兴趣的人
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除信息流广告
-
-# 移除图片和视频水印
-http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除图片和视频水印
-
-# 移除图片和实况照片水印
+# 实况、图片、视频水印
 http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除图片和实况照片水印
+http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3\/note\/videofeed) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除图片和视频水印
+http-response ^https:\/\/(?:edith|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除视频水印
 
 [MitM]
-hostname = edith.xiaohongshu.com, www.xiaohongshu.com, ci.xiaohongshu.com
+hostname = edith.xiaohongshu.com, www.xiaohongshu.com
