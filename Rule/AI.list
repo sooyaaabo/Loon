@@ -1,4 +1,4 @@
-# 2024-10-10 14:36:12
+# 2024-11-05 10:10
 # https://kelee.one/Tool/Loon/Rule/AI.list
 
 # ChatGPT
@@ -48,7 +48,9 @@ DOMAIN, imagine.meta.com
 DOMAIN-SUFFIX, meta.ai
 
 # Perplexity
+DOMAIN-SUFFIX, pplx.ai
 DOMAIN-SUFFIX, perplexity.ai
+DOMAIN-SUFFIX, perplexity.com
 
 # Mistral AI
 DOMAIN, chat.mistral.ai
