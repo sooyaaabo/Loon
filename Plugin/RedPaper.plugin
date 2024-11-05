@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/RedPaper.png
-#!date = 2024-11-05 11:30
+#!date = 2024-11-05 21:30
 
-# 2024-11-05 10:05:41
+# 2024-11-05 15:59:16
 # https://kelee.one/Tool/Loon/Plugin/RedPaper_remove_ads.plugin
 
 [Rule]
@@ -56,4 +56,4 @@ http-response ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/note\/feed|v3
 http-response ^https:\/\/(?:edith|www)\.xiaohongshu\.com\/api\/sns\/(?:v4\/note\/videofeed|v10\/note\/video\/save) script-path = https://kelee.one/Resource/Script/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = 移除视频水印
 
 [MitM]
-hostname = edith.xiaohongshu.com, www.xiaohongshu.com
+hostname = edith.xiaohongshu.com, rec.xiaohongshu.com, www.xiaohongshu.com
