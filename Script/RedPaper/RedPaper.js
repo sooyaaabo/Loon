@@ -1,7 +1,6 @@
-// 2024-11-05 13:10:00
+// 2024-11-06 15:55
 
 const url = $request.url;
-const isQuanX = typeof $task !== "undefined";
 if (!$response.body) $done({});
 let obj = JSON.parse($response.body);
 
@@ -41,11 +40,7 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
               newDatas.push(myData);
             }
             // 写入持久化存储
-            if (isQuanX) {
-              $prefs.setValueForKey(JSON.stringify(newDatas), "redBookLivePhoto");
-            } else {
-              $persistentStore.write(JSON.stringify(newDatas), "redBookLivePhoto");
-            }
+            $persistentStore.write(JSON.stringify(newDatas), "redBookLivePhoto");
           }
         }
       }
@@ -53,13 +48,7 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
   }
 } else if (url.includes("/v1/note/live_photo/save")) {
   // 实况照片保存请求
-  let livePhoto;
-  // 读取持久化存储
-  if (isQuanX) {
-    livePhoto = JSON.parse($prefs.valueForKey("redBookLivePhoto"));
-  } else {
-    livePhoto = JSON.parse($persistentStore.read("redBookLivePhoto"));
-  }
+  let livePhoto = JSON.parse($persistentStore.read("redBookLivePhoto")); // 读取持久化存储
   if (obj?.data?.datas?.length > 0) {
     // 原始数据没问题 交换url数据
     if (livePhoto?.length > 0) {
@@ -73,7 +62,7 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
     }
   } else {
     // 原始数据有问题 强制返回成功响应
-    obj = { code: 0, success: true, msg: "成功", data: { datas: newDatas } };
+    obj = { code: 0, success: true, msg: "成功", data: { datas: livePhoto } };
   }
 } else if (url.includes("/v1/system_service/config")) {
   // 整体配置
@@ -137,10 +126,12 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
   // 关注列表
   if (obj?.data?.items?.length > 0) {
     // recommend_user可能感兴趣的人
-    obj.data.items = obj.data.items.filter((i) => !["recommend_user"]?.includes(i.recommend_reason));
+    obj.data.items = obj.data.items.filter((i) => !["recommend_user"]?.includes(i?.recommend_reason));
   }
 } else if (url.includes("/v4/note/videofeed")) {
+  let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 读取持久化存储
   let newDatas = [];
+  let unlockDatas=[];
   if (obj?.data?.length > 0) {
     for (let item of obj.data) {
       if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
@@ -151,12 +142,21 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         newDatas.push(myData);
       }
     }
-    // 写入持久化存储
-    if (isQuanX) {
-      $prefs.setValueForKey(JSON.stringify(newDatas), "redBookVideoFeed");
-    } else {
-      $persistentStore.write(JSON.stringify(newDatas), "redBookVideoFeed");
+  }
+  $persistentStore.write(JSON.stringify(newDatas), "redBookVideoFeed"); // 写入持久化存储
+  if (videoFeedUnlock?.notSave === true) {
+    if (obj?.data?.length > 0) {
+      for (let item of obj.data) {
+        if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
+          let myData = {
+            id: item.id,
+            url: item.video_info_v2.media.stream.h265[0].master_url
+          };
+        unlockDatas.push(myData);
+        }
+     }
     }
+    $persistentStore.write(JSON.stringify(unlockDatas), "redBookVideoFeedUnlock");
   }
 } else if (url.includes("/v5/recommend/user/follow_recommend")) {
   // 用户详情页 你可能感兴趣的人
@@ -191,26 +191,35 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
   }
 } else if (url.includes("/v10/note/video/save")) {
   // 视频保存请求
-  let videoFeed;
-  // 读取持久化存储
-  if (isQuanX) {
-    videoFeed = JSON.parse($prefs.valueForKey("redBookVideoFeed"));
-  } else {
-    videoFeed = JSON.parse($persistentStore.read("redBookVideoFeed"));
+  let videoFeed = JSON.parse($persistentStore.read("redBookVideoFeed")); // 读取持久化存储
+  let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 读取持久化存储
+  if (obj?.data?.note_id !== "" && videoFeed?.length > 0) {
+    for (let item of videoFeed) {
+      if (item.id === obj.data.note_id) {
+        obj.data.download_url = item.url;
+      }
+    }
   }
-  if (obj?.data?.note_id !== "" && obj?.data?.download_url !== "") {
-    if (videoFeed?.length > 0) {
-      for (let item of videoFeed) {
+  if (obj?.data?.note_id !== "" && videoFeedUnlock?.length > 0) {
+    if (obj?.data?.disable === true && obj?.data?.msg !== "") {
+      obj.data.disable = false;
+      obj.data.msg = "保存成功! ";
+      obj.data.download_url = "";
+      for (let item of videoFeedUnlock) {
         if (item.id === obj.data.note_id) {
           obj.data.download_url = item.url;
         }
       }
+      let attach = { openUrl: obj.data.download_url, clipboard: obj.data.download_url };
+      $notification.post("⚠️⚠️⚠️", "不支持保存, 请手动下载! ", "点此通知打开下载链接~ ", attach);
     }
   }
+  videoFeedUnlock = { notSave: true };
+  $persistentStore.write(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
 } else if (url.includes("/v10/search/notes")) {
   // 搜索结果
   if (obj?.data?.items?.length > 0) {
-    obj.data.items = obj.data.items.filter((i) => i.model_type === "note");
+    obj.data.items = obj.data.items.filter((i) => i?.model_type === "note");
   }
 } else {
   $done({});
