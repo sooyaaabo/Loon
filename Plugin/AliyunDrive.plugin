@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AliyunDrive.png
-#!date = 2024-10-22 00:00
+#!date = 2024-11-07 22:00
 
 # 2024-07-15 22:28:47
 # https://kelee.one/Tool/Loon/Plugin/AliYunDrive_remove_ads.plugin
@@ -17,16 +17,22 @@
 IP-CIDR, 203.107.1.1/24, REJECT, no-resolve
 
 [Rewrite]
-# RuCu6
 # 首页活动日历
 ^https:\/\/member\.alipan\.com\/v2\/activity\/sign_in_luckyBottle reject-dict
+
 # 首页板块入口
 ^https:\/\/api\.alipan\.com\/adrive\/v1\/file\/getTopFolders reject-dict
 
+^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/news http-response-jq 'if .result|length>0 then .result|=map(select(.code|contains("productUpdate")|not)) else . end'
+
+^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/widgets http-response-jq 'delpaths([["album"],["banners"],["coreFeatures"],["introduceAlipan"],["mainBackup"],["minorBackup"],["signIn"]])'
+
+^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list http-response-jq 'if .result|length>0 then .result|=map(select(.anchor|IN("backup_list_under_mydevice_banner","backup_top_banner","home_bulletin_board","home_top_banner","resource_top_banner","video_top_banner")|not)) else . end'
+
 [Script]
 # 移除阿里云盘广告
-http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) script-path = https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body = true, tag = 移除阿里云盘广告
-http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body = true, tag = 移除阿里云盘广告
+# http-response ^https:\/\/(biz)?api\.alipan\.com\/apps\/v\d\/users?\/home\/(?:news|widgets) script-path = https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body = true, tag = 移除阿里云盘广告
+# http-response ^https:\/\/member\.alipan\.com\/v1\/users\/onboard_list script-path = https://kelee.one/Resource/Script/AliYunDrive/AliYunDrive_remove_ads.js, requires-body = true, tag = 移除阿里云盘广告
 
 [MitM]
 hostname = *api.alipan.com, *api.aliyundrive.com, member.alipan.com, member.aliyundrive.com
