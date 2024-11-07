@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Pinduoduo.png
-#!date = 2024-11-07 15:35
+#!date = 2024-11-07 22:00
 
 # 2024-10-18 13:13
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -46,6 +46,8 @@ DOMAIN, titan.pinduoduo.com, REJECT
 ^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
 ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items
 ^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
+
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result |= (.bottom_tabs |= map(select(.title | IN("首页", "聊天", "个人中心"))) | .buffer_bottom_tabs |= map(select(.title | IN("首页", "聊天", "个人中心"))) | del(.top_skin, .search_bar_hot_query, .dy_module.irregular_banner_dy))'
 
 [Script]
 http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/Script/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = 精简首页

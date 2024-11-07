@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Goofish.png
-#!date = 2024-10-22 00:00
+#!date = 2024-11-07 22:00
 
 # 2024-10-19 17:18:31
 # https://kelee.one/Tool/Loon/Plugin/FleaMarket_remove_ads.plugin
@@ -44,6 +44,12 @@
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ reject-dict
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ reject-dict
 ^https:\/\/h5\.m\.goofish\.com\/wow\/moyu\/moyu-project\/[\w-]*search[\w-]*\/pages\/ reject-200
+
+# 精简首页
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ response-body-json-jq '.data |= (.sections |= map(select(.template.name | IN("fish_home_advertise_card_d4", "fish_home_content_card", "fish_home_feeds_commodity_card_2", "fish_home_feeds_pager_banner") | not)) | .widgetReturnDO.widgets[0].widgetDO.channelDOList |= map(select(.title | IN("分类", "手机数码", "上门回收", "闲鱼鱼市", "闲鱼鉴别"))) | del(.bannerReturnDO))'
+
+# 精简我的页面
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq '.data.container.sections |= map(if .template.name == "my_fy25_user_info" then del(.item.level) else . end | select(.template.name | IN("my_fy25_slider", "xianyu_home_fish_my_banner_card_2023", "my_fy25_community") | not))'
 
 [Script]
 # 我的页面
