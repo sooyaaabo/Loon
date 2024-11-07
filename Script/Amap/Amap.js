@@ -1,4 +1,4 @@
-// 2024-11-07 02:35
+// 2024-11-07 11:15
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -370,6 +370,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "platformCustomerComplianceInfo", // 保险公司信息
     "poiDetailBottomBarOperation",
     "poiDetailCommonConfig",
+    "poiDetailNewBeltV2", // 金秋出行 横幅
     "poiDetailWaterFeed", // 附近景点瀑布流 新
     "poiDetailWaterFeedTitle", // 更多人气好去处 新
     "poster_banner",
