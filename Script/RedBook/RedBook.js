@@ -1,4 +1,4 @@
-// 2024-11-06 15:55
+// 2024-11-07 14:55:22
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -129,9 +129,9 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
     obj.data.items = obj.data.items.filter((i) => !["recommend_user"]?.includes(i?.recommend_reason));
   }
 } else if (url.includes("/v4/note/videofeed")) {
-  let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 读取持久化存储
+  // 信息流 视频
   let newDatas = [];
-  let unlockDatas=[];
+  let unlockDatas = [];
   if (obj?.data?.length > 0) {
     for (let item of obj.data) {
       if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
@@ -142,9 +142,10 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         newDatas.push(myData);
       }
     }
+    $persistentStore.write(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
   }
-  $persistentStore.write(JSON.stringify(newDatas), "redBookVideoFeed"); // 写入持久化存储
-  if (videoFeedUnlock?.notSave === true) {
+  let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 禁止保存的视频 读取持久化存储
+  if (videoFeedUnlock?.notSave === "rucu6") {
     if (obj?.data?.length > 0) {
       for (let item of obj.data) {
         if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
@@ -152,11 +153,11 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
             id: item.id,
             url: item.video_info_v2.media.stream.h265[0].master_url
           };
-        unlockDatas.push(myData);
+          unlockDatas.push(myData);
         }
-     }
+      }
     }
-    $persistentStore.write(JSON.stringify(unlockDatas), "redBookVideoFeedUnlock");
+    $persistentStore.write(JSON.stringify(unlockDatas), "redBookVideoFeedUnlock"); // 禁止保存的视频 写入持久化存储
   }
 } else if (url.includes("/v5/recommend/user/follow_recommend")) {
   // 用户详情页 你可能感兴趣的人
@@ -191,8 +192,8 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
   }
 } else if (url.includes("/v10/note/video/save")) {
   // 视频保存请求
-  let videoFeed = JSON.parse($persistentStore.read("redBookVideoFeed")); // 读取持久化存储
-  let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 读取持久化存储
+  let videoFeed = JSON.parse($persistentStore.read("redBookVideoFeed")); // 普通视频 读取持久化存储
+  let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 禁止保存的视频 读取持久化存储
   if (obj?.data?.note_id !== "" && videoFeed?.length > 0) {
     for (let item of videoFeed) {
       if (item.id === obj.data.note_id) {
@@ -210,11 +211,17 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
           obj.data.download_url = item.url;
         }
       }
-      let attach = { openUrl: obj.data.download_url, clipboard: obj.data.download_url };
-      $notification.post("⚠️⚠️⚠️", "不支持保存, 请手动下载! ", "点此通知打开下载链接~ ", attach);
+      // let attach = { openUrl: +obj.data.download_url, clipboard: obj.data.download_url };
+      // 弃用上面的写法 使用快捷指令 自动保存至相册
+      $notification.post(
+        "解析成功",
+        "",
+        "无水印下载地址解析成功，点此通知跳转至快捷指令下载该媒体。",
+        "shortcuts://run-shortcut?name=下载媒体&input=text&text=" + obj.data.download_url
+      );
     }
   }
-  videoFeedUnlock = { notSave: true };
+  videoFeedUnlock = { notSave: "rucu6" };
   $persistentStore.write(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
 } else if (url.includes("/v10/search/notes")) {
   // 搜索结果
