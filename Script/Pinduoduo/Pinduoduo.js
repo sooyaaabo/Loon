@@ -1,4 +1,4 @@
-// 2024-10-06 03:10
+// 2024-11-06 04:20
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -15,9 +15,16 @@ if (url.includes("/api/alexa/homepage/hub")) {
       // 标签栏2
       obj.result.buffer_bottom_tabs = obj.result.buffer_bottom_tabs.filter((i) => /(?:chat_list|index|personal)/.test(i?.link));
     }
+    if (obj?.result?.dy_module?.irregular_banner_dy) {
+      delete obj.result.dy_module.irregular_banner_dy; // 首页 顶部banner
+    }
     // delete obj.result.icon_set; // 顶部图标 多多买菜 现金大转盘
-    delete obj.result.search_bar_hot_query; // 搜索框填充词
-    delete obj.result.top_skin; // 顶部背景图
+    if (obj?.result?.search_bar_hot_query) {
+      delete obj.result.search_bar_hot_query; // 搜索框填充词
+    }
+    if (obj?.result?.top_skin) {
+      delete obj.result.top_skin; // 首页 顶部背景图
+    }
   }
 }
 

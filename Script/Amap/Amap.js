@@ -1,4 +1,4 @@
-// 2024-10-15 09:40
+// 2024-11-07 02:35
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -8,6 +8,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   if (obj?.data?.common_data?.bus_plan_bottom_event?.data?.length > 0) {
     // 公交出行 底部卡路里数值
     obj.data.common_data.bus_plan_bottom_event.data = [];
+  }
+  // 公交出行 底部营商推广
+  if (obj?.data?.common_data?.bus_plan_bottom_tips?.data?.length > 0) {
+    obj.data.common_data.bus_plan_bottom_tips.data = [];
   }
   if (obj?.data?.common_data?.bus_plan_segment_event?.data?.length > 0) {
     // 公交出行 中转站 卡路里数值
@@ -47,9 +51,15 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
 } else if (url.includes("/c3frontend/af-hotel/page/main")) {
   // 酒店/民宿 景区门票 火车/飞机
   if (obj?.data?.modules) {
-    delete obj.data.modules.CouponPortalCard; // 横幅推广
-    delete obj.data.modules.CouponWidget; // 右下角活动悬浮窗
-    delete obj.data.modules.recommended_list; // 高德建议
+    if (obj?.data?.modules?.CouponPortalCard) {
+      delete obj.data.modules.CouponPortalCard; // 横幅推广
+    }
+    if (obj?.data?.modules?.CouponWidget) {
+      delete obj.data.modules.CouponWidget; // 右下角活动悬浮窗
+    }
+    if (obj?.data?.modules?.recommended_list) {
+      delete obj.data.modules.recommended_list; // 高德建议
+    }
     if (obj?.data?.modules?.user_filter_card) {
       const items = [
         "banner", // 大横幅
@@ -58,7 +68,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
         "sug_items_data" // 高德建议
       ];
       if (obj?.data?.modules?.user_filter_card?.data) {
-        delete obj.data.modules.user_filter_card.data.search_button_data.rightbgText; // 查询按钮右上角角标
+        if (obj?.data?.modules?.user_filter_card?.data?.search_button_data?.rightbgText) {
+          delete obj.data.modules.user_filter_card.data.search_button_data.rightbgText; // 查询按钮右上角角标
+        }
         for (let i of items) {
           delete obj.data.modules.user_filter_card.data[i];
         }
@@ -97,7 +109,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     obj.data.tbt.event = obj.data.tbt.event.filter((i) => !/ads-\d+/.test(i?.dynamic_id_s));
   }
   if (obj?.data?.front_end) {
-    delete obj.data.front_end.assistant; // 助手皮肤
+    if (obj?.data?.front_end?.assistant) {
+      delete obj.data.front_end.assistant; // 助手皮肤
+    }
     if (obj?.data?.front_end?.guide_tips?.length > 0) {
       // 音乐底栏
       obj.data.front_end.guide_tips = obj.data.front_end.guide_tips.filter((i) => i?.biz_type !== "music");
@@ -150,10 +164,16 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
 } else if (url.includes("/shield/dsp/profile/index/nodefaasv3")) {
   // 我的页面
   if (obj?.data) {
-    delete obj.data.tipData;
+    if (obj?.data?.tipData) {
+      delete obj.data.tipData;
+    }
     // delete obj.data.footPrintV2; // 足迹
-    delete obj.data.memberInfo; // 成就勋章 lv1见习达人
-    delete obj.data.topMixedCard; // 顶部足迹、贡献卡片
+    if (obj?.data?.memberInfo) {
+      delete obj.data.memberInfo; // 成就勋章 lv1见习达人
+    }
+    if (obj?.data?.topMixedCard) {
+      delete obj.data.topMixedCard; // 顶部足迹、贡献卡片
+    }
     if (obj?.data?.cardList?.length > 0) {
       obj.data.cardList = obj.data.cardList.filter((i) => i?.dataKey === "MyOrderCard");
     }
@@ -348,6 +368,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "parentPoiRecEntrance", // 所在商圈
     "platformCustomerCommonModule", // 众安保险赔付
     "platformCustomerComplianceInfo", // 保险公司信息
+    "poiDetailBottomBarOperation",
+    "poiDetailCommonConfig",
     "poiDetailWaterFeed", // 附近景点瀑布流 新
     "poiDetailWaterFeedTitle", // 更多人气好去处 新
     "poster_banner",
@@ -431,16 +453,30 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     // 详情页 底部 房产推广
     if (list?.hookInfo) {
       let hookData = list.hookInfo.data;
-      delete hookData.header;
-      delete hookData.house_info;
+      if (hookData?.header) {
+        delete hookData.header;
+      }
+      if (hookData?.house_info) {
+        delete hookData.house_info;
+      }
     }
     // 详情页 底部 订酒店
-    delete list.map_bottom_bar.hotel;
-    delete list.poi.item_info.tips_bottombar_button.hotel;
+    if (list?.map_bottom_bar?.hotel) {
+      delete list.map_bottom_bar.hotel;
+    }
+    if (list?.poi?.item_info?.tips_bottombar_button?.hotel) {
+      delete list.poi.item_info.tips_bottombar_button.hotel;
+    }
     // 地图优惠推广
-    delete list.map.main_point;
-    delete list.tips_operation_info;
-    delete list.bottom.bottombar_button.hotel;
+    if (list?.map?.main_point) {
+      delete list.map.main_point;
+    }
+    if (list?.tips_operation_info) {
+      delete list.tips_operation_info;
+    }
+    if (list?.bottom?.bottombar_button?.hotel) {
+      delete list.bottom.bottombar_button.hotel;
+    }
     // 搜索页 顶部卡片
     if (list?.card?.card_id === "SearchCardBrand" && list?.item_type === "brandAdCard") {
       delete list.card;
@@ -454,25 +490,43 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   } else if (obj?.data?.district?.poi_list) {
     // 搜索列表详情页
     let poi = obj.data.district.poi_list[0];
-    delete poi.transportation; // 订票横幅
-    delete poi.feed_rec_tab; // 景点门票 酒店特惠 特色美食 休闲玩乐
+    if (poi?.transportation) {
+      delete poi.transportation; // 订票横幅
+    }
+    if (poi?.feed_rec_tab) {
+      delete poi.feed_rec_tab; // 景点门票 酒店特惠 特色美食 休闲玩乐
+    }
   } else if (obj?.data?.modules) {
     if (obj?.data?.modules?.not_parse_result?.data?.list_data) {
       let list = obj.data.modules.not_parse_result.data.list_data.content[0];
       // 详情页 底部 房产推广
       if (list?.hookInfo) {
         let hookData = list.hookInfo.data;
-        delete hookData.header;
-        delete hookData.house_info;
+        if (hookData?.header) {
+          delete hookData.header;
+        }
+        if (hookData?.house_info) {
+          delete hookData.house_info;
+        }
       }
       // 详情页 底部 订酒店
-      delete list.map_bottom_bar.hotel;
-      delete list.poi.item_info.tips_bottombar_button.hotel;
+      if (list?.map_bottom_bar?.hotel) {
+        delete list.map_bottom_bar.hotel;
+      }
+      if (list?.poi?.item_info?.tips_bottombar_button?.hotel) {
+        delete list.poi.item_info.tips_bottombar_button.hotel;
+      }
       // 地图优惠推广
-      delete list.map.main_point;
+      if (list?.map?.main_point) {
+        delete list.map.main_point;
+      }
       // 左上角动图推广
-      delete list.tips_operation_info;
-      delete list.bottom.bottombar_button.hotel;
+      if (list?.tips_operation_info) {
+        delete list.tips_operation_info;
+      }
+      if (list?.bottom?.bottombar_button?.hotel) {
+        delete list.bottom.bottombar_button.hotel;
+      }
     }
     if (obj?.data?.modules?.list_data?.data) {
       // 搜索列表
@@ -524,7 +578,9 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   }
 } else if (url.includes("/shield/search_poi/tips_operation_location")) {
   // 搜索页面 底部结果上方窄横幅
-  delete obj.data.coupon;
+  if (obj?.data?.coupon) {
+    delete obj.data.coupon;
+  }
   const items = [
     "belt",
     "common_float_bar",
