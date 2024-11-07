@@ -1,0 +1,29 @@
+#!name = TestFlight
+#!desc = 解除TestFlight区域限制，以解决安装或更新TestFlight内App时, 提示“APP不可用”问题。
+#!openUrl = https://apps.apple.com/app/id899247664
+#!author = NobyDa[https://github.com/NobyDa], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.2.2(749)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-01.png
+#!date = 2024-11-07 10:30
+
+# 2022-06-16
+# https://github.com/NobyDa/Script/blob/master/Loon/Loon_TF_Download.plugin
+
+[General]
+skip-proxy = iosapps.itunes.apple.com
+
+[Rule]
+DOMAIN, testflight.apple.com, PROXY
+
+[Rewrite]
+^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ request-body-replace-regex "storefrontId"\x20:\x20"\d{6}-\d{2},\d{2}", "storefrontId":"143441-19,29",
+
+[Script]
+# http-request ^https?:\/\/testflight\.apple\.com\/v\d\/accounts\/.+?\/install$ script-path = https://gist.githubusercontent.com/NobyDa/9be418b93afc5e9c8a8f4d28ae403cf2/raw/TF_Download.js,  requires-body = true, tag = 解除TestFlight区域限制
+
+[MitM]
+hostname = testflight.apple.com
