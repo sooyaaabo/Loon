@@ -1,4 +1,4 @@
-// 2024-11-07 14:55:22
+// 2024-11-08 12:45
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -203,22 +203,15 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
   }
   if (obj?.data?.note_id !== "" && videoFeedUnlock?.length > 0) {
     if (obj?.data?.disable === true && obj?.data?.msg !== "") {
-      obj.data.disable = false;
-      obj.data.msg = "保存成功! ";
+      delete obj.data.disable;
+      delete obj.data.msg;
       obj.data.download_url = "";
+      obj.data.status = 2;
       for (let item of videoFeedUnlock) {
         if (item.id === obj.data.note_id) {
           obj.data.download_url = item.url;
         }
       }
-      // let attach = { openUrl: +obj.data.download_url, clipboard: obj.data.download_url };
-      // 弃用上面的写法 使用快捷指令 自动保存至相册
-      $notification.post(
-        "解析成功",
-        "",
-        "无水印下载地址解析成功，点此通知跳转至快捷指令下载该媒体。",
-        "shortcuts://run-shortcut?name=下载媒体&input=text&text=" + obj.data.download_url
-      );
     }
   }
   videoFeedUnlock = { notSave: "rucu6" };

@@ -1,4 +1,4 @@
-// 2024-10-26 13:05
+// 2024-11-08 12:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -14,7 +14,7 @@ if (url.includes("/x/resource/show/tab/v2")) {
   }
   // 首页导航栏
   if (obj?.data?.tab?.length > 0) {
-    const sortLists = ["推荐", "热门", "影视", "动画"];
+    const sortLists = ["推荐", "热门", "动画", "影视", "直播"];
     obj.data.tab = obj.data.tab
       .filter((i) => sortLists?.includes(i?.name))
       .sort((a, b) => sortLists.indexOf(a?.name) - sortLists.indexOf(b?.name));
@@ -30,42 +30,40 @@ if (url.includes("/x/resource/show/tab/v2")) {
   // 我的页面
   const del = ["ipad_upper_sections", "rework_v1", "vip_section", "vip_section_v2"];
   for (let i of del) {
-    // 不必要项目
-    delete obj.data[i];
+    delete obj.data[i]; // 不必要项目
   }
   // iPad 我的页面
   if (obj?.data?.ipad_recommend_sections?.length > 0) {
-    // 789我的关注 790我的消息 791我的钱包 792直播中心 793大会员 794我的课程 2542我的游戏
-    const itemList = [789, 790];
+    const itemList = [789, 790]; // 789我的关注 790我的消息 791我的钱包 792直播中心 793大会员 794我的课程 2542我的游戏
     obj.data.ipad_recommend_sections = obj.data.ipad_recommend_sections.filter((i) => itemList?.includes(i.id));
   }
   if (obj?.data?.ipad_more_sections?.length > 0) {
-    // 797我的客服 798设置 1070青少年守护
-    const itemList = [797, 798];
+    const itemList = [797, 798]; // 797我的客服 798设置 1070青少年守护
     obj.data.ipad_more_sections = obj.data.ipad_more_sections.filter((i) => itemList?.includes(i.id));
   }
   // iPhone 我的页面
   if (obj?.data?.sections_v2?.length > 0) {
     let newSects = [];
     for (let item of obj.data.sections_v2) {
-      delete item.button;
+      if (item?.button) {
+        delete item.button;
+      }
       if (item?.style) {
         if (item?.style === 1 || item?.style === 2) {
           if (item?.title) {
             if (item?.title === "创作中心" || item?.title === "推荐服务") {
-              // 创作中心 推荐服务
-              continue;
+              continue; // 创作中心 推荐服务
             } else if (item?.title === "更多服务") {
-              delete item.title;
+              if (item?.title) {
+                delete item.title;
+              }
               if (item?.items?.length > 0) {
                 let newItems = [];
                 for (let i of item.items) {
                   if (/user_center\/feedback/g.test(i?.uri)) {
-                    // 联系客服
-                    newItems.push(i);
+                    newItems.push(i); // 联系客服
                   } else if (/user_center\/setting/g.test(i?.uri)) {
-                    // 设置
-                    newItems.push(i);
+                    newItems.push(i); // 设置
                   } else {
                     continue;
                   }
@@ -75,8 +73,7 @@ if (url.includes("/x/resource/show/tab/v2")) {
             }
           }
         } else {
-          // 其他style
-          continue;
+          continue; // 其他style
         }
       }
       newSects.push(item);
@@ -133,8 +130,15 @@ if (url.includes("/x/resource/show/tab/v2")) {
       } else if (item?.goto === "vertical_av") {
         // 竖屏模式
         if (item?.card_goto === "av" || item?.card_goto === "vertical_av") {
-          delete item.creative_entrance; // 推荐话题搜索框
-          delete item.story_cart_icon; // 相关话题图标
+          if (item?.creative_entrance) {
+            item.creative_entrance = {}; // 推荐话题搜索框
+          }
+          if (item?.scroll_guide) {
+            item.scroll_guide = {}; // 上滑观看提示
+          }
+          if (item?.story_cart_icon) {
+            item.story_cart_icon = {}; // 相关话题图标
+          }
           newItems.push(item);
         } else {
           continue;
@@ -200,7 +204,9 @@ if (url.includes("/x/resource/show/tab/v2")) {
   }
 } else if (url.includes("/xlive/app-room/v1/index/getInfoByRoom")) {
   // 直播
-  delete obj.data.activity_banner_info;
+  if (obj?.data?.activity_banner_info) {
+    delete obj.data.activity_banner_info;
+  }
   if (obj?.data?.shopping_info) {
     obj.data.shopping_info = { is_show: 0 };
   }

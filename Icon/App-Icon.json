@@ -675,12 +675,24 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Speedtest.png"
         },
         {
+            "name": "Meta",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Meta.png"
+        },
+        {
             "name": "Instagram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Instagram-01.png"
         },
         {
             "name": "Instagram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Instagram-02.png"
+        },
+        {
+            "name": "Threads",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Threads.png"
+        },
+        {
+            "name": "Messenger",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Messenger.png"
         },
         {
             "name": "X",
