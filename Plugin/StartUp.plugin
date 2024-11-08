@@ -8,9 +8,9 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdReject.png
-#!date = 2024-11-06 12:40
+#!date = 2024-11-08 20:40
 
-# 2024-11-06
+# 2024-11-08
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
 
 [Rule]
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.11.06/c353/v2.0.546 reject-200
+^https?:\/\/2024.11.08/c353/v2.0.547 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -50,6 +50,7 @@
 ^https?:\/\/sso.ifanr.com\/jiong\/IOS\/appso\/splash\/ reject-200
 # 阿里巴巴
 ^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.advertisementservice\.getadv\/ reject-200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.cbu\.app\.homepage\.startup reject-200
 # AASTOCKS
 ^https?:\/\/.*aastocks\.com\/ad\/ reject-200
 # 安徽掌上10000
