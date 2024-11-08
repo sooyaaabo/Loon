@@ -87,15 +87,15 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Hiddify-Green.png"
         },
         {
-            "name": "v2rayN-blue",
+            "name": "v2rayN",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/v2rayN-blue.png"
         },
         {
-            "name": "v2rayN-red",
+            "name": "v2rayN",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/v2rayN-red.png"
         },
         {
-            "name": "v2rayN-purple",
+            "name": "v2rayN",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/v2rayN-purple.png"
         },
         {
@@ -303,7 +303,7 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/DingTalk.png"
         },
         {
-            "name": "TikTok DouYin",
+            "name": "TikTok Douyin",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TikTok.png"
         },
         {
@@ -311,7 +311,7 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AliyunDrive.png"
         },
         {
-            "name": "BaiduNetdisk",
+            "name": "BaiduNetDisk",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BaiduNetDisk.png"
         },
         {
@@ -327,8 +327,8 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/FeijiPan.png"
         },
         {
-            "name": "115Netdisk",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/115Netdisk.png"
+            "name": "115NetDisk",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/115NetDisk.png"
         },
         {
             "name": "CtfileDrive",
@@ -367,7 +367,7 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/VVebo.png"
         },
         {
-            "name": "RedBook RedPaper XiaoHhongShu",
+            "name": "RedBook RedPaper Xiaohongshu",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/RedBook.png"
         },
         {
@@ -383,11 +383,11 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Goofish.png"
         },
         {
-            "name": "JingDong",
+            "name": "Jingdong",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Jingdong.png"
         },
         {
-            "name": "CaiNiao",
+            "name": "Cainiao",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Cainiao.png"
         },
         {
@@ -431,8 +431,8 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/IQIYI.png"
         },
         {
-            "name": "Youku",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Youku.png"
+            "name": "YoukuVideo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/YoukuVideo.png"
         },
         {
             "name": "MangoTV",
@@ -449,6 +449,10 @@
         {
             "name": "Bilibili",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliWhite.png"
+        },
+        {
+            "name": "Bilibili",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BiliUniverse.png"
         },
         {
             "name": "Ezviz",
