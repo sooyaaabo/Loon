@@ -24,12 +24,12 @@ if (url.includes("/v1/users/onboard_list")) {
   }
 } else if (url.includes("/v1/user/home/widgets") || url.includes("/v2/users/home/widgets")) {
   const item = [
-    // "album", // 相册
+    "album", // 相册
     "banners", // 顶部奖励
-    //"coreFeatures", // 横版图标
+    "coreFeatures", // 横版图标
     "introduceAlipan", // 认识阿里云盘
     // "mainBackup", // 手机备份
-    // "minorBackup", // 备份设备列表
+    "minorBackup", // 备份设备列表
     // "signIn" // 签到
   ];
   item.forEach((i) => {
