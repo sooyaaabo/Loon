@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-11-10 11:25
+#!date = 2024-11-10 12:50
 
 # 2024-11-08 14:15:31
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
-# 2024-11-10 10:59
+# 2024-11-10 12:44
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
 [Rule]
@@ -43,7 +43,8 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 ^https:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/search\/square mock-response-body data-type=json status-code=200 data="{"code":0,"message":"0","ttl":1,"data":[{"type":"history","title":"搜索历史"}]}"
 
 # 移除直播间商品广告
-^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_cart_status\? mock-response-body data-type=json status-code=200 data="{"code":0,"message":"0","ttl":1,"data":{"status":0}}"
+^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? mock-response-body data-type=json status-code=200 data="{}"
+# ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? response-body-json-del data
 
 # 屏蔽默认搜索框关键词
 ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ reject-dict
@@ -62,16 +63,13 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 (^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) 302 $1
 
 # 移除开屏广告
-^https:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(list|show|event\/list2) response-body-json-jq '.data as $data | .data[("list", "show", "event_list") | select($data[.])] = []'
+^https:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(?:list|show|event\/list2) response-body-json-jq '.data as $data | .data[("show", "event_list") | select($data[.])] = []'
 
 # 移除观影页广告
-^https:\/\/api\.bili(bili\.com|api\.net)\/pgc\/page\/(bangumi|cinema\/tab\?) response-body-json-jq '.result.modules |= if . then map(if (.style | startswith("tip")) or (.module_id | IN(241, 1283, 1441, 1284)) then .items = [] elif .style | startswith("banner") then .items |= if . then map(select(.link | contains("play"))) else [] end elif .style | startswith("function") then .items |= if . then map(select(.blink | startswith("bilibili"))) else [] end end) end'
+^https:\/\/api\.bili(bili\.com|api\.net)\/pgc\/page\/(?:bangumi|cinema\/tab\?) response-body-json-jq '.result.modules |= if . then map(if (.style | startswith("tip")) or (.module_id | IN(241, 1283, 1441, 1284)) then .items = [] elif .style | startswith("banner") then .items |= if . then map(select(.link | contains("play"))) else [] end elif .style | startswith("function") then .items |= if . then map(select(.blink | startswith("bilibili"))) else [] end end) end'
 
 # 移除直播间广告
-^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByUser response-body-json-jq 'del(.data.play_together_info, .data.play_together_info_v2)'
-
-# 移除直播间广告
-^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoByRoom response-body-json-jq 'del(.data.activity_banner_info) | .data.shopping_info.is_show = 0 | .data.show_reserve_status = false | .data.reserve_info.show_reserve_status = false | .data.function_card.wish_list_card = null | .data.function_card.follow_card = null | .data.new_tab_info.outer_list |= if . then map(select(.biz_id != 33)) end'
+^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoBy(?:User|Room) response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
 
 [Script]
 # Proto处理
