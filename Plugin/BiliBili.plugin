@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-11-10 12:50
+#!date = 2024-11-10 12:40
 
 # 2024-11-08 14:15:31
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
-# 2024-11-10 12:44
+# 2024-11-10 19:25
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
 [Rule]
