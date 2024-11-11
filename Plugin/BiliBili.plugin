@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-11-10 12:40
+#!date = 2024-11-11 22:00
 
 # 2024-11-08 14:15:31
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
-# 2024-11-10 19:25
+# 2024-11-11 21:59
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
 [Rule]
@@ -61,9 +61,6 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 
 # 移除视频链接跟踪参数
 (^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) 302 $1
-
-# 移除开屏广告
-^https:\/\/app\.bili(bili\.com|api\.net)\/x\/v2\/splash\/(?:list|show|event\/list2) response-body-json-jq '.data as $data | .data[("show", "event_list") | select($data[.])] = []'
 
 # 移除观影页广告
 ^https:\/\/api\.bili(bili\.com|api\.net)\/pgc\/page\/(?:bangumi|cinema\/tab\?) response-body-json-jq '.result.modules |= if . then map(if (.style | startswith("tip")) or (.module_id | IN(241, 1283, 1441, 1284)) then .items = [] elif .style | startswith("banner") then .items |= if . then map(select(.link | contains("play"))) else [] end elif .style | startswith("function") then .items |= if . then map(select(.blink | startswith("bilibili"))) else [] end end) end'
