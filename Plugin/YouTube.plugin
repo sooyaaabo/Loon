@@ -24,7 +24,7 @@ blockUpload = switch, true, false, tag = 隐藏上传按钮, desc = 是否隐藏
 blockImmersive = switch, true, false, tag = 隐藏选段按钮, desc = 是否隐藏选段按钮
 captionLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 字幕翻译语言, desc = 选择字幕翻译语言
 lyricLang = select, "zh-Hans", "zh-Hant", "ja", "ko", "en", "off", tag = 歌词翻译语言, desc = 选择歌词翻译语言
-debug = switch, true, false, tag = 启用调试模式, desc = 是否启用调试模式
+debug = switch, false, true, tag = 启用调试模式, desc = 是否启用调试模式
 
 [Rule]
 AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
