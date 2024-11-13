@@ -344,7 +344,7 @@
         },
         {
             "name": "OneDrive",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/OneDrive.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MisrosoftOneDrive.png"
         },
         {
             "name": "Amap Gaode",
@@ -611,6 +611,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Microsoft-03.png"
         },
         {
+            "name": "Microsoft",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Microsoft-04.png"
+        },
+        {
             "name": "Windows",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Windows-01.png"
         },
@@ -623,8 +627,28 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Windows-03.png"
         },
         {
+            "name": "Windows",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Windows-04.png"
+        },
+        {
+            "name": "MicrosoftOffice365",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MicrosoftOffice365.png"
+        },
+        {
             "name": "ChatGPT OpenAI",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ChatGPT.png"
+        },
+        {
+            "name": "MicrosoftCopilot",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MicrosoftCopilot.png"
+        },
+        {
+            "name": "Claude",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Claude.png"
+        },
+        {
+            "name": "Perplexity",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Perplexity.png"
         },
         {
             "name": "InternetExplorer",
@@ -661,6 +685,10 @@
         {
             "name": "MicrosoftEdge",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MicrosoftEdge.png"
+        },
+        {
+            "name": "MicrosoftBingSearch",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MicrosoftBingSearch.png"
         },
         {
             "name": "Firefox",
@@ -713,6 +741,10 @@
         {
             "name": "Telegram",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Telegram-02.png"
+        },
+        {
+            "name": "Telegram",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Telegram-03.png"
         },
         {
             "name": "Swiftgram",
