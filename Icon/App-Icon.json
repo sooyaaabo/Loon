@@ -792,7 +792,11 @@
         },
         {
             "name": "GitHub",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/GitHub.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/GitHub-01.png"
+        },
+        {
+            "name": "GitHub",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/GitHub-02.png"
         },
         {
             "name": "GitLab",
