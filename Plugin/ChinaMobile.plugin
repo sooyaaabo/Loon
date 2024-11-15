@@ -1,17 +1,28 @@
 #!name = 中国移动
-#!desc = 过滤中国移动广告，不对内部活动进行相关广告去除。
+#!desc = 1.过滤中国移动广告，不对内部活动进行相关广告去除；2.查询套餐内通话、套餐使用情况。
 #!openUrl = https://apps.apple.com/app/id583700738
-#!author = Yuheng0101[https://github.com/Yuheng0101]
+#!author = Yuheng0101[https://github.com/Yuheng0101], ChinaTelecomOperators[https://github.com/ChinaTelecomOperators]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ChinaMobile-CMCC.png
-#!date = 2024-10-24 23:30
+#!date = 2024-11-15 16:50
 
 # version 1.0.0
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js
+# 2024-11-14 16:00:00
+# https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.loon.plugin
+
+[Argument]
+enable_capture = switch, false, true, tag = 捕获相关参数, desc = 是否开启获取参数重写
+debug = switch, false, true, tag = 调试模式, desc = 是否开启调试模式，调试模式下日志会增多
+cron = input, "0 9 * * *", tag = 执行时间, desc = 填写正确的Cron表达式
+phonenumber = input, "", tag = 手机号码, desc = 抓取参数对应的手机号码
+bark_key = input, "", tag = Bark推送Key, desc = 优先级高于代理通知，填写后将只使用Bark推送
+silent = switch, false, true, tag = 静默模式, desc = 是否开启静默模式，静默模式下不发送系统通知
+service = switch, false, true, tag = Scriptable服务模式, desc = 是否开启Scriptable服务模式，不用组件者请无视
 
 [Rewrite]
 # 开屏
@@ -20,6 +31,13 @@
 ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/popupWindow\/getDetail reject-200
 
 [Script]
+# 查询套餐内通话、套餐使用情况
+# 捕获相关参数
+http-request ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/[LD]N\/uam(onekey|randcode)login\/autoLogin script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body = true, tag = 中国移动获取参数, enable = {enable_capture}
+# 定时运行任务
+cron {cron} script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, tag = 中国移动余量查询, timeout = 60, argument=[{phonenumber},{bark_key},{debug},{silent},{service}]
+
+# 过滤广告，不对内部活动进行相关广告去除
 # 启动页
 http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit$ script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动启动页
 # 首页 - 下拉
