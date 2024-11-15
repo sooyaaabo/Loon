@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ChinaMobile-CMCC.png
-#!date = 2024-11-15 16:50
+#!date = 2024-11-15 18:50
 
 # version 1.0.0
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js
@@ -16,24 +16,24 @@
 # https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.loon.plugin
 
 [Argument]
-enable_capture = switch, false, true, tag = 捕获相关参数, desc = 是否开启获取参数重写
+enable_capture = switch, false, true, tag = 获取参数, desc = 是否开启获取参数重写
 debug = switch, false, true, tag = 调试模式, desc = 是否开启调试模式，调试模式下日志会增多
 cron = input, "0 9 * * *", tag = 执行时间, desc = 填写正确的Cron表达式
-phonenumber = input, "", tag = 手机号码, desc = 抓取参数对应的手机号码
+phonenumber = input, "", tag = 手机号码, desc = 填写参数对应的手机号码
 bark_key = input, "", tag = Bark推送Key, desc = 优先级高于代理通知，填写后将只使用Bark推送
 silent = switch, false, true, tag = 静默模式, desc = 是否开启静默模式，静默模式下不发送系统通知
 service = switch, false, true, tag = Scriptable服务模式, desc = 是否开启Scriptable服务模式，不用组件者请无视
 
 [Rewrite]
 # 开屏
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(?:explorePage\/getAdverList|init\/startInit) reject-200
 # 弹窗
 ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/popupWindow\/getDetail reject-200
 
 [Script]
 # 查询套餐内通话、套餐使用情况
 # 捕获相关参数
-http-request ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/[LD]N\/uam(onekey|randcode)login\/autoLogin script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body = true, tag = 中国移动获取参数, enable = {enable_capture}
+http-request ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/[LD]N\/uam(?:onekey|randcode)login\/autoLogin script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, requires-body = true, tag = 中国移动获取参数, enable = {enable_capture}
 # 定时运行任务
 cron {cron} script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/releases/download/Prerelease-Alpha/10086.js, tag = 中国移动余量查询, timeout = 60, argument=[{phonenumber},{bark_key},{debug},{silent},{service}]
 
