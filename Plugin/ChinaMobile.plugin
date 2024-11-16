@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ChinaMobile-CMCC.png
-#!date = 2024-11-15 18:50
+#!date = 2024-11-16 09:10
 
 # version 1.0.0
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js
@@ -27,8 +27,6 @@ service = switch, false, true, tag = Scriptable服务模式, desc = 是否开启
 [Rewrite]
 # 开屏
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(?:explorePage\/getAdverList|init\/startInit) reject-200
-# 弹窗
-^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/popupWindow\/getDetail reject-200
 
 [Script]
 # 查询套餐内通话、套餐使用情况
@@ -39,16 +37,16 @@ cron {cron} script-path = https://github.com/ChinaTelecomOperators/ChinaMobile/r
 
 # 过滤广告，不对内部活动进行相关广告去除
 # 启动页
-http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit$ script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动启动页
+# http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/init\/startInit$ script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动启动页
 # 首页 - 下拉
-http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/newTopPullSecond\/getNewTopPullList script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动首页 - 下拉
+# http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/newTopPullSecond\/getNewTopPullList script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动首页 - 下拉
 # 首页 - 悬浮广告
-http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/emotionMarket\/getEmotionMarketNew script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动首页 - 悬浮广告
-http-response ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/homeArea\/getTopAreaList script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动首页 - 悬浮广告
+# http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/emotionMarket\/getEmotionMarketNew script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动首页 - 悬浮广告
+# http-response ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/homeArea\/getTopAreaList script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动首页 - 悬浮广告
 # 办理 - 横幅
-http-response ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/navigation\/getNavigationNewInfo script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动办理 - 横幅
+# http-response ^https?:\/\/h\.app\.coc\.10086\.cn\/biz-orange\/DH\/navigation\/getNavigationNewInfo script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动办理 - 横幅
 # 我的 - 弹窗 
-http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/friendShake\/getShakeList script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动我的 - 弹窗
+# http-response ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/friendShake\/getShakeList script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/ChinaMobile/NoAds.js, requires-body = true, tag = 中国移动我的 - 弹窗
 
 [MitM]
 hostname = client.app.coc.10086.cn, h.app.coc.10086.cn
