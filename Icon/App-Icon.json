@@ -655,6 +655,10 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ChatGPT.png"
         },
         {
+            "name": "Gemini",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/GoogleGemini.png"
+        },
+        {
             "name": "MicrosoftCopilot",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MicrosoftCopilot.png"
         },
