@@ -33,16 +33,16 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 ## 配置模板：
 
 **配置文件导入（点击跳转）：**
-- [适用于App Store版本](https://www.nsloon.com/openloon/import?sub=https://github.com/sooyaaabo/Loon/raw/main/Config/Loon_Simple_Configuration_AppStore.conf)
+- [适用于App Store版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
 
-- [适用于TestFlight版本](https://www.nsloon.com/openloon/import?sub=https://github.com/sooyaaabo/Loon/raw/main/Config/Loon_Simple_Configuration_TestFlight.conf)
+- [适用于TestFlight版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
 
 **配置文件链接（手动复制）：**
   ```
-  https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf
+  https://github.com/sooyaaabo/Loon/raw/main/Config/Loon_Simple_Configuration_AppStore.conf
   ```
   ```
-  https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf
+  https://github.com/sooyaaabo/Loon/raw/main/Config/Loon_Simple_Configuration_TestFlight.conf
   ```
 
 ## 机场推荐
