@@ -8,11 +8,11 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/YouTube.png
-#!date = 2024-11-12 23:30
+#!date = 2024-11-17 09:30
 
-# 2024-11-10
+# 2024-11-15
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
-# 2024-11-13 00:04:19
+# 2024-11-16 21:55:06
 # https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 # Youtube 画中画和后台播放分别在客户端内关闭
@@ -35,8 +35,7 @@ AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
 
 [Script]
-# YouTube去广告
-http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
+# http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
 
 http-response ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|search|reel\/reel_watch_sequence|guide|account\/get_setting|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.response.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube响应, argument=[{blockUpload},{blockImmersive},{captionLang},{lyricLang},{debug}]
 
