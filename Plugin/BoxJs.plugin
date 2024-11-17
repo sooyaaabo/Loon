@@ -14,7 +14,7 @@
 # https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin
 
 [Rule]
-DOMAIN-SUFFIX,jsdelivr.net,PROXY
+DOMAIN-SUFFIX, jsdelivr.net, PROXY
 
 [Script]
 http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body = true, timeout = 120, tag = BoxJs
