@@ -182,7 +182,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 </table>
 
 - **购买方式**<br>
-点击[EFCloud官网](https://www.efc2.cc/register?aff=hBKGQjGQ)购买，新用户8折优惠码`new`，双十一8折优惠码（有效期至 2024.11.15 23:59）`1111`
+点击[EFCloud官网](https://www.efc2.cc/register?aff=hBKGQjGQ)购买，新用户8折优惠码`new`
 
 - **联系方式**<br>
 官方频道：[@efcloud](https://t.me/efcloud)<br>
