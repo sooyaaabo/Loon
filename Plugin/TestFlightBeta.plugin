@@ -13,6 +13,9 @@
 # 2022-06-16
 # https://github.com/NobyDa/Script/blob/master/Loon/Loon_TF_Download.plugin
 
+[General]
+skip-proxy = iosapps.itunes.apple.com
+
 [Rule]
 DOMAIN, testflight.apple.com, PROXY
 
