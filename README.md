@@ -495,56 +495,55 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td colspan="5" align=center><b>作者（以下排名不分先后）</b></td>
     </tr>
     <tr>
-        <td><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
-        <td><a href="https://github.com/fmz200"><em>@fmz200</em></a></td>
-        <td><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
-        <td><a href="https://github.com/app2smile"><em>@app2smile</em></a></td>
-        <td><a href="https://github.com/blackmatrix7"><em>@blackmatrix7</em></a></td>
+        <td width="210px"><a href="https://github.com/RuCu6"><em>@RuCu6</em></a></td>
+        <td width="210px"><a href="https://github.com/fmz200"><em>@fmz200</em></a></td>
+        <td width="210px"><a href="https://github.com/Maasea"><em>@Maasea</em></a></td>
+        <td width="210px"><a href="https://github.com/app2smile"><em>@app2smile</em></a></td>
+        <td width="210px"><a href="https://github.com/blackmatrix7"><em>@blackmatrix7</em></a></td>
      </tr>
      <tr>
-        <td><a href="https://github.com/xream"><em>@xream</em></a></td>
-        <td><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
-        <td><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
-        <td><a href="https://github.com/Guding88"><em>@Guding88</em></a></td>
-        <td><a href="https://github.com/githubdulong"><em>@githubdulong</em></a></td>
+        <td width="210px"><a href="https://github.com/xream"><em>@xream</em></a></td>
+        <td width="210px"><a href="https://github.com/Keywos"><em>@Keywos</em></a></td>
+        <td width="210px"><a href="https://github.com/kokoryh"><em>@kokoryh</em></a></td>
+        <td width="210px"><a href="https://github.com/Guding88"><em>@Guding88</em></a></td>
+        <td width="210px"><a href="https://github.com/githubdulong"><em>@githubdulong</em></a></td>
      </tr>
      <tr>
-        <td><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
-        <td><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
-        <td><a href="https://github.com/FoKit"><em>@FoKit</em></a></td>
-        <td><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
-        <td><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
+        <td width="210px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
+        <td width="210px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
+        <td width="210px"><a href="https://github.com/FoKit"><em>@FoKit</em></a></td>
+        <td width="210px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
+        <td width="210px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
      </tr>
      <tr>
-        <td><a href="https://github.com/ddgksf2013"><em>@ddgksf2013</em></a></td>
-        <td><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
-        <td><a href="https://github.com/luestr"><em>@luestr</em></a></td>
-        <td><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
-        <td><a href="https://github.com/GoodHolidays"><em>@GoodHolidays</em></a></td>
+        <td width="210px"><a href="https://github.com/ddgksf2013"><em>@ddgksf2013</em></a></td>
+        <td width="210px"><a href="https://github.com/suiyuran"><em>@suiyuran</em></a></td>
+        <td width="210px"><a href="https://github.com/luestr"><em>@luestr</em></a></td>
+        <td width="210px"><a href="https://github.com/hfg-gmuend"><em>@hfg-gmuend</em></a></td>
+        <td width="210px"><a href="https://github.com/GoodHolidays"><em>@GoodHolidays</em></a></td>
      </tr>
      <tr>
-        <td><a href="https://github.com/wf021325"><em>@wf021325</em></a></td>
-        <td><a href="https://github.com/chxm1023"><em>@chxm1023</em></a></td>
-        <td><a href="https://gitlab.com/I-am-R-E"><em>@I-am-R-E</em></a></td>
-        <td><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
-        <td><a href="https://github.com/Marol62926"><em>@Marol62926</em></a></td>
+        <td width="210px"><a href="https://github.com/wf021325"><em>@wf021325</em></a></td>
+        <td width="210px"><a href="https://github.com/chxm1023"><em>@chxm1023</em></a></td>
+        <td width="210px"><a href="https://gitlab.com/I-am-R-E"><em>@I-am-R-E</em></a></td>
+        <td width="210px"><a href="https://github.com/Sliverkiss"><em>@Sliverkiss</em></a></td>
+        <td width="210px"><a href="https://github.com/Marol62926"><em>@Marol62926</em></a></td>
      </tr>
      <tr>
-        <td><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
-        <td><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
-        <td><a href="https://github.com/VirgilClyne"><em>@VirgilClyne</em></a></td>
-        <td><a href="https://github.com/ClydeTime"><em>@ClydeTime</em></a></td>
-        <td><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
+        <td width="210px"><a href="https://github.com/zmqcherish"><em>@zmqcherish</em></a></td>
+        <td width="210px"><a href="https://github.com/Yu9191"><em>@Yu9191</em></a></td>
+        <td width="210px"><a href="https://github.com/VirgilClyne"><em>@VirgilClyne</em></a></td>
+        <td width="210px"><a href="https://github.com/ClydeTime"><em>@ClydeTime</em></a></td>
+        <td width="210px"><a href="https://github.com/ZenmoFeiShi"><em>@ZenmoFeiShi</em></a></td>
      </tr>
      <tr>
-        <td><a href="https://github.com/Peng-YM"><em>@Peng-YM</em></a></td>
-        <td><a href="https://github.com/chavyleung"><em>@chavyleung</em></a></td>
-        <td><a href="https://github.com/CKYB"><em>@CKYB</em></a></td>
-        <td><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
-        <td><a href="https://github.com/ChinaTelecomOperators"><em>@ChinaTelecomOperators</em></a></td>
+        <td width="210px"><a href="https://github.com/Peng-YM"><em>@Peng-YM</em></a></td>
+        <td width="210px"><a href="https://github.com/chavyleung"><em>@chavyleung</em></a></td>
+        <td width="210px"><a href="https://github.com/CKYB"><em>@CKYB</em></a></td>
+        <td width="210px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
+        <td width="210px"><a href="https://github.com/ChinaTelecomOperators"><em>@ChinaTelecomOperators</em></a></td>
       </tr>
 </table>
-
 
 ## Star History
 ![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)
