@@ -1,17 +1,19 @@
 #!name = 百度网盘
 #!desc = 过滤百度网盘广告，解锁部分SVIP功能。
 #!openUrl = https://apps.apple.com/app/id547166701
-#!author = RuCu6[https://github.com/RuCu6], chxm1023[https://github.com/chxm1023], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], chxm1023[https://github.com/chxm1023], WeiGiegie[https://github.com/WeiGiegie], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BaiduNetDisk.png
-#!date = 2024-10-22 00:00
+#!date = 2024-11-17 10:20
 
 # 2023-08-19 13:48:55
 # https://github.com/chxm1023/Rewrite/blob/main/bdcloud.js
+# 2024-11-16
+# https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js
 # 2024-09-08
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Function/BaiduCloud.conf
 # 2024-09-08 02:01:52
@@ -148,6 +150,9 @@ http-response ^https:\/\/pan\.baidu\.com\/rest\/2\.0\/membership\/user script-pa
 
 # chxm1023
 http-response ^https?:\/\/pan\.baidu\.com\/(youai\/(user\/.+\/getminfo|membership\/.+\/adswitch)|(rest\/.+\/membership\/user|act\/.+\/(bchannel|welfare)\/list|api\/usercfg)) script-path = https://raw.githubusercontent.com/chxm1023/Rewrite/main/bdcloud.js, requires-body = true, tag = 解锁SVIP权益
+
+# WeiGiegie
+http-response ^https?:\/\/pan\.baidu\.com\.+(rest\/.+\/membership\/user|api\/user\/getinfo|act\/v2\/welfare\/list|api\/taskscore\/tasklist)\? script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/panda.js, requires-body = true, tag = 解锁SVIP权益
 
 # ddgksf2013
 # 开屏广告
