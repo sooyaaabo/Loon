@@ -49,6 +49,8 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
 
 > **下方所有机场均只推荐购买月付套餐，请根据个人情况自行判断，理性消费，量力而行，本人不承担任何后果。**
 
+> **下方所有机场提供的套餐价格可能因更新不及时与官网不一致，具体请以官网显示为准。**
+
 ### **Aladdin（阿拉丁）**
 
 - **机场介绍**<br>
@@ -70,7 +72,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
     </tr>
     <tr>
         <td align=center>轻量套餐</td>
-        <td align=center>50G</td>
+        <td align=center>65G</td>
         <td align=center>×</td>
         <td align=center>×</td>
         <td align=center>30</td>
@@ -79,7 +81,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
     </tr>
     <tr>
         <td align=center>基础套餐</td>
-        <td align=center>138G</td>
+        <td align=center>158G</td>
         <td align=center>×</td>
         <td align=center>30</td>
         <td align=center>60</td>
@@ -88,7 +90,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
     </tr>
     <tr>
         <td align=center>高级套餐</td>
-        <td align=center>300G</td>
+        <td align=center>338G</td>
         <td align=center>18</td>
         <td align=center>54</td>
         <td align=center>108</td>
@@ -97,20 +99,11 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
     </tr>
     <tr>
         <td align=center>豪华套餐</td>
-        <td align=center>600G</td>
+        <td align=center>638G</td>
         <td align=center>30</td>
         <td align=center>90</td>
         <td align=center>180</td>
         <td align=center>360</td>
-        <td align=center>×</td>
-    </tr>
-    <tr>
-        <td align=center>直连套餐</td>
-        <td align=center>300G</td>
-        <td align=center>10</td>
-        <td align=center>30</td>
-        <td align=center>60</td>
-        <td align=center>120</td>
         <td align=center>×</td>
     </tr>
 </table>
