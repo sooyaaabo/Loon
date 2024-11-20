@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-11-03 22:00
+# 2024-11-20 12:00
 
 # CMSPlayer
 # 低端影视
@@ -294,7 +294,6 @@ DOMAIN-SUFFIX, whjzjx.cn
 DOMAIN-SUFFIX, mediap.svc.ms
 DOMAIN-SUFFIX, novipnoad.net
 DOMAIN-SUFFIX, yangkeduo.com
-DOMAIN-KEYWORD, ts.com
 DOMAIN, n45lxpvts.com
 DOMAIN, yk7ynj4ts.com
 DOMAIN, r8qgyo0ts.com
