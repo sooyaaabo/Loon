@@ -1,11 +1,17 @@
-# 2024-11-05 10:10
+# 2024-11-12 08:18:31
 # https://kelee.one/Tool/Loon/Rule/AI.list
 
-# ChatGPT
+# https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list
+
+# OpenAI ChatGPT
 AND, ((DOMAIN-KEYWORD, chatgpt-async-webps-prod-eastus-), (DOMAIN-SUFFIX, webpubsub.azure.com))
 AND, ((DOMAIN-KEYWORD, openaicom-api-), (DOMAIN-SUFFIX, azurefd.net))
+DOMAIN, api.statsig.com
+DOMAIN, api-iam.intercom.io
+DOMAIN, chatgpt.livekit.cloud
 DOMAIN, o33249.ingest.sentry.io
 DOMAIN, openaiapi-site.azureedge.net
+DOMAIN,sfo3.turn.livekit.cloud
 DOMAIN, openaicom.imgix.net
 DOMAIN, openaicomproductionae4b.blob.core.windows.net
 DOMAIN, production-openaicom-storage.azureedge.net
@@ -16,26 +22,37 @@ DOMAIN-SUFFIX, oaiusercontent.com
 DOMAIN-SUFFIX, openai.com
 DOMAIN-SUFFIX, openai.com.cdn.cloudflare.net
 
-# Copilot
+# Apple Intelligence
+DOMAIN, apple-relay.apple.com
+DOMAIN, apple-relay.cloudflare.com
+DOMAIN, apple-relay.fastly-edge.com
+DOMAIN, cp4.cloudflare.com
+DOMAIN, guzzoni.apple.com
+DOMAIN-SUFFIX, smoot.apple.com
+
+# GitHub Copilot
 DOMAIN, api.githubcopilot.com
 DOMAIN, copilot-proxy.githubusercontent.com
 DOMAIN, copilot.microsoft.com
 DOMAIN, sydney.bing.com
 DOMAIN, www.bing.com
+DOMAIN-SUFFIX, githubcopilot.com
 
-# Gemini
+# Google Gemini
 DOMAIN, bard.google.com
 DOMAIN, gemini.google.com
 DOMAIN, generativelanguage.googleapis.com
+DOMAIN, proactivebackend-pa.googleapis.com
 DOMAIN, ai.google.dev
 DOMAIN, aida.googleapis.com
 DOMAIN, aistudio.google.com
 DOMAIN, alkalimakersuite-pa.clients6.google.com
 DOMAIN, makersuite.google.com
 
-# Claude
+# Anthropic Claude
 DOMAIN-SUFFIX, anthropic.com
 DOMAIN-SUFFIX, claude.ai
+DOMAIN-SUFFIX, claudeusercontent.com
 IP-CIDR, 160.79.104.0/23, no-resolve
 IP-CIDR6, 2607:6bc0::/48, no-resolve
 
@@ -47,7 +64,7 @@ DOMAIN-SUFFIX, grazie.aws.intellij.net
 DOMAIN, imagine.meta.com
 DOMAIN-SUFFIX, meta.ai
 
-# Perplexity
+# Perplexity AI
 DOMAIN-SUFFIX, pplx.ai
 DOMAIN-SUFFIX, perplexity.ai
 DOMAIN-SUFFIX, perplexity.com
