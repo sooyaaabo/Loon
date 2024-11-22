@@ -1,5 +1,5 @@
 #!name = NodeSeek
-#!desc = NodeSeek自动签到。登录账号进入设置页面以获取Token，获取成功后关闭Token脚本。
+#!desc = NodeSeek自动签到。登录账号进入设置页面以获取Token，获取成功后关闭Token脚本。可在boxjs设置是否领取随机鸡腿，默认固定5个鸡腿。
 #!openUrl = https://www.nodeseek.com
 #!author = Sliverkiss[https://github.com/Sliverkiss]
 #!tag = 功能增强
@@ -12,10 +12,11 @@
 
 # 2024-04-13 20:34:33
 # https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
+# https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea71685ad3/raw/5b6b1b8ff6f96c35bf5c011abe645e3ddd5a5e91/sliverkiss.boxjs.json
 
 [Argument]
 CookieScript-nodeseek = switch, true, false, tag = NodeSeek Token, desc = 是否启用NodeSeek Token脚本来获取Token
-cron-nodeseek = input, "0 7 0 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
+cron-nodeseek = input, "0 0 8 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
 
 [Script]
 http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, enabled = {CookieScript-nodeseek}, tag = NodeSeek Token
