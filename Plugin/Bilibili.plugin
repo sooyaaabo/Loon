@@ -8,17 +8,19 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-11-20 20:10
+#!date = 2024-11-22 09:40
 
 # 2024-11-15 17:17:23
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
-# 2024-11-20 19:50
+# 2024-11-22 08:49
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
 [Rule]
 # 阻止B站备用域名访问
 DOMAIN, api.biliapi.net, REJECT
 DOMAIN, app.biliapi.net, REJECT
+DOMAIN, api.biliapi.com, REJECT
+DOMAIN, app.biliapi.com, REJECT
 
 # 开屏广告
 URL-REGEX, ^http:\/\/upos-sz-static\.bilivideo\.com\/ssaxcode\/\w{2}\/\w{2}\/\w{32}-1-SPLASH, REJECT-DICT
