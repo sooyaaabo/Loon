@@ -8,14 +8,14 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Amap.png
-#!date = 2024-11-07 15:35
+#!date = 2024-11-24 22:50
 
 # 2024-11-07 11:03:15
 # https://kelee.one/Tool/Loon/Plugin/Amap_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
-AND, ((URL-REGEX, ^http:\/\/(?:[\d\.]+|amdc\.m\.taobao\.com)\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
+AND, ((URL-REGEX, ^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT, AMapiPhone*)), REJECT
 
 DOMAIN, amap-aos-info-nogw.amap.com, REJECT
 DOMAIN, free-aos-cdn-image.amap.com, REJECT

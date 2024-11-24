@@ -8,15 +8,15 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/YouTube.png
-#!date = 2024-11-24 12:50
+#!date = 2024-11-24 22:50
 
 # 2024-11-24
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
-# 2024-11-16 21:55:06
+# 2024-11-24 22:25:16
 # https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
-# Youtube 画中画和后台播放分别在客户端内关闭
-#   - 设置 -> 通用 -> 画中画
+# YouTube 画中画和后台播放可在客户端内关闭
+#   - 设置 -> 播放 -> 画中画
 #   - 设置 -> 后台播放和下载 -> 后台播放
 
 [Argument]
@@ -32,7 +32,7 @@ AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 
 [Rewrite]
 # 使用reject-dict方法以减少开销
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad reject-dict
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad mock-response-body data-type = text data-path = "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/YouTube/YouTube-502Bad.mock" status-code = 502
 
 [Script]
 # http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求
