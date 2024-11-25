@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/WeChat.png
-#!date = 2024-11-15 20:30
+#!date = 2024-11-25 15:30
 
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
@@ -20,6 +20,12 @@
 # https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
 [Host]
+*.qq.com = server:119.28.28.28
+*.exmail.qq.com = server:119.29.29.29
+*.weixin.qq.com = server:119.29.29.29
+*.weixin.qq.com.cn = server:119.29.29.29
+*.weixin.com.cn = server:119.29.29.29
+
 # 腾讯
 *.tencent.com = server:https://doh.pub/dns-query
 # QQ
