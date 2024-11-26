@@ -562,6 +562,10 @@
             "name": "MediaStorm",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MediaStorm.png"
         },
+	{
+            "name": "Alist",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Alist.png"
+        },
         {
             "name": "Emby",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Emby-01.png"
@@ -569,6 +573,22 @@
         {
             "name": "Emby",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Emby-02.png"
+        },
+        {
+            "name": "Jellyfin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Jellyfin-01.png"
+        },
+        {
+            "name": "Jellyfin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Jellyfin-02.png"
+        },
+        {
+            "name": "Plex",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Plex-01.png"
+        },
+        {
+            "name": "Plex",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Plex-02.png"
         },
         {
             "name": "Follow",
