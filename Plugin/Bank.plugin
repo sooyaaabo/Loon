@@ -5,10 +5,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/CNY.png
-#!date = 2024-11-15 10:00
+#!date = 2024-11-28 01:00
 
 # 2024-07-11 19:10:01
 # https://kelee.one/Tool/Loon/Plugin/Bank_remove_ads.plugin
@@ -19,7 +19,7 @@ DOMAIN, adv.ccb.com, REJECT
 
 # 广发银行
 # 内页广告
-URL-REGEX, ^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mpspics\/, REJECT
+URL-REGEX, "^http:\/\/mps\.95508\.com\/mps\/icppweb\/images\/mps\/migration\/mpspics\/", REJECT
 
 [Rewrite]
 # 广发银行

@@ -5,17 +5,17 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Cainiao.png
-#!date = 2024-11-24 22:50
+#!date = 2024-11-28 01:00
 
 # 2024-10-31 16:04:04
 # https://kelee.one/Tool/Loon/Plugin/Cainiao_remove_ads.plugin
 
 [Rule]
 # 移除广告下发请求
-AND, ((URL-REGEX, ^http:\/\/.+\/amdc\/mobileDispatch), (USER-AGENT, Cainiao4iPhone*)), REJECT
+AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "Cainiao4iPhone*")), REJECT
 
 # DOMAIN, acs4baichuan.m.taobao.com, REJECT
 DOMAIN, adsmind.ugdtimg.com, REJECT

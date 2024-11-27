@@ -5,10 +5,10 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Turrit.png
-#!date = 2024-09-16 22:30
+#!date = 2024-11-28 01:00
 
 [Rewrite]
 (https:\/\/)?t\.me\/(.+) 302 turrit://resolve?domain=$2

@@ -5,10 +5,10 @@
 #!tag = 功能增强
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon= https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-01.png
-#!date = 2024-10-21 11:00
+#!date = 2024-11-28 01:00
 
 # 2022-12-22
 # https://github.com/blackmatrix7/ios_rule_script/blob/master/script/testflight/testflight.lnplugin

@@ -6,10 +6,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Jingdong.png
-#!date = 2024-10-22 00:00
+#!date = 2024-11-28 01:00
 
 # 2024-04-21 15:41:21
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
@@ -20,7 +20,7 @@
 DOMAIN, dns.jd.com, REJECT
 IP-CIDR, 101.124.19.122/32, REJECT, no-resolve
 IP-CIDR6, 2402:db40:5100:1011::5/128, REJECT, no-resolve
-URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
+URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 [Rewrite]
 ^http:\/\/\w{32}\.jddebug\.com\/diagnose\? reject

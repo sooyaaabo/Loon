@@ -5,10 +5,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/WeChat.png
-#!date = 2024-11-25 15:30
+#!date = 2024-11-28 01:00
 
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
@@ -89,8 +89,8 @@ DOMAIN-SUFFIX, wx.qq.com, PROXY
 DOMAIN-SUFFIX, wxapp.tc.qq.com, PROXY
 DOMAIN-SUFFIX, wxs.qq.com, PROXY
 DOMAIN-SUFFIX, yun-hl.3g.qq.com, PROXY
-USER-AGENT, MicroMessenger*, PROXY
-USER-AGENT, WeChat*, PROXY
+USER-AGENT, "MicroMessenger*", PROXY
+USER-AGENT, "WeChat*", PROXY
 IP-ASN,132203, no-resolve, PROXY
 
 #---------- 微信公众号 ----------#

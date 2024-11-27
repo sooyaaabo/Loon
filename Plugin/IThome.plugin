@@ -5,13 +5,13 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/IThome.png
 #!select = 去除轮播图广告,开启,关闭
 #!select = 去除整个轮播图,开启,关闭
 #!select = 去除置顶,开启,关闭
-#!date = 2024-10-22 00:00
+#!date = 2024-11-28 01:00
 
 # 2024-01-27 20:57
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin

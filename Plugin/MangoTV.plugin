@@ -5,10 +5,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MangoTV.png
-#!date = 2024-10-21 11:00
+#!date = 2024-11-28 01:00
 
 [Rule]
 DOMAIN, credits.bz.mgtv.com, REJECT
@@ -25,14 +25,13 @@ DOMAIN, rprain.log.mgtv.com, REJECT
 DOMAIN, vip.bz.mgtv.com, REJECT
 DOMAIN-SUFFIX, da.mgtv.com, REJECT
 # 无用请求
-URL-REGEX, ^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes, REJECT
+URL-REGEX, "^http:\/\/[\d\.]+:\d{5}\/\?cmd=indexes", REJECT
 # 首页左上角推广
-URL-REGEX, ^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\?, REJECT-DICT
+URL-REGEX, "^http:\/\/[\d\.]+\/odin\/c1\/(channel\/ads|skin\/config)\?", REJECT-DICT
 # 播放详情页
-URL-REGEX, ^http:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/cms\/list\?, REJECT-DICT
+URL-REGEX, "^http:\/\/mobile-thor\.api\.mgtv\.com\/v1\/vod\/cms\/list\?", REJECT-DICT
 # 搜索框填充词
-URL-REGEX, ^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?, REJECT-DICT
-
+URL-REGEX, "^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v1\?", REJECT-DICT
 
 [Rewrite]
 # 无用请求

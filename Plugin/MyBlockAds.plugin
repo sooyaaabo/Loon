@@ -5,10 +5,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/MyBlockAds.png
-#!date = 2024-11-19 10:00
+#!date = 2024-11-28 01:00
 
 [Rule]
 # ======= 0 ======= #
@@ -138,7 +138,7 @@ DOMAIN, www.googleadservices.com, REJECT
 DOMAIN-SUFFIX, ehaier.com, REJECT
 
 # 盒马
-AND, ((URL-REGEX, ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch), (USER-AGENT, Hema4iPhone*)), REJECT
+AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "Hema4iPhone*")), REJECT
 
 # httpdns
 DOMAIN-KEYWORD, httpdns., REJECT
@@ -267,7 +267,7 @@ DOMAIN, switch.cup.com.cn, REJECT
 DOMAIN, yandexmetrica.com, REJECT
 
 # ======= REGEX ======= #
-URL-REGEX, ^http:\/\/\w{32}\.jddebug\.com\/diagnose\?, REJECT
+URL-REGEX, "^http:\/\/\w{32}\.jddebug\.com\/diagnose\?", REJECT
 
 [Rewrite]
 # 爱思助手 //list-app-m.i4.cn

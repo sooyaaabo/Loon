@@ -5,10 +5,10 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Weibo.png
-#!date = 2024-10-31 23:15
+#!date = 2024-11-28 01:00
 
 # 2024-10-31 16:03:27
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
@@ -24,8 +24,8 @@ DOMAIN-SUFFIX, biz.weibo.com, REJECT
 DOMAIN, dns.weibo.cn, REJECT,extended-matching
 IP-CIDR, 39.97.130.51/32, REJECT, no-resolve
 IP-CIDR, 39.97.128.148/32, REJECT, no-resolve
-URL-REGEX, ^http:\/\/api\.weibo\.cn\/2\/httpdns\/config, REJECT
-URL-REGEX, ^http:\/\/api\.weibo\.cn\/httpdns\/config, REJECT
+URL-REGEX, "^http:\/\/api\.weibo\.cn\/2\/httpdns\/config", REJECT
+URL-REGEX, "^http:\/\/api\.weibo\.cn\/httpdns\/config", REJECT
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
