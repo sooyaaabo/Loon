@@ -8,7 +8,7 @@
 #!loon_version = 3.2.2(749)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-11-27 19:40
+#!date = 2024-11-27 22:40
 
 # 2024-11-15 17:17:23
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
@@ -50,7 +50,6 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 
 # 移除直播间商品广告
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? mock-response-body data-type=json status-code=200 data="{}"
-# ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? response-body-json-del data
 
 # 屏蔽默认搜索框关键词
 ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Search\/DefaultWords$ reject-dict
@@ -68,13 +67,16 @@ URL-REGEX, ^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH, REJECT-DICT
 # 移除视频链接跟踪参数
 (^https:\/\/(?:www|m)\.bilibili\.com\/video\/(?:BV\w{10}|av\d{9}))(\/?\?.*) 302 $1
 
-# 移除观影页广告
+# 开屏广告
+^https:\/\/app\.bilibili\.com\/x\/v2\/splash\/(?:list|show|event\/list2) response-body-json-jq '.data as $data | .data[("show", "event_list") | select($data[.])] = []'
+
+# 移除番剧页、观影页广告
 ^https:\/\/api\.bilibili\.com\/pgc\/page\/(?:bangumi|cinema\/tab\?) response-body-json-jq '.result.modules |= if . then map(if (.style | startswith("tip")) or (.module_id | IN(241, 1283, 1441, 1284)) then .items = [] elif .style | startswith("banner") then .items |= if . then map(select(.link | contains("play"))) else [] end elif .style | startswith("function") then .items |= if . then map(select(.blink | startswith("bilibili"))) else [] end end) end'
 
-# 移除新版直播banner
+# 移除直播推荐
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed\? response-body-json-jq 'if .data.card_list then .data.card_list |= map(select(.card_type != "banner_v2")) end'
 
-# 移除直播间广告
+# 移除直播间浮窗
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoBy(?:User|Room) response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
 
 [Script]
