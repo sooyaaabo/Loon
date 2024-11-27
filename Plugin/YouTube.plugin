@@ -31,7 +31,7 @@ AND, ((DOMAIN-SUFFIX, googlevideo.com),  (PROTOCOL, QUIC)), REJECT
 AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 
 [Rewrite]
-^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad mock-response-body data-type = text status-code = 502
+^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad mock-response-body data-type=text status-code=502
 # 短链移除追踪参数
 (^https:\/\/youtu\.be\/[\w-]+)(?:\?si=\w+) 302 $1
 
