@@ -21,13 +21,13 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
-# 2024-10-11 07:22:12
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin
 
 [Argument]

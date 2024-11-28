@@ -8,9 +8,9 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/VirgilClyne/iRingo/wiki
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AppleWeather.png
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
-# 1.8.16
+# 1.9.1
 # https://github.com/NSRingo/WeatherKit/releases/latest/download/WeatherKit.plugin
 
 [Argument]
@@ -31,6 +31,7 @@ DOMAIN-SUFFIX, tthr.apple.com, REJECT-DROP
 
 [Script]
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, tag = WeatherKit.api.v1.availability.response, argument=[{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token}]
+
 http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, binary-body-mode = true, tag = WeatherKit.api.v2.weather.response, argument=[{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token}]
 
 [MitM]

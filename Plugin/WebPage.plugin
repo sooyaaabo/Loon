@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Alook.png
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-10-04 01:25
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
@@ -19,8 +19,8 @@
 # -----------Rucu6----------- #
 # 桌面端请使用 https://google.com/ncr
 # 谷歌服务重定向 //*.google.cn
-^https?:\/\/www\.google\.cn 302 https://www.google.com
-^https?:\/\/translate\.google\.cn 302 https://translate.google.com
+^https?:\/\/www\.google\.cn 307 https://www.google.com
+^https?:\/\/translate\.google\.cn 307 https://translate.google.com
 # PornHub (https://cn.pornhub.com/) //*.pornhub.com
 ^https:\/\/(?:cn|www)\.pornhub\.com\/_xa\/ads(_batch)?\? reject
 # Avple 跳转弹窗 //asserts.avple.tv

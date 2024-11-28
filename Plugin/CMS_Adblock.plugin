@@ -9,14 +9,14 @@
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/CMSPlayer-1.0.15.png
 #!select = 弹窗通知, true, false
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-09-13 19:14
 # https://github.com/Yswag/for-own-use/blob/main/loon-plugin/cmsAdblock.plugin
 
 [Rewrite]
 # 暴風跑馬燈
-(^https?:\/\/s\d+\.bfengbf\.com\/video)(.+)_z5q\.ts $1$2.ts 302
+(^https?:\/\/s\d+\.bfengbf\.com\/video)(.+)_z5q\.ts 307 $1$2.ts
 
 [Script]
 # SFW

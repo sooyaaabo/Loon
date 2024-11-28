@@ -372,6 +372,10 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。<br>
         <td>40</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/ChinaMobile.plugin">中国移动</a></td>
     </tr>
+    <tr>
+        <td>41</td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/LuckinCoffee.plugin">瑞幸咖啡</a></td>
+    </tr>
 </table>
 <table>
     <tr>

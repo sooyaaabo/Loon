@@ -8,11 +8,11 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/YouTube.png
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-11-24
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
-# 2024-11-24 22:25:16
+# 2024-11-28 02:07:31
 # https://kelee.one/Tool/Loon/Plugin/YouTube_remove_ads.plugin
 
 # YouTube 画中画和后台播放可在客户端内关闭
@@ -33,7 +33,7 @@ AND, ((DOMAIN-SUFFIX, youtubei.googleapis.com),  (PROTOCOL, QUIC)), REJECT
 [Rewrite]
 ^https?:\/\/[\w-]+\.googlevideo\.com\/initplayback.+&oad mock-response-body data-type=text status-code=502
 # 短链移除追踪参数
-(^https:\/\/youtu\.be\/[\w-]+)(?:\?si=\w+) 302 $1
+(^https:\/\/youtu\.be\/[\w-]+)(?:\?si=\w+) 307 $1
 
 [Script]
 # http-request ^https:\/\/youtubei\.googleapis\.com\/youtubei\/v1\/(?:browse|next|player|reel\/reel_watch_sequence|get_watch) script-path = https://raw.githubusercontent.com/Maasea/sgmodule/master/Script/Youtube/dist/youtube.request.preview.js, requires-body = true, binary-body-mode = true, tag = YouTube请求

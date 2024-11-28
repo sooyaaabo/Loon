@@ -8,15 +8,15 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/WeChat.png
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-07-03 16:17:23
 # https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Loon/WeChat/WeChat.list
-# 2024-09-05 23:53:41
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Weixin_Official_Accounts_remove_ads.plugin
-# 2024-01-17 19:20:19
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Weixin_external_links_unlock.plugin
-# 2024-11-15 14:27:59
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
 [Host]
@@ -95,6 +95,8 @@ IP-ASN,132203, no-resolve, PROXY
 
 #---------- 微信公众号 ----------#
 DOMAIN-SUFFIX, wxs.qq.com, REJECT
+DOMAIN, badjs.weixinbridge.com, REJECT
+DOMAIN, dns.weixin.qq.com.cn, REJECT
 
 #---------- 微信小程序 ----------#
 # 微信小程序通用规则

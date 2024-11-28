@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ShieldPlus.png
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-11-24 22:30:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -872,7 +872,7 @@ https?:\/\/awg\.enmonster\.com\/apa\/(advert\/demand\/home\/poster|index\/advert
 ^https?:\/\/open\.fitdays\.cn\/uploads\/ad\/ reject
 
 # 横店电影小程序 - api.hengdianfilm.com
-^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 302 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/hengdian.json
+^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/1 307 https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/hengdian.json
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/2\?cid= reject-dict
 ^https?:\/\/api\.hengdianfilm\.com\/\/cinema\/queryAvailableBannerInfo\/4\?cid= reject-dict
 
@@ -2102,7 +2102,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 
 # 游戏时光 - app02.vgtime.com, www.vgtime.com
 ^https?:\/\/app02\.vgtime\.com:8080\/vgtime-app\/api\/v2\/init\/ad\.json$ reject-dict
-^(http:\/\/www\.vgtime\.com\/app\/topic\/\d+\.jhtml\?.*?&close_ad=)false(&page=\d&sign=\w+&timestamp=\d+&font_size=\d$) 302 $1true$2
+^(http:\/\/www\.vgtime\.com\/app\/topic\/\d+\.jhtml\?.*?&close_ad=)false(&page=\d&sign=\w+&timestamp=\d+&font_size=\d$) 307 $1true$2
 
 # 永辉 - api.yonghuivip.com
 ^https?:\/\/api\.yonghuivip\.com\/web\/shensuan\/ad\/getAd reject-200

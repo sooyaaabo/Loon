@@ -5,14 +5,14 @@
 #!tag = 去广告
 #!system = 
 #!system_version = 
-#!loon_version = 3.2.2(749)
+#!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/KuwoMusic.png
-#!date = 2024-10-21 22:00
+#!date = 2024-10-28 12:00
 
-# version 1.0.1
+# version 1.0.3
 # https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
-# 2024-07-18 05:09:37
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Kuwo_remove_ads.plugin
 
 [Rule]

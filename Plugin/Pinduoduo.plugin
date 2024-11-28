@@ -8,13 +8,13 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Pinduoduo.png
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
 # 2024-10-18 13:13
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
-# 2024.08.10
+# 2024-08-10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
-# 2024-11-07 11:03:15
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/PinDuoDuo_remove_ads.plugin
 
 [Rule]

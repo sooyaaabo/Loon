@@ -11,11 +11,11 @@
 #!select = 去除轮播图广告,开启,关闭
 #!select = 去除整个轮播图,开启,关闭
 #!select = 去除置顶,开启,关闭
-#!date = 2024-11-28 01:00
+#!date = 2024-11-28 12:00
 
-# 2024-01-27 20:57
+# 2024-01-27 20:57:40
 # https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
-# 2024-08-11 12:57:27
+# 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/IThome_remove_ads.plugin
 
 [Rewrite]
