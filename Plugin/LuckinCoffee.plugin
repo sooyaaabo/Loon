@@ -35,6 +35,7 @@
 
 # 开屏广告
 ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/app\/adposNew reject
+# ^https:\/\/capi\.lkcoffee\.com\/resource\/m\/sys\/home\/ordertips reject
 
 [MitM]
 hostname = capi.lkcoffee.com
