@@ -19,44 +19,6 @@
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/WexinMiniPrograms_Remove_ads.plugin
 
-[Host]
-*.qq.com = server:119.28.28.28
-*.exmail.qq.com = server:119.29.29.29
-*.weixin.qq.com = server:119.29.29.29
-*.weixin.qq.com.cn = server:119.29.29.29
-*.weixin.com.cn = server:119.29.29.29
-
-# 腾讯
-*.tencent.com = server:https://doh.pub/dns-query
-# QQ
-*.qq.com = server:https://doh.pub/dns-query
-# 腾讯头像
-*.qlogo.cn = server:https://doh.pub/dns-query
-# 腾讯图片
-*.qpic.cn = server:https://doh.pub/dns-query
-# 微信
-*.weixin.qq.com = server:https://doh.pub/dns-query
-*.wx.qq.com = server:https://doh.pub/dns-query
-*.weixin.com = server:https://doh.pub/dns-query
-# 微信公众平台
-*.weixinbridge.com = server:https://doh.pub/dns-query
-# WeChat
-*.wechat.com = server:https://doh.pub/dns-query
-# 微信小程序
-*.servicewechat.com = server:https://doh.pub/dns-query
-# 微云
-*.weiyun.com = server:https://doh.pub/dns-query
-# 腾讯 图片 静态资源
-*.gtimg.cn = server:https://doh.pub/dns-query
-*.idqqimg.com = server:https://doh.pub/dns-query
-# 腾讯 静态资源 CDN
-*.cdn-go.cn = server:https://doh.pub/dns-query
-# 腾讯云 智能云解析DNS
-*.smtcdns.com = server:https://doh.pub/dns-query
-*.smtcdns.net = server:https://doh.pub/dns-query
-# 腾讯短网址
-url.cn = server:https://doh.pub/dns-query
-
 [Rule]
 # WeChat用户请走代理，微信用户直连
 DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, PROXY
@@ -93,12 +55,12 @@ USER-AGENT, "MicroMessenger*", PROXY
 USER-AGENT, "WeChat*", PROXY
 IP-ASN,132203, no-resolve, PROXY
 
-#---------- 微信公众号 ----------#
+# --------------- 微信公众号 --------------- #
 DOMAIN-SUFFIX, wxs.qq.com, REJECT
 DOMAIN, badjs.weixinbridge.com, REJECT
 DOMAIN, dns.weixin.qq.com.cn, REJECT
 
-#---------- 微信小程序 ----------#
+# --------------- 微信小程序 --------------- #
 # 微信小程序通用规则
 DOMAIN, wxsnsdy.wxs.qq.com, REJECT
 DOMAIN, wxsmsdy.video.qq.com, REJECT
@@ -114,12 +76,12 @@ DOMAIN, ad.maoyan.com, REJECT
 DOMAIN, e.jparking.cn, REJECT
 
 [Rewrite]
-#---------- 微信公众号 ----------#
+# --------------- 微信公众号 --------------- #
 # 移除公众号中的推广内容 //mp.weixin.qq.com
 # ^http:\/\/\w+\.wxs\.qq\.com\/\d+\/\d+\/(snscosdownload|snssvpdownload)\/(SH|SZ)\/reserved\/\w+ reject-dict
 ^https:\/\/mp\.weixin\.qq\.com\/mp\/(?:cps_product_info|getappmsgad|jsmonitor|masonryfeed|relatedarticle) reject-dict
 
-#---------- 微信小程序 ----------#
+# --------------- 微信小程序 --------------- #
 # 企迈点单系统
 ^https:\/\/webapi\.qmai\.cn\/web\/catering\/advertising\/ reject-dict
 ^https:\/\/webapi\.qmai\.cn\/web\/cmk-center\/marketing\/canvas\/advert-reach reject
@@ -390,13 +352,13 @@ DOMAIN, e.jparking.cn, REJECT
 ^https:\/\/rms\.meituan\.com\/api\/v1\/rmsmina\/c\/queryShopPortalInfo\? response-body-json-del data.popUpWindows
 
 [Script]
-#---------- 微信外部链接解锁 ----------#
+# --------------- 微信外部链接解锁 --------------- #
 http-response ^https\:\/\/(?:weixin110\.qq|security\.wechat)\.com\/cgi-bin\/mmspamsupport-bin\/newredirectconfirmcgi\? script-path = https://kelee.one/Resource/Script/Weixin/Weixin_external_links_unlock.js, requires-body = true, tag = 微信外部链接解锁
 
-#---------- 微信公众号 ----------#
+# --------------- 微信公众号 --------------- #
 # http-response ^https?:\/\/mp\.weixin\.qq\.com\/mp\/getappmsgad script-path = https://kelee.one/Resource/Script/Weixin/Weixin_Official_Accounts_remove_ads.js, requires-body = true, tag = 微信公众号去广告
 
-#---------- 微信小程序 ----------#
+# --------------- 微信小程序 --------------- #
 # 企迈点单系统 //webapi.qmai.cn, images.qmai.cn
 http-response ^https:\/\/webapi\.qmai\.cn\/web\/catering\/design\/homePage-Config script-path = https://kelee.one/Resource/Script/WexinMiniPrograms/kff/kff.js, requires-body = true, tag = 企迈点单系统去广告
 
