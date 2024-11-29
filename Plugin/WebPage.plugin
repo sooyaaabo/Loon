@@ -1,15 +1,17 @@
 #!name = WebPage
 #!desc = 过滤部分网页广告
 #!openUrl = 
-#!author = RuCu6[https://github.com/RuCu6], limbopro[https://github.com/limbopro], ddgksf2013[https://github.com/ddgksf2013]
+#!author = RuCu6[https://github.com/RuCu6], limbopro[https://github.com/limbopro], ddgksf2013[https://github.com/ddgksf2013], ZenmoFeiShi[https://github.com/ZenmoFeiShi]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Alook.png
-#!date = 2024-11-28 12:00
+#!date = 2024-11-29 10:00
 
+# 2024-11-29 01:37
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.snippet
 # 2024-10-04 01:25
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
 # 2024-02-19
@@ -31,6 +33,10 @@
 ^https?:\/\/(cn|www)\.pornhub\.com\/_xa\/ads reject-dict
 
 [Script]
+# -----------ZenmoFeiShi----------- #
+http-response ^https:\/\/18hlw\.com\/?$ script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.js, requires-body = true, tag = 黑料不打烊
+http-response ^https:\/\/18hlw\.com\/archives\/\d+\.html script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.js, requires-body = true, tag = 黑料不打烊
+
 # -----------RuCu6----------- #
 ## 百度 //boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com
 ## 百度防跳转
@@ -81,4 +87,4 @@ http-response ^https?:\/\/.*ikandy.*fun\/($|(vod|top).*$) script-path = https://
 http-response ^https?:\/\/.*libvio.*me\/($|[0-9a-zA-Z=_/-]+\.html$) script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/libvio.js, requires-body = true, tag = Libvio
 
 [MitM]
-hostname = boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimy*,*tkznp*,*czzy*,*ikandy*,*libvio*
+hostname = 18hlw.com, boxer.baidu.com, m.baidu.com, www.baidu.com, zhidao.baidu.com, *.google.cn, asserts.avple.tv, javdb.com, *.pornhub.com, www.zxzjhd.com, m.nivod4.tv, *.freeok.*, *netflix*, *bdys*,*cupfox*,*cokemv*,*pornhub.com,*lezhutv*,*bimi*,18comic.org,*5y*,*gimy*,*tkznp*,*czzy*,*ikandy*,*libvio*
