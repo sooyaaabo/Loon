@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdReject.png
-#!date = 2024-11-30 18:30
+#!date = 2024-11-30 22:20
 
 # 2024-11-30
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -754,17 +754,9 @@
 ^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(explorePage\/getAdverList|init\/startInit) reject-200
 # 中国移动云盘
 ^https?:\/\/ad\.mcloud\.139\.com\/advertapi\/adv-filter\/adv-filter\/AdInfoFilter\/getAdInfos$ reject-200
-# 中国移动江苏
-^https?:\/\/wap\.js\.10086\.cn\/jsmccClient\/cd\/market_content\/api\/v\d\/market_content\.page\.query reject-200
-# 中国移动山东
-^https?:\/\/m\.sd\.10086\.cn\/zapi\/app_common\/homeWelcome\/welcome.do reject-200
 # 中国联通
 ^https?:\/\/m\.client\.10010\.com\/mobileService\/(activity|customer)\/(accountListData|get_client_adv|get_startadv) reject-200
 ^https?:\/\/m\.client\.10010\.com\/uniAdmsInterface\/(getHomePageAd|getWelcomeAd) reject-200
-# 中国移动广西
-^https?:\/\/gx\.10086\.cn\/zt-portal\/gxhzg\/portal\/app\/api\/v reject-200
-# 中国移动安徽
-^https?:\/\/api\.ahmobile\.cn:443\/eip\?eip_serv_id=app\.getAllNew reject-200
 # 转转
 ^https?:\/\/app\.zhuanzhuan\.com\/zzx\/transfer\/getConfigInfo reject-200
 # 直播吧
@@ -794,8 +786,6 @@
 ^https?:\/\/zjdr666\.com\/zjdr\.php\/v\d\/(version|top_notice\?|advert\?position=[^2]+) reject-200
 # 掌上英雄联盟
 ^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v) reject-200
-# 中国移动广东
-^https?:\/\/gd\.10086\.cn\/gmccapp\/serv\/\?servicename=GMCCAPP_704_002_001_001 reject-200
 # 智行火车票
 ^https?:\/\/m\.ctrip\.com\/restapi\/soa2\/\d+\/scjson\/tripAds reject-200
 # 紫金农商银行
