@@ -1,16 +1,16 @@
 #!name = 喜马拉雅
-#!desc = 过滤喜马拉雅广告，解锁部分会员功能
+#!desc = 过滤喜马拉雅广告
 #!openUrl = https://apps.apple.com/app/id876336838
-#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], ClydeTime[https://github.com/ClydeTime]
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
-#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Himalaya.png
-#!date = 2024-11-28 15:00
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Ximalaya.png
+#!date = 2024-11-30 10:00
 
-# 2024-11-28 13:42:49
+# 2024-11-30 00:55:05
 # https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
 
 [Rule]
@@ -69,6 +69,9 @@ URL-REGEX, "^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/", REJECT
 # 我的页面 - 右上角免费听图标
 ^https:\/\/(?:mobile|mobilehera)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-body-json-del data.freeListenV2
 
+# 我的页面 - 关注
+^https:\/\/livewsa\.ximalaya\.com\/lamia\/v1\/subscribe\/status$ reject-dict
+
 # 我的页面 - 服务模块
 ^https:\/\/(?:mobile|mobilehera)\.ximalaya\.com\/mobile-user\/v\d\/homePage\/ response-body-json-jq '.data.serviceModule.entrances |= map(select(.name == "全部服务"))'
 
@@ -79,4 +82,4 @@ URL-REGEX, "^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/", REJECT
 ^https:\/\/(?:mobile|mobilehera)\.ximalaya\.com\/mobile-user\/v\d\/purchased\/recommend\/ reject-dict
 
 [MitM]
-hostname = gslbali.ximalaya.com,search.ximalaya.com,searchwsa.ximalaya.com,mobile.ximalaya.com,mobilehera.ximalaya.com,m.ximalaya.com,mwsa.ximalaya.com,mobwsa.ximalaya.com
+hostname = gslbali.ximalaya.com, search.ximalaya.com, searchwsa.ximalaya.com, mobile.ximalaya.com, mobilehera.ximalaya.com, m.ximalaya.com, mwsa.ximalaya.com, mobwsa.ximalaya.com, livewsa.ximalaya.com
