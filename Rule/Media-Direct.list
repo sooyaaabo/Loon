@@ -1,5 +1,6 @@
 # 影视播放规则(直连)
-# 2024-11-29 10:00
+# 2024-11-30 22:30
+# https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
 # 私密影院
@@ -166,15 +167,15 @@ DOMAIN, wjm.kemfsj.com
 # 4k-av
 DOMAIN, www.4k-av.com
 # 囧动漫
-IP-CIDR, 43.142.232.217/32
+IP-CIDR, 43.142.232.217/32, no-resolve
 DOMAIN-SUFFIX, fanchenstatic.com
 DOMAIN, i0.hdslb.com
 DOMAIN-SUFFIX, bsgslb.cn
 DOMAIN-SUFFIX, bytetos.com
 DOMAIN-SUFFIX, douyinvod.com
 DOMAIN-SUFFIX, byteimg.com
-IP-CIDR, 110.41.171.181/32
-IP-CIDR, 49.235.143.104/32
+IP-CIDR, 110.41.171.181/32, no-resolve
+IP-CIDR, 49.235.143.104/32, no-resolve
 DOMAIN-SUFFIX, xhscdn.com
 DOMAIN-SUFFIX, bdxiguastatic.com
 DOMAIN-SUFFIX, zshtys888.com
@@ -217,24 +218,24 @@ DOMAIN-SUFFIX, vvddoo.com
 DOMAIN, qiniu.rongjuwh.cn
 DOMAIN, app.whjzjx.cn
 DOMAIN, u.shytkjgs.com
-IP-CIDR, 218.22.23.189/32
-IP-CIDR, 117.68.35.135/32
-IP-CIDR, 218.22.23.229/32
+IP-CIDR, 218.22.23.189/32, no-resolve
+IP-CIDR, 117.68.35.135/32, no-resolve
+IP-CIDR, 218.22.23.229/32, no-resolve
 DOMAIN-SUFFIX, qnqcdn.net
 DOMAIN-SUFFIX, xingya.com.cn
-IP-CIDR, 117.68.35.139/32
+IP-CIDR, 117.68.35.139/32, no-resolve
 # 小苹果
-IP-CIDR, 163.123.192.184/32
-IP-CIDR, 148.59.74.50/32
-IP-CIDR, 205.178.182.17/32
-IP-CIDR, 163.123.192.169/32
-IP-CIDR, 163.123.192.68/32
-IP-CIDR, 163.123.192.182/32
-IP-CIDR, 205.178.182.8/32
-IP-CIDR, 163.123.192.108/32
-IP-CIDR, 163.123.192.29/32
-IP-CIDR, 205.178.182.52/32
-IP-CIDR, 163.123.192.17/32
+IP-CIDR, 163.123.192.184/32, no-resolve
+IP-CIDR, 148.59.74.50/32, no-resolve
+IP-CIDR, 205.178.182.17/32, no-resolve
+IP-CIDR, 163.123.192.169/32, no-resolve
+IP-CIDR, 163.123.192.68/32, no-resolve
+IP-CIDR, 163.123.192.182/32, no-resolve
+IP-CIDR, 205.178.182.8/32, no-resolve
+IP-CIDR, 163.123.192.108/32, no-resolve
+IP-CIDR, 163.123.192.29/32, no-resolve
+IP-CIDR, 205.178.182.52/32, no-resolve
+IP-CIDR, 163.123.192.17/32, no-resolve
 DOMAIN, c.xpgtv.net
 DOMAIN, item.xpgtv.xyz
 # 厂长
