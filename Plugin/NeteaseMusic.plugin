@@ -18,19 +18,19 @@
 # https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin
 
 [Argument]
-FX = switch, true, false, tag = 隐藏[底部 - 发现], desc = 是否隐藏底部发现标签
-MY = switch, true, false, tag = 隐藏[底部 - 漫游], desc = 是否隐藏底部漫游标签
-DT = switch, true, false, tag = 隐藏[底部 - 笔记], desc = 是否隐藏底部笔记标签
+FX = switch, true, false, tag = 隐藏[底部-发现], desc = 是否隐藏底部发现标签
+MY = switch, true, false, tag = 隐藏[底部-漫游], desc = 是否隐藏底部漫游标签
+DT = switch, true, false, tag = 隐藏[底部-笔记], desc = 是否隐藏底部笔记标签
 
-PRGG = switch, true, false, tag = 隐藏[首页 - 问候语], desc = 是否隐藏首页问候语
-PRRK = switch, true, false, tag = 隐藏[首页 - 排行榜], desc = 是否隐藏首页排行榜
-PRDRD = switch, true, false, tag = 隐藏[首页 - 每日推荐], desc = 是否隐藏首页每日推荐
-PRSCVPT = switch, true, false, tag = 隐藏[首页 - 推荐歌单], desc = 是否隐藏首页推荐歌单
-PRST = switch, true, false, tag = 隐藏[首页 - 最近常听], desc = 是否隐藏首页最近常听
-PRRR = switch, true, false, tag = 隐藏[首页 - 雷达歌单], desc = 是否隐藏首页雷达歌单
-HMPR = switch, true, false, tag = 隐藏[首页 - 音乐合伙人], desc = 是否隐藏首页音乐合伙人
-PRMST = switch, true, false, tag = 隐藏[首页 - 推荐专属歌单], desc = 是否隐藏首页专属歌单
-PRCN = switch, true, false, tag = 隐藏[首页 - 你的专属歌单], desc = 是否隐藏首页你的专属歌单
+PRGG = switch, true, false, tag = 隐藏[首页-问候语], desc = 是否隐藏首页问候语
+PRRK = switch, false, true, tag = 隐藏[首页-排行榜], desc = 是否隐藏首页排行榜
+PRDRD = switch, false, true, tag = 隐藏[首页-每日推荐], desc = 是否隐藏首页每日推荐
+PRSCVPT = switch, false, true, tag = 隐藏[首页-推荐歌单], desc = 是否隐藏首页推荐歌单
+PRST = switch, false, true, tag = 隐藏[首页-最近常听], desc = 是否隐藏首页最近常听
+PRRR = switch, true, false, tag = 隐藏[首页-雷达歌单], desc = 是否隐藏首页雷达歌单
+HMPR = switch, true, false, tag = 隐藏[首页-音乐合伙人], desc = 是否隐藏首页音乐合伙人
+PRMST = switch, true, false, tag = 隐藏[首页-推荐专属歌单], desc = 是否隐藏首页专属歌单
+PRCN = switch, true, false, tag = 隐藏[首页-你的专属歌单], desc = 是否隐藏首页你的专属歌单
 
 Music163_VIP_Shared = switch, true, false, tag = 启用[共享会员], desc = 是否启用网易云音乐共享会员
 
