@@ -11,7 +11,7 @@
 #!select = 隐藏推荐标签, 是, 否
 #!select = 隐藏发现标签, 是, 否
 #!select = 隐藏漫游标签, 是, 否
-#!select = 隐藏动态标签, 是, 否
+#!select = 隐藏笔记标签, 是, 否
 #!select = 隐藏首页问候语, 是, 否
 #!select = 隐藏首页排行榜, 是, 否
 #!select = 隐藏首页每日推荐, 是, 否
@@ -21,7 +21,7 @@
 #!select = 隐藏首页音乐合伙人, 是, 否
 #!select = 隐藏首页推荐专属歌单, 是, 否
 #!select = 隐藏首页你的专属歌单, 是, 否
-#!date = 2024-11-28 12:00
+#!date = 2024-12-01 19:35
 
 # 2024-03-13 17:59:58
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
