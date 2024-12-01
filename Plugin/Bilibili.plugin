@@ -8,18 +8,17 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-12-01 22:50
+#!date = 2024-12-01 23:25
 
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
-# 2024/12/1 22:42
-# https://raw.githubusercontent.com/kokoryh/Script/refs/heads/master/Loon/plugin/bilibili.plugin
-# 2024-11-27 19:21
+# 2024-12-01 23:12
+# https://raw.githubusercontent.com/kokoryh/Script/master/Loon/plugin/bilibili.plugin
+# 2024-12-01 23:12
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
-
 [Argument]
-showUpList = select, "auto", "show", "hide", tag = 动态最常访问, desc = auto: 仅当列表中存在直播状态时显示; show: 始终显示; hide: 始终隐藏;
+showUpList = select, "auto", "true", "false", tag = 动态最常访问, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏;
 
 [Rule]
 # 阻止B站备用域名访问
