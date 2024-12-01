@@ -8,9 +8,9 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NeteaseMusic.png
-#!date = 2024-12-01 21:00
+#!date = 2024-12-01 22:30
 
-# 2024-03-13 17:59:58
+# 2024-12-01 21:16:57
 # https://raw.githubusercontent.com/Keywos/rule/main/script/wy/wy.plugin
 # 2023-08-23 
 # https://github.com/qiuxiuya/qiuxiuya/blob/main/Loon/NetEaseMusic.plugin
@@ -18,7 +18,6 @@
 # https://kelee.one/Tool/Loon/Plugin/NeteaseCloudMusic_remove_ads.plugin
 
 [Argument]
-TJ = switch, true, tag = [底部]推荐, desc = 是否隐藏底部推荐标签
 FX = switch, true, tag = [底部]发现, desc = 是否隐藏底部发现标签
 MY = switch, true, tag = [底部]漫游, desc = 是否隐藏底部漫游标签
 DT = switch, true, tag = [底部]笔记, desc = 是否隐藏底部笔记标签
@@ -101,7 +100,7 @@ http-response ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:batch
 http-response ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/(?:homepage\/block\/page|link\/page\/rcmd\/(?:block\/resource\/multi\/refresh|resource\/show)) script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 主页, argument=[{PRGG},{PRRK},{PRDRD},{PRSCVPT},{PRST},{PRRR},{HMPR},{PRMST},{PRCN}]
 
 # 底部Tab
-http-response ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部Tab, argument=[{MY},{DT},{TJ},{FX}]
+http-response ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/link\/home\/framework\/tab script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 底部Tab, argument=[{MY},{DT},{FX}]
 
 # 发现页
 http-response ^https?:\/\/(?:ipv4|interface\d?)\.music\.163\.com\/eapi\/link\/page\/discovery\/resource\/show script-path = https://raw.githubusercontent.com/Keywos/rule/main/script/wy/js/wyres.js, requires-body = true, binary-body-mode = true, timeout = 20, tag = 发现页

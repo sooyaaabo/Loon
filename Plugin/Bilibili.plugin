@@ -15,6 +15,10 @@
 # 2024-11-27 19:21
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
+
+[Argument]
+showUpList = select, "auto", "true", "false", tag = [动态]显示最常访问, desc = auto: 仅当列表中存在直播状态时显示; true: 始终显示; false: 始终隐藏
+
 [Rule]
 # 阻止B站备用域名访问
 # DOMAIN, api.biliapi.net, REJECT
@@ -81,7 +85,7 @@ URL-REGEX, "^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH", REJECT-DICT
 
 [Script]
 # Proto处理
-http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除动态页面广告
+http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.dynamic\.v2\.Dynamic\/DynAll$ script-path = https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除动态页面广告, argument=[{showUpList}]
 
 http-response ^https:\/\/(?:app\.bilibili\.com|grpc\.biliapi\.net)\/bilibili\.app\.interface\.v1\.Teenagers\/ModeStatus$ script-path = https://raw.githubusercontent.com/kokoryh/Script/master/js/bilibili.protobuf.js, requires-body = true, binary-body-mode = true, tag = 移除青少年模式弹窗
 
