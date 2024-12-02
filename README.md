@@ -250,6 +250,41 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
 官方群组：[@CloudFisherGroup](https://t.me/CloudFisherGroup)<br>
 
+### **Academy City Airport (ACA)**
+
+- **机场介绍**<br>
+1. 知名Emby服MisakaF合作机场，购买即送MisakaF同款专属机场服<br>
+2. Vmess节点，包括港、台、日、新、美<br>
+3. 目前仅提供HA节点，300+前置入口，每个地级市都拥有多线接入点<br>
+
+- **套餐介绍**<br>
+<table>
+    <tr>
+        <th>套餐</th>
+        <th>流量</th>
+        <th>月付</th>
+        <th>季付</th>
+        <th>半年付</th>
+        <th>年付</th>
+        <th>一次性</th>
+    </tr>
+    <tr>
+        <td align=center>斐济杯</td>
+        <td align=center>144G</td>
+        <td align=center>15</td>
+        <td align=center>42</td>
+        <td align=center>81</td>
+        <td align=center>153</td>
+        <td align=center>×</td>
+    </tr>
+</table>
+
+- **购买方式**<br>
+点击[官网](https://ww1.12345.al/#/register?code=ZxedfVfQ)购买，日常8折优惠码`misakaf`
+
+- **联系方式**<br>
+官方频道：[@ACA_Channel](https://t.me/ACA_Channel)<br>
+官方群组：联系[@ACA_Embybot](https://t.me/ACA_Embybot)，绑定链接进入群组<br>
 
 ## 插件列表
 > [!NOTE]
