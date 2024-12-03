@@ -8,14 +8,16 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Ximalaya.png
-#!date = 2024-12-01 21:00
+#!date = 2024-12-02 10:00
 
-# 2024-12-01 01:41:05
+# 2024-12-02 16:37:35
 # https://kelee.one/Tool/Loon/Plugin/Himalaya_remove_ads.plugin
 
 [Rule]
 DOMAIN, adse.ximalaya.com, REJECT
 DOMAIN, adse.wsa.ximalaya.com, REJECT
+DOMAIN, adbehavior.ximalaya.com, REJECT
+DOMAIN, adbehavior.wsa.ximalaya.com, REJECT
 DOMAIN, dns2.q2cdn.com, REJECT
 URL-REGEX, "^http:\/\/xmc\.ximalaya\.com\/xmlymain-login-web\/login\/", REJECT
 AND, ((DOMAIN-KEYWORD, -ad-), (DOMAIN-SUFFIX, byteimg.com)), REJECT
