@@ -38,7 +38,7 @@ service = switch, false, true, tag = Scriptable服务模式, desc = 是否开启
 
 [Rewrite]
 # 开屏
-^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(?:explorePage\/getAdverList|init\/startInit) reject-200
+^https?:\/\/client\.app\.coc\.10086\.cn\/biz-orange\/DN\/(?:explorePage\/getAdverList|init\/startInit|emotionMarket) reject-200
 
 [Script]
 # 查询套餐内通话、套餐使用情况
