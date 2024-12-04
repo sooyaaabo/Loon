@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/AdReject.png
-#!date = 2024-12-04 16:20
+#!date = 2024-12-04 16:50
 
 # 2024-12-04
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/StartUp.conf
@@ -20,7 +20,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2024.12.04/c358/v2.0.555 reject-200
+^https?:\/\/2024.12.04/c358/v2.0.556 reject-200
 # 同花顺
 ^https?:\/\/ftapi\.10jqka\.com\.cn\/futgwapi\/api\/om\/v\d\/ad\/common\/transfer reject-200
 # 58同城
@@ -116,7 +116,7 @@
 # 财联社
 ^https?:\/\/api3\.cls\.cn\/v1\/boot\/ad reject-200
 # 财新
-^https?:\/\/pinggai*.caixin\.com\/s\?z=caixin reject-200
+^https?:\/\/pinggai.*caixin\.com\/s\?z=caixin reject-200
 
 # ======= D ======= #
 # 动卡空间-中信信用卡
