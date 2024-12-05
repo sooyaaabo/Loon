@@ -1,4 +1,7 @@
-// 2024-11-08 12:45
+/*
+引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
+*/
+// 2024-11-10 13:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -16,12 +19,17 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         item.media_save_config.disable_weibo_cover = true;
       }
       if (item?.share_info?.function_entries?.length > 0) {
-        // 下载限制
+        // 视频下载限制
         const additem = { type: "video_download" };
-        let func = item.share_info.function_entries[0];
-        if (func?.type !== "video_download") {
-          // 向数组开头添加对象
-          item.share_info.function_entries.unshift(additem);
+        // 检查是否存在 video_download 并获取其索引
+        let videoDownloadIndex = item.share_info.function_entries.findIndex((i) => i?.type === "video_download");
+        if (videoDownloadIndex !== -1) {
+          // 如果存在，将其移动到数组的第一个位置
+          let videoDownloadEntry = item.share_info.function_entries.splice(videoDownloadIndex, 1)[0];
+          item.share_info.function_entries.splice(0, 0, videoDownloadEntry);
+        } else {
+          // 如果不存在，在数组开头添加一个新的 video_download 对象
+          item.share_info.function_entries.splice(0, 0, additem);
         }
       }
       if (item?.images_list?.length > 0) {
@@ -112,12 +120,17 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         item.media_save_config.disable_weibo_cover = true;
       }
       if (item?.share_info?.function_entries?.length > 0) {
-        // 下载限制
+        // 视频下载限制
         const additem = { type: "video_download" };
-        let func = item.share_info.function_entries[0];
-        if (func?.type !== "video_download") {
-          // 向数组开头添加对象
-          item.share_info.function_entries.unshift(additem);
+        // 检查是否存在 video_download 并获取其索引
+        let videoDownloadIndex = item.share_info.function_entries.findIndex((i) => i?.type === "video_download");
+        if (videoDownloadIndex !== -1) {
+          // 如果存在，将其移动到数组的第一个位置
+          let videoDownloadEntry = item.share_info.function_entries.splice(videoDownloadIndex, 1)[0];
+          item.share_info.function_entries.splice(0, 0, videoDownloadEntry);
+        } else {
+          // 如果不存在，在数组开头添加一个新的 video_download 对象
+          item.share_info.function_entries.splice(0, 0, additem);
         }
       }
     }
@@ -141,11 +154,25 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
         };
         newDatas.push(myData);
       }
+      if (item?.share_info?.function_entries?.length > 0) {
+        // 视频下载限制
+        const additem = { type: "video_download" };
+        // 检查是否存在 video_download 并获取其索引
+        let videoDownloadIndex = item.share_info.function_entries.findIndex((i) => i?.type === "video_download");
+        if (videoDownloadIndex !== -1) {
+          // 如果存在，将其移动到数组的第一个位置
+          let videoDownloadEntry = item.share_info.function_entries.splice(videoDownloadIndex, 1)[0];
+          item.share_info.function_entries.splice(0, 0, videoDownloadEntry);
+        } else {
+          // 如果不存在，在数组开头添加一个新的 video_download 对象
+          item.share_info.function_entries.splice(0, 0, additem);
+        }
+      }
     }
     $persistentStore.write(JSON.stringify(newDatas), "redBookVideoFeed"); // 普通视频 写入持久化存储
   }
   let videoFeedUnlock = JSON.parse($persistentStore.read("redBookVideoFeedUnlock")); // 禁止保存的视频 读取持久化存储
-  if (videoFeedUnlock?.notSave === "rucu6") {
+  if (videoFeedUnlock?.gayhub === "rucu6") {
     if (obj?.data?.length > 0) {
       for (let item of obj.data) {
         if (item?.id !== "" && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url !== "") {
@@ -214,7 +241,7 @@ if (url.includes("/v1/note/imagefeed") || url.includes("/v2/note/feed")) {
       }
     }
   }
-  videoFeedUnlock = { notSave: "rucu6" };
+  videoFeedUnlock = { gayhub: "rucu6" };
   $persistentStore.write(JSON.stringify(videoFeedUnlock), "redBookVideoFeedUnlock");
 } else if (url.includes("/v10/search/notes")) {
   // 搜索结果

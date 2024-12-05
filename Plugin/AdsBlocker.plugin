@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ShieldReject.png
-#!date = 2024-12-04 16:00
+#!date = 2024-12-05 17:00
 
 # 2024-11-30 22:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -165,6 +165,7 @@ IP-CIDR6, 2402:4e00:1200:ed00:0:9089:6dac:96b6/128, REJECT, no-resolve
 # 555影视 - vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com
 ^https?:\/\/vip7\.fzwdyy\.cn:8083\/api\/(getAdvertInfo|getGOOGAdvert) reject-200
 ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/advert reject
+^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\? response-body-json-jq '(.data[] | select(.layout == "advert_self")) |= del(.data) | .data |= map(select(.layout != "advert_self")) | .data |= map(if .layout == "index_recommend_carousel" then .list |= map(select(.type != 3)) else . end)'
 
 # 51信用卡管家 - api.u51.com
 ^https?:\/\/api\.u51\.com\/(generic-config-gateway|rs-resys)\/api\/v\d\/(creditpage-config|recommend) reject-200
@@ -2420,6 +2421,7 @@ http-request ^https?:\/\/ad\.12306\.cn\/ad\/ser\/getAdList script-path = https:/
 # >>>>>>>>>>>>>>> ✅ 5 ✅ <<<<<<<<<<<<<<
 # 555影视 - vip7.fzwdyy.cn, *.qyfxgd.cn, *.weilai555.com, *.ecoliving168.com
 http-response ^https?:\/\/[a-zA-Z0-9-]+(\.[a-zA-Z0-9-]+){1,3}(:\d+)?\/api\/v\d\/movie\/index_recommend script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/555Ad.js, requires-body = true, tag = 555影视
+http-response ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dianyinglieshou.js, requires-body = true, timeout = 60, tag = 555影视
 
 # 51信用卡管家 - api.u51.com
 http-response ^https?:\/\/api\.u51\.com\/liabilitygateway\/api\/v\d\/homepage\/liabilityline script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/51card.js, requires-body = true, tag = 51信用卡管家
@@ -2493,9 +2495,6 @@ http-response ^https?:\/\/common\.diditaxi\.com\.cn\/common\/v5 script-path = ht
 
 # 大众点评 - img.meituan.net
 http-response ^https?:\/\/img\.meituan\.net\/dpmobile\/ script-path = https://raw.githubusercontent.com/zirawell/Ad-Cleaner/main/Collection/js/dianping.js, requires-body = true, tag = 大众点评
-
-# 电影猎手 - app-v1.ecoliving168.com
-http-response ^https:\/\/app-v1\.ecoliving168\.com\/api\/v1\/movie\/index_recommend\? script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/dianyinglieshou.js, requires-body = true, timeout = 60, tag = 电影猎手
 
 # >>>>>>>>>>>>>>> ✅ F ✅ <<<<<<<<<<<<<<
 # Flightradar24 - mobile.flightradar24.com

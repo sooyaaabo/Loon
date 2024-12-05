@@ -1,4 +1,7 @@
-// 2024-11-07 11:15
+/*
+引用地址 https://raw.githubusercontent.com/RuCu6/Loon/refs/heads/main/Scripts/amap.js
+*/
+// 2024-12-04 22:50
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -81,6 +84,14 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
   // 步行导航结束推广卡片
   if (obj?.data?.modules?.C1EndNaviEngine?.data) {
     obj.data.modules.C1EndNaviEngine.data = {};
+  }
+} else if (url.includes("/c3frontend/af-nearby/nearby")) {
+  // 附近页面
+  if (obj?.data?.modules?.banner) {
+    obj.data.modules.banner = {}; // 横版推广图片
+  }
+  if (obj?.data?.modules?.contentPoster) {
+    obj.data.modules.contentPoster = {}; // 写笔记
   }
 } else if (url.includes("/faas/amap-navigation/card-service-plan-home")) {
   // 路线规划页
@@ -414,6 +425,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "service_shop", // 中介门店
     "shopBaseCase", // 小区装修案例
     // "shop_news",
+    "similarShelfRecommend", // 看过这里的人也喜欢
     "smallListBizRec", // 周边热门酒店
     "smallOrListBizRec",
     // "surroundFacilityInfo", // 小区周边配套
@@ -436,7 +448,8 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     // "video",
     "waistRecEntrance", // 更多人气好去处
     "waterFallFeed", // 附近景点瀑布流
-    "waterFallFeedTitle" // 更多人气好去处
+    "waterFallFeedTitle", // 更多人气好去处
+    "yellowPageAdRecommendModule" //淘宝商品推荐
   ];
   if (obj?.data?.modules) {
     for (let i of items) {
