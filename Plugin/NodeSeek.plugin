@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/NodeSeek.png
-#!date = 2024-11-28 12:00
+#!date = 2024-12-06 16:50
 
 # 2024-04-13 20:34:33
 # https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
@@ -18,6 +18,10 @@
 [Argument]
 CookieScript-nodeseek = switch, true, false, tag = NodeSeek Token, desc = 是否启用NodeSeek Token脚本来获取Token
 cron-nodeseek = input, "0 7 0 * * *", tag = NodeSeek Task, desc = 输入cron表达式来定时运行NodeSeek Task
+
+[Rule]
+DOMAIN, www.nodeseek.com, PROXY
+DOMAIN-SUFFIX, nodeseek.com, PROXY
 
 [Script]
 http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, enabled = {CookieScript-nodeseek}, tag = NodeSeek Token
