@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-11-30 22:30
+# 2024-12-06 13:25
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -73,7 +73,7 @@ DOMAIN, metrics.icloud.com
 # 小海报
 DOMAIN-SUFFIX, doubanio.com
 # 大封面
-DOMAIN-SUFFIX, tmdb.org
+DOMAIN, image.tmdb.org
 # 弹幕
 DOMAIN, dandanplay.net
 
