@@ -549,7 +549,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
      <tr>
         <td width="140px"><a href="https://github.com/NobyDa"><em>@NobyDa</em></a></td>
         <td width="140px"><a href="https://github.com/Yswag"><em>@Yswag</em></a></td>
-        <td width="140px"><a href="https://github.com/FoKit"><em>@FoKit</em></a></td>
+        <td width="140px"><a href="https://github.com/Choler"><em>@Choler</em></a></td>
         <td width="140px"><a href="https://github.com/KOP-XIAO"><em>@KOP-XIAO</em></a></td>
         <td width="210px"><a href="https://github.com/Yuheng0101"><em>@Yuheng0101</em></a></td>
      </tr>
@@ -577,9 +577,13 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
      <tr>
         <td width="140px"><a href="https://github.com/Peng-YM"><em>@Peng-YM</em></a></td>
         <td width="140px"><a href="https://github.com/chavyleung"><em>@chavyleung</em></a></td>
-        <td width="140px"><a href="https://github.com/CKYB"><em>@CKYB</em></a></td>
+        <td width="140px"><a href="https://github.com/limbopro"><em>@limbopro</em></a></td>
         <td width="140px"><a href="https://github.com/zZPiglet"><em>@zZPiglet</em></a></td>
         <td width="210px"><a href="https://github.com/ChinaTelecomOperators"><em>@ChinaTelecomOperators</em></a></td>
+      </tr>
+     <tr>
+        <td width="140px"><a href="https://github.com/CKYB"><em>@CKYB</em></a></td>
+        <td width="140px"><a href="https://github.com/anker1209"><em>@anker1209</em></a></td>
       </tr>
 </table>
 
