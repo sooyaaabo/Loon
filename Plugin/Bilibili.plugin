@@ -8,13 +8,13 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-12-02 00:45
+#!date = 2024-12-07 22:20
 
 # 2024-12-02 00:25:37
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
 # 2024-12-01 23:12
 # https://raw.githubusercontent.com/kokoryh/Script/master/Loon/plugin/bilibili.plugin
-# 2024-12-01 23:12
+# 2024-12-07 21:48
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
 [Argument]
@@ -52,6 +52,8 @@ URL-REGEX, "^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH", REJECT-DICT
 
 # 移除热搜广告
 ^https:\/\/app\.bilibili\.com\/x\/v2\/search\/square mock-response-body data-type=json status-code=200 data="{"code":0,"message":"0","ttl":1,"data":[{"type":"history","title":"搜索历史"}]}"
+
+^https:\/\/app\.bilibili\.com\/x\/(?:resource\/top\/activity|v2\/search\/square) mock-response-body data-type=json status-code=200 data="{"code":-404,"message":"-404","ttl":1,"data":null}"
 
 # 移除直播间商品广告
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? mock-response-body data-type=json status-code=200 data="{}"
