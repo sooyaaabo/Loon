@@ -8,13 +8,13 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/BilibiliRed.png
-#!date = 2024-12-07 22:20
+#!date = 2024-12-08 12:25
 
 # 2024-12-02 00:25:37
 # https://kelee.one/Tool/Loon/Plugin/Bilibili_remove_ads.plugin
 # 2024-12-01 23:12
 # https://raw.githubusercontent.com/kokoryh/Script/master/Loon/plugin/bilibili.plugin
-# 2024-12-07 21:48
+# 2024-12-08 12:14
 # https://github.com/kokoryh/Script/blob/master/Surge/module/bilibili_new.sgmodule
 
 [Argument]
@@ -84,7 +84,7 @@ URL-REGEX, "^http:\/\/[\d\.]+:8000\/v1\/resource\/\w{32}-1-SPLASH", REJECT-DICT
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/app-interface\/v2\/index\/feed\? response-body-json-jq 'if .data.card_list then .data.card_list |= map(select(.card_type != "banner_v2")) end'
 
 # 移除直播间浮窗
-^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoBy(?:User|Room) response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
+^https:\/\/api\.live\.bilibili\.com\/xlive\/app-room\/v1\/index\/getInfoBy(?:Room|User) response-body-json-jq '.data |= (del(.play_together_info, .play_together_info_v2, .activity_banner_info) | if .function_card then .function_card[] = null end | if .new_tab_info.outer_list then .new_tab_info.outer_list |= map(select(.biz_id != 33)) end | reduce ([["show_reserve_status"], false], [["reserve_info", "show_reserve_status"], false], [["shopping_info", "is_show"], 0]) as [$path, $value] (.; if getpath($path) then setpath($path; $value) end))'
 
 [Script]
 # Proto处理
