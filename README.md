@@ -63,7 +63,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 1. 采用Shadowsocks协议，延迟低，速度快<br>
 2. 多达50+ 节点，包含港、台、日、新、美常用地区及冷门地区节点<br>
 3. 支持多种流媒体服务访问解锁，包含奈飞免登入节点<br>
-4. 与第三方EMBY影视库合作，以及自身的机场服Emby<br>
+4. 与第三方Emby影视库合作，以及自身的机场服Emby<br>
 
 - **套餐介绍**<br>
 <table>
@@ -195,7 +195,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 3. 多种流媒体服务访问解锁<br>
 4. 最高 600Mbps 速率可用<br>
 5. 适用于 SLA 保障<br>
-6. 第三方EMBY影视库合作<br>
+6. 第三方Emby影视库合作<br>
 
 - **套餐介绍**<br>
 <table>
@@ -521,7 +521,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
         <td>01</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CookieTask.plugin">CookieTask</a></td>
         <td>02</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Emby.plugin">Emby</a></td>
+        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeSeek.plugin">NodeSeek</a></td>
         <td>03</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Follow.plugin">Follow</a></td>
     </tr>
