@@ -8,22 +8,23 @@
 #!loon_version = 3.2.4(787)
 #!homepage = http://boxjs.com/#/app/iRingo.TestFlight
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/TestFlight-02.png
-#!date = 2024-11-28 12:00
+#!date = 2024-12-10 16:00
 
-# 2024-10-13 v3.2.4
+# 2024-12-10 v3.3.2
 # https://github.com/NSRingo/TestFlight/releases/latest/download/TestFlight.plugin
 
 [Argument]
 CountryCode = select, "AUTO", "US", "CN", "HK", "TW", "SG", "JP", "AU", "GB", "KR", "CA", "IE", tag = 国家或地区代码, desc = 不同国家或地区提供的内容或有差别。
 MultiAccount = switch, false, true, tag = 启用多账号支持, desc = 是否启用多账号支持，会自动保存保存更新当前账号信息。
 Universal = switch, false, true, tag = 启用通用应用支持, desc = 是否启用通用应用支持，解除TF中app的iOS/iPadOS/macOS(AppleSilicon)平台限制。
+LogLevel = select, "WARN", "OFF", "ERROR", "INFO", "DEBUG", "ALL", tag = [调试] 日志等级, desc = 选择脚本日志的输出等级，低于所选等级的日志将全部输出。
 
 [General]
 skip-proxy = iosapps.itunes.apple.com
 
 [Script]
-http-request ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/request.js, requires-body = true, tag = iRingo.TestFlight.request, argument=[{CountryCode},{MultiAccount},{Universal}]
-http-response ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/response.js, requires-body = true, tag = iRingo.TestFlight.response, argument=[{CountryCode},{MultiAccount},{Universal}]
+http-request ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/request.js, requires-body = true, tag = iRingo.TestFlight.request, argument=[{CountryCode},{MultiAccount},{Universal},{LogLevel}]
+http-response ^https?:\/\/testflight\.apple\.com\/ script-path = https://github.com/NSRingo/TestFlight/releases/latest/download/response.js, requires-body = true, tag = iRingo.TestFlight.response, argument=[{CountryCode},{MultiAccount},{Universal},{LogLevel}]
 
 [MitM]
 hostname = testflight.apple.com
