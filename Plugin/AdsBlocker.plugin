@@ -8,11 +8,11 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/ShieldReject.png
-#!date = 2024-12-07 22:00
+#!date = 2024-12-12 21:30
 
-# 2024-12-07 21:50:00
+# 2024-12-12 19:35:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
-# 2024-12-07 21:50:00
+# 2024-12-12 19:30:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/plugin/blockAds.plugin
 
 [Rule]
@@ -725,7 +725,7 @@ http:\/\/ad\.myfriday\.cn\/d\/json\/1\.1 reject
 # 高德地图 - m*.amap.com, optimus-ads.amap.com
 ^https?:\/\/m5\.amap\.com\/ws\/shield\/dsp\/app\/startup\/init\? reject-dict
 ^https?:\/\/m5\.amap\.com\/ws\/valueadded\/ reject
-^https?:\/\/optimus-ads\.amap\.com\/uploadimg\/ reject
+^https?://optimus-ads.amap.com/uploadimg/[a-zA-Z0-9]+.gif reject-200
 
 # 国家地理 - dili.bdatu.com, wap.ngchina.cn
 ^https?:\/\/dili\.bdatu\.com\/jiekou\/ad\/ reject
