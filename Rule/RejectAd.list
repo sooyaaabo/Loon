@@ -1,4 +1,4 @@
-# 2024-10-18 23:10:00
+# 2024-12-15 22:32:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
@@ -1062,24 +1062,20 @@ DOMAIN-SUFFIX, m-adash.m.taobao.com
 DOMAIN-SUFFIX, adashbc.m.taobao.com
 
 # 腾讯视频
-DOMAIN, adsmind.gdtimg.com
-DOMAIN, info4.video.qq.com
-DOMAIN, info6.video.qq.com
-DOMAIN, ios.video.mpush.qq.com
-DOMAIN, otheve.beacon.qq.com
-DOMAIN, pgdt.gtimg.cn
-DOMAIN, tmead.y.qq.com
-DOMAIN, tmeadbak.y.qq.com
-DOMAIN, tmeadcomm.y.qq.com
-DOMAIN, tpns.qq.com
-DOMAIN-SUFFIX, gdt.qq.com
-DOMAIN-SUFFIX, l.qq.com
-DOMAIN-KEYWORD, trace.qq.com
-DOMAIN-KEYWORD, trace.video.qq.com
-IP-CIDR, 47.110.187.87/32, no-resolve
-URL-REGEX, ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+
-URL-REGEX, ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+
-URL-REGEX, ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+
+# DOMAIN, adsmind.gdtimg.com
+# DOMAIN, info4.video.qq.com
+# DOMAIN, info6.video.qq.com
+# DOMAIN, ios.video.mpush.qq.com
+# DOMAIN, otheve.beacon.qq.com
+# DOMAIN, pgdt.gtimg.cn
+# DOMAIN, tmead.y.qq.com
+# DOMAIN, tmeadbak.y.qq.com
+# DOMAIN, tmeadcomm.y.qq.com
+# DOMAIN, tpns.qq.com
+# DOMAIN-SUFFIX, gdt.qq.com
+# DOMAIN-SUFFIX, l.qq.com
+# DOMAIN-KEYWORD, trace.qq.com
+# DOMAIN-KEYWORD, trace.video.qq.com
 
 #  腾讯
 DOMAIN-SUFFIX, news.ssp.qq.com
@@ -4104,7 +4100,6 @@ DOMAIN-SUFFIX, noberlmall.com
 DOMAIN-SUFFIX, nongsalei.com
 DOMAIN-SUFFIX, nowskip.com
 DOMAIN-SUFFIX, nr1234.com
-DOMAIN-SUFFIX, ntalker.com
 DOMAIN-SUFFIX, nterbx.com
 DOMAIN-SUFFIX, nthyn.com
 DOMAIN-SUFFIX, nvrentao8.com
@@ -5478,7 +5473,6 @@ DOMAIN-SUFFIX, b1.c1km4.com
 DOMAIN-SUFFIX, ad.cacafly.com
 DOMAIN-SUFFIX, vip.cainiaofx.com
 DOMAIN-SUFFIX, apollo.caixin.com
-DOMAIN-SUFFIX, gg.caixin.com
 DOMAIN-SUFFIX, logstat.caixin.com
 DOMAIN-SUFFIX, promote.caixin.com
 DOMAIN-SUFFIX, ad.caiyunapp.com
