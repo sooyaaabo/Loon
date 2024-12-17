@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-12-06 13:25
+# 2024-12-17 19:50
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -463,6 +463,7 @@ DOMAIN, streamtape.com
 DOMAIN-SUFFIX, tapecontent.net
 # 秋名山见
 DOMAIN, api.maiyoux.com
+DOMAIN, api.hclyz.com
 DOMAIN-SUFFIX, xinzhisoft.xyz
 DOMAIN-SUFFIX, zhenyidaoxinxi.top
 DOMAIN-SUFFIX, xinzhitushu.xyz

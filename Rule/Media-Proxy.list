@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2024-11-03 22:00
+# 2024-12-17 19:50
 
 # CMSPlayer
 # 海外看
@@ -15,17 +15,17 @@ DOMAIN-SUFFIX, olehdtv.com
 DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
 # 低端影视
-;DOMAIN-SUFFIX, ddrk.me
-;DOMAIN-SUFFIX, ddys.pro
-;DOMAIN-SUFFIX, ddys.mov
-;DOMAIN-SUFFIX, ddys.tv
-;DOMAIN-SUFFIX, ddys.info
-;DOMAIN-SUFFIX, ddys.love
+# DOMAIN-SUFFIX, ddrk.me
+# DOMAIN-SUFFIX, ddys.pro
+# DOMAIN-SUFFIX, ddys.mov
+# DOMAIN-SUFFIX, ddys.tv
+# DOMAIN-SUFFIX, ddys.info
+# DOMAIN-SUFFIX, ddys.love
 # 在线之家
-;DOMAIN-SUFFIX, zxzja.com
-;DOMAIN-SUFFIX, zxzj.site
-;DOMAIN-SUFFIX, zxzjhd.com
-;DOMAIN-SUFFIX, zxzj.pro
+# DOMAIN-SUFFIX, zxzja.com
+# DOMAIN-SUFFIX, zxzj.site
+# DOMAIN-SUFFIX, zxzjhd.com
+# DOMAIN-SUFFIX, zxzj.pro
 # 独播库
 DOMAIN-SUFFIX, duboku.tv
 DOMAIN-SUFFIX, pub.duboku.net
@@ -50,25 +50,59 @@ DOMAIN-SUFFIX, ibb.co
 DOMAIN-SUFFIX, 4kdyg.fun
 
 # XPTV
+# VOD TV源
 # 厂长资源
-;DOMAIN-SUFFIX, czzy.site
-;DOMAIN-SUFFIX, czys.top
-;DOMAIN-SUFFIX, czzy.top
-;DOMAIN-SUFFIX, czzy.tv
-;DOMAIN-SUFFIX, cz01.vip
-;DOMAIN-SUFFIX, cz01.tv
-;DOMAIN-SUFFIX, czzy22.com
-;DOMAIN-SUFFIX, czzy66.com
-;DOMAIN-SUFFIX, czzy77.com
-;DOMAIN-SUFFIX, czzy88.com
-;DOMAIN-SUFFIX, cz233.com
-# ギリギリ动漫
-DOMAIN-SUFFIX, girigirilove.com
+# DOMAIN-SUFFIX, czzy.site
+# DOMAIN-SUFFIX, czys.top
+# DOMAIN-SUFFIX, czzy.top
+# DOMAIN-SUFFIX, czzy.tv
+# DOMAIN-SUFFIX, cz01.vip
+# DOMAIN-SUFFIX, cz01.tv
+# DOMAIN-SUFFIX, czzy22.com
+# DOMAIN-SUFFIX, czzy66.com
+# DOMAIN-SUFFIX, czzy77.com
+# DOMAIN-SUFFIX, czzy88.com
+# DOMAIN-SUFFIX, cz233.com
 # AnFuns动漫
 DOMAIN-SUFFIX, anfuns.cc
 # 两个BT
 DOMAIN-SUFFIX, bttwo.net
 # 美剧星球
 DOMAIN-SUFFIX, kmeiju.cc
-# 木偶哥哥
-DOMAIN, www.mogg.top
+
+# VOD AV源
+# 91Jav
+DOMAIN-SUFFIX, 91jav.fun
+DOMAIN, 041.bndmpsjx.com
+# AV Today
+DOMAIN-SUFFIX, avtoday.io
+# Hanime1.me
+DOMAIN-SUFFIX, hanime1.me
+# HoHoJ
+DOMAIN-SUFFIX, hohoj.tv
+# Jable
+DOMAIN-SUFFIX, jable.tv
+# KoreaPornMovie
+DOMAIN-SUFFIX, koreanpornmovie.com
+# MissAV
+DOMAIN-SUFFIX, missav.com
+# Pornhub
+DOMAIN-SUFFIX, pornhub.com
+# PPP Porn
+DOMAIN-SUFFIX, ppp.porn
+# SubJav
+DOMAIN-SUFFIX, supjav.com
+# xHamster
+DOMAIN-SUFFIX, xhamster.com
+# 花都影视
+DOMAIN-SUFFIX, huaduys.org
+# 麻豆社
+DOMAIN-SUFFIX, madou.club
+# 肉视频
+DOMAIN-SUFFIX, rou.video
+# 黄色仓库
+DOMAIN-SUFFIX, 7341hsck.cc
+# 桃花族
+DOMAIN-SUFFIX, 822thz.com
+# 玩偶姐姐
+DOMAIN-SUFFIX, hongkongdollvideo.com

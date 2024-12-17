@@ -1,14 +1,14 @@
 #!name = 微博
 #!desc = 微博全面净化
 #!openUrl = https://apps.apple.com/app/id350962117
-#!author = RuCu6[https://github.com/RuCu6], zmqcherish[https://github.com/zmqcherish], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], fmz200[https://github.com/fmz200], zmqcherish[https://github.com/zmqcherish], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Weibo.png
-#!date = 2024-12-11 18:30
+#!date = 2024-12-17 11:30
 
 # 2024-12-11 17:30:36
 # https://kelee.one/Tool/Loon/Plugin/Weibo_remove_ads.plugin
@@ -17,16 +17,53 @@
 # 请求放行
 DOMAIN, wbapp.uve.weibo.com, DIRECT
 
-# 微博广告
-DOMAIN, huodong.weibo.cn, REJECT
+# 微博开屏广告
+DOMAIN, bootpreload.uve.weibo.com, REJECT
 DOMAIN-SUFFIX, biz.weibo.com, REJECT
 
-# 拦截HTTPDNS
-DOMAIN, dns.weibo.cn, REJECT,extended-matching
+# 其他广告
+DOMAIN, dns.weibo.cn, REJECT
+DOMAIN, huodong.weibo.cn, REJECT
+DOMAIN, f.video.weibocdn.com, REJECT
+DOMAIN-SUFFIX, fastimage.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, adimg.vue.weibo.com, REJECT
+DOMAIN-SUFFIX, zymo.mps.weibo.com, REJECT
+DOMAIN-SUFFIX, weibomingzi.com, REJECT
+DOMAIN-SUFFIX, sdkapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, promote.biz.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw5.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, gw6.push.mcp.weibo.cn, REJECT
+DOMAIN-SUFFIX, game.weibo.cn, REJECT
+DOMAIN-SUFFIX, adimg.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, game.weibo.com, REJECT
+DOMAIN-SUFFIX, ads.viber.com, REJECT
+DOMAIN-SUFFIX, ads-d.viber.com, REJECT
+DOMAIN-SUFFIX, ads.aws.viber.com, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com, REJECT
+DOMAIN-SUFFIX, dp.im.weibo.cn, REJECT
+DOMAIN-SUFFIX, biz.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, biz.weibo.com, REJECT
+DOMAIN-SUFFIX, click.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com, REJECT
+DOMAIN-SUFFIX, wbapp.uve.weibo.com, REJECT
+DOMAIN-SUFFIX, widget.weibo.com, REJECT
+DOMAIN-SUFFIX, dsp.edm.weibo.cn, REJECT
+DOMAIN-SUFFIX, alitui.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, tui.weibo.com, REJECT
+DOMAIN-SUFFIX, wax.weibo.com.cn, REJECT
+DOMAIN-SUFFIX, ad.weibo.com, REJECT
 IP-CIDR, 39.97.130.51/32, REJECT, no-resolve
 IP-CIDR, 39.97.128.148/32, REJECT, no-resolve
+
+# 屏蔽信息收集
+DOMAIN, datacollection.uve.weibo.com, REJECT
+DOMAIN, adpinpai.video.weibocdn.com, REJECT
+
+# 收集用户信息，上传用户日志的请求
 URL-REGEX, "^http:\/\/api\.weibo\.cn\/2\/httpdns\/config", REJECT
 URL-REGEX, "^http:\/\/api\.weibo\.cn\/httpdns\/config", REJECT
+URL-REGEX, "^https?:\/\/api\.weibo\.cn\/2\/(push\/active|client\/addlog_batch|ad\/preload)", REJECT-DROP
+URL-REGEX, "^https?:\/\/api-cloudim\.api\.weibo\.com\/v1\/log\/", REJECT-DROP
 
 [Rewrite]
 # 首页 - 签到、发布按钮、侧边栏、右上角红包、顶部标签页、侧边栏提醒、超话标签页悬浮、顶部直播
@@ -49,7 +86,7 @@ URL-REGEX, "^http:\/\/api\.weibo\.cn\/httpdns\/config", REJECT
 ^https:\/\/api\.weibo\.cn\/!\/(?:sug\/list\/finderchange|was\/finder\/searchbarchange)\? reject-dict
 
 # 开屏广告 //*.uve.weibo.com
-^https:\/\/bootrealtime\.uve\.weibo\.com\/v[23]\/ad\/realtime reject-dict
+^https:\/\/bootrealtime\.uve\.weibo\.com\/v\d\/ad\/(?:realtime|preload) reject-dict
 ^https:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/(?:get-lbs-cell-info\.php|sdkconfig\.php) reject-dict
 
 # 微博长文章推广
