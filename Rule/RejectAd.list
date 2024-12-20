@@ -1,4 +1,4 @@
-# 2024-12-15 22:32:00
+# 2024-10-18 23:10:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 # >>>>>>>>>>>>>>> ✅ # ✅ <<<<<<<<<<<<<<
@@ -898,7 +898,7 @@ DOMAIN-SUFFIX, wup.imtt.qq.com
 DOMAIN-SUFFIX, gdt.qq.com
 DOMAIN-SUFFIX, android.rqd.qq.com
 DOMAIN-SUFFIX, e.qq.com
-DOMAIN-SUFFIX, beacon.qq.com
+# DOMAIN-SUFFIX, beacon.qq.com
 DOMAIN-SUFFIX, v.gdt.qq.com
 
 # 蜻蜓FM
