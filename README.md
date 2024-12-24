@@ -121,6 +121,72 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
 官方群组：联系[@AladdinNET_bot](https://t.me/AladdinNET_bot)，绑定链接进入群组<br>
 
+### **Academy City Airport (ACA)**
+
+- **机场介绍**<br>
+1. 知名Emby服MisakaF合作机场，购买即送MisakaF同款专属机场服<br>
+2. 采用Shadowsocks协议，包括港、台、日、新、美<br>
+3. 所有节点含TG DC5优化<br>
+4. 含有0.01倍率专用Emby节点<br>
+5. 斐济杯套餐提供HA节点，300+前置入口，不惧跨省跨网QOS<br>
+
+- **套餐介绍**<br>
+<table>
+    <tr>
+        <th>套餐</th>
+        <th>流量</th>
+        <th>月付</th>
+        <th>季付</th>
+        <th>半年付</th>
+        <th>年付</th>
+        <th>一次性</th>
+    </tr>
+    <tr>
+        <td align=center>小杯</td>
+        <td align=center>120G</td>
+        <td align=center>8</td>
+        <td align=center>22</td>
+        <td align=center>41</td>
+        <td align=center>77</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>中杯</td>
+        <td align=center>240G</td>
+        <td align=center>15</td>
+        <td align=center>41</td>
+        <td align=center>77</td>
+        <td align=center>144</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>大杯</td>
+        <td align=center>500G</td>
+        <td align=center>30</td>
+        <td align=center>81</td>
+        <td align=center>153</td>
+        <td align=center>288</td>
+        <td align=center>×</td>
+    </tr>
+    <tr>
+        <td align=center>斐济杯</td>
+        <td align=center>150G</td>
+        <td align=center>15</td>
+        <td align=center>42</td>
+        <td align=center>81</td>
+        <td align=center>153</td>
+        <td align=center>×</td>
+    </tr>
+</table>
+
+- **购买方式**<br>
+点击[ACA官网](https://www.aca.best/register?code=ZxedfVfQ)购买，日常8折优惠码`misakaf`
+
+- **联系方式**<br>
+官方频道：[@ACA_Channel](https://t.me/ACA_Channel)<br>
+官方群组：联系[@ACA_Embybot](https://t.me/ACA_Embybot)，绑定链接进入群组<br>
+
+
 ### **EFCloud**
 
 - **机场介绍**<br>
@@ -253,41 +319,6 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
 官方群组：[@CloudFisherGroup](https://t.me/CloudFisherGroup)<br>
 
-### **Academy City Airport (ACA)**
-
-- **机场介绍**<br>
-1. 知名Emby服MisakaF合作机场，购买即送MisakaF同款专属机场服<br>
-2. Vmess节点，包括港、台、日、新、美<br>
-3. 目前仅提供HA节点，300+前置入口，每个地级市都拥有多线接入点<br>
-
-- **套餐介绍**<br>
-<table>
-    <tr>
-        <th>套餐</th>
-        <th>流量</th>
-        <th>月付</th>
-        <th>季付</th>
-        <th>半年付</th>
-        <th>年付</th>
-        <th>一次性</th>
-    </tr>
-    <tr>
-        <td align=center>斐济杯</td>
-        <td align=center>144G</td>
-        <td align=center>15</td>
-        <td align=center>42</td>
-        <td align=center>81</td>
-        <td align=center>153</td>
-        <td align=center>×</td>
-    </tr>
-</table>
-
-- **购买方式**<br>
-点击[ACA官网](https://www.aca.best/register?code=ZxedfVfQ)购买，日常8折优惠码`misakaf`
-
-- **联系方式**<br>
-官方频道：[@ACA_Channel](https://t.me/ACA_Channel)<br>
-官方群组：联系[@ACA_Embybot](https://t.me/ACA_Embybot)，绑定链接进入群组<br>
 
 ## 插件列表
 > [!NOTE]
