@@ -2,7 +2,7 @@
 #!desc = 过滤彩云天气广告，解锁SVIP功能。（解锁功能需版本低于7.20.2）
 #!openUrl = https://apps.apple.com/app/id1067198688
 #!author = RuCu6[https://github.com/RuCu6], Keywos[https://github.com/Keywos], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!tag = 去广告
+#!tag = 去广告, 解锁会员
 #!system = 
 #!system_version = 
 #!loon_version = 3.2.4(787)
