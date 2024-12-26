@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2024-12-17 19:50
+# 2024-12-26 19:50
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -114,6 +114,12 @@ DOMAIN, yydsys.top
 DOMAIN, woog.nxog.eu.org
 # 云盘吧
 DOMAIN, yunpan8.cc
+# 奥秘
+DOMAIN, vip.omii.top
+# 六趣
+DOMAIN, wp.0v.fit
+# 闪电UC
+DOMAIN-SUFFIX, dcyun.cc
 
 # nmlive相关
 DOMAIN-SUFFIX, bilivideo.com
