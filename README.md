@@ -615,6 +615,7 @@ Loon 自用配置文件、分流规则、插件、脚本及图标库。
      <tr>
         <td width="140px"><a href="https://github.com/CKYB"><em>@CKYB</em></a></td>
         <td width="140px"><a href="https://github.com/anker1209"><em>@anker1209</em></a></td>
+        <td width="140px"><a href="https://github.com/mw418"><em>@mw418</em></a></td>
       </tr>
 </table>
 
