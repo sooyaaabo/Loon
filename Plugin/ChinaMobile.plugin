@@ -1,5 +1,5 @@
 #!name = 中国移动
-#!desc = 1. 过滤中国移动广告，不对内部活动进行相关广告去除；2. 查询套餐内通话、套餐使用情况。
+#!desc = 1.过滤中国移动广告，不对内部活动进行相关广告去除; 2.查询套餐内通话、套餐使用情况。
 #!openUrl = https://apps.apple.com/app/id583700738
 #!author = Yuheng0101[https://github.com/Yuheng0101], anker1209[https://github.com/anker1209], ChinaTelecomOperators[https://github.com/ChinaTelecomOperators]
 #!tag = 去广告

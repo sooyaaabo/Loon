@@ -1,7 +1,7 @@
 #!name = 京东
-#!desc = 1.过滤京东广告；2. 历史比价信息（提供[嵌入版]和[通知版]，二选一即可），仅支持京东的标准模式，适用App版本自行测试。
+#!desc = 1.过滤京东广告; 2.历史比价信息（提供[嵌入版]和[通知版]，任选其一即可），仅支持京东标准模式，具体适用App版本请自行测试。
 #!openUrl = https://apps.apple.com/app/id414245413
-#!author = RuCu6[https://github.com/RuCu6], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], MuTu[https://github.com/githubdulong], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
