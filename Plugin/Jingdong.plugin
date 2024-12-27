@@ -1,5 +1,5 @@
 #!name = 京东
-#!desc = 1.过滤京东广告; 2.历史比价信息（提供[嵌入版]和[通知版]，任选其一即可），仅支持京东标准模式，具体适用App版本请自行测试。
+#!desc = 1.过滤京东广告；2.历史比价信息（提供[嵌入版]和[通知版]，任选其一即可），仅支持京东标准模式，具体适用App版本请自行测试。
 #!openUrl = https://apps.apple.com/app/id414245413
 #!author = RuCu6[https://github.com/RuCu6], MuTu[https://github.com/githubdulong], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
@@ -8,7 +8,7 @@
 #!loon_version = 3.2.4(787)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App/Jingdong.png
-#!date = 2024-12-27 20:00
+#!date = 2024-12-27 20:30
 
 # 2024-11-28 00:00:00
 # https://kelee.one/Tool/Loon/Plugin/JD_remove_ads.plugin
@@ -18,8 +18,8 @@
 # https://raw.githubusercontent.com/mw418/Loon/main/script/jd_price.js
 
 [Argument]
-JingdongPrice-Embed = switch, true, false, tag = 京东比价（嵌入版）, desc = 点击商品标题即可直接查看嵌入式历史价格
-JingdongPrice-Notify = switch, false, true, tag = 京东比价（通知版）, desc = 点击商品详情页通过弹窗通知查看历史价格
+JingdongPrice-Embed = switch, true, false, tag = 京东比价-嵌入版, desc = 点击商品标题即可直接查看嵌入式历史价格
+JingdongPrice-Notify = switch, false, true, tag = 京东比价-通知版, desc = 点击商品详情页通过弹窗通知查看历史价格
 
 [Rule]
 DOMAIN, dns.jd.com, REJECT
