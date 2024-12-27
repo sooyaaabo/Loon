@@ -1,5 +1,5 @@
 #!name = Apple天气
-#!desc = Apple天气功能增强：1.解锁全部天气功能；2.替换空气质量数据；3.添加下一小时降水数据。仅支持iOS 18 & macOS 15 & watchOS 11。
+#!desc = Apple天气功能增强：1. 解锁全部天气功能；2. 替换空气质量数据；3. 添加下一小时降水数据。仅支持iOS 18 & macOS 15 & watchOS 11。
 #!openUrl = https://apps.apple.com/app/id1069513131
 #!author = VirgilClyne[https://github.com/VirgilClyne], WordlessEcho[https://github.com/WordlessEcho]
 #!tag = 功能增强
