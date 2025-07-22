@@ -1,6 +1,16 @@
 # Loon
 
 
+# 目录
+- [仓库说明](#仓库说明)
+- [使用声明](#使用声明)
+- [配置模板](#配置模板)
+- [机场推荐](#机场推荐)
+- [插件列表](#插件列表)
+- [特别致谢](#特别致谢)
+- [星标历史](#星标历史)
+
+
 ## 仓库说明
 
 > [!WARNING]
@@ -693,6 +703,6 @@
 </table>
 
 
-## Star History
+## 星标历史
 
 [![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://www.star-history.com/#sooyaaabo/Loon&Date)
