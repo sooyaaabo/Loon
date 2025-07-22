@@ -318,10 +318,13 @@
 
 ## 插件列表
 > [!NOTE]
-> 
+> 访问[Loon插件仓库](https://sooyaaabo.github.io/Loon/Plugin/)，获取最新的 Loon 插件，点击插件卡片即可快速跳转安装。
+>
 > 列表中所有插件可直接点击链接一键添加，自动跳转至Loon，无需复制链接手动添加。
-> 
-> 如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往App Store进行更新。
+>
+> 如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往App Store进行软件更新。
+>
+> 注：**Loon插件仓库** 与 **下方列表中插件** 一致。
 <table>
     <tr>
         <th align=center>类别</th>
