@@ -709,6 +709,3 @@
 ## 星标历史
 
 [![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://www.star-history.com/#sooyaaabo/Loon&Date)
-
-
-### <a href="#Loon">[回到顶部]</a>
