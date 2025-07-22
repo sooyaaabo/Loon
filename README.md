@@ -23,7 +23,7 @@
 
 本仓库内容仅供本人使用，可能不适用于他人环境。如您有使用需求，请自行调试、修改，谨慎操作。
 
-建议使用更及时、更完善、更全面的[**可莉仓库**](https://github.com/luestr/ProxyResource/blob/main/README.md)。
+建议使用更及时、更完善、更全面的 [**可莉仓库**](https://github.com/luestr/ProxyResource/blob/main/README.md) 。
 
 <a href="https://next.ossinsight.io/widgets/official/compose-last-28-days-stats?repo_id=705605979" target="_blank" style="display: block" align="center">
   <picture>
@@ -63,14 +63,14 @@
 ## 配置模板
 
 ### 配置文件导入（点击跳转）<br>
-- [适用于App Store版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
+- [适用于 App Store 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
 
-- [适用于TestFlight版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
+- [适用于 TestFlight 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
 
 ### 配置文件链接（手动复制）<br>
-- [适用于App Store版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
+- [适用于 App Store 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
 
-- [适用于TestFlight版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
+- [适用于 TestFlight 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
 
 
 ## 机场推荐
@@ -85,14 +85,14 @@
 
 - **机场介绍**<br>
 1. 机场提供单账号持有多个订阅，订阅支持备注。<br>
-2. 采用Trojan协议，延迟低速度快，更优的性能和稳定性。<br>
+2. 采用 Trojan 协议，延迟低速度快，更优的性能和稳定性。<br>
 3. 多达 60+ 节点，包含港、台、日、新、美常用地区及部分冷门地区节点。<br>
-4. 支持多种流媒体服务访问解锁，包括但不限于Disney+、YouTube、Netflix等。<br>
-5. 提供节点``免登流媒体``共享账号观看Netflix、HBO、PrimeVideo、PornHub。<br>
-6. 提供 6 个Emby服务以及 0.3 倍率节点畅享观影。<br>
+4. 支持多种流媒体服务访问解锁，包括但不限于 Disney+、YouTube、Netflix 等。<br>
+5. 提供节点``免登流媒体``共享账号观看 Netflix、HBO、PrimeVideo、PornHub。<br>
+6. 提供 6 个 Emby 服务以及 0.3 倍率节点畅享观影。<br>
 7. 每日可在群组发送指令签到获取随机流量。<br>
 8. 独家首发流量转结系统，上月剩余流量转结并延长有效期至下个月。<br>
-9. 有关套餐权益、使用教程等更多详细内容，请在[官方博客公告](https://tutorial.aladdinnet.cc/)仔细阅读了解。<br>
+9. 有关套餐权益、使用教程等更多详细内容，请在 [官方博客公告](https://tutorial.aladdinnet.cc/) 仔细阅读了解。<br>
 
 - **套餐介绍**<br>
   <table>
@@ -176,11 +176,11 @@
       </tr>
   </table>
 - **购买方式**<br>
-点击[Aladdin官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj)购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
+点击 [Aladdin官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj) 购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
 
 - **联系方式**<br>
-官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
-官方群组：联系[@AladdinNET_bot](https://t.me/AladdinNET_bot)，绑定订阅链接进入群组<br>
+官方频道：[@AladdinNotice](https://t.me/AladdinNotice) <br>
+官方群组：联系 [@AladdinNET_bot](https://t.me/AladdinNET_bot) ，绑定订阅链接进入群组<br>
 
 ### **CloudFisher（云渔）**
 
@@ -190,7 +190,7 @@
 3. 多种流媒体服务访问解锁<br>
 4. 最高 600Mbps 速率可用<br>
 5. 适用于 SLA 保障<br>
-6. 第三方Emby影视库合作<br>
+6. 第三方 Emby 影视库合作<br>
 
 - **套餐介绍**<br>
   <table>
@@ -259,7 +259,7 @@
   </table>
 
 - **购买方式**<br>
-点击[CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX)购买，85折优惠码（Air套餐除外）`且听渔吟`
+点击 [CloudFisher官网](https://cloudfisher.net/web/#/login?code=eeP6V0lX) 购买，85折优惠码（Air套餐除外）`且听渔吟`
 
 - **联系方式**<br>
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
@@ -268,10 +268,10 @@
 ### **Alphaio**
 
 - **机场介绍**<br>
-1. 采用Shadowsocks协议，BGP专线加持超凡体验。<br>
+1. 采用 Shadowsocks 协议，BGP 专线加持超凡体验。<br>
 2. 提供 20+ 包含港、台、日、新、美等常用地区节点。<br>
-3. 提供高度流媒体解锁，包括但不限于Disney+、Netflix等。<br>
-4. 提供AI解锁，包括但不限于ChatGPT、Gemini等。<br>
+3. 提供高度流媒体解锁，包括但不限于 Disney+、Netflix 等。<br>
+4. 提供 AI 解锁，包括但不限于 ChatGPT、Gemini 等。<br>
 5. 若官网中无新享套餐即为售罄，后续补货将会在群组通过置顶通知提前告知。<br>
 
 - **套餐介绍**<br>
@@ -319,7 +319,7 @@
   </table>
 
 - **购买方式**<br>
-点击[Alphaio官网](https://user.alphalo.net/register?code=xGyimy7I)购买，限时优惠码：半年付9折`Alphaio-OPEN90`，年付83折`Alphaio-OPEN83`
+点击 [Alphaio官网](https://user.alphalo.net/register?code=xGyimy7I) 购买，限时优惠码：半年付9折`Alphaio-OPEN90`，年付83折`Alphaio-OPEN83`
 
 - **联系方式**<br>
 官方频道：[@Alphaio_Channel](https://t.me/Alphaio_Channel)<br>
@@ -328,11 +328,11 @@
 
 ## 插件列表
 > [!NOTE]
-> 访问[Loon插件仓库](https://sooyaaabo.github.io/Loon/Plugin/)，获取最新的 Loon 插件，点击插件卡片即可快速跳转安装。
+> 访问 [Loon插件仓库](https://sooyaaabo.github.io/Loon/Plugin/)，获取最新的 Loon 插件，点击插件卡片即可快速跳转安装。
 >
-> 列表中所有插件可直接点击链接一键添加，自动跳转至Loon，无需复制链接手动添加。
+> 列表中所有插件可直接点击链接一键添加，自动跳转至 Loon，无需复制链接手动添加。
 >
-> 如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往App Store进行软件更新。
+> 如果插件提示“Loon的版本过旧，插件功能受限”，请自行前往 App Store 进行软件更新。
 >
 > 注：**Loon插件仓库** 与 **下方列表中插件** 一致。
 <table>
