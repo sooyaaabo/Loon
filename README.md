@@ -1,7 +1,7 @@
 # Loon
+<a name="top"></a>
 
-
-# 目录
+## 目录
 - [仓库说明](#仓库说明)
 - [使用声明](#使用声明)
 - [配置模板](#配置模板)
@@ -63,11 +63,13 @@
 ## 配置模板
 
 ### 配置文件导入（点击跳转）<br>
+
 - [适用于 App Store 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
 
 - [适用于 TestFlight 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
 
 ### 配置文件链接（手动复制）<br>
+
 - [适用于 App Store 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.conf)
 
 - [适用于 TestFlight 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.conf)
@@ -175,6 +177,7 @@
           <td align=center>无重置</td>
       </tr>
   </table>
+
 - **购买方式**<br>
 点击 [Aladdin官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj) 购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
 
@@ -708,4 +711,4 @@
 [![Star History Chart](https://api.star-history.com/svg?repos=sooyaaabo/Loon&type=Date)](https://www.star-history.com/#sooyaaabo/Loon&Date)
 
 
-### [回到顶部](https://github.com/sooyaaabo/Loon?tab=readme-ov-file#readme)
+### [回到顶部](#top)
