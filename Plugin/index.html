@@ -6,6 +6,7 @@
     <title>Loon 插件仓库</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
+        /* --- 变量定义 --- */
         :root {
             --accent: #0078e7;
             --bg: #fafbfe;
@@ -14,6 +15,7 @@
             --radius: 12px;
         }
 
+        /* --- 全局样式 --- */
         * {
             box-sizing: border-box;
         }
@@ -24,6 +26,7 @@
             background: var(--bg);
         }
 
+        /* --- 头部 --- */
         header {
             text-align: center;
             padding: 1.4rem 1rem;
@@ -41,12 +44,14 @@
             color: #666;
         }
 
+        /* --- 主要内容布局 --- */
         .wrap {
             max-width: 900px;
             margin: 0 auto;
             padding: 1rem;
         }
 
+        /* --- 搜索和过滤区域 --- */
         .search-box {
             background: var(--card);
             border: 1px solid #e1e4e8;
@@ -87,6 +92,7 @@
             border-color: var(--accent);
         }
 
+        /* --- 插件列表 --- */
         .section-title {
             font-size: 1rem;
             font-weight: 600;
@@ -99,6 +105,7 @@
             grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
         }
 
+        /* --- 插件卡片 --- */
         .card {
             background: var(--card);
             border: 1px solid #e1e4e8;
@@ -171,7 +178,7 @@
             color: #555;
             flex-grow: 1;
         }
-
+        
         .card-tags {
             display: flex;
             flex-wrap: wrap;
@@ -189,6 +196,7 @@
             white-space: nowrap;
         }
 
+        /* --- 空状态 --- */
         .empty {
             text-align: center;
             color: #666;
@@ -196,6 +204,7 @@
             grid-column: 1 / -1;
         }
 
+        /* --- 页脚 --- */
         footer {
             text-align: center;
             font-size: .8rem;
@@ -243,35 +252,49 @@
     </footer>
 
     <script>
+        // 使用立即执行的异步函数 (IIFE) 来避免污染全局作用域
         (async () => {
+            // --- 全局常量和变量 ---
             const GITHUB_REPO = 'sooyaaabo/Loon';
             const PLUGIN_DIR_PATH = 'Plugin';
 
+            // --- DOM 元素获取 ---
             const listEl = document.getElementById('list');
             const searchEl = document.getElementById('search');
             const tabsEl = document.querySelector('.tabs');
             const sectionTitleEl = document.getElementById('sectionTitle');
             const updateTimeEl = document.getElementById('updateTime');
 
-            let plugins = [];
+            let plugins = []; // 用于存储所有解析后的插件信息
 
             /* 1. 数据获取和解析 */
             try {
-                const allFiles = await (await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${PLUGIN_DIR_PATH}`)).json();
-                if (!Array.isArray(allFiles)) throw new Error('无法获取插件列表，请检查仓库路径或网络。');
+                // 从 GitHub API 获取仓库中指定目录下的所有文件信息
+                const allFilesResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${PLUGIN_DIR_PATH}`);
+                const allFiles = await allFilesResponse.json();
+                
+                // 检查返回的是否为数组，如果不是，则说明 API 请求失败或目录不存在
+                if (!Array.isArray(allFiles)) {
+                    throw new Error('无法获取插件列表，请检查仓库路径或网络。');
+                }
 
+                // 筛选出所有以 .plugin 结尾的文件
                 const pluginFiles = allFiles.filter(file => file.name.toLowerCase().endsWith('.plugin'));
 
                 if (pluginFiles.length === 0) {
                     throw new Error(`在仓库中没有找到任何 .plugin 文件。`);
                 }
 
+                // 并发获取所有 .plugin 文件的文本内容
                 const pluginContents = await Promise.all(
                     pluginFiles.map(file => fetch(file.download_url).then(res => res.text()))
                 );
 
+                // 解析每个文件的内容，提取插件元数据
                 plugins = pluginContents.map((text, i) => {
                     const file = pluginFiles[i];
+                    
+                    // 使用正则表达式从文件内容中提取字段，如果找不到则提供默认值
                     const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1]?.trim() || file.name;
                     const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1]?.trim() || '暂无描述';
                     const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1]?.trim() || '';
@@ -280,6 +303,7 @@
                     const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1]?.trim();
                     const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : [];
 
+                    // 返回结构化的插件对象
                     return {
                         url: file.download_url,
                         name,
@@ -291,89 +315,100 @@
                 });
 
             } catch (error) {
+                // 如果在获取或解析过程中出错，则在页面上显示错误信息
                 listEl.innerHTML = `<div class="empty">加载插件失败：${error.message}</div>`;
                 sectionTitleEl.textContent = '加载失败';
-                return;
+                return; // 终止脚本执行
             }
 
-            /* 2. 动态生成分类标签按钮 (此部分已移除) */
-
-            /* 3. 获取仓库最新更新时间 */
+            /* 2. 获取 README 文件的最新提交时间作为网站更新时间 */
             try {
-                const commits = await (await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${PLUGIN_DIR_PATH}`)).json();
+                const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=README.md`);
+                const commits = await commitsResponse.json();
+                
+                // 获取最新一次提交的作者或提交者日期
                 const latest = commits[0]?.commit?.author?.date || commits[0]?.commit?.committer?.date;
                 if (latest) {
                     const d = new Date(latest);
                     updateTimeEl.textContent = d.toLocaleString('zh-CN', {
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit'
+                        year: 'numeric', month: '2-digit', day: '2-digit', 
+                        hour: '2-digit', minute: '2-digit'
                     });
                 }
             } catch {
                 updateTimeEl.textContent = '获取失败';
             }
 
-            /* 4. 渲染与交互 */
+            /* 3. 渲染与交互 */
             function render(filterCat = 'all', kw = '') {
-                const lowerKw = kw.toLowerCase();
+                const lowerKw = kw.toLowerCase(); // 搜索关键词转为小写以进行不区分大小写的匹配
+
+                // 过滤插件
                 const filtered = plugins.filter(p => {
                     const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
-                    const hitKw = !lowerKw || p.name.toLowerCase().includes(lowerKw) || p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
+                    const hitKw = !lowerKw || 
+                                  p.name.toLowerCase().includes(lowerKw) || 
+                                  p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
                     return hitCat && hitKw;
                 });
 
-                sectionTitleEl.textContent = (filterCat === 'all' ? '全部' : filterCat) + ' · ' + filtered.length + ' 个插件';
-                listEl.innerHTML = '';
+                // 更新标题显示
+                sectionTitleEl.textContent = `${(filterCat === 'all' ? '全部' : filterCat)} · ${filtered.length} 个插件`;
+                listEl.innerHTML = ''; // 清空现有列表
 
+                // 如果没有匹配的插件，显示空状态
                 if (!filtered.length) {
                     listEl.innerHTML = '<div class="empty">暂无匹配的插件</div>';
                     return;
                 }
 
+                // 遍历过滤后的插件并创建卡片
                 filtered.forEach(p => {
                     const card = document.createElement('a');
                     card.className = 'card';
-                    card.href = `https://www.nsloon.com/openloon/import?plugin=${p.url}`;
+                    card.href = `https://www.nsloon.com/openloon/import?plugin=${p.url}`; // 点击卡片跳转到 Loon 安装链接
 
                     const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join(' ');
 
                     card.innerHTML = `
                         <div class="card-inner-layout">
-                          ${p.icon ? `<img src="${p.icon}" class="card-icon">` : ''}
-                          <div class="card-content">
-                            <div class="card-header">
-                              <h3 class="card-title">${p.name}</h3>
-                              <div class="card-tags">${tagsHtml}</div>
+                            ${p.icon ? `<img src="${p.icon}" class="card-icon">` : ''}
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3 class="card-title">${p.name}</h3>
+                                    <div class="card-tags">${tagsHtml}</div>
+                                </div>
+                                <p class="card-update-time">更新时间：${p.date}</p>
+                                <p class="card-desc">${p.desc}</p>
                             </div>
-                            <p class="card-update-time">更新时间：${p.date}</p>
-                            <p class="card-desc">${p.desc}</p>
-                          </div>
                         </div>
-                      `;
+                    `;
 
                     listEl.appendChild(card);
                 });
             }
 
-            // 绑定事件监听
+            /* 4. 绑定事件监听 */
+            // 分类标签点击事件
             tabsEl.addEventListener('click', e => {
                 if (e.target.matches('.tab')) {
+                    // 切换 active 样式
                     tabsEl.querySelector('.active').classList.remove('active');
                     e.target.classList.add('active');
+                    // 根据新的分类和当前搜索词重新渲染
                     render(e.target.dataset.cat, searchEl.value);
                 }
             });
 
-            searchEl.addEventListener('input', () => render(
-                tabsEl.querySelector('.tab.active').dataset.cat,
-                searchEl.value
-            ));
+            // 搜索框输入事件
+            searchEl.addEventListener('input', () => {
+                // 根据当前分类和新的搜索词重新渲染
+                render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value);
+            });
 
-            // 初始渲染
+            // --- 初始渲染 ---
             render();
+
         })();
     </script>
 
