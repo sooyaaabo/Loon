@@ -559,74 +559,77 @@
                 const totalBanners = bannerItems.length;
                 let currentBannerIndex = 0;
 
-                // 如果有多条公告，则启动循环播放
-                if (totalBanners > 1) {
-                    // 定义一个管理公告循环的异步函数
-                    const manageBannerCycle = async () => {
-                        const currentItem = bannerItems[currentBannerIndex];
-                        // 计算下一条公告的索引，使用取模运算实现循环
-                        const nextIndex = (currentBannerIndex + 1) % totalBanners;
-                        const nextItem = bannerItems[nextIndex];
+                // 将滚动和等待的逻辑提取到一个独立的异步函数中
+                const handleBannerAnimation = async (item) => {
+                    // 等待一小段时间，确保元素渲染完成，clientWidth计算准确
+                    await new Promise(resolve => setTimeout(resolve, 50));
 
-                        // 重置当前公告项的动画和位置，为下次出现做准备
-                        currentItem.style.transition = 'none';
-                        currentItem.style.transform = 'translateX(0)';
+                    // 重置可能存在的旧动画状态，为新动画做准备
+                    item.style.transition = 'none';
+                    item.style.transform = 'translateX(0)';
+                    
+                    const containerWidth = item.clientWidth;
+                    const textWidth = item.scrollWidth;
 
-                        // 淡出当前项，淡入下一项
-                        currentItem.classList.remove('active');
-                        nextItem.classList.add('active');
-                        currentBannerIndex = nextIndex;
+                    if (textWidth > containerWidth) {
+                        // 如果文本超长，先停留1秒让用户阅读开头
+                        await new Promise(resolve => setTimeout(resolve, 1000));
 
-                        // 等待淡入动画（0.6秒）完成
-                        await new Promise(resolve => setTimeout(resolve, 600));
+                        // 计算需要滚动的距离和时间
+                        const scrollOffset = textWidth - containerWidth;
+                        const scrollSpeed = 60; // 滚动速度 (像素/秒)
+                        const scrollDuration = scrollOffset / scrollSpeed;
 
-                        // 检查新显示的公告文本是否超出其容器宽度
-                        const containerWidth = nextItem.clientWidth;
-                        const textWidth = nextItem.scrollWidth;
+                        // 设置并执行滚动动画
+                        item.style.transition = `transform ${scrollDuration}s linear`;
+                        item.style.transform = `translateX(-${scrollOffset}px)`;
 
-                        if (textWidth > containerWidth) {
-                            // 如果文本超长，先停留1秒让用户阅读开头
-                            await new Promise(resolve => setTimeout(resolve, 1000));
+                        // 等待滚动动画结束
+                        await new Promise(resolve => {
+                            const onTransitionEnd = () => {
+                                item.removeEventListener('transitionend', onTransitionEnd);
+                                resolve();
+                            };
+                            item.addEventListener('transitionend', onTransitionEnd);
+                        });
 
-                            // 计算需要滚动的距离和时间
-                            const scrollOffset = textWidth - containerWidth;
-                            const scrollSpeed = 60; // 滚动速度（像素/秒）
-                            const scrollDuration = scrollOffset / scrollSpeed;
-
-                            // 设置滚动动画
-                            nextItem.style.transition = `transform ${scrollDuration}s linear`;
-                            nextItem.style.transform = `translateX(-${scrollOffset}px)`;
-
-                            // 等待滚动动画结束
-                            await new Promise(resolve => {
-                                const onTransitionEnd = () => {
-                                    nextItem.removeEventListener('transitionend', onTransitionEnd);
-                                    resolve();
-                                };
-                                nextItem.addEventListener('transitionend', onTransitionEnd);
-                            });
-
-                            // 滚动结束后再停留1秒
-                            await new Promise(resolve => setTimeout(resolve, 1000));
-
-                        } else {
-                            // 如果文本没有超长，则直接停留4秒
-                            await new Promise(resolve => setTimeout(resolve, 4000));
-                        }
-
-                        // 递归调用自身，开始下一轮循环
-                        manageBannerCycle();
-                    };
-
-                    // 页面加载时，首先激活第一条公告
-                    if (totalBanners > 0) {
-                        bannerItems[0].classList.add('active');
-                        // 4秒后开始第一次切换
-                        setTimeout(manageBannerCycle, 4000);
+                        // 滚动结束后再停留1秒
+                        await new Promise(resolve => setTimeout(resolve, 1000));
+                    } else {
+                        // 如果文本没有超长，则直接停留4秒
+                        await new Promise(resolve => setTimeout(resolve, 4000));
                     }
-                } else if (totalBanners === 1) {
-                    // 如果只有一条公告，直接激活显示即可
+                };
+
+                // 主控制函数
+                const startBannerLoop = async () => {
+                    // 1. 激活并处理第一个横幅
                     bannerItems[0].classList.add('active');
+                    await handleBannerAnimation(bannerItems[0]);
+
+                    // 2. 如果有多个横幅，则开始无限循环
+                    if (totalBanners > 1) {
+                        while (true) {
+                            const currentItem = bannerItems[currentBannerIndex];
+                            const nextIndex = (currentBannerIndex + 1) % totalBanners;
+                            const nextItem = bannerItems[nextIndex];
+
+                            // 淡出当前项，淡入下一项
+                            currentItem.classList.remove('active');
+                            nextItem.classList.add('active');
+                            currentBannerIndex = nextIndex;
+
+                            // 等待淡入动画完成 (CSS中定义了1s, 这里给0.6s的等待时间)
+                            await new Promise(resolve => setTimeout(resolve, 600));
+
+                            // 为新显示的横幅执行滚动或等待
+                            await handleBannerAnimation(nextItem);
+                        }
+                    }
+                };
+
+                if (totalBanners > 0) {
+                    startBannerLoop();
                 }
             }
 
