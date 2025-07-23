@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alook.png
-#!date = 2025-07-20 15:00
+#!date = 2025-07-23 08:00
 
 # 2024-11-29 01:37
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.snippet
@@ -44,7 +44,7 @@ DOMAIN-SUFFIX, tsyndicate.com, REJECT
 [Script]
 # -----------kokoryh----------- #
 # MissAV
-http-response ^https:\/\/missav\.(?:ai|ws)\/(?!favicon)(?!(build|fonts|img|js|api|cdn-cgi)\/). script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/missav.js, requires-body = true, tag = [WebPage]MissAV
+http-response ^https:\/\/missav\.(?:ai|ws)\/(?!favicon)(?!(build|fonts|img|js|api|cdn-cgi)\/). script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.missav.js, requires-body = true, tag = [WebPage]MissAV
 
 # -----------ZenmoFeiShi----------- #
 # 黑料网

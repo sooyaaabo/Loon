@@ -585,7 +585,7 @@
         <th>名称</th>
     </tr>
     <tr>
-        <td width="100px" rowspan="5" align=center><strong>会员解锁</strong></td>
+        <td width="100px" rowspan="5" align=center><strong>解锁会员</strong></td>
     </tr>
     <tr>
         <td align=center>01</td>

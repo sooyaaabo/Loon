@@ -2,7 +2,7 @@
 #!desc = 每日签到获取Power。使用本插件前需先获取csrf token和cookie填入下方设置中，具体使用说明请在浏览器内访问本插件链接查看。
 #!openUrl = https://app.follow.is
 #!author = chavyleung[https://github.com/chavyleung], sooyaaabo[https://github.com/sooyaaabo]
-#!tag = 功能增强
+#!tag = 定时任务
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)

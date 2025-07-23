@@ -2,7 +2,7 @@
 #!desc = 自动完成每日签到任务，按需开启相应功能即可。具体使用方法请查看所引用脚本或插件内详细说明。
 #!openUrl = 
 #!author = FoKit[https://github.com/FoKit], Sliverkiss[https://github.com/Sliverkiss], GoodHolidays[https://github.com/GoodHolidays], ZenmoFeiShi[https://github.com/ZenmoFeiShi], NobyDa[https://github.com/NobyDa], ClydeTime[https://github.com/ClydeTime], sooyaaabo[https://github.com/sooyaaabo]
-#!tag = 功能增强
+#!tag = 定时任务
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)
