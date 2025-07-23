@@ -1,5 +1,5 @@
 #!name = Telegram
-#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Intent
+#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Intent。
 #!openUrl = https://apps.apple.com/app/id686449807
 #!author = sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强

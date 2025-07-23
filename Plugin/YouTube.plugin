@@ -2,7 +2,7 @@
 #!desc = 过滤Youtube (Music)广告，增加画中画、字幕翻译、歌词翻译功能，支持后台播放。需要启用QUIC回退保护。不支持tvOS设备。
 #!openUrl = https://apps.apple.com/app/id544007664
 #!author = Maasea[https://github.com/Maasea], VirgilClyne[https://github.com/VirgilClyne], Choler[https://github.com/Choler], DivineEngine[https://github.com/DivineEngine], app2smile[https://github.com/app2smile], ddgksf2013[https://github.com/ddgksf2013]
-#!tag = 去广告
+#!tag = 去广告, 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)

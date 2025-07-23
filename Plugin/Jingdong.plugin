@@ -2,7 +2,7 @@
 #!desc = 1.过滤京东广告；2.历史比价信息，任选其一即可。（首次使用请先打开【慢慢买App-我的】，提示【获取ck成功🎉】即可正常比价。）仅支持京东标准模式。
 #!openUrl = https://apps.apple.com/app/id414245413
 #!author = RuCu6[https://github.com/RuCu6], Maasea[https://github.com/Maasea], MuTu[https://github.com/githubdulong], 苍井灰灰[https://github.com/wf021325], mw418[https://github.com/mw418], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!tag = 去广告
+#!tag = 去广告, 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)

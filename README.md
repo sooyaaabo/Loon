@@ -613,9 +613,9 @@
         <td align=center>01</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/CookieTask.plugin">CookieTask</a></td>
         <td align=center>02</td>
-        <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/Folo.plugin">Folo</a></td>
-        <td align=center>03</td>
         <td width="150px"><a href="https://www.nsloon.com/openloon/import?plugin=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Plugin/NodeSeek.plugin">NodeSeek</a></td>
+        <td align=center></td>
+        <td width="150px"></td>
     </tr>
 </table>
 
