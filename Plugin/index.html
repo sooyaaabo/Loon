@@ -323,7 +323,7 @@
 
             /* 2. 获取 README 文件的最新提交时间作为网站更新时间 */
             try {
-                const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=README.md`);
+                const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${PLUGIN_DIR_PATH}`);
                 const commits = await commitsResponse.json();
                 
                 // 获取最新一次提交的作者或提交者日期
