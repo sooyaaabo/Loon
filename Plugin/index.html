@@ -7,108 +7,136 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/LoonForMac.png">
     <style>
-        /* --- CSS 变量定义 --- */
-        /* 使用 CSS 变量方便地管理和修改主题颜色、圆角等全局样式 */
+        /* :root选择器用于声明全局CSS变量 */
         :root {
             --accent: #0078e7;
-            /* 主题强调色 */
+            /* 主题色/强调色 */
             --bg: #fafbfe;
-            /* 页面背景色 */
+            /* 全局背景色 */
             --card: #fff;
             /* 卡片背景色 */
             --radius: 12px;
             /* 全局圆角大小 */
         }
 
-        /* --- 全局样式重置 --- */
+        /* 通配符选择器，为所有元素设置通用样式 */
         * {
             box-sizing: border-box;
-            /* 元素的总宽度和高度包含内边距和边框 */
+            /* CSS盒模型设置为border-box，padding和border不会增加元素总宽高 */
         }
 
+        /* body元素全局样式 */
         body {
             margin: 0;
+            /* 移除默认外边距 */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            /* 优先使用苹果系统字体，提供更佳的平台一致性体验 */
+            /* 设置最优的系统UI字体 */
             background: var(--bg);
+            /* 应用背景色变量 */
         }
 
-        /* --- 头部 --- */
+        /* 页面头部容器样式 */
         header {
             text-align: center;
+            /* 文本居中 */
             padding: 1.4rem 1rem;
+            /* 内边距 */
         }
 
+        /* 头部H1标题样式 */
         header h1 {
             margin: .2rem 0;
+            /* 外边距 */
             font-size: 1.6rem;
+            /* 字体大小 */
             color: var(--accent);
+            /* 应用主题色变量 */
         }
 
+        /* 头部段落描述样式 */
         header p {
             margin: .3rem 0 0;
+            /* 外边距 */
             font-size: .9rem;
+            /* 字体大小 */
             color: #666;
+            /* 字体颜色 */
         }
 
-        /* --- 主要内容容器 --- */
+        /* 主内容区域的包裹容器 */
         .wrap {
-            max-width: 1100px;
-            /* 限制最大宽度，在大屏幕上保持良好阅读性 */
+            max-width: 1000px;
+            /* 最大宽度 */
             margin: 0 auto;
             /* 水平居中 */
             padding: 1rem;
+            /* 内边距 */
         }
 
-        /* --- 横幅公告 (交叉淡入淡出效果) --- */
+        /* 公告栏样式 */
         .announcement-banner {
             background-color: #fff9de;
+            /* 背景颜色 */
             border: 1px solid #f5f5f7;
+            /* 边框 */
             border-radius: var(--radius);
+            /* 应用圆角变量 */
             margin-bottom: 1rem;
+            /* 底部外边距 */
             position: relative;
-            /* 作为内部绝对定位元素的参照物 */
+            /* 相对定位，作为内部绝对定位元素的基准 */
             min-height: 3.2rem;
-            /* 设置一个最小高度防止因内容绝对定位而坍塌 */
+            /* 最小高度 */
             cursor: pointer;
-            /* 提示用户可以点击 */
+            /* 鼠标悬停时显示手型光标 */
+            overflow: hidden;
+            /* 隐藏溢出部分，用于滚动动画 */
         }
 
+        /* 单条公告内容样式 */
         .banner-item {
             position: absolute;
+            /* 绝对定位，相对于.announcement-banner */
             top: 0;
             left: 0;
             width: 100%;
             height: 100%;
             display: flex;
-            /* 使用flex实现内容垂直和水平居中 */
+            /* 使用Flex布局 */
             align-items: center;
-            justify-content: center;
+            /* 垂直居中 */
+            justify-content: flex-start;
+            /* 水平靠左 */
             margin: 0;
             padding: .5rem 1rem;
-            /* 调整内边距 */
+            /* 内边距 */
             color: #1d1d1f;
             font-size: .9rem;
             font-weight: 500;
+            /* 字体粗细 */
             line-height: 1.5;
-            text-align: center;
+            /* 行高 */
+            text-align: left;
+            /* 文本左对齐 */
             opacity: 0;
             /* 默认透明 */
-            transition: opacity 0.6s ease-in-out;
-            /* 定义透明度变化的动画效果 */
+            transition: opacity 1s ease-in-out;
+            /* 为透明度设置过渡动画 */
             visibility: hidden;
-            /* 默认隐藏，配合 opacity 使用 */
+            /* 默认不可见 */
+            white-space: nowrap;
+            /* 防止文本换行 */
         }
 
+        /* 公告内容激活（显示）时的样式 */
         .banner-item.active {
             opacity: 1;
-            /* 显示 */
+            /* 完全不透明 */
             visibility: visible;
             /* 可见 */
         }
 
-
-        /* --- 搜索和过滤区域 --- */
+        /* 搜索框容器样式 */
         .search-box {
             background: var(--card);
             border: 1px solid #e1e4e8;
@@ -117,6 +145,7 @@
             margin-bottom: 1rem;
         }
 
+        /* 搜索输入框样式 */
         #search {
             width: 100%;
             padding: .6rem .8rem;
@@ -125,15 +154,17 @@
             border-radius: var(--radius);
         }
 
+        /* 分类标签按钮的容器 */
         .tabs {
             display: flex;
             gap: .5rem;
-            /* 设置 flex-item 之间的间距 */
+            /* 标签之间的间距 */
             flex-wrap: wrap;
-            /* 当空间不足时自动换行 */
+            /* 允许换行 */
             margin-top: .6rem;
         }
 
+        /* 分类标签按钮样式 */
         .tabs button {
             padding: .4rem .9rem;
             border: 1px solid #ddd;
@@ -142,32 +173,40 @@
             font-size: .85rem;
             cursor: pointer;
             min-width: 96px;
+            /* 最小宽度 */
             text-align: center;
+            transition: background-color 0.2s, border-color 0.2s;
+            /* 添加过渡动画 */
         }
 
+        /* 激活状态的分类标签按钮样式 */
         .tabs button.active {
             background: var(--accent);
+            /* 应用主题色 */
             color: #fff;
+            /* 文字白色 */
             border-color: var(--accent);
+            /* 边框同色 */
         }
 
-        /* --- 插件列表区域标题 --- */
+        /* 区域标题（如“全部 · 20个插件”）样式 */
         .section-title {
             font-size: 1rem;
             font-weight: 600;
             margin: 0 0 .6rem .1rem;
         }
 
-        /* --- 插件列表 (网格布局) --- */
+        /* 插件卡片列表容器 */
         .list {
             display: grid;
+            /* Grid网格布局 */
             gap: .7rem;
-            /* 网格项目之间的间距 */
+            /* 网格间距 */
+            /* 关键：实现响应式网格布局，每列最小300px，自动填充 */
             grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-            /* 响应式网格布局，每列最小300px，自动填充 */
         }
 
-        /* --- 插件卡片 --- */
+        /* 单个插件卡片样式 */
         .card {
             background: var(--card);
             border: 1px solid #e1e4e8;
@@ -178,95 +217,108 @@
             color: inherit;
             /* 继承父元素颜色 */
             cursor: pointer;
+            /* 为阴影、背景色和缩放添加过渡动画，提升用户体验 */
             transition: box-shadow .2s, background-color .15s ease, transform .15s ease;
-            /* 为交互效果添加平滑过渡 */
             display: flex;
             flex-direction: column;
+            /* 主轴方向为垂直 */
         }
 
+        /* 卡片鼠标悬停效果 */
         .card:hover {
             box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
-            /* 鼠标悬停时显示阴影 */
+            /* 添加阴影 */
         }
 
+        /* 卡片鼠标点击效果 */
         .card:active {
             background-color: #e6f0ff;
-            /* 鼠标点击时改变背景色 */
+            /* 改变背景色 */
             transform: scale(.98);
-            /* 鼠标点击时轻微缩小 */
+            /* 轻微缩小 */
         }
 
+        /* 卡片内部布局容器（图标+内容） */
         .card-inner-layout {
             display: flex;
             align-items: flex-start;
-            /* 图标和内容顶部对齐 */
+            /* 顶部对齐 */
             gap: .7rem;
+            /* 图标和内容区的间距 */
         }
 
+        /* 卡片图标样式 */
         .card-icon {
             width: 38px;
             height: 38px;
             border-radius: 8px;
             object-fit: cover;
-            /* 保持图片比例，裁切多余部分 */
+            /* 保持图片比例，裁剪多余部分 */
             margin-top: 3px;
             flex-shrink: 0;
-            /* 防止图标在 flex 布局中被压缩 */
+            /* 防止图标被压缩 */
         }
 
+        /* 卡片右侧内容区域 */
         .card-content {
             flex: 1;
             /* 占据剩余空间 */
             min-width: 0;
-            /* 防止内容溢出时破坏布局 */
+            /* 防止内容溢出时撑开容器 */
             display: flex;
             flex-direction: column;
         }
 
+        /* 卡片内容区的头部（标题+标签） */
         .card-header {
             display: flex;
             justify-content: space-between;
-            /* 标题和标签两端对齐 */
+            /* 两端对齐 */
             align-items: flex-start;
             gap: .5rem;
         }
 
+        /* 卡片标题 */
         .card-title {
             margin: 0;
             font-size: 1.1rem;
             color: var(--accent);
             white-space: nowrap;
-            /* 防止标题换行 */
+            /* 不换行 */
             overflow: hidden;
-            /* 隐藏溢出部分 */
+            /* 溢出隐藏 */
             text-overflow: ellipsis;
-            /* 用省略号表示溢出的文本 */
+            /* 溢出时显示省略号 */
         }
 
+        /* 卡片更新时间 */
         .card-update-time {
             margin: .2rem 0 .4rem;
             font-size: .75rem;
             color: #888;
         }
 
+        /* 卡片描述 */
         .card-desc {
             margin: 0;
             font-size: .85rem;
             color: #555;
             flex-grow: 1;
-            /* 占据所有可用的垂直空间，确保卡片等高 */
+            /* 占据剩余垂直空间，确保描述区域能撑开卡片 */
         }
 
+        /* 卡片右上角标签容器 */
         .card-tags {
             display: flex;
             flex-wrap: wrap;
             gap: .4rem;
             justify-content: flex-end;
-            /* 标签靠右对齐 */
+            /* 靠右对齐 */
             flex-shrink: 0;
-            /* 防止标签组被压缩 */
+            /* 防止被压缩 */
         }
 
+        /* 单个小标签样式 */
         .tag-item {
             padding: .2rem .5rem;
             font-size: .7rem;
@@ -276,25 +328,25 @@
             white-space: nowrap;
         }
 
-        /* --- 空状态 --- */
+        /* 列表为空时的提示信息样式 */
         .empty {
             text-align: center;
             color: #666;
             padding: 2rem;
             grid-column: 1 / -1;
-            /* 在网格布局中，让空状态占据所有列 */
+            /* 关键：让此元素横跨所有网格列 */
         }
 
-        /* --- 页脚 --- */
+        /* 页脚样式 */
         footer {
             text-align: center;
             font-size: .8rem;
             color: #666;
             margin: 2rem 0;
             line-height: 1.8;
-            /* 增加行高，让多行内容不拥挤 */
         }
 
+        /* 页脚链接样式 */
         footer a {
             color: var(--accent);
             text-decoration: none;
@@ -341,64 +393,64 @@
     </footer>
 
     <script>
-        // 使用立即执行的异步函数 (IIFE) 来封装代码，避免污染全局作用域
+        // 使用一个立即执行的异步函数表达式 (IIFE) 来封装代码，避免污染全局作用域
         (async () => {
-            // --- 全局常量和变量 ---
-            const GITHUB_REPO = 'sooyaaabo/Loon'; // 目标 GitHub 仓库
-            const PLUGIN_DIR_PATH = 'Plugin'; // 插件所在的目录
+            // --- 1. 定义常量和获取DOM元素 ---
+            const GITHUB_REPO = 'sooyaaabo/Loon'; // GitHub仓库地址
+            const PLUGIN_DIR_PATH = 'Plugin'; // 插件存放的目录
 
-            // --- DOM 元素获取 ---
-            // 提前获取所有需要操作的 DOM 元素，提高性能
+            // 获取页面上需要操作的元素
             const listEl = document.getElementById('list');
             const searchEl = document.getElementById('search');
             const tabsEl = document.querySelector('.tabs');
             const sectionTitleEl = document.getElementById('sectionTitle');
             const updateTimeEl = document.getElementById('updateTime');
-            // 动态设置页脚的版权年份
+
+            // 动态设置页脚的年份
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-            let plugins = []; // 用于存储所有解析后的插件信息
+            // 用于存储所有插件信息的数组
+            let plugins = [];
 
-            /* 1. 数据获取和解析 */
+            // --- 2. 从GitHub API获取并解析插件数据 ---
             try {
-                // 从 GitHub API 获取插件目录下的所有文件信息
+                // 第一步：获取插件目录下的所有文件信息
                 const allFilesResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${PLUGIN_DIR_PATH}`);
                 const allFiles = await allFilesResponse.json();
 
-                // 如果返回的不是一个数组，说明 API 请求可能出错了
+                // 如果返回的不是一个数组，说明API请求出错了
                 if (!Array.isArray(allFiles)) {
                     throw new Error('无法获取插件列表，请检查仓库路径或网络。');
                 }
 
-                // 筛选出所有以 .plugin 结尾的文件
+                // 第二步：从所有文件中筛选出以 .plugin 结尾的文件
                 const pluginFiles = allFiles.filter(file => file.name.toLowerCase().endsWith('.plugin'));
 
                 if (pluginFiles.length === 0) {
                     throw new Error(`在仓库中没有找到任何 .plugin 文件。`);
                 }
 
-                // 并发获取所有 .plugin 文件的文本内容
+                // 第三步：并发获取所有 .plugin 文件的文本内容
+                // Promise.all 会等待所有 fetch 请求都完成后再继续执行
                 const pluginContents = await Promise.all(
                     pluginFiles.map(file => fetch(file.download_url).then(res => res.text()))
                 );
 
-                // 解析每个文件的内容，提取插件元数据
+                // 第四步：解析每个文件的文本内容，提取插件元数据
                 plugins = pluginContents.map((text, i) => {
-                    const file = pluginFiles[i];
+                    const file = pluginFiles[i]; // 当前文本对应的文件信息
 
-                    // 使用正则表达式从文件内容中提取字段，如果找不到则提供默认值
-                    const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1]?.trim() || file.name;
-                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1]?.trim() || '暂无描述';
-                    const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1]?.trim() || '';
-                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1]?.trim() || '未知';
-
-                    // 解析标签，支持以逗号分隔的多个标签
-                    const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1]?.trim();
-                    const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : [];
+                    // 使用正则表达式从文本中匹配 #!name=... 等元数据
+                    const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1] ?.trim() || file.name;
+                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1] ?.trim() || '暂无描述';
+                    const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1] ?.trim() || '';
+                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1] ?.trim() || '未知';
+                    const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1] ?.trim();
+                    const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : []; // 将标签字符串分割成数组
 
                     // 返回一个结构化的插件对象
                     return {
-                        url: file.download_url,
+                        url: file.download_url, // 插件安装地址
                         name,
                         desc,
                         icon,
@@ -408,23 +460,21 @@
                 });
 
             } catch (error) {
-                // 如果在获取或解析过程中发生任何错误，则在页面上显示错误信息
+                // 如果上述步骤中任何一步出错，就在页面上显示错误信息
                 listEl.innerHTML = `<div class="empty">加载插件失败：${error.message}</div>`;
                 sectionTitleEl.textContent = '加载失败';
-                return; // 终止脚本执行
+                return; // 终止后续代码执行
             }
 
-            /* 2. 获取仓库 Plugin 目录下最新提交时间作为网站更新时间 */
+            // --- 3. 获取仓库最后更新时间 ---
             try {
-                // 通过 GitHub API 获取指定目录的提交历史
                 const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${PLUGIN_DIR_PATH}`);
                 const commits = await commitsResponse.json();
-
-                // 获取最新一次提交的作者或提交者的时间
-                const latestCommitDate = commits[0]?.commit?.author?.date || commits[0]?.commit?.committer?.date;
+                // 获取最近一次提交的日期
+                const latestCommitDate = commits[0] ?.commit ?.author ?.date || commits[0] ?.commit ?.committer ?.date;
                 if (latestCommitDate) {
                     const d = new Date(latestCommitDate);
-                    // 将 UTC 时间格式化为本地时间字符串
+                    // 将日期格式化为本地化的字符串
                     updateTimeEl.textContent = d.toLocaleString('zh-CN', {
                         year: 'numeric',
                         month: '2-digit',
@@ -434,44 +484,40 @@
                     });
                 }
             } catch {
-                // 如果获取提交历史失败，则显示获取失败
-                updateTimeEl.textContent = '获取失败';
+                updateTimeEl.textContent = '获取失败'; // 如果获取失败，显示提示
             }
 
-            /* 3. 渲染与交互核心函数 */
+            // --- 4. 渲染插件列表的函数 ---
             function render(filterCat = 'all', kw = '') {
-                const lowerKw = kw.toLowerCase(); // 将搜索关键词转为小写以进行不区分大小写的匹配
+                const lowerKw = kw.toLowerCase(); // 将搜索关键词转为小写以方便匹配
 
-                // 根据分类和关键词过滤插件
+                // 过滤插件数组
                 const filtered = plugins.filter(p => {
-                    const hitCat = filterCat === 'all' || p.tags.includes(filterCat); // 分类匹配
-                    const hitKw = !lowerKw || // 关键词匹配（名称或标签）
-                        p.name.toLowerCase().includes(lowerKw) ||
-                        p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
-                    return hitCat && hitKw;
+                    // 条件1: 分类匹配 (如果分类是 'all' 或者插件标签包含当前分类)
+                    const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
+                    // 条件2: 关键词匹配 (如果关键词为空，或者插件名/标签包含关键词)
+                    const hitKw = !lowerKw || p.name.toLowerCase().includes(lowerKw) || p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
+                    return hitCat && hitKw; // 必须同时满足两个条件
                 });
 
-                // 更新列表标题，显示当前筛选条件和结果数量
+                // 更新列表标题
                 sectionTitleEl.textContent = `${(filterCat === 'all' ? '全部' : filterCat)} · ${filtered.length} 个插件`;
                 listEl.innerHTML = ''; // 清空现有列表
 
-                // 如果没有匹配的插件，显示空状态提示
                 if (!filtered.length) {
                     listEl.innerHTML = '<div class="empty">暂无匹配的插件</div>';
                     return;
                 }
 
-                // 遍历筛选后的插件，为每个插件创建并插入一个卡片
+                // 遍历过滤后的插件，为每个插件创建DOM元素并添加到列表中
                 filtered.forEach(p => {
-                    const card = document.createElement('a');
+                    const card = document.createElement('a'); // 创建一个<a>标签作为卡片
                     card.className = 'card';
-                    // 构建Loon的导入链接
+                    // 关键：设置HREF为Loon的导入协议，实现点击安装
                     card.href = `https://www.nsloon.com/openloon/import?plugin=${p.url}`;
-
-                    // 将标签数组转换为 HTML 字符串
                     const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join(' ');
 
-                    // 使用模板字符串构建卡片的内部 HTML，结构清晰
+                    // 使用模板字符串生成卡片的内部HTML结构
                     card.innerHTML = `
                         <div class="card-inner-layout">
                             ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon">` : ''}
@@ -483,88 +529,112 @@
                                 <p class="card-update-time">更新时间：${p.date}</p>
                                 <p class="card-desc">${p.desc}</p>
                             </div>
-                        </div>
-                    `;
-
-                    listEl.appendChild(card);
+                        </div>`;
+                    listEl.appendChild(card); // 将创建的卡片添加到列表中
                 });
             }
 
-            /* 4. 绑定事件监听 */
+            // --- 5. 绑定事件监听器 ---
+
             // 监听分类标签的点击事件
             tabsEl.addEventListener('click', e => {
-                if (e.target.matches('.tab')) {
-                    // 切换 active 状态
-                    tabsEl.querySelector('.active').classList.remove('active');
-                    e.target.classList.add('active');
-                    // 根据新的分类和当前的搜索词重新渲染列表
+                if (e.target.matches('.tab')) { // 事件委托，只处理 .tab 按钮的点击
+                    tabsEl.querySelector('.active').classList.remove('active'); // 移除旧的激活状态
+                    e.target.classList.add('active'); // 给当前点击的按钮添加激活状态
+                    // 使用当前按钮的分类 (data-cat) 和搜索框的值重新渲染列表
                     render(e.target.dataset.cat, searchEl.value);
                 }
             });
 
             // 监听搜索框的输入事件
             searchEl.addEventListener('input', () => {
-                // 根据当前的分类和新的搜索词重新渲染列表
+                // 使用当前激活的分类和搜索框的最新值重新渲染列表
                 render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value);
             });
 
-            /* 5. 横幅滚动逻辑 (交叉淡入淡出) */
+            // --- 6. 公告栏动画逻辑 ---
             const bannerEl = document.getElementById('announcementBanner');
             if (bannerEl) {
                 const bannerItems = bannerEl.querySelectorAll('.banner-item');
                 const totalBanners = bannerItems.length;
                 let currentBannerIndex = 0;
-                let bannerInterval; // 用于存储定时器
 
-                // 切换到下一个横幅的函数
-                function changeBanner(nextIndex) {
-                    if (currentBannerIndex === nextIndex || bannerItems.length < 2) return;
-
-                    const currentItem = bannerItems[currentBannerIndex];
-                    const nextItem = bannerItems[nextIndex];
-
-                    // 交叉淡入淡出：同时移除和添加 active 类，利用 CSS transition 实现动画
-                    currentItem.classList.remove('active');
-                    nextItem.classList.add('active');
-
-                    currentBannerIndex = nextIndex;
-                }
-
-                // 启动自动循环播放
-                function startBannerCycle() {
-                    clearInterval(bannerInterval); // 清除已有的定时器，防止叠加
-                    bannerInterval = setInterval(() => {
-                        const nextIndex = (currentBannerIndex + 1) % totalBanners; // 循环计算下一个索引
-                        changeBanner(nextIndex);
-                    }, 3000); // 3秒切换一次
-                }
-
-                // 初始化：显示第一个横幅
-                if (totalBanners > 0) {
-                    bannerItems[currentBannerIndex].classList.add('active');
-                }
-
-                // 添加点击事件，手动切换
-                bannerEl.addEventListener('click', () => {
-                    if (totalBanners > 1) {
-                        const nextIndex = (currentBannerIndex + 1) % totalBanners;
-                        changeBanner(nextIndex);
-                        startBannerCycle(); // 点击后重置定时器，避免立即切换
-                    }
-                });
-
-                // 如果横幅数量大于1，则启动自动播放
+                // 如果有多条公告，则启动循环播放
                 if (totalBanners > 1) {
-                    startBannerCycle();
+                    // 定义一个管理公告循环的异步函数
+                    const manageBannerCycle = async () => {
+                        const currentItem = bannerItems[currentBannerIndex];
+                        // 计算下一条公告的索引，使用取模运算实现循环
+                        const nextIndex = (currentBannerIndex + 1) % totalBanners;
+                        const nextItem = bannerItems[nextIndex];
+
+                        // 重置当前公告项的动画和位置，为下次出现做准备
+                        currentItem.style.transition = 'none';
+                        currentItem.style.transform = 'translateX(0)';
+
+                        // 淡出当前项，淡入下一项
+                        currentItem.classList.remove('active');
+                        nextItem.classList.add('active');
+                        currentBannerIndex = nextIndex;
+
+                        // 等待淡入动画（0.6秒）完成
+                        await new Promise(resolve => setTimeout(resolve, 600));
+
+                        // 检查新显示的公告文本是否超出其容器宽度
+                        const containerWidth = nextItem.clientWidth;
+                        const textWidth = nextItem.scrollWidth;
+
+                        if (textWidth > containerWidth) {
+                            // 如果文本超长，先停留1秒让用户阅读开头
+                            await new Promise(resolve => setTimeout(resolve, 1000));
+
+                            // 计算需要滚动的距离和时间
+                            const scrollOffset = textWidth - containerWidth;
+                            const scrollSpeed = 60; // 滚动速度（像素/秒）
+                            const scrollDuration = scrollOffset / scrollSpeed;
+
+                            // 设置滚动动画
+                            nextItem.style.transition = `transform ${scrollDuration}s linear`;
+                            nextItem.style.transform = `translateX(-${scrollOffset}px)`;
+
+                            // 等待滚动动画结束
+                            await new Promise(resolve => {
+                                const onTransitionEnd = () => {
+                                    nextItem.removeEventListener('transitionend', onTransitionEnd);
+                                    resolve();
+                                };
+                                nextItem.addEventListener('transitionend', onTransitionEnd);
+                            });
+
+                            // 滚动结束后再停留1秒
+                            await new Promise(resolve => setTimeout(resolve, 1000));
+
+                        } else {
+                            // 如果文本没有超长，则直接停留4秒
+                            await new Promise(resolve => setTimeout(resolve, 4000));
+                        }
+
+                        // 递归调用自身，开始下一轮循环
+                        manageBannerCycle();
+                    };
+
+                    // 页面加载时，首先激活第一条公告
+                    if (totalBanners > 0) {
+                        bannerItems[0].classList.add('active');
+                        // 4秒后开始第一次切换
+                        setTimeout(manageBannerCycle, 4000);
+                    }
+                } else if (totalBanners === 1) {
+                    // 如果只有一条公告，直接激活显示即可
+                    bannerItems[0].classList.add('active');
                 }
             }
 
-
-            // --- 初始渲染 ---
-            // 页面加载完成后，立即执行一次渲染，显示所有插件
+            // --- 7. 初始渲染 ---
+            // 在所有数据加载和函数定义完成后，调用一次 render() 来显示初始的全部插件列表
             render();
 
-        })();
+        })(); // 立即执行这个异步函数
     </script>
 
 </body>
