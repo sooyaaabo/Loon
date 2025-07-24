@@ -1161,7 +1161,7 @@
                         await new Promise(resolve => setTimeout(resolve, 1000)); // 滚动完成后停留1秒
                     } else {
                         // 如果不溢出，停留4秒
-                        await new Promise(resolve => setTimeout(resolve, 4000));
+                        await new Promise(resolve => setTimeout(resolve, 2500));
                     }
 
                     // 重置位置
@@ -1206,12 +1206,8 @@
                     const nextIndex = (currentBannerIndex + 1) % totalBanners;
                     const nextItem = bannerItems[nextIndex];
 
-                    // 重置当前项动画
-                    currentItem.style.transition = 'none';
-                    currentItem.style.transform = 'translateX(0)';
+                    // 切换横幅
                     currentItem.classList.remove('active');
-
-                    // 显示下一项
                     nextItem.classList.add('active');
                     currentBannerIndex = nextIndex;
 
