@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Alook.png
-#!date = 2025-07-23 08:00
+#!date = 2025-07-24 23:30
 
 # 2024-11-29 01:37
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/18hlw.snippet
@@ -16,13 +16,18 @@
 # https://raw.githubusercontent.com/RuCu6/Loon/main/Plugins/webpage.plugin
 # 2024-02-19
 # https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/Html/WebAdBlock.conf
-# 2024-02-24
-# https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/surge/module/missav.sgmodule
+# 2024-07-23
+# https://github.com/kokoryh/Sparkle/blob/master/release/surge/module/missav.sgmodule
+# 2024-07-24
+# https://github.com/kokoryh/Sparkle/blob/master/release/surge/module/hanime.sgmodule
 
 [Rule]
 DOMAIN-SUFFIX, creative.myavlive.com, REJECT
 DOMAIN-SUFFIX, trackwilltrk.com, REJECT
 DOMAIN-SUFFIX, tsyndicate.com, REJECT
+
+DOMAIN-SUFFIX, jads.co, REJECT
+DOMAIN-SUFFIX, mnaspm.com, REJECT
 
 [Rewrite]
 # -----------Rucu6----------- #
@@ -45,6 +50,8 @@ DOMAIN-SUFFIX, tsyndicate.com, REJECT
 # -----------kokoryh----------- #
 # MissAV
 http-response ^https:\/\/missav\.(?:ai|ws)\/(?!favicon)(?!(build|fonts|img|js|api|cdn-cgi)\/). script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.missav.js, requires-body = true, tag = [WebPage]MissAV
+# Hanime
+http-response ^https:\/\/hanime1\.me\/(?!(favicon|css|js|cdn-cgi|load)) script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.hanime.js, requires-body = true, tag = [WebPage]Hanime
 
 # -----------ZenmoFeiShi----------- #
 # 黑料网
