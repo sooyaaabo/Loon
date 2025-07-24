@@ -5,37 +5,26 @@
     <meta charset="UTF-8">
     <title>Loon 插件仓库</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="../Icon/App-Icon/LoonPluginHub.png">
+    <link rel="icon" href="../Icon/PluginHub/LoonPluginHub.png">
     <style>
-        /* :root选择器用于声明全局CSS变量 */
+        /* --- CSS 变量定义 --- */
+        /* 默认浅色主题 */
         :root {
-            --accent: #0078e7;
-            /* 主题色/强调色 */
-            --bg: #fafbfe;
-            /* 全局背景色 */
-            --card: #fff;
-            /* 卡片背景色 */
-            --radius: 12px;
-            /* 全局圆角大小 */
-            --border-color: #e1e4e8;
-            /* 边框颜色 */
-            --text-primary: #1d1d1f;
-            /* 主要文字颜色 */
-            --text-secondary: #888;
-            /* 次要/图标文字颜色 */
-            --text-hover: #1d1d1f;
-            /* 图标悬停颜色 */
-            --card-desc: #555;
-            /* 卡片描述文字颜色 */
-            --separator-color: #d1d5db;
-             /* 分隔符颜色 */
-            --switch-bg: #f1f1f1;
-            /* 开关背景色 */
-            --thumb-bg: #fff;
-            /* 开关滑块颜色 */
+            --accent: #0078e7; /* 主色调 */
+            --bg: #fafbfe; /* 背景色 */
+            --card: #fff; /* 卡片背景色 */
+            --radius: 12px; /* 圆角 */
+            --border-color: #e1e4e8; /* 边框颜色 */
+            --text-primary: #1d1d1f; /* 主要文字颜色 */
+            --text-secondary: #888; /* 次要文字颜色 */
+            --text-hover: #1d1d1f; /* 悬停文字颜色 */
+            --card-desc: #555; /* 卡片描述文字颜色 */
+            --separator-color: #d1d5db; /* 分隔线颜色 */
+            --switch-bg: #f1f1f1; /* 主题切换开关背景 */
+            --thumb-bg: #fff; /* 主题切换开关滑块 */
         }
 
-        /* 暗黑模式颜色变量 */
+        /* 深色主题 */
         body.dark-mode {
             --accent: #268fff;
             --bg: #181818;
@@ -50,78 +39,168 @@
             --thumb-bg: #555;
         }
 
-        /* 通配符选择器，为所有元素设置通用样式 */
+        /* --- 基础样式重置和全局设置 --- */
         * {
             box-sizing: border-box;
-            /* CSS盒模型设置为border-box，padding和border不会增加元素总宽高 */
         }
 
-        /* body元素全局样式 */
         body {
             margin: 0;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
             background: var(--bg);
             color: var(--text-primary);
-            transition: background-color 0.3s, color 0.3s;
+            transition: background-color 0.3s, color 0.3s; /* 背景和文字颜色过渡动画 */
         }
 
-        /* 页面头部容器样式 */
+        /* --- 头部样式 --- */
         header {
-            text-align: center;
-            padding: 1rem 1.5rem;
+            display: flex;
+            justify-content: space-between; /* Logo在左，控制按钮在右 */
+            align-items: center;
+            padding: 1rem 1.5rem 1.8rem;
             border-bottom: 1px solid var(--border-color);
+            position: sticky; /* 固定在顶部 */
+            top: 0;
+            z-index: 30;
+            background: var(--bg); /* 确保固定时背景正确 */
+        }
+
+        /* Logo */
+        .header-logo {
             position: relative;
+            z-index: 1; /* 确保Logo在菜单之上 */
+        }
+
+        .header-logo img {
+            height: 40px;
+            display: block;
+        }
+
+        /* 标题块 - 居中显示 */
+        .header-title-block {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 100%;
+            padding: 0 90px; /* 为左右按钮留出空间 */
+            text-align: center;
         }
 
         header h1 {
             margin: .2rem 0;
-            font-size: 1.6rem;
-            color: var(--accent);
+            font-size: 1.2rem;
+            color: var(--accent); /* 标题颜色 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis; /* 超长文本省略 */
         }
 
         header p {
             margin: .3rem 0 0;
-            font-size: .9rem;
-            color: var(--text-secondary);
-        }
-        
-        /* 右上角功能图标容器 */
-        .header-controls {
-            position: absolute;
-            right: 1.5rem;
-            top: 50%;
-            transform: translateY(-50%);
-            display: flex;
-            align-items: center;
-            gap: 0.8rem;
-        }
-        
-        .control-group {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            font-size: .8rem;
+            color: var(--text-secondary); /* 描述文字颜色 */
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
         }
 
-        .control-group a,
-        .control-group button {
+        /* 右侧控制按钮区域 */
+        .header-controls {
+            position: relative;
+            z-index: 1; /* 确保在菜单之上 */
+        }
+
+        /* 移动端菜单按钮 */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 28px;
+            height: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--text-secondary);
+            border-radius: 3px;
+            transition: background-color 0.25s;
+        }
+
+        .menu-toggle:hover span {
+            background-color: var(--text-hover);
+        }
+
+        /* 二级菜单 */
+        .secondary-menu {
+            position: absolute;
+            top: calc(100% + 10px);
+            right: 0;
+            background: var(--card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            display: none; /* 默认隐藏 */
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 40;
+            min-width: 200px;
+        }
+
+        .secondary-menu.active {
+            display: flex; /* 显示菜单 */
+        }
+
+        /* 菜单项容器和分隔线 */
+        .secondary-menu .control-group,
+        .secondary-menu .control-group-wrapper {
             display: flex;
             align-items: center;
-            justify-content: center;
-            height: 40px;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .secondary-menu .control-group:hover,
+        .secondary-menu .control-group-wrapper:hover {
+            background-color: rgba(128, 128, 128, 0.1); /* 悬停背景 */
+        }
+
+        .secondary-menu .separator {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 0 0.5rem;
+        }
+
+        .secondary-menu .control-group {
+            width: 100%;
+        }
+
+        /* 菜单中的链接和按钮 */
+        .control-group a,
+        .control-group button,
+        .control-group-wrapper button {
+            display: flex;
+            align-items: center;
             background: none;
             border: none;
             cursor: pointer;
             padding: 0;
             text-decoration: none;
+            color: inherit;
+            width: 100%;
+            gap: 0.2rem;
+            font-size: 1rem;
         }
-        
-        .control-group .separator {
-            color: var(--separator-color);
-            font-size: 1.2rem;
-            font-weight: 100;
-        }
-        
-        /* 通用图标样式 (CSS Mask) */
+
+        /* 图标样式 */
         .icon {
             display: inline-block;
             width: 20px;
@@ -132,28 +211,69 @@
             mask-repeat: no-repeat;
             -webkit-mask-size: 100% 100%;
             mask-size: 100% 100%;
+            flex-shrink: 0;
         }
 
         .control-group a:hover .icon,
         .control-group button:hover .icon {
             background-color: var(--text-hover);
         }
-        
-        /* 具体图标的引用 - **已更新为正确的相对路径** */
-        .icon-lang { -webkit-mask-image: url('../Icon/PluginHub/Language.svg'); mask-image: url('../Icon/PluginHub/Language.svg'); }
-        .icon-chevron { width: 16px; height: 16px; -webkit-mask-image: url('../Icon/PluginHub/TriangleDown.svg'); mask-image: url('../Icon/PluginHub/TriangleDown.svg');}
-        .icon-sun { -webkit-mask-image: url('../Icon/PluginHub/Sun.svg'); mask-image: url('../Icon/PluginHub/Sun.svg'); }
-        .icon-moon { -webkit-mask-image: url('../Icon/PluginHub/Moon.svg'); mask-image: url('../Icon/PluginHub/Moon.svg'); }
-        .icon-telegram { -webkit-mask-image: url('../Icon/PluginHub/Telegram.svg'); mask-image: url('../Icon/PluginHub/Telegram.svg'); }
-        .icon-github { -webkit-mask-image: url('../Icon/PluginHub/GitHub.svg'); mask-image: url('../Icon/PluginHub/GitHub.svg'); }
-        
-        
-        /* 语言切换菜单 */
-        .lang-menu-container { position: relative; }
-        #lang-toggle { gap: 0.3rem; }
+
+        /* 具体图标定义 */
+        .icon-lang {
+            -webkit-mask-image: url('../Icon/PluginHub/Language.svg');
+            mask-image: url('../Icon/PluginHub/Language.svg');
+        }
+
+        .icon-chevron {
+            width: 16px;
+            height: 16px;
+            margin-left: auto; /* 推到最右边 */
+            -webkit-mask-image: url('../Icon/PluginHub/TriangleDown.svg');
+            mask-image: url('../Icon/PluginHub/TriangleDown.svg');
+        }
+
+        .icon-sun {
+            -webkit-mask-image: url('../Icon/PluginHub/Sun.svg');
+            mask-image: url('../Icon/PluginHub/Sun.svg');
+        }
+
+        .icon-moon {
+            -webkit-mask-image: url('../Icon/PluginHub/Moon.svg');
+            mask-image: url('../Icon/PluginHub/Moon.svg');
+        }
+
+        .icon-telegram {
+            -webkit-mask-image: url('../Icon/PluginHub/Telegram.svg');
+            mask-image: url('../Icon/PluginHub/Telegram.svg');
+        }
+
+        .icon-github {
+            -webkit-mask-image: url('../Icon/PluginHub/GitHub.svg');
+            mask-image: url('../Icon/PluginHub/GitHub.svg');
+        }
+
+        /* 主题切换图标（移动端） */
+        .icon-appearance {
+            width: 20px;
+            height: 20px;
+            -webkit-mask-image: url('../Icon/PluginHub/Sun.svg');
+            mask-image: url('../Icon/PluginHub/Sun.svg');
+        }
+
+        body.dark-mode .icon-appearance {
+            -webkit-mask-image: url('../Icon/PluginHub/Moon.svg');
+            mask-image: url('../Icon/PluginHub/Moon.svg');
+        }
+
+        /* 语言菜单 */
+        .lang-menu-container {
+            position: relative;
+            width: 100%;
+        }
 
         .lang-menu {
-            display: none;
+            display: none; /* 默认隐藏 */
             position: absolute;
             top: calc(100% + 5px);
             right: 0;
@@ -163,23 +283,32 @@
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
             min-width: 120px;
             padding: 0.5rem;
-            z-index: 20;
+            z-index: 50;
         }
-        .lang-menu.active { display: block; }
+
+        .lang-menu.active {
+            display: block; /* 显示语言菜单 */
+        }
+
         .lang-menu a {
-            display: block;
-            width: 100%;
-            height: auto;
             padding: 0.5rem 0.8rem;
-            color: var(--text-primary);
             border-radius: 8px;
             font-size: 0.9rem;
-            text-align: left;
+            text-decoration: none;
+            color: inherit;
+            display: block;
         }
-        .lang-menu a:hover { background-color: rgba(128, 128, 128, 0.1); }
-        .lang-menu a.current-lang { font-weight: 600; color: var(--accent); }
-        
-        /* 外观模式开关样式 */
+
+        .lang-menu a:hover {
+            background-color: rgba(128, 128, 128, 0.1);
+        }
+
+        .lang-menu a.current-lang {
+            font-weight: 600;
+            color: var(--accent); /* 当前语言高亮 */
+        }
+
+        /* 主题切换开关 */
         #theme-toggle {
             position: relative;
             width: 50px;
@@ -190,12 +319,18 @@
             align-items: center;
             justify-content: space-between;
             padding: 0 4px;
+            margin-left: auto;
+            cursor: pointer;
+            flex-shrink: 0;
         }
-        #theme-toggle .icon-sun, #theme-toggle .icon-moon {
+
+        #theme-toggle .icon-sun,
+        #theme-toggle .icon-moon {
             width: 18px;
             height: 18px;
             background-color: var(--text-primary);
         }
+
         #theme-toggle .thumb {
             position: absolute;
             top: 2px;
@@ -204,134 +339,580 @@
             height: 22px;
             background-color: var(--thumb-bg);
             border-radius: 50%;
-            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
-            transition: transform 0.25s ease-in-out;
-        }
-        body.dark-mode #theme-toggle .thumb {
-            transform: translateX(24px);
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease-in-out; /* 滑块过渡动画 */
         }
 
-        /* --- Main Content and other styles remain the same --- */
-        .wrap { max-width: 1000px; margin: 0 auto; padding: 1rem; }
-        .announcement-banner { background-color: #fff9de; border: 1px solid #f5f5f7; border-radius: var(--radius); margin-bottom: 1rem; position: relative; min-height: 3.2rem; cursor: pointer; overflow: hidden; }
-        body.dark-mode .announcement-banner { background-color: #3a372d; border-color: #444; }
-        .banner-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; margin: 0; padding: .5rem 1rem; color: #1d1d1f; font-size: .9rem; font-weight: 500; line-height: 1.5; text-align: left; opacity: 0; transition: opacity 1s ease-in-out; visibility: hidden; white-space: nowrap; }
-        body.dark-mode .banner-item { color: #e2e2e2; }
-        .banner-item.active { opacity: 1; visibility: visible; }
-        .search-box { background: var(--card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: .9rem; margin-bottom: 1rem; transition: background-color 0.3s, border-color 0.3s; }
-        #search { width: 100%; padding: .6rem .8rem; font-size: 1rem; border: 1px solid #ddd; border-radius: var(--radius); background: var(--bg); color: var(--text-primary); }
-        body.dark-mode #search { border-color: #4a4a4a; }
-        .tabs { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .6rem; }
-        .tabs button { padding: .4rem .9rem; border: 1px solid #ddd; border-radius: var(--radius); background: var(--card); color: var(--text-primary); font-size: .85rem; cursor: pointer; min-width: 96px; text-align: center; transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
-        body.dark-mode .tabs button { border-color: #4a4a4a; }
-        .tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
-        .section-title { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .6rem .1rem; color: var(--text-primary); }
-        .list { display: grid; gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
-        .card { background: var(--card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: .9rem; text-decoration: none; color: inherit; cursor: pointer; transition: box-shadow .2s, background-color .15s ease, transform .15s ease, border-color .3s; display: flex; flex-direction: column; }
-        .card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, .08); }
-        body.dark-mode .card:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, .2); border-color: #555; }
-        .card:active { background-color: #e6f0ff; transform: scale(.98); }
-        body.dark-mode .card:active { background-color: #333d4d; }
-        .card-inner-layout { display: flex; align-items: flex-start; gap: .7rem; }
-        .card-icon { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; margin-top: 3px; flex-shrink: 0; background: #fff; }
-        .card-content { flex: 1; min-width: 0; display: flex; flex-direction: column; }
-        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; }
-        .card-title { margin: 0; font-size: 1.1rem; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-        .card-update-time { margin: .2rem 0 .4rem; font-size: .75rem; color: #888; }
-        body.dark-mode .card-update-time { color: #777; }
-        .card-desc { margin: 0; font-size: .85rem; color: var(--card-desc); flex-grow: 1; }
-        .card-tags { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: flex-end; flex-shrink: 0; }
-        .tag-item { padding: .2rem .5rem; font-size: .7rem; color: #333; background: #f0f0f0; border-radius: 8px; white-space: nowrap; }
-        body.dark-mode .tag-item { background: #444; color: #ddd; }
-        .empty { text-align: center; color: var(--text-secondary); padding: 2rem; grid-column: 1 / -1; }
-        footer { text-align: center; font-size: .8rem; color: var(--text-secondary); margin: 2rem 0; line-height: 1.8; }
-        footer a { color: var(--accent); text-decoration: none; }
+        body.dark-mode #theme-toggle .thumb {
+            transform: translateX(24px); /* 深色模式下滑块位置 */
+        }
+
+        /* --- 响应式设计 - 桌面端 --- */
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            header p {
+                font-size: .9rem;
+            }
+
+            /* 隐藏移动端菜单按钮 */
+            .menu-toggle {
+                display: none;
+            }
+
+            /* 桌面端直接显示菜单 */
+            .header-controls {
+                display: contents;
+            }
+
+            .secondary-menu {
+                display: flex !important;
+                position: static; /* 取消绝对定位 */
+                flex-direction: row;
+                align-items: center;
+                gap: 0.8rem;
+                background: none;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                min-width: 0;
+            }
+
+            /* 调整菜单项样式 */
+            .secondary-menu .control-group,
+            .secondary-menu .control-group-wrapper {
+                padding: 0;
+                background: none !important;
+                width: auto;
+            }
+
+            .secondary-menu .separator {
+                width: 1px;
+                height: 24px;
+                background-color: var(--separator-color);
+                margin: 0;
+            }
+
+            /* 桌面端隐藏文字，只显示图标 */
+            .secondary-menu .control-group span:not(.icon),
+            .secondary-menu .control-group-wrapper span:not(.icon) {
+                display: none;
+            }
+
+            /* 显示下拉箭头图标 */
+            .secondary-menu .icon-chevron {
+                display: inline-block;
+            }
+
+            #theme-toggle {
+                margin-left: 0;
+            }
+
+            #lang-toggle .icon-chevron {
+                display: inline-block;
+            }
+        }
+
+        /* --- 主要内容区域 --- */
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        /* 公告横幅 */
+        .announcement-banner {
+            background-color: #fff9de; /* 浅色背景 */
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            position: relative;
+            min-height: 3.2rem;
+            cursor: pointer; /* 点击可切换公告 */
+            overflow: hidden;
+        }
+
+        body.dark-mode .announcement-banner {
+            background-color: #3a372d; /* 深色背景 */
+            border-color: #444;
+        }
+
+        .banner-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            padding: .5rem 1rem;
+            color: #1d1d1f;
+            font-size: .9rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: left;
+            opacity: 0; /* 默认隐藏 */
+            transition: opacity 0.5s ease-in-out;
+            z-index: -1; /* 默认在底层 */
+            white-space: nowrap;
+            transform: translateX(0); /* 初始位置 */
+        }
+
+        body.dark-mode .banner-item {
+            color: #e2e2e2;
+        }
+
+        .banner-item.active {
+            opacity: 1; /* 显示当前公告 */
+            z-index: 1;
+        }
+
+        /* 搜索框 */
+        .search-box {
+            background: var(--card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: .9rem;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #search {
+            width: 100%;
+            padding: .6rem .8rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            background: var(--bg);
+            color: var(--text-primary);
+        }
+
+        body.dark-mode #search {
+            border-color: #4a4a4a;
+        }
+
+        /* 分类标签 */
+        .tabs {
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap;
+            margin-top: .6rem;
+        }
+
+        .tabs button {
+            padding: .4rem .9rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            background: var(--card);
+            color: var(--text-primary);
+            font-size: .85rem;
+            cursor: pointer;
+            min-width: 96px;
+            text-align: center;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        body.dark-mode .tabs button {
+            border-color: #4a4a4a;
+        }
+
+        .tabs button.active {
+            background: var(--accent);
+            color: #fff;
+            border-color: var(--accent);
+        }
+
+        /* 分区标题 */
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 .6rem .1rem;
+            color: var(--text-primary);
+        }
+
+        /* 插件列表网格 */
+        .list {
+            display: grid;
+            gap: .7rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+        }
+
+        /* 插件卡片 */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: .9rem;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: box-shadow .2s, background-color .15s ease, transform .15s ease, border-color .3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
+        }
+
+        body.dark-mode .card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+            border-color: #555;
+        }
+
+        .card:active {
+            background-color: #e6f0ff;
+            transform: scale(.98);
+        }
+
+        body.dark-mode .card:active {
+            background-color: #333d4d;
+        }
+
+        /* 卡片内部布局 */
+        .card-inner-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: .7rem;
+        }
+
+        .card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-top: 3px;
+            flex-shrink: 0;
+            background: #fff;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0; /* 防止溢出 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: .5rem;
+        }
+
+        .card-title {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--accent);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-update-time {
+            margin: .2rem 0 .4rem;
+            font-size: .75rem;
+            color: #888;
+        }
+
+        body.dark-mode .card-update-time {
+            color: #777;
+        }
+
+        .card-desc {
+            margin: 0;
+            font-size: .85rem;
+            color: var(--card-desc);
+            flex-grow: 1;
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        .tag-item {
+            padding: .2rem .5rem;
+            font-size: .7rem;
+            color: #333;
+            background: #f0f0f0;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+
+        body.dark-mode .tag-item {
+            background: #444;
+            color: #ddd;
+        }
+
+        /* 空状态 */
+        .empty {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 2rem;
+            grid-column: 1 / -1; /* 跨越所有列 */
+        }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            font-size: .8rem;
+            color: var(--text-secondary);
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
     </style>
 </head>
 
 <body>
+    <!-- 头部 -->
     <header>
-        <h1>Loon 插件仓库</h1>
-        <p>从 GitHub 仓库获取最新的 Loon 插件，点击插件卡片即可快速跳转安装</p>
-        
+        <!-- Logo -->
+        <div class="header-logo">
+            <a href="" title="刷新页面" aria-label="刷新页面">
+                <img src="../Icon/PluginHub/LoonPluginHub.png"
+                    alt="Loon Plugin Hub Logo">
+            </a>
+        </div>
+        <!-- 标题和描述 -->
+        <div class="header-title-block">
+            <h1 data-translate="repoTitle">Loon 插件仓库</h1>
+            <p data-translate="repoDesc">点击插件卡片即可跳转安装插件</p>
+        </div>
+        <!-- 控制按钮 -->
         <div class="header-controls">
-            <div class="control-group">
-                <div class="lang-menu-container">
-                    <button id="lang-toggle" title="切换语言">
-                        <span class="icon icon-lang"></span>
-                        <span class="icon icon-chevron"></span>
-                    </button>
-                    <div id="lang-menu" class="lang-menu">
-                        <a href="#" class="current-lang">简体中文</a>
-                        <a href="#">English</a>
+            <!-- 移动端菜单按钮 -->
+            <button id="menu-toggle" class="menu-toggle" aria-label="更多功能" title="更多功能">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <!-- 二级菜单 -->
+            <div id="secondary-menu" class="secondary-menu">
+                <!-- 语言切换 -->
+                <div class="control-group">
+                    <div class="lang-menu-container">
+                        <button id="lang-toggle" title="切换语言" data-translate-title="toggleLang">
+                            <span class="icon icon-lang"></span>
+                            <span data-translate="toggleLang">切换语言</span>
+                            <span class="icon icon-chevron"></span>
+                        </button>
+                        <div id="lang-menu" class="lang-menu">
+                            <a href="#" data-lang="zh" class="current-lang">简体中文</a>
+                            <a href="#" data-lang="en">English</a>
+                        </div>
                     </div>
                 </div>
-            </div>
-
-            <span class="separator">|</span>
-
-            <div class="control-group">
-                 <button id="theme-toggle" title="切换外观模式" role="switch" type="button">
-                    <span class="icon icon-sun"></span>
-                    <span class="icon icon-moon"></span>
-                    <span class="thumb"></span>
-                </button>
-            </div>
-
-            <span class="separator">|</span>
-
-            <div class="control-group">
-                <a href="https://t.me/BoEchoBot" target="_blank" aria-label="Telegram" title="Telegram">
-                    <span class="icon icon-telegram"></span>
-                </a>
-                <a href="https://github.com/sooyaaabo/Loon" target="_blank" aria-label="GitHub" title="GitHub">
-                    <span class="icon icon-github"></span>
-                </a>
+                <div class="separator"></div>
+                <!-- 主题切换 (桌面端为按钮组) -->
+                <div class="control-group-wrapper">
+                    <button id="theme-toggle-wrapper"
+                        style="width:100%; background: none; border:none; padding:0; display:flex; align-items:center; cursor:default;">
+                        <span class="icon icon-appearance"></span>
+                        <span data-translate="toggleTheme">外观模式</span>
+                        <!-- 主题切换开关 -->
+                        <div id="theme-toggle" title="外观模式" data-translate-title="toggleTheme" role="switch">
+                            <span class="icon icon-sun"></span>
+                            <span class="icon icon-moon"></span>
+                            <span class="thumb"></span>
+                        </div>
+                    </button>
+                </div>
+                <div class="separator"></div>
+                <!-- Telegram 链接 -->
+                <div class="control-group">
+                    <a href="https://t.me/BoEchoBot" target="_blank" aria-label="Telegram" title="Telegram"
+                        data-translate-title="telegram">
+                        <span class="icon icon-telegram"></span>
+                        <span data-translate="telegram">Telegram</span>
+                    </a>
+                </div>
+                <!-- GitHub 链接 -->
+                <div class="control-group">
+                    <a href="https://github.com/sooyaaabo/Loon" target="_blank" aria-label="GitHub" title="GitHub"
+                        data-translate-title="github">
+                        <span class="icon icon-github"></span>
+                        <span data-translate="github">GitHub</span>
+                    </a>
+                </div>
             </div>
         </div>
     </header>
 
+    <!-- 主要内容 -->
     <div class="wrap">
+        <!-- 公告横幅 -->
         <div class="announcement-banner" id="announcementBanner">
-            <p class="banner-item">禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！</p>
-            <p class="banner-item">本网站由个人制作与维护，与Loon官方无关。</p>
+            <p class="banner-item" data-translate="bannerWarning">禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！</p>
+            <p class="banner-item" data-translate="bannerDisclaimer">本网站由个人制作与维护，与Loon官方无关。</p>
         </div>
 
+        <!-- 搜索和分类 -->
         <div class="search-box">
-            <input id="search" placeholder="搜索插件名称或标签…">
+            <input id="search" placeholder="搜索插件名称或标签…" data-translate-placeholder="searchPlaceholder">
             <div class="tabs">
-                <button class="tab active" data-cat="all">全部</button>
-                <button class="tab" data-cat="去广告">去广告</button>
-                <button class="tab" data-cat="功能增强">功能增强</button>
-                <button class="tab" data-cat="解锁会员">解锁会员</button>
-                <button class="tab" data-cat="定时任务">定时任务</button>
+                <button class="tab active" data-cat="all" data-translate="catAll">全部</button>
+                <button class="tab" data-cat="去广告" data-translate="catAdblock">去广告</button>
+                <button class="tab" data-cat="功能增强" data-translate="catEnhance">功能增强</button>
+                <button class="tab" data-cat="解锁会员" data-translate="catUnlock">解锁会员</button>
+                <button class="tab" data-cat="定时任务" data-translate="catCron">定时任务</button>
             </div>
         </div>
 
-        <div class="section-title" id="sectionTitle">正在加载…</div>
+        <!-- 插件列表区标题 -->
+        <div class="section-title" id="sectionTitle" data-translate-part="sectionTitle">正在加载…</div>
+        <!-- 插件列表 -->
         <div class="list" id="list">
-            <div class="empty">正在从 GitHub 加载插件列表，请稍候…</div>
+            <div class="empty" data-translate="loadingPlugins">正在从 GitHub 加载插件列表，请稍候…</div>
         </div>
     </div>
 
+    <!-- 页脚 -->
     <footer>
-        数据来源：
-        <a href="https://github.com/sooyaaabo/Loon" target="_blank">GitHub - sooyaaabo/Loon</a><br>
-        更新时间：<span id="updateTime">--</span><br>
-        联系方式：<a href="https://t.me/BoEchoBot" target="_blank">Telegram - sooyaaabo</a><br>
+        <span data-translate="updateTimeLabel">更新时间</span>：<span id="updateTime">--</span><br>
         Copyright &copy; <span id="copyright-year">2025</span> sooyaaabo. All rights reserved.
     </footer>
 
+    <!-- JavaScript -->
     <script>
-        // 使用一个立即执行的异步函数表达式 (IIFE) 来封装代码，避免污染全局作用域 
+        // --- 异步 IIFE (立即执行函数) 开始 ---
         (async () => {
-            // --- 新增：导航栏功能 ---
-            const themeToggle = document.getElementById('theme-toggle');
+            // --- 多语言支持 ---
+            const translations = {
+                zh: {
+                    repoTitle: 'Loon 插件仓库',
+                    repoDesc: '点击插件卡片即可跳转安装插件',
+                    toggleLang: '切换语言',
+                    toggleTheme: '外观模式',
+                    telegram: 'Telegram',
+                    github: 'GitHub',
+                    bannerWarning: '禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！',
+                    bannerDisclaimer: '本网站由个人制作与维护，与Loon官方无关。',
+                    searchPlaceholder: '搜索插件名称或标签…',
+                    catAll: '全部',
+                    catAdblock: '去广告',
+                    catEnhance: '功能增强',
+                    catUnlock: '解锁会员',
+                    catCron: '定时任务',
+                    sectionTitle: (cat, count) => `${cat} · ${count} 个插件`,
+                    loadingPlugins: '正在从 GitHub 加载插件列表，请稍候…',
+                    loadFailed: (msg) => `加载插件失败：${msg}`,
+                    noPluginsFound: '在仓库中没有找到任何 .plugin 文件。',
+                    noMatch: '暂无匹配的插件',
+                    updateTimeLabel: '更新时间',
+                    cardUpdateTime: '更新时间：',
+                    cardNoDesc: '暂无描述',
+                    getFailed: '获取失败',
+                    loading: '正在加载…'
+                },
+                en: {
+                    repoTitle: 'Loon Plugin Hub',
+                    repoDesc: 'Click the plugin card to install.',
+                    toggleLang: 'Switch Language',
+                    toggleTheme: 'Switch Theme',
+                    telegram: 'Telegram',
+                    github: 'GitHub',
+                    bannerWarning: 'Public dissemination of this repository within the People\'s Republic of China or for any commercial/illegal purposes is prohibited! Please report any violations.',
+                    bannerDisclaimer: 'This website is independently created and maintained, and is not affiliated with the official Loon team.',
+                    searchPlaceholder: 'Search plugin name or tags...',
+                    catAll: 'All',
+                    catAdblock: 'Ad Block',
+                    catEnhance: 'Enhancement',
+                    catUnlock: 'Unlock',
+                    catCron: 'Cron',
+                    sectionTitle: (cat, count) => `${cat} · ${count} plugin${count > 1 ? 's' : ''}`,
+                    loadingPlugins: 'Loading plugin list from GitHub, please wait...',
+                    loadFailed: (msg) => `Failed to load plugins: ${msg}`,
+                    noPluginsFound: 'No .plugin files were found in the repository.',
+                    noMatch: 'No matching plugins found',
+                    updateTimeLabel: 'Last Updated',
+                    cardUpdateTime: 'Updated: ',
+                    cardNoDesc: 'No description available',
+                    getFailed: 'Failed to fetch',
+                    loading: 'Loading...'
+                }
+            };
+
+            // --- 初始化状态和元素 ---
+            let currentLang = localStorage.getItem('lang') || 'zh'; // 从本地存储获取语言设置
+
+            // 获取 DOM 元素
+            const menuToggle = document.getElementById('menu-toggle');
+            const secondaryMenu = document.getElementById('secondary-menu');
             const langToggle = document.getElementById('lang-toggle');
             const langMenu = document.getElementById('lang-menu');
+            const themeToggle = document.getElementById('theme-toggle');
             const body = document.body;
 
-            // 主题切换逻辑
+            const listEl = document.getElementById('list');
+            const searchEl = document.getElementById('search');
+            const tabsEl = document.querySelector('.tabs');
+            const sectionTitleEl = document.getElementById('sectionTitle');
+            const updateTimeEl = document.getElementById('updateTime');
+
+            // 设置页脚年份
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            let plugins = []; // 存储从 GitHub 获取的插件信息
+            let render; // 定义渲染函数，供后续调用
+
+            // --- 语言切换功能 ---
+            const setLanguage = (lang) => {
+                if (!translations[lang]) return; // 检查语言是否存在
+                currentLang = lang;
+                document.documentElement.lang = lang === 'zh' ? 'zh-CN' : 'en'; // 设置 html 标签的 lang 属性
+
+                // 翻译带有 data-translate 属性的元素
+                document.querySelectorAll('[data-translate]').forEach(el => {
+                    const key = el.getAttribute('data-translate');
+                    if (translations[lang][key]) {
+                        el.textContent = translations[lang][key];
+                    }
+                });
+
+                // 翻译带有 data-translate-placeholder 属性的 input placeholder
+                document.querySelectorAll('[data-translate-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-translate-placeholder');
+                    if (translations[lang][key]) {
+                        el.placeholder = translations[lang][key];
+                    }
+                });
+
+                // 翻译带有 data-translate-title 属性的元素的 title
+                document.querySelectorAll('[data-translate-title]').forEach(el => {
+                    const key = el.getAttribute('data-translate-title');
+                    if (translations[lang][key]) {
+                        el.title = translations[lang][key];
+                    }
+                });
+
+                // 更新语言菜单中的当前语言标记
+                langMenu.querySelector('.current-lang')?.classList.remove('current-lang');
+                langMenu.querySelector(`[data-lang="${lang}"]`)?.classList.add('current-lang');
+
+                // 保存语言设置到本地存储
+                localStorage.setItem('lang', lang);
+
+                // 如果插件已加载，重新渲染以更新语言
+                if (typeof render === 'function' && plugins.length > 0) {
+                    render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value);
+                }
+            };
+
+
+            // --- 主题切换功能 ---
             const applyTheme = (theme) => {
                 if (theme === 'dark') {
                     body.classList.add('dark-mode');
@@ -339,189 +920,318 @@
                     body.classList.remove('dark-mode');
                 }
             };
-            
-            // 页面加载时应用主题：1. 从 localStorage 获取 2. 根据系统偏好设置 3. 默认亮色
+
+            // 获取保存的主题或系统偏好
             const savedTheme = localStorage.getItem('theme');
             const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
             const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
-            applyTheme(currentTheme);
+            applyTheme(currentTheme); // 应用初始主题
 
-            themeToggle.addEventListener('click', () => {
+            // 主题切换按钮事件监听
+            themeToggle.addEventListener('click', (e) => {
+                e.stopPropagation(); // 阻止事件冒泡，避免触发 document 的 click 事件
                 const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
                 applyTheme(newTheme);
-                localStorage.setItem('theme', newTheme);
+                localStorage.setItem('theme', newTheme); // 保存主题设置
             });
 
-            // 语言菜单切换逻辑
-            langToggle.addEventListener('click', (e) => {
-                e.stopPropagation(); // 防止点击事件冒泡到 document
-                langMenu.classList.toggle('active');
+
+            // --- 菜单和语言菜单的显示/隐藏逻辑 ---
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                secondaryMenu.classList.toggle('active'); // 切换二级菜单显示状态
             });
-            
-            // 点击页面其他地方关闭语言菜单
-            document.addEventListener('click', () => {
-                if (langMenu.classList.contains('active')) {
+
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langMenu.classList.toggle('active'); // 切换语言菜单显示状态
+            });
+
+            // 语言菜单点击事件
+            langMenu.addEventListener('click', (e) => {
+                e.preventDefault(); // 阻止链接默认跳转
+                const target = e.target.closest('a[data-lang]'); // 找到最近的带 data-lang 的 a 标签
+                if (target) {
+                    const lang = target.getAttribute('data-lang');
+                    setLanguage(lang); // 切换语言
+                    langMenu.classList.remove('active'); // 隐藏语言菜单
+                }
+            });
+
+            // 点击页面其他区域隐藏菜单
+            document.addEventListener('click', (e) => {
+                if (!secondaryMenu.contains(e.target) && !menuToggle.contains(e.target) && secondaryMenu.classList.contains('active')) {
+                    secondaryMenu.classList.remove('active');
+                }
+                if (!langMenu.contains(e.target) && !langToggle.contains(e.target) && langMenu.classList.contains('active')) {
                     langMenu.classList.remove('active');
                 }
             });
 
 
-            // --- 1. 定义常量和获取DOM元素 --- 
-            const GITHUB_REPO = 'sooyaaabo/Loon'; // GitHub仓库地址 
-            const PLUGIN_DIR_PATH = 'Plugin'; // 插件存放的目录 
+            // --- 从 GitHub 加载插件数据 ---
+            const GITHUB_REPO = 'sooyaaabo/Loon';
+            const PLUGIN_DIR_PATH = 'Plugin';
 
-            // 获取页面上需要操作的元素 
-            const listEl = document.getElementById('list');
-            const searchEl = document.getElementById('search');
-            const tabsEl = document.querySelector('.tabs');
-            const sectionTitleEl = document.getElementById('sectionTitle');
-            const updateTimeEl = document.getElementById('updateTime');
-
-            // 动态设置页脚的年份 
-            document.getElementById('copyright-year').textContent = new Date().getFullYear();
-
-            // 用于存储所有插件信息的数组 
-            let plugins = [];
-
-            // --- 2. 从GitHub API获取并解析插件数据 --- 
             try {
+                // 1. 获取插件目录下的所有文件列表
                 const allFilesResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${PLUGIN_DIR_PATH}`);
                 const allFiles = await allFilesResponse.json();
+
                 if (!Array.isArray(allFiles)) {
-                    throw new Error('无法获取插件列表，请检查仓库路径或网络。');
+                    throw new Error(translations[currentLang].loadFailed('Invalid API response'));
                 }
+
+                // 2. 过滤出 .plugin 文件
                 const pluginFiles = allFiles.filter(file => file.name.toLowerCase().endsWith('.plugin'));
+
                 if (pluginFiles.length === 0) {
-                    throw new Error(`在仓库中没有找到任何 .plugin 文件。`);
+                    throw new Error(translations[currentLang].noPluginsFound);
                 }
+
+                // 3. 并行获取所有 .plugin 文件的内容
                 const pluginContents = await Promise.all(
                     pluginFiles.map(file => fetch(file.download_url).then(res => res.text()))
                 );
+
+                // 4. 解析每个插件文件的元信息
                 plugins = pluginContents.map((text, i) => {
                     const file = pluginFiles[i];
+                    // 使用正则表达式提取元信息
                     const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1]?.trim() || file.name;
-                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1]?.trim() || '暂无描述';
+                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1]?.trim() || 'No description available';
                     const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1]?.trim() || '';
-                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1]?.trim() || '未知';
+                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1]?.trim() || 'Unknown';
                     const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1]?.trim();
                     const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : [];
-                    return { url: file.download_url, name, desc, icon, date, tags };
+
+                    return {
+                        url: file.download_url, // 插件文件的下载链接
+                        name,
+                        desc,
+                        icon,
+                        date,
+                        tags
+                    };
                 });
+
             } catch (error) {
-                listEl.innerHTML = `<div class="empty">加载插件失败：${error.message}</div>`;
-                sectionTitleEl.textContent = '加载失败';
-                return;
+                // 加载失败处理
+                listEl.innerHTML = `<div class="empty">${translations[currentLang].loadFailed(error.message)}</div>`;
+                sectionTitleEl.textContent = 'Error';
+                return; // 提前结束脚本执行
             }
 
-            // --- 3. 获取仓库最后更新时间 --- 
+
+            // --- 获取仓库更新时间 ---
             try {
                 const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${PLUGIN_DIR_PATH}`);
                 const commits = await commitsResponse.json();
+                // 获取最新的提交时间
                 const latestCommitDate = commits[0]?.commit?.author?.date || commits[0]?.commit?.committer?.date;
                 if (latestCommitDate) {
                     const d = new Date(latestCommitDate);
-                    updateTimeEl.textContent = d.toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
+                    // 格式化日期时间
+                    updateTimeEl.textContent = d.toLocaleString(currentLang === 'zh' ? 'zh-CN' : 'en-US', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
                 }
             } catch {
-                updateTimeEl.textContent = '获取失败';
+                // 获取失败处理
+                updateTimeEl.textContent = translations[currentLang].getFailed;
             }
 
-            // --- 4. 渲染插件列表的函数 --- 
-            function render(filterCat = 'all', kw = '') {
-                const lowerKw = kw.toLowerCase();
+
+            // --- 渲染插件列表 ---
+            render = function (filterCat = 'all', kw = '') {
+                const t = translations[currentLang]; // 获取当前语言翻译对象
+                const lowerKw = kw.toLowerCase(); // 转换搜索关键词为小写
+
+                // 根据分类和关键词过滤插件
                 const filtered = plugins.filter(p => {
                     const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
                     const hitKw = !lowerKw || p.name.toLowerCase().includes(lowerKw) || p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
                     return hitCat && hitKw;
                 });
-                sectionTitleEl.textContent = `${(filterCat === 'all' ? '全部' : filterCat)} · ${filtered.length} 个插件`;
+
+                // 更新分区标题
+                const catText = tabsEl.querySelector(`[data-cat="${filterCat}"]`).textContent;
+                sectionTitleEl.textContent = t.sectionTitle(catText, filtered.length);
+
+                // 清空列表容器
                 listEl.innerHTML = '';
+
+                // 如果没有匹配的插件，显示空状态
                 if (!filtered.length) {
-                    listEl.innerHTML = '<div class="empty">暂无匹配的插件</div>';
+                    listEl.innerHTML = `<div class="empty">${t.noMatch}</div>`;
                     return;
                 }
+
+                // 遍历过滤后的插件，创建卡片元素
                 filtered.forEach(p => {
                     const card = document.createElement('a');
                     card.className = 'card';
+                    // 设置跳转链接，使用 Loon 的导入协议
                     card.href = `https://www.nsloon.com/openloon/import?plugin=${p.url}`;
+
+                    // 生成标签 HTML
                     const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join(' ');
-                    card.innerHTML = ` 
-                        <div class="card-inner-layout"> 
-                            ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon" loading="lazy">` : ''} 
-                            <div class="card-content"> 
-                                <div class="card-header"> 
-                                    <h3 class="card-title">${p.name}</h3> 
-                                    <div class="card-tags">${tagsHtml}</div> 
-                                </div> 
-                                <p class="card-update-time">更新时间：${p.date}</p> 
-                                <p class="card-desc">${p.desc}</p> 
-                            </div> 
+
+                    // 处理描述文本，如果没有描述则显示默认文本
+                    const descText = (p.desc === '暂无描述' || p.desc === 'No description available') ? t.cardNoDesc : p.desc;
+
+                    // 填充卡片内容
+                    card.innerHTML = `
+                        <div class="card-inner-layout">
+                            ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon" loading="lazy">` : ''}
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3 class="card-title">${p.name}</h3>
+                                    <div class="card-tags">${tagsHtml}</div>
+                                </div>
+                                <p class="card-update-time">${t.cardUpdateTime}${p.date}</p>
+                                <p class="card-desc">${descText}</p>
+                            </div>
                         </div>`;
+
+                    // 将卡片添加到列表容器
                     listEl.appendChild(card);
                 });
             }
 
-            // --- 5. 绑定事件监听器 --- 
+
+            // --- 事件监听器 ---
+            // 分类标签点击事件
             tabsEl.addEventListener('click', e => {
                 if (e.target.matches('.tab')) {
-                    tabsEl.querySelector('.active').classList.remove('active');
-                    e.target.classList.add('active');
-                    render(e.target.dataset.cat, searchEl.value);
+                    tabsEl.querySelector('.active').classList.remove('active'); // 移除旧的 active 状态
+                    e.target.classList.add('active'); // 给当前点击的 tab 添加 active 状态
+                    render(e.target.dataset.cat, searchEl.value); // 重新渲染
                 }
             });
+
+            // 搜索框输入事件
             searchEl.addEventListener('input', () => {
-                render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value);
+                render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value); // 实时搜索
             });
 
-            // --- 6. 公告栏动画逻辑 --- 
+
+            // --- 公告横幅轮播逻辑 ---
             const bannerEl = document.getElementById('announcementBanner');
             if (bannerEl) {
                 const bannerItems = bannerEl.querySelectorAll('.banner-item');
                 const totalBanners = bannerItems.length;
                 let currentBannerIndex = 0;
+
+                // 处理单个公告项的动画（包括文本滚动）
                 const handleBannerAnimation = async (item) => {
-                    await new Promise(resolve => setTimeout(resolve, 50));
+                    // 重置动画状态
                     item.style.transition = 'none';
                     item.style.transform = 'translateX(0)';
+                    item.style.animation = 'none';
+                    window.getComputedStyle(item).opacity; // 强制重绘
+                    await new Promise(resolve => setTimeout(resolve, 50)); // 短暂延迟
+
                     const containerWidth = item.clientWidth;
                     const textWidth = item.scrollWidth;
+
+                    // 如果文本溢出，则进行滚动动画
                     if (textWidth > containerWidth) {
-                        await new Promise(resolve => setTimeout(resolve, 1000));
+                        await new Promise(resolve => setTimeout(resolve, 1000)); // 停留1秒
                         const scrollOffset = textWidth - containerWidth;
-                        const scrollSpeed = 60;
-                        const scrollDuration = scrollOffset / scrollSpeed;
+                        const scrollSpeed = 60; // 像素/秒
+                        const scrollDuration = scrollOffset / scrollSpeed; // 计算滚动时间
+
                         item.style.transition = `transform ${scrollDuration}s linear`;
                         item.style.transform = `translateX(-${scrollOffset}px)`;
+
+                        // 等待滚动动画结束
                         await new Promise(resolve => {
-                            const onTransitionEnd = () => { item.removeEventListener('transitionend', onTransitionEnd); resolve(); };
+                            const onTransitionEnd = () => {
+                                item.removeEventListener('transitionend', onTransitionEnd);
+                                resolve();
+                            };
                             item.addEventListener('transitionend', onTransitionEnd);
                         });
-                        await new Promise(resolve => setTimeout(resolve, 1000));
+
+                        await new Promise(resolve => setTimeout(resolve, 1000)); // 滚动完成后停留1秒
                     } else {
+                        // 如果不溢出，停留4秒
                         await new Promise(resolve => setTimeout(resolve, 4000));
                     }
+
+                    // 重置位置
+                    item.style.transition = 'none';
+                    item.style.transform = 'translateX(0)';
+                    window.getComputedStyle(item).opacity; // 强制重绘
                 };
+
+                // 启动公告轮播循环
                 const startBannerLoop = async () => {
-                    if (totalBanners > 0) bannerItems[0].classList.add('active');
-                    await handleBannerAnimation(bannerItems[0]);
+                    if (totalBanners > 0) bannerItems[0].classList.add('active'); // 显示第一个公告
+                    await handleBannerAnimation(bannerItems[0]); // 播放第一个公告动画
+
                     if (totalBanners > 1) {
+                        // 循环播放后续公告
                         while (true) {
                             const currentItem = bannerItems[currentBannerIndex];
                             const nextIndex = (currentBannerIndex + 1) % totalBanners;
                             const nextItem = bannerItems[nextIndex];
+
                             currentItem.classList.remove('active');
                             nextItem.classList.add('active');
                             currentBannerIndex = nextIndex;
-                            await new Promise(resolve => setTimeout(resolve, 600));
-                            await handleBannerAnimation(nextItem);
+
+                            await new Promise(resolve => setTimeout(resolve, 600)); // 切换动画间隔
+                            await handleBannerAnimation(nextItem); // 播放下一个公告动画
                         }
                     }
                 };
-                if (totalBanners > 0) { startBannerLoop(); }
+
+                if (totalBanners > 0) {
+                    startBannerLoop(); // 启动循环
+                }
+
+                // 公告横幅点击切换逻辑
+                let clickSwitchEnabled = true;
+                bannerEl.addEventListener('click', () => {
+                    if (totalBanners <= 1 || !clickSwitchEnabled) return; // 如果只有一个或禁用，则不响应
+                    clickSwitchEnabled = false; // 禁用连续点击
+
+                    const currentItem = bannerItems[currentBannerIndex];
+                    const nextIndex = (currentBannerIndex + 1) % totalBanners;
+                    const nextItem = bannerItems[nextIndex];
+
+                    // 重置当前项动画
+                    currentItem.style.transition = 'none';
+                    currentItem.style.transform = 'translateX(0)';
+                    currentItem.classList.remove('active');
+
+                    // 显示下一项
+                    nextItem.classList.add('active');
+                    currentBannerIndex = nextIndex;
+
+                    // 重新启用点击
+                    setTimeout(() => {
+                        clickSwitchEnabled = true;
+                    }, 550);
+                });
             }
-            // --- 7. 初始渲染 --- 
-            render();
-        })();
+
+            // --- 应用初始语言设置 ---
+            setLanguage(currentLang);
+
+            // --- 首次渲染插件列表 ---
+            if (plugins.length > 0) {
+                render('all', ''); // 渲染所有插件
+            }
+
+        })(); // --- 异步 IIFE 结束 ---
     </script>
 </body>
+
 </html>
