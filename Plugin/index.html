@@ -17,6 +17,37 @@
             /* 卡片背景色 */
             --radius: 12px;
             /* 全局圆角大小 */
+            --border-color: #e1e4e8;
+            /* 边框颜色 */
+            --text-primary: #1d1d1f;
+            /* 主要文字颜色 */
+            --text-secondary: #888;
+            /* 次要/图标文字颜色 */
+            --text-hover: #1d1d1f;
+            /* 图标悬停颜色 */
+            --card-desc: #555;
+            /* 卡片描述文字颜色 */
+            --separator-color: #d1d5db;
+             /* 分隔符颜色 */
+            --switch-bg: #f1f1f1;
+            /* 开关背景色 */
+            --thumb-bg: #fff;
+            /* 开关滑块颜色 */
+        }
+
+        /* 暗黑模式颜色变量 */
+        body.dark-mode {
+            --accent: #268fff;
+            --bg: #181818;
+            --card: #252525;
+            --border-color: #363636;
+            --text-primary: #f2f2f2;
+            --text-secondary: #999;
+            --text-hover: #fff;
+            --card-desc: #aaa;
+            --separator-color: #4b5563;
+            --switch-bg: #333;
+            --thumb-bg: #555;
         }
 
         /* 通配符选择器，为所有元素设置通用样式 */
@@ -28,337 +59,236 @@
         /* body元素全局样式 */
         body {
             margin: 0;
-            /* 移除默认外边距 */
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
-            /* 设置最优的系统UI字体 */
             background: var(--bg);
-            /* 应用背景色变量 */
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s;
         }
 
         /* 页面头部容器样式 */
         header {
             text-align: center;
-            /* 文本居中 */
-            padding: 0.5rem 1rem;
-            /* 内边距 */
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
         }
 
-        /* 头部H1标题样式 */
         header h1 {
             margin: .2rem 0;
-            /* 外边距 */
             font-size: 1.6rem;
-            /* 字体大小 */
             color: var(--accent);
-            /* 应用主题色变量 */
         }
 
-        /* 头部段落描述样式 */
         header p {
             margin: .3rem 0 0;
-            /* 外边距 */
             font-size: .9rem;
-            /* 字体大小 */
-            color: #666;
-            /* 字体颜色 */
+            color: var(--text-secondary);
         }
-
-        /* 主内容区域的包裹容器 */
-        .wrap {
-            max-width: 1000px;
-            /* 最大宽度 */
-            margin: 0 auto;
-            /* 水平居中 */
-            padding: 0.2rem;
-            /* 内边距 */
-        }
-
-        /* 公告栏样式 */
-        .announcement-banner {
-            background-color: #fff9de;
-            /* 背景颜色 */
-            border: 1px solid #f5f5f7;
-            /* 边框 */
-            border-radius: var(--radius);
-            /* 应用圆角变量 */
-            margin-bottom: 1rem;
-            /* 底部外边距 */
-            position: relative;
-            /* 相对定位，作为内部绝对定位元素的基准 */
-            min-height: 3.2rem;
-            /* 最小高度 */
-            cursor: pointer;
-            /* 鼠标悬停时显示手型光标 */
-            overflow: hidden;
-            /* 隐藏溢出部分，用于滚动动画 */
-        }
-
-        /* 单条公告内容样式 */
-        .banner-item {
+        
+        /* 右上角功能图标容器 */
+        .header-controls {
             position: absolute;
-            /* 绝对定位，相对于.announcement-banner */
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%);
             display: flex;
-            /* 使用Flex布局 */
             align-items: center;
-            /* 垂直居中 */
-            justify-content: flex-start;
-            /* 水平靠左 */
-            margin: 0;
-            padding: .5rem 1rem;
-            /* 内边距 */
-            color: #1d1d1f;
-            font-size: .9rem;
-            font-weight: 500;
-            /* 字体粗细 */
-            line-height: 1.5;
-            /* 行高 */
-            text-align: left;
-            /* 文本左对齐 */
-            opacity: 0;
-            /* 默认透明 */
-            transition: opacity 1s ease-in-out;
-            /* 为透明度设置过渡动画 */
-            visibility: hidden;
-            /* 默认不可见 */
-            white-space: nowrap;
-            /* 防止文本换行 */
+            gap: 0.8rem;
+        }
+        
+        .control-group {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
         }
 
-        /* 公告内容激活（显示）时的样式 */
-        .banner-item.active {
-            opacity: 1;
-            /* 完全不透明 */
-            visibility: visible;
-            /* 可见 */
+        .control-group a,
+        .control-group button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 40px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            text-decoration: none;
+        }
+        
+        .control-group .separator {
+            color: var(--separator-color);
+            font-size: 1.2rem;
+            font-weight: 100;
+        }
+        
+        /* 通用图标样式 (CSS Mask) */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--text-secondary);
+            transition: background-color 0.25s;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
         }
 
-        /* 搜索框容器样式 */
-        .search-box {
+        .control-group a:hover .icon,
+        .control-group button:hover .icon {
+            background-color: var(--text-hover);
+        }
+        
+        /* 具体图标的引用 - **已更新为正确的相对路径** */
+        .icon-lang { -webkit-mask-image: url('../Icon/PluginHub/Language.svg'); mask-image: url('../Icon/PluginHub/Language.svg'); }
+        .icon-chevron { width: 16px; height: 16px; -webkit-mask-image: url('../Icon/PluginHub/TriangleDown.svg'); mask-image: url('../Icon/PluginHub/TriangleDown.svg');}
+        .icon-sun { -webkit-mask-image: url('../Icon/PluginHub/ModeSun.svg'); mask-image: url('../Icon/PluginHub/ModeSun.svg'); }
+        .icon-moon { -webkit-mask-image: url('../Icon/PluginHub/ModeMoon.svg'); mask-image: url('../Icon/PluginHub/ModeMoon.svg'); }
+        .icon-telegram { -webkit-mask-image: url('../Icon/PluginHub/Telegram.svg'); mask-image: url('../Icon/PluginHub/Telegram.svg'); }
+        .icon-github { -webkit-mask-image: url('../Icon/PluginHub/GitHub.svg'); mask-image: url('../Icon/PluginHub/GitHub.svg'); }
+        
+        
+        /* 语言切换菜单 */
+        .lang-menu-container { position: relative; }
+        #lang-toggle { gap: 0.3rem; }
+
+        .lang-menu {
+            display: none;
+            position: absolute;
+            top: calc(100% + 5px);
+            right: 0;
             background: var(--card);
-            border: 1px solid #e1e4e8;
+            border: 1px solid var(--border-color);
             border-radius: var(--radius);
-            padding: .9rem;
-            margin-bottom: 1rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            min-width: 120px;
+            padding: 0.5rem;
+            z-index: 20;
         }
-
-        /* 搜索输入框样式 */
-        #search {
+        .lang-menu.active { display: block; }
+        .lang-menu a {
+            display: block;
             width: 100%;
-            padding: .6rem .8rem;
-            font-size: 1rem;
-            border: 1px solid #ddd;
-            border-radius: var(--radius);
-        }
-
-        /* 分类标签按钮的容器 */
-        .tabs {
-            display: flex;
-            gap: .5rem;
-            /* 标签之间的间距 */
-            flex-wrap: wrap;
-            /* 允许换行 */
-            margin-top: .6rem;
-        }
-
-        /* 分类标签按钮样式 */
-        .tabs button {
-            padding: .4rem .9rem;
-            border: 1px solid #ddd;
-            border-radius: var(--radius);
-            background: #fff;
-            font-size: .85rem;
-            cursor: pointer;
-            min-width: 96px;
-            /* 最小宽度 */
-            text-align: center;
-            transition: background-color 0.2s, border-color 0.2s;
-            /* 添加过渡动画 */
-        }
-
-        /* 激活状态的分类标签按钮样式 */
-        .tabs button.active {
-            background: var(--accent);
-            /* 应用主题色 */
-            color: #fff;
-            /* 文字白色 */
-            border-color: var(--accent);
-            /* 边框同色 */
-        }
-
-        /* 区域标题（如“全部 · 20个插件”）样式 */
-        .section-title {
-            font-size: 1rem;
-            font-weight: 600;
-            margin: 0 0 .6rem .1rem;
-        }
-
-        /* 插件卡片列表容器 */
-        .list {
-            display: grid;
-            /* Grid网格布局 */
-            gap: .7rem;
-            /* 网格间距 */
-            /* 关键：实现响应式网格布局，每列最小300px，自动填充 */
-            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-        }
-
-        /* 单个插件卡片样式 */
-        .card {
-            background: var(--card);
-            border: 1px solid #e1e4e8;
-            border-radius: var(--radius);
-            padding: .9rem;
-            text-decoration: none;
-            /* 移除链接下划线 */
-            color: inherit;
-            /* 继承父元素颜色 */
-            cursor: pointer;
-            /* 为阴影、背景色和缩放添加过渡动画，提升用户体验 */
-            transition: box-shadow .2s, background-color .15s ease, transform .15s ease;
-            display: flex;
-            flex-direction: column;
-            /* 主轴方向为垂直 */
-        }
-
-        /* 卡片鼠标悬停效果 */
-        .card:hover {
-            box-shadow: 0 4px 12px rgba(0, 0, 0, .08);
-            /* 添加阴影 */
-        }
-
-        /* 卡片鼠标点击效果 */
-        .card:active {
-            background-color: #e6f0ff;
-            /* 改变背景色 */
-            transform: scale(.98);
-            /* 轻微缩小 */
-        }
-
-        /* 卡片内部布局容器（图标+内容） */
-        .card-inner-layout {
-            display: flex;
-            align-items: flex-start;
-            /* 顶部对齐 */
-            gap: .7rem;
-            /* 图标和内容区的间距 */
-        }
-
-        /* 卡片图标样式 */
-        .card-icon {
-            width: 38px;
-            height: 38px;
+            height: auto;
+            padding: 0.5rem 0.8rem;
+            color: var(--text-primary);
             border-radius: 8px;
-            object-fit: cover;
-            /* 保持图片比例，裁剪多余部分 */
-            margin-top: 3px;
-            flex-shrink: 0;
-            /* 防止图标被压缩 */
+            font-size: 0.9rem;
+            text-align: left;
         }
-
-        /* 卡片右侧内容区域 */
-        .card-content {
-            flex: 1;
-            /* 占据剩余空间 */
-            min-width: 0;
-            /* 防止内容溢出时撑开容器 */
+        .lang-menu a:hover { background-color: rgba(128, 128, 128, 0.1); }
+        .lang-menu a.current-lang { font-weight: 600; color: var(--accent); }
+        
+        /* 外观模式开关样式 */
+        #theme-toggle {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            border-radius: 13px;
+            background-color: var(--switch-bg);
             display: flex;
-            flex-direction: column;
-        }
-
-        /* 卡片内容区的头部（标题+标签） */
-        .card-header {
-            display: flex;
+            align-items: center;
             justify-content: space-between;
-            /* 两端对齐 */
-            align-items: flex-start;
-            gap: .5rem;
+            padding: 0 4px;
+        }
+        #theme-toggle .icon-sun, #theme-toggle .icon-moon {
+            width: 18px;
+            height: 18px;
+            background-color: var(--text-primary);
+        }
+        #theme-toggle .thumb {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            background-color: var(--thumb-bg);
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+            transition: transform 0.25s ease-in-out;
+        }
+        body.dark-mode #theme-toggle .thumb {
+            transform: translateX(24px);
         }
 
-        /* 卡片标题 */
-        .card-title {
-            margin: 0;
-            font-size: 1.1rem;
-            color: var(--accent);
-            white-space: nowrap;
-            /* 不换行 */
-            overflow: hidden;
-            /* 溢出隐藏 */
-            text-overflow: ellipsis;
-            /* 溢出时显示省略号 */
-        }
-
-        /* 卡片更新时间 */
-        .card-update-time {
-            margin: .2rem 0 .4rem;
-            font-size: .75rem;
-            color: #888;
-        }
-
-        /* 卡片描述 */
-        .card-desc {
-            margin: 0;
-            font-size: .85rem;
-            color: #555;
-            flex-grow: 1;
-            /* 占据剩余垂直空间，确保描述区域能撑开卡片 */
-        }
-
-        /* 卡片右上角标签容器 */
-        .card-tags {
-            display: flex;
-            flex-wrap: wrap;
-            gap: .4rem;
-            justify-content: flex-end;
-            /* 靠右对齐 */
-            flex-shrink: 0;
-            /* 防止被压缩 */
-        }
-
-        /* 单个小标签样式 */
-        .tag-item {
-            padding: .2rem .5rem;
-            font-size: .7rem;
-            color: #333;
-            background: #f0f0f0;
-            border-radius: 8px;
-            white-space: nowrap;
-        }
-
-        /* 列表为空时的提示信息样式 */
-        .empty {
-            text-align: center;
-            color: #666;
-            padding: 2rem;
-            grid-column: 1 / -1;
-            /* 关键：让此元素横跨所有网格列 */
-        }
-
-        /* 页脚样式 */
-        footer {
-            text-align: center;
-            font-size: .8rem;
-            color: #666;
-            margin: 2rem 0;
-            line-height: 1.8;
-        }
-
-        /* 页脚链接样式 */
-        footer a {
-            color: var(--accent);
-            text-decoration: none;
-        }
+        /* --- Main Content and other styles remain the same --- */
+        .wrap { max-width: 1000px; margin: 0 auto; padding: 1rem; }
+        .announcement-banner { background-color: #fff9de; border: 1px solid #f5f5f7; border-radius: var(--radius); margin-bottom: 1rem; position: relative; min-height: 3.2rem; cursor: pointer; overflow: hidden; }
+        body.dark-mode .announcement-banner { background-color: #3a372d; border-color: #444; }
+        .banner-item { position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: flex; align-items: center; justify-content: flex-start; margin: 0; padding: .5rem 1rem; color: #1d1d1f; font-size: .9rem; font-weight: 500; line-height: 1.5; text-align: left; opacity: 0; transition: opacity 1s ease-in-out; visibility: hidden; white-space: nowrap; }
+        body.dark-mode .banner-item { color: #e2e2e2; }
+        .banner-item.active { opacity: 1; visibility: visible; }
+        .search-box { background: var(--card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: .9rem; margin-bottom: 1rem; transition: background-color 0.3s, border-color 0.3s; }
+        #search { width: 100%; padding: .6rem .8rem; font-size: 1rem; border: 1px solid #ddd; border-radius: var(--radius); background: var(--bg); color: var(--text-primary); }
+        body.dark-mode #search { border-color: #4a4a4a; }
+        .tabs { display: flex; gap: .5rem; flex-wrap: wrap; margin-top: .6rem; }
+        .tabs button { padding: .4rem .9rem; border: 1px solid #ddd; border-radius: var(--radius); background: var(--card); color: var(--text-primary); font-size: .85rem; cursor: pointer; min-width: 96px; text-align: center; transition: background-color 0.2s, border-color 0.2s, color 0.2s; }
+        body.dark-mode .tabs button { border-color: #4a4a4a; }
+        .tabs button.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+        .section-title { font-size: 1rem; font-weight: 600; margin: 1.5rem 0 .6rem .1rem; color: var(--text-primary); }
+        .list { display: grid; gap: .7rem; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+        .card { background: var(--card); border: 1px solid var(--border-color); border-radius: var(--radius); padding: .9rem; text-decoration: none; color: inherit; cursor: pointer; transition: box-shadow .2s, background-color .15s ease, transform .15s ease, border-color .3s; display: flex; flex-direction: column; }
+        .card:hover { box-shadow: 0 4px 12px rgba(0, 0, 0, .08); }
+        body.dark-mode .card:hover { box-shadow: 0 4px 16px rgba(0, 0, 0, .2); border-color: #555; }
+        .card:active { background-color: #e6f0ff; transform: scale(.98); }
+        body.dark-mode .card:active { background-color: #333d4d; }
+        .card-inner-layout { display: flex; align-items: flex-start; gap: .7rem; }
+        .card-icon { width: 38px; height: 38px; border-radius: 8px; object-fit: cover; margin-top: 3px; flex-shrink: 0; background: #fff; }
+        .card-content { flex: 1; min-width: 0; display: flex; flex-direction: column; }
+        .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: .5rem; }
+        .card-title { margin: 0; font-size: 1.1rem; color: var(--accent); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+        .card-update-time { margin: .2rem 0 .4rem; font-size: .75rem; color: #888; }
+        body.dark-mode .card-update-time { color: #777; }
+        .card-desc { margin: 0; font-size: .85rem; color: var(--card-desc); flex-grow: 1; }
+        .card-tags { display: flex; flex-wrap: wrap; gap: .4rem; justify-content: flex-end; flex-shrink: 0; }
+        .tag-item { padding: .2rem .5rem; font-size: .7rem; color: #333; background: #f0f0f0; border-radius: 8px; white-space: nowrap; }
+        body.dark-mode .tag-item { background: #444; color: #ddd; }
+        .empty { text-align: center; color: var(--text-secondary); padding: 2rem; grid-column: 1 / -1; }
+        footer { text-align: center; font-size: .8rem; color: var(--text-secondary); margin: 2rem 0; line-height: 1.8; }
+        footer a { color: var(--accent); text-decoration: none; }
     </style>
 </head>
 
 <body>
-
     <header>
         <h1>Loon 插件仓库</h1>
         <p>从 GitHub 仓库获取最新的 Loon 插件，点击插件卡片即可快速跳转安装</p>
+        
+        <div class="header-controls">
+            <div class="control-group">
+                <div class="lang-menu-container">
+                    <button id="lang-toggle" title="切换语言">
+                        <span class="icon icon-lang"></span>
+                        <span class="icon icon-chevron"></span>
+                    </button>
+                    <div id="lang-menu" class="lang-menu">
+                        <a href="#" class="current-lang">简体中文</a>
+                        <a href="#">English</a>
+                    </div>
+                </div>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div class="control-group">
+                 <button id="theme-toggle" title="切换外观模式" role="switch" type="button">
+                    <span class="icon icon-sun"></span>
+                    <span class="icon icon-moon"></span>
+                    <span class="thumb"></span>
+                </button>
+            </div>
+
+            <span class="separator">|</span>
+
+            <div class="control-group">
+                <a href="https://t.me/BoEchoBot" target="_blank" aria-label="Telegram" title="Telegram">
+                    <span class="icon icon-telegram"></span>
+                </a>
+                <a href="https://github.com/sooyaaabo/Loon" target="_blank" aria-label="GitHub" title="GitHub">
+                    <span class="icon icon-github"></span>
+                </a>
+            </div>
+        </div>
     </header>
 
     <div class="wrap">
@@ -393,253 +323,205 @@
     </footer>
 
     <script>
-        // 使用一个立即执行的异步函数表达式 (IIFE) 来封装代码，避免污染全局作用域
+        // 使用一个立即执行的异步函数表达式 (IIFE) 来封装代码，避免污染全局作用域 
         (async () => {
-            // --- 1. 定义常量和获取DOM元素 ---
-            const GITHUB_REPO = 'sooyaaabo/Loon'; // GitHub仓库地址
-            const PLUGIN_DIR_PATH = 'Plugin'; // 插件存放的目录
+            // --- 新增：导航栏功能 ---
+            const themeToggle = document.getElementById('theme-toggle');
+            const langToggle = document.getElementById('lang-toggle');
+            const langMenu = document.getElementById('lang-menu');
+            const body = document.body;
 
-            // 获取页面上需要操作的元素
+            // 主题切换逻辑
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    body.classList.add('dark-mode');
+                } else {
+                    body.classList.remove('dark-mode');
+                }
+            };
+            
+            // 页面加载时应用主题：1. 从 localStorage 获取 2. 根据系统偏好设置 3. 默认亮色
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+            applyTheme(currentTheme);
+
+            themeToggle.addEventListener('click', () => {
+                const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme);
+            });
+
+            // 语言菜单切换逻辑
+            langToggle.addEventListener('click', (e) => {
+                e.stopPropagation(); // 防止点击事件冒泡到 document
+                langMenu.classList.toggle('active');
+            });
+            
+            // 点击页面其他地方关闭语言菜单
+            document.addEventListener('click', () => {
+                if (langMenu.classList.contains('active')) {
+                    langMenu.classList.remove('active');
+                }
+            });
+
+
+            // --- 1. 定义常量和获取DOM元素 --- 
+            const GITHUB_REPO = 'sooyaaabo/Loon'; // GitHub仓库地址 
+            const PLUGIN_DIR_PATH = 'Plugin'; // 插件存放的目录 
+
+            // 获取页面上需要操作的元素 
             const listEl = document.getElementById('list');
             const searchEl = document.getElementById('search');
             const tabsEl = document.querySelector('.tabs');
             const sectionTitleEl = document.getElementById('sectionTitle');
             const updateTimeEl = document.getElementById('updateTime');
 
-            // 动态设置页脚的年份
+            // 动态设置页脚的年份 
             document.getElementById('copyright-year').textContent = new Date().getFullYear();
 
-            // 用于存储所有插件信息的数组
+            // 用于存储所有插件信息的数组 
             let plugins = [];
 
-            // --- 2. 从GitHub API获取并解析插件数据 ---
+            // --- 2. 从GitHub API获取并解析插件数据 --- 
             try {
-                // 第一步：获取插件目录下的所有文件信息
                 const allFilesResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${PLUGIN_DIR_PATH}`);
                 const allFiles = await allFilesResponse.json();
-
-                // 如果返回的不是一个数组，说明API请求出错了
                 if (!Array.isArray(allFiles)) {
                     throw new Error('无法获取插件列表，请检查仓库路径或网络。');
                 }
-
-                // 第二步：从所有文件中筛选出以 .plugin 结尾的文件
                 const pluginFiles = allFiles.filter(file => file.name.toLowerCase().endsWith('.plugin'));
-
                 if (pluginFiles.length === 0) {
                     throw new Error(`在仓库中没有找到任何 .plugin 文件。`);
                 }
-
-                // 第三步：并发获取所有 .plugin 文件的文本内容
-                // Promise.all 会等待所有 fetch 请求都完成后再继续执行
                 const pluginContents = await Promise.all(
                     pluginFiles.map(file => fetch(file.download_url).then(res => res.text()))
                 );
-
-                // 第四步：解析每个文件的文本内容，提取插件元数据
                 plugins = pluginContents.map((text, i) => {
-                    const file = pluginFiles[i]; // 当前文本对应的文件信息
-
-                    // 使用正则表达式从文本中匹配 #!name=... 等元数据
-                    const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1] ?.trim() || file.name;
-                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1] ?.trim() || '暂无描述';
-                    const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1] ?.trim() || '';
-                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1] ?.trim() || '未知';
-                    const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1] ?.trim();
-                    const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : []; // 将标签字符串分割成数组
-
-                    // 返回一个结构化的插件对象
-                    return {
-                        url: file.download_url, // 插件安装地址
-                        name,
-                        desc,
-                        icon,
-                        date,
-                        tags
-                    };
+                    const file = pluginFiles[i];
+                    const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1]?.trim() || file.name;
+                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1]?.trim() || '暂无描述';
+                    const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1]?.trim() || '';
+                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1]?.trim() || '未知';
+                    const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1]?.trim();
+                    const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : [];
+                    return { url: file.download_url, name, desc, icon, date, tags };
                 });
-
             } catch (error) {
-                // 如果上述步骤中任何一步出错，就在页面上显示错误信息
                 listEl.innerHTML = `<div class="empty">加载插件失败：${error.message}</div>`;
                 sectionTitleEl.textContent = '加载失败';
-                return; // 终止后续代码执行
+                return;
             }
 
-            // --- 3. 获取仓库最后更新时间 ---
+            // --- 3. 获取仓库最后更新时间 --- 
             try {
                 const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${PLUGIN_DIR_PATH}`);
                 const commits = await commitsResponse.json();
-                // 获取最近一次提交的日期
-                const latestCommitDate = commits[0] ?.commit ?.author ?.date || commits[0] ?.commit ?.committer ?.date;
+                const latestCommitDate = commits[0]?.commit?.author?.date || commits[0]?.commit?.committer?.date;
                 if (latestCommitDate) {
                     const d = new Date(latestCommitDate);
-                    // 将日期格式化为本地化的字符串
-                    updateTimeEl.textContent = d.toLocaleString('zh-CN', {
-                        year: 'numeric',
-                        month: '2-digit',
-                        day: '2-digit',
-                        hour: '2-digit',
-                        minute: '2-digit'
-                    });
+                    updateTimeEl.textContent = d.toLocaleString('zh-CN', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' });
                 }
             } catch {
-                updateTimeEl.textContent = '获取失败'; // 如果获取失败，显示提示
+                updateTimeEl.textContent = '获取失败';
             }
 
-            // --- 4. 渲染插件列表的函数 ---
+            // --- 4. 渲染插件列表的函数 --- 
             function render(filterCat = 'all', kw = '') {
-                const lowerKw = kw.toLowerCase(); // 将搜索关键词转为小写以方便匹配
-
-                // 过滤插件数组
+                const lowerKw = kw.toLowerCase();
                 const filtered = plugins.filter(p => {
-                    // 条件1: 分类匹配 (如果分类是 'all' 或者插件标签包含当前分类)
                     const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
-                    // 条件2: 关键词匹配 (如果关键词为空，或者插件名/标签包含关键词)
                     const hitKw = !lowerKw || p.name.toLowerCase().includes(lowerKw) || p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
-                    return hitCat && hitKw; // 必须同时满足两个条件
+                    return hitCat && hitKw;
                 });
-
-                // 更新列表标题
                 sectionTitleEl.textContent = `${(filterCat === 'all' ? '全部' : filterCat)} · ${filtered.length} 个插件`;
-                listEl.innerHTML = ''; // 清空现有列表
-
+                listEl.innerHTML = '';
                 if (!filtered.length) {
                     listEl.innerHTML = '<div class="empty">暂无匹配的插件</div>';
                     return;
                 }
-
-                // 遍历过滤后的插件，为每个插件创建DOM元素并添加到列表中
                 filtered.forEach(p => {
-                    const card = document.createElement('a'); // 创建一个<a>标签作为卡片
+                    const card = document.createElement('a');
                     card.className = 'card';
-                    // 关键：设置HREF为Loon的导入协议，实现点击安装
                     card.href = `https://www.nsloon.com/openloon/import?plugin=${p.url}`;
                     const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join(' ');
-
-                    // 使用模板字符串生成卡片的内部HTML结构
-                    card.innerHTML = `
-                        <div class="card-inner-layout">
-                            ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon">` : ''}
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <h3 class="card-title">${p.name}</h3>
-                                    <div class="card-tags">${tagsHtml}</div>
-                                </div>
-                                <p class="card-update-time">更新时间：${p.date}</p>
-                                <p class="card-desc">${p.desc}</p>
-                            </div>
+                    card.innerHTML = ` 
+                        <div class="card-inner-layout"> 
+                            ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon" loading="lazy">` : ''} 
+                            <div class="card-content"> 
+                                <div class="card-header"> 
+                                    <h3 class="card-title">${p.name}</h3> 
+                                    <div class="card-tags">${tagsHtml}</div> 
+                                </div> 
+                                <p class="card-update-time">更新时间：${p.date}</p> 
+                                <p class="card-desc">${p.desc}</p> 
+                            </div> 
                         </div>`;
-                    listEl.appendChild(card); // 将创建的卡片添加到列表中
+                    listEl.appendChild(card);
                 });
             }
 
-            // --- 5. 绑定事件监听器 ---
-
-            // 监听分类标签的点击事件
+            // --- 5. 绑定事件监听器 --- 
             tabsEl.addEventListener('click', e => {
-                if (e.target.matches('.tab')) { // 事件委托，只处理 .tab 按钮的点击
-                    tabsEl.querySelector('.active').classList.remove('active'); // 移除旧的激活状态
-                    e.target.classList.add('active'); // 给当前点击的按钮添加激活状态
-                    // 使用当前按钮的分类 (data-cat) 和搜索框的值重新渲染列表
+                if (e.target.matches('.tab')) {
+                    tabsEl.querySelector('.active').classList.remove('active');
+                    e.target.classList.add('active');
                     render(e.target.dataset.cat, searchEl.value);
                 }
             });
-
-            // 监听搜索框的输入事件
             searchEl.addEventListener('input', () => {
-                // 使用当前激活的分类和搜索框的最新值重新渲染列表
                 render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value);
             });
 
-            // --- 6. 公告栏动画逻辑 ---
+            // --- 6. 公告栏动画逻辑 --- 
             const bannerEl = document.getElementById('announcementBanner');
             if (bannerEl) {
                 const bannerItems = bannerEl.querySelectorAll('.banner-item');
                 const totalBanners = bannerItems.length;
                 let currentBannerIndex = 0;
-
-                // 将滚动和等待的逻辑提取到一个独立的异步函数中
                 const handleBannerAnimation = async (item) => {
-                    // 等待一小段时间，确保元素渲染完成，clientWidth计算准确
                     await new Promise(resolve => setTimeout(resolve, 50));
-
-                    // 重置可能存在的旧动画状态，为新动画做准备
                     item.style.transition = 'none';
                     item.style.transform = 'translateX(0)';
-                    
                     const containerWidth = item.clientWidth;
                     const textWidth = item.scrollWidth;
-
                     if (textWidth > containerWidth) {
-                        // 如果文本超长，先停留1秒让用户阅读开头
                         await new Promise(resolve => setTimeout(resolve, 1000));
-
-                        // 计算需要滚动的距离和时间
                         const scrollOffset = textWidth - containerWidth;
-                        const scrollSpeed = 60; // 滚动速度 (像素/秒)
+                        const scrollSpeed = 60;
                         const scrollDuration = scrollOffset / scrollSpeed;
-
-                        // 设置并执行滚动动画
                         item.style.transition = `transform ${scrollDuration}s linear`;
                         item.style.transform = `translateX(-${scrollOffset}px)`;
-
-                        // 等待滚动动画结束
                         await new Promise(resolve => {
-                            const onTransitionEnd = () => {
-                                item.removeEventListener('transitionend', onTransitionEnd);
-                                resolve();
-                            };
+                            const onTransitionEnd = () => { item.removeEventListener('transitionend', onTransitionEnd); resolve(); };
                             item.addEventListener('transitionend', onTransitionEnd);
                         });
-
-                        // 滚动结束后再停留1秒
                         await new Promise(resolve => setTimeout(resolve, 1000));
                     } else {
-                        // 如果文本没有超长，则直接停留4秒
                         await new Promise(resolve => setTimeout(resolve, 4000));
                     }
                 };
-
-                // 主控制函数
                 const startBannerLoop = async () => {
-                    // 1. 激活并处理第一个横幅
-                    bannerItems[0].classList.add('active');
+                    if (totalBanners > 0) bannerItems[0].classList.add('active');
                     await handleBannerAnimation(bannerItems[0]);
-
-                    // 2. 如果有多个横幅，则开始无限循环
                     if (totalBanners > 1) {
                         while (true) {
                             const currentItem = bannerItems[currentBannerIndex];
                             const nextIndex = (currentBannerIndex + 1) % totalBanners;
                             const nextItem = bannerItems[nextIndex];
-
-                            // 淡出当前项，淡入下一项
                             currentItem.classList.remove('active');
                             nextItem.classList.add('active');
                             currentBannerIndex = nextIndex;
-
-                            // 等待淡入动画完成 (CSS中定义了1s, 这里给0.6s的等待时间)
                             await new Promise(resolve => setTimeout(resolve, 600));
-
-                            // 为新显示的横幅执行滚动或等待
                             await handleBannerAnimation(nextItem);
                         }
                     }
                 };
-
-                if (totalBanners > 0) {
-                    startBannerLoop();
-                }
+                if (totalBanners > 0) { startBannerLoop(); }
             }
-
-            // --- 7. 初始渲染 ---
-            // 在所有数据加载和函数定义完成后，调用一次 render() 来显示初始的全部插件列表
+            // --- 7. 初始渲染 --- 
             render();
-
-        })(); // 立即执行这个异步函数
+        })();
     </script>
-
 </body>
-
 </html>
