@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-07-25 08:30
+#!date = 2025-07-25 19:00
 
-# 2025-07-18 23:42:24
+# 2025-07-25 16:19:39
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
 # 2025-07-25
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.plugin
@@ -80,8 +80,10 @@ DOMAIN-SUFFIX, chat.bilibili.com, REJECT
 ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.app\.view\.v1\.View\/TFInfo$ mock-response-body data-type=base64 data="AAAAAAIIAQ==" mock-data-is-base64=true
 
 [Script]
+# 空降助手
 http-request ^https:\/\/(grpc\.biliapi\.net|app\.bilibili\.com)\/bilibili\.community\.service\.dm\.v1\.DM\/DmSegMobile$ script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/bilibili.protobuf.request.js, requires-body = true, binary-body-mode = true, tag = [哔哩哔哩]空降助手, enable={airborne}, argument=[{logLevel}]
 
+# 移除直播间半屏网页广告
 http-response ^https:\/\/live\.bilibili\.com\/blackboard/era/.+\.html\?is_live_half_webview=1 script-path = https://raw.githubusercontent.com/kokoryh/Sparkle/master/dist/webpage.bilibili.js, requires-body = true, tag = [哔哩哔哩]移除直播间半屏网页广告
 
 # ProtoBuf处理
