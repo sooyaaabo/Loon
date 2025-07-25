@@ -33,14 +33,15 @@ jobs:
         
         # 定义数据库
         declare -A geodatas=(
-            [Country-Masaiki]="https://geodata.kelee.one/Country-Masaiki.mmdb"
-            [GeoLite2-ASN-P3TERX]="https://geodata.kelee.one/GeoLite2-ASN-P3TERX.mmdb"
+            [Country-Masaiki]="https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb"
+            [GeoLite2-ASN-P3TERX]="https://github.com/P3TERX/GeoLite.mmdb/releases/latest/download/GeoLite2-ASN.mmdb"
         )
         
         # 下载数据库
         for geodata_name in "${!geodatas[@]}"; do
             url="${geodatas[$geodata_name]}"
-            curl -A "Surge iOS/3450" -L -o "Loon/GeoData/${geodata_name}.mmdb" "$url"
+            # curl -A "Surge iOS/3450" -L -o "Loon/GeoData/${geodata_name}.mmdb" "$url"
+            curl -L -o "Loon/GeoData/${geodata_name}.mmdb" "$url"
         done
 
 
