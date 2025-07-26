@@ -17,6 +17,10 @@ DOMAIN-SUFFIX, gepush.com
 DOMAIN-SUFFIX, igexin.com
 DOMAIN-SUFFIX, log.aliyuncs.com
 DOMAIN-SUFFIX, zlsdk.1rtb.net
+DOMAIN-SUFFIX, ott.cibntv.net
+DOMAIN-SUFFIX, cdntips.net
+DOMAIN-SUFFIX, tfogc.com
+DOMAIN-SUFFIX, file.myqcloud.com
 # 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD, volc
 DOMAIN-KEYWORD, umeng
@@ -989,6 +993,10 @@ DOMAIN-SUFFIX, bsiet.husky.sogou.com
 # 屏蔽京东和搜狗收集信息 @jFrecht
 DOMAIN-SUFFIX, jdqd.jd.com
 DOMAIN-SUFFIX, shouji.sougou.com
+
+# 搜狗输入法
+# DOMAIN-SUFFIX, business-cdn.shouji.sogou.com
+DOMAIN-SUFFIX, push-service-ios.sginput.qq.com
 
 # 深圳通微信小程序
 DOMAIN-SUFFIX, wxsnsdythumb.wxs.qq.com
