@@ -8,12 +8,14 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Goofish.png
-#!date = 2025-07-26 18:00
+#!date = 2025-07-26 23:00
 
 # 2025-07-26 02:03:33
 # https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
 
 [Rule]
+DOMAIN-SUFFIX, iyes.youku.com, REJECT
+
 # 拦截广告下发
 AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2%E9%B1%BC*")), REJECT
 
