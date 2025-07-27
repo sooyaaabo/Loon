@@ -444,10 +444,10 @@ DOMAIN, et.ykccn.com, REJECT
 ^https?:\/\/cdb\.meituan\.com\/marketing\/source\/getPageSlotList reject-dict
 
 # 小桔充电 //energy.xiaojukeji.com
-^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo url reject-dict
-^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail url reject-dict
-^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display url reject-dict
-^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center url reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/activityInfo reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/mission\/api\/page\/getPageDetail reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/energy\/hummer\/api\/resource\/display reject-dict
+^https:\/\/energy\.xiaojukeji\.com\/am\/marketing\/api\/member\/facade\/charge\/personal\/center reject-dict
 
 [Script]
 # --------------- 微信外部链接解锁 --------------- #
