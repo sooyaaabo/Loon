@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-07-16 02:07:37
+# UPDATED: 2025-07-28 02:07:37
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31562
+# DOMAIN-SUFFIX: 31564
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31870
+# TOTAL: 31872
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -30873,6 +30873,7 @@ DOMAIN-SUFFIX,yandexcom.net
 DOMAIN-SUFFIX,yandexwebcache.org
 DOMAIN-SUFFIX,yanghengjun.com
 DOMAIN-SUFFIX,yangjianli.com
+DOMAIN-SUFFIX,yangzhi.org
 DOMAIN-SUFFIX,yaohubaba.com
 DOMAIN-SUFFIX,yaoimangaonline.com
 DOMAIN-SUFFIX,yaoiotaku.com
@@ -31375,6 +31376,7 @@ DOMAIN-SUFFIX,zazzybabes.com
 DOMAIN-SUFFIX,zb.app
 DOMAIN-SUFFIX,zb.com
 DOMAIN-SUFFIX,zb.io
+DOMAIN-SUFFIX,zb.live
 DOMAIN-SUFFIX,zbporn.com
 DOMAIN-SUFFIX,zctb.buzz
 DOMAIN-SUFFIX,zdassets.com
