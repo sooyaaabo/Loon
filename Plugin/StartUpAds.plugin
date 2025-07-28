@@ -8,15 +8,15 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-07-26 23:00
+#!date = 2025-07-28 15:00
 
-# 2025-07-24
+# 2025-07-28
 # https://gist.githubusercontent.com/ddgksf2013/12ef6aad209155e7eb62c5b00c11b9dd/raw/StartUpAds.conf
 
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.07.26/c388/v2.0.608 reject-200
+^https?:\/\/2025.07.28/c388/v2.0.609 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
