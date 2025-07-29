@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png
-#!date = 2025-07-21 20:00
+#!date = 2025-07-29 11:00
 
 # 2025-07-26 22:00:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/QuantumultX/rewrite/chongxie.txt
@@ -2014,6 +2014,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/agent_ad reject
 # ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/newcomer_ad reject-dict
 ^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/activity\/show reject
+^https?:\/\/xxyx-client-api\.xiaoxiaoyouxuan\.com\/client\/urban\/activity\/index\/data\?agentId=12 reject
 ^https?:\/\/statistic\.live\.126\.net\/statics\/report\/common\/form reject
 
 # 厦门航空 - mobileapi.xiamenair.com
