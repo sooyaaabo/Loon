@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-07-28 02:07:37
+# UPDATED: 2025-07-30 02:07:55
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31564
+# DOMAIN-SUFFIX: 31565
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31872
+# TOTAL: 31873
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -16981,6 +16981,7 @@ DOMAIN-SUFFIX,lucid.ac.uk
 DOMAIN-SUFFIX,luckydesigner.space
 DOMAIN-SUFFIX,luckyissue.com
 DOMAIN-SUFFIX,luckysrv.de
+DOMAIN-SUFFIX,ludepress.com
 DOMAIN-SUFFIX,ludlow-college.ac.uk
 DOMAIN-SUFFIX,lufton-college-fe.ac.uk
 DOMAIN-SUFFIX,luftoncollege.ac.uk
