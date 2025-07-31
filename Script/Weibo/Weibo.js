@@ -1,7 +1,7 @@
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
-// 2025-07-14 21:35
+// 2025-07-29 13:40
 
 const url = $request.url;
 if (!$response) $done({});
@@ -154,7 +154,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
             if ([6, 15, 41]?.includes(item?.type)) {
               continue;
             }
-            if (["荐读", "评论总结", "推荐", "相关内容", "相关评论"]?.includes(item?.adType)) {
+            if (["广告", "荐读", "评论总结", "推荐", "相关内容", "相关评论"]?.includes(item?.adType)) {
               continue;
             }
             newItems.push(item);
@@ -1041,92 +1041,132 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.items?.length > 0) {
       let newItems = [];
       for (let item of obj.items) {
-        if (item.hasOwnProperty("data")) {
-          if (!isAd(item?.data)) {
-            if (item?.category === "feed") {
-              if (item?.data?.action_button_icon_dic) {
-                delete item.data.action_button_icon_dic;
-              }
-              removeFeedAd(item?.data); // 信息流推广
-              removeVoteInfo(item?.data); // 投票窗口
-              if (item.data?.title?.structs) {
-                // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
-                continue;
-              }
-              // 快转内容
-              if (item?.data?.screen_name_suffix_new?.length > 0) {
-                if (item?.data?.screen_name_suffix_new?.[3]?.content === "快转了") {
-                  continue;
-                }
-              }
-              // 美妆精选季
-              if (item?.data?.title?.text?.includes("精选")) {
-                continue;
-              }
-              // 未关注博主
-              if (item?.data?.user?.following === false) {
-                continue;
-              }
-              // 关闭关注推荐
-              if (item?.data?.user?.unfollowing_recom_switch === 1) {
-                item.data.user.unfollowing_recom_switch = 0;
-              }
-              // 博主top100
-              if (item?.data?.tag_struct?.length > 0) {
-                item.data.tag_struct = [];
-              }
-              newItems.push(item);
-            } else if (item?.category === "feedBiz") {
-              newItems.push(item); // 管理特别关注按钮
-            } else {
-              // 移除其他推广
+        if (!isAd(item?.data) && !isAd(item?.status)) {
+          if (item?.category === "dynamic") {
+            if (item?.status?.action_button_icon_dic) {
+              delete item.status.action_button_icon_dic;
+            }
+            removeFeedAd(item?.status); // 信息流推广
+            removeVoteInfo(item?.status); // 投票窗口
+            if (item.status?.title?.structs) {
+              // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
               continue;
             }
-          }
-        } else if (item.hasOwnProperty("status")) {
-          if (!isAd(item?.status)) {
-            if (item?.category === "dynamic") {
-              if (item?.status?.action_button_icon_dic) {
-                delete item.status.action_button_icon_dic;
-              }
-              removeFeedAd(item?.status); // 信息流推广
-              removeVoteInfo(item?.status); // 投票窗口
-              if (item.status?.title?.structs) {
-                // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
+            // 快转内容
+            if (item?.status?.screen_name_suffix_new?.length > 0) {
+              if (item?.status?.screen_name_suffix_new?.[3]?.content === "快转了") {
                 continue;
               }
-              // 快转内容
-              if (item?.status?.screen_name_suffix_new?.length > 0) {
-                if (item?.status?.screen_name_suffix_new?.[3]?.content === "快转了") {
-                  continue;
-                }
-              }
-              // 美妆精选季
-              if (item?.status?.title?.text?.includes("精选")) {
-                continue;
-              }
-              // 未关注博主
-              if (item?.status?.user?.following === false) {
-                continue;
-              }
-              // 关闭关注推荐
-              if (item?.status?.user?.unfollowing_recom_switch === 1) {
-                item.status.user.unfollowing_recom_switch = 0;
-              }
-              // 博主top100
-              if (item?.status?.tag_struct?.length > 0) {
-                item.status.tag_struct = [];
-              }
-              newItems.push(item);
-            } else if (item?.category === "feedBiz") {
-              newItems.push(item); // 管理特别关注按钮
-            } else {
-              // 移除其他推广
+            }
+            // 美妆精选季
+            if (item?.status?.title?.text?.includes("精选")) {
               continue;
             }
+            // 未关注博主
+            if (item?.status?.user?.following === false) {
+              continue;
+            }
+            // 关闭关注推荐
+            if (item?.status?.user?.unfollowing_recom_switch === 1) {
+              item.status.user.unfollowing_recom_switch = 0;
+            }
+            // 博主top100
+            if (item?.status?.tag_struct?.length > 0) {
+              item.status.tag_struct = [];
+            }
+            newItems.push(item);
+          } else if (item?.category === "feed") {
+            if (item?.data?.action_button_icon_dic) {
+              delete item.data.action_button_icon_dic;
+            }
+            removeFeedAd(item?.data); // 信息流推广
+            removeVoteInfo(item?.data); // 投票窗口
+            if (item.data?.title?.structs) {
+              // 移除 未关注人消息 (你关注的博主，他自己关注的别的博主的微博消息)
+              continue;
+            }
+            // 快转内容
+            if (item?.data?.screen_name_suffix_new?.length > 0) {
+              if (item?.data?.screen_name_suffix_new?.[3]?.content === "快转了") {
+                continue;
+              }
+            }
+            // 美妆精选季
+            if (item?.data?.title?.text?.includes("精选")) {
+              continue;
+            }
+            // 未关注博主
+            if (item?.data?.user?.following === false) {
+              continue;
+            }
+            // 关闭关注推荐
+            if (item?.data?.user?.unfollowing_recom_switch === 1) {
+              item.data.user.unfollowing_recom_switch = 0;
+            }
+            // 博主top100
+            if (item?.data?.tag_struct?.length > 0) {
+              item.data.tag_struct = [];
+            }
+            newItems.push(item);
+          } else if (item?.category === "feedBiz") {
+            newItems.push(item); // 管理特别关注按钮
+          } else {
+            // 移除其他推广
+            continue;
           }
+        }
+      }
+      obj.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/container_detail?")) {
+    // 新版 微博详情页
+    if (obj?.pageHeader?.data?.items?.length > 0) {
+      let newItems = [];
+      for (let item of obj.pageHeader.data.items) {
+        if (item?.data?.card_type === 236 && item?.category === "wboxcard") {
+          // 底部横版广告
+          continue;
         } else {
           newItems.push(item);
+        }
+      }
+      obj.pageHeader.data.items = newItems;
+    }
+  } else if (url.includes("/2/statuses/container_detail_comment")) {
+    // 新版 微博评论区
+    if (obj?.items?.length > 0) {
+      let newItems = [];
+      for (let item of obj.items) {
+        if (item?.data) {
+          if (!isAd(item?.data)) {
+            if (item?.data?.comment_bubble) {
+              delete item.data.comment_bubble; // 评论气泡
+            }
+            if (item?.data?.comment_bullet_screens_message) {
+              delete item.data.comment_bullet_screens_message; // 评论弹幕
+            }
+            if (item?.data?.hot_icon) {
+              delete item.data.hot_icon; // 热评小图标 弹幕 首评
+            }
+            if (item?.data?.vip_button) {
+              delete item.data.vip_button; // 会员气泡按钮
+            }
+            // 微博伪装评论
+            if (item?.data?.user) {
+              removeAvatar(item?.data); // 头像挂件,关注按钮
+              if (/(超话社区|微博)/.test(item?.data?.user?.name)) {
+                continue;
+              }
+            }
+            // 6为你推荐更多精彩内容 15过滤提示 41评论区氛围调查
+            if ([6, 15, 41]?.includes(item?.type)) {
+              continue;
+            }
+            if (["广告", "荐读", "评论总结", "推荐", "相关内容", "相关评论"]?.includes(item?.adType)) {
+              continue;
+            }
+            newItems.push(item);
+          }
         }
       }
       obj.items = newItems;

@@ -8,11 +8,11 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-07-27 19:00
+#!date = 2025-07-31 09:00
 
-# 2025-07-25 22:30:48
+# 2025-07-30 23:00:52
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
-# 2025-07-25
+# 2025-07-30
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.plugin
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/surge/module/bilibili.sgmodule
 
@@ -33,6 +33,9 @@ DOMAIN-SUFFIX, chat.bilibili.com, REJECT
 
 [Rewrite]
 ^https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\? response-body-json-jq '.data[][]?="chat.bilibili.com:3478"'
+
+# 移除页面中的 VIP 横幅
+^https:\/\/api\.bilibili\.com\/pgc\/page\/channel\? response-body-json-jq 'if .data.modules then .data.modules |= map(select(.type != "TIP")) end'
 
 # 移除直播广告
 ^https:\/\/api\.live\.bilibili\.com\/xlive\/e-commerce-interface\/v1\/ecommerce-user\/get_shopping_info\? reject-dict
