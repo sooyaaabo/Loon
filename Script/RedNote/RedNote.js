@@ -1,7 +1,7 @@
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
-// 2025-06-09 21:55
+// 2025-07-31 19:10
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -77,7 +77,7 @@ if (url.includes("/v1/interaction/comment/video/download")) {
       obj.data.datas.forEach((itemA) => {
         livePhoto.forEach((itemB) => {
           if (itemB?.file_id === itemA?.file_id && itemA?.url) {
-            itemA.url = itemA.url.replace(/^https?:\/\/.*\.mp4$/g, itemB.url);
+            itemA.url = itemA.url.replace(/^https?:\/\/.*\.mp4/g, itemB.url);
           }
         });
       });
