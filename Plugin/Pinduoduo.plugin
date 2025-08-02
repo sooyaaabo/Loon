@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
-#!date = 2025-07-19 10:00
+#!date = 2025-08-02 11:30
 
-# 2024-10-18 13:13
+# 2025-08-02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
 # 2024-08-10
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
@@ -46,6 +46,8 @@ IP-CIDR, 183.194.214.14/32, REJECT
 IP-CIDR, 114.110.96.1/32, REJECT
 
 [Rewrite]
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element reject-dict
 ^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
