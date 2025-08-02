@@ -8,15 +8,15 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png
-#!date = 2025-07-29 11:00
+#!date = 2025-08-02 19:00
 
-# 2025-07-29
+# 2025-08-02
 # https://gist.githubusercontent.com/ddgksf2013/12ef6aad209155e7eb62c5b00c11b9dd/raw/StartUpAds.conf
 
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.07.28/c388/v2.0.609 reject-200
+^https?:\/\/2025.08.02/c389/v2.0.610 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200
@@ -853,6 +853,10 @@
 
 # TangHuShi
 ^https?:\/\/api\.dnurse\.com\/api\/boot\/get-latest-items reject-200
+
+# TianMaoJingLing
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba\.aicloud\.splash reject-200
+^https?:\/\/acs\.m\.taobao\.com\/gw\/mtop\.alibaba.*mytab response-body-json-jq '.data.model.children |= map(select(.name | contains("营销") | not))'
 
 # ======= W ======= #
 # WeiPinHui
