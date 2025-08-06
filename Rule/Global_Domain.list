@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-07-30 02:07:55
+# UPDATED: 2025-08-06 02:08:04
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31565
+# DOMAIN-SUFFIX: 31567
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31873
+# TOTAL: 31875
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -30088,6 +30088,8 @@ DOMAIN-SUFFIX,wwwpornhub.pro
 DOMAIN-SUFFIX,wwwwebay.com
 DOMAIN-SUFFIX,wwwxoom.com
 DOMAIN-SUFFIX,wxoyt.com
+DOMAIN-SUFFIX,wxw.cat
+DOMAIN-SUFFIX,wxw.moe
 DOMAIN-SUFFIX,wyams.ac.uk
 DOMAIN-SUFFIX,wyke.ac.uk
 DOMAIN-SUFFIX,wylln.ac.uk
