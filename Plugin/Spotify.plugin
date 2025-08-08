@@ -8,31 +8,26 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Spotify.png
-#!date = 2025-07-04 22:00
+#!date = 2025-08-08 08:00
 
-# 2025-06-11
+# 2025-08-07
 # https://github.com/001ProMax/Surge/blob/main/Loon/Spotify.plugin
-# 2025-07-04 16:36:19
+# 2025-08-08 02:13:43
 # https://kelee.one/Tool/Loon/Lpx/Spotify_remove_ads.lpx
 
 [Argument]
 tab = switch, false, true, tag = 移除底栏创建按钮, desc = 此开关控制是否移除底栏创建按钮
 useractivity = switch, true, false, tag = 启用Apple设备接力, desc = 此开关控制是否使用Apple设备接力
 
-[Rule]
-AND, ((DOMAIN, spclient.wg.spotify.com), (PROTOCOL, QUIC)), REJECT
-AND, ((DOMAIN, gae2-spclient.spotify.com), (PROTOCOL, QUIC)), REJECT
-AND, ((DOMAIN, guc3-spclient.spotify.com), (PROTOCOL, QUIC)), REJECT
-
 [Rewrite]
 # 播放广告
-^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
+^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/pendragon\/ reject-dict
 
 # 恢复歌手和专辑列表的正常展示
-^https?:\/\/(gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://$1.spotify.com/artistview/v1/artist/$2&platform=ipad
+^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/artistview\/v1\/artist\/(.*)&platform=iphone header https://$1.spotify.com/artistview/v1/artist/$2&platform=ipad
 
 [Script]
-http-response ^https?:\/\/(?:gae2-spclient|guc3-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 5, tag = [Spotify]Protobuf, argument = [{tab},{useractivity}]
+http-response ^https:\/\/(?:\w+-spclient|spclient\.wg)\.spotify\.com(?::443)?\/(?:bootstrap|user-customization-service) script-path = https://raw.githubusercontent.com/001ProMax/Surge/main/Script/Spotify.Crack.Dev.js, requires-body = true, binary-body-mode = true, timeout = 5, tag = [Spotify]Protobuf, argument = [{tab},{useractivity}]
 
 [MitM]
-hostname = gae2-spclient.spotify.com, guc3-spclient.spotify.com, spclient.wg.spotify.com
+hostname = *-spclient.spotify.com, spclient.wg.spotify.com
