@@ -16,7 +16,7 @@
 [Rewrite]
 # ======= 0~9 ======= #
 # Version
-^https?:\/\/2025.08.06/c390/v2.0.612 reject-200
+^https?:\/\/2025.08.08/c390/v2.0.614 reject-200
 
 # 58 TongCheng
 ^https?:\/\/app\.58\.com\/api\/home\/(advertising|appadv) reject-200

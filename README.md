@@ -173,9 +173,27 @@
           <td align=center>888流量套餐</td>
           <td align=center>100G</td>
           <td align=center>¥188</td>
-	  <td align=center>888天</td>
+          <td align=center>888天</td>
           <td align=center>1~2000M</td>
           <td align=center>无重置</td>
+      </tr>
+  </table>
+    <table>
+      <tr>
+          <th width="150px" align=center>促销套餐</th>
+          <th width="150px" align=center>初始流量</th>
+          <th width="100px" align=center>价格</th>
+          <th width="100px" align=center>到期续费</th>
+          <th width="100px" align=center>日签到</th>
+          <th width="100px" align=center>流量重置</th>
+      </tr>
+      <tr>
+          <td align=center>Promotional套餐</td>
+          <td align=center>500G/月*12</td>
+          <td align=center>¥220</td>
+          <td align=center>¥300</td>
+          <td align=center>1~2000M</td>
+          <td align=center>每月1号</td>
       </tr>
   </table>
 
