@@ -87,11 +87,11 @@
 
 - **机场介绍**<br>
 1. 机场提供单账号持有多个订阅，订阅支持备注。<br>
-2. 采用 Trojan 协议，延迟低速度快，更优的性能和稳定性。<br>
+2. 采用 Trojan 协议，三网专线，延迟低速度快，更优的性能和稳定性。<br>
 3. 多达 50+ 节点，包含 ``港日美台新`` 热门节点（时段性倍率）及部分冷门地区节点。<br>
 4. 支持多种流媒体服务访问解锁，包括但不限于 Disney+、YouTube、Netflix、ChatGPT 等。<br>
 5. 提供节点 ``免登流媒体`` 共享账号观看 Netflix、HBO、PrimeVideo、PornHub、Exhentai。<br>
-6. 提供 5 个 Emby 服务，访问 [关于Emby](https://tutorial.aladdinnet.cc/Promotional/5.html#%E5%85%B3%E4%BA%8Eemby) 了解开户教程详情。<br>
+6. 提供 Emby 服务，无 SLA 保证，如果是为了 Emby 而购买，推荐月付。<br>
 7. 每日可在群组发送指令 ``/sign@AladdinForUser_bot`` 签到获取随机流量。<br>
 8. 独家首发流量转结系统，上月剩余流量转结并延长有效期至下个月。<br>
 9. 有关套餐权益、使用教程等更多详细内容，请在 [官方博客公告](https://tutorial.aladdinnet.cc/) 仔细阅读了解。<br>
