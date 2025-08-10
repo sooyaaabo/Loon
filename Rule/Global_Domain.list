@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-06 02:08:04
+# UPDATED: 2025-08-10 02:07:37
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31567
+# DOMAIN-SUFFIX: 31568
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31875
+# TOTAL: 31876
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -28131,6 +28131,7 @@ DOMAIN-SUFFIX,uoutside.org
 DOMAIN-SUFFIX,up.gcp.googlers.com
 DOMAIN-SUFFIX,up01.cc
 DOMAIN-SUFFIX,upa.ac.uk
+DOMAIN-SUFFIX,upbit.com
 DOMAIN-SUFFIX,update.crashlytics.com
 DOMAIN-SUFFIX,updates.ac.uk
 DOMAIN-SUFFIX,updatestar.com
