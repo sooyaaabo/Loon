@@ -584,7 +584,11 @@
         },
         {
             "name": "Reflix",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Reflix.png"
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Reflix-01.png"
+        },
+        {
+            "name": "Reflix",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Reflix-02.png"
         },
         {
             "name": "yybx",
@@ -609,6 +613,10 @@
         {
             "name": "DeePlayer",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DeePlayer.png"
+        },
+        {
+            "name": "Lenna",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Lenna.png"
         },
         {
             "name": "Hills",
