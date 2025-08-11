@@ -111,7 +111,7 @@
       </tr>
       <tr>
           <td align=center>入门套餐</td>
-          <td align=center>50G</td>
+          <td align=center>80G</td>
           <td align=center>¥8</td>
           <td align=center>¥24</td>
           <td align=center>¥48</td>
@@ -121,7 +121,7 @@
       </tr>
       <tr>
           <td align=center>轻量套餐</td>
-          <td align=center>100G</td>
+          <td align=center>150G</td>
           <td align=center>¥15</td>
           <td align=center>¥45</td>
           <td align=center>¥90</td>
@@ -131,7 +131,7 @@
       </tr>
       <tr>
           <td align=center>基础套餐</td>
-          <td align=center>250G</td>
+          <td align=center>300G</td>
           <td align=center>¥30</td>
           <td align=center>¥90</td>
           <td align=center>¥180</td>
@@ -141,7 +141,7 @@
       </tr>
       <tr>
           <td align=center>高级套餐</td>
-          <td align=center>450G</td>
+          <td align=center>500G</td>
           <td align=center>¥50</td>
           <td align=center>¥150</td>
           <td align=center>¥300</td>
