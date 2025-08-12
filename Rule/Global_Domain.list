@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-10 02:07:37
+# UPDATED: 2025-08-12 02:07:45
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31568
+# DOMAIN-SUFFIX: 31567
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31876
+# TOTAL: 31875
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -2371,6 +2371,7 @@ DOMAIN-SUFFIX,arphic.com
 DOMAIN-SUFFIX,arphic.com.tw
 DOMAIN-SUFFIX,arrc.ac.uk
 DOMAIN-SUFFIX,ars.ac.uk
+DOMAIN-SUFFIX,arstechnica.net
 DOMAIN-SUFFIX,art1lib.com
 DOMAIN-SUFFIX,art4tibet1998.org
 DOMAIN-SUFFIX,artcam.com
@@ -3208,8 +3209,8 @@ DOMAIN-SUFFIX,bbnradio.org
 DOMAIN-SUFFIX,bbqm1.xyz
 DOMAIN-SUFFIX,bbs-cove.ac.uk
 DOMAIN-SUFFIX,bbs-tw.com
-DOMAIN-SUFFIX,bbs.naixi.net
 DOMAIN-SUFFIX,bbs.sina.com
+DOMAIN-SUFFIX,bbs.tuitui.info
 DOMAIN-SUFFIX,bbsdigest.com
 DOMAIN-SUFFIX,bbsfeed.com
 DOMAIN-SUFFIX,bbsland.com
@@ -5806,7 +5807,6 @@ DOMAIN-SUFFIX,cdn-telegram.org
 DOMAIN-SUFFIX,cdn-terapeak.com
 DOMAIN-SUFFIX,cdn.ac.uk
 DOMAIN-SUFFIX,cdn.angruo.com
-DOMAIN-SUFFIX,cdn.arstechnica.net
 DOMAIN-SUFFIX,cdn.segment.com
 DOMAIN-SUFFIX,cdn77.com
 DOMAIN-SUFFIX,cdn77.org
@@ -6571,7 +6571,6 @@ DOMAIN-SUFFIX,cnbeta.com.tw
 DOMAIN-SUFFIX,cnd.org
 DOMAIN-SUFFIX,cnet.com
 DOMAIN-SUFFIX,cnineu.com
-DOMAIN-SUFFIX,cnitter.com
 DOMAIN-SUFFIX,cnn.com
 DOMAIN-SUFFIX,cnpolitics.org
 DOMAIN-SUFFIX,cnproxy.com
@@ -14344,7 +14343,6 @@ DOMAIN-SUFFIX,imems.ac.uk
 DOMAIN-SUFFIX,imessage.tv
 DOMAIN-SUFFIX,imet.ac.uk
 DOMAIN-SUFFIX,img.ly
-DOMAIN-SUFFIX,img.picgo.net
 DOMAIN-SUFFIX,imgasd.com
 DOMAIN-SUFFIX,imgbb.com
 DOMAIN-SUFFIX,imgchili.net
@@ -19185,6 +19183,7 @@ DOMAIN-SUFFIX,naihendauou.lol
 DOMAIN-SUFFIX,naijauncut.com
 DOMAIN-SUFFIX,nailedhard.com
 DOMAIN-SUFFIX,naitik.net
+DOMAIN-SUFFIX,naixi.net
 DOMAIN-SUFFIX,naizitv.top
 DOMAIN-SUFFIX,nakadashi.to
 DOMAIN-SUFFIX,naked-asian-porn.com
@@ -19436,6 +19435,7 @@ DOMAIN-SUFFIX,nenitas.club
 DOMAIN-SUFFIX,nentindo.net
 DOMAIN-SUFFIX,neo-miracle.com
 DOMAIN-SUFFIX,neodaas.ac.uk
+DOMAIN-SUFFIX,neoforged.net
 DOMAIN-SUFFIX,neonatalsociety.ac.uk
 DOMAIN-SUFFIX,neotokyo.supertop-100.com
 DOMAIN-SUFFIX,neow.in
@@ -20083,7 +20083,6 @@ DOMAIN-SUFFIX,nochubank.or.jp
 DOMAIN-SUFFIX,nocn.ac.uk
 DOMAIN-SUFFIX,nocs.ac.uk
 DOMAIN-SUFFIX,nodejs.org
-DOMAIN-SUFFIX,nodeloc.com
 DOMAIN-SUFFIX,nodes.ac.uk
 DOMAIN-SUFFIX,nodeseek.com
 DOMAIN-SUFFIX,nodesnoop.com
@@ -21651,6 +21650,7 @@ DOMAIN-SUFFIX,picasa.com
 DOMAIN-SUFFIX,picasaweb.com
 DOMAIN-SUFFIX,picasaweb.net
 DOMAIN-SUFFIX,picasaweb.org
+DOMAIN-SUFFIX,picgo.net
 DOMAIN-SUFFIX,pichunter.com
 DOMAIN-SUFFIX,picidae.net
 DOMAIN-SUFFIX,picjs.xyz
@@ -27520,7 +27520,6 @@ DOMAIN-SUFFIX,tuibeitu.net
 DOMAIN-SUFFIX,tuidang.net
 DOMAIN-SUFFIX,tuidang.org
 DOMAIN-SUFFIX,tuidang.se
-DOMAIN-SUFFIX,tuitui.info
 DOMAIN-SUFFIX,tuitwit.com
 DOMAIN-SUFFIX,tukaani.org
 DOMAIN-SUFFIX,tukif.com
@@ -30064,7 +30063,6 @@ DOMAIN-SUFFIX,www-sms-apple.com
 DOMAIN-SUFFIX,www.destinationurl.com
 DOMAIN-SUFFIX,www.pxcc.com
 DOMAIN-SUFFIX,www.sb
-DOMAIN-SUFFIX,www.xicons.org
 DOMAIN-SUFFIX,www1.biz
 DOMAIN-SUFFIX,www8-hp.com
 DOMAIN-SUFFIX,wwwapple.com
@@ -30249,6 +30247,7 @@ DOMAIN-SUFFIX,xiaoou.tv
 DOMAIN-SUFFIX,xiaoshuobb.life
 DOMAIN-SUFFIX,xiaoyaoge.xyz
 DOMAIN-SUFFIX,xiaxiaoqiang.net
+DOMAIN-SUFFIX,xicons.org
 DOMAIN-SUFFIX,xiezhua.com
 DOMAIN-SUFFIX,xihua.es
 DOMAIN-SUFFIX,xinaia-av.buzz
