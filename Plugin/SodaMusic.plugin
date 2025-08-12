@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/SodaMusic.png
-#!date = 2025-06-15 00:00
+#!date = 2025-08-12 15:00
 
-# 2025-05-18 01:29:34
+# 2025-08-12 13:09:47
 # https://kelee.one/Tool/Loon/Lpx/SodaMusic_remove_ads.lpx
 
 [Rewrite]
@@ -54,6 +54,9 @@
 
 # 邀请开通会员弹窗
 ^https:\/\/beta-luna\.douyin\.com\/luna\/commerce\/v2\/commerce_info\? reject-dict
+
+# 抖音看过悬浮窗
+^https:\/\/beta-luna\.douyin\.com\/luna\/listen-video\/reminder\? reject-dict
 
 [Script]
 # 播放页面 - 视频流[响应体太大]
