@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-14 02:10:35
+# UPDATED: 2025-08-16 02:07:53
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31569
+# DOMAIN-SUFFIX: 31571
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31877
+# TOTAL: 31879
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -3722,6 +3722,7 @@ DOMAIN-SUFFIX,bethesdagamestudios.com
 DOMAIN-SUFFIX,bethsoft.com
 DOMAIN-SUFFIX,betterbim.com
 DOMAIN-SUFFIX,betterexplained.com
+DOMAIN-SUFFIX,betterhash.net
 DOMAIN-SUFFIX,betterhdporn.com
 DOMAIN-SUFFIX,betternet.co
 DOMAIN-SUFFIX,betternike.com
@@ -12972,6 +12973,7 @@ DOMAIN-SUFFIX,herokuapp.com
 DOMAIN-SUFFIX,herokucdn.com
 DOMAIN-SUFFIX,herokucharge.com
 DOMAIN-SUFFIX,herokussl.com
+DOMAIN-SUFFIX,herominers.com
 DOMAIN-SUFFIX,heron.ac.uk
 DOMAIN-SUFFIX,herringnetwork.com
 DOMAIN-SUFFIX,hertfordshire.ac.uk
