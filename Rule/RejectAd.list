@@ -20,7 +20,7 @@ DOMAIN-SUFFIX, zlsdk.1rtb.net
 DOMAIN-SUFFIX, ott.cibntv.net
 DOMAIN-SUFFIX, cdntips.net
 DOMAIN-SUFFIX, tfogc.com
-DOMAIN-SUFFIX, file.myqcloud.com
+# DOMAIN-SUFFIX, file.myqcloud.com
 # 收集用户隐私联盟，若有问题自行设置白名单
 DOMAIN-KEYWORD, volc
 DOMAIN-KEYWORD, umeng
