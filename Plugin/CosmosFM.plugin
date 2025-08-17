@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CosmosFM.png
-#!date = 2025-08-17 21:30
+#!date = 2025-08-17 22:30
 
 # 2025-07-21 18:21:13
 # https://kelee.one/Tool/Loon/Lpx/CosmosPodcast_remove_ads.lpx
@@ -22,7 +22,7 @@
 
 # 移除小宇宙搜索框内容
 ^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get reject-dict
-^https?:\/\/api\.xiaoyuzhoufm\.com\/v\d\/category reject-dict
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/category\/list-daily reject-dict
 
 # 会员横幅设为不可点击
 # ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/membership\/platform reject-dict
