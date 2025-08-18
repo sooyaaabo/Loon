@@ -29,9 +29,9 @@ if (match) {
     // 构造新的 URL 地址
     let newUrl = `${scheme}://resolve?domain=${match[1]}`;
 
-    // 修改响应的 Location header 进行 302 重定向
+    // 修改响应的 Location header 进行 307 重定向
     $done({
-        status: 302,
+        status: 307,
         headers: {
             'Location': newUrl
         }
