@@ -11,7 +11,7 @@
 #!date = 2025-06-15 00:00
 
 [Argument]
-t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicegram", "Intent", tag = 跳转至对应客户端
+t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicegram", "Lingogram", tag = 跳转至对应客户端
 
 [Rule]
 DOMAIN-SUFFIX, swiftgram.app, PROXY
