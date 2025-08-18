@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-16 02:07:53
+# UPDATED: 2025-08-18 02:07:32
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31571
+# DOMAIN-SUFFIX: 31575
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31879
+# TOTAL: 31883
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -21149,6 +21149,7 @@ DOMAIN-SUFFIX,pals.ac.uk
 DOMAIN-SUFFIX,paltalk.com
 DOMAIN-SUFFIX,panasonic.com
 DOMAIN-SUFFIX,panasonic.jp
+DOMAIN-SUFFIX,pancakeswap.finance
 DOMAIN-SUFFIX,pancolle-movie.jp
 DOMAIN-SUFFIX,panda.ac.uk
 DOMAIN-SUFFIX,panda30.shop
@@ -21594,6 +21595,7 @@ DOMAIN-SUFFIX,petiteamateurteen.com
 DOMAIN-SUFFIX,petiteballerinasfucked.com
 DOMAIN-SUFFIX,petitehdporn.com
 DOMAIN-SUFFIX,petroc.ac.uk
+DOMAIN-SUFFIX,pewresearch.org
 DOMAIN-SUFFIX,pfd.org.hk
 DOMAIN-SUFFIX,pggc.ac.uk
 DOMAIN-SUFFIX,pgreen.ac.uk
@@ -22510,6 +22512,7 @@ DOMAIN-SUFFIX,prismlive.com
 DOMAIN-SUFFIX,prisoneralert.com
 DOMAIN-SUFFIX,pritunl.com
 DOMAIN-SUFFIX,privacybox.de
+DOMAIN-SUFFIX,privacyguides.org
 DOMAIN-SUFFIX,privacysandbox.com
 DOMAIN-SUFFIX,privacysimplified.com
 DOMAIN-SUFFIX,privacytools.io
@@ -26113,6 +26116,7 @@ DOMAIN-SUFFIX,swanseamet.ac.uk
 DOMAIN-SUFFIX,swap.ac.uk
 DOMAIN-SUFFIX,swapbox.ac.uk
 DOMAIN-SUFFIX,swapsmut.com
+DOMAIN-SUFFIX,swapspace.co
 DOMAIN-SUFFIX,swarf.ac.uk
 DOMAIN-SUFFIX,sway-cdn.com
 DOMAIN-SUFFIX,sway.com
