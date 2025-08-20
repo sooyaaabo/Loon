@@ -1,5 +1,5 @@
 #!name = Telegram
-#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Intent。
+#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Lingogram。
 #!openUrl = https://apps.apple.com/app/id686449807
 #!author = sooyaaabo[https://github.com/sooyaaabo]
 #!tag = 功能增强
@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Telegram-01.png
-#!date = 2025-06-15 00:00
+#!date = 2025-07-20 14:00
 
 [Argument]
 t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicegram", "Lingogram", tag = 跳转至对应客户端
@@ -43,19 +43,19 @@ DOMAIN-SUFFIX, legra.ph, PROXY
 DOMAIN-SUFFIX, telegra.ph, PROXY
 DOMAIN-SUFFIX, telegram.space, PROXY
 DOMAIN-KEYWORD, nicegram, PROXY
-IP-CIDR, 109.239.140.0/24, no-resolve, PROXY
-IP-CIDR, 149.154.160.0/20, no-resolve, PROXY
-IP-CIDR, 5.28.192.0/18, no-resolve, PROXY
-IP-CIDR, 91.108.0.0/16, no-resolve, PROXY
-IP-CIDR6, 2001:67c:4e8::/48, no-resolve, PROXY
-IP-CIDR6, 2001:b28:f23f::/48, no-resolve, PROXY
-IP-CIDR6, 2001:b28:f23c::/47, no-resolve, PROXY
-IP-CIDR6, 2a0a:f280::/29, no-resolve, PROXY
-IP-ASN, 211157, no-resolve, PROXY
-IP-ASN, 62041, no-resolve, PROXY
-IP-ASN, 62014, no-resolve, PROXY
-IP-ASN, 59930, no-resolve, PROXY
-IP-ASN, 44907, no-resolve, PROXY
+IP-CIDR, 5.28.192.0/18, PROXY, no-resolve
+IP-CIDR, 91.108.0.0/16, PROXY, no-resolve
+IP-CIDR, 109.239.140.0/24, PROXY, no-resolve
+IP-CIDR, 149.154.160.0/20, PROXY, no-resolve
+IP-CIDR6, 2001:67c:4e8::/48, PROXY, no-resolve
+IP-CIDR6, 2001:b28:f23c::/47, PROXY, no-resolve
+IP-CIDR6, 2001:b28:f23f::/48, PROXY, no-resolve
+IP-CIDR6, 2a0a:f280::/29, PROXY, no-resolve
+IP-ASN, 44907, PROXY, no-resolve
+IP-ASN, 59930, PROXY, no-resolve
+IP-ASN, 62014, PROXY, no-resolve
+IP-ASN, 62041, PROXY, no-resolve
+IP-ASN, 211157, PROXY, no-resolve
 
 [Script]
 http-response (https:\/\/)?t\.me\/(.+) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Telegram/t.me_redirect.js, requires-body = false, tag = [Telegram]t.me重定向, argument=[{t.me_redirect}]
