@@ -1,9 +1,6 @@
-# https://rule.kelee.one/Loon/Binance.lsr
-# UpdateTime：2025-08-08 02:34:40
-# RuleCount：12
-
 DOMAIN-SUFFIX, bnbzh.ac
 DOMAIN-SUFFIX, saasexch.cc
+DOMAIN-SUFFIX, saasexch.io
 DOMAIN-SUFFIX, binance.cloud
 DOMAIN-SUFFIX, bnappzh.co
 DOMAIN-SUFFIX, appsflayer.com
@@ -14,3 +11,4 @@ DOMAIN-SUFFIX, bnbstatic.com
 DOMAIN-SUFFIX, bntrace.com
 DOMAIN-SUFFIX, saasexch.com
 DOMAIN-SUFFIX, binance.me
+DOMAIN-SUFFIX, binance.info
