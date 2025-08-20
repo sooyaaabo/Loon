@@ -98,8 +98,8 @@
 注：当前提供订阅、专用客户端两种形式使用，可从订阅转至客户端（暂不支持转回），免登节点目前仅支持在客户端使用，请谨慎决定是否迁移。
 
 - **套餐介绍**<br>
-<div style="overflow-x:auto;">
-	<table style="white-space: nowrap;">
+<div overflow-x:auto; -webkit-overflow-scrolling: touch;>
+	<table style="white-space: nowrap; width: max-content;">
 		<tr>
 			<th width="100px" align="center">周期套餐</th>
 			<th width="100px" align="center">初始流量</th>
@@ -166,7 +166,7 @@
 <div style="overflow-x:auto;">
 	<table style="white-space: nowrap;">
   		<tr>
-    		<th width="100px" align="center">流量套餐</th>
+    		<th width="120px" align="center">流量套餐</th>
     		<th width="100px" align="center">初始流量</th>
     		<th width="100px" align="center">价格</th>
     		<th width="100px" align="center">有效期</th>
