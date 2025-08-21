@@ -1,20 +1,21 @@
 #!name = iRingo:WeatherKit
 #!desc = 1.解锁全部天气功能；2.替换空气质量数据；3.添加下一小时降水数据。仅支持iOS 18 & macOS 15 & watchOS 11 及以上版本。
 #!openUrl = http://boxjs.com/#/app/iRingo.WeatherKit
-#!author = VirgilClyne[https://github.com/VirgilClyne], WordlessEcho[https://github.com/WordlessEcho]
+#!author = VirgilClyne[https://github.com/VirgilClyne], WordlessEcho[https://github.com/WordlessEcho], 001ProMax[https://github.com/001ProMax]
 #!tag = 功能增强
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!homepage = https://NSRingo.github.io/guide/Weather/weather-kit
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/AppleWeather.png
-#!date = 2025-08-13 20:00
+#!date = 2025-08-21 12:00
 
-# 2025-08-13 09:34:07 v1.9.6
+# 2025-08-21 02:46:56 v1.9.8
 # https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin
 
 [Argument]
-DataSets = input, "airQuality, currentWeather, forecastDaily, forecastHourly, forecastNextHour, news, trendComparison, weatherAlerts, weatherChanges", tag = [数据集] 需要包含的数据集, desc = 选中的数据集会被包含在请求中。
+DataSets = input, "airQuality, currentWeather, forecastDaily, forecastHourly, forecastNextHour, news, historicalComparisons, weatherAlerts, weatherChanges", tag = [数据集] 需要包含的数据集, desc = 选中的数据集会被包含在请求中。
+CurrentWeather.Provider = select, "WeatherKit", "ColorfulClouds", "QWeather", tag = [当前天气] 数据源, desc = 始终会使用选定的数据源，替换当前天气数据。
 NextHour.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", tag = [未来一小时降水强度]数据源,desc = 始终会使用选定的数据源，填补无降水监测地区的数据。
 AQI.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", "WAQI", tag = [空气质量]数据源,desc = 始终会使用选定的数据源，填补无空气质量监测地区的数据。
 AQI.ReplaceProviders = input, "", tag = [空气质量]需要替换的供应商,desc = 选中的空气质量数据源会被替换。
@@ -32,11 +33,11 @@ DOMAIN, weather-analytics-events.apple.com, REJECT-DROP
 DOMAIN-SUFFIX, tthr.apple.com, REJECT-DROP
 
 [Script]
-http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, tag = [iRingo_WeatherKit]v1.availability.response, argument=[{DataSets},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
+http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v1\/availability\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, tag = [iRingo_WeatherKit]v1.availability.response, argument=[{DataSets},{CurrentWeather.Provider},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
 
-http-request ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/request.bundle.js, tag = [iRingo_WeatherKit]v1.weather.request, argument=[{DataSets},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
+http-request ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/request.bundle.js, tag = [iRingo_WeatherKit]v1.weather.request, argument=[{DataSets},{CurrentWeather.Provider},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
 
-http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_WeatherKit]v2.weather.response, argument=[{DataSets},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
+http-response ^https?:\/\/weatherkit\.apple\.com\/api\/v2\/weather\/ script-path = https://github.com/NSRingo/WeatherKit/releases/latest/download/response.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_WeatherKit]v2.weather.response, argument=[{DataSets},{CurrentWeather.Provider},{NextHour.Provider},{AQI.Provider},{AQI.ReplaceProviders},{AQI.Local.Scale},{AQI.Local.ReplaceScales},{AQI.Local.ConvertUnits},{API.ColorfulClouds.Token},{API.QWeather.Host},{API.QWeather.Token},{API.WAQI.Token},{LogLevel}]
 
 [MitM]
 hostname = weatherkit.apple.com
