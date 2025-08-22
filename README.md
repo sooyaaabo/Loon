@@ -308,6 +308,14 @@
 			<td align="center">¥30</td>
 		</tr>
 		<tr>
+			<td align="center">妄享套餐</td>
+			<td align="center">200G</td>
+			<td align="center">×</td>
+			<td align="center">×</td>
+			<td align="center">×</td>
+			<td align="center">¥101</td>
+		</tr>
+		<tr>
 			<td align="center">随享套餐</td>
 			<td align="center">100G</td>
 			<td align="center">¥8</td>
