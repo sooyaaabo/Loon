@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-22 02:07:58
+# UPDATED: 2025-08-24 02:07:17
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31581
+# DOMAIN-SUFFIX: 31586
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31889
+# TOTAL: 31894
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -6900,6 +6900,7 @@ DOMAIN-SUFFIX,courtauld.ac.uk
 DOMAIN-SUFFIX,cov.ac.uk
 DOMAIN-SUFFIX,covcollege.ac.uk
 DOMAIN-SUFFIX,cove4careinkent.ac.uk
+DOMAIN-SUFFIX,covenantswatch.org.tw
 DOMAIN-SUFFIX,coventry.ac.uk
 DOMAIN-SUFFIX,coventrycollege.ac.uk
 DOMAIN-SUFFIX,coventryuniversity.ac.uk
@@ -11652,6 +11653,7 @@ DOMAIN-SUFFIX,gitbook.com
 DOMAIN-SUFFIX,gitbook.io
 DOMAIN-SUFFIX,gitbooks.io
 DOMAIN-SUFFIX,githack.com
+DOMAIN-SUFFIX,github.ai
 DOMAIN-SUFFIX,github.blog
 DOMAIN-SUFFIX,github.com
 DOMAIN-SUFFIX,github.community
@@ -15103,6 +15105,7 @@ DOMAIN-SUFFIX,itfromtheinside.com
 DOMAIN-SUFFIX,itgonglun.com
 DOMAIN-SUFFIX,ithaisex.com
 DOMAIN-SUFFIX,ithome.com.tw
+DOMAIN-SUFFIX,itiger.com
 DOMAIN-SUFFIX,itlearningspace-scot.ac.uk
 DOMAIN-SUFFIX,itnel.com
 DOMAIN-SUFFIX,itnow.ac.uk
@@ -18713,6 +18716,7 @@ DOMAIN-SUFFIX,moviesfree4u.xyz
 DOMAIN-SUFFIX,moviesneek.com
 DOMAIN-SUFFIX,movinghistory.ac.uk
 DOMAIN-SUFFIX,movingmedicine.ac.uk
+DOMAIN-SUFFIX,mox.moe
 DOMAIN-SUFFIX,moxing.mobi
 DOMAIN-SUFFIX,moxing.news
 DOMAIN-SUFFIX,moystoys.com
@@ -29018,6 +29022,7 @@ DOMAIN-SUFFIX,vodafone.it
 DOMAIN-SUFFIX,voicettank.org
 DOMAIN-SUFFIX,voila.ac.uk
 DOMAIN-SUFFIX,vokevr.com
+DOMAIN-SUFFIX,vol.moe
 DOMAIN-SUFFIX,volstudy.ac.uk
 DOMAIN-SUFFIX,volvo-truck.nl
 DOMAIN-SUFFIX,volvo.ca
