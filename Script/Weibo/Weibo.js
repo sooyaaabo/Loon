@@ -1,7 +1,8 @@
+// 引用链接: https://kelee.one/Resource/JavaScript/Weibo/Weibo_remove_ads.js
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
-// 2025-08-06 20:25
+// 2025-08-23 21:00
 
 const url = $request.url;
 if (!$response) $done({});
@@ -1003,14 +1004,27 @@ if (url.includes("/interface/sdk/sdkad.php")) {
     if (obj?.pageHeader?.data?.items?.length > 0) {
       let newItems = [];
       for (let item of obj.pageHeader.data.items) {
-        if (item?.data?.card_type === 236 && item?.category === "wboxcard") {
+        if (item?.category === "card" && item?.data?.is_ad_card === 1) {
+          // 底部卡片广告
+          continue;
+        } else if (item?.category === "group" && item?.items?.length > 0) {
+          // 博主好物种草 关注推荐
+          continue;
+        } else if (item?.category === "wboxcard" && item?.data?.card_type === 236) {
           // 底部横版广告
+          continue;
+        } else if (item?.data?.itemid === "top_searching" && item?.data?.card_type === 248) {
+          // 底部大家都在搜
           continue;
         } else {
           newItems.push(item);
         }
       }
       obj.pageHeader.data.items = newItems;
+    }
+    if (obj?.detailInfo?.extend?.reward_info) {
+      // 赞赏信息
+      delete obj.detailInfo.extend.reward_info;
     }
     if (obj?.detailInfo?.status?.reward_info) {
       // 赞赏信息
@@ -1043,6 +1057,10 @@ if (url.includes("/interface/sdk/sdkad.php")) {
               }
             }
             if (["广告", "荐读", "评论总结", "推荐", "相关内容", "相关评论"]?.includes(item?.data?.adType)) {
+              continue;
+            }
+            if (item?.data?.itemid === "ai_summary_entrance_real_show" && item?.data?.card_type === 236) {
+              // ai总结
               continue;
             }
             newItems.push(item);

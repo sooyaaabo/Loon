@@ -1,7 +1,8 @@
+// 引用链接: https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/refs/heads/main/Scripts/amap.js
 */
-// 2025-05-02 20:40
+// 2025-08-23 20:30
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -292,6 +293,7 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "brand_service", // 品牌服务
     "brand_shop_bar",
     // "brand_story",
+    "carServiceCard", // 车主中心
     "checkIn",
     "check_in", // 足迹打卡
     "cityCardFeed", // 景点卡片
@@ -476,6 +478,10 @@ if (url.includes("/aos/perception/publicTravel/beforeNavi")) {
     "yellowPageAdRecommendModule" //淘宝商品推荐
   ];
   if (obj?.data?.modules) {
+    if (obj?.data?.modules?.combineReviews?.data?.write_comment) {
+      // 写评论赢奖励
+      delete obj.data.modules.combineReviews.data.write_comment;
+    }
     for (let i of items) {
       delete obj.data.modules[i];
     }
