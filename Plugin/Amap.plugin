@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Amap.png
-#!date = 2025-08-24 17:00
+#!date = 2025-08-25 23:00
 
 # 2025-08-24 16:05:54
 # https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
@@ -34,18 +34,22 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? reject-dict
 ^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? reject-dict
 
-# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅、底部AI
 ^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\/homeV2) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
 ^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
 ^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/ reject-dict
 
 # 打车页 - 红点角标、弹窗、天气图标、推广卡片
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) reject-dict
 ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:pay\/web\/paySuccess\/info\/request|transportation\/diversion\/resource\/driving) reject-dict
 ^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\? response-body-json-del data.carTips.data.popupInfo
+
+# AI功能
+^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/ response-body-json-jq '.data.aiNativeV16={"status":1,"version":"","value":""}|.data.aiNative1520={"status":1,"version":"","value":""}|.data.ai_agent_enter_style_cursor={"status":1,"version":"","value":""}|.data.ai_scenes={"status":1,"version":"","value":""}|.data.aiNativeRC06={"status":1,"version":"","value":""}|.data.plan_ai={"status":1,"version":"","value":""}|.data.ai_native_smart_island={"status":1,"version":"","value":""}|.data.llm={"status":2,"version":"","value":""}'
 
 [Script]
 # 移除阿里巴巴通用广告请求
