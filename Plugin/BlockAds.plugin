@@ -377,7 +377,6 @@ IP-CIDR, 115.236.121.195/32, REJECT, no-resolve
 ^https?:\/\/baichuan\.baidu\.com\/rs\/adpmobile\/launch reject-img
 ^https?:\/\/api\d\.tuisong\.baidu\.com reject-img
 ^https?:\/\/afd\.baidu\.com\/afd\/entry reject
-^https?:\/\/afd\.baidu\.com\/afd\/entry reject-img
 ^https?:\/\/als\.baidu\.com\/clog\/clog reject
 ^https?:\/\/mobads\.baidu\.com\/cpro\/ui\/mads.+ reject
 ^https?:\/\/issuecdn\.baidupcs\.com\/issue\/netdisk\/guanggao\/ reject-200
@@ -386,7 +385,7 @@ IP-CIDR, 115.236.121.195/32, REJECT, no-resolve
 ^https?:\/\/update\.pan\.baidu\.com\/statistics reject
 ^https?:\/\/log.+?baidu\.com reject
 ^https?:\/\/sa\d\.tuisong\.baidu\.com reject-img
-^https?:\/\/www.baidu.com\/?action=static&ms=1&version=css_page_2@0.*? reject
+^https?:\/\/www\.baidu\.com\/?action=static&ms=1&version=css_page_2@0.*? reject
 
 # 百度地图 - dss0.bdstatic.com, tb1.bdstatic.com, tb2.bdstatic.com, ss0.bdstatic.com, gss0.bdstatic.com, newclient.map.baidu.com
 ^https?:\/\/dss0\.bdstatic\.com\/-0U0bnSm1A5BphGlnYG\/ reject-200
