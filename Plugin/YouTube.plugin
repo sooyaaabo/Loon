@@ -8,14 +8,12 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/YouTube.png
-#!date = 2025-06-15 00:00
+#!date = 2025-08-25 08:00
 
 # 2025-04-22
 # https://github.com/Maasea/sgmodule/blob/master/YouTube.Enhance.sgmodule
-# 2025-05-13 15:17:08
+# 2025-08-24 22:03:19
 # https://kelee.one/Tool/Loon/Lpx/YouTube_remove_ads.lpx
-# 2024-11-24
-# https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/YoutubeAds.conf
 
 # YouTube 画中画和后台播放可在客户端内关闭
 #   - 设置 -> 播放 -> 画中画
