@@ -279,6 +279,77 @@
 官方频道：[@CloudFisher](https://t.me/CloudFisher)<br>
 官方群组：[@CloudFisherGroup](https://t.me/CloudFisherGroup)<br>
 
+### **OuO Network**
+
+- **机场介绍**<br>
+1. 采用 Shadowsocks 协议优质链路<br>
+2. 提供港、台、日、新、美常用地区及部分冷门地区节点<br>
+4. 提供完善的流媒体解锁，包括但不限于Disney+、Netflix等<br>
+5. 提供 AI 对话大模型聚合平台 [OOchat](https://oochat.space) ，具体使用方法请查看官方频道<br>
+6. 提供 OuO Emby 影视服使用，畅享观影<br>
+7. 动态节点倍率：平时倍率：1×；闲时倍率：0.8×(9:00-11:00(UTC+8))<br>
+
+- **套餐介绍**<br>
+<div style="overflow-x: auto;">
+	<table style="white-space: nowrap;">
+		<tr>
+			<th width="120px" align="center">周期套餐</th>
+			<th width="100px" align="center">月流量</th>
+			<th width="100px" align="center">月付</th>
+			<th width="100px" align="center">季付</th>
+			<th width="100px" align="center">半年付</th>
+			<th width="100px" align="center">年付</th>
+		</tr>
+		<tr>
+			<td align="center">小杯</td>
+			<td align="center">100G</td>
+			<td align="center">¥10</td>
+			<td align="center">¥30</td>
+			<td align="center">¥60</td>
+			<td align="center">¥100</td>
+		</tr>
+		<tr>
+			<td align="center">中杯</td>
+			<td align="center">200G</td>
+			<td align="center">¥18</td>
+			<td align="center">¥54</td>
+			<td align="center">¥108</td>
+			<td align="center">¥180</td>
+		</tr>
+		<tr>
+			<td align="center">奇怪的杯型</td>
+			<td align="center">300G</td>
+			<td align="center">¥26</td>
+			<td align="center">¥78</td>
+			<td align="center">¥156</td>
+			<td align="center">¥260</td>
+		</tr>
+		<tr>
+			<td align="center">大杯</td>
+			<td align="center">500G</td>
+			<td align="center">¥43</td>
+			<td align="center">¥129</td>
+			<td align="center">¥258</td>
+			<td align="center">¥430</td>
+		</tr>
+		<tr>
+			<td align="center">超大杯</td>
+			<td align="center">1000G</td>
+			<td align="center">¥85</td>
+			<td align="center">¥255</td>
+			<td align="center">¥510</td>
+			<td align="center">¥850</td>
+		</tr>
+	</table>
+</div>
+
+- **购买方式**<br>
+点击 [OuO官网](https://login.ouonetwork.com/register?aff=t5wSjov2) 购买
+
+- **联系方式**<br>
+官方频道：[@OuOnotification](https://t.me/OuOnotification)<br>
+官方群组：[@OuONetwork](https://t.me/OuONetwork)<br>
+
 ### **Alphaio**
 
 - **机场介绍**<br>
