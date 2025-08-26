@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-08-24 02:07:17
+# UPDATED: 2025-08-26 02:08:00
 # DOMAIN: 110
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31586
+# DOMAIN-SUFFIX: 31588
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 31894
+# TOTAL: 31896
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -11072,6 +11072,8 @@ DOMAIN-SUFFIX,fuck55.net
 DOMAIN-SUFFIX,fuck6teen.com
 DOMAIN-SUFFIX,fuckableteens.net
 DOMAIN-SUFFIX,fuckbookecuador.com
+DOMAIN-SUFFIX,fuckccp.com
+DOMAIN-SUFFIX,fuckccp.xyz
 DOMAIN-SUFFIX,fuckcnnic.net
 DOMAIN-SUFFIX,fuckcuck.com
 DOMAIN-SUFFIX,fuckgames.xxx
