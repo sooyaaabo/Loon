@@ -1,5 +1,5 @@
 #!name = iRingo:WeatherKit
-#!desc = 1.解锁全部天气功能；2.替换空气质量数据；3.添加下一小时降水数据；4.添加天气数据。\n仅支持iOS 18 & macOS 15 & watchOS 11 及以上版本。\n若使用 iOS 26 系统，请删除[数据集]中的 weatherAlerts 以确保 Apple天气 正常载入使用。
+#!desc = 1.解锁全部天气功能；2.替换空气质量数据；3.添加下一小时降水数据；4.添加天气数据。\n仅支持iOS 18 & macOS 15 & watchOS 11及以上版本。\n若使用iOS 26，请删除[数据集]中的weatherAlerts以确保Apple天气正常使用。
 #!openUrl = http://boxjs.com/#/app/iRingo.WeatherKit
 #!author = VirgilClyne[https://github.com/VirgilClyne], WordlessEcho[https://github.com/WordlessEcho], 001ProMax[https://github.com/001ProMax]
 #!tag = 功能增强
@@ -16,16 +16,16 @@
 [Argument]
 DataSets = input, "airQuality,currentWeather,forecastDaily,forecastHourly,forecastNextHour,locationInfo,news,historicalComparisons,weatherAlerts,weatherChanges", tag = [数据集] 需要包含的数据集, desc = 选中的数据集会被包含在请求中。
 Weather.Provider = select, "WeatherKit", "ColorfulClouds", "QWeather", tag = [天气] 数据源, desc = 始终会使用选定的数据源，替换天气数据。
-NextHour.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", tag = [未来一小时降水强度]数据源,desc = 始终会使用选定的数据源，填补无降水监测地区的数据。
-AQI.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", "WAQI", tag = [空气质量]数据源,desc = 始终会使用选定的数据源，填补无空气质量监测地区的数据。
-AQI.ReplaceProviders = input, "", tag = [空气质量]需要替换的供应商,desc = 选中的空气质量数据源会被替换。
+NextHour.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", tag = [未来一小时降水强度] 数据源,desc = 始终会使用选定的数据源，填补无降水监测地区的数据。
+AQI.Provider = select, "ColorfulClouds", "WeatherKit", "QWeather", "WAQI", tag = [空气质量] 数据源,desc = 始终会使用选定的数据源，填补无空气质量监测地区的数据。
+AQI.ReplaceProviders = input, "", tag = [空气质量] 需要替换的供应商,desc = 选中的空气质量数据源会被替换。
 AQI.ComparisonProvider = select, "Auto", "WeatherKit", "ColorfulClouds", "QWeather", tag = [空气质量] 对比昨日数据源, desc = 始终会使用选定的数据源，填补无对比昨日地区的数据。
-AQI.Local.ReplaceScales = input, "", tag = [空气质量]需要修改的标准, desc = 选中的空气质量标准会被替换。请注意各国监测的污染物种类可能有所不同，转换算法或API未必适合当地。
-AQI.Local.ConvertUnits = switch, false, true, tag = [空气质量]转换污染物计量单位, desc = 将污染物数据替换为转换单位后的数据，方便对照转换后的标准。（不推荐。不同单位互转可能会损失精度，导致数值偏大）
-API.ColorfulClouds.Token = input, "", tag = [API]彩云天气 API 令牌, desc = 彩云天气 API 令牌
+AQI.Local.ReplaceScales = input, "", tag = [空气质量] 需要修改的标准, desc = 选中的空气质量标准会被替换。请注意各国监测的污染物种类可能有所不同，转换算法或API未必适合当地。
+AQI.Local.ConvertUnits = switch, false, true, tag = [空气质量] 转换污染物计量单位, desc = 将污染物数据替换为转换单位后的数据，方便对照转换后的标准。（不推荐。不同单位互转可能会损失精度，导致数值偏大）
+API.ColorfulClouds.Token = input, "", tag = [API] 彩云天气 API 令牌, desc = 彩云天气 API 令牌
 API.QWeather.Host = input, "devapi.qweather.com", tag = [API] 和风天气主机, desc = 和风天气 API 使用的主机名
-API.QWeather.Token = input, "", tag = [API]和风天气 API 令牌, desc = 和风天气 API 令牌
-API.WAQI.Token = input, "", tag = [API]WAQI API 令牌, desc = WAQI API 令牌，填写此字段将自动使用WAQI高级API
+API.QWeather.Token = input, "", tag = [API] 和风天气 API 令牌, desc = 和风天气 API 令牌
+API.WAQI.Token = input, "", tag = [API] WAQI API 令牌, desc = WAQI API 令牌，填写此字段将自动使用WAQI高级API
 LogLevel = select, "WARN", "OFF", "ERROR", "INFO", "DEBUG", "ALL", tag = [调试] 日志等级, desc = 选择脚本日志的输出等级，低于所选等级的日志将全部输出。
 
 [Rule]

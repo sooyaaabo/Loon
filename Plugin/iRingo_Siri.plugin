@@ -1,5 +1,5 @@
 #!name = iRingo:Siri
-#!desc = 全面自定义「Siri 建议」功能。仅支持iOS 18、macOS 15、watchOS 11 及以上版本。
+#!desc = 全面自定义「Siri 建议」功能。\n仅支持iOS 18、macOS 15、watchOS 11 及以上版本。
 #!openUrl = http://boxjs.com/#/app/iRingo.Siri
 #!author = VirgilClyne[https://github.com/VirgilClyne]
 #!tag = 功能增强
