@@ -1,24 +1,27 @@
 #!name = 波点音乐
-#!desc = 过滤波点音乐广告
+#!desc = 过滤波点音乐广告，解锁会员功能（打开软件后切换到个人页面出现会员logo即可使用）。
 #!openUrl = https://apps.apple.com/app/id1541981555
-#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
-#!tag = 去广告
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], WeiGiegie[https://github.com/WeiGiegie]
+#!tag = 去广告, 解锁会员
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BodianMusic.png
-#!date = 2025-06-15 00:00
+#!date = 2025-08-27 09:00
 
-# 2025-05-23 14:49:53
+# 2025-08-27 03:06:07
 # https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
 
 [Rewrite]
 # 广告下发
-^https:\/\/bd-api\.kuwo\.cn\/api\/play\/advert\/ reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/(play|service|advert)\/advert\/ reject-dict
 
 # 弹窗
 ^https:\/\/bd-api\.kuwo\.cn\/api\/popup\/ reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/assist\/popup\? reject-dict
+
+^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/vip\/give\/config\? reject-dict
 
 # 首页和搜索页面 - 横幅推广
 ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/ reject-dict
@@ -31,5 +34,8 @@
 # 搜索 - 大家都在搜、搜索发现
 ^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? response-body-json-del data.hotTopic data.searchFind data.globalJumpInfo data.hotWord
 
+[Script]
+http-response ^https?:\/\/bd-api\.kuwo\.cn\/api\/(ucenter\/users\/pub|play\/music\/v2\/(audioUrl|checkRight)|service\/home\/module|pay\/vip\/lowPriceText) script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js, requires-body = true, timeout = 60, tag = [波点音乐]解锁会员
+
 [MitM]
-hostname = bd-api.kuwo.cn
+hostname = bd-api.kuwo.cn, *.kuwo.*
