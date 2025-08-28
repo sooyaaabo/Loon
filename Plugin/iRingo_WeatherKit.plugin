@@ -8,9 +8,9 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://NSRingo.github.io/guide/Weather/weather-kit
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/AppleWeather.png
-#!date = 2025-08-27 18:00
+#!date = 2025-08-28 18:00
 
-# 2025-08-27 08:54:13 v2.0.0
+# 2025-08-28 09:34:26 v2.0.1
 # https://github.com/NSRingo/WeatherKit/releases/latest/download/iRingo.WeatherKit.plugin
 
 [Argument]
