@@ -59,9 +59,9 @@ IP-CIDR, 120.222.144.64/32, REJECT, no-resolve
 IP-CIDR, 111.6.166.107/32, REJECT, no-resolve
 
 [Rewrite]
-^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
-^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
-^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
+# ^http:\/\/[\d\.:]*\/?(defaultts\.tc|vmind\.qqvideo\.tc|finderpdd\.video)\.qq\.com\/\w+ reject
+# ^http:\/\/apd-vlive\.apdcdn\.tc\.qq\.com\/vmind\.qqvideo\.tc\.qq\.com\/\w+ reject
+# ^http:\/\/apd-\w+\.v\.smtcdns\.com\/(defaultts|omts|vmind\.qqvideo)\.tc\.qq\.com\/\w+ reject
 ^https?:\/\/vv\.video\.qq\.com\/(diff|get)vmind reject-dict
 ^https?:\/\/vv\.video\.qq\.com\/getvinfo request-body-replace-regex &sppreviewtype=\d(.*)&spsrt=\d &sppreviewtype=0$1&spsrt=0
 
@@ -69,4 +69,4 @@ IP-CIDR, 111.6.166.107/32, REJECT, no-resolve
 # http-request ^https?:\/\/vv\.video\.qq\.com\/getvinfo script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/CommonScript/replace-body.js, requires-body = true, tag = [腾讯视频]移除广告, argument="&sppreviewtype=\d(.*)&spsrt=\d->&sppreviewtype=0$1&spsrt=0"
 
 [MitM]
-hostname = defaultts.tc.qq.com, vmind.qqvideo.tc.qq.com, finderpdd.video.qq.com, apd-vlive.apdcdn.tc.qq.com, apd-*.v.smtcdns.com, vv.video.qq.com
+hostname = vv.video.qq.com
