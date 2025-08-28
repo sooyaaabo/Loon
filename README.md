@@ -92,8 +92,8 @@
 4. 支持多种流媒体服务访问解锁，包括但不限于 Disney+、YouTube、Netflix、ChatGPT 等。<br>
 5. 提供节点 ``免登流媒体`` 共享账号观看 Netflix、HBO、PrimeVideo、PornHub、Exhentai。<br>
 6. 提供 Emby 服务，无 SLA 保证，如果是为了 Emby 而购买，推荐月付。<br>
-7. 每日可在群组发送指令 ``/sign@AladdinForUser_bot`` 签到获取随机流量。<br>
-8. 独家首发流量转结系统，上月剩余流量转结并延长有效期至下个月。<br>
+7. 所有套餐每日均可在群组发送指令 ``/sign@AladdinForUser_bot`` 签到获取随机流量。<br>
+8. 独家首发流量转结系统，每月 1 号流量重置（仅支持周期套餐），上月剩余流量转结并延长有效期至下个月。<br>
 9. 有关套餐权益、使用教程等更多详细内容，请在 [官方博客公告](https://tutorial.aladdinnet.cc/) 仔细阅读了解。<br>
 注：当前提供订阅、专用客户端两种形式使用，可从订阅转至客户端（暂不支持转回），免登节点目前仅支持在客户端使用，请谨慎决定是否迁移。
 
@@ -108,7 +108,7 @@
 			<th width="100px" align="center">半年付</th>
 			<th width="100px" align="center">年付</th>
 			<th width="100px" align="center">日签到</th>
-			<th width="100px" align="center">流量重置</th>
+			<th width="100px" align="center">Emby服务</th>
 		</tr>
 		<tr>
     			<td align="center">入门套餐</td>
@@ -118,7 +118,7 @@
     			<td align="center">¥48</td>
     			<td align="center">¥96</td>
     			<td align="center">1~500M</td>
-    			<td align="center">每月1号</td>
+    			<td align="center">无</td>
   		</tr>
   		<tr>
     			<td align="center">轻量套餐</td>
@@ -128,7 +128,7 @@
     			<td align="center">¥90</td>
     			<td align="center">¥180</td>
     			<td align="center">1~1000M</td>
-    			<td align="center">每月1号</td>
+    			<td align="center">1111</td>
   		</tr>
   		<tr>
     			<td align="center">基础套餐</td>
@@ -138,7 +138,7 @@
     			<td align="center">¥180</td>
     			<td align="center">¥360</td>
     			<td align="center">1~2000M</td>
-    			<td align="center">每月1号</td>
+    			<td align="center">1111</td>
   		</tr>
   		<tr>
     			<td align="center">高级套餐</td>
@@ -148,7 +148,7 @@
     			<td align="center">¥300</td>
     			<td align="center">¥600</td>
     			<td align="center">1~3000M</td>
-    			<td align="center">每月1号</td>
+    			<td align="center">1111</td>
   		</tr>
   		<tr>
     			<td align="center">豪华套餐</td>
@@ -158,7 +158,7 @@
     			<td align="center">¥900</td>
     			<td align="center">¥1200</td>
     			<td align="center">1~3888M</td>
-    			<td align="center">每月1号</td>
+    			<td align="center">1111</td>
   		</tr>
 	</table>
 </div>
@@ -172,14 +172,16 @@
     		<th width="100px" align="center">有效期</th>
     		<th width="100px" align="center">日签到</th>
     		<th width="100px" align="center">流量重置</th>
+    		<th width="100px" align="center">Emby服务</th>
   		</tr>
   		<tr>
     		<td align="center">888流量套餐</td>
     		<td align="center">100G</td>
     		<td align="center">¥188</td>
     		<td align="center">888天</td>
-    		<td align="center">1~2000M</td>
+    		<td align="center">1~1000M</td>
     		<td align="center">无重置</td>
+    		<td align="center">1111</td>
   		</tr>
 	</table>
 </div>
