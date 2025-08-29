@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Amap.png
-#!date = 2025-08-25 23:00
+#!date = 2025-08-29 18:00
 
 # 2025-08-24 16:05:54
 # https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx
@@ -24,6 +24,9 @@ DOMAIN-SUFFIX, v.smtcdns.com, REJECT
 [Rewrite]
 # 此条可以屏蔽首次进入的天气动效图层 但是会导致足迹不显示地图数据
 # ^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject-dict
+
+#  开屏广告
+^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt reject-dict
 
 # 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
 ^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
