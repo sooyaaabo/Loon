@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BodianMusic.png
-#!date = 2025-08-30 19:00
+#!date = 2025-08-30 23:00
 
 # 2025-08-27 03:06:07
 # https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
@@ -32,6 +32,9 @@
 # 首页 - 低价会员推广文本
 ^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/lowPriceText\? reject-dict
 ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter\? reject-dict
+
+# 首页 - 商城Tap
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene response-body-json-jq '.data.showShopEntry=false | .data.idolTabShow=true'
 
 # 搜索 - 大家都在搜、搜索发现
 ^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? response-body-json-del data.hotTopic data.searchFind data.globalJumpInfo data.hotWord
