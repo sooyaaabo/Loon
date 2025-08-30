@@ -1,17 +1,19 @@
 #!name = 波点音乐
 #!desc = 过滤波点音乐广告，解锁会员功能（打开软件后切换到个人页面出现会员logo即可使用）。
 #!openUrl = https://apps.apple.com/app/id1541981555
-#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], WeiGiegie[https://github.com/WeiGiegie]
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], ZenmoFeiShi[https://github.com/ZenmoFeiShi], mist-whisper[https://github.com/mist-whisper], WeiGiegie[https://github.com/WeiGiegie]
 #!tag = 去广告, 解锁会员
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BodianMusic.png
-#!date = 2025-08-30 23:00
+#!date = 2025-08-31 00:00
 
 # 2025-08-27 03:06:07
 # https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
+# 2025-08-31 00:00
+# https://raw.githubusercontent.com/mist-whisper/Loon/master/Plugins/BodianMusic.plugin
 # 2025-08-27
 # https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js
 
@@ -48,6 +50,12 @@
 
 # 我的页面 - 广告banner
 ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/positions\? reject-dict
+
+# 评论区 - 商品周边
+^https:\/\/bd-api\.kuwo\.cn\/api\/comments\/v3\/topInfo response-body-json-jq 'del(.data.putao)'
+
+# 侧边栏 - 沉浸电台banner
+^https:\/\/bd-api\.kuwo\.cn\/api\/voice\/room\/v2\/sidebar response-body-json-jq '(.data) = {}'
 
 [Script]
 http-response ^https?:\/\/bd-api\.kuwo\.cn\/api\/(ucenter\/users\/pub|play\/music\/v2\/(audioUrl|checkRight)|service\/home\/module|pay\/vip\/lowPriceText) script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js, requires-body = true, timeout = 60, tag = [波点音乐]解锁会员
