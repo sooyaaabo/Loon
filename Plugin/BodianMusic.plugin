@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BodianMusic.png
-#!date = 2025-08-27 16:00
+#!date = 2025-08-30 19:00
 
 # 2025-08-27 03:06:07
 # https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
@@ -35,6 +35,9 @@
 
 # 搜索 - 大家都在搜、搜索发现
 ^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? response-body-json-del data.hotTopic data.searchFind data.globalJumpInfo data.hotWord
+
+# 我的页面 - 广告banner
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/positions\? reject-dict
 
 [Script]
 http-response ^https?:\/\/bd-api\.kuwo\.cn\/api\/(ucenter\/users\/pub|play\/music\/v2\/(audioUrl|checkRight)|service\/home\/module|pay\/vip\/lowPriceText) script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js, requires-body = true, timeout = 60, tag = [波点音乐]解锁会员
