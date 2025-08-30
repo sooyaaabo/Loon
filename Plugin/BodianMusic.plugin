@@ -16,14 +16,16 @@
 # https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js
 
 [Rewrite]
-# 广告下发
+# 开屏广告
+^https://ad\.tencentmusic\.com/config/uni reject-dict
 ^https:\/\/bd-api\.kuwo\.cn\/api\/(play|service|advert)\/advert\/ reject-dict
 
-# 弹窗
+# 弹窗悬浮广告
 ^https:\/\/bd-api\.kuwo\.cn\/api\/popup\/ reject-dict
 ^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/assist\/popup\? reject-dict
 
-^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/vip\/give\/config\? reject-dict
+# 首页 - 商城Tap
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene response-body-json-jq '.data.showShopEntry=false | .data.idolTabShow=true'
 
 # 首页和搜索页面 - 横幅推广
 ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/ reject-dict
@@ -32,11 +34,16 @@
 # 首页 - 低价会员推广文本
 ^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/lowPriceText\? reject-dict
 ^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter\? reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/vip\/give\/config\? reject-dict
 
-# 首页 - 商城Tap
-^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene response-body-json-jq '.data.showShopEntry=false | .data.idolTabShow=true'
+# 首页 - 模块
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/index response-body-json-jq '.data.moduleList |= map(select(.type != 8 and .type != 5 and .type != 1 and .type != 9 and .type != 6))'
+
+# 首页 - 听点儿不一样的
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/recommend\? response-body-json-jq '.data.resourceList[] |= del(.resource)'
 
 # 搜索 - 大家都在搜、搜索发现
+^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word reject-dict
 ^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? response-body-json-del data.hotTopic data.searchFind data.globalJumpInfo data.hotWord
 
 # 我的页面 - 广告banner
