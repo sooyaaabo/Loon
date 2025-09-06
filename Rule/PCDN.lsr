@@ -1,0 +1,49 @@
+# 2025-03-13
+# https://github.com/uselibrary/PCDN/blob/main/pcdn.list
+
+# 通用 CDN 域名
+DOMAIN-SUFFIX, bsccdn.net
+DOMAIN-SUFFIX, gjfzpt.cn
+DOMAIN-SUFFIX, jomodns.cn
+DOMAIN-SUFFIX, kuiniuca.com
+DOMAIN-SUFFIX, pkoplink.com
+DOMAIN-SUFFIX, saxysec.com
+DOMAIN-SUFFIX, szbdyd.com
+DOMAIN-SUFFIX, uhabo.com
+DOMAIN-SUFFIX, xycdn.com
+
+# 视频平台 CDN
+DOMAIN-SUFFIX, mcdn.bilivideo.cn
+DOMAIN-SUFFIX, onethingpcs.com
+DOMAIN-SUFFIX, pcdn.xmcdn.com
+DOMAIN-SUFFIX, tpa-hcdn.iqiyi.com
+
+# P2P 相关域名
+DOMAIN, p2p.huya.com
+DOMAIN, p2p.qq.com
+DOMAIN, p2ptun.qq.com
+DOMAIN, p2pupdate.gamedl.qq.com
+DOMAIN, p2pupgrade.gamedl.qq.com
+DOMAIN, pcdn.yximgs.com
+DOMAIN, stun.hitv.com
+
+# 正则匹配规则
+URL-REGEX,  "^https?:\/\/(?:[^\/]+\.)*pcdn[^\/]*biliapi\.net"
+URL-REGEX,  "^https?:\/\/(?:[^\/]+\.)*pcdn[^\/]*youku\.com"
+URL-REGEX,  "^https?:\/\/(?:[^\/]+\.)*p2p[^\/]*douyucdn\.cn"
+URL-REGEX,  "^https?:\/\/(?:[^\/]+\.)*p2p[^\/]*qq\.com"
+
+# 斗鱼规则
+DOMAIN-SUFFIX, stun.douyucdn.cn
+DOMAIN-SUFFIX, stun1.douyucdn.cn
+DOMAIN-SUFFIX, dyp2p-ali.douyucdn.cn
+DOMAIN-SUFFIX, dyp2p-hw.douyucdn.cn
+DOMAIN-SUFFIX, p2p-ali.douyucdn.cn
+DOMAIN-SUFFIX, p2pchunk-hw.douyucdn.cn
+DOMAIN-SUFFIX, p2pchunk-table.douyucdn.cn
+DOMAIN-SUFFIX, p2pchunk-ws.douyucdn.cn
+DOMAIN-SUFFIX, p2perrorlog.douyucdn.cn
+DOMAIN-SUFFIX, p2plive-ali.douyucdn.cn
+DOMAIN-SUFFIX, p2plive-ws.douyucdn.cn
+DOMAIN-SUFFIX, p2plog.douyucdn.cn
+DOMAIN-SUFFIX, p2pvod-ws.douyucdn.cn

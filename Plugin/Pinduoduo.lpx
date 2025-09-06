@@ -1,0 +1,74 @@
+#!name = 拼多多
+#!desc = 过滤拼多多广告
+#!openUrl = https://apps.apple.com/app/id1044283059
+#!author = ZenmoFeiShi[https://github.com/ZenmoFeiShi], RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
+#!date = 2025-08-02 11:30
+
+# 2025-08-02
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
+# 2024-08-10
+# https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
+# 2025-07-16 00:52:53
+# https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx
+
+[Rule]
+# 拦截HTTPDNS
+AND, ((URL-REGEX, "^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?"), (USER-AGENT, "*com.xunmeng.pinduoduo*")), REJECT
+AND, ((URL-REGEX, "^http:\/\/\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))\]\/d(\d)?\?"), (USER-AGENT, "*com.xunmeng.pinduoduo*")), REJECT
+
+DOMAIN, titan.pinduoduo.com, REJECT
+# DOMAIN, apm-a.pinduoduo.com, REJECT
+# DOMAIN, apm.pinduoduo.com, REJECT
+# DOMAIN, m.pinduoduo.net, REJECT
+DOMAIN, ta-a.pinduoduo.com, REJECT
+DOMAIN, ta.pinduoduo.com, REJECT
+DOMAIN, th-a.pinduoduo.com, REJECT
+DOMAIN, th-b.pinduoduo.com, REJECT
+DOMAIN, th.pinduoduo.com, REJECT
+DOMAIN, sdk.1rtb.net, REJECT
+IP-CIDR, 183.194.214.21/32, REJECT
+IP-CIDR, 49.235.102.190/32, REJECT
+IP-CIDR, 81.69.116.33/32, REJECT
+IP-CIDR, 183.194.214.20/32, REJECT
+IP-CIDR, 117.185.244.145/32, REJECT
+IP-CIDR, 101.35.204.35/32, REJECT
+IP-CIDR, 114.110.97.97/32, REJECT
+IP-CIDR, 81.69.104.17/32, REJECT
+IP-CIDR, 117.185.242.187/32, REJECT
+IP-CIDR, 117.185.242.18/32, REJECT
+IP-CIDR, 183.194.214.14/32, REJECT
+IP-CIDR, 114.110.96.1/32, REJECT
+
+[Rewrite]
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element reject-dict
+^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|my_order_group|new_chat_group|order_express_group|personal) reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
+^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items
+^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
+^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
+^https:\/\/api\.pinduoduo\.com\/search_hotquery\? reject-dict
+
+# 搜索词推荐、横幅模块
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.search_bar_hot_query result.dy_module.irregular_banner_dy
+
+# 精简底栏入口
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html")))'
+
+[Script]
+# http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/JavaScript/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = [拼多多]精简首页
+
+[MitM]
+hostname = api.pinduoduo.com, api.yangkeduo.com

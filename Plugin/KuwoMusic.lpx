@@ -1,0 +1,69 @@
+#!name = 酷我音乐
+#!desc = 过滤酷我音乐广告，解锁部分会员功能。
+#!openUrl = https://apps.apple.com/app/id588673713
+#!author = Yuheng0101[https://github.com/Yuheng0101], fmz200[https://github.com/fmz200], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告, 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/KuwoMusic.png
+#!date = 2025-06-15 00:00
+
+# version 1.0.3
+# https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js
+# 2025-05-13 15:17:08
+# https://kelee.one/Tool/Loon/Lpx/Kuwo_remove_ads.lpx
+
+[Rule]
+# 广告配置
+URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/AdService\/", REJECT-DICT
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/user\/freeMode\/", REJECT-DICT
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/pasterAdvert\/", REJECT-DICT
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/startup\/config", REJECT-DICT
+URL-REGEX, "^http:\/\/rich\.kuwo\.cn\/EcomResourceServer\/", REJECT-DICT
+IP-CIDR, 111.206.98.63/32, REJECT, no-resolve
+
+# 搜索填充词
+URL-REGEX, "^http:\/\/searchrecterm\.kuwo\.cn\/recterm\.s", REJECT-DICT
+
+# 精简我的页面侧边栏
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/app\/newMenuList\/menuListInfo", REJECT-DICT
+
+# 迷你播放器横幅
+URL-REGEX, "^http:\/\/vip\d\.kuwo\.cn\/vip\/v\d\/sysinfo\?op=getRePayAndDoPayBox", REJECT-DICT
+
+# 听书页面广告
+URL-REGEX, "^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/album\/adBar\/", REJECT-DICT
+
+[Rewrite]
+# 首页 - 推广语
+^https:\/\/vip\d\.kuwo\.cn\/commercia\/vipconf\/projectPage\/getPageContent reject-dict
+^https:\/\/tingshu\.kuwo\.cn\/v2\/api\/pay\/user\/info reject-dict
+
+# 我的页面横幅
+^https:\/\/appi\.kuwo\.cn\/kuwopay\/personal\/cells reject-dict
+
+# 移除听书页面广告
+^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/tingshu\/index\/radio response-body-json-jq 'walk(if type == "object" and .type == "stripAdvert" then del(.child) else . end)'
+
+[Script]
+# 解锁会员
+http-response ^https?:\/\/(?:musicpay|nmobi|vip1|audiobookpay|tingshu)\.kuwo\.cn\/(?:music\.pay\?newver=\d+|mobi.s\?f=kwxs|vip\/(?:enc\/user\/vip\?op=ui&uid=|v2\/theme\?op=gd)|a\.p|v2\/api\/pay\/user\/info) script-path = https://raw.githubusercontent.com/Yuheng0101/X/main/Scripts/kuwo.js, requires-body = true, timeout = 60, tag = [酷我音乐]解锁会员
+
+# 移除广告
+http-response ^https?:\/\/(mgxhtj|nmobi|searchrecterm)\.kuwo\.cn\/(mgxh|mobi|recterm)\.s script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = [酷我音乐]移除广告
+
+http-response ^https?:\/\/audiobookpay\.kuwo\.cn\/a\.p script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = [酷我音乐]移除广告
+
+http-response ^https?:\/\/musicpay\.kuwo\.cn\/music\.pay script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = [酷我音乐]移除广告
+
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/(enc\/user\/vip\?op=ui|v\d\/theme\?op=gd) script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = [酷我音乐]移除广告
+
+http-response ^https?:\/\/vip1\.kuwo\.cn\/vip\/v\d\/user\/vip\?op=ui script-path = https://raw.githubusercontent.com/fmz200/wool_scripts/main/Scripts/kuwo/kuwo.js, requires-body = true, tag = [酷我音乐]移除广告
+
+# 移除听书页面广告
+# http-response ^http:\/\/wapi\.kuwo\.cn\/openapi\/v\d\/tingshu\/index\/radio script-path = https://kelee.one/Resource/JavaScript/Kuwo/Kuwo_remove_ads.js, requires-body = true, tag = [酷我音乐]移除听书页面广告
+
+[MitM]
+hostname = audiobookpay.kuwo.cn, mgxhtj.kuwo.cn, nmobi.kuwo.cn, searchrecterm.kuwo.cn, musicpay.kuwo.cn, appi.kuwo.cn, mc.tencentmusic.com, vip*.kuwo.cn, tingshu.kuwo.cn, *.kuwo.cn

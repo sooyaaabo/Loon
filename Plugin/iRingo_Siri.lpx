@@ -1,0 +1,39 @@
+#!name = iRingo:Siri
+#!desc = 全面自定义「Siri 建议」功能。\n仅支持iOS 18、macOS 15、watchOS 11 及以上版本。
+#!openUrl = http://boxjs.com/#/app/iRingo.Siri
+#!author = VirgilClyne[https://github.com/VirgilClyne]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!homepage = https://nsringo.github.io/guide/Siri/siri
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/AppleSiri.png
+#!date = 2025-06-15 00:00
+
+# 2024-12-24 04:25:06 v4.2.7
+# https://github.com/NSRingo/Siri/releases/latest/download/iRingo.Siri.plugin
+
+[Argument]
+CountryCode = select, "US", "OFF", "AUTO", "CN", "HK", "TW", "SG", "JP", "AU", "GB", "KR", "CA", "IE", tag = 国家或地区代码, desc = 不同国家或地区提供的内容或有差别，此选项同时会影响分配给您不同地区的 Siri 服务器。
+SiriLocale = select, "zh_CN", "OFF", "AUTO", "zh_TW", "yue_CN", "zh_HK", "ja_JP", "en_CA", "en_SG", "en_AU", "en_IE", "en_US", "en_GB", "ko_KR", tag = Siri 区域, desc = 忽略系统中“Siri”的“语言”设置，强制采用这里的设置。
+Region = select, "OFF", "AUTO", "CN", "HK", "TW", "SG", "US", "JP", "AU", "GB", "KR", "CA", "IE", tag = 区域, desc = 作用未知，待测试。
+SiriResponseLanguageVariant = select, "zh_CN", "OFF", "AUTO", "zh_TW", "yue_CN", "zh_HK", "ja_JP", "en_CA", "en_SG", "en_AU", "en_IE", "en_US", "en_GB", "ko_KR", tag = Siri 响应语言修改, desc = 自定义 Siri 回复时使用的语言。
+LogLevel = select, "WARN", "OFF", "ERROR", "INFO", "DEBUG", "ALL", tag = [调试] 日志等级, desc = 选择脚本日志的输出等级，低于所选等级的日志将全部输出。
+
+[Script]
+http-request ^https?:\/\/(api-siri|api2|api-.+)\.smoot\.apple\.com\/search script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, tag = [iRingo_Siri]Siri.Search.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+http-request ^https?:\/\/(guzzoni|api2|api-.+)\.smoot\.apple\.com\/apple\.parsec\.siri\.v2alpha\.SiriSearch\/SiriSearch script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_Siri]Siri.SiriSearch.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+http-request ^https?:\/\/api-safari(-.+)?\.smoot\.apple\.com\/apple\.parsec\.safari\.v1alpha\.SafariSearch\/SafariSearch script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_Siri]Safari.SafariSearch.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+http-request ^https?:\/\/api-lookup(-.+)?\.smoot\.apple\.com\/apple\.parsec\.lookup\.v1alpha\.LookupSearch\/LookupSearch script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_Siri]Lookup.LookupSearch.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+http-request ^https?:\/\/(api2|api-.+)\.smoot\.apple\.com\/apple\.parsec\.visualsearch\.v2\.VisualSearch\/VisualSearch script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_Siri]Visualsearch.VisualSearch.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+http-request ^https?:\/\/(api-.+)\.smoot\.apple\.com\/apple\.parsec\.responseframework\.engagement\.v1alpha\.EngagementSearch\/EngagementSearch script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_Siri]ResponseFramework.Engagement.EngagementSearch.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+http-request ^https?:\/\/(api-.+)\.smoot\.apple\.com\/apple\.parsec\.spotlight\.v1alpha\.ZkwSuggestService\/Suggest script-path = https://github.com/NSRingo/Siri/releases/latest/download/request.bundle.js, requires-body = true, binary-body-mode = true, tag = [iRingo_Siri]Spotlight.ZkwSuggestService.request, argument=[{CountryCode},{SiriLocale},{Region},{SiriResponseLanguageVariant},{LogLevel}]
+
+[MitM]
+hostname = guzzoni.smoot.apple.com, api2.smoot.apple.com, api-*.smoot.apple.com

@@ -1,0 +1,102 @@
+#!name = 闲鱼
+#!desc = 过滤闲鱼广告
+#!openUrl = https://apps.apple.com/app/id510909506
+#!author = RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Goofish.png
+#!date = 2025-09-03 02:00
+
+# 2025-09-03 01:29:26
+# https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
+
+[Rule]
+DOMAIN-SUFFIX, iyes.youku.com, REJECT
+
+# 拦截广告下发
+AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2%E9%B1%BC*")), REJECT
+
+[Rewrite]
+# 开屏广告
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlecommerce\.splash\.ads\/ reject-dict
+
+# 首页 - 顶部横幅小部件、顶部 - 推荐 - 信息流广告
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo")) | .data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "homeMultiBanner" and $ct != "mamaAD")) | .data.sections |= map(select((.template.name|type=="string")and(.template.name=="idlefish_home_new_commodity_card"or(.template.name|contains("fish_home_tags_item_card")))))'
+
+# 首页 - 顶部横幅小部件
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.widget\.refresh\.get\/ response-body-json-jq '.data.homeTopList |= map(select(.sectionType == "kingkongDo"))'
+
+# 首页 - 新版首页顶部小部件
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.home\.whale\.modulet\/ response-body-json-jq '.data.container.sections |= map(select(.template.name == "fish_home_miniapp"))'
+Add commentMore actions
+
+# 首页 - 左上角签到、右下角悬浮广告、底栏动态发布球、底栏同城标签红点
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.user\.strategy\.list\/ reject-dict
+
+# 商品详情 - 为你推荐
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.fun\.follow\.feed\.list\/ response-body-json-jq '.data.sections|=map(select(.cardType==2001))'
+
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.community\/ response-body-json-jq '.data.feedsList |= map(select(.template.name == "idlefish_home_new_commodity_card" or .template.name == "idlefish_home_new_content_card"))'
+
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.recommend\.list\/ reject-dict
+
+# 顶部 - 新发 - 信息流广告
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.newitem\.page\/ response-body-json-jq '.data.sections |= map(select(.data.clickParam.args.cardType as $ct | $ct != "banner" and $ct != "mamaAD"))'
+
+# 本地 - 右上角附近提示
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.near\.by\.corner\.info\/ reject-dict
+
+# 本地 - 广告横幅
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.flow\.plat\.section\/ response-body-json-jq '.data.data.components |= map(select(.data and (.data|type=="object") and .data.template and (.data.template|type=="object") and .data.template.name and (.data.template.name|type=="string") and (.data.template.name|contains("fish_city_kingkong"))))'
+
+# 本地 - 信息流广告
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ response-body-json-jq '.data.sections |= map(select((.template.cardEnum != "ads") and (.cardType == "common")))'
+
+# 我的页面 - 顶部提示、卡片推广、横幅广告、借钱入口
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq '.data.container.sections |= map(select(.template.name as $name | ["my_fy25_header","my_fy25_user_info","my_fy25_trade","my_fy25_appraise","my_fy25_tools"] | index($name)))'
+
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/FleaMarket/adapter_FleaMarket_remove_ads.jq"
+
+# 我的页面 - 商品推广
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.item\.buy\.feeds\/ reject-dict
+
+# 搜索填充词
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.shade\/ reject-dict
+
+# 顶部标签图标
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ response-body-json-jq '.data.circleList[].showInfo.titleImage |= (.lightUrl = "" | .url = "" | del(.width, .height))'
+
+# 搜索结果广告
+^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ response-body-json-jq '.data.resultList |= map(if .data.item.main.exContent.dislikeFeedback.clickParam.args.bizType == "ad" then empty else . end)'
+
+# 搜索页面 - 搜索词推广、闲鱼行情热点
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ response-body-json-jq '.data.resultList |= map(select(.type != "MarketHotSpot"))'
+
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.item\.search\.activate\/ response-body-json-jq '.data.cardList |= map(if has("cardData") and (.cardData | has("hotwords")) then .cardData |= del(.hotwords) else . end)'
+
+# 消息列表推广
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.playboy\.recommend\/ reject-dict
+
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.trade\.full\.info\/ response-body-json-jq '.data.components |= map(select(.render | . == "orderStatusVO" or . == "addressInfoVO" or . == "orderInfoVO"))'
+
+[Script]
+# 移除阿里巴巴通用广告请求
+# http-response ^http:\/\/.+\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js, tag = [闲鱼]移除通用请求广告
+
+# 我的页面
+# http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ script-path = https://kelee.one/Resource/JavaScript/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = [闲鱼]移除我的页面推广
+
+# 首页信息流
+# http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.nextfresh\/ script-path = https://kelee.one/Resource/JavaScript/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = [闲鱼]移除首页信息流推广
+
+# 首页顶部标签
+# http-response ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlehome\.home\.circle\.list\/ script-path = https://kelee.one/Resource/JavaScript/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = [闲鱼]移除首页顶部标签推广
+
+# 搜索结果广告
+# http-response ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ script-path = https://kelee.one/Resource/JavaScript/FleaMarket/FleaMarket_remove_ads.js, requires-body = true, tag = [闲鱼]移除搜索结果广告
+
+[MitM]
+hostname = acs.m.goofish.com, g-acs.m.goofish.com

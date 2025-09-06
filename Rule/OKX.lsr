@@ -1,0 +1,7 @@
+# https://rule.kelee.one/Loon/OKX.lsr
+# UpdateTime：2025-08-08 02:32:48
+# RuleCount：3
+
+DOMAIN-SUFFIX, okex.com
+DOMAIN-SUFFIX, oklink.com
+DOMAIN-SUFFIX, okx.com

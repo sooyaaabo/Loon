@@ -1,0 +1,58 @@
+name: Download AdRules List
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # 每6小时运行一次
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  actions: write
+  contents: write  
+
+jobs:
+  download_and_add_header:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: sooyaaabo/Loon
+          path: Loon
+
+      - name: Download AdRules list
+        run: |
+          curl -o adrules.list https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list
+
+      - name: Add header and save to repository
+        run: |
+          # 创建目标目录 Rule
+          mkdir -p Loon/Rule
+          # 写入规则头部
+          echo '# 原始链接：https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list' > Loon/Rule/AdRules.lsr
+          # 下载的内容追加到文件
+          cat adrules.list >> Loon/Rule/AdRules.lsr
+
+      - name: Commit and push changes
+        run: |
+          cd Loon
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add . 
+            git commit -m "Update AdRules.lsr $(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M')"
+            git push origin HEAD
+          else
+            echo "No changes to commit."
+          fi
+
+  clean_up_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clean up workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 5

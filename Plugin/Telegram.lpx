@@ -1,0 +1,64 @@
+#!name = Telegram
+#!desc = Telegram外部链接跳转，可选择Telegram、Swiftgram、Turrit、iMe、Nicegram、Lingogram。
+#!openUrl = https://apps.apple.com/app/id686449807
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.2(877)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Telegram-01.png
+#!date = 2025-08-20 14:00
+
+[Argument]
+t.me_redirect = select, "Telegram", "Swiftgram", "Turrit", "iMe", "Nicegram", "Lingogram", tag = 跳转至对应客户端
+
+[Rule]
+DOMAIN-SUFFIX, swiftgram.app, PROXY
+DOMAIN-SUFFIX, iturrit.com, PROXY
+DOMAIN-SUFFIX, imem.app, PROXY
+DOMAIN-SUFFIX, nicegram.app, PROXY
+DOMAIN-SUFFIX, nicegram.cloud, PROXY
+DOMAIN-SUFFIX, intentchat.app, PROXY
+DOMAIN-SUFFIX, comments.app, PROXY
+DOMAIN-SUFFIX, mbrx.app, PROXY
+DOMAIN-SUFFIX, contest.com, PROXY
+DOMAIN-SUFFIX, stel.com, PROXY
+DOMAIN-SUFFIX, tdesktop.com, PROXY
+DOMAIN-SUFFIX, telegramdownload.com, PROXY
+DOMAIN-SUFFIX, tg.dev, PROXY
+DOMAIN-SUFFIX, usercontent.dev, PROXY
+DOMAIN-SUFFIX, quiz.directory, PROXY
+DOMAIN-SUFFIX, telegram.dog, PROXY
+DOMAIN-SUFFIX, t.me, PROXY
+DOMAIN-SUFFIX, telegram.me, PROXY
+DOMAIN-SUFFIX, tx.me, PROXY
+DOMAIN-SUFFIX, telega.one, PROXY
+DOMAIN-SUFFIX, cdn-telegram.org, PROXY
+DOMAIN-SUFFIX, graph.org, PROXY
+DOMAIN-SUFFIX, telegram.org, PROXY
+DOMAIN-SUFFIX, telegram-cdn.org, PROXY
+DOMAIN-SUFFIX, telesco.pe, PROXY
+DOMAIN-SUFFIX, legra.ph, PROXY
+DOMAIN-SUFFIX, telegra.ph, PROXY
+DOMAIN-SUFFIX, telegram.space, PROXY
+DOMAIN-KEYWORD, nicegram, PROXY
+IP-CIDR, 5.28.192.0/18, PROXY, no-resolve
+IP-CIDR, 91.108.0.0/16, PROXY, no-resolve
+IP-CIDR, 109.239.140.0/24, PROXY, no-resolve
+IP-CIDR, 149.154.160.0/20, PROXY, no-resolve
+IP-CIDR6, 2001:67c:4e8::/48, PROXY, no-resolve
+IP-CIDR6, 2001:b28:f23c::/47, PROXY, no-resolve
+IP-CIDR6, 2001:b28:f23f::/48, PROXY, no-resolve
+IP-CIDR6, 2a0a:f280::/29, PROXY, no-resolve
+IP-ASN, 44907, PROXY, no-resolve
+IP-ASN, 59930, PROXY, no-resolve
+IP-ASN, 62014, PROXY, no-resolve
+IP-ASN, 62041, PROXY, no-resolve
+IP-ASN, 211157, PROXY, no-resolve
+
+[Script]
+http-response (https:\/\/)?t\.me\/(.+) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/Telegram/t.me_redirect.js, requires-body = false, tag = [Telegram]t.me重定向, argument=[{t.me_redirect}]
+
+[MitM]
+hostname = t.me

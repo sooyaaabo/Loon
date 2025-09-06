@@ -1,0 +1,1002 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Loon 插件仓库</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="../Icon/PluginHub/LoonPluginHub.png" type="image/png">
+    <link rel="apple-touch-icon" href="../Icon/PluginHub/LoonPluginHub-White.png">
+    <style>
+        /* CSS 变量定义：亮色模式 */
+        :root {
+            --accent: #0078e7; /* 主题强调色 */
+            --bg: #fafbfe; /* 背景色 */
+            --card: #fff; /* 卡片背景色 */
+            --radius: 12px; /* 圆角半径 */
+            --border-color: #e1e4e8; /* 边框颜色 */
+            --text-primary: #1d1d1f; /* 主要文本颜色 */
+            --text-secondary: #888; /* 次要文本颜色 */
+            --text-hover: #1d1d1f; /* 鼠标悬停文本颜色 */
+            --card-desc: #555; /* 卡片描述文本颜色 */
+            --separator-color: #d1d5db; /* 分隔线颜色 */
+            --switch-bg: #f1f1f1; /* 开关背景色 */
+            --thumb-bg: #fff; /* 开关滑块背景色 */
+        }
+
+        /* CSS 变量定义：暗色模式 */
+        body.dark-mode {
+            --accent: #268fff;
+            --bg: #181818;
+            --card: #252525;
+            --border-color: #363636;
+            --text-primary: #f2f2f2;
+            --text-secondary: #999;
+            --text-hover: #fff;
+            --card-desc: #aaa;
+            --separator-color: #4b5563;
+            --switch-bg: #333;
+            --thumb-bg: #555;
+        }
+
+        /* 全局样式重置 */
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text-primary);
+            transition: background-color 0.3s, color 0.3s; /* 背景和文字颜色过渡动画 */
+        }
+
+        /* 顶部导航栏样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 1.5rem 1.8rem;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky; /* 粘性定位，滚动时固定在顶部 */
+            top: 0;
+            z-index: 30;
+            background: var(--bg);
+        }
+
+        .header-logo {
+            position: relative;
+            z-index: 1;
+        }
+
+        .header-logo img {
+            height: 40px;
+            display: block;
+        }
+
+        .header-title-block {
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%); /* 居中标题 */
+            width: 100%;
+            padding: 0 90px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: .2rem 0;
+            font-size: 1.2rem;
+            color: var(--accent);
+            white-space: nowrap; /* 不换行 */
+            overflow: hidden; /* 隐藏溢出内容 */
+            text-overflow: ellipsis; /* 溢出部分显示省略号 */
+        }
+
+        header p {
+            margin: .3rem 0 0;
+            font-size: .8rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .header-controls {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* 菜单切换按钮 (汉堡菜单) */
+        .menu-toggle {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            width: 28px;
+            height: 28px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 4px;
+        }
+
+        .menu-toggle span {
+            display: block;
+            height: 3px;
+            width: 100%;
+            background-color: var(--text-secondary);
+            border-radius: 3px;
+            transition: background-color 0.25s;
+        }
+
+        .menu-toggle:hover span {
+            background-color: var(--text-hover);
+        }
+
+        /* 二级菜单/更多功能菜单 */
+        .secondary-menu {
+            position: absolute;
+            top: calc(100% + 10px); /* 定位在 header 下方 */
+            right: 0;
+            background: var(--card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem;
+            display: none; /* 默认隐藏 */
+            flex-direction: column;
+            gap: 0.5rem;
+            z-index: 40;
+            min-width: 200px;
+        }
+
+        .secondary-menu.active {
+            display: flex; /* 激活时显示 */
+        }
+
+        .secondary-menu .control-group,
+        .secondary-menu .control-group-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.5rem;
+            border-radius: 8px;
+        }
+
+        .secondary-menu .control-group:hover,
+        .secondary-menu .control-group-wrapper:hover {
+            background-color: rgba(128, 128, 128, 0.1); /* 悬停背景色 */
+        }
+
+        .secondary-menu .separator {
+            height: 1px;
+            background-color: var(--border-color);
+            margin: 0 0.5rem;
+        }
+
+        .secondary-menu .control-group {
+            width: 100%;
+        }
+
+        .control-group a,
+        .control-group button,
+        .control-group-wrapper button {
+            display: flex;
+            align-items: center;
+            background: none;
+            border: none;
+            cursor: pointer;
+            padding: 0;
+            text-decoration: none;
+            color: inherit;
+            width: 100%;
+            gap: 0.2rem;
+            font-size: 1rem;
+        }
+
+        /* 通用图标样式 */
+        .icon {
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            background-color: var(--text-secondary);
+            transition: background-color 0.25s;
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: 100% 100%;
+            mask-size: 100% 100%;
+            flex-shrink: 0; /* 防止图标被压缩 */
+        }
+
+        .control-group a:hover .icon,
+        .control-group button:hover .icon {
+            background-color: var(--text-hover); /* 悬停时图标颜色 */
+        }
+
+        /* 特定图标的背景图片 */
+        .icon-sun {
+            -webkit-mask-image: url('../Icon/PluginHub/Sun.svg');
+            mask-image: url('../Icon/PluginHub/Sun.svg');
+        }
+
+        .icon-moon {
+            -webkit-mask-image: url('../Icon/PluginHub/Moon.svg');
+            mask-image: url('../Icon/PluginHub/Moon.svg');
+        }
+
+        .icon-telegram {
+            -webkit-mask-image: url('../Icon/PluginHub/Telegram.svg');
+            mask-image: url('../Icon/PluginHub/Telegram.svg');
+        }
+
+        .icon-github {
+            -webkit-mask-image: url('../Icon/PluginHub/GitHub.svg');
+            mask-image: url('../Icon/PluginHub/GitHub.svg');
+        }
+
+        /* 外观模式图标（根据主题切换） */
+        .icon-appearance {
+            width: 20px;
+            height: 20px;
+            -webkit-mask-image: url('../Icon/PluginHub/Sun.svg'); /* 亮色模式显示太阳 */
+            mask-image: url('../Icon/PluginHub/Sun.svg');
+        }
+
+        body.dark-mode .icon-appearance {
+            -webkit-mask-image: url('../Icon/PluginHub/Moon.svg'); /* 暗色模式显示月亮 */
+            mask-image: url('../Icon/PluginHub/Moon.svg');
+        }
+
+        /* 主题切换开关 */
+        #theme-toggle {
+            position: relative;
+            width: 50px;
+            height: 26px;
+            border-radius: 13px;
+            background-color: var(--switch-bg);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 4px;
+            margin-left: auto; /* 推到右边 */
+            cursor: pointer;
+            flex-shrink: 0;
+        }
+
+        #theme-toggle .icon-sun,
+        #theme-toggle .icon-moon {
+            width: 18px;
+            height: 18px;
+            background-color: var(--text-primary);
+        }
+
+        #theme-toggle .thumb {
+            position: absolute;
+            top: 2px;
+            left: 2px;
+            width: 22px;
+            height: 22px;
+            background-color: var(--thumb-bg);
+            border-radius: 50%;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+            transition: transform 0.25s ease-in-out; /* 滑块过渡动画 */
+        }
+
+        body.dark-mode #theme-toggle .thumb {
+            transform: translateX(24px); /* 暗色模式滑块移动 */
+        }
+
+        /* 媒体查询：桌面端样式 */
+        @media (min-width: 768px) {
+            header h1 {
+                font-size: 1.6rem;
+            }
+
+            header p {
+                font-size: .9rem;
+            }
+
+            .menu-toggle {
+                display: none; /* 桌面端隐藏汉堡菜单 */
+            }
+
+            .header-controls {
+                display: contents; /* 使子元素直接作为 header 的子元素参与布局 */
+            }
+
+            .secondary-menu {
+                display: flex !important; /* 桌面端始终显示二级菜单 */
+                position: static; /* 取消绝对定位 */
+                flex-direction: row; /* 水平排列 */
+                align-items: center;
+                gap: 0.8rem;
+                background: none;
+                border: none;
+                box-shadow: none;
+                padding: 0;
+                min-width: 0;
+            }
+
+            .secondary-menu .control-group,
+            .secondary-menu .control-group-wrapper {
+                padding: 0;
+                background: none !important;
+                width: auto;
+            }
+
+            .secondary-menu .separator {
+                width: 1px;
+                height: 24px;
+                background-color: var(--separator-color);
+                margin: 0;
+            }
+
+            .secondary-menu .control-group span:not(.icon),
+            .secondary-menu .control-group-wrapper span:not(.icon) {
+                display: none; /* 桌面端隐藏二级菜单中的文本，只显示图标 */
+            }
+
+            #theme-toggle {
+                margin-left: 0; /* 调整主题切换按钮位置 */
+            }
+        }
+
+        /* 主要内容区域容器 */
+        .wrap {
+            max-width: 1000px;
+            margin: 0 auto; /* 居中 */
+            padding: 1rem;
+        }
+
+        /* 公告横幅样式 */
+        .announcement-banner {
+            background-color: #fff9de;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            margin-bottom: 1rem;
+            position: relative;
+            min-height: 3.2rem;
+            cursor: pointer;
+            overflow: hidden; /* 隐藏溢出内容，用于文字滚动 */
+        }
+
+        body.dark-mode .announcement-banner {
+            background-color: #3a372d;
+            border-color: #444;
+        }
+
+        .banner-item {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            margin: 0;
+            padding: .5rem 1rem;
+            color: #1d1d1f;
+            font-size: .9rem;
+            font-weight: 500;
+            line-height: 1.5;
+            text-align: left;
+            opacity: 0; /* 默认隐藏 */
+            transition: opacity 0.5s ease-in-out; /* 透明度过渡动画 */
+            z-index: -1;
+            white-space: nowrap;
+            transform: translateX(0);
+        }
+
+        body.dark-mode .banner-item {
+            color: #e2e2e2;
+        }
+
+        .banner-item.active {
+            opacity: 1; /* 激活时显示 */
+            z-index: 1;
+        }
+
+        /* 搜索框和标签页样式 */
+        .search-box {
+            background: var(--card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: .9rem;
+            margin-bottom: 1rem;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+
+        #search {
+            width: 100%;
+            padding: .6rem .8rem;
+            font-size: 1rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            background: var(--bg);
+            color: var(--text-primary);
+        }
+
+        body.dark-mode #search {
+            border-color: #4a4a4a;
+        }
+
+        .tabs {
+            display: flex;
+            gap: .5rem;
+            flex-wrap: wrap; /* 自动换行 */
+            margin-top: .6rem;
+        }
+
+        .tabs button {
+            padding: .4rem .9rem;
+            border: 1px solid #ddd;
+            border-radius: var(--radius);
+            background: var(--card);
+            color: var(--text-primary);
+            font-size: .85rem;
+            cursor: pointer;
+            min-width: 96px;
+            text-align: center;
+            transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        body.dark-mode .tabs button {
+            border-color: #4a4a4a;
+        }
+
+        .tabs button.active {
+            background: var(--accent); /* 激活状态背景色 */
+            color: #fff; /* 激活状态文字颜色 */
+            border-color: var(--accent);
+        }
+
+        /* 分区标题 */
+        .section-title {
+            font-size: 1rem;
+            font-weight: 600;
+            margin: 1.5rem 0 .6rem .1rem;
+            color: var(--text-primary);
+        }
+
+        /* 插件列表网格布局 */
+        .list {
+            display: grid;
+            gap: .7rem;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* 响应式网格 */
+        }
+
+        /* 插件卡片样式 */
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            padding: .9rem;
+            text-decoration: none;
+            color: inherit;
+            cursor: pointer;
+            transition: box-shadow .2s, background-color .15s ease, transform .15s ease, border-color .3s; /* 过渡动画 */
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, .08); /* 悬停阴影 */
+        }
+
+        body.dark-mode .card:hover {
+            box-shadow: 0 4px 16px rgba(0, 0, 0, .2);
+            border-color: #555;
+        }
+
+        .card:active {
+            background-color: #e6f0ff; /* 点击时背景色 */
+            transform: scale(.98); /* 点击时缩小一点 */
+        }
+
+        body.dark-mode .card:active {
+            background-color: #333d4d;
+        }
+
+        .card-inner-layout {
+            display: flex;
+            align-items: flex-start;
+            gap: .7rem;
+        }
+
+        .card-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 8px;
+            object-fit: cover;
+            margin-top: 3px;
+            flex-shrink: 0;
+            background: #fff;
+        }
+
+        .card-content {
+            flex: 1;
+            min-width: 0;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            gap: .5rem;
+        }
+
+        .card-title {
+            margin: 0;
+            font-size: 1.1rem;
+            color: var(--accent);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-update-time {
+            margin: .2rem 0 .4rem;
+            font-size: .75rem;
+            color: #888;
+        }
+
+        body.dark-mode .card-update-time {
+            color: #777;
+        }
+
+        .card-desc {
+            margin: 0;
+            font-size: .85rem;
+            color: var(--card-desc);
+            flex-grow: 1; /* 允许描述文本占据更多空间 */
+        }
+
+        .card-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: .4rem;
+            justify-content: flex-end;
+            flex-shrink: 0;
+        }
+
+        .tag-item {
+            padding: .2rem .5rem;
+            font-size: .7rem;
+            color: #333;
+            background: #f0f0f0;
+            border-radius: 8px;
+            white-space: nowrap;
+        }
+
+        body.dark-mode .tag-item {
+            background: #444;
+            color: #ddd;
+        }
+
+        /* 列表为空时的占位符 */
+        .empty {
+            text-align: center;
+            color: var(--text-secondary);
+            padding: 2rem;
+            grid-column: 1 / -1; /* 跨越所有列 */
+        }
+
+        /* 页脚样式 */
+        footer {
+            text-align: center;
+            font-size: .8rem;
+            color: var(--text-secondary);
+            margin: 2rem 0;
+            line-height: 1.8;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        /* 确保第一个banner在加载时可见 */
+        .banner-item.active {
+            opacity: 1; /* 激活时显示 */
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-logo">
+            <a href="" title="刷新页面" aria-label="刷新页面">
+                <img src="../Icon/PluginHub/LoonPluginHub.png" alt="Loon Plugin Hub Logo">
+            </a>
+        </div>
+        <div class="header-title-block">
+            <h1>Loon 插件仓库</h1>
+            <p>点击插件卡片即可跳转安装插件</p>
+        </div>
+        <div class="header-controls">
+            <button id="menu-toggle" class="menu-toggle" aria-label="更多功能" title="更多功能">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div id="secondary-menu" class="secondary-menu">
+                <div class="control-group-wrapper">
+                    <button id="theme-toggle-wrapper"
+                        style="width:100%; background: none; border:none; padding:0; display:flex; align-items:center; cursor:default;">
+                        <span class="icon icon-appearance"></span>
+                        <span>外观模式</span>
+                        <div id="theme-toggle" title="外观模式" role="switch">
+                            <span class="icon icon-sun"></span>
+                            <span class="icon icon-moon"></span>
+                            <span class="thumb"></span>
+                        </div>
+                    </button>
+                </div>
+                <div class="separator"></div>
+                <div class="control-group">
+                    <a href="https://t.me/BoEchoBot" target="_blank" aria-label="Telegram" title="Telegram">
+                        <span class="icon icon-telegram"></span>
+                        <span>Telegram</span>
+                    </a>
+                </div>
+                <div class="control-group">
+                    <a href="https://github.com/sooyaaabo/Loon" target="_blank" aria-label="GitHub" title="GitHub">
+                        <span class="icon icon-github"></span>
+                        <span>GitHub</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="wrap">
+        <div class="announcement-banner" id="announcementBanner">
+            <p class="banner-item" active>禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！</p>
+            <p class="banner-item">本网站由个人制作与维护，与Loon官方无关。</p>
+        </div>
+
+        <div class="search-box">
+            <input id="search" placeholder="搜索插件名称或标签…">
+            <div class="tabs">
+                <button class="tab active" data-cat="all">全部</button>
+                <button class="tab" data-cat="去广告">去广告</button>
+                <button class="tab" data-cat="功能增强">功能增强</button>
+                <button class="tab" data-cat="解锁会员">解锁会员</button>
+                <button class="tab" data-cat="定时任务">定时任务</button>
+            </div>
+        </div>
+
+        <div class="section-title" id="sectionTitle">正在加载…</div>
+        <div class="list" id="list">
+            <div class="empty">正在从 GitHub 加载插件列表，请稍候…</div>
+        </div>
+    </div>
+
+    <footer>
+        <span>更新时间</span>：<span id="updateTime">--</span><br>
+        Copyright &copy; <span id="copyright-year">2025</span> sooyaaabo. All rights reserved.
+    </footer>
+
+    <script>
+        (async () => {
+            // 文本常量，用于多语言或方便统一管理文本内容
+            const TEXT = {
+                repoTitle: 'Loon 插件仓库',
+                repoDesc: '点击插件卡片即可跳转安装插件',
+                toggleTheme: '外观模式',
+                telegram: 'Telegram',
+                github: 'GitHub',
+                bannerWarning: '禁止在中华人民共和国境内平台公开传播本仓库内容以及将其用于任何商业或非法用途！如有发现，请向平台举报！',
+                bannerDisclaimer: '本网站由个人制作与维护，与Loon官方无关。',
+                searchPlaceholder: '搜索插件名称或标签…',
+                catAll: '全部',
+                catAdblock: '去广告',
+                catEnhance: '功能增强',
+                catUnlock: '解锁会员',
+                catCron: '定时任务',
+                sectionTitle: (cat, count) => `${cat} · ${count} 个插件`, // 标题模板
+                loadingPlugins: '正在从 GitHub 加载插件列表，请稍候…',
+                loadFailed: (msg) => `加载插件失败：${msg}`,
+                noPluginsFound: '在仓库中没有找到任何 .lpx 文件。',
+                noMatch: '暂无匹配的插件',
+                updateTimeLabel: '更新时间',
+                cardUpdateTime: '更新时间：',
+                cardNoDesc: '暂无描述',
+                getFailed: '获取失败',
+                loading: '正在加载…'
+            };
+
+            // 获取 DOM 元素
+            const menuToggle = document.getElementById('menu-toggle');
+            const secondaryMenu = document.getElementById('secondary-menu');
+            const themeToggle = document.getElementById('theme-toggle');
+            const body = document.body;
+            const listEl = document.getElementById('list');
+            const searchEl = document.getElementById('search');
+            const tabsEl = document.querySelector('.tabs');
+            const sectionTitleEl = document.getElementById('sectionTitle');
+            const updateTimeEl = document.getElementById('updateTime');
+
+            // 根据 TEXT 常量更新页面文本内容
+            document.querySelector('h1').textContent = TEXT.repoTitle;
+            document.querySelector('header p').textContent = TEXT.repoDesc;
+            document.querySelector('#theme-toggle-wrapper span:nth-of-type(2)').textContent = TEXT.toggleTheme;
+            document.querySelector('.control-group a[aria-label="Telegram"] span:nth-of-type(2)').textContent = TEXT.telegram;
+            document.querySelector('.control-group a[aria-label="GitHub"] span:nth-of-type(2)').textContent = TEXT.github;
+            document.querySelector('#announcementBanner .banner-item:nth-of-type(1)').textContent = TEXT.bannerWarning;
+            document.querySelector('#announcementBanner .banner-item:nth-of-type(2)').textContent = TEXT.bannerDisclaimer;
+            searchEl.placeholder = TEXT.searchPlaceholder;
+            document.querySelector('.tabs button[data-cat="all"]').textContent = TEXT.catAll;
+            document.querySelector('.tabs button[data-cat="去广告"]').textContent = TEXT.catAdblock;
+            document.querySelector('.tabs button[data-cat="功能增强"]').textContent = TEXT.catEnhance;
+            document.querySelector('.tabs button[data-cat="解锁会员"]').textContent = TEXT.catUnlock;
+            document.querySelector('.tabs button[data-cat="定时任务"]').textContent = TEXT.catCron;
+            document.querySelector('footer span').textContent = TEXT.updateTimeLabel;
+            document.querySelector('#list .empty').textContent = TEXT.loadingPlugins;
+            sectionTitleEl.textContent = TEXT.loading;
+            document.getElementById('copyright-year').textContent = new Date().getFullYear();
+
+            let plugins = []; // 存储解析后的插件数据
+            let render; // 定义渲染函数
+
+            // --- 主题切换功能 ---
+            const applyTheme = (theme) => {
+                if (theme === 'dark') {
+                    body.classList.add('dark-mode');
+                } else {
+                    body.classList.remove('dark-mode');
+                }
+            };
+
+            // 从 localStorage 获取保存的主题，如果没有则根据系统偏好设置
+            const savedTheme = localStorage.getItem('theme');
+            const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+            const currentTheme = savedTheme || (prefersDark ? 'dark' : 'light');
+            applyTheme(currentTheme); // 应用初始主题
+
+            // 主题切换按钮点击事件
+            themeToggle.addEventListener('click', (e) => {
+                e.stopPropagation(); // 阻止事件冒泡
+                const newTheme = body.classList.contains('dark-mode') ? 'light' : 'dark';
+                applyTheme(newTheme);
+                localStorage.setItem('theme', newTheme); // 保存主题设置到 localStorage
+            });
+
+            // --- 菜单切换功能 ---
+            menuToggle.addEventListener('click', (e) => {
+                e.stopPropagation();
+                secondaryMenu.classList.toggle('active'); // 切换菜单显示/隐藏
+            });
+
+            // 点击页面其他地方隐藏菜单
+            document.addEventListener('click', (e) => {
+                if (!secondaryMenu.contains(e.target) && !menuToggle.contains(e.target) && secondaryMenu.classList.contains('active')) {
+                    secondaryMenu.classList.remove('active');
+                }
+            });
+
+            // --- 从 GitHub 获取插件数据 ---
+            const GITHUB_REPO = 'sooyaaabo/Loon'; // GitHub 仓库名
+            const PLUGIN_DIR_PATH = 'Plugin'; // 插件文件所在目录
+
+            try {
+                // 获取插件目录下的所有文件
+                const allFilesResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/contents/${PLUGIN_DIR_PATH}`);
+                const allFiles = await allFilesResponse.json();
+
+                if (!Array.isArray(allFiles)) {
+                    throw new Error(TEXT.loadFailed('无效的 GitHub API 响应。'));
+                }
+
+                // 过滤出 .plugin 文件
+                const pluginFiles = allFiles.filter(file => file.name.toLowerCase().endsWith('.lpx'));
+
+                if (pluginFiles.length === 0) {
+                    throw new Error(TEXT.noPluginsFound);
+                }
+
+                // 并行获取所有插件文件的内容
+                const pluginContents = await Promise.all(
+                    pluginFiles.map(file => fetch(file.download_url).then(res => res.text()))
+                );
+
+                // 解析插件内容并构建插件数据对象
+                plugins = pluginContents.map((text, i) => {
+                    const file = pluginFiles[i];
+                    // 使用正则表达式从插件内容中提取信息
+                    const name = (text.match(/#!\s*name\s*=\s*(.+)/i) || [])[1]?.trim() || file.name;
+                    const desc = (text.match(/#!\s*desc\s*=\s*(.+)/i) || [])[1]?.trim() || 'No description available';
+                    const icon = (text.match(/#!\s*icon\s*=\s*(.+)/i) || [])[1]?.trim() || '';
+                    const date = (text.match(/#!\s*date\s*=\s*(.+)/i) || [])[1]?.trim() || 'Unknown';
+                    const tagStr = (text.match(/#!\s*tag\s*=\s*(.+)/i) || [])[1]?.trim();
+                    const tags = tagStr ? tagStr.split(',').map(t => t.trim()).filter(Boolean) : []; // 分割标签字符串并清理
+
+                    return {
+                        url: file.download_url, // 插件下载链接
+                        name,
+                        desc,
+                        icon,
+                        date,
+                        tags
+                    };
+                });
+            } catch (error) {
+                // 加载插件失败时显示错误信息
+                listEl.innerHTML = `<div class="empty">${TEXT.loadFailed(error.message)}</div>`;
+                sectionTitleEl.textContent = 'Error';
+                return; // 终止后续操作
+            }
+
+            // --- 获取仓库最后更新时间 ---
+            try {
+                const commitsResponse = await fetch(`https://api.github.com/repos/${GITHUB_REPO}/commits?path=${PLUGIN_DIR_PATH}`);
+                const commits = await commitsResponse.json();
+                const latestCommitDate = commits[0]?.commit?.author?.date || commits[0]?.commit?.committer?.date; // 获取最新提交日期
+
+                if (latestCommitDate) {
+                    const d = new Date(latestCommitDate);
+                    // 格式化日期时间显示
+                    updateTimeEl.textContent = d.toLocaleString('zh-CN', {
+                        year: 'numeric',
+                        month: '2-digit',
+                        day: '2-digit',
+                        hour: '2-digit',
+                        minute: '2-digit'
+                    });
+                }
+            } catch {
+                updateTimeEl.textContent = TEXT.getFailed; // 获取失败
+            }
+
+            // --- 插件列表渲染函数 ---
+            render = function (filterCat = 'all', kw = '') {
+                const lowerKw = kw.toLowerCase();
+                // 根据分类和关键词过滤插件
+                const filtered = plugins.filter(p => {
+                    const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
+                    const hitKw = !lowerKw || p.name.toLowerCase().includes(lowerKw) || p.tags.some(tag => tag.toLowerCase().includes(lowerKw));
+                    return hitCat && hitKw;
+                });
+
+                // 更新分区标题
+                const catText = tabsEl.querySelector(`[data-cat="${filterCat}"]`).textContent;
+                sectionTitleEl.textContent = TEXT.sectionTitle(catText, filtered.length);
+
+                listEl.innerHTML = ''; // 清空当前列表
+
+                if (!filtered.length) {
+                    listEl.innerHTML = `<div class="empty">${TEXT.noMatch}</div>`; // 显示无匹配插件
+                    return;
+                }
+
+                // 遍历过滤后的插件，创建并添加卡片到 DOM
+                filtered.forEach(p => {
+                    const card = document.createElement('a');
+                    card.className = 'card';
+                    // 跳转到 Loon 安装链接
+                    card.href = `https://www.nsloon.com/openloon/import?plugin=${p.url}`;
+
+                    // 生成标签 HTML
+                    const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join(' ');
+                    // 处理无描述文本
+                    const descText = (p.desc === '暂无描述' || p.desc === 'No description available') ? TEXT.cardNoDesc : p.desc;
+
+                    card.innerHTML = `
+                        <div class="card-inner-layout">
+                            ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon" loading="lazy">` : ''}
+                            <div class="card-content">
+                                <div class="card-header">
+                                    <h3 class="card-title">${p.name}</h3>
+                                    <div class="card-tags">${tagsHtml}</div>
+                                </div>
+                                <p class="card-update-time">${TEXT.cardUpdateTime}${p.date}</p>
+                                <p class="card-desc">${descText}</p>
+                            </div>
+                        </div>`;
+                    listEl.appendChild(card);
+                });
+            }
+
+            // --- 事件监听器：标签页和搜索框 ---
+            tabsEl.addEventListener('click', e => {
+                if (e.target.matches('.tab')) {
+                    tabsEl.querySelector('.active').classList.remove('active'); // 移除当前激活标签的激活状态
+                    e.target.classList.add('active'); // 添加点击标签的激活状态
+                    render(e.target.dataset.cat, searchEl.value); // 重新渲染列表
+                }
+            });
+
+            searchEl.addEventListener('input', () => {
+                // 搜索框输入时，根据当前激活的标签和搜索词重新渲染列表
+                render(tabsEl.querySelector('.tab.active').dataset.cat, searchEl.value);
+            });
+
+            // --- 公告横幅滚动效果 ---
+            (() => {
+                const bannerEl = document.getElementById('announcementBanner');
+                const bannerItems = bannerEl.querySelectorAll('.banner-item');
+                const totalBanners = bannerItems.length;
+
+                if (totalBanners <= 1) return;
+
+                let currentIndex = 0; // 初始为0，表示第一条公告
+                let bannerLoopAbort = null;
+
+                const handleBannerAnimation = async (item) => {
+                    item.style.transition = 'none';
+                    item.style.transform = 'translateX(0)';
+                    window.getComputedStyle(item).opacity;
+                    await new Promise(r => setTimeout(r, 50));
+
+                    const containerWidth = item.clientWidth;
+                    const textWidth = item.scrollWidth;
+
+                    if (textWidth > containerWidth) {
+                        await new Promise(r => setTimeout(r, 1000));
+                        const offset = textWidth - containerWidth;
+                        const speed = 60;
+                        const dur = offset / speed;
+                        item.style.transition = `transform ${dur}s linear`;
+                        item.style.transform = `translateX(-${offset}px)`;
+                        await new Promise(r => {
+                            item.addEventListener('transitionend', r, { once: true });
+                        });
+                        await new Promise(r => setTimeout(r, 1000));
+                    } else {
+                        await new Promise(r => setTimeout(r, 2500));
+                    }
+                    item.style.transition = 'none';
+                    item.style.transform = 'translateX(0)';
+                    window.getComputedStyle(item).opacity;
+                };
+
+                const startBannerLoop = async () => {
+                    bannerLoopAbort?.abort();
+                    bannerLoopAbort = new AbortController();
+                    const signal = bannerLoopAbort.signal;
+
+                    // 首次加载或重置时，确保当前激活的条目是正确的
+                    // 假设 HTML 已经为第一个条目设置了 active 类
+                    // 如果不是第一次运行，我们可能需要先移除旧的 active 类
+                    bannerItems.forEach((item, index) => {
+                        if (index !== currentIndex) {
+                            item.classList.remove('active');
+                        }
+                    });
+                    bannerItems[currentIndex].classList.add('active'); // 确保当前条目是激活的
+
+                    while (!signal.aborted) {
+                        const item = bannerItems[currentIndex];
+                        await handleBannerAnimation(item);
+                        if (signal.aborted) break;
+
+                        item.classList.remove('active');
+                        currentIndex = (currentIndex + 1) % totalBanners; // 移动到下一个公告
+                        bannerItems[currentIndex].classList.add('active'); // 激活下一个公告
+                        await new Promise(r => setTimeout(r, 600));
+                    }
+                };
+
+                const resetBannerLoop = () => {
+                    if (!bannerLoopAbort) return;
+                    bannerLoopAbort.abort();
+                    // 这里不需要移除所有active，只需要设置正确的currentIndex并启动即可
+                    currentIndex = (currentIndex + 1) % totalBanners; // 点击时切换到下一个
+                    startBannerLoop(); // 重新开始循环，新的currentIndex会生效
+                };
+
+                bannerEl.addEventListener('click', resetBannerLoop);
+                startBannerLoop(); // 页面加载后开始公告循环
+            })();
+
+            // 如果成功加载了插件，则初始渲染列表
+            if (plugins.length > 0) {
+                render('all', '');
+            }
+        })();
+    </script>
+</body>
+</html>

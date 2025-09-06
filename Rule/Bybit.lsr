@@ -1,0 +1,30 @@
+# 2025-09-04 09:00
+
+DOMAIN, app-measurement.com
+DOMAIN, bybit-exchange.github.io
+DOMAIN, bybit.ada.support
+DOMAIN-SUFFIX, appsflyer.com
+DOMAIN-SUFFIX, byabcde.com
+DOMAIN-SUFFIX, byapis.com
+DOMAIN-SUFFIX, byapps.net
+DOMAIN-SUFFIX, bybdc6.com
+DOMAIN-SUFFIX, bybit-aws.com
+DOMAIN-SUFFIX, bybit.biz
+DOMAIN-SUFFIX, bybit-cloud.com
+DOMAIN-SUFFIX, bybit-global.com
+DOMAIN-SUFFIX, bybit.com
+DOMAIN-SUFFIX, bycbe.com
+DOMAIN-SUFFIX, bycsi.com
+DOMAIN-SUFFIX, byd3c3.com
+DOMAIN-SUFFIX, bymj.io
+DOMAIN-SUFFIX, bytick.com
+DOMAIN-SUFFIX, ffbbbdc6d3c353211fe2ba39c9f744cd.com
+DOMAIN-SUFFIX, ffe390afd658c19dcbf707e0597b846d.de
+IP-CIDR, 13.32.121.6/32, no-resolve
+IP-CIDR, 13.33.187.108/32, no-resolve
+IP-CIDR, 142.251.215.234/32, no-resolve
+IP-CIDR, 150.109.230.182/32, no-resolve
+IP-CIDR, 3.160.150.37/32, no-resolve
+IP-CIDR, 43.133.238.145/32, no-resolve
+IP-CIDR, 43.133.241.84/32, no-resolve
+URL-REGEX, "^https?:\/\/.*\.(?:amazon|amazonaws)\.com\/.*bybit.*"
