@@ -86,15 +86,14 @@
 ### **Aladdin（阿拉丁）**
 
 - **机场介绍**<br>
-1. 机场提供单账号持有多个订阅，订阅支持备注。<br>
-2. 采用 Trojan 协议，三网专线，延迟低速度快，更优的性能和稳定性。<br>
-3. 多达 50+ 节点，包含 ``港日美台新`` 热门节点（时段性倍率）及部分冷门地区节点。<br>
-4. 支持多种流媒体服务访问解锁，包括但不限于 Disney+、YouTube、Netflix、ChatGPT 等。<br>
-5. 提供节点 ``免登流媒体`` 共享账号观看 Netflix、HBO、PrimeVideo、PornHub、Exhentai。<br>
-6. 提供 Emby 服务，无 SLA 保证，如果是为了 Emby 而购买，推荐月付。<br>
-7. 所有套餐每日均可在群组发送指令 ``/sign@AladdinForUser_bot`` 签到获取随机流量。<br>
-8. 独家首发流量转结系统，每月 1 号流量重置（仅支持周期套餐），上月剩余流量转结并延长有效期至下个月。<br>
-9. 有关套餐权益、使用教程等更多详细内容，请在 [官方博客公告](https://tutorial.aladdinnet.cc/) 仔细阅读了解。<br>
+1. 采用 Trojan 协议，BGP 专线，延迟低速度快，更优的性能和稳定性。<br>
+2. 多达 50+ 节点，包含 ``港日美台新`` 热门节点（时段性倍率）及部分冷门地区节点。<br>
+3. 支持多种流媒体服务访问解锁，包括但不限于 Disney+、YouTube、Netflix、ChatGPT 等。<br>
+4. 提供节点 ``免登流媒体`` 共享账号观看 Netflix、HBO、PrimeVideo、PornHub、Exhentai。<br>
+5. 提供 Emby 服务，无 SLA 保证，如果是为了 Emby 而购买，推荐月付。<br>
+6. 所有套餐每日均可在群组发送指令 ``/sign@AladdinForUser_bot`` 签到获取随机流量。<br>
+7. 独家首发流量转结系统，每月 1 号流量重置（仅支持周期套餐），上月剩余流量转结并延长有效期至下个月。<br>
+8. 有关套餐权益、使用教程等更多详细内容，请在 [官方博客公告](https://tutorial.aladdinnet.cc/) 仔细阅读了解。<br>
 注：当前提供订阅、专用客户端两种形式使用，可从订阅转至客户端（暂不支持转回），免登节点目前仅支持在客户端使用，请谨慎决定是否迁移。
 
 - **套餐介绍**<br>
@@ -187,7 +186,7 @@
 </div>
 
 - **购买方式**<br>
-点击 [Aladdin官网](https://www.aladingnet.com/register?aff=ZX3lqgP6jj) 购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
+点击 [Aladdin官网](https://www.aladingnet.xyz/#/register?code=Jh3GWpym) 购买，半年付9折优惠码`SemiAnnually`，年付8折优惠码`Annually`
 
 - **联系方式**<br>
 官方频道：[@AladdinNotice](https://t.me/AladdinNotice)<br>
