@@ -8,7 +8,7 @@
 #!loon_version = 3.3.2(877)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RedNote.png
-#!date = 2025-08-01 21:00
+#!date = 2025-09-06 10:00
 
 # 2025-08-01 19:57:10
 # https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx
@@ -24,6 +24,7 @@ AND, ((PROTOCOL,QUIC), (OR, ((IP-CIDR, 101.227.133.99/32, no-resolve), (IP-CIDR,
 
 # 信息流
 ^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/(?:v2\/guide\/user_banner|v3\/note\/guide) reject-dict
+^https:\/\/edith\.xiaohongshu\.com\/api\/sns\/v\d\/note\/detailfeed\/preload\? reject-dict
 ^https:\/\/www\.xiaohongshu\.com\/api\/sns\/(?:v1\/ads\/resource|v2\/hey\/\w+\/hey_gallery) reject-dict
 
 # 搜索页
