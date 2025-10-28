@@ -8,9 +8,9 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Goofish.png
-#!date = 2025-10-16 00:00
+#!date = 2025-10-28 19:00
 
-# 2025-09-03 01:29:26
+# 2025-10-28 17:47:12
 # https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
 
 [Rule]
@@ -71,6 +71,9 @@ Add commentMore actions
 
 # 搜索结果广告
 ^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ response-body-json-jq '.data.resultList |= map(if .data.item.main.exContent.dislikeFeedback.clickParam.args.bizType == "ad" then empty else . end)'
+
+# 搜索结果页面的红包横幅
+^https:\/\/g-acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\/ response-body-json-del data.resultPrefixBar
 
 # 搜索页面 - 搜索词推广、闲鱼行情热点
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idlemtopsearch\.search\.discover\/ response-body-json-jq '.data.resultList |= map(select(.type != "MarketHotSpot"))'

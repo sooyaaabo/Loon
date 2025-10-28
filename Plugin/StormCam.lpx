@@ -1,0 +1,20 @@
+#!name = StormCam
+#!desc = StormCam专业版
+#!openUrl = https://apps.apple.com/app/id6749835845
+#!author = anyehttp[https://github.com/anyehttp]
+#!tag = 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.5(904)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/StormCam.png
+#!date = 2025-10-28 19:00
+
+# 2025-10-28
+# https://raw.githubusercontent.com/anyehttp/quantumult-x/main/Crack-Script/jfxj.sgmodule
+
+[Script]
+http-response ^https://base\.ysjf\.com/storm_auth/user/self script-path = https://raw.githubusercontent.com/anyehttp/quantumult-x/main/Crack-Script/jfxj.js, requires-body = true, tag = [StormCam]飓风相机专业版
+
+[MitM]
+hostname = base.ysjf.com
