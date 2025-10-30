@@ -103,7 +103,7 @@ IP-CIDR, 101.35.212.35/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping response-body-json-del shipping.banner_above_recommend
 
 # 搜索词推荐、横幅模块
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.search_bar_hot_query result.dy_module.irregular_banner_dy
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.icon_set result.search_bar_hot_query result.dy_module.irregular_banner_dy result.dy_module.recommend_fresh_info
 
 # 精简底部菜单、顶部分类
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
