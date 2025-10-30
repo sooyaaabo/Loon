@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-10-28 02:08:18
+# UPDATED: 2025-10-30 02:08:35
 # DOMAIN: 114
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31974
+# DOMAIN-SUFFIX: 31979
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 32286
+# TOTAL: 32291
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -7584,6 +7584,7 @@ DOMAIN-SUFFIX,deepdiscount.com
 DOMAIN-SUFFIX,deeper.com
 DOMAIN-SUFFIX,deepfake-porn.com
 DOMAIN-SUFFIX,deepfakeporn.net
+DOMAIN-SUFFIX,deepflood.com
 DOMAIN-SUFFIX,deepfreeze.co.uk
 DOMAIN-SUFFIX,deepfreeze.com
 DOMAIN-SUFFIX,deepfreeze.com.br
@@ -15893,6 +15894,7 @@ DOMAIN-SUFFIX,joinmaidez.com
 DOMAIN-SUFFIX,joinmastodon.org
 DOMAIN-SUFFIX,joins.com
 DOMAIN-SUFFIX,joinside.org
+DOMAIN-SUFFIX,joinsquad.com
 DOMAIN-SUFFIX,joinup.ac.uk
 DOMAIN-SUFFIX,jokerlu-go.buzz
 DOMAIN-SUFFIX,jokerlu.asia
@@ -20956,6 +20958,8 @@ DOMAIN-SUFFIX,officialheadphone.com
 DOMAIN-SUFFIX,offresspecialesbmw.ca
 DOMAIN-SUFFIX,offrezdesipods.com
 DOMAIN-SUFFIX,offshorerenewables.ac.uk
+DOMAIN-SUFFIX,offworldindustries.com
+DOMAIN-SUFFIX,offworldindustries.net
 DOMAIN-SUFFIX,ofile.org
 DOMAIN-SUFFIX,ofs.ac.uk
 DOMAIN-SUFFIX,ogakikyoritsu.co.jp
@@ -30849,6 +30853,7 @@ DOMAIN-SUFFIX,xsela.cc
 DOMAIN-SUFFIX,xshaker.net
 DOMAIN-SUFFIX,xshr.online
 DOMAIN-SUFFIX,xsijishe.com
+DOMAIN-SUFFIX,xsijishe.net
 DOMAIN-SUFFIX,xskywalker.com
 DOMAIN-SUFFIX,xskywalker.net
 DOMAIN-SUFFIX,xslist.org
