@@ -127,10 +127,6 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ClashMeta.png"
         },
         {
-            "name": "ClashParty",
-            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ClashParty.png"
-        },
-        {
             "name": "ClashX",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ClashX-01.png"
         },
@@ -181,6 +177,14 @@
         {
             "name": "V2EX",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/V2EX-03.png"
+        },
+        {
+            "name": "iBetame",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/iBetame.png"
+        },
+        {
+            "name": "i4Tools",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/i4Tools.png"
         },
         {
             "name": "AppStore",
