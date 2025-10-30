@@ -34,6 +34,12 @@ DOMAIN, th-a.pinduoduo.com, REJECT
 DOMAIN, th-b.pinduoduo.com, REJECT
 DOMAIN, th.pinduoduo.com, REJECT
 DOMAIN, sdk.1rtb.net, REJECT
+IP-CIDR, 114.110.98.3/32, REJECT
+IP-CIDR, 114.110.98.2/32, REJECT
+IP-CIDR, 36.152.46.3/32, REJECT
+IP-CIDR, 114.110.96.6/32, REJECT
+IP-CIDR, 36.152.46.13/32, REJECT
+IP-CIDR, 121.5.84.85/32, REJECT
 IP-CIDR, 183.194.214.21/32, REJECT
 IP-CIDR, 49.235.102.190/32, REJECT
 IP-CIDR, 81.69.116.33/32, REJECT
@@ -60,6 +66,9 @@ IP-CIDR, 101.35.212.35/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
 ^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
 ^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group response-body-json-del goods_list
+^https:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/extra reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/manufacturer\/cross\/shortcut\/list reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report reject-dict
 
 # 开屏广告
 ^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
@@ -88,7 +97,7 @@ IP-CIDR, 101.35.212.35/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items personal_banner
 
 # 首页底部优惠券推荐横条
-^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather response-body-json-del newer_index_banner.data
+^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather reject-dict
 
 # 物流页面横幅广告
 ^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping response-body-json-del shipping.banner_above_recommend
@@ -97,13 +106,13 @@ IP-CIDR, 101.35.212.35/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.search_bar_hot_query result.dy_module.irregular_banner_dy
 
 # 精简底部菜单、顶部分类
-# ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html")))'
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | .result.buffer_bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | del(.result.search_bar_hot_query) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
+# ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | .result.buffer_bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | del(.result.search_bar_hot_query) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
 
 [Script]
 # http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/JavaScript/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = [拼多多]精简首页
 
-# http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://klraw.pages.dev/kelv1n1n/script/refs/heads/main/js/pdd.js?token=209863, requires-body = true, tag = [拼多多]精简首页
+# http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub script-path = https://klraw.pages.dev/kelv1n1n/script/main/js/pdd.js?token=209863, requires-body = true, tag = [拼多多]精简首页
 
 [MitM]
 hostname = api.pinduoduo.com, api.yangkeduo.com
