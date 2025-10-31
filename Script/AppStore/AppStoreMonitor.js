@@ -174,11 +174,23 @@ function sendNotFoundNotification(appId, message, barkKey, barkSound) {
 }
 
 async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, barkSound) {
+  const existingAppData = monitoredData[appId];
+  let searchRegions = [...regions];
+
+  // 如果已监控过，优先查询上次成功的区域
+  if (existingAppData && existingAppData.region) {
+    const lastKnownRegion = existingAppData.region;
+    if (searchRegions.includes(lastKnownRegion)) {
+      searchRegions = searchRegions.filter(r => r !== lastKnownRegion);
+      searchRegions.unshift(lastKnownRegion);
+    }
+  }
+
   let finalResult = null;
   let notFoundRegions = [];
   let errorRegions = [];
 
-  for (const region of regions) {
+  for (const region of searchRegions) {
     let attempt = 0;
     let result = null;
     while (attempt < 2) {
@@ -210,6 +222,7 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
     const releaseNotes = appInfo.releaseNotes || '暂无更新说明';
     const updateDate = appInfo.currentVersionReleaseDate;
     const storedVersion = monitoredData[appId]?.version || null;
+    const storedRegion = monitoredData[appId]?.region || null;
 
     if (!storedVersion) {
       logs.initial.push(
@@ -226,60 +239,70 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
           `[${region.toUpperCase()}] ${appName} (ID: ${appId}) 当前版本 (${newVersion}) 低于已记录版本 (${storedVersion})，可能区域变更。`
         );
       } else {
-        logs.noUpdate.push(
-          `[${region.toUpperCase()}] ${appName} (ID: ${appId}) 已是最新版本 (${newVersion})，无需更新。`
-        );
+        if (storedRegion && storedRegion !== region) {
+          logs.noUpdate.push(
+            `[${region.toUpperCase()}] ${appName} (ID: ${appId}) 区域变更 ${storedRegion.toUpperCase()} → ${region.toUpperCase()}，版本 (${newVersion}) 未变。`
+          );
+        } else {
+          logs.noUpdate.push(
+            `[${region.toUpperCase()}] ${appName} (ID: ${appId}) 已是最新版本 (${newVersion})，无需更新。`
+          );
+        }
       }
     }
 
-    if (!storedVersion || compareVersions(newVersion, storedVersion) > 0) {
+    if (!storedVersion || compareVersions(newVersion, storedVersion) > 0 || (storedRegion && storedRegion !== region)) {
       monitoredData[appId] = {
         version: newVersion,
         region: region,
         name: appName,
       };
 
-      const formattedDate = new Date(updateDate)
-        .toLocaleString('zh-CN', {
-          hour12: false,
-          timeZone: 'Asia/Shanghai',
-        })
-        .replace(/\//g, '-');
+      // 仅在首次或版本更新时发通知
+      if (!storedVersion || compareVersions(newVersion, storedVersion) > 0) {
+        const formattedDate = new Date(updateDate)
+          .toLocaleString('zh-CN', {
+            hour12: false,
+            timeZone: 'Asia/Shanghai',
+          })
+          .replace(/\//g, '-');
 
-      let title, subtitle, body;
-      if (storedVersion) {
-        title = `「${appName}」有更新啦！`;
-        subtitle = `版本：${storedVersion} → ${newVersion}`;
-        body = `更新时间：${formattedDate}\n更新内容：\n${releaseNotes}`;
-      } else {
-        title = `「${appName}」已添加监控`;
-        subtitle = `区域：${region.toUpperCase()}　版本：${newVersion}`;
-        body = `更新时间：${formattedDate}\n将从此版本开始监控更新。`;
-      }
-
-      if (barkKey) {
-        let iconUrl = null;
-        if (appInfo.artworkUrl100) {
-          iconUrl = appInfo.artworkUrl100.replace(/\/\d+x\d+bb\.jpg$/, '/512x512bb.jpg');
+        let title, subtitle, body;
+        if (storedVersion) {
+          title = `「${appName}」有更新啦！`;
+          subtitle = `版本：${storedVersion} → ${newVersion}`;
+          body = `更新时间：${formattedDate}\n更新内容：\n${releaseNotes}`;
+        } else {
+          title = `「${appName}」已添加监控`;
+          subtitle = `区域：${region.toUpperCase()}　版本：${newVersion}`;
+          body = `更新时间：${formattedDate}\n将从此版本开始监控更新。`;
         }
+        
+        if (barkKey) {
+          let iconUrl = null;
+          if (appInfo.artworkUrl100) {
+            iconUrl = appInfo.artworkUrl100.replace(/\/\d+x\d+bb\.jpg$/, '/512x512bb.jpg');
+          }
 
-        const payload = {
-          title: title,
-          body: body,
-          subtitle: subtitle,
-          url: `itms-apps://itunes.apple.com/app/id${appId}`,
-          ...(iconUrl ? { icon: iconUrl } : {}),
-          ...(barkSound ? { sound: barkSound } : {})
-        };
+          const payload = {
+            title: title,
+            body: body,
+            subtitle: subtitle,
+            url: `itms-apps://itunes.apple.com/app/id${appId}`,
+            ...(iconUrl ? { icon: iconUrl } : {}),
+            ...(barkSound ? { sound: barkSound } : {})
+          };
 
-        $httpClient.post({
-          url: `https://api.day.app/${barkKey}/`,
-          headers: { 'Content-Type': 'application/json; charset=utf-8' },
-          body: JSON.stringify(payload)
-        }, () => {});
-      } else {
-        $notification.post(title, subtitle, body, `itms-apps://itunes.apple.com/app/id${appId}`);
+          $httpClient.post({
+            url: `https://api.day.app/${barkKey}/`,
+            headers: { 'Content-Type': 'application/json; charset=utf-8' },
+            body: JSON.stringify(payload)
+          }, () => {});
+        } else {
+          $notification.post(title, subtitle, body, `itms-apps://itunes.apple.com/app/id${appId}`);
+        }
       }
+
     } else if (!monitoredData[appId]) {
       monitoredData[appId] = {
         version: newVersion,
@@ -291,7 +314,7 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
   }
 
   // 全部 notfound，无 error
-  if (notFoundRegions.length === regions.length && errorRegions.length === 0) {
+  if (notFoundRegions.length === searchRegions.length && errorRegions.length === 0) {
     const message = `[${appId}] 在 ${regions.join(', ').toUpperCase()} 均未找到，请检查 AppID 是否正确或尝试添加新区域。`;
     logs.notFound.push(message);
     sendNotFoundNotification(appId, message, barkKey, barkSound);
