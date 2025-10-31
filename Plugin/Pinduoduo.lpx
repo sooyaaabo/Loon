@@ -69,12 +69,12 @@ IP-CIDR, 117.185.244.145/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-jq'del(.bottom_section_list, .ui.bottom_section, .ui.live_section.float_info)'
-^https:\/\/api\.pinduoduo\.com\/search response-body-json-jq'del(.expansion)'
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group response-body-json-jq'del(.data.goods_list)'
 ^https:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/extra reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/manufacturer\/cross\/shortcut\/list reject-dict
 ^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
+^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group response-body-json-del goods_list
 
 # 开屏广告
 ^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
@@ -84,7 +84,7 @@ IP-CIDR, 117.185.244.145/32, REJECT
 
 # 聊天页、个人页商品推荐、个人页商品收藏推荐、待收货页商品推荐、个人页底部商品推荐
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|my_order_group|new_chat_group|order_express_group|personal) reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|personal|my_order_group|new_chat_group|order_express_group|personal) reject-dict
 
 # 店铺收藏页推荐
 ^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/hot\/recommend reject-dict
@@ -100,7 +100,7 @@ IP-CIDR, 117.185.244.145/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element reject-dict
 
 # 个人页顶部红包入口、省钱卡、横幅广告
-^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub response-body-json-jq'del(.monthly_card_entrance, .personal_center_style_v2_vo, .icon_set.icons, .icon_set.top_personal_icons)'
+^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items personal_banner
 
 # 首页底部优惠券推荐横条
 ^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather reject-dict
@@ -109,10 +109,10 @@ IP-CIDR, 117.185.244.145/32, REJECT
 ^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping response-body-json-del shipping.banner_above_recommend
 
 # 搜索词推荐、横幅模块
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub response-body-json-jq'del(.result.icon_set, .result.search_bar_hot_query, .result.dy_module.irregular_banner_dy,.result.dy_module.recommend_fresh_info) else . end'
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.icon_set result.search_bar_hot_query result.dy_module.irregular_banner_dy result.dy_module.recommend_fresh_info
 
 # 精简底部菜单、顶部分类
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.all_top_opts |= map(del(.selected_image)) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
 # ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | .result.buffer_bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | del(.result.search_bar_hot_query) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
 
 [Script]
