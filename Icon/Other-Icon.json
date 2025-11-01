@@ -71,6 +71,30 @@
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png"
         },
         {
+            "name": "iOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/iOS.png"
+        },
+        {
+            "name": "iPadOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/iPadOS.png"
+        },
+        {
+            "name": "macOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/macOS.png"
+        },
+        {
+            "name": "tvOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/tvOS.png"
+        },
+        {
+            "name": "visionOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/visionOS.png"
+        },
+        {
+            "name": "watchOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/watchOS.png"
+        },
+        {
             "name": "Select",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Select.png"
         },
