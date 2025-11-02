@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-10-30 02:08:35
+# UPDATED: 2025-11-02 02:07:49
 # DOMAIN: 114
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31979
+# DOMAIN-SUFFIX: 31980
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 32291
+# TOTAL: 32292
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -8238,6 +8238,7 @@ DOMAIN-SUFFIX,dlfacebook.com
 DOMAIN-SUFFIX,dlhe.ac.uk
 DOMAIN-SUFFIX,dlib.eastview.com
 DOMAIN-SUFFIX,dlive.tv
+DOMAIN-SUFFIX,dln1.ncdn.ec
 DOMAIN-SUFFIX,dls.ac.uk
 DOMAIN-SUFFIX,dlsite.com
 DOMAIN-SUFFIX,dlsite.com.tw
