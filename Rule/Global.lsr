@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-11-02 02:07:49
+# UPDATED: 2025-11-04 02:08:51
 # DOMAIN: 114
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31980
+# DOMAIN-SUFFIX: 31982
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 32292
+# TOTAL: 32294
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -14649,6 +14649,7 @@ DOMAIN-SUFFIX,imkev.com
 DOMAIN-SUFFIX,imlab.ac.uk
 DOMAIN-SUFFIX,imlive.co
 DOMAIN-SUFFIX,imlive.com
+DOMAIN-SUFFIX,immersivetranslate.com
 DOMAIN-SUFFIX,immidio.com
 DOMAIN-SUFFIX,immigration.gov.tw
 DOMAIN-SUFFIX,immoral.jp
@@ -26896,6 +26897,7 @@ DOMAIN-SUFFIX,telri.ac.uk
 DOMAIN-SUFFIX,temenos.ac.uk
 DOMAIN-SUFFIX,temetube.xyz
 DOMAIN-SUFFIX,tempusuk.ac.uk
+DOMAIN-SUFFIX,temu.com
 DOMAIN-SUFFIX,tenacy.com
 DOMAIN-SUFFIX,tenbyfotolia.com
 DOMAIN-SUFFIX,tenor.com
