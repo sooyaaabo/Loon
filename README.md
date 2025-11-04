@@ -333,11 +333,20 @@
             <td align="center">¥288</td>
             <td align="center">¥566</td>
         </tr>
+        <tr>
+            <td align="center">半年特惠版</td>
+            <td align="center">222G</td>
+            <td align="center">×</td>
+            <td align="center">×</td>
+            <td align="center">¥111</td>
+            <td align="center">×</td>
+        </tr>
     </table>
 </div>
 
 - **购买方式**<br>
 点击 [AshNet官网](https://portal.ash.do/#/register?code=igbGTl5n) 购买，新用户85折优惠码`Ash`<br>
+双十一限时（11.05-11.12）9折优惠码`1111快乐`（半年特惠版不参与此折扣）<br>
 
 - **联系方式**<br>
 官方频道：[@Ash_NOC](https://t.me/Ash_NOC)<br>
