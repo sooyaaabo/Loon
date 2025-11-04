@@ -11,12 +11,12 @@ on:
         default: false
       download_ad_rules:
         type: boolean
-        description: 'Run DownloadAdRulesAndAWAvenueAdsRule.yml'
+        description: 'Run DownloadAdRules.yml'
         required: true
         default: false
       download_global_list:
         type: boolean
-        description: 'Run DownloadGlobal_DomainAndProxy-List.yml'
+        description: 'Run DownloadProxyRules.yml'
         required: true
         default: false
       replace_js_url:
@@ -48,9 +48,9 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
             const workflows = {
-              download_ad_rules: 'DownloadAdRulesAndAWAvenueAdsRule.yml',
+              download_ad_rules: 'DownloadAdRules.yml',
               download_geodata: 'DownloadGeoData.yml',
-              download_global_list: 'DownloadGlobal_DomainAndProxy-List.yml',
+              download_global_list: 'DownloadProxyRules.yml',
               replace_js_url: 'ReplaceJsURL.yml',
               replace_lpx_data: 'ReplaceLpxData.yml'
             };
