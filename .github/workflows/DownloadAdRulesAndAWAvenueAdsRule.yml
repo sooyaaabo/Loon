@@ -1,4 +1,4 @@
-name: Download adrules.list & AWAvenue-Ads-Rule-Surge-RULE-SET.list
+name: Download AdRules
 
 on:
   schedule:
@@ -52,6 +52,18 @@ jobs:
           grep -E '^#Title|^#Total lines:|^#Version:|^#Update time:|^#Homepage:|^#License:|^[^#]' AWAvenue-Ads-Rule.list | \
           sed -E 's/^#(.*)/# \1/; s/,/, /g' >> "$DEST_FILE"
 
+      # --- Block 3: 处理 adblockloon.list ---
+      - name: Download adblockloon
+        run: |
+          curl -L -o adblockloon.list https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloon.list
+
+      - name: Add header and save AdblockLoon.lsr
+        run: |
+          mkdir -p Loon/Rule
+          DEST_FILE="Loon/Rule/AdBlockLoon.lsr"
+          SOURCE_URL="https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloon.list"
+          echo "# 原始链接：$SOURCE_URL" > "$DEST_FILE"
+          cat adblockloon.list >> "$DEST_FILE"
 
       # --------------------------------------------------------
 
@@ -62,7 +74,7 @@ jobs:
             git config --local user.email "action@github.com"
             git config --local user.name "GitHub Action"
             git add .
-            git commit -m "Update DownloadAdRules & AWAvenueAdsRule ($(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M'))"
+            git commit -m "Update AdRules ($(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M'))"
             git push origin HEAD
           else
             echo "No changes to commit."
