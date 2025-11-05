@@ -1,4 +1,4 @@
-# 2025-07-11 16:39:08
+# 2025-11-04 21:28:23
 # https://kelee.one/Tool/Loon/Lsr/AI.lsr
 # https://raw.githubusercontent.com/ConnersHua/RuleGo/master/Surge/Ruleset/Extra/AI.list
 
@@ -84,3 +84,6 @@ DOMAIN-SUFFIX, grok.com
 # Trae AI
 DOMAIN, trae-api-sg.mchost.guru
 DOMAIN-SUFFIX, trae.ai
+
+# OpenRouter
+DOMAIN-SUFFIX, openrouter.ai

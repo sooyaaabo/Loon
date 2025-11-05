@@ -8,7 +8,7 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
-#!date = 2025-11-01 19:00
+#!date = 2025-11-05 09:00
 
 # 2025-11-01
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -16,7 +16,7 @@
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
 # 2025-07-31
 # https://klraw.pages.dev/kelv1n1n/script/main/rewrite/pdd.snippet?token=209863
-# 2025-11-01 04:19:37
+# 2025-11-05 05:02:01
 # https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx
 
 [Rule]
@@ -24,7 +24,6 @@
 AND, ((URL-REGEX, "^http:\/\/((25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\.){3}(25[0-5]|2[0-4][0-9]|[01]?[0-9][0-9]?)\/d(\d)?"), (USER-AGENT, "*com.xunmeng.pinduoduo*")), REJECT
 AND, ((URL-REGEX, "^http:\/\/\[((([0-9A-Fa-f]{1,4}:){7}([0-9A-Fa-f]{1,4}|:))|(([0-9A-Fa-f]{1,4}:){6}(:[0-9A-Fa-f]{1,4}|((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){5}(((:[0-9A-Fa-f]{1,4}){1,2})|:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3})|:))|(([0-9A-Fa-f]{1,4}:){4}(((:[0-9A-Fa-f]{1,4}){1,3})|((:[0-9A-Fa-f]{1,4})?:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){3}(((:[0-9A-Fa-f]{1,4}){1,4})|((:[0-9A-Fa-f]{1,4}){0,2}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){2}(((:[0-9A-Fa-f]{1,4}){1,5})|((:[0-9A-Fa-f]{1,4}){0,3}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(([0-9A-Fa-f]{1,4}:){1}(((:[0-9A-Fa-f]{1,4}){1,6})|((:[0-9A-Fa-f]{1,4}){0,4}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:))|(:(((:[0-9A-Fa-f]{1,4}){1,7})|((:[0-9A-Fa-f]{1,4}){0,5}:((25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)(\.(25[0-5]|2[0-4]\d|1\d\d|[1-9]?\d)){3}))|:)))\]\/d(\d)?\?"), (USER-AGENT, "*com.xunmeng.pinduoduo*")), REJECT
 AND, ((DOMAIN, api.pinduoduo.com), (PROTOCOL, QUIC)), REJECT
-
 
 DOMAIN, sdk.1rtb.net, REJECT
 DOMAIN, titan.pinduoduo.com, REJECT
@@ -68,57 +67,69 @@ IP-CIDR, 114.110.96.26/32, REJECT
 IP-CIDR, 101.35.212.35/32, REJECT
 
 [Rewrite]
-^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/extra reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/manufacturer\/cross\/shortcut\/list reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/engels\/wait\/receive\/review reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
-^https:\/\/api\.pinduoduo\.com\/search response-body-json-del expansion
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group response-body-json-del goods_list
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/unrated_order_for_unreceived_tab\? reject-dict
 
-# 开屏广告
-^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
+# 订单页顶部优惠券横幅推广及倒计时
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element\? reject-dict
+
+# 红包优惠弹窗
+^https:\/\/api\.pinduoduo\.com\/api\/leporis\/notification\/clear_tab_red_dot\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
+
+# 聊天页、个人页商品推荐、个人页商品收藏推荐、待收货页商品推荐、个人页底部商品推荐
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|personal|my_order_group|new_chat_group|order_express_group|personal)\? reject-dict
 
 # 首页搜索框关键词
 ^https:\/\/api\.pinduoduo\.com\/search_hotquery\? reject-dict
 
-# 聊天页、个人页商品推荐、个人页商品收藏推荐、待收货页商品推荐、个人页底部商品推荐
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/goods\/back_up\? reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/(?:likes|personal|my_order_group|new_chat_group|order_express_group|personal) reject-dict
-
-# 店铺收藏页推荐
-^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/hot\/recommend reject-dict
-
-# 红包优惠弹窗
-^https:\/\/api\.pinduoduo\.com\/api\/leporis\/notification\/clear_tab_red_dot url reject-dict
-^https:\/\/api\.pinduoduo\.com\/api\/aquarius\/hungary\/global\/homepage\? reject-dict
-
 # 聊天页顶部0元下单推广入口
-^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/zaire_biz\/chat\/resource\/get_list_data\? reject-dict
 
-# 订单页顶部优惠券横幅推广及倒计时
-^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/query_order_list_tabs_element reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/brand-olay\/goods_detail\/bybt_guide\? reject-dict
 
-# 个人页顶部红包入口、省钱卡、横幅广告
-^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items personal_banner
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/reviews\/require\/append\? reject-dict
+
+^https:\/\/api\.pinduoduo\.com\/api\/phantom\/gbdbpdv\/extra\? reject-dict
+
+^https:\/\/api\.pinduoduo\.com\/api\/manufacturer\/cross\/shortcut\/list\? reject-dict
+
+^https:\/\/api\.pinduoduo\.com\/api\/dunkirk\/liveactivity\/push\/create\/url\/report\? reject-dict
 
 # 首页底部优惠券推荐横条
-^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather reject-dict
+^https:\/\/api\.pinduoduo\.com\/api\/growth\/nagato\/app\/index\/gather\? reject-dict
 
-# 物流页面横幅广告
-^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping response-body-json-del shipping.banner_above_recommend
+^https:\/\/api\.pinduoduo\.com\/api\/engels\/wait\/receive\/review\? reject-dict
+
+^https:\/\/api\.pinduoduo\.com\/api\/buffon\/nasus\/recommend\? reject-dict
+
+# 开屏广告
+^https:\/\/api\.(?:pinduoduo|yangkeduo)\.com\/api\/cappuccino\/splash\? reject-dict
+
+# 店铺收藏页推荐
+^https:\/\/api\.pinduoduo\.com\/api\/social\/mall\/follow\/hot\/recommend\? reject-dict
+
+^https:\/\/api\.pinduoduo\.com\/api\/flow\/hungary\/window\/global\/v2\? reject-dict
 
 # 搜索词推荐、横幅模块
 ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-del result.icon_set result.search_bar_hot_query result.dy_module.irregular_banner_dy
 
+^https:\/\/api\.pinduoduo\.com\/search\? response-body-json-del expansion
+
 # 精简底部菜单、顶部分类
-^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html","chat_list.html","personal.html"))) | .result.all_top_opts |= map(del(.selected_image)) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
-# ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | .result.buffer_bottom_tabs? |= map(select(.title | IN("多多视频","大促会场") | not)) | del(.result.search_bar_hot_query) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
-# ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.all_top_opts |= map(del(.selected_image)) | .result.icon_set |= map(select(.id | IN(473, 472, 256, 267, 257, 471, 468))) | .result.icon_set |= map(.group = 1)'
+^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? response-body-json-jq '.result.bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.buffer_bottom_tabs? |= map(select(.link | IN("index.html", "chat_list.html", "personal.html"))) | .result.all_top_opts |= map(del(.selected_image, .image, .height, .width)) | .result.module_order? |= map(select(.module_name | IN("irregular_banner_dy","irregular_banner","ad_module","icon_set","timeline") | not))'
+
+# 个人页顶部红包入口、省钱卡、横幅广告
+^https:\/\/api\.pinduoduo\.com\/api\/philo\/personal\/hub\? response-body-json-del monthly_card_entrance personal_center_style_v2_vo icon_set.icons icon_set.top_personal_icons title_bar_items personal_banner
+
+^https:\/\/api\.pinduoduo\.com\/api\/oak\/integration\/render\? response-body-json-del bottom_section_list ui.bottom_section ui.live_section.float_info
+
+^https:\/\/api\.pinduoduo\.com\/api\/caterham\/v3\/query\/order_detail_group\? response-body-json-del goods_list
+
+# 物流页面横幅广告
+^https:\/\/api\.pinduoduo\.com\/order\/\d+-\d+\/shipping response-body-json-del shipping.banner_above_recommend
+
+^https:\/\/api\.pinduoduo\.com\/api\/aristotle\/order_list_v4\? response-body-json-jq '.orders |= map(.order_buttons |= map(del(.order_growth_tip)))'
 
 [Script]
 # http-response ^https:\/\/api\.pinduoduo\.com\/api\/alexa\/homepage\/hub\? script-path = https://kelee.one/Resource/JavaScript/PinDuoDuo/PinDuoDuo_remove_ads.js, requires-body = true, tag = [拼多多]精简首页
