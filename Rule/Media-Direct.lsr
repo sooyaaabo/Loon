@@ -65,9 +65,6 @@ DOMAIN-SUFFIX, wangyoung.com
 # --------------- XPTV --------------- #
 # XPTV主站 - 部分地区可以直连自行尝试
 DOMAIN, infuseku.xyz
-# iCloud同步
-DOMAIN, gateway.icloud.com
-DOMAIN, metrics.icloud.com
 
 # XPTV封面、弹幕
 # 小海报

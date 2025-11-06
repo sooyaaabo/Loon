@@ -20,11 +20,12 @@ DOMAIN-SUFFIX, sora.com
 DOMAIN-SUFFIX, turn.livekit.cloud
 
 # Apple Intelligence
-DOMAIN, apple-relay.apple.com
-DOMAIN, apple-relay.cloudflare.com
-DOMAIN, apple-relay.fastly-edge.com
-DOMAIN, cp4.cloudflare.com
-DOMAIN, guzzoni.apple.com
+DOMAIN-SUFFIX, apple-relay.apple.com
+DOMAIN-SUFFIX, apple-relay.cloudflare.com
+DOMAIN-SUFFIX, apple-relay.fastly-edge.com
+DOMAIN-SUFFIX, cp4.cloudflare.com
+DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com
+DOMAIN-SUFFIX, guzzoni.apple.com
 DOMAIN-SUFFIX, smoot.apple.com
 
 # GitHub Copilot
