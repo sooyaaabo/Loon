@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-11-04 02:08:51
+# UPDATED: 2025-11-08 02:08:20
 # DOMAIN: 114
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 31982
+# DOMAIN-SUFFIX: 32000
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 32294
+# TOTAL: 32312
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -744,6 +744,7 @@ DOMAIN-SUFFIX,aboutfacebook.com
 DOMAIN-SUFFIX,aboutgfw.com
 DOMAIN-SUFFIX,aboutmcdonalds.com
 DOMAIN-SUFFIX,aboutporno.net
+DOMAIN-SUFFIX,aboutschwab.com
 DOMAIN-SUFFIX,aboutyourmini.com
 DOMAIN-SUFFIX,abow.jp
 DOMAIN-SUFFIX,abpchina.org
@@ -6348,6 +6349,7 @@ DOMAIN-SUFFIX,ciattackers.com
 DOMAIN-SUFFIX,cib.ac.uk
 DOMAIN-SUFFIX,cici.com
 DOMAIN-SUFFIX,ciciai.com
+DOMAIN-SUFFIX,ciciaicdn.com
 DOMAIN-SUFFIX,cicl.ac.uk
 DOMAIN-SUFFIX,cied.ac.uk
 DOMAIN-SUFFIX,ciemap.ac.uk
@@ -8365,6 +8367,7 @@ DOMAIN-SUFFIX,dojinmanga.net
 DOMAIN-SUFFIX,dojinwatch.com
 DOMAIN-SUFFIX,dok-forum.net
 DOMAIN-SUFFIX,dokusho-ojikan.jp
+DOMAIN-SUFFIX,dola.com
 DOMAIN-SUFFIX,dolc.de
 DOMAIN-SUFFIX,dolf.org.hk
 DOMAIN-SUFFIX,dollarfotoclub.com
@@ -9300,6 +9303,8 @@ DOMAIN-SUFFIX,elephantlist.com
 DOMAIN-SUFFIX,elephantsdream.org
 DOMAIN-SUFFIX,elephanttube.com
 DOMAIN-SUFFIX,elephanttubenew.com
+DOMAIN-SUFFIX,elevenlabs.com
+DOMAIN-SUFFIX,elevenlabs.io
 DOMAIN-SUFFIX,elgaronline.com
 DOMAIN-SUFFIX,elgoog.im
 DOMAIN-SUFFIX,elib.ac.uk
@@ -10570,6 +10575,7 @@ DOMAIN-SUFFIX,fi11av1.com
 DOMAIN-SUFFIX,fi11tv1.com
 DOMAIN-SUFFIX,fibank.bg
 DOMAIN-SUFFIX,fibre-diffraction.ac.uk
+DOMAIN-SUFFIX,ficbook.net
 DOMAIN-SUFFIX,ficeboock.com
 DOMAIN-SUFFIX,ficm.ac.uk
 DOMAIN-SUFFIX,fictionmania.tv
@@ -10767,6 +10773,7 @@ DOMAIN-SUFFIX,flecheinthepeche.fr
 DOMAIN-SUFFIX,fleshbot.com
 DOMAIN-SUFFIX,fleshlyx.com
 DOMAIN-SUFFIX,fleursdeslettres.com
+DOMAIN-SUFFIX,flexclip.com
 DOMAIN-SUFFIX,flexibits.com
 DOMAIN-SUFFIX,flexpool.io
 DOMAIN-SUFFIX,flexsig.com
@@ -11428,6 +11435,8 @@ DOMAIN-SUFFIX,fusker.xxx
 DOMAIN-SUFFIX,futanarihq.com
 DOMAIN-SUFFIX,futhead.com
 DOMAIN-SUFFIX,futpromos.com
+DOMAIN-SUFFIX,futuhk.com
+DOMAIN-SUFFIX,futuholdings.com
 DOMAIN-SUFFIX,futunited.com
 DOMAIN-SUFFIX,future-media.ac.uk
 DOMAIN-SUFFIX,future-reserves-research.ac.uk
@@ -11853,6 +11862,8 @@ DOMAIN-SUFFIX,ggjav.com
 DOMAIN-SUFFIX,ggoogle.com
 DOMAIN-SUFFIX,ggpds.com
 DOMAIN-SUFFIX,ggpht.com
+DOMAIN-SUFFIX,ggsel.com
+DOMAIN-SUFFIX,ggsel.net
 DOMAIN-SUFFIX,ggsrv.com
 DOMAIN-SUFFIX,ggssl.com
 DOMAIN-SUFFIX,gh.io
@@ -22776,6 +22787,7 @@ DOMAIN-SUFFIX,prastitutki.ru
 DOMAIN-SUFFIX,prayforchina.net
 DOMAIN-SUFFIX,prcleader.org
 DOMAIN-SUFFIX,pre-bmwgroup.jobs
+DOMAIN-SUFFIX,predb.me
 DOMAIN-SUFFIX,predictivetechnologies.com
 DOMAIN-SUFFIX,premeforwindows7.com
 DOMAIN-SUFFIX,premia.ac.uk
@@ -24328,6 +24340,12 @@ DOMAIN-SUFFIX,scholarsschool.ac.uk
 DOMAIN-SUFFIX,schome.ac.uk
 DOMAIN-SUFFIX,schoms.ac.uk
 DOMAIN-SUFFIX,school-economic-science.ac.uk
+DOMAIN-SUFFIX,schwab.co.uk
+DOMAIN-SUFFIX,schwab.com
+DOMAIN-SUFFIX,schwab.com.hk
+DOMAIN-SUFFIX,schwab.com.sg
+DOMAIN-SUFFIX,schwabassetmanagement.com
+DOMAIN-SUFFIX,schwabplan.com
 DOMAIN-SUFFIX,sci-hub.it.nf
 DOMAIN-SUFFIX,sci-hub.mksa.top
 DOMAIN-SUFFIX,sci-hub.se
