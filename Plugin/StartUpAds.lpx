@@ -947,7 +947,7 @@ DOMAIN-SUFFIX, msmp.abchina.com.cn, REJECT
 ^https?:\/\/125\.215\.147\.40\/smartad\/ad reject-200
 
 # WoDeNanJing
-^https?:\/\/m\.mynj\.cn:\d+\/znmh_FEP\/loadpic\.jsp.*ad_pic.*open reject-img
+^https?:\/\/m\.mynj\.cn:\d+\/znmh_FEP\/loadpic\.jsp.*ad_pic.*open reject
 
 # ======= X ======= #
 # XinYueJuLeBu
