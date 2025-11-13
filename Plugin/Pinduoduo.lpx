@@ -8,7 +8,7 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
-#!date = 2025-11-05 09:00
+#!date = 2025-11-13 20:00
 
 # 2025-11-01
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
@@ -16,7 +16,7 @@
 # https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
 # 2025-07-31
 # https://klraw.pages.dev/kelv1n1n/script/main/rewrite/pdd.snippet?token=209863
-# 2025-11-05 05:02:01
+# 2025-11-13 19:47:47
 # https://kelee.one/Tool/Loon/Lpx/PinDuoDuo_remove_ads.lpx
 
 [Rule]
@@ -41,7 +41,6 @@ DOMAIN, th-a.pinduoduo.com, REJECT
 DOMAIN, ta-a.pinduoduo.com, REJECT
 DOMAIN, meta.pinduoduo.com, REJECT
 DOMAIN, apm-a.pinduoduo.com, REJECT
-DOMAIN, m.pinduoduo.net, REJECT
 IP-CIDR, 114.110.98.3/32, REJECT
 IP-CIDR, 114.110.98.2/32, REJECT
 IP-CIDR, 36.152.46.3/32, REJECT

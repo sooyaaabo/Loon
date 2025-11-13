@@ -8,9 +8,9 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DiDi.png
-#!date = 2025-10-17 16:00
+#!date = 2025-11-13 23:00
 
-# 2025-09-10 09:50:58
+# 2025-11-13 20:33:12
 # https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
 # 2025-09-05
 # https://klraw.pages.dev/kelv1n1n/script/main/plugin/didi.plugin?token=209863
@@ -20,6 +20,7 @@
 DOMAIN, gwp.xiaojukeji.com, REJECT
 DOMAIN, adtrack.xiaojukeji.com, REJECT
 AND, ((IP-ASN, 45090, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT
+AND, ((IP-ASN, 55990, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT
 AND, ((IP-ASN, 63646, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT
 
 IP-CIDR, 113.46.225.8/32, REJECT, no-resolve
@@ -67,7 +68,7 @@ IP-CIDR, 162.14.157.24/32, REJECT, no-resolve
 ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\? response-body-json-del data.mult_home_banner
 
 # 我的 - 钱包、营销卡片
-^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout response-body-json-jq 'del(.data.instances.center_marketing_card, .data.instances.center_tool_card, .data.instances.center_widget_list, .data.instances.center_res_light_guide) | .data.instances.center_wallet_finance_card.data.view_info |= map(select(.title == "优惠卡券"))'
+^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout response-body-json-jq 'del(.data.instances.center_marketing_card, .data.instances.center_tool_card, .data.instances.center_widget_list, .data.instances.center_res_light_guide, .data.instances.center_member_card) | .data.instances.center_wallet_finance_card.data.view_info |= map(select(.title == "优惠卡券"))'
 
 # 首页 - 拼车功能运营卡片配置数据
 ^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds\? reject-dict
