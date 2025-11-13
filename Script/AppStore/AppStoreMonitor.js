@@ -217,7 +217,7 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
   // 成功找到
   if (finalResult) {
     const { appInfo, region } = finalResult;
-    const appName = appInfo.trackName.split(/[-：:]/)[0].trim();
+    const appName = appInfo.trackName.split(/[–：-:]/)[0].trim();
     const newVersion = appInfo.version;
     const releaseNotes = appInfo.releaseNotes || '暂无更新说明';
     const updateDate = appInfo.currentVersionReleaseDate;
