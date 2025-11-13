@@ -1,4 +1,4 @@
-# 2025-11-10 08:18:00
+# 2025-11-13 16:25:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 
@@ -574,11 +574,6 @@ DOMAIN, lc.map.baidu.com
 # 百度贴吧
 # 屏蔽域名dns查询
 IP-CIDR, 180.76.76.200/32, no-resolve
-DOMAIN-KEYWORD, api.sobot.com
-DOMAIN-SUFFIX, cm.ad.bilibili.com
-DOMAIN-SUFFIX, cm.adcommon.bilibili.com
-DOMAIN-SUFFIX, cm.game.bilibili.com
-DOMAIN-SUFFIX, cm.track.biligame.bilibili.com
 
 # 百词斩
 DOMAIN, advertise.baicizhan.com
