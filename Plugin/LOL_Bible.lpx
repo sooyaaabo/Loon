@@ -1,0 +1,29 @@
+#!name = 掌上英雄联盟
+#!desc = 过滤掌上英雄联盟广告
+#!openUrl = https://apps.apple.com/app/id475666808
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.5(904)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/LOL_Bible.png
+#!date = 2025-11-14 12:00
+
+# 2025-11-14 02:24:43
+# https://kelee.one/Tool/Loon/Lpx/LOL_Bible_remove_ads.lpx
+
+[Rewrite]
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/mlol_news\/search\/varcache_hotV\d\? reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank_tab\? reject-dict
+^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank\? reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/zone\/bottomtab_tip\? reject-dict
+
+[MitM]
+hostname=mlol.qt.qq.com
