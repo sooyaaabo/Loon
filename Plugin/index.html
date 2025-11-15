@@ -548,12 +548,18 @@
         body.dark-mode .card-update-time {
             color: #777;
         }
-
+        
         .card-desc {
             margin: 0;
             font-size: .85rem;
             color: var(--card-desc);
-            flex-grow: 1; /* 允许描述文本占据更多空间 */
+            flex-grow: 1;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.4;
         }
 
         .card-tags {
