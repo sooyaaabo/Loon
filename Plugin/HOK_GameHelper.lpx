@@ -21,4 +21,4 @@
 ^https:\/\/app\.mval\.qq\.com\/go\/customize_search\/article_rank\? reject-dict
 
 [MitM]
-hostname=app.mval.qq.com
+hostname = app.mval.qq.com

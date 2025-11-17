@@ -25,5 +25,11 @@
 
 ^https:\/\/mlol\.qt\.qq\.com\/go\/zone\/bottomtab_tip\? reject-dict
 
+^https?:\/\/us\.l\.qq\.com\/exapp reject-200
+
+^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) reject-200
+
+^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) reject
+
 [MitM]
-hostname=mlol.qt.qq.com
+hostname = mlol.qt.qq.com, us.l.qq.com, ossweb-img.qq.com
