@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-10-26 18:00
+# 2025-11-18 18:00
 
 # CMSPlayer
 # 海外看
@@ -86,6 +86,8 @@ DOMAIN-SUFFIX, avdbapi.com
 DOMAIN-SUFFIX, avtoday.io
 # EXPORNTOONS
 DOMAIN-SUFFIX, exporntoons.net
+# FMovies
+DOMAIN-SUFFIX, fmovies.ro
 # Hanime1
 DOMAIN-SUFFIX, hanime1.me
 # HoHoJ

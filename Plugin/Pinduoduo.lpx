@@ -8,12 +8,10 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Pinduoduo.png
-#!date = 2025-11-14 18:00
+#!date = 2025-11-19 15:00
 
-# 2025-11-01
+# 2025-11-19
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Pinduoduo.snippet
-# 2024-08-10
-# https://raw.githubusercontent.com/ZenmoFeiShi/rule/main/Pinduoduo.list
 # 2025-07-31
 # https://klraw.pages.dev/kelv1n1n/script/main/rewrite/pdd.snippet?token=209863
 # 2025-11-14 17:26:24
@@ -27,19 +25,6 @@ AND, ((DOMAIN, api.pinduoduo.com), (PROTOCOL, QUIC)), REJECT
 
 DOMAIN, sdk.1rtb.net, REJECT
 DOMAIN, titan.pinduoduo.com, REJECT
-DOMAIN, xg.pinduoduo.com, REJECT
-DOMAIN, cdl-1.pddpic.com, REJECT
-DOMAIN, titan.pinduoduo.com, REJECT
-DOMAIN, cdl-p2.pddpic.com, REJECT
-DOMAIN, cd-1.pddpic.com, REJECT
-DOMAIN, apm.pinduoduo.com, REJECT
-DOMAIN, th-b.pinduoduo.com, REJECT
-DOMAIN, ta.pinduoduo.com, REJECT
-DOMAIN, th.pinduoduo.com, REJECT
-DOMAIN, th-a.pinduoduo.com, REJECT
-DOMAIN, ta-a.pinduoduo.com, REJECT
-DOMAIN, meta.pinduoduo.com, REJECT
-DOMAIN, apm-a.pinduoduo.com, REJECT
 IP-CIDR, 114.110.98.3/32, REJECT
 IP-CIDR, 114.110.98.2/32, REJECT
 IP-CIDR, 36.152.46.3/32, REJECT
