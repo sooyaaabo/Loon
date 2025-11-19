@@ -1,0 +1,121 @@
+#!name = 番茄小说
+#!desc = 过滤番茄小说广告
+#!openUrl = https://apps.apple.com/app/id1468454200
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], zqzess[https://github.com/zqzess]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.5(904)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/FanqieNovel.png
+#!date = 2025-10-19 20:00
+
+# 2025-11-12 19:57:44
+# https://kelee.one/Tool/Loon/Lpx/DragonRead_remove_ads.lpx
+# 2023-09-11
+# https://raw.githubusercontent.com/zqzess/rule_for_quantumultX/refs/heads/master/Loon/Plugin/FanQieNovel.plugin
+
+[Rule]
+DOMAIN, zlink.ugsdk.cn, REJECT
+
+DOMAIN, mon.toutiaocloud.net, REJECT
+DOMAIN, mon.toutiaocloud.com, REJECT
+
+DOMAIN, lf-normal-gr-sourcecdn.bytegecko.com, REJECT
+DOMAIN, lf-webcast-gr-sourcecdn.bytegecko.com, REJECT
+
+DOMAIN, p3-developer.bytemaimg.com, REJECT
+
+DOMAIN, webcast-open.douyin.com, REJECT
+
+DOMAIN, p11-webcast-sign.douyinpic.com, REJECT
+DOMAIN, p3-webcast-sign.douyinpic.com, REJECT
+
+DOMAIN, log3-applog.fqnovel.com, REJECT
+DOMAIN, log5-applog.fqnovel.com, REJECT
+DOMAIN, mon11-misc-lq.fqnovel.com, REJECT
+DOMAIN, mon11-misc.fqnovel.com, REJECT
+DOMAIN, mon3-misc.fqnovel.com, REJECT
+DOMAIN, rtlog3-applog.fqnovel.com, REJECT
+DOMAIN, rtlog5-applog.fqnovel.com, REJECT
+
+DOMAIN, effect.snssdk.com, REJECT
+DOMAIN, is-lq.snssdk.com, REJECT
+DOMAIN, is.snssdk.com, REJECT
+DOMAIN, security.snssdk.com, REJECT
+DOMAIN, vas.snssdk.com, REJECT
+DOMAIN, mcs.snssdk.com, REJECT
+DOMAIN, tnc3-alisc1.snssdk.com, REJECT
+DOMAIN, security-lq.snssdk.com, REJECT
+DOMAIN, tnc3-aliec2.snssdk.com, REJECT
+
+DOMAIN, abtest3-misc.zijieapi.com, REJECT
+DOMAIN, ads3-normal.zijieapi.com, REJECT
+DOMAIN, ads5-normal.zijieapi.com, REJECT
+DOMAIN, feedback-c.zijieapi.com, REJECT
+DOMAIN, gecko3.zijieapi.com, REJECT
+DOMAIN, gecko5.zijieapi.com, REJECT
+DOMAIN, ma.zijieapi.com, REJECT
+DOMAIN, minigame3-normal.zijieapi.com, REJECT
+DOMAIN, minigame5-normal.zijieapi.com, REJECT
+DOMAIN, mssdk.zijieapi.com, REJECT
+DOMAIN, timon.zijieapi.com, REJECT
+DOMAIN, vcs.zijieapi.com, REJECT
+
+DOMAIN, p6-ad-sign.byteimg.com, REJECT
+DOMAIN, p9-ad-sign.byteimg.com, REJECT
+
+DOMAIN, dig.bdurl.net, REJECT
+
+DOMAIN, activity-ag.awemeughun.com, REJECT
+
+DOMAIN, v6-novelapp.ixigua.com, REJECT
+DOMAIN, *novelapp.ixigua.com, REJECT
+DOMAIN, *default.ixigua.com, REJECT
+
+DOMAIN, msync-im1-vip6-std.easemob.com, REJECT
+
+DOMAIN, apd-pcdnwxlogin.teg.tencent-cloud.net, REJECT
+
+DOMAIN, api.iegadp.qq.com, REJECT
+
+DOMAIN, sf3-ttcdn-tos.pstatp.com, REJECT
+
+DOMAIN-SUFFIX, byteorge.com, REJECT
+DOMAIN-SUFFIX, bytegoofy.com, REJECT
+DOMAIN-SUFFIX, bytedance.com, REJECT
+
+DOMAIN-SUFFIX, pglstatp-toutiao.com, REJECT
+
+USER-AGENT, ttplayer*, REJECT
+
+IP-CIDR,49.71.37.101/32,REJECT,no-resolve
+IP-CIDR,117.71.105.23/32,REJECT,no-resolve
+IP-CIDR,218.94.207.205/32,REJECT,no-resolve
+IP-CIDR,117.92.229.188/32,REJECT,no-resolve
+IP-CIDR,101.36.166.16/32,REJECT,no-resolve
+IP-CIDR,180.96.2.114/32,REJECT,no-resolve
+
+[Rewrite]
+^https?:\/\/.+\.pangolin-sdk-toutiao\.com\/api\/ad\/union\/sdk\/(get_ads|stats|settings)\/ _ reject
+^https?:\/\/.+\.pglstatp-toutiao\.com\/.+\/toutiao\.mp4 _ reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/(ad-app-package|ad)\/.+ _ reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(obj|img)\/web\.business\.image\/.+ _ reject
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/obj\/ad-pattern\/renderer _ reject
+^https?:\/\/gurd\.snssdk\.com\/src\/server\/v3\/package _ reject
+^https?:\/\/.+\.byteimg.com/tos-cn-i-1yzifmftcy\/(.+)-jpeg\.jpeg _ reject
+^https?:\/\/.+\.pstatp\.com\/obj\/mosaic-legacy\/.+\?from\=ad _ reject
+^https?:\/\/.+\.pstatp\.com\/bytecom\/resource\/track_log\/src\/.+ _ reject
+^https?:\/\/.+\.snssdk\.com\/video\/play\/1\/toutiao\/.+\/mp4 _ reject
+^https?:\/\/.+\.snssdk.com\/api\/ad\/.+ _ reject
+^http:\/\/.+\.byteimg\.com\/ad-app-package _ reject
+^http:\/\/.+\.byteimg\.com\/web\.business\.image _ reject
+
+^https?:\/\/.+?\.snssdk\.com\/motor\/operation\/activity\/display\/config\/V2\/ _ reject
+
+^https?:\/\/.+\.(pglstatp-toutiao|pstatp)\.com\/(ad-app-package|ad)\/.+ _ reject
+^https?:\/\/adim\.pinduoduo\.com\/.+\/toutiao\?.+ _ reject
+^https?:\/\/v(\d)+-novelapp\.fqnovelvod\.com\/.+\/video\/.+ _ reject
+
+[MitM]
+hostname = *.pangolin-sdk-toutiao, *.pangolin-sdk-toutiao.*, *.pstatp.com, *.pstatp.com.*, *.pglstatp-toutiao.com.*, *.pglstatp-toutiao.com, gurd.snssdk.com, gurd.snssdk.com.*, *default.ixigua.com, adim.pinduoduo.com, *.fqnovelvod.com
