@@ -1,12 +1,7 @@
 # 影视播放规则(代理)
-# 2025-11-18 18:00
+# 2025-11-21 01:00
 
 # CMSPlayer
-# 海外看
-DOMAIN-SUFFIX, haiwaikan.com
-DOMAIN, cdnb.kin6c1.com
-DOMAIN, cdnb.iz8qkg.com
-DOMAIN, cdnb.v82u1l.com
 # 欧乐影视
 DOMAIN-SUFFIX, olelive.com
 DOMAIN-SUFFIX, olevod.com
@@ -14,22 +9,6 @@ DOMAIN-SUFFIX, olevod.tv
 DOMAIN-SUFFIX, olehdtv.com
 DOMAIN-SUFFIX, olemovienews.com
 DOMAIN-KEYWORD, olevod
-# 低端影视
-# DOMAIN-SUFFIX, ddrk.me
-# DOMAIN-SUFFIX, ddys.pro
-# DOMAIN-SUFFIX, ddys.mov
-# DOMAIN-SUFFIX, ddys.tv
-# DOMAIN-SUFFIX, ddys.info
-# DOMAIN-SUFFIX, ddys.love
-# 在线之家
-# DOMAIN-SUFFIX, zxzja.com
-# DOMAIN-SUFFIX, zxzj.site
-# DOMAIN-SUFFIX, zxzjhd.com
-# DOMAIN-SUFFIX, zxzj.pro
-# 独播库
-DOMAIN-SUFFIX, duboku.tv
-DOMAIN-SUFFIX, pub.duboku.net
-DOMAIN-SUFFIX, tv.gboku.com
 #天翼资源
 DOMAIN-SUFFIX, 911ysw.top
 # TMDB
@@ -53,33 +32,25 @@ DOMAIN-SUFFIX, wwzy.tv
 
 # XPTV
 # VOD TV源
-# 厂长资源
-# DOMAIN-SUFFIX, czzy.site
-# DOMAIN-SUFFIX, czys.top
-# DOMAIN-SUFFIX, czzy.top
-# DOMAIN-SUFFIX, czzy.tv
-# DOMAIN-SUFFIX, cz01.vip
-# DOMAIN-SUFFIX, cz01.tv
-# DOMAIN-SUFFIX, czzy22.com
-# DOMAIN-SUFFIX, czzy66.com
-# DOMAIN-SUFFIX, czzy77.com
-# DOMAIN-SUFFIX, czzy88.com
-# DOMAIN-SUFFIX, cz233.com
-# AnFuns动漫
-DOMAIN-SUFFIX, anfuns.cc
 # 两个BT
 DOMAIN-SUFFIX, bttwo.net
-# 嗷呜
+# 嗷呜动漫
 DOMAIN-SUFFIX, aowu.tv
-# 美剧星球
-DOMAIN-SUFFIX, kmeiju.cc
+# 独播库
+DOMAIN-SUFFIX, duboku.info
+DOMAIN-SUFFIX, gboku.com
+# 老地方影院
+DOMAIN-SUFFIX, laodifang.tv
+# 欧乐影院
+DOMAIN-SUFFIX, olehdtv.com
+DOMAIN-SUFFIX, olevod.com
 # 追光影视
 DOMAIN-SUFFIX, sgsd.xyz
 
 # VOD AV源
 # 91Jav
-DOMAIN-SUFFIX, 91jav.fun
-DOMAIN, 041.bndmpsjx.com
+DOMAIN-SUFFIX, 91jav1.com
+DOMAIN, jdkir.triutpw.cc
 # AVDB
 DOMAIN-SUFFIX, avdbapi.com
 # AV Today
@@ -94,12 +65,16 @@ DOMAIN-SUFFIX, hanime1.me
 DOMAIN-SUFFIX, hohoj.tv
 # Jable
 DOMAIN-SUFFIX, jable.tv
+# JAVMove
+DOMAIN-SUFFIX, javmove.com
 # KanAV
 DOMAIN-SUFFIX, kanav.info
+# KBJFan
+DOMAIN-SUFFIX, kbjfan.com
 # KoreaPornMovie
 DOMAIN-SUFFIX, koreanpornmovie.com
 # MissAV
-DOMAIN-SUFFIX, missav.com
+DOMAIN-SUFFIX, missav.ai
 DOMAIN-SUFFIX, missav.ws
 # Pornhub
 DOMAIN-SUFFIX, pornhub.com
@@ -109,6 +84,10 @@ DOMAIN-SUFFIX, ppp.porn
 DOMAIN-SUFFIX, spankbang.com
 # SubJav
 DOMAIN-SUFFIX, supjav.com
+# Taiav
+DOMAIN-SUFFIX, taiav.com
+# TwiVideo
+DOMAIN-SUFFIX, twivideo.net
 # xHamster
 DOMAIN-SUFFIX, xhamster.com
 # 花都影视
@@ -125,14 +104,11 @@ DOMAIN-SUFFIX, 822thz.com
 DOMAIN-SUFFIX, hongkongdollvideo.com
 # 有爱爱
 DOMAIN-SUFFIX, uaa.com
-# Taiav
-DOMAIN-SUFFIX, taiav.com
-# TwiVideo
-DOMAIN-SUFFIX, twivideo.net
-# JAVMove
-DOMAIN-SUFFIX, javmove.com
 # PandaTV
 DOMAIN-SUFFIX, pandalive.co.kr
+# 秋名山见
+DOMAIN, api.hclyz.com
+DOMAIN, api.maiyoux.com
 
 # 网盘源
 # 小盘盘

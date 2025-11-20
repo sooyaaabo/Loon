@@ -1,5 +1,5 @@
 # 影视播放规则(直连)
-# 2025-05-11 18:30
+# 2025-11-21 01:00
 # https://github.com/fangkuia/XPTV/blob/main/X/xptv.plugin
 
 # --------------- CMSPlayer --------------- #
@@ -150,141 +150,62 @@ DOMAIN-SUFFIX, msstatic.com
 DOMAIN, lemonlive.deno.dev
 
 # VOD源
-# 爱壹帆
-DOMAIN-SUFFIX, iyf.tv
-# 金牌影院
-DOMAIN-SUFFIX, cfkj86.com
-# 绝对影视
-DOMAIN-SUFFIX, jdys.art
-# 老地方
-DOMAIN-SUFFIX, laodifang.tv
-# 零度影视
-DOMAIN, zero.mitotv.com
-# 小红影视
-DOMAIN-SUFFIX, xiaohys.com
-# 素白白影院
-DOMAIN, dc.xhscdn.com
-DOMAIN-SUFFIX, subaibai.vip
-DOMAIN-SUFFIX, subaibai.com
-DOMAIN-SUFFIX, subaibaiys.com
-# 速讯影院
-DOMAIN-SUFFIX, suxun.site
-DOMAIN-SUFFIX, esuxun.com
-# 文才资源
-DOMAIN, api.zeqaht.com
-# timi芒果TV
-DOMAIN-SUFFIX, mgtv.com
-DOMAIN-SUFFIX, timizy.com
-# 短剧天堂
-DOMAIN-SUFFIX, duanjutt.tv
-# dsakf23665
-DOMAIN-SUFFIX, dsakf23665.com
-# BILFUN
-DOMAIN-SUFFIX, bilfun.cc
-# 低端
-DOMAIN-SUFFIX, ddys.pro
+# 4k-av
+DOMAIN-SUFFIX, 4kmp.com
 # AGE
-DOMAIN-SUFFIX, agedm.org
+DOMAIN-SUFFIX, agedm.io
+# AnFuns
+DOMAIN-SUFFIX, anfuns.org
+# BILFUN
+DOMAIN-SUFFIX, xinxinysju.cc
 # Catflix
 DOMAIN-SUFFIX, catflix.su
-# ギリギリ
-DOMAIN, anime.girigirilove.com
-DOMAIN, love.girigirilove.com
-DOMAIN, m3u8.girigirilove.com
-# 瓜子
-DOMAIN, api.9cec79d.com
-DOMAIN, wjm.kemfsj.com
-# 4k-av
-DOMAIN, www.4k-av.com
-# 囧动漫
-IP-CIDR, 43.142.232.217/32, no-resolve
-DOMAIN-SUFFIX, fanchenstatic.com
-DOMAIN, i0.hdslb.com
-DOMAIN-SUFFIX, bsgslb.cn
-DOMAIN-SUFFIX, bytetos.com
-DOMAIN-SUFFIX, douyinvod.com
-DOMAIN-SUFFIX, byteimg.com
-IP-CIDR, 110.41.171.181/32, no-resolve
-IP-CIDR, 49.235.143.104/32, no-resolve
-DOMAIN-SUFFIX, xhscdn.com
-DOMAIN-SUFFIX, bdxiguastatic.com
-DOMAIN-SUFFIX, zshtys888.com
-# libvio
-DOMAIN, www.libvio.cc
-DOMAIN-SUFFIX, mcloud.139.com
-DOMAIN-SUFFIX, libvio.cloud
-# anfuns
-DOMAIN-SUFFIX, anfuns.org
-DOMAIN-SUFFIX, bytegiftia.top
-DOMAIN-SUFFIX, lenovo.com.cn
-DOMAIN, image.zhihuishu.com
-DOMAIN, presale.111.com.cn
-# hdmoli
-DOMAIN, hdmoli.pro
-DOMAIN, v.damoli.pro
+# LIBVIO
+DOMAIN-SUFFIX, libvio.site
+# NO視頻
+DOMAIN-SUFFIX, novipnoad.net
+# 爱壹帆
+DOMAIN-SUFFIX, iyf.tv
+# 嗷呜动漫
+DOMAIN-SUFFIX, aowu.tv
 # 哔嘀影视
 DOMAIN, v.xlys.ltd.ua
-DOMAIN-SUFFIX, bytetos.com
-# 烧火影视
-DOMAIN, saohuo.tv
-DOMAIN, hhjx.hhplayer.comundefined
-DOMAIN-SUFFIX, video.iqiyi.com
-DOMAIN-SUFFIX, qitu-zuida.com
-DOMAIN, om.tc.qq.com
-DOMAIN-SUFFIX, ibytedtos.com
-DOMAIN-SUFFIX, 1ljx.com
-DOMAIN-SUFFIX, smtcdns.com
-DOMAIN, cme-video.vod-qcloud.com
-DOMAIN, hhjx.hhplayer.com
-# NO視頻
-DOMAIN, www.novipnoad.net
-DOMAIN-SUFFIX, novipnoad.net
+# 厂长资源
+DOMAIN-SUFFIX, czzymovie.com
+DOMAIN-SUFFIX, cz4k.com
+# 短剧天堂
+DOMAIN-SUFFIX, duanjutt.tv
+# 瓜子影视
+DOMAIN-SUFFIX, gz360.tv
+DOMAIN, api.9cec79d.com
+DOMAIN, wjm.kemfsj.com
 # 韩剧看看
-DOMAIN, www.hanjukankan.com
-DOMAIN, glzx.thekutv.com
-DOMAIN-SUFFIX, thehanju.com
-DOMAIN-SUFFIX, vvddoo.com
-# 影视天堂
-DOMAIN-SUFFIX, ysttv.com
-# 星芽
-DOMAIN, qiniu.rongjuwh.cn
-DOMAIN, app.whjzjx.cn
-DOMAIN, u.shytkjgs.com
-IP-CIDR, 218.22.23.189/32, no-resolve
-IP-CIDR, 117.68.35.135/32, no-resolve
-IP-CIDR, 218.22.23.229/32, no-resolve
-DOMAIN-SUFFIX, qnqcdn.net
-DOMAIN-SUFFIX, xingya.com.cn
-IP-CIDR, 117.68.35.139/32, no-resolve
-# 小苹果
-IP-CIDR, 163.123.192.184/32, no-resolve
-IP-CIDR, 148.59.74.50/32, no-resolve
-IP-CIDR, 205.178.182.17/32, no-resolve
-IP-CIDR, 163.123.192.169/32, no-resolve
-IP-CIDR, 163.123.192.68/32, no-resolve
-IP-CIDR, 163.123.192.182/32, no-resolve
-IP-CIDR, 205.178.182.8/32, no-resolve
-IP-CIDR, 163.123.192.108/32, no-resolve
-IP-CIDR, 163.123.192.29/32, no-resolve
-IP-CIDR, 205.178.182.52/32, no-resolve
-IP-CIDR, 163.123.192.17/32, no-resolve
-DOMAIN, c.xpgtv.net
-DOMAIN, item.xpgcom.com
-# 厂长
-DOMAIN, www.czzyvideo.com
-DOMAIN, qimgs.qunarzz.com
-DOMAIN, lf16-fe.resso.me
-DOMAIN-SUFFIX, akamaized.net
-DOMAIN, t001.czzy.fun
-DOMAIN, vunyundun.czys.art
-DOMAIN-SUFFIX, larksuitecdn.com
-DOMAIN, dc.xhscdn.com
-DOMAIN, mdn.alipayobjects.com
-# 在线之家
-DOMAIN-SUFFIX, zxzja.com
-DOMAIN-SUFFIX, ctyunxs.cn
+DOMAIN-SUFFIX, hanjukankan.com
+# 荐片
+DOMAIN, ev5356.970xw.com
+# 金牌影院
+DOMAIN-SUFFIX, jiabaide.cn
+# 绝对影视
+DOMAIN-SUFFIX, jdys.art
+# 零度影视
+DOMAIN, zero.mitotv.com
 # 皮皮虾影视
 DOMAIN-SUFFIX, ppxys.vip
+# 烧火影视
+DOMAIN, saohuo.tv
+# 小红影视
+DOMAIN-SUFFIX, xiaohys.com
+# 小苹果
+IP-CIDR, 194.147.100.13/32, no-resolve
+# 星芽短剧
+DOMAIN, app.whjzjx.cn
+# 影视天堂
+DOMAIN-SUFFIX, ysttv.com
+# 在线之家
+DOMAIN-SUFFIX, zxzjhd.com
+# ギリギリ动漫
+DOMAIN, bgm.girigirilove.com
+DOMAIN, m3u8.girigirilove.com
 
 # CMS源
 # 360
