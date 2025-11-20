@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-11-18 02:08:25
+# UPDATED: 2025-11-20 02:07:47
 # DOMAIN: 114
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 32122
+# DOMAIN-SUFFIX: 32124
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 32434
+# TOTAL: 32436
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -1168,6 +1168,7 @@ DOMAIN-SUFFIX,ahvideosexe.com
 DOMAIN-SUFFIX,ahxxx.club
 DOMAIN-SUFFIX,ai-kan.net
 DOMAIN-SUFFIX,ai-wen.net
+DOMAIN-SUFFIX,ai.dev
 DOMAIN-SUFFIX,ai3sd.ac.uk
 DOMAIN-SUFFIX,ai7995.site
 DOMAIN-SUFFIX,ai91porn.cc
@@ -18813,6 +18814,7 @@ DOMAIN-SUFFIX,miyazakibank.co.jp
 DOMAIN-SUFFIX,mizuhobank.co.jp
 DOMAIN-SUFFIX,mizzmona.com
 DOMAIN-SUFFIX,mjib.gov.tw
+DOMAIN-SUFFIX,mjj.rip
 DOMAIN-SUFFIX,mjv-art.org
 DOMAIN-SUFFIX,mk.shrimpia.network
 DOMAIN-SUFFIX,mk.yopo.work
