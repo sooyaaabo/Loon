@@ -8,11 +8,11 @@
 #!loon_version = 3.3.5(904)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BaiduTieba.png
-#!date = 2025-10-24 20:00
+#!date = 2025-11-20 10:00
 
 # 2025-10-17
 # https://raw.githubusercontent.com/app2smile/rules/master/plugin/tieba.plugin
-# 2025-05-13 15:17:08
+# 2025-11-20 01:28:27
 # https://kelee.one/Tool/Loon/Lpx/Tieba_remove_ads.lpx
 
 [Argument]
