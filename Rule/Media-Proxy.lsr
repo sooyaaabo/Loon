@@ -1,5 +1,5 @@
 # 影视播放规则(代理)
-# 2025-11-21 01:00
+# 2025-11-21 15:00
 
 # CMSPlayer
 # 欧乐影视
@@ -58,7 +58,7 @@ DOMAIN-SUFFIX, avtoday.io
 # EXPORNTOONS
 DOMAIN-SUFFIX, exporntoons.net
 # FMovies
-DOMAIN-SUFFIX, fmovies.ro
+DOMAIN-SUFFIX, fmovies.llc
 # Hanime1
 DOMAIN-SUFFIX, hanime1.me
 # HoHoJ

@@ -1149,6 +1149,14 @@
         {
             "name": "FilesPreview",
             "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/FilesPreview.png"
+        },
+        {
+            "name": "PowerToys",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/PowerToys.png"
+        },
+        {
+            "name": "UniGetUI",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/UniGetUI.png"
         }
     ]
 }
