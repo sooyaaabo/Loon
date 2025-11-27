@@ -8,11 +8,11 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Zhidemai.png
-#!date = 2025-11-27 12:00
+#!date = 2025-11-27 22:00
 
 # 2024-02-11 01:02
 # https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/Smzdm.snippet
-# 2025-11-12 04:00:04
+# 2025-11-27 21:44:57
 # https://kelee.one/Tool/Loon/Lpx/smzdm_remove_ads.lpx
 
 [Rule]
@@ -74,7 +74,7 @@ DOMAIN, adx-api.zdmimg.com, REJECT
 ^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\? response-body-json-del data.search_faxian data.tonglan data.hongbao
 
 # 搜索页面 - 榜单广告
-^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\? response-body-json-jq '.data.search_hot.home |= map(select(.article_tag.article_title != "广告"))'
+^https:\/\/s-api\.smzdm\.com\/sou\/filter\/tags\/hot_tags\? response-body-json-jq '.data.search_hot.home |= map(select(.article_tag.article_title != "广告")) | .data.search_hot.home |= map(select(has("pos")))'
 
 # 搜索 - 弹窗
 ^https:\/\/s-api\.smzdm\.com\/sou\/popup_coupon\? reject-dict
