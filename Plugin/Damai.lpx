@@ -1,0 +1,31 @@
+#!name = 大麦
+#!desc = 过滤大麦广告
+#!openUrl = https://apps.apple.com/app/id513829338
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.6(917)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Damai.png
+#!date = 2025-11-27 12:00
+
+# 2025-11-09 00:15:08
+# https://kelee.one/Tool/Loon/Lpx/Damai_remove_ads.lpx
+
+[Rule]
+AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "DMPortal*")), REJECT
+
+[Rewrite]
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.home\.welcome\/ reject-dict
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.popup\.get\/ reject-dict
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.user\.my\.content\.get\/ response-body-json-del data.banner data.performFilmVip.userProfitList
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.wireless\.mypage\.feed\/ response-body-json-del data.feedCard
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.damai\.mec\.aristotle\.get\/ response-body-json-del data.data.top.keywords
+
+[MitM]
+hostname = acs.m.taobao.com

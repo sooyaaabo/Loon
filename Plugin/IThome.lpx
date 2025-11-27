@@ -1,0 +1,29 @@
+#!name = IT之家
+#!desc = 过滤IT之家广告，自定义移除置顶和轮播图，自定义移除项需在插件配置。
+#!openUrl = https://apps.apple.com/app/id570610859
+#!author = Keywos[https://github.com/Keywos], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.6(917)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/IThome.png
+#!date = 2025-11-27 12:00
+
+# 2024-01-27 20:57:40
+# https://raw.githubusercontent.com/Keywos/rule/main/script/ithome/it.plugin
+# 2025-10-24 03:22:31
+# https://kelee.one/Tool/Loon/Lpx/IThome_remove_ads.lpx
+
+[Argument]
+removePinnedArticles = switch, true, false, tag = 移除置顶文章, desc = 启用后将移除置顶文章
+removeAllBanners = switch, true, false, tag = 移除全部横幅, desc = 启用后将移除全部横幅
+
+[Rewrite]
+^https?:\/\/dat\.ruanmei\.com\/ithome\/money\/acd\.json$ reject
+
+[Script]
+http-response ^https:\/\/napi\.ithome\.com\/api\/(news\/indexv2\/iphone\/\d+$|topmenu\/getfeeds\?) script-path = https://kelee.one/Resource/JavaScript/IThome/IThome_remove_ads.js, requires-body = true, tag = [IT之家]移除广告, argument=[{removeAllBanners},{removePinnedArticles}]
+  
+[MitM]
+hostname = napi.ithome.com, api.zuihuimai.com, dat.ruanmei.com

@@ -1,0 +1,91 @@
+name: Run Selected Workflows
+
+on:
+  # 允许你从 GitHub Actions UI 手动触发此工作流
+  workflow_dispatch:
+    inputs:
+      download_geodata:
+        type: boolean
+        description: 'Run DownloadGeoData.yml'
+        required: true
+        default: false
+      download_ad_rules:
+        type: boolean
+        description: 'Run DownloadAdRules.yml'
+        required: true
+        default: false
+      download_global_list:
+        type: boolean
+        description: 'Run DownloadProxyRules.yml'
+        required: true
+        default: false
+      replace_js_url:
+        type: boolean
+        description: 'Run ReplaceJsURL.yml'
+        required: true
+        default: false
+      replace_lpx_data:
+        type: boolean
+        description: 'Run ReplaceLpxData.yml'
+        required: true
+        default: false
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  # 第一步：根据勾选来触发其他工作流
+  dispatch-workflows:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Trigger selected workflows
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const workflows = {
+              download_ad_rules: 'DownloadAdRules.yml',
+              download_geodata: 'DownloadGeoData.yml',
+              download_global_list: 'DownloadProxyRules.yml',
+              replace_js_url: 'ReplaceJsURL.yml',
+              replace_lpx_data: 'ReplaceLpxData.yml'
+            };
+
+            const ref = context.ref;
+            console.log(`Current ref: ${ref}`);
+
+            for (const key in workflows) {
+              if (context.payload.inputs[key] === 'true') {
+                const workflow_id = workflows[key];
+                console.log(`Triggering: ${workflow_id}`);
+                try {
+                  await github.rest.actions.createWorkflowDispatch({
+                    owner: context.repo.owner,
+                    repo: context.repo.repo,
+                    workflow_id: workflow_id,
+                    ref: ref
+                  });
+                  console.log(`✅ Successfully dispatched ${workflow_id}`);
+                } catch (error) {
+                  console.error(`❌ Error dispatching ${workflow_id}:`, error);
+                }
+              } else {
+                console.log(`Skipping ${workflows[key]} (input=${context.payload.inputs[key]})`);
+              }
+            }
+
+  # 第二步：清理此工作流自身的旧运行记录
+  clean_up_workflow:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clean up "Run Selected Workflows" runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          workflow_id: 'Run Selected Workflows'
+          retain_days: 0
+          keep_minimum_runs: 3

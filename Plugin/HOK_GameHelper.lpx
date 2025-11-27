@@ -1,0 +1,24 @@
+#!name = 王者营地
+#!desc = 过滤王者营地广告
+#!openUrl = https://apps.apple.com/app/id1102305688
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.6(917)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/HOK_GameHelper.png
+#!date = 2025-11-27 12:00
+
+# 2025-11-14 01:05:58
+# https://kelee.one/Tool/Loon/Lpx/HonorOfKingsGameHelper_remove_ads.lpx
+
+[Rewrite]
+^https:\/\/app\.mval\.qq\.com\/go\/recommend\/platflashbox\? reject-dict
+
+^https:\/\/app\.mval\.qq\.com\/go\/mlol_news\/search\/varcache_hotV\d\? reject-dict
+
+^https:\/\/app\.mval\.qq\.com\/go\/customize_search\/article_rank\? reject-dict
+
+[MitM]
+hostname = app.mval.qq.com

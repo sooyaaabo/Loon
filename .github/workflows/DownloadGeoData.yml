@@ -1,0 +1,62 @@
+name: Download Country.mmdb & GeoLite2-ASN.mmdb
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 */24 * * *"
+
+permissions:
+  actions: write  
+  contents: write  
+
+jobs:
+  BuildUpdateRepository:
+    runs-on: ubuntu-latest
+    env:
+      TZ: 'Asia/Shanghai'
+    
+    steps: 
+    - name: 验证目标存储库
+      uses: actions/checkout@v4.2.2
+      with:
+        repository: sooyaaabo/Loon
+        path: Loon
+
+###### Loon
+      
+    - name: Loon数据库
+      run: |
+        mkdir -p Loon/GeoData
+        
+        # 定义数据库
+        declare -A geodatas=(
+            [Country-Masaiki]="https://github.com/Masaiki/GeoIP2-CN/raw/release/Country.mmdb"
+            [GeoLite2-ASN-P3TERX]="https://github.com/P3TERX/GeoLite.mmdb/releases/latest/download/GeoLite2-ASN.mmdb"
+        )
+        
+        # 下载数据库
+        for geodata_name in "${!geodatas[@]}"; do
+            url="${geodatas[$geodata_name]}"
+            # curl -A "Surge iOS/3450" -L -o "Loon/GeoData/${geodata_name}.mmdb" "$url"
+            curl -L -o "Loon/GeoData/${geodata_name}.mmdb" "$url"
+        done
+
+###### Commit
+    - name: 添加Commits
+      run: |
+        cd Loon
+        if [[ -n $(git status -s) ]]; then
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          git add .
+          git commit -m "Update GeoData ($(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M'))"
+          git push origin HEAD
+        else
+          echo "No changes to commit."
+        fi
+        
+    - name: 清理Workflow
+      uses: Mattraks/delete-workflow-runs@main
+      with:
+        retain_days: 0
+        keep_minimum_runs: 3

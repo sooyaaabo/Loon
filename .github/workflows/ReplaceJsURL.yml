@@ -1,0 +1,51 @@
+name: Replace JavaScript URL in .lpx Files
+
+on:
+  workflow_dispatch:
+  # schedule:
+    # - cron: "30 * * * *"
+
+permissions:
+  actions: write  
+  contents: write  
+
+jobs:
+  replace-url:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: sooyaaabo/Loon
+          path: Loon
+          token: ${{ secrets.GITHUB_TOKEN }} 
+        
+      - name: Set timezone to China/Shanghai
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+
+      - name: Replace Script URL
+        run: |
+          cd Loon
+          OLD_URL="https://kelee.one/Resource/Script/"
+          NEW_URL="https://kelee.one/Resource/JavaScript/"
+          
+          # 查找并替换文件内容
+          find . -type f -name "*.lpx" -exec sed -i \
+            -e "s|$OLD_URL|$NEW_URL|g" {} +
+          
+      - name: Commit changes
+        run: |
+          cd Loon
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add . 
+          git commit -m "Routine Updates" || echo "No changes to commit"
+          git push
+
+      - name: 清理Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 0
+          keep_minimum_runs: 3

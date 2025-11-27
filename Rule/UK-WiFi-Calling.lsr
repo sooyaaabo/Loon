@@ -1,0 +1,18 @@
+# https://raw.githubusercontent.com/iniwex5/tools/refs/heads/main/rules/UK-wifi-call.list
+
+# 地区检测
+DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com
+
+# 沃达丰
+DOMAIN-SUFFIX, epdg.epc.mnc015.mcc234.pub.3gppnetwork.org
+DOMAIN-SUFFIX, ss.epdg.epc.mnc015.mcc234.pub.3gppnetwork.org
+DOMAIN-SUFFIX, ss.epdg.epc.geo.mnc015.mcc234.pub.3gppnetwork.org
+DOMAIN-SUFFIX, entsrv-uk.vodafone.com
+DOMAIN-SUFFIX, vuk-gto.prod.ondemandconnectivity.com
+IP-CIDR, 88.82.0.0/19
+
+# CMLinkUK EE
+IP-CIDR, 46.68.0.0/17
+
+# Giffgaff
+IP-CIDR, 87.194.0.0/16

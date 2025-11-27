@@ -1,0 +1,67 @@
+name: Clean Selected Workflow
+
+on:
+  workflow_dispatch:
+    inputs:
+      status:
+        description: "选择要清理的 workflow 运行状态"
+        type: choice
+        options:
+          - failure
+          - cancelled
+          - timed_out
+          - all
+        default: failure
+
+permissions:
+  actions: write
+
+jobs:
+  clean_selected:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Delete workflow runs by status
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const { owner, repo } = context.repo;
+            const inputStatus = context.payload.inputs.status;
+            console.log(`Cleaning runs with status: ${inputStatus}`);
+
+            // 获取所有 workflow runs
+            const runs = await github.paginate(
+              github.rest.actions.listWorkflowRunsForRepo,
+              {
+                owner,
+                repo,
+                per_page: 100
+              }
+            );
+
+            console.log(`Found ${runs.length} runs in total`);
+
+            // 选择目标 runs
+            let targetRuns;
+            if (inputStatus === "all") {
+              targetRuns = runs.filter(r =>
+                ["failure", "cancelled", "timed_out"].includes(r.conclusion)
+              );
+            } else {
+              targetRuns = runs.filter(r => r.conclusion === inputStatus);
+            }
+
+            console.log(`Found ${targetRuns.length} runs to delete`);
+
+            for (const run of targetRuns) {
+              try {
+                await github.rest.actions.deleteWorkflowRun({
+                  owner,
+                  repo,
+                  run_id: run.id
+                });
+                console.log(`🗑️ Deleted run: ${run.id} (${run.name}) [${run.conclusion}]`);
+              } catch (err) {
+                console.error(`❌ Failed to delete run ${run.id}:`, err.message);
+              }
+            }
