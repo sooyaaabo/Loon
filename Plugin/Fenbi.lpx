@@ -10,7 +10,7 @@
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Fenbi.png
 #!date = 2025-11-27 21:00
 
-# 2025-11-27 20:36:00
+# 2025-11-27 20:44:18
 # https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx
 
 [Rewrite]
@@ -21,6 +21,8 @@
 # ^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_home_banners\?.*position_resource_type=1 mock-response-body data-type=json data="{"code":1,"msg":"","data":{"positionResourceType":1,"payload":{"items":[{"id":17868,"courseSetId":2,"content":"妹子图","imageUrl":"https://i.im.ge/2025/11/24/4DrVp0.mm.png","url":"null","redirectType":1,"ordinal":8,"createdTime":1746799144383,"startTime":1759850171000,"endTime":4070880000000,"type":0,"bizType":4}],"count":1}}}" status-code=200
 
 ^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/position_resource\/get_home_banners\?.*position_resource_type=2 reject-dict
+
+^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/\w+\/reddot\? reject-dict
 
 ^https:\/\/ke\.fenbi\.com\/(?:iphone|ipad)\/v3\/timetable\/today_with_public_episodes\? reject-dict
 
@@ -39,7 +41,7 @@
 
 ^https:\/\/ke\.fenbi\.com\/(?:iphone|ipad)\/v3\/remind\/instant\? reject-dict
 
-^https:\/\/keapi\.fenbi\.com\/app\/(?:iphone|ipad)\/[^\/]+\/reddot\?.* reject-dict
+^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/entry\? reject-dict
 
 [MitM]
 hostname = keapi.fenbi.com, market-api.fenbi.com, ke.fenbi.com, hera-webapp.fenbi.com
