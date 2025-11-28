@@ -8,7 +8,7 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Fenbi.png
-#!date = 2025-11-27 21:00
+#!date = 2025-11-28 16:00
 
 # 2025-11-27 20:44:18
 # https://kelee.one/Tool/Loon/Lpx/FenBi_remove_ads.lpx
@@ -41,7 +41,9 @@
 
 ^https:\/\/ke\.fenbi\.com\/(?:iphone|ipad)\/v3\/remind\/instant\? reject-dict
 
-^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/entry\? reject-dict
+^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/exercise_remark\/get_questions_remark\? reject-dict
+
+^https:\/\/keapi\.fenbi\.com\/ai\/(?:iphone|ipad)\/entry\? mock-response-body data-type=json data="{"msg":"","data":null,"code":404}"
 
 [MitM]
 hostname = keapi.fenbi.com, market-api.fenbi.com, ke.fenbi.com, hera-webapp.fenbi.com
