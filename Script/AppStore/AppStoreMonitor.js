@@ -53,7 +53,7 @@ function extractRegions(rawArg) {
 // 返回 { status: 'found' | 'notfound' | 'error', ... }
 function lookupApp(region, appId) {
   return new Promise(resolve => {
-    const url = `https://itunes.apple.com/${region}/lookup?id=${appId}&t=${Date.now()}`;
+    const url = `https://itunes.apple.com/${region}/lookup?id=${appId}&l=zh-CN&t=${Date.now()}`;
 
     const headers = {
       'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 16_0 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Mobile/15E148 Safari/604.1',
@@ -177,6 +177,7 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
   const existingAppData = monitoredData[appId];
   let searchRegions = [...regions];
 
+/*
   // 如果已监控过，优先查询上次成功的区域
   if (existingAppData && existingAppData.region) {
     const lastKnownRegion = existingAppData.region;
@@ -185,6 +186,7 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
       searchRegions.unshift(lastKnownRegion);
     }
   }
+*/
 
   let finalResult = null;
   let notFoundRegions = [];
