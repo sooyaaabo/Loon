@@ -1740,7 +1740,7 @@ https?:\/\/api\.taptapdada\.com\/startup\-logo\/v1\/combo\? reject-dict
 ^https?:\/\/ios\.wps\.cn\/ad-statistics-service reject
 ^https?:\/\/mobile-pic\.cache\.iciba\.com\/feeds_ad\/ reject-200
 
-# WIFI万能钥匙 - cds.wifi188.com
+# WiFi万能钥匙 - cds.wifi188.com
 ^https?:\/\/cds\.wifi188\.com\/feeds\.sec reject-dict
 
 # 完美世界电竞 - api.wmpvp.com

@@ -8,20 +8,20 @@
 #!loon_version = 3.3.6(917)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png
-#!date = 2025-11-27 23:00
+#!date = 2025-11-28 20:00
 
 # 2025-11-23 20:50:36
 # https://kelee.one/Tool/Loon/Lpx/Bilibili_remove_ads.lpx
-# 2025-11-23
+# 2025-11-28
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/loon/plugin/bilibili.lpx
 # https://raw.githubusercontent.com/kokoryh/Sparkle/master/release/surge/module/bilibili.sgmodule
 
 [Argument]
 displayUpList = select, "auto", "show", "hide", tag = [动态]中[最常访问]的显示方式, desc = auto: 仅当列表中存在直播状态时显示; show: 始终显示; hide: 始终隐藏;
 purifyComment = switch, true, false, tag = [评论区]过滤置顶评论广告, desc = true: 开启; false: 关闭;
-optimizeRequest = switch, false, true, tag =[评论区]优化卡顿(BETA), desc = true: 开启; false: 关闭;
+optimizeRequest = switch, true, false, tag =[评论区]优化卡顿(BETA), desc = true: 开启; false: 关闭;
 sponsorBlock = switch, true, false, tag = [空降助手]跳过视频内插播广告, desc = true: 开启; false: 关闭;
-logLevel = select, "off", "error", "warn", "info", "debug", tag = 日志等级, desc = 选择日志输出等级
+logLevel = select, "error", "warn", "info", "debug", "off", tag = 日志等级, desc = 选择日志输出等级
 
 [Rule]
 DOMAIN, bsbsb.top, PROXY
@@ -55,7 +55,7 @@ AND, ((DOMAIN-SUFFIX, chat.bilibili.com), (OR, ((DOMAIN-KEYWORD, stun), (DOMAIN-
 # 移除播放页面广告
 ^https:\/\/grpc\.biliapi\.net\/bilibili\.app\.(view\.v1\.View\/TFInfo|viewunite\.v1\.View\/ViewEndPage)$ mock-response-body data-type=base64 data="AAAAAAA=" mock-data-is-base64=true
 
-^https:\/\/api\.bilibili\.com\/pgc\/page\/channel\?(.*)&mobi_app=iphone&(.*)$ header https://api.bilibili.com/pgc/page/channel?$1&mobi_app=iphone_i&$2 header
+^https:\/\/api\.bilibili\.com\/pgc\/page\/channel\?(.*)&mobi_app=iphone&(.*)$ header https://api.bilibili.com/pgc/page/channel?$1&mobi_app=iphone_i&$2
 
 ^https:\/\/api\.bilibili\.com\/x\/pd-proxy\/tracker\? response-body-json-jq '.data[][]?="stun.chat.bilibili.com:3478"'
 
