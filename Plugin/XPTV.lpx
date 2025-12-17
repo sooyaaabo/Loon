@@ -1,0 +1,46 @@
+#!name = XPTV
+#!desc = 伪CMS源，安装此插件后在XPTV内添加订阅地址：https://ykusu.ykusu/getJSON/cmsbeta.json
+#!openUrl = https://apps.apple.com/app/id6459409368
+#!author = Yswag[https://github.com/Yswag]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/XPTV.png
+#!date = 2025-12-16 20:00
+
+# 2024-08-06 00:14
+# https://github.com/Yswag/for-own-use/blob/main/XPTV/XPTV-sources.plugin
+
+# 目前支持：4K测试、Anfuns、BILFUN、NO视频、短剧天堂、韩剧看看、两个BT、MGTV、美剧星球、耐看点播、烧火电影、素白白影视、速讯影院、文才资源、小苹果、小蚂蚁、星芽短剧、瓜子影视
+# 已知问题：
+# 1. 两个BT及素白白经常盗用小红书图床存资源，如果播放失败很可能是被小红书删除了
+# 2. 海外访问小红书cdn会分配到cf ip，速度很慢，解决方法是将域名(dc.xhscdn.com)本地DNS映射到境内ip
+# 3. 烧火电影的搜索需要通过图形验证码，所以脚本会请求ocr api，如果烧火搜寻失败有可能是api连接失败(域名为api.nn.ci)
+# (仅作为VOD的补充，日常以VOD源为主)
+
+[Rewrite]
+# ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php header-replace Content-Type application/vnd.apple.mpegURL
+
+[Script]
+http-request ^https?:\/\/ykusu\.ykusu\/(.*)\/provide\/vod script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = [XPTV]XPTV-sources
+
+http-request ^https?:\/\/ykusu\.ykusu\/getJSON\/(.*).json script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/spider.js, tag = [XPTV]XPTV-getJSON
+
+http-response ^https:\/\/tencent-1257389134\.cos\.ap-nanjing\.myqcloud\.com\.qqhd\.net\/fangdao\.php script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]美剧星球
+
+http-request ^https:\/\/api\.emasmr\.com.*mp4 script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]短剧天堂
+
+http-response ^https?:\/\/hd\.suxun\.site\/api\.php\/provide\/vod(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]速讯影院
+
+http-request ^https?:\/\/ppvod01\.blbtgg\.com.*(ts|m3u8) script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]文才资源
+
+http-response ^https?:\/\/vipcj\.timizy\.top\/api\.php\/provide\/vod\/from\/mgtv(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]MGTV
+
+http-response ^https?:\/\/dsakf23665\.com\/api\.php\/provide\/vod(.*)&ids script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]dsakf23665
+
+http-response ^https:\/\/42\.157\.129\.29:2222\/.*\.png script-path = https://raw.githubusercontent.com/Yswag/for-own-use/main/XPTV/spider/xptv-misc.js, requires-body = true, timeout = 10, tag = [XPTV]JX
+
+[MitM]
+hostname = ykusu.ykusu, tencent-1257389134.cos.ap-nanjing.myqcloud.com.qqhd.net, api.emasmr.com, ppvod01.blbtgg.com, vipcj.timizy.top, 42.157.129.29:2222

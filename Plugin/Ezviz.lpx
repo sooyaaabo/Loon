@@ -1,0 +1,34 @@
+#!name = 萤石云视频
+#!desc = 过滤萤石云视频广告
+#!openUrl = https://apps.apple.com/app/id571195405
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Ezviz.png
+#!date = 2025-12-16 20:00
+
+# 2025-05-13 15:17:08
+# https://kelee.one/Tool/Loon/Lpx/VideoGo_remove_ads.lpx
+
+[Rewrite]
+^https:\/\/api\.ys7\.com\/api\/ads reject
+^https:\/\/i\.ys7\.com\/api\/user\/tabList reject-dict
+
+# 我的页面 - 轮播图推广
+^https:\/\/api\.ys7\.com\/v3\/config\/service\/entrance\/bannerInfo reject-dict
+
+# 智能 - 玩法 - 精选专题
+^https:\/\/api\.ys7\.com\/v3\/intelligent-app\/apps\/linkage reject-dict
+^https:\/\/api\.ys7\.com\/v3\/configurations\/gray\/info\?grayTypes=185 reject-dict
+
+# 天气视频
+^https:\/\/api\.ys7\.com\/v3\/videoclips\/square\/video\/query reject-dict
+
+[Script]
+# http-response ^https:\/\/api\.ys7\.com\/v3\/valueadded\/operation\/config\/master\/station script-path = https://kelee.one/Resource/JavaScript/VideoGo/VideoGo_remove_ads.js, requires-body = true, tag = [萤石云视频]移除我的页面广告
+
+[MitM]
+hostname = api.ys7.com, i.ys7.com

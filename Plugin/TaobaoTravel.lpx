@@ -1,0 +1,29 @@
+#!name = 飞猪旅行
+#!desc = 过滤飞猪旅行广告
+#!openUrl = https://apps.apple.com/app/id453691481
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TaobaoTravel.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-25 02:03:39
+# https://kelee.one/Tool/Loon/Lpx/TaobaoTravel_remove_ads.lpx
+
+[Rule]
+AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%A3%9E%E7%8C%AA%E6%97%85%E8%A1%8C*")), REJECT
+
+[Rewrite]
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.allresource\/ reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.crm\.screen\.predict\/ reject-dict
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.tripzoo\.new\.couponlist\/ reject-dict
+
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.trip\.my\.recommendcard\/ reject-dict
+^https:\/\/acs\.m\.taobao\.com\/gw\/mtop\.fliggy\.recommend\.common\.guess\.tab\.feeds\/ reject-dict
+
+[MitM]
+hostname = acs.m.taobao.com

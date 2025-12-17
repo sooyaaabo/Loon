@@ -1,0 +1,36 @@
+#!name = 掌上英雄联盟
+#!desc = 过滤掌上英雄联盟广告
+#!openUrl = https://apps.apple.com/app/id475666808
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/LOL_Bible.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-14 02:24:43
+# https://kelee.one/Tool/Loon/Lpx/LOL_Bible_remove_ads.lpx
+
+[Rewrite]
+# 开屏广告、弹窗推广、搜索热搜、搜索热榜、底栏推广图标
+^https:\/\/mlol\.qt\.qq\.com\/go\/recommend\/platstrongshell\? reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/club\/match\/get_ai_search_words$ reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/mlol_news\/search\/varcache_hotV\d\? reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank_tab\? reject-dict
+^https:\/\/mlol\.qt\.qq\.com\/go\/customize_search\/article_rank\? reject-dict
+
+^https:\/\/mlol\.qt\.qq\.com\/go\/zone\/bottomtab_tip\? reject-dict
+
+^https?:\/\/us\.l\.qq\.com\/exapp reject-200
+
+^https?:\/\/ossweb-img\.qq\.com\/upload\/adw\/image\/[0-9]{3}\/202[0-9]{5}\/[a-z0-9]{32}\.(jpg|jpeg) reject-200
+
+^https?:\/\/mlol\.qt\.qq\.com\/go\/recommend\/(?!v2\/platactivity.*) reject
+
+[MitM]
+hostname = mlol.qt.qq.com, us.l.qq.com, ossweb-img.qq.com

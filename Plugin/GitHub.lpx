@@ -1,0 +1,23 @@
+#!name = GitHub
+#!desc = 设置Accept-Language避免429错误
+#!openUrl = 
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/Loon/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/GitHub-01.png
+#!date = 2025-12-16 20:00
+
+[Rewrite]
+# 私库认证
+# ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{USERNAME} header-del Authorization
+# ^https?:\/\/(raw|gist)\.githubusercontent\.com\/{USERNAME} header-add Authorization "token\x20{TOKEN}"
+
+# 解决github速率限制返回429问题
+^https:\/\/.*\.githubusercontent\.com\/ header-replace Accept-Language en-us
+^https:\/\/github\.com\/ header-replace Accept-Language en-us
+
+[MitM]
+hostname = github.com, *.githubusercontent.com

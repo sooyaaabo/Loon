@@ -1,0 +1,74 @@
+#!name = 优酷视频
+#!desc = 为好内容 全力以赴 [为好广告 全力以赴]
+#!openUrl = https://apps.apple.com/app/id336141475
+#!author = RuCu6[https://github.com/RuCu6], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/YoukuVideo.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-14 22:56:21
+# https://kelee.one/Tool/Loon/Lpx/YouKu_Video_remove_ads.lpx
+# https://raw.githubusercontent.com/RuCu6/QuanX/main/Rewrites/Cube/cnftp.snippet
+
+[Rule]
+# 放行地址
+DOMAIN, push.m.youku.com, DIRECT
+DOMAIN, un-acs.youku.com, DIRECT
+DOMAIN, dorangesource.alicdn.com, DIRECT
+
+# 拦截地址
+DOMAIN, h-adashx.ut.taobao.com, REJECT
+DOMAIN, adx-core.youku.com, REJECT
+DOMAIN, adx-open-service.youku.com, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, cad.youku.com, REJECT
+DOMAIN, ykad-data.youku.com, REJECT
+DOMAIN, yk-ssp.ad.youku.com, REJECT
+DOMAIN, amdc.m.youku.com, REJECT
+DOMAIN, cad.youku.com, REJECT
+DOMAIN, nbsdk-baichuan.alicdn.com, REJECT
+DOMAIN, youku-crm-product.youku.com, REJECT
+DOMAIN, dr-danmu.youku.com, REJECT
+DOMAIN, group-ssl-danmu-ori.youku.com, REJECT
+DOMAIN, m.atm.youku.com, REJECT
+DOMAIN, mc.atm.youku.com, REJECT
+DOMAIN, vali-g1.cp31.ott.cibntv.net, REJECT
+DOMAIN, vali-ugc.cp31.ott.cibntv.net, REJECT
+DOMAIN-SUFFIX, iyes.youku.com, REJECT
+DOMAIN, adsmind.ugdtimg.com, REJECT
+DOMAIN, pre-acs.youku.com, REJECT
+DOMAIN, youku-acs.m.taobao.com, REJECT
+
+[Rewrite]
+# 播放页弹窗动图
+# ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.(pisp\.scripts\.get|xspace\.play\.position\.preload\.query|xspace\.poplayer\.position\.query) reject-dict
+
+^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get response-body-json-del data.data.ad data.data.watermark data.data.ykad
+
+^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? response-body-json-del data.tipContent data.tipContentNew
+
+[Script]
+# 播放详情页、首页信息流、顶部标签页、我的页面、评论区
+# http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.columbus\.(gateway\.new\.execute|home\.feed|home\.query|uc\.query|ycp\.query) script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = [优酷视频]首页
+
+# 底栏
+# http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.haidai\.lantern\.appconfig\.get script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = [优酷视频]底栏
+
+# 青少年模式弹窗
+# http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.huluwa\.dispatcher\.youthmode\.config2 script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = [优酷视频]青少年模式弹窗
+
+# 搜索列表
+# http-response ^https:\/\/acs\.youku\.com\/gw\/mtop\.youku\.soku\.yksearch script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = [优酷视频]搜索列表
+
+# 热剧弹窗
+# http-response ^https:\/\/push\.m\.youku\.com\/collect-api\/get_push_interval_config_wx\? script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = [优酷视频]热剧弹窗
+
+# 开屏广告
+# http-response ^https:\/\/un-acs\.youku\.com\/gw\/mtop\.youku\.play\.ups\.appinfo\.get script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/ChinaFTP/ChinaFTP.js, requires-body = true, tag = [优酷视频]开屏广告
+
+[MitM]
+hostname = push.m.youku.com, un-acs.youku.com

@@ -1,0 +1,20 @@
+#!name = AppStore Monitor
+#!desc = 定时监控App Store内App的更新状态。\n可输入多个AppID，可自定义查询区域顺序（不填则为默认顺序），均以逗号分隔。\n可填入Bark Key使用Bark推送通知，若不填则默认使用Loon推送通知。\n可选择Bark推送通知音效，默认值为system，使用系统默认提醒音效。
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强, 定时任务
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/Loon/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/AppStore-02.png
+#!date = 2025-12-16 20:00
+
+[Argument]
+RunCron = input, "", tag = 监控定时参数, desc = 输入Cron表达式以启用定时运行
+app_ids = input, "", tag = AppStore AppID, desc = 输入需要监控的App ID
+regions = input, "", tag = AppStore Region, desc = 输入需要查询的区域代码
+bark_key = input, "", tag = Bark Key, desc = 输入Bark Key以启用Bark通知
+bark_sound = select, "system", "alarm", "anticipate", "bell", "birdsong", "bloom", "calypso", "chime", "choo", "descent", "electronic", "fanfare", "glass", "gotosleep", "healthnotification", "horn", "ladder", "mailsent", "minuet", "multiwayinvitation", "newmail", "newsflash", "noir", "paymentsuccess", "shake", "sherwoodforest", "silence", "spell", "suspense", "telegraph", "tiptoes", "typewriters", "update", tag = Bark Sound, desc = 选择需要的Bark通知音效
+
+[Script]
+cron {RunCron} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/AppStore/AppStoreMonitor.js, tag = AppStore Monitor, argument=[{app_ids},{regions},{bark_key},{bark_sound}]

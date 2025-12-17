@@ -1,0 +1,83 @@
+#!name = 波点音乐
+#!desc = 过滤波点音乐广告，解锁会员功能（打开软件后切换到个人页面出现会员logo即可使用）。
+#!openUrl = https://apps.apple.com/app/id1541981555
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], ZenmoFeiShi[https://github.com/ZenmoFeiShi], mist-whisper[https://github.com/mist-whisper], GieGie777[https://t.me/GieGie777]
+#!tag = 去广告, 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BodianMusic.png
+#!date = 2025-12-16 20:00
+
+# 2025-08-31 03:36:08
+# https://kelee.one/Tool/Loon/Lpx/BodianMusic_remove_ads.lpx
+# 2025-09-15 17:23:00
+# https://raw.githubusercontent.com/mist-whisper/Loon/master/Lpx/BodianMusic.lpx
+# 2025-10-14
+# https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js
+
+[Rewrite]
+# 开屏广告
+^https:\/\/ad\.tencentmusic\.com/config/uni reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/(play|service|advert)\/advert\/ reject-dict
+^https?:\/\/h5s\.kuwo\.cn\/m\/bd_launch_popup\/index reject
+
+# 全局应用配置
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? response-body-json-del data.groupSign.adStartAppDialog data.groupSign.adGuideTest data.groupSign.playTips data.groupSign.adExitChange data.conf.adGuidePopCount data.conf.adDownListOpen
+
+# P2P传输
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/conf\/all\? response-body-json-replace data.conf.flowControlConfig.uploadEnable false data.conf.flowControlConfig.p2pEnable false
+
+# A/B Test配置
+^https:\/\/ab-bodian\.kuwo\.cn\/abtest\/ui\/info\? response-body-json-del data.mapTestInfo.CommentADPosition data.mapTestInfo.DiscoverADPosition data.mapTestInfo.DownloadAd data.mapTestInfo.FreeModVoiceReminder data.mapTestInfo.GamesTrans data.mapTestInfo.bodianmvdialog data.mapTestInfo.MvTryShowAds data.mapTestInfo.insert
+
+# 全局应用配置
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene\? response-body-json-del data.iosP2PCacheEnable data.warmStartDialog data.adsNotFinishVipPop4DayInterval
+
+# 首页 - 商城Tap
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/scene\? response-body-json-replace data.showShopEntry false data.iosP2pEnableSendDataLimit 1
+
+# 搜索 - 横幅推广
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/banner\/ reject-dict
+
+# VIP活动推广
+^https:\/\/bd-api\.kuwo\.cn\/api\/ucenter\/vip\/give\/config\? reject-dict
+
+# 搜索 - 大家都在搜、搜索发现
+^https:\/\/bd-api\.kuwo\.cn\/api\/search\/topic\/word\/list\? response-body-json-del data.hotTopic data.searchFind data.globalJumpInfo data.hotWord
+
+# 首页 - 模块
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/index\? response-body-json-jq '.data.moduleList |= map(select(.type | tostring | (. != "8" and . != "5" and . != "1" and . != "9" and . != "6")))'
+
+# 首页 - 横幅推广
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/home\/module\?.*&moduleId=6 reject-dict
+
+# 播放页 - 歌曲广告
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/music\/recommendList\? response-body-json-jq '.data.musicList[] |= del(.showAd)'
+
+# 评论区 - 商品周边
+^https:\/\/bd-api\.kuwo\.cn\/api\/comments\/v3\/topInfo\? response-body-json-del .data.putao data.bannerVos
+
+# 首页 - 低价会员推广文本
+^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/lowPriceText\? reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/global\/config\/vipEnter\? reject-dict
+
+# 弹窗悬浮广告
+^https:\/\/bd-api\.kuwo\.cn\/api\/popup\/ reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/swell\/popup\? reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/version\/popup\? reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/vip\/invitation\/assist\/popup\? reject-dict
+^https:\/\/bd-api\.kuwo\.cn\/api\/pay\/h5\/common\/popup\? reject-dict
+
+#首页 - 听点儿不一样的
+^https:\/\/bd-api\.kuwo\.cn\/api\/service\/resource\/recommend\? response-body-json-jq '.data.resourceList[] |= del(.resource)'
+
+# 播放页 - 侧边栏 沉浸电台banner
+^https:\/\/bd-api\.kuwo\.cn\/api\/voice\/room\/v2\/sidebar response-body-json-jq '(.data) = {}'
+
+[Script]
+http-response ^https?:\/\/(?:(?:bd-api|h5app|bodianyin|ab-bodian)\.kuwo\.cn\/(?:api\/(?:ucenter\/users\/(?:pub|login)|play\/(?:music\/v2\/(?:audioUrl|checkRight)|advert\/info)|service\/(?:music\/(?:info|download\/(?:info|config))|home\/module|global\/config\/(?:scene|vipEnter)|banner\/positions|advert\/config)|search\/topic\/word\/list|pay\/(?:vip\/(?:invitation\/(?:assist\/popup|swell)|lowPriceText)|sp\/actVip|audition\/url)|advert\/free\/config|popup\/start\/info|abtest\/ui\/info|rec\/feed)|abtest\/ui\/info)|us\.l\.qq\.com\/exapp|xs\.gdt\.qq\.com\/style_factory\/template_list) script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/bdyy.js, requires-body = true, timeout = 60, tag = [波点音乐]解锁会员
+
+[MitM]
+hostname = 39.156.12*.*:443, 39.156.121.20:443, 39.156.121.21:443, 39.156.121.60:80, 39.156.121.65:443, 39.156.121.*:443, 39.156.123.46, 39.156.123.46:443, 101.42.133.54:443, 111.30.171.170:443, *.kuwo.*, *.l.qq.com, ab-bodian.kuwo.cn, ab-bodian.kuwo.cn:443, ad.tencentmusic.com, bd-api.kuwo.cn, bd-api.kuwo.cn:443, bd-api.kuwo.com, bodianimgcdn.kuwo.cn, h5app.kuwo.cn, h5s.kuwo.cn, xs.gdt.qq.com

@@ -1,0 +1,90 @@
+#!name = 高德地图
+#!desc = 过滤高德地图广告
+#!openUrl = https://apps.apple.com/app/id461703208
+#!author = RuCu6[https://github.com/RuCu6], kokoryh[https://github.com/kokoryh], kelv1n1n[https://github.com/kelv1n1n], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Amap.png
+#!date = 2025-12-16 20:00
+
+# 2025-12-05 04:20:51
+# https://kelee.one/Tool/Loon/Lpx/Amap_remove_ads.lpx 
+# 2025-12-04
+# https://klraw.pages.dev/kelv1n1n/script/main/plugin/amap.plugin?token=209863
+
+[Rule]
+# 移除广告下发请求
+AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "AMapiPhone*")), REJECT
+
+DOMAIN, amap-aos-info-nogw.amap.com, REJECT
+DOMAIN, free-aos-cdn-image.amap.com, REJECT
+DOMAIN-SUFFIX, v.smtcdns.com, REJECT
+
+[Rewrite]
+# 此条可以屏蔽首次进入的天气动效图层 但是会导致足迹不显示地图数据
+# ^https:\/\/mps\.amap\.com\/ws\/mps\/scene\? reject-dict
+
+#  开屏广告
+^https:\/\/amap-aos-info-nogw\.amap\.com\/ws\/aos\/alimama\/splash_screen_rt reject-dict
+
+# 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
+^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/search\/new_hotword\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/card-service-(?:car-end|route-plan) reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_business\/process\/marketingOperationStructured\? response-body-json-del data.tipsOperationLocation obj.data.resourcePlacement
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/homepage\? response-body-json-del history_tags
+^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/tips_adv\? reject-dict
+^https:\/\/oss\.amap\.com\/ws\/banner\/lists\/\? reject-dict
+
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅、底部AI
+^https:\/\/m5\.amap\.com\/ws\/aos\/main\/page\/product\/list\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:main-page-assets|main-page-location|ridewalk-end-fc|usr-profile-fc\/homeV2) reject-dict
+^https:\/\/m5\.amap\.com\/ws\/(?:mapapi\/hint_text\/offline_data|message\/notice\/list|shield\/search\/new_hotword) reject-dict
+^https:\/\/m5\.amap\.com\/ws\/shield\/scene\/recommend\? reject-dict
+^https:\/\/m5\.amap\.com\/ws\/valueadded\/weather\/v2\? reject-dict
+^https:\/\/sns\.amap\.com\/ws\/msgbox\/pull_mp\? reject-dict
+^https:\/\/ai\.amap\.com\/v1\/ai_rec\/home_qs\? reject-dict
+
+# 打车页 - 红点角标、弹窗、天气图标、推广卡片
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:order\/car\/(?:feedback\/get_card_questions|feedback\/viptips|king_toolbox_car_bubble|remark\/satisfactionConf|rights_information)|tips\/onscene_visual_optimization) reject-dict
+^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:pay\/web\/paySuccess\/info\/request|transportation\/diversion\/resource\/driving) reject-dict
+^https:\/\/m5-zb\.amap\.com\/ws\/sharedtrip\/taxi\/order_detail_car_tips\? response-body-json-del data.carTips.data.popupInfo
+
+# AI功能
+^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/ response-body-json-jq '.data.aiNativeV16={"status":1,"version":"","value":""}|.data.aiNative1520={"status":1,"version":"","value":""}|.data.ai_agent_enter_style_cursor={"status":1,"version":"","value":""}|.data.ai_scenes={"status":1,"version":"","value":""}|.data.aiNativeRC06={"status":1,"version":"","value":""}|.data.plan_ai={"status":1,"version":"","value":""}|.data.ai_native_smart_island={"status":1,"version":"","value":""}|.data.llm={"status":2,"version":"","value":""}'
+
+[Script]
+# 移除阿里巴巴通用广告请求
+# http-response ^http:\/\/amdc\.m\.taobao\.com\/amdc\/mobileDispatch script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/MyBlockAds/header.js, tag = [高德地图]移除通用广告请求
+
+# 导航详情页 - 路线规划、地点详情页、搜索详情页、导航结束页
+http-response ^https:\/\/m5\.amap\.com\/ws\/aos\/perception\/publicTravel\/beforeNavi\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除路线规划推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/bus\/plan\/integrate\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除路线规划、导航结束页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/c3frontend\/(?:af-(?:hotel|launch)\/page\/main|af-nearby\/nearby) script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除导航详情页底部酒店、处理附近页
+http-response ^https:\/\/m5\.amap\.com\/ws\/perception\/drive\/(?:routeInfo|routePlan) script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除路线规划推广
+http-response ^https:\/\/(?:info|m5)\.amap\.com\/ws\/shield\/search\/(?:common\/coupon\/info|poi\/detail) script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除导航详情页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_bff\/hotword\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除搜索栏推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search_poi\/(?:mps|search\/sp|sug|tips_operation_location) script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除搜索详情页推广
+
+# 首页 - 推广卡片、红点角标、右上角动图、搜索框热词、左下角天气、消息横幅
+http-response ^https:\/\/m5\.amap\.com\/ws\/faas\/amap-navigation\/(?:card-service-plan-home|main-page) script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除首页推广
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/frogserver\/aocs\/updatable\/1\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除首页推广
+
+# 我的页面 - 个人主页、推广卡片
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/dsp\/profile\/index\/nodefaasv3\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除我的页面推广
+
+# 附近页
+http-response ^https:\/\/m5\.amap\.com\/ws\/shield\/search\/nearbyrec_smart\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除附近页推广
+
+# 开屏广告
+http-response ^https:\/\/m5\.amap\.com\/ws\/valueadded\/alimama\/splash_screen\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除开屏广告
+
+# 打车页 - 红点角标、弹窗、天气图标、推广卡片
+http-response ^https:\/\/m5-zb\.amap\.com\/ws\/boss\/(?:car\/order\/content_info|order_web\/friendly_information) script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除打车页推广卡片、弹窗
+http-response ^https:\/\/m5-zb\.amap\.com\/ws\/promotion-web\/resource(\/home)?\? script-path = https://kelee.one/Resource/JavaScript/Amap/Amap_remove_ads.js, requires-body = true, tag = [高德地图]移除打车页红点角标、天气图标
+
+[MitM]
+hostname = *.amap.com

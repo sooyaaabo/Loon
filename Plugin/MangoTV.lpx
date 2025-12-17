@@ -1,0 +1,73 @@
+#!name = 芒果TV
+#!desc = 天生青春 [天生广告]
+#!openUrl = https://apps.apple.com/app/id629774477
+#!author = RuCu6[https://github.com/RuCu6], Yu9191[https://github.com/Yu9191], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/MangoTV.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-09 07:45:13
+# https://kelee.one/Tool/Loon/Lpx/MangoTV_remove_ads.lpx
+
+[Rule]
+DOMAIN, credits.bz.mgtv.com, REJECT
+DOMAIN, credits2.bz.mgtv.com, REJECT
+DOMAIN, credits3.bz.mgtv.com, REJECT
+DOMAIN, dflow.bz.mgtv.com, REJECT
+DOMAIN, encounter.bz.mgtv.com, REJECT
+DOMAIN, floor.bz.mgtv.com, REJECT
+DOMAIN, layer.bz.mgtv.com, REJECT
+DOMAIN, mob.bz.mgtv.com, REJECT
+DOMAIN, rc-topic-api.bz.mgtv.com, REJECT
+DOMAIN, rprain.bz.mgtv.com, REJECT
+DOMAIN, rprain.log.mgtv.com, REJECT
+DOMAIN, vip.bz.mgtv.com, REJECT
+DOMAIN-SUFFIX, da.mgtv.com, REJECT
+
+[Rewrite]
+^https:\/\/dc\.bz\.mgtv\.com\/dynamic\/v\d\/skin\/config\? reject-dict
+
+^https:\/\/dc\.bz\.mgtv\.com\/dynamic\/v\d\/channel\/ads\? reject-dict
+
+^http:\/\/mobileso\.bz\.mgtv\.com\/spotlight\/search\/v\d\? reject-dict
+
+^https:\/\/damang\.api\.mgtv\.com\/station\/album\/red\/dot\? reject-dict
+
+^https:\/\/hb-boom\.api\.mgtv\.com\/release\/pullReleaseInfo$ reject-dict
+
+^https:\/\/mobile\.api\.mgtv\.com\/v\d\/mobile\/checkUpdate\? reject-dict
+
+# 底栏Tab
+^https?:\/\/mobile\.api\.(mgtv|hunantv)\.com\/mobile\/config\? response-body-json-replace data.dc_adConfig 0 data.XmsellSwitch 0 data.screenshot_share_switch 0 data.playerUseHttpDNS 0 data.damang_tab 0 data.relative_ads 0 data.second_floor_guide_switch 0 data.progress_bar_ad_switch 0 data.XmVideoB 0 data.damang_duanju_tab 0 data.playview_box_ad_switch 0 data.topBarSwitch 0 data.VIPSDKB2 0
+
+# 我的页面
+^https:\/\/me\.bz\.mgtv\.com\/v3\/module\/list\? response-body-json-jq '.data.list |= map(select(.id | IN(1, 2, 4, 7))) | .data.list |= map(if .moduleType == 2 then .data |= map(select(.moduleType == 11)) elif .moduleType == 4 then .data |= map(select(.moduleType == 14 or .moduleType == 23)) elif .moduleType == 7 then .data |= map(select(.moduleType == 16 and .title != "音乐广场")) else . end)'
+
+^https:\/\/me\.bz\.mgtv\.com\/v4\/module\/list\? response-body-json-jq '.data.list |= (map(select(.id != 3 and .id != 7))|map(if .id==2 then .data|=map(select(.id!=65))elif .id==4 then .data|=map(select(.title!="追更banner" and .id!=57))elif .id==5 then .data|=(map(select(.id==9 or .id==13))|map(if .id==9 then .list|=map(select(.id==20 or .id==60 or .id==18)) else . end))elif .id==6 then .data|=map(select(.id==15)) else . end))'
+
+# 首页信息流
+^https?:\/\/dc\d?\.bz\.mgtv\.com\/dynamic\/v\d\/channel\/index\/\w response-body-json-del adInfo
+^https?:\/\/dc\d?\.bz\.mgtv\.com\/dynamic\/v\d\/channel\/index\/\w response-body-json-jq '.data |= map(select(.moduleEntityId != "10579" and .moduleEntityId != "9686")) | .moduleIDS |= map(select(.moduleEntityId != "10579" and .moduleEntityId != "9686"))'
+
+# 播放页详情页
+^https:\/\/mobile-thor\.api\.mgtv\.com\/v\d+\/vod\/info\? response-body-json-del data.config.ad data.config.vipNav data.template.skinList data.template.theme 
+^https:\/\/mobile-thor\.api\.mgtv\.com\/v\d+\/vod\/info\? response-body-json-jq '.data.tabs |= map(select(.name == "视频" or .name == "讨论")) | .data.template.modules |= map(if .clipInfo.ext?.ipPublishEntrance then .clipInfo |= del(.ext) else . end) | .data.template.modules |= map(select(.dataType == 101 or .dataType == 201)) | .data.template.modules |= map(.media.list |= (if type == "array" then map(select(.type != 0)) else . end))'
+
+# 讨论区
+^https:\/\/comment\.mgtv\.com\/v\d\/comment\/getCommentList\? response-body-json-jq '.data.list |= map(select(.type == 0))'
+
+# 搜索框填充词
+^https?:\/\/mobileso\.bz\.mgtv\.com\/mobile\/recommend\/v\d\? reject-dict
+
+[Script]
+# 会员解锁
+http-request ^https?:\/\/mobile-stream\.api\.mgtv\.com\/v1\/video\/source\? script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/mgtk.js, requires-body = false, tag = [芒果TV]会员解锁
+
+http-response ^https?:\/\/.*mgtv.com.*(GetUserInfo|module\/list\?_support|app\/bdboot|pullReleaseInfo|floor\/detail|video\/source|entry\?_support).*$ script-path = https://raw.githubusercontent.com/WeiGiegie/666/main/mgtv.js, requires-body = true, tag = [芒果TV]会员解锁
+
+[MitM]
+hostname = dc?.bz.mgtv.com, mobileso.bz.mgtv.com, damang.api.mgtv.com, hb-boom.api.mgtv.com, mobile.api.mgtv.com, mobile.api.hunantv.com, me.bz.mgtv.com, mobile-thor.api.mgtv.com, *mgtv.com

@@ -1,0 +1,42 @@
+#!name = 小宇宙
+#!desc = 过滤小宇宙广告
+#!openUrl = https://apps.apple.com/app/id1488894313
+#!author = mist-whisper[https://github.com/mist-whisper]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CosmosFM.png
+#!date = 2025-12-16 20:00
+
+# 2025-07-21 18:21:13
+# https://kelee.one/Tool/Loon/Lpx/CosmosPodcast_remove_ads.lpx
+# 2025-10-08 14:04:00
+# https://raw.githubusercontent.com/mist-whisper/Loon/master/Lpx/BlockAds.lpx
+
+[Rewrite]
+# 移除开屏广告
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/flash reject-dict
+
+# 移除单集总结和AI总结
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/ai reject-dict
+
+# 移除搜索框内容
+^https:\/\/api\.xiaoyuzhoufm\.com\/v\d\/search\/get reject-dict
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/category\/list-daily reject-dict
+
+# 移除节目详情里的推荐内容
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/related-podcast\/list$ response-body-json-jq '.data=[]'
+
+# 会员横幅设为不可点击
+# ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/membership\/platform reject-dict
+
+# 首页净化
+^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list response-body-json-jq '.data |= map(select(.type != "DISCOVERY_HEADER" and .type != "DISCOVERY_BANNER" and .type != "DISCOVERY_COVER_BANNER"))'
+
+[Script]
+# http-response ^https:\/\/api\.xiaoyuzhoufm\.com\/v1\/discovery-feed\/list script-path = https://raw.githubusercontent.com/mist-whisper/Script/master/Xiaoyuzhou/Clean_home_feed.js, requires-body = true, tag = [小宇宙]首页净化
+
+[MitM]
+hostname = api.xiaoyuzhoufm.com

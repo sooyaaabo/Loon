@@ -1,0 +1,52 @@
+name: Replace date & loon_version in .lpx Files
+
+on:
+  workflow_dispatch:
+  # schedule:
+    # - cron: "30 * * * *"
+
+permissions:
+  actions: write  
+  contents: write  
+
+jobs:
+  replace-date:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4.2.2
+        with:
+          repository: sooyaaabo/Loon
+          path: Loon
+          token: ${{ secrets.GITHUB_TOKEN }} 
+        
+      - name: Set timezone to China/Shanghai
+        run: |
+          sudo timedatectl set-timezone Asia/Shanghai
+
+      - name: Replace #!date and #!loon_version
+        run: |
+          cd Loon
+          CURRENT_DATE="#!date = 2025-12-16 20:00"
+          LOON_VERSION="#!loon_version = 3.3.7(921)"
+          
+          # 查找并替换文件内容
+          find . -type f -name "*.lpx" -exec sed -i \
+            -e "s/^#!date =.*/$CURRENT_DATE/" \
+            -e "s/^#!loon_version =.*/$LOON_VERSION/" {} +
+          
+      - name: Commit changes
+        run: |
+          cd Loon
+          git config user.name "github-actions"
+          git config user.email "github-actions@github.com"
+          git add .
+          git commit -m "Routine Updates" || echo "No changes to commit"
+          git push
+
+      - name: 清理Workflow
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          retain_days: 0
+          keep_minimum_runs: 3

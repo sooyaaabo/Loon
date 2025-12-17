@@ -1,0 +1,96 @@
+#!name = 滴滴出行
+#!desc = 过滤滴滴出行广告
+#!openUrl = https://apps.apple.com/app/id554499054
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], kelv1n1n[https://github.com/kelv1n1n]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DiDi.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-13 20:33:12
+# https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
+# 2025-12-15
+# https://klraw.pages.dev/kelv1n1n/script/main/plugin/didi.plugin?token=209863
+
+[Rule]
+# 拦截广告下发
+DOMAIN, gwp.xiaojukeji.com, REJECT
+DOMAIN, adtrack.xiaojukeji.com, REJECT
+AND, ((IP-ASN, 45090, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT
+AND, ((IP-ASN, 55990, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT
+AND, ((IP-ASN, 63646, no-resolve), (DEST-PORT, 25641), (PROTOCOL, TCP)), REJECT
+
+IP-CIDR, 113.46.225.8/32, REJECT, no-resolve
+IP-CIDR, 113.46.225.9/32, REJECT, no-resolve
+IP-CIDR, 116.85.1.0/32, REJECT, no-resolve
+IP-CIDR, 116.85.1.17/32, REJECT, no-resolve
+IP-CIDR, 116.85.1.22/32, REJECT, no-resolve
+IP-CIDR, 116.85.2.15/32, REJECT, no-resolve
+IP-CIDR, 116.85.3.25/32, REJECT, no-resolve
+IP-CIDR, 116.85.3.37/32, REJECT, no-resolve
+IP-CIDR, 120.234.72.27/32, REJECT, no-resolve
+IP-CIDR, 120.241.142.12/32, REJECT, no-resolve
+IP-CIDR, 120.241.142.13/32, REJECT, no-resolve
+IP-CIDR, 120.241.143.6/32, REJECT, no-resolve
+IP-CIDR, 120.241.143.11/32, REJECT, no-resolve
+IP-CIDR, 120.241.143.129/32, REJECT, no-resolve
+IP-CIDR, 120.241.143.131/32, REJECT, no-resolve
+IP-CIDR, 123.207.209.39/32, REJECT, no-resolve
+IP-CIDR, 123.207.209.60/32, REJECT, no-resolve
+IP-CIDR, 139.199.240.12/32, REJECT, no-resolve
+IP-CIDR, 139.199.240.15/32, REJECT, no-resolve
+IP-CIDR, 139.199.244.6/32, REJECT, no-resolve
+IP-CIDR, 139.199.244.7/32, REJECT, no-resolve
+IP-CIDR, 157.122.213.3/32, REJECT, no-resolve
+IP-CIDR, 157.255.76.17/32, REJECT, no-resolve
+IP-CIDR, 157.255.76.19/32, REJECT, no-resolve
+IP-CIDR, 162.14.157.2/32, REJECT, no-resolve
+IP-CIDR, 162.14.157.24/32, REJECT, no-resolve
+
+[Rewrite]
+# 活动弹窗
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget reject-dict
+
+# 顶部活动通知
+^https:\/\/lion\.didialift\.com\/broker\/\? reject-dict
+
+# 重逢专属福利
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/slow\? reject-dict
+
+# 底栏配置、首页工具栏
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/core\? response-body-json-jq '.data.disorder_cards.bottom_nav_list.data |= map(select(.id == "home_page" or .id == "user_center")) | .data.order_cards.nav_list_card.data |= map(select(.nav_id == "dache_anycar" or .nav_id == "carmate" or .nav_id == "driverservice" or .nav_id == "pincheche" or .nav_id == "bike"))'
+
+# 首页 - 登录奖励广告、促销提示栏、乘车码、主要轮播广告、车主服务入口、横幅广告
+^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast reject-dict
+# ^https:\/\/conf\.diditaxi\.com\.cn\/homepage\/v1\/other\/fast\? response-body-json-del data.disorder_cards.communicate_card data.disorder_cards.not_login_bottom_bar data.disorder_cards.riding_code_card data.order_cards.car_owner_widget_card data.order_cards.marketing_card data.order_cards.super_banner_card data.disorder_cards.car_icon.data.icon_info_new_agreement
+
+# 首页 - 横幅广告
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/mget\? response-body-json-del data.mult_home_banner
+
+# 我的 - 钱包、营销卡片
+^https:\/\/common\.diditaxi\.com\.cn\/common\/v5\/usercenter\/layout response-body-json-jq 'del(.data.instances.center_marketing_card, .data.instances.center_tool_card, .data.instances.center_widget_list, .data.instances.center_res_light_guide, .data.instances.center_member_card) | .data.instances.center_wallet_finance_card.data.view_info |= map(select(.title == "优惠卡券"))'
+
+# 首页 - 拼车功能运营卡片配置数据
+^https:\/\/ct\.xiaojukeji\.com\/agent\/v3\/feeds\? reject-dict
+
+# 打车页面 - 运营卡片配置数据
+^https:\/\/conf\.diditaxi\.com\.cn\/dynamic\/conf reject-dict
+
+^https:\/\/api\.udache\.com\/gulfstream\/porsche\/v1\/dache_homepage_layout\? response-body-json-del data.instances.car_icon_01.data.icon_info_new_agreement
+
+# 订单进行页面 - 各种推广
+^https:\/\/api\.udache\.com\/gulfstream\/passenger-center\/v2\/other\/pInTripLayout response-body-json-jq '.data.order_components |= map(select(.name != "passenger_common_casper"))'
+
+^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? response-body-json-jq '.data |= map(if .name|IN("daijia_journey_new_tcp_switch","daijia_tcp_init","daijia_tcp_msg_encrypt","daijia_tcp_site_info","daijia_tcp_site_report")then.allow=false else. end)'
+
+# 代驾页面 - 弹窗和横幅广告
+^https:\/\/daijia\.kuaidadi\.com\/gateway\? reject-dict
+
+# 订单详情页 - 底部推广调研反馈
+^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/getInsActivityV2 reject-dict
+
+[MitM]
+hostname = common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, 162.14.157.*, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.*, 139.199.240.84

@@ -1,0 +1,31 @@
+#!name = 京东外卖
+#!desc = 过滤京东外卖广告
+#!openUrl = https://apps.apple.com/app/id6752605146
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/JingdongWaimai.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-28 02:52:04
+# https://kelee.one/Tool/Loon/Lpx/JDWaimai_remove_ads.lpx
+
+[Rewrite]
+# 首页推广、点评页面非美食内容、购物车及我的页面推荐、搜索发现、搜索榜单、我的页面
+^https:\/\/color\.jddj\.com\/client\.action\?functionId=hours_home$ response-body-json-jq 'del(.result.config.searchFloor.data[].searchWords) | .result.data |= map(if .tnConfigVO?.businessCode == "nearby_HourlyGo_Operation_Tags" then empty else . end)'
+
+^https:\/\/color\.jddj\.com\/client\.action\?functionId=uniformRecommend reject-dict
+
+^https:\/\/color\.jddj\.com\/client\.action\?functionId=wmHome$ response-body-json-jq '(.floors |= map(del(.data.tnData.newsInfo?))) | .floors |= (map(select(.mId != "newWalletIdFloor" and .mId != "recommendfloor"))) | .floors |= (map(.data |= (if .tnData? then del(.tnData.cardList, .tnData.cardListStatic, .tnData.walletList) else . end)))'
+
+^https:\/\/api\.m\.jd\.com\/client\.action$ response-body-json-del data.searchDTO.searchWords data.wishlistDTO.bubbleTip
+
+^https:\/\/api\.m\.jd\.com\/client\.action$ response-body-json-jq '.data.tabList |= (map(select(.code == "recommendation" or .code == "find_food")) | map(if .code == "recommendation" then .dpHomeFeedTabResultDTOList = .dpHomeFeedTabResultDTOList[0:2] else . end | .dpHomeBannerResultDTOList = []))'
+
+^https:\/\/color\.jddj\.com\/client\.action\?functionId=search_recommendRanking$ reject-dict
+
+[MitM]
+hostname = color.jddj.com, api.m.jd.com

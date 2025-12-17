@@ -1,0 +1,115 @@
+# 影视播放规则(代理)
+# 2025-11-21 15:00
+
+# CMSPlayer
+# 欧乐影视
+DOMAIN-SUFFIX, olelive.com
+DOMAIN-SUFFIX, olevod.com
+DOMAIN-SUFFIX, olevod.tv
+DOMAIN-SUFFIX, olehdtv.com
+DOMAIN-SUFFIX, olemovienews.com
+DOMAIN-KEYWORD, olevod
+#天翼资源
+DOMAIN-SUFFIX, 911ysw.top
+# TMDB
+DOMAIN-SUFFIX, tmdb.org
+DOMAIN-SUFFIX, themoviedb.org
+# TVDB
+DOMAIN-SUFFIX, thetvdb.com
+# 其他
+DOMAIN-SUFFIX, v1.mk
+DOMAIN-SUFFIX, notion-api.splitbee.io
+DOMAIN-SUFFIX, bfvvs.com
+DOMAIN-SUFFIX, cdn.venus7202.com
+DOMAIN-SUFFIX, cdn.ceres9350.com
+DOMAIN-SUFFIX, cdn.efhie.com
+DOMAIN-SUFFIX, picsum.photos
+DOMAIN-SUFFIX, ibb.co
+# 4K电影馆
+DOMAIN-SUFFIX, 4kdyg.fun
+# 旺旺资源
+DOMAIN-SUFFIX, wwzy.tv
+
+# XPTV
+# VOD TV源
+# 两个BT
+DOMAIN-SUFFIX, bttwo.net
+# 嗷呜动漫
+DOMAIN-SUFFIX, aowu.tv
+# 独播库
+DOMAIN-SUFFIX, duboku.info
+DOMAIN-SUFFIX, dbku.tv
+# 老地方影院
+DOMAIN-SUFFIX, laodifang.tv
+# 欧乐影院
+DOMAIN-SUFFIX, olehdtv.com
+DOMAIN-SUFFIX, olevod.com
+# 追光影视
+DOMAIN-SUFFIX, sgsd.xyz
+
+# VOD AV源
+# 91Jav
+DOMAIN-SUFFIX, 91jav1.com
+DOMAIN, jdkir.triutpw.cc
+# AVDB
+DOMAIN-SUFFIX, avdbapi.com
+# AV Today
+DOMAIN-SUFFIX, avtoday.io
+# EXPORNTOONS
+DOMAIN-SUFFIX, exporntoons.net
+# FMovies
+DOMAIN-SUFFIX, fmovies.llc
+# Hanime1
+DOMAIN-SUFFIX, hanime1.me
+# HoHoJ
+DOMAIN-SUFFIX, hohoj.tv
+# Jable
+DOMAIN-SUFFIX, jable.tv
+# JAVMove
+DOMAIN-SUFFIX, javmove.com
+# KanAV
+DOMAIN-SUFFIX, kanav.info
+# KBJFan
+DOMAIN-SUFFIX, kbjfan.com
+# KoreaPornMovie
+DOMAIN-SUFFIX, koreanpornmovie.com
+# MissAV
+DOMAIN-SUFFIX, missav.ai
+DOMAIN-SUFFIX, missav.ws
+# Pornhub
+DOMAIN-SUFFIX, pornhub.com
+# PPP Porn
+DOMAIN-SUFFIX, ppp.porn
+# SpankBang
+DOMAIN-SUFFIX, spankbang.com
+# SubJav
+DOMAIN-SUFFIX, supjav.com
+# Taiav
+DOMAIN-SUFFIX, taiav.com
+# TwiVideo
+DOMAIN-SUFFIX, twivideo.net
+# xHamster
+DOMAIN-SUFFIX, xhamster.com
+# 花都影视
+DOMAIN-SUFFIX, huaduys.org
+# 麻豆社
+DOMAIN-SUFFIX, madou.club
+# 肉视频
+DOMAIN-SUFFIX, rou.video
+# 黄色仓库
+DOMAIN-SUFFIX, 7341hsck.cc
+# 桃花族
+DOMAIN-SUFFIX, 822thz.com
+# 玩偶姐姐
+DOMAIN-SUFFIX, hongkongdollvideo.com
+# 有爱爱
+DOMAIN-SUFFIX, uaa.com
+# PandaTV
+DOMAIN-SUFFIX, pandalive.co.kr
+# 秋名山见
+DOMAIN, api.hclyz.com
+DOMAIN, api.maiyoux.com
+
+# 网盘源
+# 小盘盘
+DOMAIN-SUFFIX, xpanpan.site

@@ -1,0 +1,92 @@
+name: Download AdRules
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # 每12小时运行一次
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  actions: write
+  contents: write
+
+jobs:
+  download_and_process_lists:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: sooyaaabo/Loon # 检出您的目标仓库
+          path: Loon                 # 将其放入名为 Loon 的目录
+
+      # --- Block 1: 处理 Cats-Team AdRules ---
+      - name: Download AdRules list (Cats-Team)
+        run: |
+          curl -L -o adrules.list https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list
+
+      - name: Add header and save AdRules.lsr
+        run: |
+          # 创建目标目录 Rule
+          mkdir -p Loon/Rule
+          # 写入规则头部
+          echo '# 原始链接：https://raw.githubusercontent.com/Cats-Team/AdRules/main/adrules.list' > Loon/Rule/AdRules.lsr
+          # 下载的内容追加到文件
+          cat adrules.list >> Loon/Rule/AdRules.lsr
+      
+      # --- Block 2: 处理 AWAvenue-Ads-Rule ---
+      - name: Download AWAvenue-Ads-Rule
+        run: |
+          curl -L -o AWAvenue-Ads-Rule.list "https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list"
+
+      - name: Add header and save AWAvenueAdsRule.lsr
+        run: |
+          # 定义目标文件路径
+          DEST_FILE="Loon/Rule/AWAvenueAdsRule.lsr"
+          SOURCE_URL="https://raw.githubusercontent.com/TG-Twilight/AWAvenue-Ads-Rule/main/Filters/AWAvenue-Ads-Rule-Surge-RULE-SET.list"
+
+          # 步骤 1: 写入自定义的头部信息到目标文件
+          echo "# 原始链接：$SOURCE_URL" > "$DEST_FILE"
+          
+          # 步骤 2: 读取临时文件，处理后，将内容追加 (>>) 到目标文件中
+          grep -E '^#Title|^#Total lines:|^#Version:|^#Update time:|^#Homepage:|^#License:|^[^#]' AWAvenue-Ads-Rule.list | \
+          sed -E 's/^#(.*)/# \1/; s/,/, /g' >> "$DEST_FILE"
+
+      # --- Block 3: 处理 adblockloon.list ---
+      - name: Download adblockloon
+        run: |
+          curl -L -o adblockloon.list https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloon.list
+
+      - name: Add header and save AdblockLoon.lsr
+        run: |
+          mkdir -p Loon/Rule
+          DEST_FILE="Loon/Rule/AdBlockLoon.lsr"
+          SOURCE_URL="https://raw.githubusercontent.com/217heidai/adblockfilters/main/rules/adblockloon.list"
+          echo "# 原始链接：$SOURCE_URL" > "$DEST_FILE"
+          cat adblockloon.list >> "$DEST_FILE"
+
+      # --------------------------------------------------------
+
+      - name: Commit and push changes
+        run: |
+          cd Loon
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add .
+            git commit -m "Update AdRules ($(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M'))"
+            git push origin HEAD
+          else
+            echo "No changes to commit."
+          fi
+
+  clean_up_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clean up workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 3

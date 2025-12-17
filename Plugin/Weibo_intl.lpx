@@ -1,0 +1,78 @@
+#!name = 微博轻享版
+#!desc = 过滤微博轻享版广告
+#!openUrl = https://apps.apple.com/app/id1215210046
+#!author = Keywos[https://github.com/Keywos], kokoryh[https://github.com/kokoryh], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Weibo_intl.png
+#!date = 2025-12-16 20:00
+
+# 2023-09-06 17:07:45
+# https://raw.githubusercontent.com/Keywos/rule/main/script/weibo_us/wb_us.plugin
+# 2025-07-09 12:09:44
+# https://kelee.one/Tool/Loon/Lpx/Weibo_intl_remove_ads.lpx
+
+[Rewrite]
+# 热门视频、热推荐、私信中绿洲的擦边诱导推广
+^https?:\/\/api\.weibo\.c(n|om)\/\d\/(cardlist\?v_f=\d|ad\/weibointl\?) reject-dict
+^https?:\/\/weibointl\.api\.weibo\.c(n|om)\/portal\.php\?a=(hot_search_users|treehole&auth=) reject-dict
+
+# ---------- 可莉🅥 ---------- #
+# 广告投放配置
+^https:\/\/bootpreload\.uve\.weibo\.com\/v1\/ad\/preload$ reject-dict
+
+# 发现页面 - 横幅推广、最常访问、主页访客、热门视频、热门话题
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends response-body-json-del data.banner data.discover data.user_footprint data.profile_accessrecord data.native_content data.topics
+
+# 发现页面 - 顶部尊享会员图标入口
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends response-body-json-jq '.data.discover |= map(select(.schema != "尊享会员"))'
+
+# 发现页面 - 趋势 - 热门视频信息流
+^https:\/\/api\.weibo\.cn\/2\/cardlist\?v_f=2 reject-dict
+
+# 时间线 - 关注 - 广告
+^https:\/\/api\.weibo\.cn\/2\/ad\/ reject-dict
+^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline$ response-body-json-del advertises ad ad_version_2_weibo
+^https:\/\/api\.weibo\.cn\/2\/statuses\/friends\/timeline$ response-body-json-jq '.statuses|=map(select(.ad_marked!=true))'
+
+# 时间线 - 推荐 - 广告
+^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ response-body-json-del ad ad_version_2_weibo
+^https:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ response-body-json-jq '.statuses|=map(select(.ad_marked!=true))'
+
+# 评论区 - 广告
+^https:\/\/api\.weibo\.cn\/2\/comments\/build_comments\? response-body-json-jq '.datas[].data.ad_from_comment? = true'
+
+# 话题 - 信息流 - 广告
+^https:\/\/api\.weibo\.cn\/2\/cardlist\?aid= response-body-json-jq '.cards |= map(select((.mblog?|(.ad_marked?|type=="boolean")and.ad_marked==true)or(.card_group?|type=="array"and any(.[]?;.mblog?|(.ad_marked?|type=="boolean")and.ad_marked==true))|not))'
+
+# 搜索 - 填充词
+^https:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info reject-dict
+
+# ---------- kokoryh ---------- #
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_searching_info& mock-response-body data-type=html data="{"retcode":0,"info":"","data":{"expiration_time":"86400","cards":[{"tip":"搜索微博","word":""}]}}"
+
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?ct=feed&a=search_topic& mock-response-body data-type=html data="{"retcode":0,"info":"","data":[],"ext":{}}"
+
+# ^https?:\/\/api\.weibo\.cn\/2\/statuses\/unread_hot_timeline$ response-body-json-jq 'del(.ad, .advertises, .trends) | if .statuses then .statuses |= map(select(((.promotion.type == "ad") or (.mblogtypename | IN("广告", "廣告", "热推", "熱推"))) | not)) end'
+
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=get_coopen_ads& response-body-json-jq '.data |= . + {"ad_list":[],"pic_ad":[],"gdt_video_ad_ios":[],"display_ad":0,"ad_ios_id":null,"app_ad_ios_id":null,"reserve_ad_ios_id":"","reserve_app_ad_ios_id":"","ad_duration":604800,"ad_cd_interval":604800}'
+
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=trends& response-body-json-jq 'if .data.order then .data.order = ["search_topic"] end'
+
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=search_topic& response-body-json-jq 'if .data.search_topic.cards[0].type == "searchtop" then del(.data.search_topic.cards[0]) end'
+
+# ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?a=user_center& response-body-json-jq 'if .data.cards then .data.cards[].items |= map(select(.type != "personal_vip")) | .data.cards |= map(select((.items | length) > 0)) end'
+
+[Script]
+# 趋势页、开屏广告、用户中心、热搜置顶、我的页面 尊享专属、瀑布流去广告
+# http-response ^https?:\/\/weibointl\.api\.weibo\.cn\/portal\.php\?(ct=(feed&a=trends|user&a=get_searching_info)|a=(get_coopen_ads|user_center|search_topic|open_app&auth|icon_center)) script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = [微博轻享版]移除广告
+
+# http-response ^https?:\/\/api\.weibo\.cn\/\d\/statuses\/.*timeline script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = [微博轻享版]移除广告
+
+# http-response ^https?:\/\/sdkapp\.uve\.weibo\.com\/interface\/sdk\/sdkad\.php script-path = https://raw.githubusercontent.com/Keywos/rule/master/script/weibo_us/js/index.js, requires-body = true, tag = [微博轻享版]移除广告
+
+[MitM]
+hostname = bootpreload.uve.weibo.com, weibointl.api.weibo.cn, api.weibo.cn

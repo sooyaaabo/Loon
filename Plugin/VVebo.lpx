@@ -1,0 +1,26 @@
+#!name = VVebo
+#!desc = 修复用户主页时间线问题，需禁用[微博]插件和[微博轻享版]插件，以避免本插件不生效。
+#!openUrl = https://apps.apple.com/app/id670910957
+#!author = suiyuran[https://github.com/suiyuran], androidcn[https://github.com/androidcn]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/VVebo.png
+#!date = 2025-12-16 20:00
+
+# 2024-04-04
+# https://github.com/suiyuran/stash/blob/main/override/fix-vvebo.stoverride
+
+[Script]
+http-request ^https:\/\/api\.weibo\.cn\/2\/remind\/unread_count\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, tag = [VVebo]修复时间线
+
+http-request ^https:\/\/api\.weibo\.cn\/2\/statuses\/user_timeline\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, tag = [VVebo]修复时间线
+
+http-response ^https:\/\/api\.weibo\.cn\/2\/profile\/statuses\/tab\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-user-timeline.js, requires-body = true, tag = [VVebo]修复时间线
+
+http-response ^https:\/\/api\.weibo\.cn\/2\/cardlist\? script-path = https://raw.githubusercontent.com/suiyuran/stash/main/scripts/fix-vvebo-fans.js, requires-body = true, tag = [VVebo]修复我的页面
+
+[MitM]
+hostname = api.weibo.cn

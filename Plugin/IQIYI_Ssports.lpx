@@ -1,0 +1,25 @@
+#!name = 爱奇艺体育
+#!desc = 过滤爱奇艺体育广告
+#!openUrl = https://apps.apple.com/app/id542636127
+#!author = mist-whisper[https://github.com/mist-whisper]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/IQIYI_Ssports.png
+#!date = 2025-12-16 20:00
+
+[Rewrite]
+# 搜索框 - 热词资讯
+^https:\/\/json\.ssports\.com\/json\/recommend response-body-json-jq '.retData |= (del(.mybanner, .databanner10) | select(. != {}))'
+
+# 我的页面 - 推广和回放模块
+^https:\/\/show\.ssports\.com\/x\?brand response-body-json-jq 'del(.retData.mybanner, .retData.databanner10)'
+^https:\/\/json\.ssports\.com\/json\/channel\/ios\/v2\/newMy\.json$ response-body-json-jq '(.retData.moduleList) |= map(select((.isAd != 1) and (.moduleName | test("回放|集锦") | not)))'
+
+# 开屏广告
+^https:\/\/show\.ssports\.com\/s\?brand reject-dict
+
+[MitM]
+hostname = json.ssports.com, show.ssports.com

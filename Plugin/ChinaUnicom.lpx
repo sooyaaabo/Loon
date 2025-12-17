@@ -1,0 +1,47 @@
+#!name = 中国联通
+#!desc = 过滤中国联通广告
+#!openUrl = https://apps.apple.com/app/id416457422
+#!author = mist-whisper[https://github.com/mist-whisper]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ChinaUnicom.png
+#!date = 2025-12-16 20:00
+
+# 2025-09-12 14:00:00
+# https://raw.githubusercontent.com/mist-whisper/Loon/refs/heads/master/Lpx/Unicom_remove_ads.lpx
+# 2025-12-11
+# https://raw.githubusercontent.com/ddgksf2013/Rewrite/master/AdBlock/ChinaUnicomAds.conf
+
+[Rule]
+# 开屏广告
+DOMAIN, m1.ad.10010.com, REJECT
+
+[Rewrite]
+# 搜索框推广
+^https:\/\/m\.client\.10010\.com\/search_service\/tyfbSearch\/searchDiscoverListExpress response-body-json-jq '.data = []'
+^https:\/\/m\.client\.10010\.com\/search_service\/search\/searchScrollWord response-body-json-jq '.["113000004"] = []'
+
+# 浮窗推广
+^https:\/\/m\.client\.10010\.com\/clientIndex\/v1\/api\/navHome response-body-json-jq '.datas.homeTopMenuItems |= map(select(.menuName != "通通" and .menuName != "vowifi" and .menuName != "签到" and .menuName != ""))'
+^https:\/\/m\.client\.10010\.com\/clientIndex\/homefusion\/fuInter response-body-json-jq 'del(.["HomeFusion.backGroundQuery"], .["HomeFusion.fuchuangAdv_A8"], .["HomeFusion.bottomLabel"])'
+
+# 我的页面钱包模块
+^https:\/\/m\.client\.10010\.com\/clientMyPage\/v1\/api\/myWallet response-body-json-jq '.data.payShowFlag = false'
+
+# 广告推送
+^https?:\/\/m\.client\.10010\.com\/mobileserviceimportant\/customer\/querySmartServicekhd.htm reject
+
+# 新人专享
+^https?:\/\/m\.client\.10010\.com\/clientIndex\/api\/v1\/index\/queryIndexExclusiveOffers reject
+
+# 借钱、积分、彩铃、横幅、本地图片推广
+^https?:\/\/m\.client\.10010\.com\/clientMyPage\/v\d\/api\/(myWallet|myPoints|myColorfulRingtone|newUserInfo|getDeviceInfo) response-body-json-jq '.data={}'
+
+# 首页瀑布流
+^https?:\/\/img\.client\.10010\.com\/homejingxuan12\/js\/(pubuliu|1homeView) reject
+
+[MitM]
+hostname = m.client.10010.com, img.client.10010.com

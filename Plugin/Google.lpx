@@ -1,0 +1,20 @@
+#!name = Google
+#!desc = 将Google搜索重定向至.com域名，如遇频繁跳转请禁用本插件。
+#!openUrl = https://apps.apple.com/app/id284815942
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Google.png
+#!date = 2025-12-16 20:00
+
+[Rewrite]
+# ^https?:\/\/(www.)?(g|google)\.(cn|com\.hk) 307 https://www.google.com
+^https?:\/\/(www.)?(g|google)\.cn 307 https://www.google.com
+^https?:\/\/(ditu|maps).google\.cn 307 https://maps.google.com
+^https?:\/\/translate\.google\.cn 307 https://translate.google.com
+
+[MitM]
+hostname = *.google.cn, *.g.cn

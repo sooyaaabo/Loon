@@ -1,0 +1,23 @@
+#!name = BoxJs
+#!desc = Data manager，使用前请在本插件的详情页面为[PROXY]项分配代理策略。
+#!openUrl = http://boxjs.com
+#!author = chavyleung[https://github.com/chavyleung]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BoxJs.png
+#!date = 2025-12-16 20:00
+
+# 2023-02-08
+# https://raw.githubusercontent.com/chavyleung/scripts/master/box/rewrite/boxjs.rewrite.loon.plugin
+
+[Rule]
+DOMAIN-SUFFIX, jsdelivr.net, PROXY
+
+[Script]
+http-request ^https?:\/\/(.+\.)?boxjs\.(com|net) script-path = https://raw.githubusercontent.com/chavyleung/scripts/master/box/chavy.boxjs.js, requires-body = true, timeout = 120, tag = BoxJs
+
+[MitM]
+hostname = boxjs.com, boxjs.net, *.boxjs.com, *.boxjs.net

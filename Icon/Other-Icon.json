@@ -1,0 +1,250 @@
+{
+    "name": "Other Icons",
+    "description": "sooyaaabo（恩秀）",
+    "icons": [
+        {
+            "name": "sooyaaabo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/sooyaaabo-01.png"
+        },
+        {
+            "name": "sooyaaabo",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/sooyaaabo-02.png"
+        },
+        {
+            "name": "Klee Kelee",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Klee-01.png"
+        },
+        {
+            "name": "Klee Kelee",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Klee-02.png"
+        },
+        {
+            "name": "MyBlockAds RuCu6",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/MyBlockAds.png"
+        },
+        {
+            "name": "SourceCodeSandbox",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SourceCodeSandbox.png"
+        },
+        {
+            "name": "Wi-Fi",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Wi-Fi.png"
+        },
+        {
+            "name": "Cellular",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Cellular.png"
+        },
+        {
+            "name": "Network",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Network.png"
+        },
+        {
+            "name": "Netisp",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Netisp.png"
+        },
+        {
+            "name": "NodeTools",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/NodeTools.png"
+        },
+        {
+            "name": "Information",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Information.png"
+        },
+        {
+            "name": "SkipProxy",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SkipProxy.png"
+        },
+        {
+            "name": "CNY",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/CNY.png"
+        },
+        {
+            "name": "Final",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Final.png"
+        },
+        {
+            "name": "AdReject",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/AdReject.png"
+        },
+        {
+            "name": "ShieldReject",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/ShieldReject.png"
+        },
+        {
+            "name": "iOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/iOS.png"
+        },
+        {
+            "name": "iPadOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/iPadOS.png"
+        },
+        {
+            "name": "macOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/macOS.png"
+        },
+        {
+            "name": "tvOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/tvOS.png"
+        },
+        {
+            "name": "visionOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/visionOS.png"
+        },
+        {
+            "name": "watchOS",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/watchOS.png"
+        },
+        {
+            "name": "Select",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Select.png"
+        },
+        {
+            "name": "UrlTest",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/UrlTest.png"
+        },
+        {
+            "name": "Fallback",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Fallback.png"
+        },
+        {
+            "name": "LoadBalance",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LoadBalance.png"
+        },
+        {
+            "name": "Relay Chain",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Relay.png"
+        },
+        {
+            "name": "Web_301",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_301.png"
+        },
+        {
+            "name": "Web_302",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_302.png"
+        },
+        {
+            "name": "Web_403",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_403.png"
+        },
+        {
+            "name": "Web_404",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_404.png"
+        },
+        {
+            "name": "Web_500",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_500.png"
+        },
+        {
+            "name": "Web_502",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_502.png"
+        },
+        {
+            "name": "Web_redirect",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_redirect.png"
+        },
+        {
+            "name": "Web_warning",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_warning.png"
+        },
+        {
+            "name": "Web_www",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Web_www.png"
+        },
+        {
+            "name": "SSID-HK",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SSID-HK.png"
+        },
+        {
+            "name": "SSID-JP",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SSID-JP.png"
+        },
+        {
+            "name": "SSID-KR",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SSID-KR.png"
+        },
+        {
+            "name": "SSID-SG",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SSID-SG.png"
+        },
+        {
+            "name": "SSID-TW",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SSID-TW.png"
+        },
+        {
+            "name": "SSID-US",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/SSID-US.png"
+        },
+        {
+            "name": "LOAD-HK",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LOAD-HK.png"
+        },
+        {
+            "name": "LOAD-JP",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LOAD-JP.png"
+        },
+        {
+            "name": "LOAD-KR",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LOAD-KR.png"
+        },
+        {
+            "name": "LOAD-SG",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LOAD-SG.png"
+        },
+        {
+            "name": "LOAD-TW",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LOAD-TW.png"
+        },
+        {
+            "name": "LOAD-US",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/LOAD-US.png"
+        },
+        {
+            "name": "Urltest-HK",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Urltest-HK.png"
+        },
+        {
+            "name": "Urltest-JP",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Urltest-JP.png"
+        },
+        {
+            "name": "Urltest-KR",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Urltest-KR.png"
+        },
+        {
+            "name": "Urltest-SG",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Urltest-SG.png"
+        },
+        {
+            "name": "Urltest-TW",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Urltest-TW.png"
+        },
+        {
+            "name": "Urltest-US",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/Urltest-US.png"
+        },
+        {
+            "name": "FAULT-HK",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/FAULT-HK.png"
+        },
+        {
+            "name": "FAULT-JP",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/FAULT-JP.png"
+        },
+        {
+            "name": "FAULT-KR",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/FAULT-KR.png"
+        },
+        {
+            "name": "FAULT-SG",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/FAULT-SG.png"
+        },
+        {
+            "name": "FAULT-TW",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/FAULT-TW.png"
+        },
+        {
+            "name": "FAULT-US",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Other-Icon/FAULT-US.png"
+        }
+    ]
+}

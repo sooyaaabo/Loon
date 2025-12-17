@@ -1,0 +1,91 @@
+name: Deploy Loon Plugin Lab
+
+on:
+  push:
+    paths:
+      - 'Plugin/**'
+      - 'README.md'
+      - '.github/workflows/DeployPluginLab.yml'
+      - '.github/scripts/generate_json.py'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # ---------------------
+      # 1. 生成 plugins.json
+      # ---------------------
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Generate JSON
+        run: python .github/scripts/generate_json.py
+
+      - name: Commit plugins.json
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-update plugins.json [skip ci]"
+          file_pattern: Plugin/plugins.json
+          branch: ${{ github.ref }}
+
+      # ---------------------
+      # 2. GitHub Pages 构建
+      # ---------------------
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Build with Jekyll
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: .
+          destination: ./_site
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./_site
+
+      # ---------------------------------------------------------
+      # 3. 同步 Vercel 部署目录 vercel/
+      # ---------------------------------------------------------
+      - name: Prepare Vercel directory
+        run: |
+          # 确保 vercel/ 目录存在
+          mkdir -p vercel/Plugin
+
+          # 覆盖 Plugin 内四个关键文件
+          cp Plugin/index.html vercel/Plugin/
+          cp Plugin/plugins.json vercel/Plugin/
+          cp Plugin/sw.js vercel/Plugin/
+          cp Plugin/manifest.json vercel/Plugin/
+
+          # ⭐ 若你要同步额外资源，可在此位置补充 cp 命令
+
+      - name: Commit Vercel static files
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Auto-Sync Vercel WebFiles [skip ci]"
+          file_pattern: vercel/**
+          branch: ${{ github.ref }}
+
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

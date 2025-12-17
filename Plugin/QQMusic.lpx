@@ -1,0 +1,27 @@
+#!name = QQ音乐
+#!desc = 过滤QQ音乐广告
+#!openUrl = https://apps.apple.com/app/id414603431
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/QQMusic.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-10 18:30:29
+# https://kelee.one/Tool/Loon/Lpx/QQMusic_remove_ads.lpx
+
+[Rule]
+DOMAIN, adstats.tencentmusic.com, REJECT
+DOMAIN, ad.tencentmusic.com, REJECT
+DOMAIN, adcdn.tencentmusic.com, REJECT
+DOMAIN, adcdn6.tencentmusic.com, REJECT
+DOMAIN, adexpo.tencentmusic.com, REJECT
+DOMAIN, adclick.tencentmusic.com, REJECT
+DOMAIN, mc.tencentmusic.com, REJECT
+DOMAIN, monitor.music.qq.com, REJECT
+DOMAIN, tmead.y.qq.com, REJECT
+DOMAIN, tmeadbak.y.qq.com, REJECT
+DOMAIN, tmeadquic.y.qq.com, REJECT

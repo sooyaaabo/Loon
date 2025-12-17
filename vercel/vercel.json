@@ -1,0 +1,9 @@
+{
+  "redirects": [
+    {
+      "source": "/Plugin",
+      "destination": "/Plugin/",
+      "permanent": false
+    }
+  ]
+}

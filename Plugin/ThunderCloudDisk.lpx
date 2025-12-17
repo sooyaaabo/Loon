@@ -1,0 +1,29 @@
+#!name = 迅雷
+#!desc = 过滤迅雷广告，解锁部分会员功能。
+#!openUrl = https://apps.apple.com/app/id1503466530
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], Marol62926[https://github.com/Marol62926]
+#!tag = 去广告, 解锁会员
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/ThunderCloudDisk.png
+#!date = 2025-12-16 20:00
+
+# 2025-07-10 21:25:29
+# https://kelee.one/Tool/Loon/Lpx/XunLei_remove_ads.lpx
+# 2022-09-10 v1.4.5
+# https://github.com/Marol62926/Loon/blob/main/xunlei.plugin
+
+[Rewrite]
+# 开屏广告、首页横幅广告、左上角广告入口、我的页面。
+^https:\/\/conf-m-ssl\.xunlei\.com\/external\/ response-body-json-del values.me_config.entrance_list_vertical_enable values.me_config.common_service_list values.me_config.banner_service_list
+
+^https:\/\/api-shoulei-ssl\.xunlei\.com\/flowhub\/v1\/slots:batchGet$ response-body-json-jq '.slots |= map(select(.id == "xl_ios_mytab_vipicon" or (.native.assets.title.text.value? and (.native.assets.title.text.value | . == "清理助手" or . == "云盘容量" or . == "远程设备"))))'
+
+[Script]
+# 解锁迅雷会员
+http-response ^https:\/\/xluser-ssl\.xunlei\.com\/xluser\.core\.login\/v3\/getuserinfo script-path = https://raw.githubusercontent.com/Marol62926/MarScrpt/main/xunlei.js, requires-body = true, tag = [迅雷云盘]解锁会员
+
+[MitM]
+hostname = conf-m-ssl.xunlei.com, api-shoulei-ssl.xunlei.com, xluser-ssl.xunlei.com

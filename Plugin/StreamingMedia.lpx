@@ -1,0 +1,72 @@
+#!name = 流媒体解锁测试
+#!desc = 设置不同流媒体规则所经策略组，访问服务检测网页（https://streaming.test），点击所需要测试的流媒体卡片，等待测试结果即可。
+#!openUrl = https://streaming.test
+#!author = huskydsb[https://github.com/huskydsb]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Conflux.png
+#!date = 2025-12-16 20:00
+
+# 2025-01-31
+# https://github.com/huskydsb/Shadowrocket/blob/main/Sgmodule/%E6%B5%81%E5%AA%92%E4%BD%93%E8%A7%A3%E9%94%81%E6%B5%8B%E8%AF%95.module
+
+[Script]
+http-request ^https:\/\/streaming\.test\/bahamut\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bahamuts.js, timeout = 60, tag = [流媒体解锁测试]Bahamut
+
+http-request ^https:\/\/streaming\.test\/steam\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/steam.js, timeout = 60, tag = [流媒体解锁测试]Steam
+
+http-request ^https:\/\/streaming\.test\/bilibili\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bilibili.js, timeout = 60, tag = [流媒体解锁测试]Bilibili
+
+http-request ^https:\/\/streaming\.test\/spotify\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/spotify.js, timeout = 60, tag = [流媒体解锁测试]Spotify
+
+http-request ^https:\/\/streaming\.test\/scamalytics\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/scamalytics.js, timeout = 60, tag = [流媒体解锁测试]Scamalytics
+
+http-request ^https:\/\/streaming\.test\/disney\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/disney.js, timeout = 60, tag = [流媒体解锁测试]Disney
+
+http-request ^https:\/\/streaming\.test\/netflix\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/netflix.js, timeout = 60, tag = [流媒体解锁测试]Netflix
+
+http-request ^https:\/\/streaming\.test\/chatgpt\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/chatgpt.js, timeout = 60, tag = [流媒体解锁测试]ChatGPT
+
+http-request ^https:\/\/streaming\.test\/tiktok\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/tiktok.js, timeout = 60, tag = [流媒体解锁测试]Tiktok
+
+http-request ^https:\/\/streaming\.test\/youtube\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/youtube.js, timeout = 60, tag = [流媒体解锁测试]YouTube
+
+http-request ^https:\/\/streaming\.test\/max\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/max.js, timeout = 60, tag = [流媒体解锁测试]HBO Max
+
+http-request ^https:\/\/streaming\.test\/primevideo\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/primevideo.js, timeout = 60, tag = [流媒体解锁测试]PrimeVideo
+
+http-request ^https:\/\/streaming\.test\/bing\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/bing.js, timeout = 60, tag = [流媒体解锁测试]Bing
+
+http-request ^https:\/\/streaming\.test\/nicovideo\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/niconico.js, timeout = 60, tag = [流媒体解锁测试]ニコニコ動画（Niconico动画）
+
+http-request ^https:\/\/streaming\.test\/googleplay\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/googleplay.js, timeout = 60, tag = [流媒体解锁测试]Google Play
+
+http-request ^https:\/\/streaming\.test\/wikipedia\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/wikipedia.js, timeout = 60, tag = [流媒体解锁测试]Wikipedia
+
+http-request ^https:\/\/streaming\.test\/starz\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/starz.js, timeout = 60, tag = [流媒体解锁测试]Starz
+
+http-request ^https:\/\/streaming\.test\/iqiyi\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/iqiyi.js, timeout = 60, tag = [流媒体解锁测试]iQIYI
+
+http-request ^https:\/\/streaming\.test\/dazn\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/dazn.js, timeout = 60, tag = [流媒体解锁测试]DAZN
+
+http-request ^https:\/\/streaming\.test\/paramountplus\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/paramountplus.js, timeout = 60, tag = [流媒体解锁测试]Paramount Plus
+
+http-request ^https:\/\/streaming\.test\/viutv\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/viutv.js, timeout = 60, tag = [流媒体解锁测试]ViuTV
+
+http-request ^https:\/\/streaming\.test\/nowe\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/nowe.js, timeout = 60, tag = [流媒体解锁测试]Now E
+
+http-request ^https:\/\/streaming\.test\/kktv\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/kktv.js, timeout = 60, tag = [流媒体解锁测试]KKTV
+
+http-request ^https:\/\/streaming\.test\/linetv\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/linetv.js, timeout = 60, tag = [流媒体解锁测试]LINE TV
+
+http-request ^https:\/\/streaming\.test\/ip\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/ip.js, timeout = 60, tag = [流媒体解锁测试]IPv6
+
+http-request ^https:\/\/streaming\.test\/dns\/?$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/surfsharkdns.js, timeout = 60, tag = [流媒体解锁测试]Surfshark DNS
+
+http-request ^https:\/\/streaming\.test\/$ script-path = https://raw.githubusercontent.com/huskydsb/Shadowrocket/main/Streaming/js/front-end.js, timeout = 60, tag = [流媒体解锁测试]Front-end
+
+[MitM]
+hostname = streaming.test

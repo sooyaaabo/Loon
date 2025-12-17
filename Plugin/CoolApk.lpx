@@ -1,0 +1,46 @@
+#!name = 酷安
+#!desc = 过滤酷安广告
+#!openUrl = https://apps.apple.com/app/id1422581869
+#!author = RuCu6[https://github.com/RuCu6], ZenmoFeiShi[https://github.com/ZenmoFeiShi], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/CoolApk.png
+#!date = 2025-12-16 20:00
+
+# 2025-05-13 15:17:08
+# https://kelee.one/Tool/Loon/Lpx/CoolApk_remove_ads.lpx
+# 2025-11-01
+# https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.snippet
+
+[Rewrite]
+^https:\/\/api\.coolapk\.com\/v6\/search\?.*type=hotSearch reject-dict
+
+^https:\/\/api\.coolapk\.com\/v6\/feed\/detail\? response-body-json-jq '.data.hotReplyRows |= if . then map(select(.id?)) else . end | .data.topReplyRows |= if . then map(select(.id?)) else . end | reduce ("detailSponsorCard", "include_goods", "include_goods_ids") as $key (.; .data[$key] = [])'
+
+^https:\/\/api\.coolapk\.com\/v6\/feed\/replyList response-body-json-jq 'if .data? and ((.data | type) == "array") and (.data | length > 0) then .data |= map(select(.id?)) else . end'
+
+^https:\/\/api\.coolapk\.com\/v6\/main\/dataList response-body-json-jq '.data |= (if (type=="array" and length>0) then map(select((.entityTemplate!="sponsorCard") and (.title!="精选配件"))) else . end)'
+
+^https:\/\/api\.coolapk\.com\/v6\/page\/dataList response-body-json-jq '.data |= map(select(.title != "话题热议" and (.entityId != 36104 and .entityId != 24309 and .entityId != 12889 and .entityId != 21063 and .entityId != 35730 and .entityId != 35846 and .entityId != 28374 and .entityId != 28375 and .entityId != 27332 and .entityId != 20090 and .entityId != 28773 and .entityId != 29343 and .entityId != 21106)) | if .entities then (.entities |= map(select(.title != "睡个好觉需要什么？"))) else . end)'
+
+^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8 response-body-json-jq '.data |= map(select((.entityId != 32557 and .entityId != 29349 and .entityId != 28621) and (.title | test("值得买|红包") | not)))'
+
+^https:\/\/api\.coolapk\.com\/v6\/main\/init response-body-json-jq 'del(.data[]? | select(.entityId == 944 or .entityId == 945 or .entityId == 24455 or .entityId == 36839 or .entityId == 1635 or .title == "关注")) | .data |= map(if .entities then .entities |= map(select(.entityId != 1635 and .entityId != 2261 and .entityId != 1633 and .entityId != 413 and .entityId != 417 and .entityId != 1754 and .entityId != 1966 and .entityId != 2274 and .entityId != 1170 and .entityId != 1175 and .entityId != 1190 and .entityId != 2258 and .title != "关注")) else . end)'
+
+^https:\/\/api\.coolapk\.com\/v6\/account\/loadConfig\?key=my_page_card_config response-body-json-jq '.data |= map(select(.entityType != "textLink" and (.entityId != 1001 and .entityId != 1003 and .entityId != 1004 and .entityId != 1005)) | if .entities then .entities |= map(select(.entityType != "textLink")) else . end)'
+
+[Script]
+# 可莉🅥
+# http-response ^https:\/\/api\.coolapk\.com\/v6\/(?:feed\/detail|feed\/replyList|page\/dataList|main\/dataList|main\/indexV8|main\/init) script-path = https://kelee.one/Resource/JavaScript/CoolApk/CoolApk_remove_ads.js, requires-body = true, tag = [酷安]移除广告
+
+# ZenmoFeiShi
+# http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/init script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = [酷安]移除广告
+# http-response ^https:\/\/api\.coolapk\.com\/v6\/main\/indexV8 script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = [酷安]移除广告
+# http-response ^https:\/\/api\.coolapk\.com\/v6\/page\/dataList script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = [酷安]移除广告
+# http-response ^https:\/\/api\.coolapk\.com\/v6\/account\/loadConfig\?key=my_page_card_config script-path = https://raw.githubusercontent.com/ZenmoFeiShi/Qx/main/KuAn.js, requires-body = true, tag = [酷安]移除广告
+
+[MitM]
+hostname = api.coolapk.com

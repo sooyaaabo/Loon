@@ -1,0 +1,28 @@
+#!name = 123云盘
+#!desc = 过滤123云盘应用端及网页端广告，解除网页端流量1G下载限制（请单文件下载，不要文件夹或多文件下载）。
+#!openUrl = https://apps.apple.com/app/id1597682672
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md], ddgksf2013[https://github.com/ddgksf2013]
+#!tag = 去广告, 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/123Pan-01.png
+#!date = 2025-12-16 20:00
+
+# 2025-05-13 15:17:08
+# https://kelee.one/Tool/Loon/Lpx/123NetWorkDisk_remove_ads.lpx
+# 2024-09-29 19:54
+# https://raw.githubusercontent.com/ddgksf2013/Modules/main/123pan.webEnhance.sgmodule
+
+[Rewrite]
+# 横幅广告
+^https:\/\/www\.123pan\.com\/api\/config\/get reject-dict
+
+[Script]
+http-response ^https?:\/\/www\.123pan\.com\/s\/[0-9a-zA-Z=_/-]+\.html script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, requires-body = true, timeout = 60, tag = [123云盘]移除广告
+
+http-request ^https?:\/\/www\.123pan\.com\/b\/api\/share\/download\/info script-path = https://raw.githubusercontent.com/ddgksf2013/Scripts/master/123pan.js, timeout = 60, tag = [123云盘]解除下载限制
+
+[MitM]
+hostname = www.123pan.com

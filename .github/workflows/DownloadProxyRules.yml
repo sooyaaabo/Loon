@@ -1,0 +1,104 @@
+name: Download ProxyRules
+
+on:
+  schedule:
+    - cron: '0 */12 * * *' # 每12小时运行一次
+  workflow_dispatch: # 允许手动触发
+
+permissions:
+  actions: write
+  contents: write  
+
+jobs:
+  convert_rule_format:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+        with:
+          repository: sooyaaabo/Loon
+          path: Loon
+
+      - name: Download Global_Domain List
+        run: |
+          curl -o Global_Domain.list https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list
+
+      - name: Modify Global_Domain List
+        run: |
+          # 创建目标目录 Rule
+          mkdir -p Loon/Rule
+          # 创建输出文件路径
+          output_file="Loon/Rule/Global.lsr"
+          # 写入规则头部
+          echo '# 原始链接：https://raw.githubusercontent.com/Code-Dramatist/Rule_Actions/main/Proxy_Rule/Global_Domain.list' > $output_file
+
+          # 读取并处理每一行
+          while IFS= read -r line; do
+            # 跳过以#开头的注释行
+            if [[ "$line" =~ ^# ]]; then
+              echo "$line" >> $output_file
+            elif [[ "$line" =~ ^\. ]]; then
+              # 如果行是以.开头，替换为DOMAIN-SUFFIX
+              echo "DOMAIN-SUFFIX,${line:1}" >> $output_file
+            else
+              # 如果行不是以.开头，添加DOMAIN
+              echo "DOMAIN,$line" >> $output_file
+            fi
+          done < Global_Domain.list  # 结束循环
+
+      - name: Download proxy-list.txt
+        run: |
+          curl -sSL -o proxy-list.txt https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt
+
+      - name: Modify proxy-list.txt
+        run: |
+          # 创建目标目录 Rule
+          mkdir -p Loon/Rule
+          # 写入规则头部
+          echo '# 原始链接：https://raw.githubusercontent.com/Loyalsoldier/v2ray-rules-dat/release/proxy-list.txt' > Loon/Rule/Proxy.lsr
+          
+          # 读取每一行
+          while read -r line; do
+            # 忽略空行和注释
+            if [[ -n "$line" && ! "$line" =~ ^# ]]; then
+              # 处理 "full:" 开头的规则
+              if [[ "$line" =~ ^full: ]]; then
+                domain="${line#full:}"
+                # 写入 DOMAIN 格式
+                echo "DOMAIN, $domain" >> Loon/Rule/Proxy.lsr
+              # 处理类似 "regexp:" 的规则
+              elif [[ "$line" =~ ^regexp: ]]; then
+                regex="${line#regexp:}"
+                # 确保正则表达式格式正确
+                echo "URL-REGEX, \"$regex\"" >> Loon/Rule/Proxy.lsr
+              # 处理一般域名，转换为 "DOMAIN-SUFFIX"
+              else
+                echo "DOMAIN-SUFFIX, $line" >> Loon/Rule/Proxy.lsr
+              fi
+            fi
+          done < proxy-list.txt
+
+      - name: Commit and push changes
+        run: |
+          cd Loon
+          if [[ -n $(git status -s) ]]; then
+            git config --local user.email "action@github.com"
+            git config --local user.name "GitHub Action"
+            git add . 
+            git commit -m "Update ProxyRules ($(TZ='Asia/Shanghai' date +'%Y-%m-%d %H:%M'))"
+            git push origin HEAD
+          else
+            echo "No changes to commit."
+          fi
+
+  clean_up_workflow:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Clean up workflow runs
+        uses: Mattraks/delete-workflow-runs@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          retain_days: 0
+          keep_minimum_runs: 3

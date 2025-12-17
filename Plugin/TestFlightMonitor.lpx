@@ -1,0 +1,32 @@
+#!name = TestFlight Monitor
+#!desc = 1.自动监控TestFlight，手动填写应用APP_ID，一旦有空余名额会自动通知，点击通知即可跳转加入；\n2.自动加入TestFlight，需先获取账号令牌[添加主机名testflight.apple.com]，一旦有空余名额会自动加入。
+#!openUrl = https://apps.apple.com/app/id899247664
+#!author = fmz200[https://github.com/fmz200], DecoAri[https://github.com/DecoAri], xream[https://github.com/xream]
+#!tag = 功能增强, 定时任务
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/TestFlight-04.png
+#!input = TestFlight_APP_ID
+#!date = 2025-12-16 20:00
+
+[Argument]
+CaptureAccountToken = switch, "false", "true", tag = 捕获账号令牌, desc = 是否捕获账户令牌
+RunJoin = switch, "false", "true", tag = TestFlight自动加入, desc = 是否开启TestFlight自动加入
+RunMonitor = switch, "true", "false", tag = TestFlight自动监控, desc = 是否开启TestFlight自动监控
+JoinCron = input, "0 0/3 * * * ?", tag = 加入TestFlight定时参数, desc = 输入Cron表达式来定时运行加入TestFlight
+MonitorCron = input, "0 * * * * ?", tag = 监控TestFlight定时参数, desc = 输入Cron表达式来定时运行监控TestFlight
+
+[Rule]
+DOMAIN, testflight.apple.com, PROXY
+
+[Script]
+http-request ^https?:\/\/testflight\.apple\.com\/v3\/accounts\/.*\/apps$ script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/TestFlight/AutoJoinTFKeys.js, tag = 获取账号令牌, enable = {CaptureAccountToken}
+
+cron {JoinCron} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/TestFlight/AutoJoinTF.js, tag = TestFlight自动加入, timeout = 600, enable = {RunJoin}
+
+cron {MonitorCron} script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/TestFlight/AutoMonitorTF.js, tag = TestFlight自动监控, timeout = 30, enable = {RunMonitor}
+
+# [MitM]
+# hostname = testflight.apple.com

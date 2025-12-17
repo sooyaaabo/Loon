@@ -1,0 +1,30 @@
+#!name = 米游社
+#!desc = 过滤米游社广告
+#!openUrl = https://apps.apple.com/app/id1470182559
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/miHoYoBBS.png
+#!date = 2025-12-16 20:00
+
+# 2025-11-20 01:12:36
+# https://kelee.one/Tool/Loon/Lpx/miHoYoBBS_remove_ads.lpx
+
+[Rewrite]
+# 开屏广告、搜索栏热搜及资讯、青少年模式弹窗
+^https:\/\/bbs-api(-ab)?\.miyoushe\.com\/apihub\/api\/getAppSplash$ reject-dict
+
+^https:\/\/bbs-api(-ab)?\.miyoushe\.com\/apihub\/api\/getAppStartupData$ response-body-json-del data.resp_map./teenager/api/info data.resp_map["/apihub/api/getAppConfig"].data.get_app_config_response.config.is_show_teenager_mode_btn data.resp_map["/apihub/api/getAppConfig"].data.get_app_config_response.config.teenager_popup_freq_type
+
+^https:\/\/bbs-api(-ab)?\.miyoushe\.com\/apihub\/api\/getAppConfig$ response-body-json-replace data.config.teenager_popup_freq_type 0 data.config.is_show_teenager_mode_btn 0
+
+^https:\/\/bbs-api-ab\.miyoushe\.com\/teenager\/api\/info$ response-body-json-replace data.is_enabled false data.is_teenager false data.is_force false
+
+^https:\/\/bbs-api(-ab)?\.miyoushe\.com\/apihub\/api\/getHotKeywordAndEvent$ reject-dict
+^https:\/\/bbs-api-static\.miyoushe\.com\/search\/api\/search\/pre_keyword\? reject-dict
+
+[MitM]
+hostname = bbs-api.miyoushe.com, bbs-api-ab.miyoushe.com

@@ -1,0 +1,39 @@
+#!name = 得物
+#!desc = 过滤得物广告
+#!openUrl = https://apps.apple.com/app/id1012871328
+#!author = 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!tag = 去广告
+#!system =  
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Dewu.png
+#!date = 2025-12-16 20:00
+
+# 2025-12-05 02:57:36
+# https://kelee.one/Tool/Loon/Lpx/Dewu_remove_ads.lpx
+
+[Rewrite]
+# 开屏广告、弹窗、搜索词填充、热搜榜、猜你想搜、推荐关注、推荐信息流，精简消息中心和我的页面
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/advertisement\/ reject-dict
+
+^https:\/\/app\.dewu\.com\/hacking-newbie\/v1\/app\/coupon\/module\? reject-dict
+
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/search\/lexicon\/v3\/background_words\? reject-dict
+
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/search\/lexicon\/v1\/rank_words\? reject-dict
+
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/biz-aggregate\/me\/user-index\? response-body-json-jq '.data.modules |= map(if .key == "wallet" then .data.menus |= map(select(.key == "coupon" or .key == "allowance" or .key == "gift" or .key == "balance")) else . end) | .data.modules |= map(select(.key != "merchant" and .key != "discountCoupon"))'
+
+^https:\/\/app\.dewu\.com\/api\/v1\/app\/account\/wallet\/page\/entrance\? response-body-json-jq '.data.groupInfoDTOS |= map(.moduleInfoDTO = {assetModule: .moduleInfoDTO.assetModule}) | .data.moduleNames = [.data.moduleNames[] | select(. == "assetModule")] | . as $full | $full | .data.groupNames |= (map(select(. == "MAIN" or . == "ASYNC_COMMON" or . == "ASYNC_GOODS_FEEDS")))'
+
+^https:\/\/app\.dewu\.com\/identify-discovery\/v1\/discovery\/index\? response-body-json-jq '.data.groups |= map(.items |= map(select(.title == "消息中心")))'
+
+^https:\/\/app\.dewu\.com\/sns-rec\/v1\/attention\/feed\? reject-dict
+
+^https:\/\/app\.dewu\.com\/sns-rec\/v1\/search\/word-skip\/new-list\? reject-dict
+
+^https:\/\/app\.dewu\.com\/sns-rec\/v1\/search\/hotword-list\? reject-dict
+
+[MitM]
+hostname = app.dewu.com

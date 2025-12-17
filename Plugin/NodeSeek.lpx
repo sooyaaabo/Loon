@@ -1,0 +1,32 @@
+#!name = NodeSeek
+#!desc = NodeSeek每日签到。登录账号进入设置页面以获取Token，成功后关闭Token脚本。\n可在BoxJs中设置是否启用领取随机鸡腿，默认为固定5个鸡腿。
+#!openUrl = https://www.nodeseek.com
+#!author = Sliverkiss[https://github.com/Sliverkiss]
+#!tag = 定时任务
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/NodeSeek.png
+#!date = 2025-12-16 20:00
+
+# 2024-04-13 20:34:33
+# https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js
+# BoxJs订阅
+# https://gist.githubusercontent.com/Sliverkiss/18bd01be356360a8065a21ea71685ad3/raw/5b6b1b8ff6f96c35bf5c011abe645e3ddd5a5e91/sliverkiss.boxjs.json
+
+[Argument]
+Cookie-nodeseek = switch, true, false, tag = [NodeSeek]每日签到Token, desc = 获取[NodeSeek]每日签到Token
+Task-nodeseek = switch, true, false, tag = [NodeSeek]每日签到Task, desc = 定时运行[NodeSeek]每日签到Task
+Cron-nodeseek = input, "0 0 9 * * *", tag = [NodeSeek]定时参数Cron, desc = 输入Cron表达式来定时运行[NodeSeek]每日签到Task
+
+[Rule]
+DOMAIN, www.nodeseek.com, PROXY
+DOMAIN-SUFFIX, nodeseek.com, PROXY
+
+[Script]
+http-response ^https:\/\/www\.nodeseek\.com\/api\/account\/getInfo\/.+\?readme=1&signature=1&phone=1 script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, requires-body = true, timeout = 60, tag = [NodeSeek]每日签到Token, enabled={Cookie-nodeseek}
+cron {Cron-nodeseek} script-path = https://gist.githubusercontent.com/Sliverkiss/2b5acc2c4960dd06618c6912302c2c7f/raw/nodeseek.js, timeout = 60, tag = [NodeSeek]每日签到Task, enabled={Task-nodeseek}
+
+[MitM]
+hostname = www.nodeseek.com

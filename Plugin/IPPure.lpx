@@ -1,0 +1,14 @@
+#!name = IPPure
+#!desc = 通过IPPure接口检测IP质量。
+#!openUrl = https://ippure.com/
+#!author = sooyaaabo[https://github.com/sooyaaabo]
+#!tag = 功能增强
+#!system = 
+#!system_version = 
+#!loon_version = 3.3.7(921)
+#!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
+#!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/IPPure.png
+#!date = 2025-12-16 20:00
+
+[Script]
+generic script-path = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Script/IPPure/IPPure.js, timeout = 10, tag = IPPure, img-url = leaf
