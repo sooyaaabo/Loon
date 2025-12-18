@@ -8,7 +8,7 @@
 #!loon_version = 3.3.7(921)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DiDi.png
-#!date = 2025-12-16 20:00
+#!date = 2025-12-18 21:00
 
 # 2025-11-13 20:33:12
 # https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
@@ -93,4 +93,4 @@ IP-CIDR, 162.14.157.24/32, REJECT, no-resolve
 ^https:\/\/res\.xiaojukeji\.com\/resapi\/activity\/getInsActivityV2 reject-dict
 
 [MitM]
-hostname = common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, 162.14.157.*, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.*, 139.199.240.84
+hostname = common.diditaxi.com.cn, freight.xiaojukeji.com, daijia.kuaidadi.com, 162.14.157.*, ct.xiaojukeji.com, res.xiaojukeji.com, conf.diditaxi.com.cn, api.udache.com, 123.207.209.*, 112.53.55.225, 120.241.142.*, 120.241.143.*, 116.85.*, 139.199.240.84, 113.46.225.*
