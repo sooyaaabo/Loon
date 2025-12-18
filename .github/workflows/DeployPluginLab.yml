@@ -1,4 +1,4 @@
-name: Deploy Loon Plugin Lab
+name: Deploy Loon Plugin Lab 
 
 on:
   push:
@@ -20,6 +20,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0   # ⭐ 必须加，以便 pull 正常工作
 
       # ---------------------
       # 1. 生成 plugins.json
@@ -37,7 +39,8 @@ jobs:
         with:
           commit_message: "Auto-update plugins.json [skip ci]"
           file_pattern: Plugin/plugins.json
-          branch: ${{ github.ref }}
+          branch: main         # ⭐ 强制明确推送到 main
+          pull_before: true    # ⭐ 解决 non-fast-forward 错误
 
       # ---------------------
       # 2. GitHub Pages 构建
@@ -61,23 +64,19 @@ jobs:
       # ---------------------------------------------------------
       - name: Prepare Vercel directory
         run: |
-          # 确保 vercel/ 目录存在
           mkdir -p vercel/Plugin
-
-          # 覆盖 Plugin 内四个关键文件
           cp Plugin/index.html vercel/Plugin/
           cp Plugin/plugins.json vercel/Plugin/
           cp Plugin/sw.js vercel/Plugin/
           cp Plugin/manifest.json vercel/Plugin/
-
-          # ⭐ 若你要同步额外资源，可在此位置补充 cp 命令
 
       - name: Commit Vercel static files
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: "Auto-Sync Vercel WebFiles [skip ci]"
           file_pattern: vercel/**
-          branch: ${{ github.ref }}
+          branch: main         # ⭐ 一样指定 main
+          pull_before: true    # ⭐ 避免 push 被拒绝
 
   deploy:
     environment:
