@@ -64,15 +64,15 @@
 
 ### 配置文件导入（点击跳转）<br>
 
-- [适用于 App Store 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.lcf)
+- [适用于 App Store 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Config_AppStore.lcf)
 
-- [适用于 TestFlight 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.lcf)
+- [适用于 TestFlight 版本](https://www.nsloon.com/openloon/import?sub=https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Config_TestFlight.lcf)
 
 ### 配置文件链接（手动复制）<br>
 
-- [适用于 App Store 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_AppStore.lcf)
+- [适用于 App Store 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Config_AppStore.lcf)
 
-- [适用于 TestFlight 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Simple_Configuration_TestFlight.lcf)
+- [适用于 TestFlight 版本](https://raw.githubusercontent.com/sooyaaabo/Loon/main/Config/Loon_Config_TestFlight.lcf)
 
 
 ## 机场推荐
