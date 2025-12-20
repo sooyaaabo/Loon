@@ -2,14 +2,14 @@
 # NAME: Global
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2025-12-18 02:08:02
+# UPDATED: 2025-12-20 02:07:58
 # DOMAIN: 117
 # DOMAIN-KEYWORD: 36
-# DOMAIN-SUFFIX: 32337
+# DOMAIN-SUFFIX: 32340
 # IP-CIDR: 112
 # IP-CIDR6: 4
 # USER-AGENT: 46
-# TOTAL: 32652
+# TOTAL: 32655
 DOMAIN-SUFFIX,000webhost.com
 DOMAIN-SUFFIX,01.org
 DOMAIN-SUFFIX,02weqj32.com
@@ -2988,6 +2988,7 @@ DOMAIN-SUFFIX,awjq.cc
 DOMAIN-SUFFIX,awlc.ac.uk
 DOMAIN-SUFFIX,aws-iot-hackathon.com
 DOMAIN-SUFFIX,aws.com
+DOMAIN-SUFFIX,aws.dev
 DOMAIN-SUFFIX,awsapprunner.com
 DOMAIN-SUFFIX,awsapps.com
 DOMAIN-SUFFIX,awsautopilot.com
@@ -4081,6 +4082,7 @@ DOMAIN-SUFFIX,bit.com
 DOMAIN-SUFFIX,bit.do
 DOMAIN-SUFFIX,bit.ly
 DOMAIN-SUFFIX,bit.no.com
+DOMAIN-SUFFIX,bitbaby.com
 DOMAIN-SUFFIX,bitballoon.com
 DOMAIN-SUFFIX,bitbank.cc
 DOMAIN-SUFFIX,bitbay.net
@@ -14423,6 +14425,7 @@ DOMAIN-SUFFIX,icuminside.com
 DOMAIN-SUFFIX,id.hao123.com
 DOMAIN-SUFFIX,idaiwan.com
 DOMAIN-SUFFIX,idarkdoll.com
+DOMAIN-SUFFIX,idcflare.com
 DOMAIN-SUFFIX,idcore.ac.uk
 DOMAIN-SUFFIX,iddddg.com
 DOMAIN-SUFFIX,idea-server.com
