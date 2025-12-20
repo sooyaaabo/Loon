@@ -1,7 +1,8 @@
+// 引用链接: https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js
 /*
 引用地址 https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/xiaohongshu.js
 */
-// 2025-07-31 19:10
+// 2025-12-15 12:05
 
 const url = $request.url;
 if (!$response.body) $done({});
@@ -104,8 +105,8 @@ if (url.includes("/v1/interaction/comment/video/download")) {
   }
 } else if (url.includes("/v2/note/widgets")) {
   // 详情页小部件
-  const item = ["cooperate_binds", "generic", "note_next_step", "widgets_nbb", "widgets_ncb", "widgets_ndb"];
-  // cooperate_binds合作品牌 note_next_step活动 widgets_nbb相关搜索
+  const item = ["cooperate_binds", "generic", "note_next_step", "widget_list", "widgets_nbb", "widgets_ncb", "widgets_ndb"];
+  // cooperate_binds合作品牌 note_next_step活动 widget_list猜你想搜 widgets_nbb相关搜索
   if (obj?.data) {
     for (let i of item) {
       delete obj.data[i];
@@ -170,6 +171,15 @@ if (url.includes("/v1/interaction/comment/video/download")) {
   let unlockDatas = [];
   if (obj?.data?.length > 0) {
     for (let item of obj.data) {
+      if (item?.function_switch?.length > 0) {
+        // 新的保存按钮配置
+        for (let i of item.function_switch) {
+          if (i?.enable === false) {
+            i.enable = true;
+            i.reason = "";
+          }
+        }
+      }
       if (item?.model_type === "note") {
         if (item?.id && item?.video_info_v2?.media?.stream?.h265?.[0]?.master_url) {
           let myData = {

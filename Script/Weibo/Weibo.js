@@ -2,7 +2,7 @@
 /*
 引用地址：https://raw.githubusercontent.com/RuCu6/Loon/main/Scripts/weibo.js
 */
-// 2025-08-23 21:00
+// 2025-12-10 19:30
 
 const url = $request.url;
 if (!$response) $done({});
@@ -721,6 +721,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                     // 微博趋势
                     continue;
                   } else {
+                    removeFeedAd(ii?.data);
                     newII.push(ii);
                   }
                 }
@@ -758,6 +759,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   if (item?.category === "feed") {
                     if (!isAd(item?.data)) {
                       removeFeedAd(item.data); // 信息流推广
+                      // removeAvatar(item.data); // 头像挂件
                       newItems.push(item);
                     }
                   } else if (item?.category === "card") {
@@ -780,20 +782,26 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                     // 保留信息流分割线
                     newItems.push(item);
                   } else if (item?.category === "group") {
-                    if (item?.items?.length > 0) {
-                      let newII = [];
-                      for (let ii of item.items) {
-                        // 118横版广告图片 182热议话题 192横版好看视频 217错过了热词 247横版视频广告 264微博趋势
-                        if ([118, 182, 192, 217, 247, 264]?.includes(ii?.data?.card_type)) {
-                          continue;
-                        } else if (ii?.data?.cate_id === "1114") {
-                          // 微博趋势
-                          continue;
-                        } else {
-                          newII.push(ii);
+                    if (item?.item_category === "insert_item") {
+                      // 信息流内部嵌入的“个性化开关”
+                      continue;
+                    } else {
+                      if (item?.items?.length > 0) {
+                        let newII = [];
+                        for (let ii of item.items) {
+                          // 118横版广告图片 182热议话题 192横版好看视频 217错过了热词 247横版视频广告 264微博趋势
+                          if ([118, 182, 192, 217, 247, 264]?.includes(ii?.data?.card_type)) {
+                            continue;
+                          } else if (ii?.data?.cate_id === "1114") {
+                            // 微博趋势
+                            continue;
+                          } else {
+                            removeFeedAd(ii?.data); // 头像挂件
+                            newII.push(ii);
+                          }
                         }
+                        item.items = newII;
                       }
-                      item.items = newII;
                     }
                     newItems.push(item);
                   }
@@ -967,7 +975,7 @@ if (url.includes("/interface/sdk/sdkad.php")) {
                   continue;
                 } else {
                   if (!isAd(ii?.data)) {
-                    removeAvatar(ii?.data);
+                    // removeAvatar(ii?.data);
                     removeFeedAd(ii?.data); // 商品橱窗
                     // 3推广卡片 17相关搜索 22广告图 25智搜总结 30推荐博主 42,236智搜问答 89商品推广视频 101大家都在问 206推广视频
                     if ([3, 17, 22, 30, 42, 89, 101, 206]?.includes(ii?.data?.card_type)) {
@@ -1527,6 +1535,9 @@ function removeFeedAd(item) {
   }
   if (item?.comment_summary) {
     delete item.comment_summary; // 移除信息流中的热评
+  }
+  if (item?.extend_info) {
+    delete item.extend_info; // 商品橱窗
   }
   if (item?.semantic_brand_params) {
     delete item.semantic_brand_params; // 商品橱窗

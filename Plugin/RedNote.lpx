@@ -8,9 +8,9 @@
 #!loon_version = 3.3.7(921)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/RedNote.png
-#!date = 2025-12-16 20:00
+#!date = 2025-12-20 09:00
 
-# 2025-08-01 19:57:10
+# 2025-12-20 02:25:08
 # https://kelee.one/Tool/Loon/Lpx/RedPaper_remove_ads.lpx
 
 [Rule]
@@ -60,7 +60,7 @@ http-response ^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v4\/foll
 http-response ^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v6\/homefeed\? script-path = https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = [小红书]移除信息流广告
 
 # 搜索页
-http-response ^https:\/\/(?:so|edith)\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? script-path = https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = [小红书]移除搜索页广告
+http-response ^https:\/\/(?:edith|so)\.xiaohongshu\.com\/api\/sns\/v10\/search\/notes\? script-path = https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = [小红书]移除搜索页广告
 
 # 实况、图片、视频水印
 http-response ^https:\/\/(?:edith|rec|www)\.xiaohongshu\.com\/api\/sns\/v1\/note\/(?:imagefeed|live_photo\/save) script-path = https://kelee.one/Resource/JavaScript/RedPaper/RedPaper_remove_ads.js, requires-body = true, tag = [小红书]移除图片和实况照片水印
