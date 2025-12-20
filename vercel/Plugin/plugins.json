@@ -242,7 +242,7 @@
     "name": "哔哩哔哩",
     "desc": "过滤哔哩哔哩广告",
     "icon": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/BilibiliPink.png",
-    "date": "2025-12-16 20:00",
+    "date": "2025-12-20 23:00",
     "tags": [
       "去广告"
     ],
@@ -794,7 +794,7 @@
     "name": "IPA Manager",
     "desc": "下载IPA文件实现降级应用安装、已购下架应用安装。\\n本插件依赖Scripting App且需解锁Pro权限。",
     "icon": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/iAppStore-03.png",
-    "date": "2025-12-16 20:00",
+    "date": "2025-12-20 23:00",
     "tags": [
       "功能增强"
     ],
