@@ -8,6 +8,7 @@ GITHUB_USER = "sooyaaabo"
 GITHUB_REPO = "Loon"
 BRANCH = "main"     
 PLUGIN_DIR = "Plugin"  # 插件文件所在的文件夹名称
+PAGES_BASE = "https://sooyaaabo.github.io/Loon"
 # ----------------------------------------
 
 # 正则预编译
@@ -72,7 +73,8 @@ def main():
             author_match = RE_AUTHOR.search(content)
             authors = parse_authors(author_match.group(1).strip() if author_match else "")
 
-            download_url = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/{BRANCH}/{PLUGIN_DIR}/{filename}"
+            raw_url = f"https://raw.githubusercontent.com/{GITHUB_USER}/{GITHUB_REPO}/{BRANCH}/{PLUGIN_DIR}/{filename}"
+            page_url = f"{PAGES_BASE}/{PLUGIN_DIR}/{filename}"
 
             plugins.append({
                 "name": name,
@@ -81,7 +83,8 @@ def main():
                 "date": date,
                 "tags": tags,
                 "authors": authors,
-                "url": download_url,
+                "url": raw_url,
+                "page_url": page_url,
                 "filename": filename
             })
 

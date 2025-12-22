@@ -14,7 +14,7 @@
 [Argument]
 CaptureAccountToken = switch, "false", "true", tag = 捕获账号令牌, desc = 是否捕获账户令牌
 RunJoin = switch, "false", "true", tag = TestFlight自动加入, desc = 是否开启TestFlight自动加入
-RunMonitor = switch, "true", "false", tag = TestFlight自动监控, desc = 是否开启TestFlight自动监控
+RunMonitor = switch, "false", "true", tag = TestFlight自动监控, desc = 是否开启TestFlight自动监控
 JoinCron = input, "0 0/3 * * * ?", tag = 加入TestFlight定时参数, desc = 输入Cron表达式来定时运行加入TestFlight
 MonitorCron = input, "0 * * * * ?", tag = 监控TestFlight定时参数, desc = 输入Cron表达式来定时运行监控TestFlight
 

@@ -918,7 +918,7 @@
         filtered.forEach(p => {
           const card = document.createElement('a');
           card.className = 'card';
-          card.href = `loon://import?plugin=${p.url}`;
+          card.href = `loon://import?plugin=${p.page_url || p.url}`;
 
           const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join('');
           const descText = (p.desc === '暂无描述' || p.desc === 'No description available') ? TEXT.cardNoDesc : p.desc;
