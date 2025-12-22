@@ -17,6 +17,9 @@ const REGIONS_KEY = 'AppStore_Region';
 // 存储所有被监控 App 详细信息的键名
 const MONITORED_APPS_KEY = 'AppStore_Monitored_Apps';
 
+// DeepL API Key 的键名
+const DEEPL_API_KEY = 'AppStore_DeepL_API_Key';
+
 // 并发数
 const CONCURRENCY = 5;
 
@@ -49,6 +52,57 @@ function extractRegions(rawArg) {
     .map(r => r.trim().toLowerCase())
     .filter(r => /^[a-z]{2}$/.test(r));
 }
+
+// 判断字符串是否包含非中文简体字符
+function containsNonChinese(text) {
+  // 正则表达式匹配中文简体字符范围
+  const chineseRegex = /^[\u4e00-\u9fff\s.,!?;:'"()\[\]{}*#\-_=+<>~`@&$%^|\\\/0-9a-zA-Z]*$/;
+  return !chineseRegex.test(text);
+}
+
+// --- DeepL 翻译工具函数 ---
+async function translateViaDeepL(text, apiKey) {
+  if (!apiKey || !text) {
+    return text; // 如果没有密钥或文本，返回原文
+  }
+  const url = 'https://api-free.deepl.com/v2/translate'; // 使用免费版 API URL
+  // 如果需要使用 Pro 版，将 URL 改为: https://api.deepl.com/v2/translate
+
+  const headers = {
+    'Authorization': `DeepL-Auth-Key ${apiKey}`,
+    'Content-Type': 'application/x-www-form-urlencoded',
+    'User-Agent': 'Loon Script'
+  };
+
+  const body = `text=${encodeURIComponent(text)}&target_lang=ZH`;
+
+  return new Promise((resolve) => {
+    $httpClient.post({
+      url,
+      headers,
+      body
+    }, (error, response, data) => {
+      if (error || !response || response.status !== 200) {
+        console.log(`[DeepL Error] ${error || `HTTP ${response?.status}`}. Returning original text.`);
+        resolve(text); // 发生错误，返回原文
+        return;
+      }
+      try {
+        const jsonData = JSON.parse(data);
+        if (jsonData.translations && jsonData.translations[0] && jsonData.translations[0].text) {
+          resolve(jsonData.translations[0].text);
+        } else {
+          console.log('[DeepL Error] Unexpected response format. Returning original text.');
+          resolve(text);
+        }
+      } catch (e) {
+        console.log(`[DeepL Error] Parsing response failed: ${e}. Returning original text.`);
+        resolve(text);
+      }
+    });
+  });
+}
+
 
 // 返回 { status: 'found' | 'notfound' | 'error', ... }
 function lookupApp(region, appId) {
@@ -221,7 +275,7 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
     const { appInfo, region } = finalResult;
     const appName = appInfo.trackName.split(/[-:–：]/)[0].trim();
     const newVersion = appInfo.version;
-    const releaseNotes = appInfo.releaseNotes || '暂无更新说明';
+    let releaseNotes = appInfo.releaseNotes || '暂无更新说明';
     const updateDate = appInfo.currentVersionReleaseDate;
     const storedVersion = monitoredData[appId]?.version || null;
     const storedRegion = monitoredData[appId]?.region || null;
@@ -279,7 +333,21 @@ async function checkAppUpdate(appId, monitoredData, regions, logs, barkKey, bark
           subtitle = `区域：${region.toUpperCase()}　版本：${newVersion}`;
           body = `更新时间：${formattedDate}\n将从此版本开始监控更新。`;
         }
-        
+
+        // --- 新增翻译逻辑 ---
+        const deeplApiKey = $persistentStore.read(DEEPL_API_KEY); // 从持久化存储读取
+        if (containsNonChinese(releaseNotes) && deeplApiKey) {
+             console.log(`[DeepL] 检测到非中文更新日志，尝试翻译...`);
+             releaseNotes = await translateViaDeepL(releaseNotes, deeplApiKey);
+             // 更新 body，使其包含翻译后的日志
+             if (storedVersion) {
+                 body = `更新时间：${formattedDate}\n更新内容：\n${releaseNotes}`;
+             } else {
+                 body = `更新时间：${formattedDate}\n将从此版本开始监控更新。`;
+                 // 对于初始监控，一般不会有复杂的 releaseNotes 需要翻译
+             }
+         }
+
         if (barkKey) {
           let iconUrl = null;
           if (appInfo.artworkUrl100) {
@@ -336,6 +404,7 @@ async function main() {
   let rawRegionsStr = "";
   let barkKey = "";
   let barkSound = "";
+  let deeplApiKeyValue = ""; // 新增变量
 
   if (typeof $argument !== "undefined" && $argument) {
     if (typeof $argument === 'object') {
@@ -343,6 +412,7 @@ async function main() {
       rawRegionsStr = String($argument.regions || "");
       barkKey = String($argument.bark_key || "").trim();
       barkSound = String($argument.bark_sound || "").trim();
+      deeplApiKeyValue = String($argument.deepl_api || "").trim(); // 新增解析
     } else if (typeof $argument === 'string') {
       rawAppIdsStr = $argument;
     }
@@ -353,9 +423,11 @@ async function main() {
     barkSound = '';
   }
 
-  // 写入持久化（AppID 和 Regions）
+  // 写入持久化（AppID、Regions 和 DeepL API Key）
   $persistentStore.write(extractAppIds(rawAppIdsStr).join(','), APP_IDS_KEY);
   $persistentStore.write(extractRegions(rawRegionsStr).join(','), REGIONS_KEY);
+  $persistentStore.write(deeplApiKeyValue, DEEPL_API_KEY); // 新增写入
+
 
   // --- 2. 读取配置 ---
   const appStoreIds = $persistentStore.read(APP_IDS_KEY);
