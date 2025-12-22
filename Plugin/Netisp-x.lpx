@@ -26,7 +26,7 @@ http-request ^https?:\/\/net-lsp-x\.com script-path = https://raw.githubusercont
 network-changed script-path = https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/net-lsp-x.js, timeout = 120, tag = 网络信息变化 𝕏, argument = "TYPE=EVENT&icon=globe.asia.australia&icon-color=#6699FF&LAN=0&SSID=0&IPv6==0&MASK=0&DOMSTIC_IPv4=spcn&DOESTIC_IPv6=ddnspod&LANDING_IPv4=ipapi&LANDING_IPv6=ipsb&PRIVACY=0&FLAG=1&ENYRANCE_DELAY&EVENT_DELAY=3"
 
 # Interaction
-generic script-path = https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/net-lsp-x.js, timeout = 120, tag = 网络信息查询 𝕏, img-url = location.circle.system
+generic script-path = https://raw.githubusercontent.com/xream/scripts/main/surge/modules/network-info/net-lsp-x.js, timeout = 120, tag = 网络信息查询 𝕏, img-url = location.circle
 
 [MitM]
 hostname = net-lsp-x.com
