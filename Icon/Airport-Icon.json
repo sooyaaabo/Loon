@@ -1,0 +1,74 @@
+{
+    "name": "Airport Icons",
+    "description": "sooyaaabo（恩秀）",
+    "icons": [
+        {
+            "name": "ACA",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/ACA.png"
+        },
+        {
+            "name": "Aladdin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/Aladdin-01.png"
+        },
+        {
+            "name": "Aladdin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/Aladdin-02.png"
+        },
+        {
+            "name": "Alphaio",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/Alphaio.png"
+        },
+        {
+            "name": "Ash",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/AshNet-01.png"
+        },
+        {
+            "name": "Ash",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/AshNet-02.png"
+        },
+        {
+            "name": "Ash",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/AshNet-03.png"
+        },
+        {
+            "name": "Ash",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/AshNet-04.png"
+        },
+        {
+            "name": "CloudFisher",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/CloudFisher.png"
+        },
+        {
+            "name": "EFCloud",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/EFCloud-01.png"
+        },
+        {
+            "name": "EFCloud",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/EFCloud-02.png"
+        },
+        {
+            "name": "EFCloud",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/EFCloud-03.png"
+        },
+        {
+            "name": "Liangxin",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/Liangxin.png"
+        },
+        {
+            "name": "RedLeaf",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/RedLeaf-01.png"
+        },
+        {
+            "name": "RedLeaf",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/RedLeaf-02.png"
+        },
+        {
+            "name": "Doriya",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/Doriya.png"
+        },
+        {
+            "name": "OuO",
+            "url": "https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/Airport-Icon/OuO.png"
+        }
+    ]
+}
