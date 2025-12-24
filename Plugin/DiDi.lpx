@@ -8,11 +8,11 @@
 #!loon_version = 3.3.7(921)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/DiDi.png
-#!date = 2025-12-18 21:00
+#!date = 2025-12-24 21:00
 
 # 2025-11-13 20:33:12
 # https://kelee.one/Tool/Loon/Lpx/DiDi_remove_ads.lpx
-# 2025-12-15
+# 2025-12-24
 # https://klraw.pages.dev/kelv1n1n/script/main/plugin/didi.plugin?token=209863
 
 [Rule]
@@ -82,7 +82,7 @@ IP-CIDR, 162.14.157.24/32, REJECT, no-resolve
 ^https:\/\/api\.udache\.com\/gulfstream\/porsche\/v1\/dache_homepage_layout\? response-body-json-del data.instances.car_icon_01.data.icon_info_new_agreement
 
 # 订单进行页面 - 各种推广
-^https:\/\/api\.udache\.com\/gulfstream\/passenger-center\/v2\/other\/pInTripLayout response-body-json-jq '.data.order_components |= map(select(.name != "passenger_common_casper"))'
+^https:\/\/api\.udache\.com\/gulfstream\/passenger-center\/v2\/other\/pInTripLayout response-body-json-jq '.data.order_components |= map(select((.name != "passenger_common_casper") and (.name != "xp-card")))'
 
 ^https:\/\/as\.xiaojukeji\.com\/ep\/as\/toggles\? response-body-json-jq '.data |= map(if .name|IN("daijia_journey_new_tcp_switch","daijia_tcp_init","daijia_tcp_msg_encrypt","daijia_tcp_site_info","daijia_tcp_site_report")then.allow=false else. end)'
 
