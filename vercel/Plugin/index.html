@@ -443,7 +443,7 @@
           height: 100%;
         }
     
-        /* 关键改动！仅在支持 hover 的设备（桌面端）上启用卡片放大、阴影和背景色变化 */
+        /* 仅在支持 hover 的设备（桌面端）上启用卡片放大、阴影和背景色变化 */
         @media (hover: hover) {
           .card:hover {
             transform: translateY(-6px) scale(1.005);
@@ -751,7 +751,7 @@
 
         <footer>
             <span>更新时间</span>：<span id="updateTime">--</span>
-            <br> Copyright &copy; <span id="copyright-year">2025</span> sooyaaabo. All rights reserved.
+            <br>Copyright &copy; <span id="copyright-year"></span> sooyaaabo. All rights reserved.
         </footer>
     </div>
 
@@ -842,7 +842,15 @@
           document.querySelector('h1').textContent = TEXT.repoTitle;
           document.querySelector('header p').textContent = TEXT.repoDesc;
           searchEl.placeholder = TEXT.searchPlaceholder;
-    
+
+          // Copyright 年份
+          (() => {
+            const startYear = 2025;
+            const currentYear = new Date().getFullYear();
+            document.getElementById('copyright-year').textContent =
+              startYear === currentYear ? startYear : `${startYear}-${currentYear}`;
+          })();
+            
           document.querySelectorAll('.tab').forEach(btn => {
             const cat = btn.dataset.cat;
             const key = cat === 'all' ? 'All' : cat === '去广告' ? 'Adblock' : cat === '功能增强' ? 'Enhance' : cat === '解锁会员' ? 'Unlock' : 'Cron';
@@ -852,7 +860,6 @@
           document.querySelector('footer span').textContent = TEXT.updateTimeLabel;
           document.querySelector('#list .empty').textContent = TEXT.loadingPlugins;
           sectionTitleEl.textContent = TEXT.loading;
-          document.getElementById('copyright-year').textContent = new Date().getFullYear();
     
           // 从 plugins.json 获取插件列表
           let plugins = [];
@@ -882,13 +889,10 @@
             const latestCommitDate = commits[0]?.commit?.author?.date || commits[0]?.commit?.committer?.date;
             if (latestCommitDate) {
               const d = new Date(latestCommitDate);
-              updateTimeEl.textContent = d.toLocaleString('zh-CN', {
-                year: 'numeric',
-                month: '2-digit',
-                day: '2-digit',
-                hour: '2-digit',
-                minute: '2-digit'
-              });
+              const pad = n => String(n).padStart(2, '0');
+              updateTimeEl.textContent =
+                `${d.getFullYear()}-${pad(d.getMonth() + 1)}-${pad(d.getDate())} ` +
+                `${pad(d.getHours())}:${pad(d.getMinutes())}`;
             }
           } catch {
             updateTimeEl.textContent = TEXT.getFailed;
