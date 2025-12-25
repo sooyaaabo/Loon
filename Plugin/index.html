@@ -595,12 +595,6 @@
           white-space: nowrap;
         }
     
-          .card-clicks {
-            font-size: 0.75rem;
-            color: var(--text-tertiary);
-            white-space: nowrap;
-          }
-    
         .empty {
           text-align: center;
           color: var(--text-tertiary);
@@ -762,8 +756,6 @@
     </div>
 
     <script>
-        const CLICK_API = 'https://lpxclicks.botrna.workers.dev/';
-    
         // 手动处理滚动恢复，避免页面刷新后位置跳动
         if ('scrollRestoration' in history) {
           history.scrollRestoration = 'manual';
@@ -903,110 +895,63 @@
           }
     
           // 插件列表过滤与渲染逻辑
-    function render(filterCat = 'all', kw = '') {
-      const lowerKw = kw.toLowerCase();
+          function render(filterCat = 'all', kw = '') {
+            const lowerKw = kw.toLowerCase();
+            const filtered = plugins.filter(p => {
+              const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
+              const hitKw = !lowerKw ||
+                p.name.toLowerCase().includes(lowerKw) ||
+                p.tags.some(tag => tag.toLowerCase().includes(lowerKw)) ||
+                p.authors.some(a => a.name.toLowerCase().includes(lowerKw));
+              return hitCat && hitKw;
+            });
     
-      const filtered = plugins.filter(p => {
-        const hitCat = filterCat === 'all' || p.tags.includes(filterCat);
-        const hitKw =
-          !lowerKw ||
-          p.name.toLowerCase().includes(lowerKw) ||
-          p.tags.some(tag => tag.toLowerCase().includes(lowerKw)) ||
-          (p.authors || []).some(a => a.name.toLowerCase().includes(lowerKw));
-        return hitCat && hitKw;
-      });
+            const catText = tabsEl.querySelector(`[data-cat="${filterCat}"]`).textContent;
+            sectionTitleEl.textContent = TEXT.sectionTitle(catText, filtered.length);
+            listEl.innerHTML = '';
     
-      const catText = tabsEl.querySelector(`[data-cat="${filterCat}"]`).textContent;
-      sectionTitleEl.textContent = TEXT.sectionTitle(catText, filtered.length);
-      listEl.innerHTML = '';
-    
-      if (!filtered.length) {
-        listEl.innerHTML = `<div class="empty">${TEXT.noMatch}</div>`;
-        return;
-      }
-    
-      filtered.forEach(p => {
-        const card = document.createElement('a');
-        card.className = 'card';
-        card.href = `loon://import?plugin=${p.page_url || p.url}`;
-    
-        // 点击量元素 id（base64 防止非法字符）
-        const clickId = `click-${btoa(unescape(encodeURIComponent(p.name)))}`;
-    
-        const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join('');
-        const descText =
-          p.desc === '暂无描述' || p.desc === 'No description available'
-            ? TEXT.cardNoDesc
-            : p.desc;
-    
-        let authorsHtml = '';
-        if (p.authors && p.authors.length > 0) {
-          authorsHtml = `
-            <div class="author-wrapper">
-              ${p.authors
-                .map(
-                  a => `
-                  <a href="${a.url}" target="_blank" rel="noopener noreferrer">
-                    <img
-                      src="${a.avatar}"
-                      class="author-avatar"
-                      alt="${a.name}"
-                      title="${a.name}"
-                      loading="lazy"
-                      onerror="this.style.display='none'"
-                    >
-                  </a>
-                `
-                )
-                .join('')}
-            </div>
-          `;
-        }
-    
-        card.innerHTML = `
-          <div class="card-top">
-            ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon" loading="lazy">` : ''}
-            <div class="card-header-info">
-              <h3 class="card-title">${p.name}</h3>
-              ${authorsHtml}
-            </div>
-          </div>
-    
-          <p class="card-desc">${descText}</p>
-    
-          <div class="card-footer">
-            <div class="card-tags">${tagsHtml}</div>
-            <div style="display:flex;gap:10px;align-items:center;">
-              <span class="card-clicks" id="${clickId}">👆 --</span>
-              <p class="card-update-time">${p.date}</p>
-            </div>
-          </div>
-        `;
-    
-        // —— 点击时上报点击量（不阻塞跳转）
-        card.addEventListener('click', () => {
-          fetch(`${CLICK_API}/hit`, {
-            method: 'POST',
-            headers: { 'Content-Type': 'application/json' },
-            body: JSON.stringify({ name: p.name })
-          }).catch(() => {});
-        });
-    
-        listEl.appendChild(card);
-    
-        // —— 异步获取点击量
-        fetch(`${CLICK_API}/get?name=${encodeURIComponent(p.name)}`)
-          .then(r => r.json())
-          .then(d => {
-            const el = document.getElementById(clickId);
-            if (el && typeof d.count === 'number') {
-              el.textContent = `👆 ${d.count}`;
+            if (!filtered.length) {
+              listEl.innerHTML = `<div class="empty">${TEXT.noMatch}</div>`;
+              return;
             }
-          })
-          .catch(() => {});
-      });
-    }
     
+            filtered.forEach(p => {
+              const card = document.createElement('a');
+              card.className = 'card';
+              card.href = `loon://import?plugin=${p.page_url || p.url}`;
+    
+              const tagsHtml = p.tags.map(tag => `<span class="tag-item">${tag}</span>`).join('');
+              const descText = (p.desc === '暂无描述' || p.desc === 'No description available') ? TEXT.cardNoDesc : p.desc;
+    
+              let authorsHtml = '';
+              if (p.authors && p.authors.length > 0) {
+                const imgs = p.authors.map(a =>
+                  `<a href="${a.url}" target="_blank" rel="noopener noreferrer">
+                      <img src="${a.avatar}" class="author-avatar" alt="${a.name}" title="${a.name}"
+                      loading="lazy" onerror="this.style.display='none'">
+                    </a>`
+                ).join('');
+    
+                authorsHtml = `<div class="author-wrapper">${imgs}</div>`;
+              }
+    
+              card.innerHTML = `
+                <div class="card-top">
+                  ${p.icon ? `<img src="${p.icon}" class="card-icon" alt="${p.name} icon" loading="lazy">` : ''}
+                  <div class="card-header-info">
+                    <h3 class="card-title">${p.name}</h3>
+                    ${authorsHtml}
+                  </div>
+                </div>
+                <p class="card-desc">${descText}</p>
+                <div class="card-footer">
+                  <div class="card-tags">${tagsHtml}</div>
+                  <p class="card-update-time">${p.date}</p>
+                </div>
+              `;
+              listEl.appendChild(card);
+            });
+          }
     
           // 交互事件监听（菜单、点击、筛选、搜索）
           menuToggle.addEventListener('click', e => {
