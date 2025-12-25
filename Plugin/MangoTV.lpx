@@ -1,17 +1,19 @@
 #!name = 芒果TV
 #!desc = 天生青春 [天生广告]
 #!openUrl = https://apps.apple.com/app/id629774477
-#!author = RuCu6[https://github.com/RuCu6], Yu9191[https://github.com/Yu9191], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
+#!author = RuCu6[https://github.com/RuCu6], WeiGiegie[https://github.com/WeiGiegie], 可莉🅥[https://github.com/luestr/ProxyResource/blob/main/README.md]
 #!tag = 去广告
 #!system = 
 #!system_version = 
 #!loon_version = 3.3.7(921)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/MangoTV.png
-#!date = 2025-12-16 20:00
+#!date = 2025-12-25 17:00
 
 # 2025-11-09 07:45:13
 # https://kelee.one/Tool/Loon/Lpx/MangoTV_remove_ads.lpx
+# 2025-12-25
+# https://raw.githubusercontent.com/WeiGiegie/666/main/mgtv.js
 
 [Rule]
 DOMAIN, credits.bz.mgtv.com, REJECT
@@ -29,6 +31,8 @@ DOMAIN, vip.bz.mgtv.com, REJECT
 DOMAIN-SUFFIX, da.mgtv.com, REJECT
 
 [Rewrite]
+^https:\/\/mobile\.da\.mgtv\.com\/m\/page reject
+
 ^https:\/\/dc\.bz\.mgtv\.com\/dynamic\/v\d\/skin\/config\? reject-dict
 
 ^https:\/\/dc\.bz\.mgtv\.com\/dynamic\/v\d\/channel\/ads\? reject-dict
