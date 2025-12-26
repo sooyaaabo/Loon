@@ -1,4 +1,4 @@
-# 2025-12-09 21:49:00
+# 2025-12-25 20:30:00
 # https://raw.githubusercontent.com/fmz200/wool_scripts/main/Loon/rule/rejectAd.list
 
 
@@ -2084,7 +2084,7 @@ DOMAIN-SUFFIX, gum.criteo.com
 DOMAIN-SUFFIX, smaato.net
 DOMAIN-SUFFIX, spadsync.com
 DOMAIN-SUFFIX, ads.inmobi.com
-DOMAIN-SUFFIX, akamaized.net
+# DOMAIN-SUFFIX, akamaized.net
 DOMAIN-SUFFIX, spadsync.com
 DOMAIN-SUFFIX, tpc.googlesyndication.com
 DOMAIN-SUFFIX, googleadsserving.cn

@@ -8,9 +8,9 @@
 #!loon_version = 3.3.7(921)
 #!homepage = https://github.com/sooyaaabo/Loon/blob/main/README.md
 #!icon = https://raw.githubusercontent.com/sooyaaabo/Loon/main/Icon/App-Icon/Goofish.png
-#!date = 2025-12-16 20:00
+#!date = 2025-12-26 11:00
 
-# 2025-12-05 03:29:31
+# 2025-12-26 01:41:28
 # https://kelee.one/Tool/Loon/Lpx/FleaMarket_remove_ads.lpx
 # 2025-12-04
 # https://klraw.pages.dev/kelv1n1n/script/main/rewrite/goofish.snippet?token=209863
@@ -60,7 +60,7 @@ AND, ((URL-REGEX, "^http:\/\/.+\/amdc\/mobileDispatch"), (USER-AGENT, "%E9%97%B2
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.taobao\.idle\.local\.home\/ response-body-json-jq '.data.sections |= map(select((.template.cardEnum != "ads") and (.cardType == "common")))'
 
 # 我的页面 - 顶部提示、卡片推广、横幅广告、借钱入口
-^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq '.data.container.sections |= map(select(.template.name as $name | ["my_fy25_header","my_fy25_user_info","my_fy25_trade","my_fy25_appraise","my_fy25_tools"] | index($name))) | .data.container.sections |= map(.item |= (if .level and .level.exContent and (.level.exContent | has("tips")) then del(.level) else . end))'
+^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq '.data.container.sections |= map(select(.template.name | test("^my_fy[0-9]+_(header|user_info|trade|appraise|tools)$"))) | .data.container.sections |= map(.item |= (if .level and .level.exContent and (.level.exContent | has("tips")) then del(.level) else . end))'
 
 ^https:\/\/acs\.m\.goofish\.com\/gw\/mtop\.idle\.user\.page\.my\.adapter\/ response-body-json-jq jq-path="https://kelee.one/Resource/JQLang/FleaMarket/adapter_FleaMarket_remove_ads.jq"
 
