@@ -271,11 +271,11 @@
 ### **AshNet**
 
 - **机场介绍**<br>
-1. 采用 Trojan 协议，提供 IEPL 线路、隧道中转线路。（Mini 套餐只含隧道中转线路）<br>
+1. 采用 Trojan 协议，全线提供 1 倍率 IEPL 专线。（后续不同套餐可能会进行限速调整）<br>
 2. 提供台湾、香港、日本、韩国、新加坡、美国、英国等地区节点。<br>
 4. 提供流媒体解锁，包括但不限于 Netflix、Disney+、HBO、Bahamut 等。<br>
 5. 提供 AI 解锁，包括但不限于 ChatGPT、Gemini 等。<br>
-6. 提供 JMS 和 Ask Emby 媒体服务，禁止中、日、美IP访问。（Mini 套餐无此项服务）<br>
+6. 提供 JMS 和 Ask Emby 媒体服务，禁止中、日、美 IP 访问。（Mini 套餐无此项服务）<br>
 7. 最多同时在线 3 台设备，禁止共享他人，禁止 BT 下载。<br>
 
 - **套餐介绍**<br>
@@ -293,8 +293,8 @@
             <td align="center">Mini</td>
             <td align="center">60G</td>
             <td align="center">×</td>
-            <td align="center">¥21</td>
-            <td align="center">¥40</td>
+            <td align="center">×</td>
+            <td align="center">×</td>
             <td align="center">¥78</td>
         </tr>
         <tr>
